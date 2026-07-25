@@ -121,7 +121,7 @@ There are $t-s$ such indices, proving the first bound in Lemma 1.
 
 For $p=2$ and $i=s+1$, the residue is $u=2^s$, so
 $\lfloor2u/2^{s+1}\rfloor=1$.  This one level contributes $3$
-instead of $2$, proving the stronger binary bound. ∎
+instead of $2$, proving the stronger binary bound.
 
 In particular, if $p^r\mid N$ and $p\nmid k$, then
 
@@ -258,7 +258,7 @@ copies first factors the multinomial coefficient as
 
 The central binomial coefficient $\binom{2b}{b}$ is even for $b\ge1$.
 The one power supplied by Lemma 2 therefore yields two powers in the
-difference. This proves Lemma 3 in every case. ∎
+difference. This proves Lemma 3 in every case.
 
 ### 5. Assemble the sum
 
@@ -287,14 +287,14 @@ a(np^r)
 \end{aligned}
 ```
 
-This is the claimed congruence. ∎
+**This proves the theorem.**
 
 ## Optional structural interpretation
 
 The sequence also has the fixed-Laurent-polynomial representation
 
 ```math
-a(n)=\operatorname{CT}_{w,x,y,z} P(w,x,y,z)^n,
+a(n)=\mathrm{CT}_{w,x,y,z}\,P(w,x,y,z)^n,
 ```
 
 where

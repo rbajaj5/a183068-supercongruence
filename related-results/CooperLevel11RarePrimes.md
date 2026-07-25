@@ -11,7 +11,7 @@ Let $T(0)=1$ and
 &-8n(7n^2+1)T(n-1)\\
 &+22n(2n-1)(n-1)T(n-2).
 \end{aligned}
-\tag{1}
+\qquad\text{(1)}
 ```
 
 Cooper conjectures that
@@ -19,7 +19,7 @@ Cooper conjectures that
 ```math
 T(pn)\equiv T(n)\pmod {p^2}
 \quad(n\ge1)
-\tag{2}
+\qquad\text{(2)}
 ```
 
 for $p=2,59,5581$.  His search found no other prime below $10^4$.
@@ -30,7 +30,7 @@ Define
 
 ```math
 q_p=\frac{T(p)-T(1)}p\pmod p.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 The Lucas congruence predicts the numerator is divisible by $p$, while
@@ -42,7 +42,7 @@ An exact scan of every odd prime below $30,000$ found
 q_p=0
 \quad\Longleftrightarrow\quad
 p\in\{59,5581\}.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 Thus Cooper's rare primes are already singled out by the first instance of
@@ -75,7 +75,7 @@ The next useful theorem would be an equivalence of the form
 q_p=0
 \quad\Longrightarrow\quad
 T(pn)\equiv T(n)\pmod {p^2}\ \text{for every }n,
-\tag{5}
+\qquad\text{(5)}
 ```
 
 derived from the level-11 modular parametrization or a Frobenius matrix.

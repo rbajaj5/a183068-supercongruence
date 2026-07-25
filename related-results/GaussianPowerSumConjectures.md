@@ -12,7 +12,7 @@ For an odd prime $p$, define
 \sum_{a=1}^{p-1}\sum_{b=1}^{p-1}(a+bi)^n\in\mathbb Z[i],
 \qquad
 v_p(x+yi)=\min\{v_p(x),v_p(y)\}.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 Kalinin and Zottor's 2026 preprint formulates three conjectures about
@@ -34,7 +34,7 @@ v_3(\mathcal G_n(3))=
 2+v_3(n)+v_3(n-1),&n\equiv2\pmod4,\\
 2+v_3(n)+v_3(n-1)+v_3(n-2),&n\equiv3\pmod4,
 \end{cases}
-\tag{2}
+\qquad\text{(2)}
 ```
 
 and
@@ -47,7 +47,7 @@ v_5(\mathcal G_n(5))=
 2+v_5(n)+v_5(n-1),&n\equiv2\pmod4,\\
 3+v_5(n)+v_5(n-1)+v_5(n-2),&n\equiv3\pmod4.
 \end{cases}
-\tag{3}
+\qquad\text{(3)}
 ```
 
 Thus Conjecture 3 of the source is true.
@@ -60,14 +60,14 @@ $\{1,2\}^2$,
 ```math
 \frac{2^n\mathcal G_n(3)}{\alpha^n}
 =2^n+4^n+(3+i)^n+(3-i)^n=:K_n.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 Both $2$ and $\alpha$ are $3$-adic units, so
 
 ```math
 v_3(\mathcal G_n(3))=v_3(K_n).
-\tag{5}
+\qquad\text{(5)}
 ```
 
 Expanding every term around a fourth root of unity gives
@@ -77,7 +77,7 @@ K_n=
 \sum_{k=0}^n
 \binom nk3^k
 \left((-1)^{n-k}+1+i^{\,n-k}+(-i)^{\,n-k}\right).
-\tag{6}
+\qquad\text{(6)}
 ```
 
 Write $r$ for the residue of $n$ modulo $4$.
@@ -88,19 +88,19 @@ Write $r$ for the residue of $n$ modulo $4$.
   contribution is
   ```math
   12n.
-  \tag{7}
+  \qquad\text{(7)}
   ```
 - If $r=2$, the $k=0$ bracket vanishes and the $k=2$
   contribution is
   ```math
   36\binom n2=18n(n-1).
-  \tag{8}
+  \qquad\text{(8)}
   ```
 - If $r=3$, the $k=1$ bracket vanishes and the $k=3$
   contribution is
   ```math
   108\binom n3=18n(n-1)(n-2).
-  \tag{9}
+  \qquad\text{(9)}
   ```
 
 Each later nonzero term has strictly larger $3$-adic valuation than
@@ -111,7 +111,7 @@ by its leading term leaves an integer product times, respectively,
 \frac{3^{k-1}}{k!},\qquad
 \frac{3^{k-2}}{k!},\qquad
 \frac{3^{k-2}}{k!}.
-\tag{10}
+\qquad\text{(10)}
 ```
 
 The later nonzero indices actually begin at $k=5,6,7$, respectively.
@@ -131,7 +131,7 @@ The affine quarter-turn
 
 ```math
 T(z)=iz+5
-\tag{11}
+\qquad\text{(11)}
 ```
 
 permutes $D$: if $z=a+bi$, then
@@ -144,7 +144,7 @@ Its fixed center is
 
 ```math
 h=\frac{5}{1-i}=\frac{5(1+i)}2.
-\tag{12}
+\qquad\text{(12)}
 ```
 
 The set $D$ is the disjoint union of four $T$-orbits.  Choose one
@@ -166,7 +166,7 @@ the sum around one orbit is
 4\sum_{\substack{0\leq k\leq n\\k\equiv n\ (4)}}
 \binom nk h^kw_j^{\,n-k}.
 \end{aligned}
-\tag{13}
+\qquad\text{(13)}
 ```
 
 Let $r\in\{0,1,2,3\}$ satisfy $n\equiv r\pmod4$.  Summing (13)
@@ -176,7 +176,7 @@ over the four orbits, the first possible term is
 4\binom nrh^r U_{n-r},
 \qquad
 U_q=\sum_{j=1}^4w_j^q.
-\tag{14}
+\qquad\text{(14)}
 ```
 
 The factor $U_q$ is always a $5$-adic unit when $q\geq0$ is
@@ -193,7 +193,7 @@ Modulo $5$, $w_j\equiv z_j$, and
 ```math
 z_1^4=z_4^4=1,\qquad
 z_2^4=3+i,\qquad z_3^4=3-i.
-\tag{15}
+\qquad\text{(15)}
 ```
 
 The last two elements are idempotent modulo $5$.  Hence for every
@@ -201,7 +201,7 @@ positive multiple $q$ of $4$,
 
 ```math
 U_q\equiv1+(3+i)+(3-i)+1\equiv3\pmod5.
-\tag{16}
+\qquad\text{(16)}
 ```
 
 Since $v_5(h)=1$, the valuation of (14) is
@@ -209,7 +209,7 @@ Since $v_5(h)=1$, the valuation of (14) is
 ```math
 r+v_5\left(\binom nr\right)
 =r+\sum_{j=0}^{r-1}v_5(n-j),
-\tag{17}
+\qquad\text{(17)}
 ```
 
 because $r!$ is a $5$-adic unit.
@@ -220,7 +220,7 @@ additional valuation is at least
 
 ```math
 (k-r)-v_5(k!/r!)\geq1.
-\tag{18}
+\qquad\text{(18)}
 ```
 
 The last inequality follows at once from Legendre's formula; here
@@ -239,7 +239,7 @@ v_p\left(\mathcal G_{r(p-1)}(p)\right)
 0,&r\ \text{even},\\
 3,&r\ \text{odd}.
 \end{cases}
-\tag{19}
+\qquad\text{(19)}
 ```
 
 The first failure occurs already at
@@ -253,14 +253,14 @@ Exact integer summation gives
 ```math
 \mathcal G_{30}(7)
 =-6264101156848215194673755568\,i,
-\tag{20}
+\qquad\text{(20)}
 ```
 
 and
 
 ```math
 v_7\left(\mathcal G_{30}(7)\right)=5,
-\tag{21}
+\qquad\text{(21)}
 ```
 
 not $3$.  The quotient by $7^5$ is
@@ -276,7 +276,7 @@ Further small failures include
 ```math
 v_7(\mathcal G_{42}(7))=4,\qquad
 v_{11}(\mathcal G_{90}(11))=4.
-\tag{22}
+\qquad\text{(22)}
 ```
 
 The normalized residue
@@ -297,7 +297,7 @@ Conjecture 1 predicts, for $4\leq n\leq p-2$, the valuation cycle
 
 ```math
 1,2,3,4
-\tag{23}
+\qquad\text{(23)}
 ```
 
 according to $n\bmod4$.  The same source later lists exceptional
@@ -309,14 +309,14 @@ The contradiction is independently visible at
 p=37,\qquad n=32:
 \qquad
 v_{37}(\mathcal G_{32}(37))=2,
-\tag{24}
+\qquad\text{(24)}
 ```
 
 where (23) predicts $1$.  The source relates these exceptional blocks
 to irregular pairs
 
 ```math
-p\mid\operatorname{num}(B_{4t}).
+p\mid\mathrm{num}(B_{4t}).
 ```
 
 Consequently, the mathematically meaningful replacement is to classify

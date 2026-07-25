@@ -15,7 +15,7 @@ Fortuny Ayuso, Grau, and Oller-Marcén propose the Gaussian analogue
 G_k(m-1)=(m+mi)^k,
 \qquad
 G_k(n)=\sum_{1\leq a,b\leq n}(a+bi)^k.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 Their search for $k,m<100$ found only $(k,m)=(2,3)$.
@@ -32,12 +32,12 @@ If (1) holds, then:
 2. if $k>1$ is odd, then
    ```math
    m-1=2^a\quad\text{for some }a\geq2;
-   \tag{2}
+   \qquad\text{(2)}
    ```
 3. if $k\equiv2\pmod4$, then $m-1$ is a power of $2$, and
    ```math
    m-1\leq2^{k/2}.
-   \tag{3}
+   \qquad\text{(3)}
    ```
 
 ### Proof
@@ -50,7 +50,7 @@ G_k(n)\equiv
 \dfrac n2(1+i)\pmod n,&n\equiv2\pmod4,\\
 0\pmod n,&\text{otherwise}.
 \end{cases}
-\tag{4}
+\qquad\text{(4)}
 ```
 
 If $n\equiv2\pmod4$, the two components on the first line are odd
@@ -88,7 +88,7 @@ G_2(n)
 2i\left(\sum_{a=1}^n a\right)^2
 =
 \frac{i n^2(n+1)^2}{2}.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 The right side of (1) is $2i(n+1)^2$.  Equality is therefore
@@ -102,14 +102,14 @@ Finally, the triangle inequality excludes a complementary region:
 n^2(\sqrt2\,n)^k
 <
 (\sqrt2(n+1))^k
-\tag{6}
+\qquad\text{(6)}
 ```
 
 whenever
 
 ```math
 k>\frac{2\log n}{\log(1+1/n)}.
-\tag{7}
+\qquad\text{(7)}
 ```
 
 The companion search verifies that $(2,3)$ remains the only solution
@@ -123,8 +123,8 @@ Kalinin--Zottor prove, for $p\equiv3\pmod4$,
 ```math
 v_p(\mathcal G_p(p))\geq6
 \quad\Longleftrightarrow\quad
-p\mid\operatorname{num}(B_{p-3}).
-\tag{8}
+p\mid\mathrm{num}(B_{p-3}).
+\qquad\text{(8)}
 ```
 
 The right side is exactly the classical definition of a Wolstenholme

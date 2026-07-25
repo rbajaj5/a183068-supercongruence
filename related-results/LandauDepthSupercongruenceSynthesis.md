@@ -62,7 +62,7 @@ Define the one-dimensional Landau fiber
 -\sum_j\left\lfloor B_{a,j}(0,y)\right\rfloor
 \right),
 \qquad 0<y<1.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 Negative $k$-coefficients are allowed.  In particular
@@ -74,7 +74,7 @@ Let the **fiber depth** be the largest integer $d$ such that
 
 ```math
 \Lambda(y)\geq d\qquad(0<y<1).
-\tag{2}
+\qquad\text{(2)}
 ```
 
 Only $d\leq3$ is relevant to the elementary transfer theorem below,
@@ -88,7 +88,7 @@ Let $p^t\mid N$ and $s=v_p(k)<t$.  Then
 
 ```math
 v_p(F(N,k))\geq d(t-s).
-\tag{3}
+\qquad\text{(3)}
 ```
 
 More precisely, the contribution of the $p^i$-level, for
@@ -96,7 +96,7 @@ $s<i\leq t$, is
 
 ```math
 \Lambda\!\left(\left\{\frac{k}{p^i}\right\}\right).
-\tag{4}
+\qquad\text{(4)}
 ```
 
 #### Proof
@@ -105,8 +105,8 @@ Legendre's formula writes the valuation of each multinomial as a sum of
 floor differences.  At level $p^i$, $N/p^i$ is an integer.  Splitting
 $k/p^i$ into its integer and fractional parts, all integer contributions
 cancel because each top entry is the sum of its bottom entries.  What
-remains is exactly (4).  There are $t-s$ such levels, and each is at
-least $d$.  $\square$
+remains is exactly (4). There are $t-s$ such levels, and each is at
+least $d$.
 
 For $p=2$, the first active level always has fractional part $1/2$.
 Thus
@@ -115,7 +115,7 @@ Thus
 \Lambda(1/2)\geq d+c
 \quad\Longrightarrow\quad
 v_2(F(N,k))\geq d(t-s)+c.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 The analogous statement at $p=3$ uses both residues $1/3$ and $2/3$.
@@ -131,7 +131,7 @@ Set
 1,&p=3,\\
 0,&p\geq5.
 \end{cases}
-\tag{6}
+\qquad\text{(6)}
 ```
 
 The standard multinomial scaling congruence says that, if $s$ is the
@@ -144,7 +144,7 @@ minimum $p$-adic valuation of the positive bottom entries, then
 \binom{T}{B_1,\ldots,B_m}
 }
 \equiv1\pmod {p^{\,3(s+1)-\varepsilon_p}}.
-\tag{7}
+\qquad\text{(7)}
 ```
 
 The $p=2$ statement has a possible sign in its strongest source form.
@@ -157,7 +157,7 @@ For $1\leq d\leq3$, define the small-prime deficit
 
 ```math
 c_p(d)=\max(0,d+\varepsilon_p-3).
-\tag{8}
+\qquad\text{(8)}
 ```
 
 The values are
@@ -176,7 +176,7 @@ $d\leq3$, then for every prime $p$ and $n,r\geq1$,
 ```math
 A(np^r)\equiv A(np^{r-1})
 \pmod {p^{\,dr-c_p(d)}}.
-\tag{9}
+\qquad\text{(9)}
 ```
 
 #### Proof
@@ -193,14 +193,13 @@ scaling error.  Their sum is
 ```math
 dr+(3-d)(s+1)-\varepsilon_p
 \geq dr-c_p(d).
-\tag{10}
+\qquad\text{(10)}
 ```
 
 If $\ell=0$, or if $s\geq r-1$, every positive bottom entry is
 divisible by $p^{r-1}$, so (7) alone gives
 $3r-\varepsilon_p$, again at least $dr-c_p(d)$.  Summing the
 termwise congruences proves (9).
-$\square$
 
 ### Theorem 3: compensated termwise transfer
 
@@ -209,7 +208,7 @@ Fix $p$.  Suppose in addition that
 ```math
 \Lambda(a/p)\geq d+c_p(d)
 \quad(1\leq a<p)
-\tag{11}
+\qquad\text{(11)}
 ```
 
 and
@@ -217,14 +216,14 @@ and
 ```math
 p^{c_p(d)}\mid F(N,k)
 \quad(N>0,\ 0\leq k\leq N).
-\tag{12}
+\qquad\text{(12)}
 ```
 
 Then the full congruence holds:
 
 ```math
 A(np^r)\equiv A(np^{r-1})\pmod {p^{dr}}.
-\tag{13}
+\qquad\text{(13)}
 ```
 
 #### Proof
@@ -233,7 +232,6 @@ When $s<r-1$, the first active Landau level has fractional part
 $a/p$, so (11) contributes the missing $c_p(d)$ powers in (10).
 When $s\geq r-1$, (12) contributes them to the scaling difference.
 The same residue bonus applies to the discarded $p\nmid k$ terms.
-$\square$
 
 For depth $2$, Theorem 3 says that the entire $p=2$ problem is reduced
 to
@@ -242,7 +240,7 @@ to
 \Lambda(1/2)\geq3
 \quad\text{and}\quad
 2\mid F(N,k).
-\tag{14}
+\qquad\text{(14)}
 ```
 
 This is exactly the structure of the prime-2 endgame in the A183068
@@ -255,14 +253,14 @@ Let $u,v$ be positive integers and define
 ```math
 F_{u,v}(N,k)=
 \frac{(uk+v(N-k))!}{k!^u(N-k)!^v}
-\tag{15}
+\qquad\text{(15)}
 ```
 
 and
 
 ```math
 A_{u,v}(N)=\sum_{k=0}^N F_{u,v}(N,k).
-\tag{16}
+\qquad\text{(16)}
 ```
 
 The summand is the multinomial coefficient with $u$ copies of $k$
@@ -274,21 +272,21 @@ Its Landau fiber has the closed form
 ```math
 \Lambda_{u,v}(y)
 =v+\lfloor(u-v)y\rfloor.
-\tag{17}
+\qquad\text{(17)}
 ```
 
 Consequently,
 
 ```math
 \min_{0<y<1}\Lambda_{u,v}(y)=\min(u,v)
-\tag{18}
+\qquad\text{(18)}
 ```
 
 and
 
 ```math
 \Lambda_{u,v}(1/2)=\left\lfloor\frac{u+v}{2}\right\rfloor.
-\tag{19}
+\qquad\text{(19)}
 ```
 
 ### Corollary 4: an all-prime quadratic family
@@ -297,7 +295,7 @@ If
 
 ```math
 u,v\geq2,\qquad u+v\geq6,
-\tag{20}
+\qquad\text{(20)}
 ```
 
 then, for every prime $p$ and $n,r\geq1$,
@@ -305,7 +303,7 @@ then, for every prime $p$ and $n,r\geq1$,
 ```math
 A_{u,v}(np^r)\equiv A_{u,v}(np^{r-1})
 \pmod {p^{2r}}.
-\tag{21}
+\qquad\text{(21)}
 ```
 
 #### Proof
@@ -313,14 +311,14 @@ A_{u,v}(np^r)\equiv A_{u,v}(np^{r-1})
 Equations (18)--(20) give depth $2$ and
 $\Lambda_{u,v}(1/2)\geq3$.  Every $F_{u,v}(N,k)$, with $N>0$,
 is even: at least one of $k,N-k$ is positive and occurs at least
-twice, so a factor $\binom{2b}{b}$ with $b>0$ splits off.  Apply
-Theorems 2 and 3.  $\square$
+twice, so a factor $\binom{2b}{b}$ with $b>0$ splits off. Apply
+Theorems 2 and 3.
 
 The Hanna--Bala sequence A183068 is the case
 
 ```math
 (u,v)=(4,2).
-\tag{22}
+\qquad\text{(22)}
 ```
 
 Thus its all-prime $p^{2r}$ theorem is one boundary point of an
@@ -332,7 +330,7 @@ If
 
 ```math
 u,v\geq4,\qquad u+v\geq10,
-\tag{23}
+\qquad\text{(23)}
 ```
 
 then, for every prime $p$ and $n,r\geq1$,
@@ -340,7 +338,7 @@ then, for every prime $p$ and $n,r\geq1$,
 ```math
 A_{u,v}(np^r)\equiv A_{u,v}(np^{r-1})
 \pmod {p^{3r}}.
-\tag{24}
+\qquad\text{(24)}
 ```
 
 #### Proof
@@ -374,7 +372,7 @@ is divisible by $4$, and it splits off from $M_m(b)$.
 At least one of $k,N-k$ is positive, so
 $3\mid F_{u,v}(N,k)$ and $4\mid F_{u,v}(N,k)$.
 Theorem 3 now restores the one lost power at $p=3$ and the two lost
-powers at $p=2$.  $\square$
+powers at $p=2$.
 
 ## 5. What this organizes
 
@@ -391,12 +389,12 @@ The Landau fiber gives a fast, exact screen:
 The mechanism is therefore:
 
 ```math
-\boxed{\text{Landau carries}}
+\text{Landau carries}
 \quad+\quad
-\boxed{\text{multinomial scaling}}
+\text{multinomial scaling}
 \quad\Longrightarrow\quad
-\boxed{\text{termwise supercongruence}}.
-\tag{25}
+\text{termwise supercongruence}.
+\qquad\text{(25)}
 ```
 
 It is powerful when each summand is a balanced product of multinomials.

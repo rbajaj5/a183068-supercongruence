@@ -17,23 +17,21 @@ $n,r\geq1$, and an exponent $e$.  Suppose that
 
 ```math
 F(np^r,k)\equiv0\pmod {p^e}\qquad(p\nmid k)
-\tag{1}
+\qquad\text{(1)}
 ```
 
 and
 
 ```math
 F(np^r,p\ell)\equiv F(np^{r-1},\ell)\pmod {p^e}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 Then
 
 ```math
-\boxed{
 T_z(np^r)\equiv T_{z^p}(np^{r-1})\pmod {p^e}.
-}
-\tag{3}
+\qquad\text{(3)}
 ```
 
 Indeed, the terms with $p\nmid k$ vanish by (1), while the remaining
@@ -81,7 +79,7 @@ G(np^{r-1})&p\equiv1\pmod4,\\
 \overline{G(np^{r-1})}&p\equiv3\pmod4
 \end{cases}
 \pmod {p^{2r}}.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 This is the split/inert dichotomy in $\mathbb Z[i]$:
@@ -99,7 +97,7 @@ G(n2^r)\equiv
 \sum_{\ell=0}^{n2^{r-1}}(-1)^\ell
 F(n2^{r-1},\ell)
 \pmod {2^{2r}}.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 Equation (5) is not an automorphism statement: $2$ ramifies in

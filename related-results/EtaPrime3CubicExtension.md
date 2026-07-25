@@ -24,7 +24,7 @@ A(n,k)=(-1)^k\binom nk^3
 \binom{4n-5k-1}{3n}+
 \binom{4n-5k}{3n}
 \right).
-\tag{1}
+\qquad\text{(1)}
 ```
 
 This is the sporadic Apéry-like sequence labeled $(\eta)$, up to the
@@ -36,7 +36,7 @@ For every $m,r\ge1$,
 
 ```math
 Z(m3^r)\equiv Z(m3^{r-1})\pmod {3^{3r}}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 Osburn--Sahu--Straub proved the corresponding cubic congruence for primes
@@ -54,7 +54,7 @@ integers $a,b$ and positive $u,v$, whenever the quotient is defined,
      {\binom{3^{u-1}a}{3^{v-1}b}}
 \equiv1
 \pmod {3^{\,u+v+\min(u,v)-1}}.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 The version for negative upper entries is part of the standard generalized
@@ -66,7 +66,7 @@ The elementary observation that recovers the lost power is
 Q\equiv1\pmod {3^e}
 \quad\Longrightarrow\quad
 Q^3\equiv1\pmod {3^{e+1}}.
-\tag{4}
+\qquad\text{(4)}
 ```
 
 Indeed, write $Q=1+3^e t$ and expand the cube.
@@ -87,7 +87,7 @@ If $X\ne0$, Pascal's adjacent-binomial identity gives
 ```math
 H(n,k)=
 \frac{5(n-2k)}{4n-5k}\binom{4n-5k}{3n}.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 The rational prefactor is unchanged when $(n,k)$ is replaced by
@@ -98,7 +98,7 @@ $(3n,3k)$.  Consequently, away from the zero cases,
 =
 \frac{\binom{3(4n-5k)}{9n}}
      {\binom{4n-5k}{3n}}.
-\tag{6}
+\qquad\text{(6)}
 ```
 
 If $0<X<3n$, both brackets vanish and there is nothing to prove.  If
@@ -127,7 +127,7 @@ by $3$ preserves parity.  The ratio of the nonzero magnitudes is
 
 ```math
 R=Q_1^3Q_2,
-\tag{7}
+\qquad\text{(7)}
 ```
 
 where
@@ -139,7 +139,7 @@ Q_1=
 Q_2=
 \frac{\binom{4N-5K}{3N}}
      {\binom{(4N-5K)/3}{N}}.
-\tag{8}
+\qquad\text{(8)}
 ```
 
 We show that the difference of the two terms is divisible by $3^{3r}$.
@@ -156,7 +156,7 @@ so (4) gives
 
 ```math
 v_3(Q_1^3-1)\ge r+2s.
-\tag{9}
+\qquad\text{(9)}
 ```
 
 Because
@@ -169,14 +169,14 @@ in this case, (3) applied to $Q_2$ also gives
 
 ```math
 v_3(Q_2-1)\ge r+2s.
-\tag{10}
+\qquad\text{(10)}
 ```
 
 Hence $v_3(R-1)\ge r+2s$.  On the other hand,
 
 ```math
 v_3\binom{N/3}{K/3}\ge r-s,
-\tag{11}
+\qquad\text{(11)}
 ```
 
 using
@@ -191,7 +191,7 @@ The cube in (1) therefore supplies $3(r-s)$ additional powers.  Thus
 v_3\bigl(A(N,K)-A(N/3,K/3)\bigr)
 \ge (r+2s)+3(r-s)
 =4r-s\ge3r.
-\tag{12}
+\qquad\text{(12)}
 ```
 
 ### Case 2: $s=r$
@@ -206,7 +206,7 @@ but the quotient occurs cubed.  Equation (4) therefore gives
 
 ```math
 Q_1^3\equiv1\pmod {3^{3r}}.
-\tag{13}
+\qquad\text{(13)}
 ```
 
 Also $3^r\mid4N-5K$, while the lower entry $3N$ is divisible by
@@ -214,7 +214,7 @@ $3^{r+1}$.  Congruence (3) gives
 
 ```math
 Q_2\equiv1\pmod {3^{3r}}.
-\tag{14}
+\qquad\text{(14)}
 ```
 
 Therefore $R\equiv1\pmod {3^{3r}}$.
@@ -241,7 +241,7 @@ We have proved
 ```math
 A(m3^r,3\ell)\equiv A(m3^{r-1},\ell)
 \pmod {3^{3r}}
-\tag{15}
+\qquad\text{(15)}
 ```
 
 for every $\ell$.
@@ -259,7 +259,7 @@ is divisible by $3^r$.  Its cube in (1) therefore implies
 
 ```math
 A(m3^r,k)\equiv0\pmod {3^{3r}}.
-\tag{16}
+\qquad\text{(16)}
 ```
 
 Split the sum for $Z(m3^r)$ according as $3\mid k$, use (15) on the
