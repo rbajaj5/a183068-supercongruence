@@ -26,7 +26,7 @@ to whether $p$ divides $k$.
 
 | Terms | What happens modulo $p^{2r}$ | Reason |
 | --- | --- | --- |
-| $p\nmid k$ | $F(N,k)$ vanishes | At each of the $r$ active base-$p$ digit levels, the multinomial addition forces at least two carries |
+| $p\nmid k$ | $F(N,k)$ vanishes | At each of the $r$ active base $p$ digit levels, the multinomial addition forces at least two carries |
 | $k=p\ell$ | $F(N,p\ell)$ becomes $F(N/p,\ell)$ | A Ljunggren--Jacobsthal--Kazandzidis scaling congruence controls the error |
 | $p=2,\ r=1$ | The apparent one-power deficit disappears | A repeated multinomial part contributes an even central binomial coefficient |
 
