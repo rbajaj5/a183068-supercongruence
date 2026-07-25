@@ -21,7 +21,9 @@ $$
 a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}.
 $$
 
-The note in [PROOF.md](PROOF.md) gives a termwise proof.
+**[Read the friendly proof](PROOF.md).** Its first screen gives the complete
+idea in plain language; the carry calculation and small-prime bookkeeping
+follow underneath for verification.
 
 ## Attribution
 
