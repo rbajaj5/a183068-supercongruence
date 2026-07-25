@@ -45,9 +45,9 @@ prime is an irreducible element of this ring. Ordinary primes
 $p\equiv3\pmod4$ remain prime (are *inert*), while primes
 $p\equiv1\pmod4$ split; for example,
 
-$$
+```math
 5=(2+i)(2-i).
-$$
+```
 
 The Gaussian work above concerns congruences in this enlarged arithmetic. It
 does not claim a result about the distribution of Gaussian primes or an

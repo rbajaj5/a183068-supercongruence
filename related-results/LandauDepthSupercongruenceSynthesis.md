@@ -23,31 +23,31 @@ $p$-adic frameworks, but not these exact statements.
 
 For each $a$, let
 
-$$
+```math
 B_{a,j}(N,k)=\alpha_{a,j}N+\beta_{a,j}k
-$$
+```
 
 be integer linear forms, nonnegative in the summation range
 $0\leq k\leq N$, and put
 
-$$
+```math
 T_a(N,k)=\sum_j B_{a,j}(N,k).
-$$
+```
 
 Consider the integer summand
 
-$$
+```math
 F(N,k)=
 \prod_a
 \binom{T_a(N,k)}
       {B_{a,1}(N,k),\ldots,B_{a,m_a}(N,k)}
-$$
+```
 
 and
 
-$$
+```math
 A(N)=\sum_{k=0}^N F(N,k).
-$$
+```
 
 Assume that one of the bottom entries is $k$.  This harmless-looking
 condition makes the minimum valuation of the scaled entries exactly
@@ -55,7 +55,7 @@ $v_p(k)$ whenever $v_p(k)<v_p(N)$.
 
 Define the one-dimensional Landau fiber
 
-$$
+```math
 \Lambda(y)=
 \sum_a\left(
 \left\lfloor T_a(0,y)\right\rfloor
@@ -63,7 +63,7 @@ $$
 \right),
 \qquad 0<y<1.
 \tag{1}
-$$
+```
 
 Negative $k$-coefficients are allowed.  In particular
 $\lfloor-y\rfloor=-1$ for $0<y<1$.  The false shortcut
@@ -72,10 +72,10 @@ fiber are nonnegative.
 
 Let the **fiber depth** be the largest integer $d$ such that
 
-$$
+```math
 \Lambda(y)\geq d\qquad(0<y<1).
 \tag{2}
-$$
+```
 
 Only $d\leq3$ is relevant to the elementary transfer theorem below,
 because the available multinomial scaling congruence has cubic depth.
@@ -86,18 +86,18 @@ because the available multinomial scaling congruence has cubic depth.
 
 Let $p^t\mid N$ and $s=v_p(k)<t$.  Then
 
-$$
+```math
 v_p(F(N,k))\geq d(t-s).
 \tag{3}
-$$
+```
 
 More precisely, the contribution of the $p^i$-level, for
 $s<i\leq t$, is
 
-$$
+```math
 \Lambda\!\left(\left\{\frac{k}{p^i}\right\}\right).
 \tag{4}
-$$
+```
 
 #### Proof
 
@@ -111,12 +111,12 @@ least $d$.  $\square$
 For $p=2$, the first active level always has fractional part $1/2$.
 Thus
 
-$$
+```math
 \Lambda(1/2)\geq d+c
 \quad\Longrightarrow\quad
 v_2(F(N,k))\geq d(t-s)+c.
 \tag{5}
-$$
+```
 
 The analogous statement at $p=3$ uses both residues $1/3$ and $2/3$.
 
@@ -124,7 +124,7 @@ The analogous statement at $p=3$ uses both residues $1/3$ and $2/3$.
 
 Set
 
-$$
+```math
 \varepsilon_p=
 \begin{cases}
 2,&p=2,\\
@@ -132,12 +132,12 @@ $$
 0,&p\geq5.
 \end{cases}
 \tag{6}
-$$
+```
 
 The standard multinomial scaling congruence says that, if $s$ is the
 minimum $p$-adic valuation of the positive bottom entries, then
 
-$$
+```math
 \frac{
 \binom{pT}{pB_1,\ldots,pB_m}
 }{
@@ -145,7 +145,7 @@ $$
 }
 \equiv1\pmod {p^{\,3(s+1)-\varepsilon_p}}.
 \tag{7}
-$$
+```
 
 The $p=2$ statement has a possible sign in its strongest source form.
 At $s\geq1$ the exceptional parity pattern cannot occur; at $s=0$
@@ -155,10 +155,10 @@ bound.
 
 For $1\leq d\leq3$, define the small-prime deficit
 
-$$
+```math
 c_p(d)=\max(0,d+\varepsilon_p-3).
 \tag{8}
-$$
+```
 
 The values are
 
@@ -173,11 +173,11 @@ The values are
 Under the hypotheses of Section 1, if the fiber depth is at least
 $d\leq3$, then for every prime $p$ and $n,r\geq1$,
 
-$$
+```math
 A(np^r)\equiv A(np^{r-1})
 \pmod {p^{\,dr-c_p(d)}}.
 \tag{9}
-$$
+```
 
 #### Proof
 
@@ -190,11 +190,11 @@ If $s<r-1$, Lemma 1 supplies $d(r-1-s)$ powers from the latter
 summand, while (7) supplies $3(s+1)-\varepsilon_p$ powers from the
 scaling error.  Their sum is
 
-$$
+```math
 dr+(3-d)(s+1)-\varepsilon_p
 \geq dr-c_p(d).
 \tag{10}
-$$
+```
 
 If $\ell=0$, or if $s\geq r-1$, every positive bottom entry is
 divisible by $p^{r-1}$, so (7) alone gives
@@ -206,26 +206,26 @@ $\square$
 
 Fix $p$.  Suppose in addition that
 
-$$
+```math
 \Lambda(a/p)\geq d+c_p(d)
 \quad(1\leq a<p)
 \tag{11}
-$$
+```
 
 and
 
-$$
+```math
 p^{c_p(d)}\mid F(N,k)
 \quad(N>0,\ 0\leq k\leq N).
 \tag{12}
-$$
+```
 
 Then the full congruence holds:
 
-$$
+```math
 A(np^r)\equiv A(np^{r-1})\pmod {p^{dr}}.
 \tag{13}
-$$
+```
 
 #### Proof
 
@@ -238,12 +238,12 @@ $\square$
 For depth $2$, Theorem 3 says that the entire $p=2$ problem is reduced
 to
 
-$$
+```math
 \Lambda(1/2)\geq3
 \quad\text{and}\quad
 2\mid F(N,k).
 \tag{14}
-$$
+```
 
 This is exactly the structure of the prime-2 endgame in the A183068
 proof.
@@ -252,18 +252,18 @@ proof.
 
 Let $u,v$ be positive integers and define
 
-$$
+```math
 F_{u,v}(N,k)=
 \frac{(uk+v(N-k))!}{k!^u(N-k)!^v}
 \tag{15}
-$$
+```
 
 and
 
-$$
+```math
 A_{u,v}(N)=\sum_{k=0}^N F_{u,v}(N,k).
 \tag{16}
-$$
+```
 
 The summand is the multinomial coefficient with $u$ copies of $k$
 and $v$ copies of $N-k$.  Notice the symmetry
@@ -271,42 +271,42 @@ $A_{u,v}=A_{v,u}$.
 
 Its Landau fiber has the closed form
 
-$$
+```math
 \Lambda_{u,v}(y)
 =v+\lfloor(u-v)y\rfloor.
 \tag{17}
-$$
+```
 
 Consequently,
 
-$$
+```math
 \min_{0<y<1}\Lambda_{u,v}(y)=\min(u,v)
 \tag{18}
-$$
+```
 
 and
 
-$$
+```math
 \Lambda_{u,v}(1/2)=\left\lfloor\frac{u+v}{2}\right\rfloor.
 \tag{19}
-$$
+```
 
 ### Corollary 4: an all-prime quadratic family
 
 If
 
-$$
+```math
 u,v\geq2,\qquad u+v\geq6,
 \tag{20}
-$$
+```
 
 then, for every prime $p$ and $n,r\geq1$,
 
-$$
+```math
 A_{u,v}(np^r)\equiv A_{u,v}(np^{r-1})
 \pmod {p^{2r}}.
 \tag{21}
-$$
+```
 
 #### Proof
 
@@ -318,10 +318,10 @@ Theorems 2 and 3.  $\square$
 
 The Hanna--Bala sequence A183068 is the case
 
-$$
+```math
 (u,v)=(4,2).
 \tag{22}
-$$
+```
 
 Thus its all-prime $p^{2r}$ theorem is one boundary point of an
 infinite family rather than an isolated congruence.
@@ -330,26 +330,26 @@ infinite family rather than an isolated congruence.
 
 If
 
-$$
+```math
 u,v\geq4,\qquad u+v\geq10,
 \tag{23}
-$$
+```
 
 then, for every prime $p$ and $n,r\geq1$,
 
-$$
+```math
 A_{u,v}(np^r)\equiv A_{u,v}(np^{r-1})
 \pmod {p^{3r}}.
 \tag{24}
-$$
+```
 
 #### Proof
 
 The depth is at least $3$.  At $p=3$,
 
-$$
+```math
 \min\bigl(\Lambda_{u,v}(1/3),\Lambda_{u,v}(2/3)\bigr)\geq4,
-$$
+```
 
 and at $p=2$, (19) and (23) give
 $\Lambda_{u,v}(1/2)\geq5$.
@@ -357,18 +357,18 @@ $\Lambda_{u,v}(1/2)\geq5$.
 It remains to verify the divisibility in (12).  For $b>0$, the equal-part
 multinomial
 
-$$
+```math
 M_m(b)=\frac{(mb)!}{b!^m}
-$$
+```
 
 is divisible by $3$ for $m\geq3$ and by $4$ for $m\geq4$.
 For the first statement, $M_3(b)$ has positive 3-adic valuation by
 Legendre's digit-sum formula and splits off from $M_m(b)$.
 For the second,
 
-$$
+```math
 M_4(b)=\binom{4b}{2b}\binom{2b}{b}^2
-$$
+```
 
 is divisible by $4$, and it splits off from $M_m(b)$.
 At least one of $k,N-k$ is positive, so
@@ -390,14 +390,14 @@ The Landau fiber gives a fast, exact screen:
 
 The mechanism is therefore:
 
-$$
+```math
 \boxed{\text{Landau carries}}
 \quad+\quad
 \boxed{\text{multinomial scaling}}
 \quad\Longrightarrow\quad
 \boxed{\text{termwise supercongruence}}.
 \tag{25}
-$$
+```
 
 It is powerful when each summand is a balanced product of multinomials.
 It is not a universal explanation of Apéry-like supercongruences:

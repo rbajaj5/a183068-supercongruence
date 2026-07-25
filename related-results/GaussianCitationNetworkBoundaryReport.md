@@ -11,12 +11,12 @@ partial observations from being confused with solved conjectures.
 
 Fortuny Ayuso, Grau, and Oller-Marcén propose the Gaussian analogue
 
-$$
+```math
 G_k(m-1)=(m+mi)^k,
 \qquad
 G_k(n)=\sum_{1\leq a,b\leq n}(a+bi)^k.
 \tag{1}
-$$
+```
 
 Their search for $k,m<100$ found only $(k,m)=(2,3)$.
 
@@ -30,45 +30,45 @@ If (1) holds, then:
 
 1. there is no solution with $k=1$;
 2. if $k>1$ is odd, then
-   $$
+   ```math
    m-1=2^a\quad\text{for some }a\geq2;
    \tag{2}
-   $$
+   ```
 3. if $k\equiv2\pmod4$, then $m-1$ is a power of $2$, and
-   $$
+   ```math
    m-1\leq2^{k/2}.
    \tag{3}
-   $$
+   ```
 
 ### Proof
 
 For odd $k>1$, the Gaussian von Staudt formula gives
 
-$$
+```math
 G_k(n)\equiv
 \begin{cases}
 \dfrac n2(1+i)\pmod n,&n\equiv2\pmod4,\\
 0\pmod n,&\text{otherwise}.
 \end{cases}
 \tag{4}
-$$
+```
 
 If $n\equiv2\pmod4$, the two components on the first line are odd
 modulo $2$, while the two components of $(1+i)^k$ are even; hence
 this case is impossible.  Otherwise, (4) implies that $n$ divides
 both components of
 
-$$
+```math
 (1+i)^k=\pm2^{(k-1)/2}(1\pm i).
-$$
+```
 
 Thus $n$ is a power of $2$.  The case $n=1$ would assert
 $(1+i)^k=2^k(1+i)^k$, so $a\geq2$.  The case $k=1$ follows
 directly from
 
-$$
+```math
 G_1(n)=\frac{n^2(n+1)}2(1+i).
-$$
+```
 
 If $k\equiv2\pmod4$, the von Staudt residue is real, while
 $(1+i)^k$ is purely imaginary with nonzero component
@@ -82,35 +82,35 @@ The only solution with $k=2$ is $(k,m)=(2,3)$.
 
 A direct power-sum calculation gives
 
-$$
+```math
 G_2(n)
 =
 2i\left(\sum_{a=1}^n a\right)^2
 =
 \frac{i n^2(n+1)^2}{2}.
 \tag{5}
-$$
+```
 
 The right side of (1) is $2i(n+1)^2$.  Equality is therefore
 equivalent to $n^2=4$, so $n=2$ and $m=3$.
 
 Finally, the triangle inequality excludes a complementary region:
 
-$$
+```math
 |G_k(n)|
 \leq
 n^2(\sqrt2\,n)^k
 <
 (\sqrt2(n+1))^k
 \tag{6}
-$$
+```
 
 whenever
 
-$$
+```math
 k>\frac{2\log n}{\log(1+1/n)}.
 \tag{7}
-$$
+```
 
 The companion search verifies that $(2,3)$ remains the only solution
 for $1\leq k,m\leq180$.  None of these observations resolves the
@@ -120,19 +120,19 @@ cases $k\equiv0\pmod4$ or the surviving power-of-two families.
 
 Kalinin--Zottor prove, for $p\equiv3\pmod4$,
 
-$$
+```math
 v_p(\mathcal G_p(p))\geq6
 \quad\Longleftrightarrow\quad
 p\mid\operatorname{num}(B_{p-3}).
 \tag{8}
-$$
+```
 
 The right side is exactly the classical definition of a Wolstenholme
 prime.  Only
 
-$$
+```math
 16843,\qquad2124679
-$$
+```
 
 are known, and Booker--Hathi--Mossinghoff--Trudgian found no further
 examples below $10^{11}$.

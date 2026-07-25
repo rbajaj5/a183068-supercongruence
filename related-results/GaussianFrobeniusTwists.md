@@ -8,38 +8,38 @@ unchecked for priority and independent mathematical review.
 Let $F(N,k)\in\mathbb Z$, with $F(N,k)=0$ outside
 $0\leq k\leq N$, and let
 
-$$
+```math
 T_z(N)=\sum_{k=0}^N z^kF(N,k)
-$$
+```
 
 for an element $z$ of a commutative ring.  Fix a prime $p$, integers
 $n,r\geq1$, and an exponent $e$.  Suppose that
 
-$$
+```math
 F(np^r,k)\equiv0\pmod {p^e}\qquad(p\nmid k)
 \tag{1}
-$$
+```
 
 and
 
-$$
+```math
 F(np^r,p\ell)\equiv F(np^{r-1},\ell)\pmod {p^e}.
 \tag{2}
-$$
+```
 
 Then
 
-$$
+```math
 \boxed{
 T_z(np^r)\equiv T_{z^p}(np^{r-1})\pmod {p^e}.
 }
 \tag{3}
-$$
+```
 
 Indeed, the terms with $p\nmid k$ vanish by (1), while the remaining
 terms are
 
-$$
+```math
 \begin{aligned}
 T_z(np^r)
 &\equiv
@@ -50,7 +50,7 @@ F(np^{r-1},\ell)
 =T_{z^p}(np^{r-1})
 \pmod {p^e}.
 \end{aligned}
-$$
+```
 
 Thus every supercongruence proved by the discard-and-rescale method has
 cyclotomic companions.  If $z=\zeta_m$ and $p\nmid m$, the map
@@ -61,20 +61,20 @@ cyclotomic coefficient ring modulo $p$.
 
 For the Hanna--Bala summand
 
-$$
+```math
 F(N,k)=\frac{(2N+2k)!}{k!^4(N-k)!^2},
-$$
+```
 
 define the Gaussian integer
 
-$$
+```math
 G(N)=\sum_{k=0}^N i^kF(N,k)\in\mathbb Z[i].
-$$
+```
 
 The proved termwise argument for A183068 supplies (1)--(2) with
 $e=2r$.  Consequently, for every odd prime $p$,
 
-$$
+```math
 G(np^r)\equiv
 \begin{cases}
 G(np^{r-1})&p\equiv1\pmod4,\\
@@ -82,7 +82,7 @@ G(np^{r-1})&p\equiv1\pmod4,\\
 \end{cases}
 \pmod {p^{2r}}.
 \tag{4}
-$$
+```
 
 This is the split/inert dichotomy in $\mathbb Z[i]$:
 
@@ -94,13 +94,13 @@ This is the split/inert dichotomy in $\mathbb Z[i]$:
 
 The ramified prime also has a precise cross-twist.  Since $i^2=-1$,
 
-$$
+```math
 G(n2^r)\equiv
 \sum_{\ell=0}^{n2^{r-1}}(-1)^\ell
 F(n2^{r-1},\ell)
 \pmod {2^{2r}}.
 \tag{5}
-$$
+```
 
 Equation (5) is not an automorphism statement: $2$ ramifies in
 $\mathbb Z[i]$.
@@ -122,9 +122,9 @@ It does **not**:
 For comparison, established hypergeometric congruences can recover the
 real coordinate $x$ when
 
-$$
+```math
 p=x^2+y^2,\qquad p\equiv1\pmod4.
-$$
+```
 
 For example, Sun proved a binomial sum congruent modulo $p^2$ to a
 signed $x$.  That is closer to constructing the primary Gaussian prime

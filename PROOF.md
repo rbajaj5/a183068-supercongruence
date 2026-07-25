@@ -9,15 +9,15 @@
 
 The [OEIS entry A183068](https://oeis.org/A183068) gives
 
-$$
+```math
 a(n)=\sum_{k=0}^{n}\frac{(2n+2k)!}{k!^4(n-k)!^2}.
-$$
+```
 
 For every prime $p$ and all positive integers $n,r$,
 
-$$
+```math
 a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}.
-$$
+```
 
 ## The proof in one screen
 
@@ -38,10 +38,10 @@ below verifies the carry count, the scaling exponent, and the binary edge case.
 
 The summand can be rewritten as one multinomial coefficient:
 
-$$
+```math
 F(N,k)=\frac{(2N+2k)!}{k!^4(N-k)!^2}
 =\binom{2N+2k}{k,k,k,k,N-k,N-k}.
-$$
+```
 
 Consequently $F(N,k)$ is an integer. Legendre's formula computes its
 $p$-adic valuation by counting the base $p$ carries needed to add the six
@@ -62,9 +62,9 @@ $p^{2r}$ before any cancellation between summands is considered.
 
 Using the summand $F$ displayed above,
 
-$$
+```math
 a(N)=\sum_{k=0}^{N}F(N,k).
-$$
+```
 
 ### 2. Terms whose index is not divisible by $p$
 
@@ -72,15 +72,15 @@ $$
 
 Suppose $p^t\mid N$, $0\le k\le N$, and $s=v_p(k)<t$.  Then
 
-$$
+```math
 v_p(F(N,k))\ge2(t-s).
-$$
+```
 
 If $p=2$, the stronger bound
 
-$$
+```math
 v_2(F(N,k))\ge2(t-s)+1
-$$
+```
 
 holds.
 
@@ -89,33 +89,33 @@ holds.
 Legendre's formula expresses $v_p(F(N,k))$ as the sum, over $i\ge1$,
 of
 
-$$
+```math
 \lambda_i=
 \left\lfloor\frac{2N+2k}{p^i}\right\rfloor
 -4\left\lfloor\frac{k}{p^i}\right\rfloor
 -2\left\lfloor\frac{N-k}{p^i}\right\rfloor.
-$$
+```
 
 Every $\lambda_i$ is nonnegative: it is the carry contribution at the
 $p^i$ level for the multinomial coefficient displayed above.
 
 Fix $s<i\le t$, put $q=p^i$, and write
 
-$$
+```math
 N=qM,\qquad k=qa+u,\qquad0<u<q.
-$$
+```
 
 Then
 
-$$
+```math
 N-k=q(M-a-1)+(q-u),
-$$
+```
 
 and direct substitution in the Legendre formula gives
 
-$$
+```math
 \lambda_i=2+\left\lfloor\frac{2u}{q}\right\rfloor\ge2.
-$$
+```
 
 There are $t-s$ such indices, proving the first bound in Lemma 1.
 
@@ -125,9 +125,9 @@ instead of $2$, proving the stronger binary bound. $\square$
 
 In particular, if $p^r\mid N$ and $p\nmid k$, then
 
-$$
+```math
 F(N,k)\equiv0\pmod {p^{2r}}.
-$$
+```
 
 ### 3. Multinomial scaling
 
@@ -140,24 +140,24 @@ Let $\mathbf b=(b_1,\ldots,b_m)$ be nonnegative integers with positive
 sum.  Suppose every positive $b_i$ is divisible by $p^s$.  Then, in
 the $p$-adic units,
 
-$$
+```math
 \frac{\displaystyle
  \binom{p\sum b_i}{pb_1,\ldots,pb_m}}
 {\displaystyle
  \binom{\sum b_i}{b_1,\ldots,b_m}}
 \equiv1\pmod {p^{\,3(s+1)-\epsilon_p}},
-$$
+```
 
 where
 
-$$
+```math
 \epsilon_p=
 \begin{cases}
 2,&p=2,\\
 1,&p=3,\\
 0,&p\ge5.
 \end{cases}
-$$
+```
 
 This follows by factoring each multinomial coefficient into binomial
 coefficients and applying the prime-power form of the
@@ -193,55 +193,55 @@ $p=2,3,5$.
 
 Let $N'=np^{r-1}$ and $0\le\ell\le N'$.  Then
 
-$$
+```math
 F(pN',p\ell)\equiv F(N',\ell)\pmod {p^{2r}}.
-$$
+```
 
 #### Proof
 
 Apply Lemma 2 to the six components
 
-$$
+```math
 \ell,\ell,\ell,\ell,N'-\ell,N'-\ell.
-$$
+```
 
 Let $s$ be the minimum $p$-adic valuation among the positive
 components displayed above. Because $p^{r-1}\mid N'$, either
 
-$$
+```math
 s<r-1
 \quad\text{and then}\quad
 s=v_p(\ell)=v_p(N'-\ell),
-$$
+```
 
 or $s\ge r-1$.
 
 First suppose $s<r-1$.  Lemma 1, applied to $F(N',\ell)$, gives
 
-$$
+```math
 v_p(F(N',\ell))\ge2(r-1-s).
-$$
+```
 
 For $p=2$, it gives one additional power of $2$.  Lemma 2 says that
 the scaling quotient minus $1$ has valuation at least
 $3(s+1)-\epsilon_p$.  Hence
 
-$$
+```math
 v_p\bigl(F(pN',p\ell)-F(N',\ell)\bigr)\ge
 \begin{cases}
 [2(r-1-s)+1]+(3s+1)=2r+s,&p=2,\\
 2(r-1-s)+(3s+2)=2r+s,&p=3,\\
 2(r-1-s)+(3s+3)=2r+s+1,&p\ge5.
 \end{cases}
-$$
+```
 
 Every case is at least $2r$.
 
 Now suppose $s\ge r-1$.  Lemma 2 alone supplies respectively
 
-$$
+```math
 3r-2,\qquad3r-1,\qquad3r
-$$
+```
 
 powers for $p=2,3,$ and $p\ge5$.  These bounds are at least $2r$,
 except potentially when $p=2,r=1$.
@@ -251,10 +251,10 @@ components, some positive component $b$ occurs at least twice:
 take $b=\ell$ if $\ell>0$, and $b=N'$ otherwise.  Grouping two
 copies first factors the multinomial coefficient as
 
-$$
+```math
 \binom{2b}{b}
 \binom{2N'+2\ell}{2b,\ \text{the remaining components}}.
-$$
+```
 
 The central binomial coefficient $\binom{2b}{b}$ is even for $b\ge1$.
 The one power supplied by Lemma 2 therefore yields two powers in the
@@ -264,20 +264,20 @@ difference. This proves Lemma 3 in every case. $\square$
 
 Set $N=np^r$. Split the summand expansion according to whether $p\mid k$:
 
-$$
+```math
 a(N)
 =
 \sum_{\substack{0\le k\le N\\p\nmid k}}F(N,k)
 +
 \sum_{\ell=0}^{N/p}F(N,p\ell).
-$$
+```
 
 By Lemma 1's vanishing corollary, every term in the first sum is
 $0\pmod {p^{2r}}$. Lemma 3
 replaces every term in the second sum by $F(N/p,\ell)$ modulo
 $p^{2r}$.  Therefore
 
-$$
+```math
 \begin{aligned}
 a(np^r)
 &\equiv
@@ -285,7 +285,7 @@ a(np^r)
 &=a(np^{r-1})
 \pmod {p^{2r}},
 \end{aligned}
-$$
+```
 
 This is the claimed congruence. $\square$
 
@@ -293,13 +293,13 @@ This is the claimed congruence. $\square$
 
 The sequence also has the fixed-Laurent-polynomial representation
 
-$$
+```math
 a(n)=\operatorname{CT}_{w,x,y,z} P(w,x,y,z)^n,
-$$
+```
 
 where
 
-$$
+```math
 P=
 \frac{(1+w)^2}{w}\,
 (1+y)^2(1+x)
@@ -307,7 +307,7 @@ P=
 1+
 \frac{(1+y)^2(1+z)^2}{xy^2z}
 \right).
-$$
+```
 
 To verify this representation, extract successively the central coefficients giving
 $\binom{2n}{n}$, $\binom nk^2$,

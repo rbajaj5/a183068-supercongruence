@@ -10,16 +10,16 @@ repository or a Lean formalization.
 
 Define
 
-$$
+```math
 a(n)=\sum_{k=0}^{n}\frac{(2n+2k)!}{k!^4(n-k)!^2}.
-$$
+```
 
 Peter Bala conjectured in July 2024 that for every prime $p$ and all positive
 integers $n,r$,
 
-$$
+```math
 a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}.
-$$
+```
 
 **[Read the friendly proof](PROOF.md).** Its first screen gives the complete
 idea in plain language; the carry calculation and small-prime bookkeeping

@@ -4,7 +4,7 @@
 
 Let $T(0)=1$ and
 
-$$
+```math
 \begin{aligned}
 (n+1)^3T(n+1)
 ={}&2(2n+1)(5n^2+5n+2)T(n)\\
@@ -12,15 +12,15 @@ $$
 &+22n(2n-1)(n-1)T(n-2).
 \end{aligned}
 \tag{1}
-$$
+```
 
 Cooper conjectures that
 
-$$
+```math
 T(pn)\equiv T(n)\pmod {p^2}
 \quad(n\ge1)
 \tag{2}
-$$
+```
 
 for $p=2,59,5581$.  His search found no other prime below $10^4$.
 
@@ -28,22 +28,22 @@ for $p=2,59,5581$.  His search found no other prime below $10^4$.
 
 Define
 
-$$
+```math
 q_p=\frac{T(p)-T(1)}p\pmod p.
 \tag{3}
-$$
+```
 
 The Lucas congruence predicts the numerator is divisible by $p$, while
 (2) forces $q_p=0$.
 
 An exact scan of every odd prime below $30,000$ found
 
-$$
+```math
 q_p=0
 \quad\Longleftrightarrow\quad
 p\in\{59,5581\}.
 \tag{4}
-$$
+```
 
 Thus Cooper's rare primes are already singled out by the first instance of
 the conjecture throughout a range three times larger than the published
@@ -71,12 +71,12 @@ not prove (2).
 
 The next useful theorem would be an equivalence of the form
 
-$$
+```math
 q_p=0
 \quad\Longrightarrow\quad
 T(pn)\equiv T(n)\pmod {p^2}\ \text{for every }n,
 \tag{5}
-$$
+```
 
 derived from the level-11 modular parametrization or a Frobenius matrix.
 That would turn an infinite family of congruences into one computable
