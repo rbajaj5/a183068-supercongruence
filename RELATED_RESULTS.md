@@ -15,9 +15,9 @@ A183068 proof without mixing them into the proof itself.
 
 | Result | Relationship | Status |
 | --- | --- | --- |
-| A183068 modulo \(p^{2r}\) for every prime | The core named conjecture | Audited draft |
-| [Landau-depth synthesis](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/LandauDepthSupercongruenceSynthesis.md) | Extracts the carry-and-scaling argument into a computable criterion; gives an infinite all-prime \(p^{2r}\) family containing A183068 and an all-prime \(p^{3r}\) subfamily | Unchecked candidate |
-| [Gaussian Frobenius twists](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/supercongruence-program/GaussianFrobeniusTwists.md) | Lifts a termwise supercongruence to roots-of-unity weights; the \(i^k\)-twist detects split versus inert primes in \(\mathbb Z[i]\) | Unchecked candidate |
+| A183068 modulo $p^{2r}$ for every prime | The core named conjecture | Audited draft |
+| [Landau-depth synthesis](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/LandauDepthSupercongruenceSynthesis.md) | Extracts the carry-and-scaling argument into a computable criterion; gives an infinite all-prime $p^{2r}$ family containing A183068 and an all-prime $p^{3r}$ subfamily | Unchecked candidate |
+| [Gaussian Frobenius twists](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/supercongruence-program/GaussianFrobeniusTwists.md) | Lifts a termwise supercongruence to roots-of-unity weights; the $i^k$-twist detects split versus inert primes in $\mathbb Z[i]$ | Unchecked candidate |
 
 The Landau-depth synthesis is the most important direct generalization. It
 explains which part of the A183068 proof is special and which part is reusable.
@@ -26,24 +26,24 @@ explains which part of the A183068 proof is special and which part is reusable.
 
 | Result | Relationship | Status |
 | --- | --- | --- |
-| [Cubic \((\eta)\) congruence at \(p=3\)](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/supercongruence-program/EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to address a small prime omitted from a published theorem | Unchecked candidate |
+| [Cubic $(\eta)$ congruence at $p=3$](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/supercongruence-program/EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to address a small prime omitted from a published theorem | Unchecked candidate |
 | [Gaussian Wolstenholme citation network](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/supercongruence-program/GaussianWolstenholmeCitationNetwork.md) | Applies related residue-block ideas in Gaussian-integer arithmetic; contains a Gaussian Lucas proof candidate, a polynomial-product proof candidate, and a corrected reciprocal-power statement | Unchecked candidate |
-| [Binary \(s_{18}\) problem](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/supercongruence-program/S18TwoAdicReduction.md) | Reduces a published binary supercongruence to one sharpened scaling lemma | Reduction only |
+| [Binary $s_{18}$ problem](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/supercongruence-program/S18TwoAdicReduction.md) | Reduces a published binary supercongruence to one sharpened scaling lemma | Reduction only |
 
 These neighboring results are not all logical consequences of A183068. Their
-connection is methodological: \(p\)-adic residue strata supply vanishing, and a
+connection is methodological: $p$-adic residue strata supply vanishing, and a
 scaling or translation map controls the surviving terms.
 
 ## Gaussian-prime terminology
 
-Gaussian integers are numbers \(a+bi\) with \(a,b\in\mathbb Z\). A Gaussian
+Gaussian integers are numbers $a+bi$ with $a,b\in\mathbb Z$. A Gaussian
 prime is an irreducible element of this ring. Ordinary primes
-\(p\equiv3\pmod4\) remain prime (are *inert*), while primes
-\(p\equiv1\pmod4\) split; for example,
+$p\equiv3\pmod4$ remain prime (are *inert*), while primes
+$p\equiv1\pmod4$ split; for example,
 
-\[
+$$
 5=(2+i)(2-i).
-\]
+$$
 
 The Gaussian work above concerns congruences in this enlarged arithmetic. It
 does not claim a result about the distribution of Gaussian primes or an

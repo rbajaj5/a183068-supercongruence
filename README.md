@@ -10,16 +10,16 @@ repository or a Lean formalization.
 
 Define
 
-\[
+$$
 a(n)=\sum_{k=0}^{n}\frac{(2n+2k)!}{k!^4(n-k)!^2}.
-\]
+$$
 
-Peter Bala conjectured in July 2024 that for every prime \(p\) and all positive
-integers \(n,r\),
+Peter Bala conjectured in July 2024 that for every prime $p$ and all positive
+integers $n,r$,
 
-\[
+$$
 a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}.
-\]
+$$
 
 The note in [PROOF.md](PROOF.md) gives a termwise proof.
 
@@ -37,11 +37,11 @@ contacted about the proposed proof on July 24, 2026.
 ## The proof in four steps
 
 1. Each summand is a six-part multinomial coefficient.
-2. Legendre's formula shows that terms with \(p\nmid k\) vanish modulo
-   \(p^{2r}\).
+2. Legendre's formula shows that terms with $p\nmid k$ vanish modulo
+   $p^{2r}$.
 3. A Ljunggren--Jacobsthal--Kazandzidis scaling congruence identifies the terms
-   with \(p\mid k\) with the preceding \(p\)-adic level.
-4. A separate parity argument closes the only deficient case, \(p=2,r=1\).
+   with $p\mid k$ with the preceding $p$-adic level.
+4. A separate parity argument closes the only deficient case, $p=2,r=1$.
 
 This is an ordinary mathematical proof. A future Lean development would be a
 separate verification project, not a prerequisite for reading the argument.
@@ -51,8 +51,8 @@ separate verification project, not a prerequisite for reading the argument.
 | Item | Status |
 | --- | --- |
 | Written proof | Complete draft |
-| Exact computation | 105 congruence cases, including \(r=3\) samples |
-| Machine-assisted referee audit | Completed with no mathematical error reported after the \(p=2\) sourcing clarification |
+| Exact computation | 105 congruence cases, including $r=3$ samples |
+| Machine-assisted referee audit | Completed with no mathematical error reported after the $p=2$ sourcing clarification |
 | Conventional specialist review | Pending |
 | Literature-priority search | Preliminary only |
 | Lean formalization | Not attempted in this repository |
@@ -65,7 +65,7 @@ Please report any gap, attribution issue, or earlier proof.
 1. Read Sections 1--3 of [PROOF.md](PROOF.md) for the statement and carry
    estimate.
 2. Check the precise small-prime losses in Lemma 2.
-3. Audit the three cases in Lemma 3, especially \(p=2,r=1\).
+3. Audit the three cases in Lemma 3, especially $p=2,r=1$.
 4. Run `python verification/verify_a183068.py`.
 5. Consult [RELATED_RESULTS.md](RELATED_RESULTS.md) only after the core proof.
 
