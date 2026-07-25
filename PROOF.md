@@ -44,7 +44,7 @@ F(N,k)=\frac{(2N+2k)!}{k!^4(N-k)!^2}
 $$
 
 Consequently $F(N,k)$ is an integer. Legendre's formula computes its
-$p$-adic valuation by counting the base-$p$ carries needed to add the six
+$p$-adic valuation by counting the base $p$ carries needed to add the six
 bottom entries. When $p^r$ divides $N$ but $p$ does not divide $k$, each of
 the first $r$ digit levels forces at least two carries. This gives the required
 $p^{2r}$ before any cancellation between summands is considered.
