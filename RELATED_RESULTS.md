@@ -16,8 +16,8 @@ A183068 proof without mixing them into the proof itself.
 | Result | Relationship | Status |
 | --- | --- | --- |
 | A183068 modulo $p^{2r}$ for every prime | The core named conjecture | Audited draft |
-| [Landau-depth synthesis](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/LandauDepthSupercongruenceSynthesis.md) | Extracts the carry-and-scaling argument into a computable criterion; gives an infinite all-prime $p^{2r}$ family containing A183068 and an all-prime $p^{3r}$ subfamily | Unchecked candidate |
-| [Gaussian Frobenius twists](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/supercongruence-program/GaussianFrobeniusTwists.md) | Lifts a termwise supercongruence to roots-of-unity weights; the $i^k$-twist detects split versus inert primes in $\mathbb Z[i]$ | Unchecked candidate |
+| [Landau-depth synthesis](related-results/LandauDepthSupercongruenceSynthesis.md) | Extracts the carry-and-scaling argument into a computable criterion; gives an infinite all-prime $p^{2r}$ family containing A183068 and an all-prime $p^{3r}$ subfamily | Unchecked candidate |
+| [Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md) | Lifts a termwise supercongruence to roots-of-unity weights; the $i^k$-twist detects split versus inert primes in $\mathbb Z[i]$ | Unchecked candidate |
 
 The Landau-depth synthesis is the most important direct generalization. It
 explains which part of the A183068 proof is special and which part is reusable.
@@ -26,9 +26,13 @@ explains which part of the A183068 proof is special and which part is reusable.
 
 | Result | Relationship | Status |
 | --- | --- | --- |
-| [Cubic $(\eta)$ congruence at $p=3$](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/supercongruence-program/EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to address a small prime omitted from a published theorem | Unchecked candidate |
-| [Gaussian Wolstenholme citation network](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/supercongruence-program/GaussianWolstenholmeCitationNetwork.md) | Applies related residue-block ideas in Gaussian-integer arithmetic; contains a Gaussian Lucas proof candidate, a polynomial-product proof candidate, and a corrected reciprocal-power statement | Unchecked candidate |
-| [Binary $s_{18}$ problem](https://github.com/rbajaj5/oeis-conjecture-proofs/blob/agent/exact-modulo-bias/unchecked-by-fable/supercongruence-program/S18TwoAdicReduction.md) | Reduces a published binary supercongruence to one sharpened scaling lemma | Reduction only |
+| [Cubic $(\eta)$ congruence at $p=3$](related-results/EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to address a small prime omitted from a published theorem | Unchecked candidate |
+| [Gaussian Wolstenholme citation network](related-results/GaussianWolstenholmeCitationNetwork.md) | Applies related residue-block ideas in Gaussian-integer arithmetic; contains a Gaussian Lucas proof candidate, a polynomial-product proof candidate, and a corrected reciprocal-power statement | Unchecked candidate |
+| [Gaussian power-sum conjectures](related-results/GaussianPowerSumConjectures.md) | Proves the printed $p=3,5$ formulas and gives exact counterexamples to two broader claims in a recent source | Unchecked candidate |
+| [Higher-degree finite-field box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md) | Extends the Gaussian polynomial mechanism to arbitrary finite-field degree by Boolean Möbius inversion | Unchecked candidate; likely classical infrastructure |
+| [Gaussian citation-network boundary report](related-results/GaussianCitationNetworkBoundaryReport.md) | Records rigorous reductions for Gaussian Erdős--Moser and identifies the classical Wolstenholme-prime obstruction | Reduction only |
+| [Binary $s_{18}$ problem](related-results/S18TwoAdicReduction.md) | Reduces a published binary supercongruence to one sharpened scaling lemma | Reduction only |
+| [Cooper level-11 rare primes](related-results/CooperLevel11RarePrimes.md) | Extends exact tests and isolates the $n=1$ obstruction for the two exceptional primes | Computational result and structural clue |
 
 These neighboring results are not all logical consequences of A183068. Their
 connection is methodological: $p$-adic residue strata supply vanishing, and a
@@ -51,7 +55,8 @@ immediate cryptographic application.
 
 ## Communication policy
 
-Only stable, reviewable developments should be added here. Speculative searches
-and failed experiments belong in the working repository. The next update
-should follow independent review of the Gaussian and Landau-depth candidates.
-
+The full drafts and their exact checkers are now included in this repository.
+Their labels are part of the mathematical record: inclusion means that Paul
+can inspect the work, not that an unchecked candidate has become a theorem.
+The next status update should follow independent review of the Gaussian and
+Landau-depth candidates.

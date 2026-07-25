@@ -69,14 +69,23 @@ Please report any gap, attribution issue, or earlier proof.
 4. Run `python verification/verify_a183068.py`.
 5. Consult [RELATED_RESULTS.md](RELATED_RESULTS.md) only after the core proof.
 
+To reproduce every computation in the expanded repository, run
+`python verification/run_all.py`.
+
 ## Repository map
 
 - [PROOF.md](PROOF.md): the complete proof and references.
 - [verification/verify_a183068.py](verification/verify_a183068.py): a small
   exact-integer regression check.
-- [RELATED_RESULTS.md](RELATED_RESULTS.md): later results produced by the same
-  proof program, separated by audit status.
+- [RELATED_RESULTS.md](RELATED_RESULTS.md): an index of every current result
+  produced by the same program, separated by audit status.
+- [related-results/](related-results/): the complete related proof drafts and
+  reductions. These are stored locally in this repository rather than merely
+  linked from the larger working repository.
+- [verification/related/](verification/related/): the corresponding exact
+  checkers.
+- [verification/run_all.py](verification/run_all.py): one command for all nine
+  verification programs.
 
 The broader working repository remains available at
 [rbajaj5/oeis-conjecture-proofs](https://github.com/rbajaj5/oeis-conjecture-proofs).
-
