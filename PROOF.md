@@ -16,7 +16,7 @@ $$
 For every prime $p$ and all positive integers $n,r$,
 
 $$
-\boxed{\;a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}.\;}
+a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}.
 $$
 
 ## The proof in one screen
