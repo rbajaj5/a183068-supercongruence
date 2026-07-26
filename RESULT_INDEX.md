@@ -112,6 +112,23 @@ Status labels are deliberately conservative:
 - **Proof:** [Bhatt--Singh/Dwork period synthesis](related-results/BhattSinghDworkPeriodSupercongruence.md)
 - **Exact checker:** [`verify_dwork_period_supercongruence.py`](verification/related/verify_dwork_period_supercongruence.py)
 
+### FF-DET - finite-field determinant bias
+
+- **Claim:** The additive determinant character sum over \(n\)-by-\(n\)
+  matrices over \(\mathbf F_q\) has an exact closed form. Its high-degree end
+  gives a uniform non-asymptotic Fourier-bias bound, while its low-degree end
+  gives the sharp adjacent-extension identity
+  \[
+  v_p(\mathcal S_n(p^r)-\mathcal S_n(p^{r-1}))
+  =\frac{n^2-n+2}{2}(r-1).
+  \]
+- **Status:** Complete elementary theorem with exact checks; new to this
+  program. The rank count is classical; the sharp adjacent-extension
+  valuation and two-ended formulation appear new in a targeted search, with
+  priority still provisional.
+- **Proof:** [Finite-field determinant bias and supercongruence](related-results/FiniteFieldDeterminantBiasSupercongruence.md)
+- **Exact checker:** [`verify_finite_field_determinant_bias.py`](verification/related/verify_finite_field_determinant_bias.py)
+
 ## Gaussian-integer results
 
 ### GWL-POLY — Gaussian box polynomial

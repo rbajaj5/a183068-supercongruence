@@ -30,6 +30,7 @@ explains which part of the A183068 proof is special and which part is reusable.
 
 | Result | Relationship | Status |
 | --- | --- | --- |
+| [Finite-field determinant bias](related-results/FiniteFieldDeterminantBiasSupercongruence.md) | Replaces the smallest-singular-value obstruction by exact rank deficiency over \(\mathbf F_q\); opposite ends of one character-sum polynomial give a non-asymptotic bias bound and a sharp adjacent-extension supercongruence | Complete elementary theorem with exact checks; the count is classical, while the sharp valuation formulation appears new in a targeted search; priority provisional |
 | [Cubic $(\eta)$ congruence at $p=3$](related-results/EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to address a small prime omitted from a published theorem | Unchecked candidate |
 | [Bhatt--Singh/Dwork period synthesis](related-results/BhattSinghDworkPeriodSupercongruence.md) | Connects the Fermat Calabi--Yau \(F\)-pure-threshold tower to the diagonal period \(A_d(n)=(dn)!/(n!)^d\), proving an all-prime adjacent-scale bound with a uniform \(v_p(d!)\) gain | Complete elementary deduction with exact checks; no novelty claim |
 | [Gaussian Wolstenholme citation network](related-results/GaussianWolstenholmeCitationNetwork.md) | Applies related residue-block ideas in Gaussian-integer arithmetic; contains a Gaussian Lucas proof candidate, a polynomial-product proof candidate, and a corrected reciprocal-power statement | Unchecked candidate |
