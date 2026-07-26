@@ -62,6 +62,14 @@ separate verification project, not a prerequisite for reading the argument.
 The audit and computation are evidence, not substitutes for peer review.
 Please report any gap, attribution issue, or earlier proof.
 
+## Public Gaussian-prime follow-on
+
+The most concise shareable follow-on is
+**[Kalinin's Gaussian Lucas congruence](GAUSSIAN_LUCAS.md)**. It gives the
+statement, proof mechanism, exact \(p=3\) boundary, source paper, and
+reproduction command. Its present status is an unchecked proof candidate,
+not a peer-reviewed theorem.
+
 ## Suggested reading order
 
 1. Read Sections 1--3 of [PROOF.md](PROOF.md) for the statement and carry
@@ -76,11 +84,16 @@ To reproduce every computation in the expanded repository, run
 
 ## Repository map
 
+- [RESULT_INDEX.md](RESULT_INDEX.md): the claim-level ledger. Consult this
+  before beginning a new search; it separates distinct theorems even when they
+  share one proof note.
 - [PROOF.md](PROOF.md): the complete proof and references.
 - [verification/verify_a183068.py](verification/verify_a183068.py): a small
   exact-integer regression check.
 - [RELATED_RESULTS.md](RELATED_RESULTS.md): an index of every current result
   produced by the same program, separated by audit status.
+- [GAUSSIAN_LUCAS.md](GAUSSIAN_LUCAS.md): the public entry point for the
+  Gaussian-prime follow-on.
 - [related-results/](related-results/): the complete related proof drafts and
   reductions. These are stored locally in this repository rather than merely
   linked from the larger working repository.

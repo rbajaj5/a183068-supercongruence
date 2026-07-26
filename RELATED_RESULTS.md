@@ -40,6 +40,9 @@ scaling or translation map controls the surviving terms.
 
 ## Gaussian-prime terminology
 
+For a concise public entry point, see
+[Kalinin's Gaussian Lucas congruence](GAUSSIAN_LUCAS.md).
+
 Gaussian integers are numbers $a+bi$ with $a,b\in\mathbb Z$. A Gaussian
 prime is an irreducible element of this ring. Ordinary primes
 $p\equiv3\pmod4$ remain prime (are *inert*), while primes

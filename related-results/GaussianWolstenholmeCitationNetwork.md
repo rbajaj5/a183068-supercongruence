@@ -371,7 +371,7 @@ For $Z\in\mathbb Z[i]$, define one complete nonzero residue block
 
 ```math
 H_p(Z)=
-\prod_{\substack{1\leq a,b\leq p\$a,b)\neq(p,p)}}
+\prod_{\substack{1\leq a,b\leq p\\(a,b)\neq(p,p)}}
 (pZ+a+bi).
 \qquad\text{(31)}
 ```
