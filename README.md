@@ -75,6 +75,14 @@ led to a [prime-power proof candidate](related-results/GaussianLucasPrimePowerTh
 with exponent $3r$ for inert primes $p>5$ and $3r-1$ at $p=3$. It requires
 independent review and a priority search.
 
+At the ramified prime \(2=-i(1+i)^2\), a separate
+[proof candidate](related-results/GaussianLucasRamifiedTwoTheorem.md)
+establishes the adjacent ratio exponent \(6r-3\), its exact parity-leading
+term, and the difference exponent \(6r-4\) for \(r\ge2\). The mechanism is a
+four-coset reciprocal-sum lift plus a parity induction for the possible
+denominator loss. It has exact checks and a machine-assisted audit, but still
+requires conventional review and a priority search.
+
 ## Suggested reading order
 
 1. Read Sections 1--3 of [PROOF.md](PROOF.md) for the statement and carry

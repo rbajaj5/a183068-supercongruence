@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 from dataclasses import dataclass
+from fractions import Fraction
 from verify_gaussian_wolstenholme import (
     Gaussian,
     gadd,
@@ -353,6 +354,187 @@ def check_three_adic_leading_term(bound: int = 3) -> int:
     return checks
 
 
+def exact_gaussian_multiply(left: Gaussian, right: Gaussian) -> Gaussian:
+    return (
+        left[0] * right[0] - left[1] * right[1],
+        left[0] * right[1] + left[1] * right[0],
+    )
+
+
+RationalGaussian = tuple[Fraction, Fraction]
+
+
+def rational_gaussian_multiply(
+    left: RationalGaussian, right: RationalGaussian
+) -> RationalGaussian:
+    return (
+        left[0] * right[0] - left[1] * right[1],
+        left[0] * right[1] + left[1] * right[0],
+    )
+
+
+def exact_reciprocal_power(a: int, b: int, k: int) -> RationalGaussian:
+    denominator = a * a + b * b
+    inverse = (
+        Fraction(a, denominator),
+        Fraction(-b, denominator),
+    )
+    result = (Fraction(1), Fraction(0))
+    for _ in range(k):
+        result = rational_gaussian_multiply(result, inverse)
+    return result
+
+
+def exact_mixed_block_sum(r: int, k: int) -> RationalGaussian:
+    bound = 2**r
+    total = (Fraction(0), Fraction(0))
+    for a in range(1, bound + 1):
+        for b in range(1, bound + 1):
+            if a % 2 == 0 and b % 2 == 0:
+                continue
+            term = exact_reciprocal_power(a, b, k)
+            total = (total[0] + term[0], total[1] + term[1])
+    return total
+
+
+def check_ramified_two_base_table() -> int:
+    """Certify the seven explicit reciprocal sums used at r=2."""
+    denominator = 16575
+    expected = [
+        (2**3 * 10879, -(2**3) * 10879),
+        (0, -(2**4) * 43604239),
+        (
+            -(2**2) * 850577462821,
+            -(2**2) * 850577462821,
+        ),
+        (-2 * 20911814332048969, 0),
+        (
+            -(2**5) * 9544029745743666769,
+            2**5 * 9544029745743666769,
+        ),
+        (0, 2**2 * 1220198154624646431442789),
+        (
+            40476461909732086340946683071,
+            40476461909732086340946683071,
+        ),
+    ]
+    for k, target in enumerate(expected, start=1):
+        value = exact_mixed_block_sum(2, k)
+        scaled = (
+            2 * denominator**k * value[0],
+            2 * denominator**k * value[1],
+        )
+        assert scaled == target
+    return len(expected)
+
+
+def exact_rectangular_parts(
+    a: int, b: int, c: int, d: int
+) -> tuple[Gaussian, Gaussian]:
+    numerator = (1, 0)
+    denominator = (1, 0)
+    for x in range(c):
+        for y in range(d):
+            numerator = exact_gaussian_multiply(
+                numerator, (a - x, b - y)
+            )
+    for x in range(1, c + 1):
+        for y in range(1, d + 1):
+            denominator = exact_gaussian_multiply(
+                denominator, (x, y)
+            )
+    return numerator, denominator
+
+
+def one_plus_i_valuation(value: Gaussian) -> int:
+    """Exact valuation at the ramified Gaussian prime 1+i."""
+    if value == (0, 0):
+        return INFINITY
+    real, imaginary = value
+    valuation = 0
+    while (real - imaginary) % 2 == 0:
+        real, imaginary = (
+            (real + imaginary) // 2,
+            (imaginary - real) // 2,
+        )
+        valuation += 1
+    return valuation
+
+
+def ramified_two_valuations(
+    r: int, rectangle: tuple[int, int, int, int]
+) -> tuple[int, int, int]:
+    """Return valuations of Q_lower, Delta, and R-1 at 1+i."""
+    a, b, c, d = rectangle
+    lower_scale = 2 ** (r - 1)
+    upper_scale = 2**r
+    upper_numerator, upper_denominator = exact_rectangular_parts(
+        upper_scale * a,
+        upper_scale * b,
+        upper_scale * c,
+        upper_scale * d,
+    )
+    lower_numerator, lower_denominator = exact_rectangular_parts(
+        lower_scale * a,
+        lower_scale * b,
+        lower_scale * c,
+        lower_scale * d,
+    )
+    cross_left = exact_gaussian_multiply(
+        upper_numerator, lower_denominator
+    )
+    cross_right = exact_gaussian_multiply(
+        lower_numerator, upper_denominator
+    )
+    difference_numerator = (
+        cross_left[0] - cross_right[0],
+        cross_left[1] - cross_right[1],
+    )
+    difference_denominator = exact_gaussian_multiply(
+        upper_denominator, lower_denominator
+    )
+    lower_valuation = (
+        one_plus_i_valuation(lower_numerator)
+        - one_plus_i_valuation(lower_denominator)
+    )
+    difference_valuation = (
+        one_plus_i_valuation(difference_numerator)
+        - one_plus_i_valuation(difference_denominator)
+    )
+    return (
+        lower_valuation,
+        difference_valuation,
+        difference_valuation - lower_valuation,
+    )
+
+
+def check_ramified_two_pattern(
+    bound: int = 6,
+) -> tuple[int, int]:
+    """Check the proposed leading residue at r=2 and r=3."""
+    checks = 0
+    equality_cases = 0
+    for r in (2, 3):
+        for rectangle in small_rectangles(bound):
+            a, b, c, d = rectangle
+            lower, difference, ratio = ramified_two_valuations(
+                r, rectangle
+            )
+            predicted_ratio_equality = (
+                c * d * (a + b - c - d)
+            ) % 2 == 1
+            assert (ratio == 6 * r - 3) == predicted_ratio_equality
+            predicted_difference_equality = (
+                predicted_ratio_equality and lower == -1
+            )
+            assert (
+                difference == 6 * r - 4
+            ) == predicted_difference_equality
+            checks += 1
+            equality_cases += int(predicted_difference_equality)
+    return checks, equality_cases
+
+
 def run(deep: bool = False) -> None:
     precision = 18
     rectangles = small_rectangles(3)
@@ -384,6 +566,15 @@ def run(deep: bool = False) -> None:
     print(
         "Leading-term formula at p=3: "
         f"{check_three_adic_leading_term()} checks; alpha=(1, 2)"
+    )
+    two_checks, two_equalities = check_ramified_two_pattern()
+    print(
+        "Ramified p=2 leading pattern: "
+        f"{two_checks} checks; sharp difference cases={two_equalities}"
+    )
+    print(
+        "Ramified p=2 reciprocal-sum base: "
+        f"{check_ramified_two_base_table()} exact identities"
     )
 
     scaling_rectangles = [

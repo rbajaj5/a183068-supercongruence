@@ -99,6 +99,18 @@ Status labels are deliberately conservative:
 - **Report:** [Adjacent-scale Gaussian Lucas experiment](related-results/GaussianLucasScalingExperiment.md)
 - **Exact experiment:** [`experiment_gaussian_lucas_scaling.py`](verification/related/experiment_gaussian_lucas_scaling.py)
 
+### GWL-TWO — ramified prime theorem
+
+- **Claim:** At $\varpi=1+i$ and $r\ge2$, the adjacent ratio is congruent to
+  $1$ modulo $\varpi^{6r-3}$, with leading residue
+  $CD(A+B-C-D)$ modulo $\varpi$. The unnormalized difference has valuation
+  at least $6r-4$.
+- **Status:** Complete proof candidate with independent machine-assisted
+  audit and exact checks; conventional review and a priority search required.
+- **Proof:** [Ramified-prime theorem](related-results/GaussianLucasRamifiedTwoTheorem.md)
+- **Report:** [Ramified-prime experiment](related-results/GaussianLucasRamifiedTwoExperiment.md)
+- **Exact experiment:** [`experiment_gaussian_lucas_scaling.py`](verification/related/experiment_gaussian_lucas_scaling.py)
+
 ### GPS — Gaussian power sums
 
 - **Claim:** Two printed small-prime Gaussian power-sum formulas hold, while
