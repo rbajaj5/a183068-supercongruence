@@ -66,7 +66,7 @@ Please report any gap, attribution issue, or earlier proof.
 
 The most concise shareable follow-on is
 **[Kalinin's Gaussian Lucas congruence](GAUSSIAN_LUCAS.md)**. It gives the
-statement, proof mechanism, exact \(p=3\) boundary, source paper, and
+statement, proof mechanism, exact $p=3$ boundary, source paper, and
 reproduction command. Its present status is an unchecked proof candidate,
 not a peer-reviewed theorem.
 
