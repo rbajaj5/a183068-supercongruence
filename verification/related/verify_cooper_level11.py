@@ -152,6 +152,12 @@ def main() -> None:
     )
     args = parser.parse_args()
 
+    initial = t11_exact(5)
+    assert [value % 3 for value in initial[:3]] == [1, 1, 1]
+    assert [value % 5 for value in initial[:5]] == [1, 4, 3, 3, 4]
+    assert ((initial[3] - initial[1]) // 3) % 3 == 1
+    assert ((initial[5] - initial[1]) // 5) % 5 == 1
+
     exact = t11_exact(600)
     for p in (3, 5, 7, 59):
         differences = t11_padic_differences(p, 10)

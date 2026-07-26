@@ -1,7 +1,7 @@
 # Cooper's level-11 rare-prime supercongruence
 
-**Status:** exact computation, conditional finite-state decision route, and
-proof target; the first-order law remains unproved, 2026-07-26.
+**Status:** known Lucas foundation, exact computation, and explicit
+modulo-$p^2$ proof targets; the first-order law remains unproved, 2026-07-26.
 
 Let $T(0)=1$ and
 
@@ -25,6 +25,20 @@ T(pn)\equiv T(n)\pmod {p^2}
 
 for $p=2,59,5581$.  His search found no other prime below $10^4$.
 
+## Known modulo-$p$ foundation
+
+Beukers, Tsai, and Ye proved Cooper's full level-$11$ Lucas conjecture. If
+$n=n_0+n_1p+\cdots+n_sp^s$ in base $p$, then
+
+```math
+T(n)\equiv\prod_{j=0}^sT(n_j)\pmod p
+```
+
+for every prime $p$. In particular,
+$T(pn)\equiv T(n)\pmod p$. Their theorem supplies the modulo-$p$
+foundation below; it does **not** prove the modulo-$p^2$ statements studied
+here.
+
 ## 1. The $n=1$ obstruction is already selective
 
 Define
@@ -34,8 +48,8 @@ q_p=\frac{T(p)-T(1)}p\pmod p.
 \qquad\text{(3)}
 ```
 
-The Lucas congruence predicts the numerator is divisible by $p$, while
-(2) forces $q_p=0$.
+The proved Lucas congruence makes the quotient well-defined, while (2)
+forces $q_p=0$.
 
 An exact scan of every odd prime below $30,000$ found
 
@@ -121,15 +135,70 @@ $R_{p,11}$. The standard Newton-polytope Dwork theorem does not state that
 pairing automatically. A recurrence linearization, a stronger unit-root
 argument, or a direct constant-term proof is still required.
 
+There is an equivalent formulation which does not assume a Laurent model.
+For the Cartier operator
+
+```math
+\mathcal C_p\!\left(\sum_{m\ge0}c_mt^m\right)
+=\sum_{m\ge0}c_{pm}t^m
+```
+
+and $Z(t)=\sum_{n\ge0}T(n)t^n$, equation (6) is exactly
+
+```math
+\mathcal C_pZ(t)-Z(t)
+\equiv p q_p\bigl(tZ(t)+t^2Z'(t)\bigr)\pmod {p^2}.
+\qquad\text{(8a)}
+```
+
+Indeed, the coefficient of $t^n$ on the right is
+$p q_p nT(n-1)$. Beukers--Tsai--Ye prove the reduction of the left side
+modulo $p$ through modular forms. The new problem is to identify its first
+nonzero $p$-adic coefficient and prove that it has the one-dimensional form
+in (8a).
+
 The analogous second-level defect is not naively proportional to $q_p$.
 Reported tests found a different invariant which can vanish at
 $p=7,13,17,19$ even when $q_p\ne0$. Consequently (6), even if proved,
 must not be iterated to claim the $r\ge2$ congruence.
 
+### Consequence for all of Cooper's Conjecture 11.2
+
+The first-order law would settle both assertions in Cooper's Conjecture
+11.2.
+
+For $p=3$, one has $q_3=1$. The proved Lucas theorem and
+$T(0),T(1),T(2)\equiv1\pmod3$ give $T(m)\equiv1\pmod3$ for every $m$.
+Equation (6) therefore yields
+
+```math
+T(3n)\equiv T(n)+3n\pmod9.
+```
+
+For $p=5$, one again has $q_5=1$. The initial residues are
+
+```math
+\bigl(T(0),T(1),T(2),T(3),T(4)\bigr)
+\equiv(1,4,3,3,4)\pmod5.
+```
+
+None vanishes. Lucas factorization therefore gives
+$T(n-1)\not\equiv0\pmod5$ for every $n\ge1$, and (6) yields the exact
+criterion
+
+```math
+T(5n)\equiv T(n)\pmod {25}
+\quad\Longleftrightarrow\quad
+5\mid n.
+```
+
+Thus one rank-one Cartier identity would prove the whole published
+two-part conjecture, not merely explain the rare primes in (2).
+
 ### A three-branch refinement at $p=3$
 
 There is an unexpectedly simple refinement of Cooper's first congruence in
-Conjecture 11.2. Exact computation gives
+Conjecture 11.2. The proved Lucas theorem gives
 
 ```math
 T(n)\equiv1\pmod3.
@@ -261,7 +330,8 @@ References:
 
 ## 6. Research direction
 
-The next useful theorem is the first-order law (6). It would imply the
+The next useful theorem is the first-order law (6), equivalently the
+rank-one Cartier identity (8a). It would imply the
 formerly proposed equivalence
 
 ```math
@@ -273,7 +343,8 @@ T(pn)\equiv T(n)\pmod {p^2}\ \text{for every }n,
 
 from the level-11 modular parametrization or a Frobenius matrix. This would
 turn an infinite family of congruences into one computable prime-local
-condition and explain why exceptional primes can be rare.
+condition, explain why exceptional primes can be rare, and prove both parts
+of Cooper's Conjecture 11.2.
 
 The carry-depth method does not directly prove either (6) or (10):
 recurrence (1) has no known balanced factorial-ratio summand whose strata
@@ -281,9 +352,14 @@ transfer termwise.
 This is the boundary where the project genuinely becomes a Dwork/Frobenius
 problem.
 
-Source: S. Cooper,
-[*Apéry-like sequences defined by four-term recurrence relations*](https://arxiv.org/abs/2302.00757),
-Conjecture 11.1.
+Sources:
+
+- S. Cooper,
+  [*Apéry-like sequences defined by four-term recurrence relations*](https://arxiv.org/abs/2302.00757),
+  Conjectures 11.1 and 11.2.
+- F. Beukers, W.-L. Tsai, and D. Ye,
+  [*Lucas congruences using modular forms*](https://arxiv.org/abs/2408.16616),
+  Theorems 1.1 and 1.2.
 
 Run the reproducibility script with
 
