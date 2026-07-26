@@ -21,6 +21,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | Order | Note | Connection to A183068 | Status |
 | ---: | --- | --- | --- |
 | 1 | [Landau-depth synthesis](LandauDepthSupercongruenceSynthesis.md) | Extracts the A183068 carry-and-scaling proof into a computable theorem; contains an infinite all-prime $p^{2r}$ family and an all-prime $p^{3r}$ subfamily | Complete proof candidate; internal recheck passed, independent review pending |
+| 1A | [q-calculus and cyclotomic supercongruences](QCalculusCyclotomicSupercongruences.md) | Turns Landau depth into exact root-of-unity multiplicity; gives a square q-lift of A183068 and an explicit corrected cubic theorem for depth-three families | Complete deductions from Clark and Straub; exact polynomial checks; priority preliminary |
 | 2 | [Frobenius quotients of constant-term sequences](FrobeniusQuotientConstantTerms.md) | Proves the universal first-order expansion, identifies the exact rank-one condition behind the Cooper law, and gives exact counterexamples to two proposed Dwork shortcuts | Complete elementary theorem; Dwork boundaries certified |
 | 3 | [p-adic Arzelà--Ascoli framework](PadicArzelaAscoliSupercongruenceTowers.md) | Proves the vertical limit supplied by A183068, uses the Banach contraction $x\mapsto px$ to rule out a global continuous interpolation, and proves uniform quadratic contraction of every normalized defect at zero | Complete elementary framework and obstruction; unit-shell estimate open |
 | 4 | [Gaussian Frobenius twists](GaussianFrobeniusTwists.md) | Shows that discard-and-rescale proofs lift to roots-of-unity weights; specializes A183068 to a Gaussian split/inert congruence | Complete elementary deduction; priority unchecked |
@@ -73,6 +74,7 @@ The individual correspondence is:
 | Note | Checker |
 | --- | --- |
 | Landau depth | `verification/related/verify_landau_supercongruence.py` |
+| q-calculus and cyclotomic lifts | `verification/related/verify_q_calculus_supercongruence.py` |
 | Frobenius quotient identity | Coefficientwise algebraic proof; no checker required |
 | Dwork and continuity boundaries | `verification/related/verify_dwork_boundaries.py` |
 | p-adic Arzelà--Ascoli framework | Elementary ultrametric, contraction, and compactness proofs |

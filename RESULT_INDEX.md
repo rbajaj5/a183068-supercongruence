@@ -44,6 +44,29 @@ Status labels are deliberately conservative:
 - **Proof:** [Landau-depth synthesis](related-results/LandauDepthSupercongruenceSynthesis.md)
 - **Exact checker:** [`verify_landau_supercongruence.py`](verification/related/verify_landau_supercongruence.py)
 
+### QC-SQ — square-cyclotomic Landau lift
+
+- **Claim:** Every balanced homogeneous multinomial-sum family of Landau
+  depth at least two satisfies
+  $A_q(nN)\equiv A_{q^{n^2}}(N)\pmod{\Phi_n(q)^2}$ for every $n\geq2$.
+  The case $(u,v)=(4,2)$ is a q-supercongruence lifting A183068.
+- **Status:** Complete elementary deduction from Clark's q-Babbage
+  congruence, with exact polynomial checks. Literature priority is
+  preliminary.
+- **Proof:** [q-calculus and cyclotomic supercongruences](related-results/QCalculusCyclotomicSupercongruences.md)
+- **Exact checker:** [`verify_q_calculus_supercongruence.py`](verification/related/verify_q_calculus_supercongruence.py)
+
+### QC-CUBIC — pair-energy corrected cubic q-supercongruence
+
+- **Claim:** Every depth-three family has an explicit congruence modulo
+  $\Phi_p(q)^3$ for $p\geq5$. Its entire second cyclotomic defect is
+  $(p^2-1)(q^p-1)^2/24$ times a computable quadratic pair-energy sum.
+- **Status:** Complete deduction from Straub's q-Ljunggren congruence, with
+  exact polynomial checks. Independent review and a full priority search
+  remain.
+- **Proof:** [q-calculus and cyclotomic supercongruences](related-results/QCalculusCyclotomicSupercongruences.md#4-the-second-q-jet-and-a-corrected-cubic-theorem)
+- **Exact checker:** [`verify_q_calculus_supercongruence.py`](verification/related/verify_q_calculus_supercongruence.py)
+
 ### FQ-CT — first Frobenius quotient
 
 - **Claim:** Every integral Laurent-polynomial constant-term sequence has a

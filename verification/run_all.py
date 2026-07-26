@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS = (
     "verification/verify_a183068.py",
     "verification/related/verify_landau_supercongruence.py",
+    "verification/related/verify_q_calculus_supercongruence.py",
     "verification/related/verify_dwork_period_supercongruence.py",
     "verification/related/verify_finite_field_determinant_bias.py",
     "verification/related/verify_finite_field_pfaffian_bias.py",

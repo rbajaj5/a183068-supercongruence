@@ -81,6 +81,20 @@ corrected. Publication here follows five rules:
 5. priority and novelty are treated as pending until the literature and
    specialists have been checked.
 
+## Public q-calculus follow-on
+
+The
+[q-calculus lift](related-results/QCalculusCyclotomicSupercongruences.md)
+refines the Landau carry argument at roots of unity. It proves a
+square-cyclotomic q-supercongruence containing A183068 and computes the full
+second cyclotomic defect for every depth-three balanced multinomial family.
+
+The note also records the precise connection with Bhatt--Scholze prisms:
+$\Phi_p(q)=[p]_q$ is the q-crystalline prismatic ideal and
+$q\mapsto q^{p^2}$ is the second Frobenius iterate. This is an
+interpretation of the elementary polynomial theorem, not a claim that
+prismatic cohomology was used in its proof.
+
 ## Public Gaussian-prime follow-on
 
 The most concise shareable follow-on is
@@ -153,6 +167,9 @@ To reproduce every computation in the expanded repository, run
   exact-integer regression check.
 - [RELATED_RESULTS.md](RELATED_RESULTS.md): an index of every current result
   produced by the same program, separated by audit status.
+- [related-results/QCalculusCyclotomicSupercongruences.md](related-results/QCalculusCyclotomicSupercongruences.md):
+  the q-calculus theorem generator, square A183068 lift, corrected cubic
+  theorem, and prismatic interpretation.
 - [GAUSSIAN_LUCAS.md](GAUSSIAN_LUCAS.md): the public entry point for the
   Gaussian-prime follow-on.
 - [related-results/](related-results/): the complete related proof drafts and
@@ -160,7 +177,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all sixteen
+- [verification/run_all.py](verification/run_all.py): one command for all seventeen
   verification programs.
 
 The broader working repository remains available at
