@@ -157,6 +157,39 @@ ergodic pseudorandom generator. The useful research question is whether
 arithmetic translations or compositions of these maps yield transitive
 compatible permutations while retaining a provable scale law.
 
+### 3.5 Jerby's finite-variation strategy
+
+Jerby's recent preprint
+["Variations of the Hardy \(Z\)-Function and the Montgomery Pair Correlation
+Conjecture"](https://arxiv.org/abs/2511.18275) starts with finite-dimensional
+sections \(Z_N(t;\mathbf a)\), isolates a parameter region where the relevant
+zeros remain real, and studies a reflected stochastic flow whose zero dynamics
+are compared with Dyson Brownian motion. The paper states its final
+pair-correlation result under the Riemann Hypothesis and is presently a
+preprint; this note makes no judgment about its independent verification.
+
+The relevant lesson here is methodological and can be made exact. Instead of
+studying only the all-ones product \(F_r\), vary its factors:
+
+```math
+F_{r,\mathbf a}(Z)
+=
+\prod_{\xi\in U_r}
+\left(1+\frac{a_\xi2^rZ}{\xi}\right).
+```
+
+The [canonical-product note](GaussianLucasCanonicalProducts.md#a-finite-dimensional-isometry-chamber)
+proves that whenever the first logarithmic moment is nonzero and every later
+moment is one valuation level deeper, normalization by the first moment gives
+a bijective disk isometry. This defines a finite-dimensional
+**first-moment-dominance chamber**. Its boundary consists of moment-cancellation
+loci where the supercongruence exponent can jump.
+
+This is not Dyson Brownian motion in a \(p\)-adic disguise. It is a precise
+transfer of the parameter-space strategy: embed the canonical arithmetic
+object in a controlled family, identify the chamber where the desired
+geometry persists, and study the discriminant or resonance boundary.
+
 ## 4. The concrete research seams
 
 ### A. Frobenius compatibility across scales
@@ -191,6 +224,14 @@ Kalinin originally sought finite-field-extension analogues. The same blueprint
 can be tested in rings of integers where the chosen rational prime is inert,
 split, or ramified. The expected exponent should be read from the first
 nonzero reciprocal moment and the ramification index.
+
+### F. Moment-resonance strata
+
+Classify the boundary of the first-moment-dominance chamber. The immediate
+questions are whether every valuation jump is explained by cancellation of an
+explicit power sum, and whether the strata carry useful finite-group or
+probabilistic dynamics. This is the closest rigorous adaptation of Jerby's
+finite-variation viewpoint to the present products.
 
 ## 5. Assessment
 

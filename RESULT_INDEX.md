@@ -128,7 +128,9 @@ Status labels are deliberately conservative:
 - **Claim:** For \(r\ge2\), the mixed-block product satisfies
   \(v_{1+i}(F_r(Z)-F_r(W))=6r-3+v_{1+i}(Z-W)\). After division by its
   first logarithmic coefficient, it is a bijective analytic isometry of
-  \(\mathbb Z_2[i]\).
+  \(\mathbb Z_2[i]\). The same conclusion holds throughout the
+  finite-dimensional parameter region where the first logarithmic moment
+  dominates every later moment by one valuation level.
 - **Status:** Complete deduction from the ramified reciprocal-moment theorem;
   exact checks are present, while conventional review and priority remain
   pending.

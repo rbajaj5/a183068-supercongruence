@@ -424,6 +424,57 @@ Indeed,
 \(8=i\varpi^6\), each scale increases the leading valuation by exactly six.
 This is the local renormalization law behind the slope \(6r-3\).
 
+### A finite-dimensional isometry chamber
+
+The proof is stable under variation of the individual factors. For a parameter
+vector \(\mathbf a=(a_\xi)_{\xi\in U_r}\in\mathcal O^{U_r}\), define
+
+```math
+F_{r,\mathbf a}(Z)
+=
+\prod_{\xi\in U_r}
+\left(1+\frac{a_\xi2^rZ}{\xi}\right)
+```
+
+and write
+
+```math
+\log F_{r,\mathbf a}(Z)
+=
+\sum_{k\ge1}b_k(\mathbf a)Z^k,
+\qquad
+b_k(\mathbf a)
+=
+\frac{(-1)^{k+1}}{k}2^{rk}
+\sum_{\xi\in U_r}a_\xi^k\xi^{-k}.
+```
+
+Call \(\mathbf a\) **first-moment dominant** when
+
+```math
+b_1(\mathbf a)\ne0,
+\qquad
+v_\varpi(b_k(\mathbf a))
+\ge
+v_\varpi(b_1(\mathbf a))+1
+\quad(k\ge2).
+```
+
+For every first-moment-dominant parameter, the same difference-logarithm and
+contraction proof gives a bijective analytic isometry
+
+```math
+Z\longmapsto
+\frac{F_{r,\mathbf a}(Z)-1}{b_1(\mathbf a)}
+```
+
+of \(\mathcal O\). Thus the all-ones vector is not merely one isolated
+identity: it lies in a finite-dimensional parameter region on which the
+normalized product has the same rigid local geometry. The boundary problem is
+to classify parameters where the first moment cancels or a later moment
+reaches the same valuation. Such loci are natural candidates for exceptional
+or strengthened supercongruences.
+
 The exact checker
 [`verify_gaussian_product_isometry.py`](../verification/related/verify_gaussian_product_isometry.py)
 tests (22) and (25) on 600 pairs at scales \(r=2,3\), using exact arithmetic
