@@ -54,6 +54,9 @@ def assert_counting_identities(q: int, characteristic: int) -> None:
     assert linear_quadratic + double_simple == n1
     assert split + linear_quadratic + irreducible == q**3 - q**2
     assert double_simple + triple == q**2
+    assert split - linear_quadratic + irreducible == 0
+    expected_standard_trace = 0 if characteristic == 3 else q - 1
+    assert 2 * split - irreducible == expected_standard_trace
 
 
 def direct_prime_field(p: int) -> tuple[int, ...]:

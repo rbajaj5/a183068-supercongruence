@@ -363,7 +363,106 @@ its point-count zeta function. No ultraproduct or ultrafilter is involved:
 the organizing operation is passage through the actual Frobenius tower
 \(\mathbb F_p\subset\mathbb F_{p^2}\subset\cdots\).
 
-## 6. Relation to the current counterexample literature
+## 6. The exact \(S_3\) Frobenius packet
+
+On the smooth target locus, the three roots carry the permutation action of
+the geometric monodromy group \(S_3\). The three smooth rows of Theorem 1
+count the Frobenius conjugacy classes:
+
+\[
+\begin{array}{c|c|c}
+\text{factorization}&\text{class in }S_3&
+\text{number of targets}\\ \hline
+(1,1,1)&1&A_1(q)\\
+(1,2)&(12)&A_2(q)\\
+(3)&(123)&A_3(q).
+\end{array}
+\tag{25}
+\]
+
+Let \(\operatorname{sgn}\) be the sign character and let
+\(\chi_{\mathrm{std}}\) be the two-dimensional standard character. Their
+values on the three displayed classes are
+
+\[
+\operatorname{sgn}=(1,-1,1),\qquad
+\chi_{\mathrm{std}}=(2,0,-1).
+\tag{26}
+\]
+
+### Corollary 4
+
+For every odd prime power \(q\),
+
+\[
+\boxed{
+\sum_{t:\Delta(t)\ne0}
+\operatorname{sgn}(\operatorname{Frob}_t)=0.}
+\tag{27}
+\]
+
+Equivalently, the quadratic character sum of the discriminant over the
+smooth target slice vanishes exactly.
+
+For the standard character,
+
+\[
+\boxed{
+\sum_{t:\Delta(t)\ne0}
+\chi_{\mathrm{std}}(\operatorname{Frob}_t)
+=
+\begin{cases}
+q-1,&\operatorname{char}\mathbb F_q\ne3,\\
+0,&\operatorname{char}\mathbb F_q=3.
+\end{cases}}
+\tag{28}
+\]
+
+### Proof
+
+Insert the three smooth rows of Theorem 1 into
+
+\[
+A_1-A_2+A_3
+\quad\text{and}\quad
+2A_1-A_3.
+\]
+
+The first expression is zero in both characteristics. The second is \(q-1\)
+outside characteristic \(3\), while the characteristic-\(3\) split and
+irreducible rows occur in the exact ratio \(1:2\), giving zero. \(\square\)
+
+For a fixed prime \(p\), define the corresponding trace series by
+
+\[
+L_p(\chi,T)=
+\exp\left(\sum_{r\ge1}
+\frac{\sum_t\chi(\operatorname{Frob}_t)}rT^r\right).
+\tag{29}
+\]
+
+Then
+
+\[
+L_p(\operatorname{sgn},T)=1
+\tag{30}
+\]
+
+for every odd \(p\), and
+
+\[
+L_p(\chi_{\mathrm{std}},T)=
+\begin{cases}
+\dfrac{1-T}{1-pT},&p\ge5,\\[3mm]
+1,&p=3.
+\end{cases}
+\tag{31}
+\]
+
+Thus the characteristic-\(3\) valuation gain in Theorem 3 is the visible
+shadow of an exact cancellation of the nontrivial standard Frobenius packet.
+
+## 7. Relation to the current counterexample literature
 
 The announced map was publicly credited to Akhil Mathew's prompt and Claude
 Fable's work. Its determinant and three-point collision have independent
@@ -372,9 +471,10 @@ with the marked-simple-root incidence map used above.
 
 Shaska's arithmetic discussion says that counting away from the coordinate
 stratum should be governed by splitting of the fiber cubic and that no
-result in that counting direction was proved there. Theorem 1 supplies the
-complete unweighted finite-field version of that program. It does not solve
-the harder rational-height counting problem.
+result in that counting direction was proved there. Theorem 1 and Corollary 4
+supply the complete unweighted finite-field and Frobenius-character versions
+of that program. They do not solve the harder rational-height counting
+problem.
 
 References:
 
@@ -384,7 +484,7 @@ References:
   [Graded Keller maps and the Jacobian Conjecture](https://arxiv.org/abs/2607.20210).
 - [Exact audit and structural analysis of the three-dimensional Keller counterexample](https://nasqret.github.io/jacobian-counterexample/book/index.html).
 
-## 7. Verification
+## 8. Verification
 
 The companion script
 [`verify_jacobian_counterexample_counts.py`](../verification/related/verify_jacobian_counterexample_counts.py)
