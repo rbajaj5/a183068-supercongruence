@@ -186,7 +186,7 @@ I(q)&=\#\{\text{points of }\overline{\mathcal T}_\Phi
                  \text{ at infinity over }\mathbb F_q\},\\
 D(q)&=\#\{r\in\mathbb F_q:\mathcal T_\Phi(r,r)=0\},\\
 H(q)&=\#\{(r,t)\in\mathbb F_q^2:
- r\ne t,\ 
+ r\ne t,
  \mathcal T_\Phi(r,t)=\mathcal T_\Phi(t,r)=0\}.
 \end{aligned}
 \tag{15}
