@@ -253,8 +253,10 @@ rk-v_3(k)\ge3r-1
 \qquad(k\ge3),
 ```
 
-with equality possible at $k=3$. This is the precise source of the
-one-power loss at $p=3$. ∎
+with equality possible at $k=3$. This establishes the bound. In fact
+$S_{r,3}\equiv0\pmod3$, so the cubic term is one power higher than this
+crude estimate. The leading-term calculation below shows that the actual
+one-power loss comes from the $k=1$ term. ∎
 
 ## 4. The rectangular cancellation
 
@@ -425,9 +427,48 @@ Extra valuation can come from:
 
 This explains why equality dominates the small grids while leaving room for
 structured exceptional cases. The formula was checked against all 27
-rectangles in the $p=7,r=1$ grid. At $p=3$, the cubic logarithmic term can
-already contribute at order $3r-1$, so (27) is not the relevant leading-term
-formula.
+rectangles in the $p=7,r=1$ grid.
+
+At $p=3$, put
+
+```math
+\alpha_{3,r}=3^{-(2r-1)}S_{r,1}\pmod3.
+```
+
+A direct calculation at level $1$ gives
+
+```math
+\alpha_{3,1}=1-i.
+```
+
+After dividing (11) by $3^{2r+1}$, its $j=0$ term preserves this residue.
+The terms $j=1,2,3$ gain an additional power from the moments
+$M_1,M_2,M_3$, and $j\ge4$ is already one power higher from $3^{rj}$.
+Consequently
+
+```math
+\alpha_{3,r}=1-i
+\qquad(r\ge1).
+```
+
+Moreover, $S_{r,3}\equiv0\pmod3$: at level $1$ this is the power-sum
+identity in $\mathbb F_9^\times$, and at every higher level each nonzero
+residue occurs a multiple of $3$ times. The quadratic term is also one
+power higher by (5). Therefore
+
+```math
+\frac{R_{3,r}-1}{3^{3r-1}}
+\equiv
+(1-i)CD\bigl(A-C+i(B-D)\bigr)
+\pmod3.
+\tag{28}
+```
+
+Thus the exponent in (2) is exactly $3r-1$ whenever the lower-scale
+coefficient is a $3$-adic unit, $3\nmid CD$, and
+$A-C+i(B-D)\not\equiv0\pmod3$. These conditions select exactly the 17
+valuation-$2$ cases in the 27-rectangle $r=1$ grid; the other 10 cases
+have additional valuation.
 
 ## 6. Checks and remaining review
 

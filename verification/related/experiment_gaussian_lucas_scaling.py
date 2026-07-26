@@ -319,6 +319,40 @@ def check_level_one_leading_term(
     return checks, alpha, beta
 
 
+def check_three_adic_leading_term(bound: int = 3) -> int:
+    """Check the sharp p=3 leading coefficient at level one."""
+    p = 3
+    precision = 8
+    modulus = p**precision
+    alpha = (1, 2)  # 1 - i modulo 3
+    checks = 0
+
+    for a, b, c, d in small_rectangles(bound):
+        lower = rectangular_binomial(
+            a, b, c, d, p, precision
+        )
+        upper = rectangular_binomial(
+            p * a, p * b, p * c, p * d, p, precision
+        )
+        assert lower[0] == upper[0]
+        ratio = gmul(
+            upper[1],
+            ginv(lower[1][0], lower[1][1], modulus),
+            modulus,
+        )
+        actual = (
+            ((ratio[0] - 1) % modulus) // p**2 % p,
+            (ratio[1] % modulus) // p**2 % p,
+        )
+        delta = ((a - c) % p, (b - d) % p)
+        phi_1 = (c * d * delta[0] % p, c * d * delta[1] % p)
+        predicted = gmul(alpha, phi_1, p)
+        assert actual == predicted
+        checks += 1
+
+    return checks
+
+
 def run(deep: bool = False) -> None:
     precision = 18
     rectangles = small_rectangles(3)
@@ -346,6 +380,10 @@ def run(deep: bool = False) -> None:
     print(
         "\nLeading-term formula at p=7: "
         f"{leading_checks} checks; alpha={alpha}; beta={beta}"
+    )
+    print(
+        "Leading-term formula at p=3: "
+        f"{check_three_adic_leading_term()} checks; alpha=(1, 2)"
     )
 
     scaling_rectangles = [
