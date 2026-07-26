@@ -240,6 +240,29 @@ would settle the $p=3$ part of Cooper's Conjecture 11.2. It is also
 consistent with (6): here $q_3=1$, and the first branch says precisely
 $D_3(n)\equiv n\pmod3$, since the data give $T(n-1)\equiv1\pmod3$.
 
+The recursion also has a closed finite-digit form. Write
+
+```math
+n=\sum_{j=0}^s d_j3^j,\qquad d_j\in\{0,1,2\},\qquad d_{s+1}=0.
+```
+
+Repeatedly removing the least significant digit in (10) gives
+
+```math
+b(n)\equiv
+\sum_{j=0}^s
+\left[d_j(2-d_j)+(1-d_j)d_{j+1}\right]
+\pmod3.
+\qquad\text{(11a)}
+```
+
+This is a nearest-neighbor interaction on the ternary digit string: a
+digit contributes a unary term, and each adjacent pair contributes one
+bilinear term. Formula (11a) is rigorously equivalent to the three local
+rules (10), but remains conditional because those rules are not yet proved
+for $T$. The checker verifies the digit formula throughout the same exact
+range as (10).
+
 ## 3. A rejected modular-form shortcut
 
 Level $11$ makes the weight-two newform

@@ -136,10 +136,23 @@ def base_three_refinement_checks(max_n: int) -> int:
     def b(n: int) -> int:
         return (exact[n] - 1) // 3 % 3
 
+    def digit_energy(n: int) -> int:
+        digits = []
+        while n:
+            digits.append(n % 3)
+            n //= 3
+        digits.append(0)
+        return sum(
+            digit * (2 - digit) + (1 - digit) * following
+            for digit, following in zip(digits, digits[1:])
+        ) % 3
+
     for n in range(max_n + 1):
         assert b(3 * n) == (b(n) + n) % 3
         assert b(3 * n + 1) == (b(n) + 1) % 3
         assert b(3 * n + 2) == (b(n) - n) % 3
+    for n in range(3 * max_n + 3):
+        assert b(n) == digit_energy(n)
     return 3 * (max_n + 1)
 
 
