@@ -183,6 +183,27 @@ Status labels are deliberately conservative:
 - **Proof:** [Hyperdeterminant Fourier supercongruence](related-results/HyperdeterminantFourierSupercongruence.md)
 - **Exact checker:** [`verify_hyperdeterminant_fourier.py`](verification/related/verify_hyperdeterminant_fourier.py)
 
+### JC-WL - all-degree weighted-lift collision theorem
+
+- **Claim:** If a normalized weighted-lift Keller map has generic fiber
+  degree \(n\), its finite-field collision obstruction is the projective
+  second divided-difference curve
+  \[
+  \frac{\Phi(t)-\Phi(r)-(t-r)\Phi'(r)}{(t-r)^2}=0
+  \]
+  of degree \(n-2\) and arithmetic genus
+  \((n-3)(n-4)/2\). The complete collision count is the sum of a Tate term,
+  twice the curve's Frobenius trace, and explicit finite infinity,
+  diagonal, and bitangency packets, with one boundary correction when the
+  seed's linear coefficient vanishes. Removing the complete non-Tate packet
+  gives exact adjacent valuation \(2r-2\) in every degree.
+- **Status:** Complete all-degree theorem with exact cross-degree checks for
+  degrees \(3\) through \(7\), manufactured boundary exceptions, and smooth
+  canonical reductions through genus \(6\). Literature priority is
+  provisional.
+- **Proof:** [All-degree collision theorem for weighted-lift Keller maps](related-results/WeightedLiftCollisionSynthesis.md)
+- **Exact checker:** [`verify_weighted_lift_collision_synthesis.py`](verification/related/verify_weighted_lift_collision_synthesis.py)
+
 ### JC-FF - finite-field arithmetic of the Fable counterexample
 
 - **Claim:** For the three-dimensional Jacobian-conjecture counterexample

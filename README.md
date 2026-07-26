@@ -98,6 +98,14 @@ prismatic cohomology was used in its proof.
 ## Public Jacobian-counterexample follow-on
 
 The
+[all-degree weighted-lift synthesis](related-results/WeightedLiftCollisionSynthesis.md)
+is the central theorem for this branch. A generic fiber degree \(n\) produces
+one tangent curve of degree \(n-2\) and arithmetic genus
+\((n-3)(n-4)/2\). The exact collision zeta function separates into Tate,
+curve-Frobenius, and finite permutation factors. Removing the last two gives
+a universal corrected adjacent valuation of \(2r-2\).
+
+The
 [finite-field counting theorem for the Fable Jacobian counterexample](related-results/JacobianCounterexampleFiniteFieldCounts.md)
 turns the counterexample's cubic fibers into exact arithmetic data. It gives
 the complete factorization-type distribution over every odd finite field,
@@ -204,6 +212,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/QCalculusCyclotomicSupercongruences.md](related-results/QCalculusCyclotomicSupercongruences.md):
   the q-calculus theorem generator, square A183068 lift, corrected cubic
   theorem, and prismatic interpretation.
+- [related-results/WeightedLiftCollisionSynthesis.md](related-results/WeightedLiftCollisionSynthesis.md):
+  the all-degree tangent-curve collision theorem, genus ladder, zeta
+  decomposition, and universal corrected tower.
 - [related-results/JacobianCounterexampleFiniteFieldCounts.md](related-results/JacobianCounterexampleFiniteFieldCounts.md):
   complete finite-field fiber statistics, collision zeta function, and the
   characteristic-\(3\) adjacent-extension gain for the Fable counterexample.
@@ -220,7 +231,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all twenty
+- [verification/run_all.py](verification/run_all.py): one command for all twenty-one
   verification programs.
 
 The broader working repository remains available at
