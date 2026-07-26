@@ -183,6 +183,35 @@ Status labels are deliberately conservative:
 - **Proof:** [Hyperdeterminant Fourier supercongruence](related-results/HyperdeterminantFourierSupercongruence.md)
 - **Exact checker:** [`verify_hyperdeterminant_fourier.py`](verification/related/verify_hyperdeterminant_fourier.py)
 
+### JC-FF - finite-field arithmetic of the Fable counterexample
+
+- **Claim:** For the three-dimensional Jacobian-conjecture counterexample
+  publicly credited to Claude Fable, every odd finite-field fiber has size
+  \(0\), \(1\), or \(3\), with a complete closed factorization-type
+  distribution. The collision variance is
+  \[
+  \mathcal V(q)=
+  \begin{cases}
+  (q-1)(q^2+2),&\operatorname{char}\mathbb F_q\ne3,\\
+  q^2(q-1),&\operatorname{char}\mathbb F_q=3,
+  \end{cases}
+  \]
+  yielding an exact collision zeta function and
+  \[
+  v_p(\mathcal V(p^r)-\mathcal V(p^{r-1}))
+  =
+  \begin{cases}
+  r-1,&p\ge5,\\
+  2r-2,&p=3.
+  \end{cases}
+  \]
+- **Status:** Complete elementary theorem with prime-field and
+  extension-field checks. It answers the unweighted finite-field version of
+  a counting direction raised in the immediate literature; priority remains
+  provisional.
+- **Proof:** [Finite-field counts for the Fable Jacobian counterexample](related-results/JacobianCounterexampleFiniteFieldCounts.md)
+- **Exact checker:** [`verify_jacobian_counterexample_counts.py`](verification/related/verify_jacobian_counterexample_counts.py)
+
 ## Gaussian-integer results
 
 ### GWL-POLY — Gaussian box polynomial

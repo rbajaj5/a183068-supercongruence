@@ -14,6 +14,7 @@ SCRIPTS = (
     "verification/related/verify_finite_field_determinant_bias.py",
     "verification/related/verify_finite_field_pfaffian_bias.py",
     "verification/related/verify_hyperdeterminant_fourier.py",
+    "verification/related/verify_jacobian_counterexample_counts.py",
     "verification/related/verify_eta_prime3.py",
     "verification/related/verify_cooper_level11.py",
     "verification/related/verify_dwork_boundaries.py",

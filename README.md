@@ -95,6 +95,22 @@ $q\mapsto q^{p^2}$ is the second Frobenius iterate. This is an
 interpretation of the elementary polynomial theorem, not a claim that
 prismatic cohomology was used in its proof.
 
+## Public Jacobian-counterexample follow-on
+
+The
+[finite-field counting theorem for the Fable Jacobian counterexample](related-results/JacobianCounterexampleFiniteFieldCounts.md)
+turns the counterexample's cubic fibers into exact arithmetic data. It gives
+the complete factorization-type distribution over every odd finite field,
+the image and collision counts, the local zeta function of the self-fiber
+product, and the exact adjacent-extension valuations. Characteristic \(3\)
+has an additional \(p\)-adic layer because the fixed mixed coefficient
+forbids triple-root cubics there.
+
+This is elementary finite-field counting organized by the supercongruence
+program. It is not an application of geometric Langlands, localization, or
+ultrafilters. The formulas are complete and exactly checked; literature
+priority remains provisional.
+
 ## Public Gaussian-prime follow-on
 
 The most concise shareable follow-on is
@@ -170,6 +186,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/QCalculusCyclotomicSupercongruences.md](related-results/QCalculusCyclotomicSupercongruences.md):
   the q-calculus theorem generator, square A183068 lift, corrected cubic
   theorem, and prismatic interpretation.
+- [related-results/JacobianCounterexampleFiniteFieldCounts.md](related-results/JacobianCounterexampleFiniteFieldCounts.md):
+  complete finite-field fiber statistics, collision zeta function, and the
+  characteristic-\(3\) adjacent-extension gain for the Fable counterexample.
 - [GAUSSIAN_LUCAS.md](GAUSSIAN_LUCAS.md): the public entry point for the
   Gaussian-prime follow-on.
 - [related-results/](related-results/): the complete related proof drafts and
@@ -177,7 +196,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all seventeen
+- [verification/run_all.py](verification/run_all.py): one command for all eighteen
   verification programs.
 
 The broader working repository remains available at
