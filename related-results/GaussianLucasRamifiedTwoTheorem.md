@@ -129,26 +129,17 @@ v(S_{r,k})\ge4r-2k.
 The finite base $r=2$ is exact. Put $D_0=16575$. Direct addition over the
 twelve elements of $U_2$ gives the more compact integer table
 
-```math
-\begin{array}{c|c|c}
-k&2D_0^kS_{2,k}&v(S_{2,k})\\ \hline
-1&
-2^3\cdot10879(1-i)&5\\
-2&
--2^4\cdot43604239i&6\\
-3&
--2^2\cdot850577462821(1+i)&3\\
-4&
--2\cdot20911814332048969&0\\
-5&
--2^5\cdot9544029745743666769(1-i)&9\\
-6&
-2^2\cdot1220198154624646431442789i&2\\
-7&
-40476461909732086340946683071(1+i)&-1.
-\end{array}
-\qquad\text{(11)}
-```
+**Table (11): exact $r=2$ base certificate**
+
+| $k$ | $2D_0^kS_{2,k}$ | $v(S_{2,k})$ |
+| ---: | --- | ---: |
+| $1$ | $2^3\cdot10879(1-i)$ | $5$ |
+| $2$ | $-2^4\cdot43604239i$ | $6$ |
+| $3$ | $-2^2\cdot850577462821(1+i)$ | $3$ |
+| $4$ | $-2\cdot20911814332048969$ | $0$ |
+| $5$ | $-2^5\cdot9544029745743666769(1-i)$ | $9$ |
+| $6$ | $2^2\cdot1220198154624646431442789i$ | $2$ |
+| $7$ | $40476461909732086340946683071(1+i)$ | $-1$ |
 
 The number $D_0$ and every displayed scalar cofactor are odd. Since
 $v(2)=2$, the table proves (9) and (10) for $1\le k\le7$. In
