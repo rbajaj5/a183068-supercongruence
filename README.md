@@ -71,8 +71,9 @@ reproduction command. Its present status is an unchecked proof candidate,
 not a peer-reviewed theorem.
 
 An [adjacent-scale experiment](related-results/GaussianLucasScalingExperiment.md)
-has also found a possible $p^{3r}$ strengthening. This is explicitly recorded
-as a computational conjecture, not as a proved result.
+led to a [prime-power proof candidate](related-results/GaussianLucasPrimePowerTheorem.md)
+with exponent $3r$ for inert primes $p>5$ and $3r-1$ at $p=3$. It requires
+independent review and a priority search.
 
 ## Suggested reading order
 

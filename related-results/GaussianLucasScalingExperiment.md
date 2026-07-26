@@ -2,7 +2,10 @@
 
 ## Status
 
-**Computational conjecture only. No proof or priority claim is made here.**
+**Exact computational evidence.** A subsequent
+[prime-power proof candidate](GaussianLucasPrimePowerTheorem.md) now explains
+the observed exponents; that argument still requires independent review and
+a priority search.
 
 This experiment asks whether the inert-prime Gaussian Lucas congruence has a
 Dwork-style strengthening across adjacent prime-power scales.
@@ -105,6 +108,7 @@ $q$-binomials.
 
 ## Next mathematical task
 
-The priority is to strengthen the complete-block argument from a fixed
-$p^3$ translation estimate to a scale-sensitive estimate. Until that is
-proved, the $3r$ and $3r-1$ patterns remain conjectural.
+The companion proof candidate replaces the fixed block by the complete unit
+block modulo $p^r$. Its two reciprocal-sum estimates produce the
+scale-sensitive translation bound. The remaining task is independent review,
+not further blind computation.

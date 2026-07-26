@@ -90,10 +90,12 @@ Status labels are deliberately conservative:
 
 ### GWL-SCALE — adjacent prime-power scaling
 
-- **Claim under investigation:** The inert-prime Gaussian Lucas difference
-  appears divisible by $p^{3r}$ between scales $p^{r-1}$ and $p^r$; at
-  $p=3$ the observed sharp exponent is $3r-1$.
-- **Status:** Computational conjecture; no proof or priority claim.
+- **Claim:** The inert-prime Gaussian Lucas difference is divisible by
+  $p^{3r}$ between scales $p^{r-1}$ and $p^r$; at $p=3$ the corresponding
+  exponent is $3r-1$.
+- **Status:** Complete proof candidate with exact checks; independent review
+  and a priority search required.
+- **Proof:** [Prime-power Gaussian Lucas congruence](related-results/GaussianLucasPrimePowerTheorem.md)
 - **Report:** [Adjacent-scale Gaussian Lucas experiment](related-results/GaussianLucasScalingExperiment.md)
 - **Exact experiment:** [`experiment_gaussian_lucas_scaling.py`](verification/related/experiment_gaussian_lucas_scaling.py)
 
