@@ -1,6 +1,7 @@
 # Landau fiber depth and termwise supercongruences
 
-**Status:** unchecked research draft, 2026-07-25.
+**Status:** complete proof candidate, internally rechecked on 2026-07-26.
+Independent specialist review and literature priority remain pending.
 
 This note extracts the reusable mechanism behind the proof of the
 Hanna--Bala A183068 supercongruence.  The ingredients are classical:
@@ -458,7 +459,10 @@ python verification/related/verify_landau_supercongruence.py
 
 The script checks:
 
-- formula (17), its minimum, and its value at $1/2$;
+- formula (17) directly against the defining floor sum, its minimum, and its
+  value at $1/2$;
+- the active-level identity in Lemma 1 against direct Legendre valuations;
+- the generic and compensated termwise transfer bounds before summation;
 - the fibers of the Franel, Domb, and two Apéry summands;
 - uniform divisibility of the equal-part multinomials;
 - the quadratic family for every qualifying $2\leq u,v\leq6$, all

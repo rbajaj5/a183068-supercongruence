@@ -7,6 +7,8 @@ A183068 proof without mixing them into the proof itself.
 
 - **Audited draft:** received a separate machine-assisted referee-style audit,
   but is not peer reviewed.
+- **Internally rechecked candidate:** the written proof was rederived and its
+  checker strengthened, but no independent reviewer has yet audited it.
 - **Unchecked candidate:** exact tests pass, but the written proof and
   literature priority still need independent review.
 - **Reduction only:** useful progress, not a claimed solution.
@@ -16,7 +18,7 @@ A183068 proof without mixing them into the proof itself.
 | Result | Relationship | Status |
 | --- | --- | --- |
 | A183068 modulo $p^{2r}$ for every prime | The core named conjecture | Audited draft |
-| [Landau-depth synthesis](related-results/LandauDepthSupercongruenceSynthesis.md) | Extracts the carry-and-scaling argument into a computable criterion; gives an infinite all-prime $p^{2r}$ family containing A183068 and an all-prime $p^{3r}$ subfamily | Unchecked candidate |
+| [Landau-depth synthesis](related-results/LandauDepthSupercongruenceSynthesis.md) | Extracts the carry-and-scaling argument into a computable criterion; gives an infinite all-prime $p^{2r}$ family containing A183068 and an all-prime $p^{3r}$ subfamily | Internally rechecked candidate |
 | [Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md) | Lifts a termwise supercongruence to roots-of-unity weights; the $i^k$-twist detects split versus inert primes in $\mathbb Z[i]$ | Unchecked candidate |
 
 The Landau-depth synthesis is the most important direct generalization. It

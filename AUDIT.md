@@ -39,3 +39,42 @@ changes no theorem.  The sharpness sentence in `PROOF.md` has been narrowed.
 - conventional specialist review;
 - an independent literature-priority search; and
 - formal verification, if pursued separately.
+
+## Landau-depth internal recheck, July 26, 2026
+
+A repository survey identified
+`related-results/LandauDepthSupercongruenceSynthesis.md` as the highest-value
+next target, but explicitly accepted the note's claims rather than auditing
+them. A separate internal line-by-line recheck was therefore performed.
+
+### Proof obligations rechecked
+
+- the active-level identity obtained from Legendre's formula;
+- the exact transfer budget
+  $d(r-1-s)+3(s+1)-\varepsilon_p$;
+- both branches of the generic transfer theorem;
+- the residue and uniform-divisibility compensation at $p=2,3$;
+- the closed Landau fiber of the two-parameter family; and
+- the divisibility arguments used by the quadratic and cubic corollaries.
+
+No proof-level error was found. This was an internal machine-assisted recheck,
+not an independent audit.
+
+### Checker strengthened
+
+The checker formerly compared the closed Landau-fiber formula with the same
+formula. It now computes one side directly from the defining floor sum. It
+also verifies:
+
+- 21,420 active-level decompositions against direct Legendre valuations; and
+- 1,386 generic and compensated termwise transfer bounds before summation.
+
+Together with the existing family and divisibility checks, the Landau checker
+now performs 79,983 exact checks.
+
+### Priority boundary
+
+Targeted searches located the broader factorial-ratio and sporadic-sequence
+frameworks already cited in the note, but did not locate the exact
+small-prime deficit formula or the displayed two-parameter all-prime
+families. Absence from those searches is not a priority determination.

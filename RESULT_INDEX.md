@@ -30,7 +30,8 @@ Status labels are deliberately conservative:
 
 - **Claim:** A computable Landau-depth criterion gives an infinite all-prime
   $p^{2r}$ family containing A183068.
-- **Status:** Complete unchecked draft.
+- **Status:** Complete proof candidate; internal recheck passed, independent
+  review and priority pending.
 - **Proof:** [Landau-depth synthesis](related-results/LandauDepthSupercongruenceSynthesis.md)
 - **Exact checker:** [`verify_landau_supercongruence.py`](verification/related/verify_landau_supercongruence.py)
 
@@ -38,7 +39,8 @@ Status labels are deliberately conservative:
 
 - **Claim:** The depth-$3$ subfamily satisfies an all-prime $p^{3r}$
   congruence.
-- **Status:** Complete unchecked draft.
+- **Status:** Complete proof candidate; internal recheck passed, independent
+  review and priority pending.
 - **Proof:** [Landau-depth synthesis](related-results/LandauDepthSupercongruenceSynthesis.md)
 - **Exact checker:** [`verify_landau_supercongruence.py`](verification/related/verify_landau_supercongruence.py)
 
