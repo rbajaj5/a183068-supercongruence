@@ -71,7 +71,7 @@ maturity, and cost remaining separately.
 ## Public research policy
 
 This repository is public so that claims can be inspected, reproduced, and
-corrected. Publication here follows five rules:
+corrected. Publication here follows six rules:
 
 1. source conjectures and prior authors are credited explicitly;
 2. theorem, proof candidate, computation, and conjecture are labeled
@@ -79,7 +79,10 @@ corrected. Publication here follows five rules:
 3. machine assistance and exact checks are not described as peer review;
 4. counterexamples, failed approaches, and corrections remain auditable; and
 5. priority and novelty are treated as pending until the literature and
-   specialists have been checked.
+   specialists have been checked; and
+6. each research result is identified as a **named open problem**, an
+   **explicit source direction**, or a **structural follow-on**, so a new
+   theorem is not quietly presented as a solved published conjecture.
 
 ## Public q-calculus follow-on
 
