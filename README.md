@@ -92,6 +92,14 @@ normalized power-sum estimate, and a parity induction for the possible
 denominator loss. It has exact checks and machine-assisted audits, but still
 requires conventional review and a priority search.
 
+The accompanying
+[canonical-product synthesis](related-results/GaussianLucasCanonicalProducts.md)
+rewrites these ratios as non-Archimedean finite products. It extracts a
+dominant-first-moment lemma and organizes the inert, split, and ramified cases
+as one local research program. The Blaschke-product comparison in that note is
+an analytic analogy, not a claim that the Gaussian ratios are classical
+Blaschke products.
+
 ## Suggested reading order
 
 1. Read Sections 1--3 of [PROOF.md](PROOF.md) for the statement and carry

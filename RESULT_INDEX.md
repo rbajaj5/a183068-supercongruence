@@ -112,6 +112,17 @@ Status labels are deliberately conservative:
 - **Report:** [Ramified-prime experiment](related-results/GaussianLucasRamifiedTwoExperiment.md)
 - **Exact experiment:** [`experiment_gaussian_lucas_scaling.py`](verification/related/experiment_gaussian_lucas_scaling.py)
 
+### GL-CANON — local canonical-product synthesis
+
+- **Claim:** Gaussian Lucas ratios are normalized finite products whose exact
+  valuation is controlled by the first surviving logarithmic moment. A
+  dominant-first-moment lemma isolates this implication, and the inert,
+  split, and ramified cases form a single local research program.
+- **Status:** Proved structural lemma and synthesis; the split-prime program
+  remains conjectural and priority is unchecked.
+- **Note:** [Gaussian Lucas canonical products](related-results/GaussianLucasCanonicalProducts.md)
+- **Depends on:** [Ramified-prime theorem](related-results/GaussianLucasRamifiedTwoTheorem.md)
+
 ### GPS — Gaussian power sums
 
 - **Claim:** Two printed small-prime Gaussian power-sum formulas hold, while

@@ -1,0 +1,339 @@
+# Gaussian Lucas ratios as non-Archimedean canonical products
+
+## Status
+
+**Structural synthesis with a proved abstract lemma, July 26, 2026.**
+
+This note reorganizes the existing Gaussian Lucas proofs around normalized
+finite products and their logarithmic moments. The dominant-moment lemma below
+is elementary but reusable. The proposed splitting-type program is a research
+direction, not a claimed theorem. No novelty claim is made for the general
+language of non-Archimedean analytic products.
+
+The motivating coefficient is Definition 2 in Nikita Kalinin,
+["Wolstenholme's theorem over Gaussian integers"](https://arxiv.org/abs/2504.07978).
+
+## 1. The rectangular coefficient is a translated product
+
+For integers \(A\ge C\ge1\) and \(B\ge D\ge1\), put
+
+```math
+Q(A,B;C,D)
+=
+\prod_{x=0}^{C-1}\prod_{y=0}^{D-1}
+\frac{(A-x)+i(B-y)}{(x+1)+i(y+1)}.
+\tag{1}
+```
+
+Set
+
+```math
+z_{u,v}=(u+1)+i(v+1),
+\qquad
+g=A-C+i(B-D).
+\tag{2}
+```
+
+Reversing the two numerator indices gives the exact identity
+
+```math
+Q(A,B;C,D)
+=
+\prod_{u=0}^{C-1}\prod_{v=0}^{D-1}
+\frac{z_{u,v}+g}{z_{u,v}}
+=
+\prod_{u=0}^{C-1}\prod_{v=0}^{D-1}
+\left(1+\frac{g}{z_{u,v}}\right).
+\tag{3}
+```
+
+Thus \(Q\) is a normalized finite canonical product in the translation
+parameter \(g\). In particular, \(g=0\) implies \(Q=1\) without a congruence
+argument.
+
+## 2. The mixed-block analytic unit
+
+At the ramified prime, write
+
+```math
+\varpi=1+i,
+\qquad
+2=-i\varpi^2.
+```
+
+The mixed residue block at scale \(2^r\) is
+
+```math
+U_r=
+\left\{
+a+bi:
+1\le a,b\le2^r,\ 
+\text{\(a,b\) are not both even}
+\right\}.
+\tag{4}
+```
+
+Define
+
+```math
+H_r(Z)=\prod_{\xi\in U_r}(2^rZ+\xi),
+\qquad
+F_r(Z)=\frac{H_r(Z)}{H_r(0)}.
+\tag{5}
+```
+
+Then
+
+```math
+F_r(Z)
+=
+\prod_{\xi\in U_r}
+\left(1+\frac{2^rZ}{\xi}\right).
+\tag{6}
+```
+
+This is a finite analytic unit over \(\mathbb Q_2(i)\). Introduce the
+reciprocal moments
+
+```math
+S_{r,k}=\sum_{\xi\in U_r}\xi^{-k}.
+\tag{7}
+```
+
+For \(r\ge2\), the \(\varpi\)-adic logarithm converges and gives
+
+```math
+\log F_r(Z)
+=
+\sum_{k\ge1}c_{r,k}Z^k,
+\qquad
+c_{r,k}
+=
+\frac{(-1)^{k+1}}{k}2^{rk}S_{r,k}.
+\tag{8}
+```
+
+The ramified-prime proof establishes
+
+```math
+v_\varpi(c_{r,1})=6r-3
+\tag{9}
+```
+
+and places every \(k\ge2\) contribution at least one
+\(\varpi\)-power deeper in the applications below. Consequently,
+
+```math
+F_r(Z)
+\equiv
+1+c_{r,1}Z
+\pmod{\varpi^{6r-2}}
+\tag{10}
+```
+
+for \(Z\in\mathbb Z[i]\).
+
+This is the analytic core of the ramified congruence: the whole product
+becomes linear to the precision relevant to the theorem.
+
+## 3. Multiplicative rectangular cancellation
+
+Let \(\Phi\) be the five-rectangle functional
+
+```math
+\begin{aligned}
+\Phi(f)={}&
+\sum_{u<A,\,v<B}f(u+iv)
++\sum_{u<A-C,\,v<B-D}f(u+iv)\\
+&-\sum_{u<A-C,\,v<B}f(u+iv)
+-\sum_{u<A,\,v<B-D}f(u+iv)\\
+&-\sum_{u<C,\,v<D}f(u+iv).
+\end{aligned}
+\tag{11}
+```
+
+Cancellation of the overlapping rectangles gives
+
+```math
+\Phi(f)
+=
+\sum_{u=0}^{C-1}\sum_{v=0}^{D-1}
+\left(f(u+iv+g)-f(u+iv)\right).
+\tag{12}
+```
+
+In particular,
+
+```math
+\Phi(1)=0,
+\qquad
+\Phi(Z)=CDg.
+\tag{13}
+```
+
+After the even-even points are removed from the large rectangular products,
+the logarithm of the adjacent-scale ratio is exactly
+
+```math
+\log R_{2,r}
+=
+\sum_{k\ge1}c_{r,k}\Phi(Z^k).
+\tag{14}
+```
+
+Thus the geometric factor \(CDg\) is not an experimental coincidence. It is
+the first discrete moment of the translated rectangle.
+
+## 4. Dominant-first-moment lemma
+
+The following lemma isolates the reusable part of the argument.
+
+### Lemma
+
+Let \(K\) be a complete discretely valued field with uniformizer \(\pi\)
+and valuation ring \(\mathcal O_K\). Work in an ideal on which logarithm and
+exponential converge and satisfy
+
+```math
+\frac{\exp(x)-1}{x}
+\in
+1+\pi\mathcal O_K.
+\tag{15}
+```
+
+Let \(c_k\in K\) and let \(\Phi\) be a linear functional on polynomials.
+Suppose \(h=\Phi(Z)\ne0\), the series
+
+```math
+L=\sum_{k\ge1}c_k\Phi(Z^k)
+\tag{16}
+```
+
+converges, and
+
+```math
+v_\pi(c_k\Phi(Z^k))
+\ge
+v_\pi(c_1h)+1
+\qquad(k\ge2).
+\tag{17}
+```
+
+Then
+
+```math
+v_\pi(\exp(L)-1)
+=
+v_\pi(c_1h).
+\tag{18}
+```
+
+More precisely, there is an \(\eta\) in the valuation ring such that
+
+```math
+\exp(L)-1
+=
+c_1h(1+\pi\eta).
+\tag{19}
+```
+
+### Proof
+
+By (17), the nonleading part of (16) is \(c_1h\,\pi\eta_0\) for some
+integral \(\eta_0\). Hence
+
+```math
+L=c_1h(1+\pi\eta_0)
+```
+
+and \(v_\pi(L)=v_\pi(c_1h)\). Equation (15) gives both (18) and (19).
+\(\square\)
+
+## 5. Recovery of the exact ramified theorem
+
+In (14), take
+
+```math
+c_1=2^rS_{r,1},
+\qquad
+h=CDg.
+```
+
+The normalized rectangular power-sum estimate and the two exceptional
+low-moment calculations in the
+[ramified-prime proof](GaussianLucasRamifiedTwoTheorem.md)
+verify (17). Equation (9) and the lemma therefore give, for \(g\ne0\),
+
+```math
+v_{1+i}(R_{2,r}-1)
+=
+6r-3+
+v_{1+i}\!\left(CDg\right).
+\tag{20}
+```
+
+The theorem is therefore an instance of a general phenomenon:
+
+> An exact supercongruence exponent is the valuation of the first surviving
+> logarithmic moment, provided every later moment lies one level deeper.
+
+## 6. Relation with Blaschke products
+
+The analogy with a finite Blaschke product is structural, not literal.
+Both constructions:
+
+1. normalize a product into factors close to \(1\);
+2. use a logarithm to replace the product by moments of its zeros or lattice
+   points; and
+3. obtain global control from cancellation among those moments.
+
+A complex Blaschke factor pairs a zero with a reflected pole so that the
+product has unit modulus on a boundary. Equation (6) instead pairs a Gaussian
+lattice block with its translation. Its distinguished property is
+\(\varpi\)-adic proximity to \(1\), not unit modulus on the complex unit
+circle. "Non-Archimedean canonical product" is therefore the more accurate
+description.
+
+## 7. Splitting-type research program
+
+The product viewpoint suggests organizing Gaussian Lucas congruences locally,
+according to the behavior of a rational prime in \(\mathbb Z[i]\).
+
+| Rational prime | Local behavior | Product question |
+| --- | --- | --- |
+| \(p\equiv3\pmod4\) | inert | control reciprocal moments in the full quadratic residue field |
+| \(p\equiv1\pmod4\) | split as \(\pi\bar\pi\) | normalize and analyze the \(\pi\)- and \(\bar\pi\)-adic products separately |
+| \(p=2\) | ramified as a unit times \((1+i)^2\) | use the mixed-parity block and its four-coset lift |
+
+For a prime ideal \(\mathfrak p\), the desired local statement has the form
+
+```math
+R_{\mathfrak p,r}-1
+=
+c_{\mathfrak p,r}\,
+CD\bigl(A-C+i(B-D)\bigr)
++\text{one valuation level deeper},
+\tag{21}
+```
+
+where \(c_{\mathfrak p,r}\) is the first reciprocal moment of the relevant
+local residue block.
+
+The inert and ramified proof candidates already fit this template. The split
+case is the important obstruction: rational \(p\)-scaling mixes the two prime
+ideals, so a theorem should be formulated after localization and suitable
+normalization rather than by copying the inert statement.
+
+## 8. Review boundary
+
+The identities (3), (8), and (12)--(14), and the dominant-moment lemma are
+proved algebraically. Equation (20) is the existing ramified-prime theorem,
+not a new independent proof.
+
+The claims still requiring specialist attention are:
+
+1. the full ramified reciprocal-moment estimates used to verify (17);
+2. priority for the exact ramified theorem;
+3. the correct normalization at split primes; and
+4. whether the local formulation (21) is already implicit in a general
+   theorem on factorial products over local fields.

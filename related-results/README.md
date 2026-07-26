@@ -19,20 +19,22 @@ The common mechanism is:
 | 2 | [Gaussian Frobenius twists](GaussianFrobeniusTwists.md) | Shows that discard-and-rescale proofs lift to roots-of-unity weights; specializes A183068 to a Gaussian split/inert congruence | Complete elementary deduction; priority unchecked |
 | 3 | [Cubic $(\eta)$ congruence at $p=3$](EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to fill a small-prime gap in a published theorem | Complete unchecked draft |
 | 4 | [Gaussian Wolstenholme citation network](GaussianWolstenholmeCitationNetwork.md) | Replaces scaling by translation-invariant Gaussian residue blocks | Three major candidate results with exact certificates; independent review required |
-| 5 | [Gaussian power-sum conjectures](GaussianPowerSumConjectures.md) | Uses fourth-root and affine-orbit cancellation in the same residue-stratification spirit | Two formula proofs and exact counterexamples; independent review required |
-| 6 | [Higher-degree finite-field box polynomials](HigherDegreeFiniteFieldBoxPolynomials.md) | Generalizes the Gaussian polynomial factorization to every finite-field degree | Complete elementary theorem; likely classical infrastructure |
-| 7 | [Binary $s_{18}$ reduction](S18TwoAdicReduction.md) | Isolates the exact sharpened scaling lemma still needed at $p=2$ | Substantial reduction, not a proof |
-| 8 | [Gaussian citation-network boundary report](GaussianCitationNetworkBoundaryReport.md) | Records rigorous limits of the Gaussian search, including Erdős--Moser reductions | Reduction and bounded search, not a global solution |
-| 9 | [Cooper level-11 rare primes](CooperLevel11RarePrimes.md) | Tests another published supercongruence family and isolates its first obstruction | Computational result and structural clue |
+| 5 | [Gaussian canonical-product synthesis](GaussianLucasCanonicalProducts.md) | Extracts the dominant logarithmic-moment mechanism and organizes the inert, split, and ramified cases locally | Proved structural lemma plus open research program |
+| 6 | [Gaussian power-sum conjectures](GaussianPowerSumConjectures.md) | Uses fourth-root and affine-orbit cancellation in the same residue-stratification spirit | Two formula proofs and exact counterexamples; independent review required |
+| 7 | [Higher-degree finite-field box polynomials](HigherDegreeFiniteFieldBoxPolynomials.md) | Generalizes the Gaussian polynomial factorization to every finite-field degree | Complete elementary theorem; likely classical infrastructure |
+| 8 | [Binary $s_{18}$ reduction](S18TwoAdicReduction.md) | Isolates the exact sharpened scaling lemma still needed at $p=2$ | Substantial reduction, not a proof |
+| 9 | [Gaussian citation-network boundary report](GaussianCitationNetworkBoundaryReport.md) | Records rigorous limits of the Gaussian search, including Erdős--Moser reductions | Reduction and bounded search, not a global solution |
+| 10 | [Cooper level-11 rare primes](CooperLevel11RarePrimes.md) | Tests another published supercongruence family and isolates its first obstruction | Computational result and structural clue |
 
 ## Strongest present claims
 
-The directory currently contains four especially reviewable claims:
+The directory currently contains five especially reviewable claims:
 
 - the Landau-depth theorem unifying termwise vanishing with multinomial
   transfer;
 - the cubic $(\eta)$ congruence at the missing prime $3$;
 - the Gaussian Lucas congruence modulo $p^3$ at every inert prime $p>5$; and
+- the exact adjacent-scale valuation at the ramified prime $1+i$; and
 - an infinite counterexample family plus corrected theorem for a printed
   Gaussian reciprocal-power conjecture.
 
