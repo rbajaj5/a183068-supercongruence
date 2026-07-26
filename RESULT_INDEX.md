@@ -96,6 +96,22 @@ Status labels are deliberately conservative:
 - **Proof:** [Cubic $p=3$ extension](related-results/EtaPrime3CubicExtension.md)
 - **Exact checker:** [`verify_eta_prime3.py`](verification/related/verify_eta_prime3.py)
 
+### BS-DWORK — Bhatt--Singh/Dwork period scaling
+
+- **Claim:** For \(A_d(n)=(dn)!/(n!)^d\), multinomial scaling and a
+  base-\(p\) digit-sum estimate give
+  \[
+  v_p(A_d(np^r)-A_d(np^{r-1}))
+  \ge 3(r+v_p(n))-\epsilon_p+s_p(n)v_p(d!).
+  \]
+  This places an explicit all-prime supercongruence beside the
+  Bhatt--Singh \(F\)-pure-threshold tower for Fermat Calabi--Yau
+  hypersurfaces.
+- **Status:** Complete elementary deduction with exact checks; no novelty
+  claim and priority unchecked.
+- **Proof:** [Bhatt--Singh/Dwork period synthesis](related-results/BhattSinghDworkPeriodSupercongruence.md)
+- **Exact checker:** [`verify_dwork_period_supercongruence.py`](verification/related/verify_dwork_period_supercongruence.py)
+
 ## Gaussian-integer results
 
 ### GWL-POLY — Gaussian box polynomial
