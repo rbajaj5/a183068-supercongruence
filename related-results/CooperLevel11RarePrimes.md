@@ -94,13 +94,30 @@ U(n)=nT(n-1)
 \qquad\text{(8)}
 ```
 
-has the form of a formal derivative coefficient. A plausible proof strategy
-is to derive the recurrence satisfied modulo $p$ by the Frobenius defect
-$D_p(n)$, show that $U(n)$ satisfies its homogeneous linearization, and use
-$D_p(1)=q_p$ as the initial value. The missing step is genuine: recurrence
-(1) advances $T(n)$ one index at a time and does not by itself give the
-required recurrence for the $p$-section $T(pn)$. A generating-function
-Frobenius identity or a $p$-step transfer matrix is still needed.
+has the form of a formal derivative coefficient. The general
+[Frobenius-quotient identity](FrobeniusQuotientConstantTerms.md) proves this
+shape more precisely for any fixed Laurent-polynomial model
+$T(n)=\mathrm{CT}(\Lambda_{11}^n)$. If
+
+```math
+R_{p,11}=
+\frac{\Lambda_{11}(\mathbf x)^p-\Lambda_{11}(\mathbf x^p)}p,
+```
+
+then
+
+```math
+D_p(n)\equiv
+n\mathrm{CT}\!\left(
+\Lambda_{11}(\mathbf x^p)^{n-1}R_{p,11}
+\right)
+\pmod p.
+```
+
+Thus (6) would follow from one explicit rank-one pairing identity for
+$R_{p,11}$. The standard Newton-polytope Dwork theorem does not state that
+pairing automatically. A recurrence linearization, a stronger unit-root
+argument, or a direct constant-term proof is still required.
 
 The analogous second-level defect is not naively proportional to $q_p$.
 Reported tests found a different invariant which can vanish at

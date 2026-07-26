@@ -19,6 +19,8 @@ A183068 proof without mixing them into the proof itself.
 | --- | --- | --- |
 | A183068 modulo $p^{2r}$ for every prime | The core named conjecture | Audited draft |
 | [Landau-depth synthesis](related-results/LandauDepthSupercongruenceSynthesis.md) | Extracts the carry-and-scaling argument into a computable criterion; gives an infinite all-prime $p^{2r}$ family containing A183068 and an all-prime $p^{3r}$ subfamily | Internally rechecked candidate |
+| [Frobenius quotients of constant-term sequences](related-results/FrobeniusQuotientConstantTerms.md) | Proves the universal first-order expansion, identifies the additional rank-one condition behind the Cooper law, and reformulates the $n=1$ A183068 theorem as a constant-term congruence | Complete elementary theorem; no novelty claim |
+| [p-adic Arzelà--Ascoli framework](related-results/PadicArzelaAscoliSupercongruenceTowers.md) | Shows that every uniform supercongruence tower already has a quantitative vertical limit, then isolates horizontal equicontinuity as the missing input for $\mathbb Z_p$ interpolation and compact normalized defects | Complete elementary framework; application boundary explicit |
 | [Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md) | Lifts a termwise supercongruence to roots-of-unity weights; the $i^k$-twist detects split versus inert primes in $\mathbb Z[i]$ | Unchecked candidate |
 
 The Landau-depth synthesis is the most important direct generalization. It
@@ -36,7 +38,7 @@ explains which part of the A183068 proof is special and which part is reusable.
 | [Gaussian power-sum conjectures](related-results/GaussianPowerSumConjectures.md) | Proves the printed $p=3,5$ formulas and gives exact counterexamples to two broader claims in a recent source | Unchecked candidate |
 | [Higher-degree finite-field box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md) | Extends the Gaussian polynomial mechanism to arbitrary finite-field degree by Boolean Möbius inversion | Unchecked candidate; likely classical infrastructure |
 | [Gaussian citation-network boundary report](related-results/GaussianCitationNetworkBoundaryReport.md) | Records rigorous reductions for Gaussian Erdős--Moser and identifies the classical Wolstenholme-prime obstruction | Reduction only |
-| [Binary $s_{18}$ problem](related-results/S18TwoAdicReduction.md) | Reduces a published binary supercongruence to one sharpened scaling lemma | Reduction only |
+| [Binary $s_{18}$ problem](related-results/S18TwoAdicReduction.md) | Reduces a published binary supercongruence to one sharpened scaling lemma and gives a counterexample to a tempting factor-by-factor proof | Reduction only |
 | [Cooper level-11 rare primes](related-results/CooperLevel11RarePrimes.md) | Isolates the $n=1$ obstruction and a 350-case first-order law that would make it equivalent to every $r=1$ congruence; rejects the naive $X_0(11)$ trace-$2$ explanation | Computational theorem target |
 
 These neighboring results are not all logical consequences of A183068. Their

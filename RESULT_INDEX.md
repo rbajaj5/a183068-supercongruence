@@ -44,6 +44,27 @@ Status labels are deliberately conservative:
 - **Proof:** [Landau-depth synthesis](related-results/LandauDepthSupercongruenceSynthesis.md)
 - **Exact checker:** [`verify_landau_supercongruence.py`](verification/related/verify_landau_supercongruence.py)
 
+### FQ-CT — first Frobenius quotient
+
+- **Claim:** Every integral Laurent-polynomial constant-term sequence has a
+  universal first-order Frobenius expansion modulo $p^2$. The $n=1$ A183068
+  theorem therefore gives an explicit vanishing constant term for every
+  prime.
+- **Status:** Complete elementary theorem and corollary; no novelty claim.
+- **Proof:** [Frobenius-quotient identity](related-results/FrobeniusQuotientConstantTerms.md)
+- **Exact checker:** None required.
+
+### AA-TOWER — p-adic compactness of supercongruence towers
+
+- **Claim:** A uniform adjacent-scale valuation tending to infinity gives a
+  quantitative uniform limit of the full tower. A uniform horizontal modulus
+  extends that limit to $\mathbb Z_p$, while equicontinuity of normalized
+  defects gives subsequential defect profiles by Arzelà--Ascoli.
+- **Status:** Complete elementary framework. The required horizontal estimate
+  is not yet proved for A183068.
+- **Proof:** [p-adic Arzelà--Ascoli framework](related-results/PadicArzelaAscoliSupercongruenceTowers.md)
+- **Exact checker:** None required.
+
 ### GFT — Gaussian Frobenius twists
 
 - **Claim:** Termwise supercongruences lift to roots-of-unity weights; the
