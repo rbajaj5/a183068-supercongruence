@@ -61,16 +61,17 @@ D_p(n)=\frac{T(pn)-T(n)}p\pmod p.
 \qquad\text{(5)}
 ```
 
-An independent exact computation found the stronger pattern
+An exact computation found the stronger pattern
 
 ```math
 D_p(n)\equiv nT(n-1)q_p\pmod p
 \qquad\text{(6)}
 ```
 
-in all 350 tested pairs consisting of every odd prime $p\le103$ with
-$p\ne11$ and every $1\le n\le14$. In particular, the right side vanishes
-at $p=59$, as it should.
+in all 8,300 tested pairs consisting of every odd prime $p\le1,000$ with
+$p\ne11$ and every $1\le n\le50$. In particular, the right side vanishes
+at $p=59$, as it should. The repository checker now reproduces this larger
+test directly.
 
 Equation (6) is presently a **computational theorem target**, not a proved
 identity. If it holds for a fixed prime $p$ and every $n\ge1$, then it gives
@@ -125,6 +126,51 @@ Reported tests found a different invariant which can vanish at
 $p=7,13,17,19$ even when $q_p\ne0$. Consequently (6), even if proved,
 must not be iterated to claim the $r\ge2$ congruence.
 
+### A three-branch refinement at $p=3$
+
+There is an unexpectedly simple refinement of Cooper's first congruence in
+Conjecture 11.2. Exact computation gives
+
+```math
+T(n)\equiv1\pmod3.
+\qquad\text{(9)}
+```
+
+Define
+
+```math
+b(n)=\frac{T(n)-1}{3}\pmod3.
+```
+
+The data then obey all three base-$3$ branches
+
+```math
+\begin{aligned}
+b(3n)&\equiv b(n)+n,\\
+b(3n+1)&\equiv b(n)+1,\\
+b(3n+2)&\equiv b(n)-n
+\end{aligned}
+\pmod3.
+\qquad\text{(10)}
+```
+
+The first branch is exactly
+
+```math
+T(3n)\equiv T(n)+3n\pmod9,
+\qquad\text{(11)}
+```
+
+which Cooper conjectured. The other two branches strengthen it to a
+complete base-$3$ recursion for $T(n)$ modulo $9$. All 30,003 identities
+in (10) with $0\le n\le10,000$ passed exact integer computation.
+
+Equation (10) is still a **computational theorem target**. If proved, it
+would give a finite digit formula for the entire sequence modulo $9$ and
+would settle the $p=3$ part of Cooper's Conjecture 11.2. It is also
+consistent with (6): here $q_3=1$, and the first branch says precisely
+$D_3(n)\equiv n\pmod3$, since the data give $T(n-1)\equiv1\pmod3$.
+
 ## 3. A rejected modular-form shortcut
 
 Level $11$ makes the weight-two newform
@@ -138,7 +184,7 @@ For the model
 ```math
 E:\quad y^2+y=x^3-x^2-10x-20,
 \qquad a_p=p+1-\#E(\mathbb F_p),
-\qquad\text{(9)}
+\qquad\text{(12)}
 ```
 
 exact point counts give
@@ -147,7 +193,7 @@ exact point counts give
 q_{59}=0,\quad a_{59}=5,
 \qquad\text{and}\qquad
 q_{101}=91,\quad a_{101}=2.
-\qquad\text{(10)}
+\qquad\text{(13)}
 ```
 
 Either witness rules out
@@ -183,7 +229,7 @@ Under that premise, every sequence in
 
 ```math
 T(pn),\qquad T(n),\qquad nT(n-1)q_p \pmod {p^2}
-\qquad\text{(11)}
+\qquad\text{(14)}
 ```
 
 is $p$-automatic. Equality in (6) for every $n$ is therefore a finite-state
@@ -222,15 +268,16 @@ formerly proposed equivalence
 q_p=0
 \quad\Longrightarrow\quad
 T(pn)\equiv T(n)\pmod {p^2}\ \text{for every }n,
-\qquad\text{(12)}
+\qquad\text{(15)}
 ```
 
 from the level-11 modular parametrization or a Frobenius matrix. This would
 turn an infinite family of congruences into one computable prime-local
 condition and explain why exceptional primes can be rare.
 
-The carry-depth method does not directly prove (11): recurrence (1) has no
-known balanced factorial-ratio summand whose strata transfer termwise.
+The carry-depth method does not directly prove either (6) or (10):
+recurrence (1) has no known balanced factorial-ratio summand whose strata
+transfer termwise.
 This is the boundary where the project genuinely becomes a Dwork/Frobenius
 problem.
 
@@ -245,6 +292,6 @@ python verification/related/verify_cooper_level11.py
 ```
 
 and add `--extended` to reproduce the larger ranges in the table and the
-prime scan through $30,000$. The repository checker does not yet reproduce
-the separately reported 350 cases of (6); they are recorded as external exact
-evidence rather than silently folded into the checker count.
+prime scan through $30,000$, all 8,300 cases of (6), and all 30,003
+base-$3$ identities in (10). The default run checks smaller ranges so that
+routine repository verification stays quick.
