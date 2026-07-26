@@ -120,6 +120,15 @@ two-step tower or an explicit Frobenius correction restores a sharp
 congruence. This separates polynomial/Tate data from finite-monodromy data in
 an entirely explicit example.
 
+The
+[degree-five follow-on](related-results/JacobianDegreeFiveEllipticFrobenius.md)
+is the next structural transition. The tangent locus is now a smooth plane
+cubic, and the exact collision count contains the Frobenius trace of an
+explicit non-CM elliptic curve, together with finite root-count corrections.
+The note gives the complete local zeta factorization, isolates a sharp
+characteristic-\(17\) boundary exception, and proves an exact
+Frobenius-corrected adjacent valuation of \(2r-2\).
+
 ## Public Gaussian-prime follow-on
 
 The most concise shareable follow-on is
@@ -201,6 +210,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/JacobianDegreeFourFrobeniusObstruction.md](related-results/JacobianDegreeFourFrobeniusObstruction.md):
   degree-four collision formula, quadratic Artin factors, obstruction to raw
   adjacency, and Frobenius-corrected supercongruence.
+- [related-results/JacobianDegreeFiveEllipticFrobenius.md](related-results/JacobianDegreeFiveEllipticFrobenius.md):
+  degree-five collision formula, explicit non-CM elliptic factor, local zeta
+  function, and corrected adjacent-extension law.
 - [GAUSSIAN_LUCAS.md](GAUSSIAN_LUCAS.md): the public entry point for the
   Gaussian-prime follow-on.
 - [related-results/](related-results/): the complete related proof drafts and
@@ -208,7 +220,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all nineteen
+- [verification/run_all.py](verification/run_all.py): one command for all twenty
   verification programs.
 
 The broader working repository remains available at

@@ -230,6 +230,31 @@ Status labels are deliberately conservative:
 - **Proof:** [Degree-four Jacobian collisions and the Frobenius obstruction](related-results/JacobianDegreeFourFrobeniusObstruction.md)
 - **Exact checker:** [`verify_jacobian_degree_four.py`](verification/related/verify_jacobian_degree_four.py)
 
+### JC5-FF - degree-five non-CM elliptic Frobenius packet
+
+- **Claim:** For Gallagher's degree-five weighted-lift Keller map, the
+  tangent-secant obstruction is a smooth plane cubic whose Jacobian is
+  \[
+  E:\ y^2=x^3-2594700x-2076643440.
+  \]
+  Away from the explicitly listed bad characteristics, the off-diagonal
+  collision count is
+  \[
+  \mathcal V_5(q)
+  =(q-1)\bigl(q^2+2a_E(q)-2+2I(q)+2D(q)+H(q)\bigr),
+  \]
+  with one additional \(-q(q-1)\) term in characteristic \(17\).
+  Here \(I,D,H\) are finite root-count packets. The local zeta function
+  factors into Tate, elliptic, and finite Artin pieces. Removing the complete
+  non-Tate packet gives a corrected tower with exact adjacent valuation
+  \(2r-2\).
+- **Status:** Complete theorem with direct prime-field and
+  quadratic-extension collision checks, an explicit plane-cubic/elliptic
+  identification, and exact tower checks. Literature priority is
+  provisional.
+- **Proof:** [Degree-five Jacobian collisions and a non-CM elliptic Frobenius packet](related-results/JacobianDegreeFiveEllipticFrobenius.md)
+- **Exact checker:** [`verify_jacobian_degree_five.py`](verification/related/verify_jacobian_degree_five.py)
+
 ## Gaussian-integer results
 
 ### GWL-POLY — Gaussian box polynomial

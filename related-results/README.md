@@ -24,6 +24,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 1A | [q-calculus and cyclotomic supercongruences](QCalculusCyclotomicSupercongruences.md) | Turns Landau depth into exact root-of-unity multiplicity; gives a square q-lift of A183068 and an explicit corrected cubic theorem for depth-three families | Complete deductions from Clark and Straub; exact polynomial checks; priority preliminary |
 | 1B | [Finite-field counts for the Fable Jacobian counterexample](JacobianCounterexampleFiniteFieldCounts.md) | Uses the same adjacent-extension viewpoint to organize cubic fibers, collisions, and Frobenius counts of the new counterexample | Complete elementary theorem with exact checks; priority preliminary |
 | 1C | [Degree-four Jacobian Frobenius obstruction](JacobianDegreeFourFrobeniusObstruction.md) | Shows how quadratic Artin factors obstruct raw adjacency and how two-step or corrected towers recover exact congruences | Complete elementary theorem with exact checks; priority preliminary |
+| 1D | [Degree-five elliptic Frobenius packet](JacobianDegreeFiveEllipticFrobenius.md) | Shows the next transition: a tangent cubic contributes a non-CM elliptic trace, and removing the full Frobenius packet leaves an exact \(2r-2\) tower | Complete theorem with direct finite-field and tower checks; priority preliminary |
 | 2 | [Frobenius quotients of constant-term sequences](FrobeniusQuotientConstantTerms.md) | Proves the universal first-order expansion, identifies the exact rank-one condition behind the Cooper law, and gives exact counterexamples to two proposed Dwork shortcuts | Complete elementary theorem; Dwork boundaries certified |
 | 3 | [p-adic Arzelà--Ascoli framework](PadicArzelaAscoliSupercongruenceTowers.md) | Proves the vertical limit supplied by A183068, uses the Banach contraction $x\mapsto px$ to rule out a global continuous interpolation, and proves uniform quadratic contraction of every normalized defect at zero | Complete elementary framework and obstruction; unit-shell estimate open |
 | 4 | [Gaussian Frobenius twists](GaussianFrobeniusTwists.md) | Shows that discard-and-rescale proofs lift to roots-of-unity weights; specializes A183068 to a Gaussian split/inert congruence | Complete elementary deduction; priority unchecked |
@@ -79,6 +80,7 @@ The individual correspondence is:
 | q-calculus and cyclotomic lifts | `verification/related/verify_q_calculus_supercongruence.py` |
 | Fable Jacobian-counterexample counts | `verification/related/verify_jacobian_counterexample_counts.py` |
 | Degree-four Jacobian collisions | `verification/related/verify_jacobian_degree_four.py` |
+| Degree-five Jacobian collisions | `verification/related/verify_jacobian_degree_five.py` |
 | Frobenius quotient identity | Coefficientwise algebraic proof; no checker required |
 | Dwork and continuity boundaries | `verification/related/verify_dwork_boundaries.py` |
 | p-adic Arzelà--Ascoli framework | Elementary ultrametric, contraction, and compactness proofs |
