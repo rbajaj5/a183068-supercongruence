@@ -111,6 +111,15 @@ program. It is not an application of geometric Langlands, localization, or
 ultrafilters. The formulas are complete and exactly checked; literature
 priority remains provisional.
 
+The
+[degree-four follow-on](related-results/JacobianDegreeFourFrobeniusObstruction.md)
+shows where this simple picture first breaks. Its collision zeta function has
+three quadratic Artin factors. Their extension-parity signs destroy the raw
+adjacent congruence at seven of the eight prime classes modulo \(24\); a
+two-step tower or an explicit Frobenius correction restores a sharp
+congruence. This separates polynomial/Tate data from finite-monodromy data in
+an entirely explicit example.
+
 ## Public Gaussian-prime follow-on
 
 The most concise shareable follow-on is
@@ -189,6 +198,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/JacobianCounterexampleFiniteFieldCounts.md](related-results/JacobianCounterexampleFiniteFieldCounts.md):
   complete finite-field fiber statistics, collision zeta function, and the
   characteristic-\(3\) adjacent-extension gain for the Fable counterexample.
+- [related-results/JacobianDegreeFourFrobeniusObstruction.md](related-results/JacobianDegreeFourFrobeniusObstruction.md):
+  degree-four collision formula, quadratic Artin factors, obstruction to raw
+  adjacency, and Frobenius-corrected supercongruence.
 - [GAUSSIAN_LUCAS.md](GAUSSIAN_LUCAS.md): the public entry point for the
   Gaussian-prime follow-on.
 - [related-results/](related-results/): the complete related proof drafts and
@@ -196,7 +208,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all eighteen
+- [verification/run_all.py](verification/run_all.py): one command for all nineteen
   verification programs.
 
 The broader working repository remains available at

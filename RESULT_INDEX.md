@@ -212,6 +212,24 @@ Status labels are deliberately conservative:
 - **Proof:** [Finite-field counts for the Fable Jacobian counterexample](related-results/JacobianCounterexampleFiniteFieldCounts.md)
 - **Exact checker:** [`verify_jacobian_counterexample_counts.py`](verification/related/verify_jacobian_counterexample_counts.py)
 
+### JC4-FF - degree-four Frobenius obstruction and repair
+
+- **Claim:** For Gallagher's degree-four weighted-lift Keller map, the
+  off-diagonal collision count over \(\mathbb F_q\), in characteristic at
+  least \(5\), is
+  \[
+  \mathcal V_4(q)
+  =(q-1)\left(q^2+3+\chi_q(2)+2\chi_q(-2)+2\chi_q(6)\right).
+  \]
+  Its zeta function has three explicit quadratic Artin factors. Those factors
+  make the raw adjacent difference a \(p\)-adic unit unless
+  \(p\equiv1\pmod {24}\). Passing from \(r\) to \(r-2\), or adding the
+  explicit Frobenius correction, restores sharp valuation laws.
+- **Status:** Complete elementary theorem with direct prime-field and
+  quadratic-extension checks. Literature priority is provisional.
+- **Proof:** [Degree-four Jacobian collisions and the Frobenius obstruction](related-results/JacobianDegreeFourFrobeniusObstruction.md)
+- **Exact checker:** [`verify_jacobian_degree_four.py`](verification/related/verify_jacobian_degree_four.py)
+
 ## Gaussian-integer results
 
 ### GWL-POLY — Gaussian box polynomial
