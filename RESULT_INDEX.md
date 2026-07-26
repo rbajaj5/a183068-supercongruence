@@ -190,8 +190,12 @@ Status labels are deliberately conservative:
 ### C11 — Cooper level-11 exceptional primes
 
 - **Claim:** Exact tests isolate the $n=1$ obstruction at the two exceptional
-  Cooper level-11 primes.
-- **Status:** Computational.
+  Cooper level-11 primes. In 350 further cases, the full first-order defect is
+  $nT(n-1)q_p$ modulo $p$; proving this identity would make the obstruction
+  equivalent to every level-$r=1$ congruence.
+- **Status:** Obstruction scan reproduced; first-order law is a computational
+  theorem target. The naive $X_0(11)$ trace-$2$ interpretation is refuted by
+  exact witnesses.
 - **Report:** [Cooper level-11 report](related-results/CooperLevel11RarePrimes.md)
 - **Exact checker:** [`verify_cooper_level11.py`](verification/related/verify_cooper_level11.py)
 

@@ -26,7 +26,7 @@ The common mechanism is:
 | 9 | [Higher-degree finite-field box polynomials](HigherDegreeFiniteFieldBoxPolynomials.md) | Generalizes the Gaussian polynomial factorization to every finite-field degree | Complete elementary theorem; likely classical infrastructure |
 | 10 | [Binary $s_{18}$ reduction](S18TwoAdicReduction.md) | Isolates the exact sharpened scaling lemma still needed at $p=2$ | Substantial reduction, not a proof |
 | 11 | [Gaussian citation-network boundary report](GaussianCitationNetworkBoundaryReport.md) | Records rigorous limits of the Gaussian search, including Erdős--Moser reductions | Reduction and bounded search, not a global solution |
-| 12 | [Cooper level-11 rare primes](CooperLevel11RarePrimes.md) | Tests another published supercongruence family and isolates its first obstruction | Computational result and structural clue |
+| 12 | [Cooper level-11 rare primes](CooperLevel11RarePrimes.md) | Isolates the first obstruction and records a 350-case first-order Frobenius law reducing the full $r=1$ conjecture to it | Computational theorem target; trace-$2$ shortcut refuted |
 
 ## Strongest present claims
 

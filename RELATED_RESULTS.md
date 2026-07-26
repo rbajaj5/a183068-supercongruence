@@ -37,7 +37,7 @@ explains which part of the A183068 proof is special and which part is reusable.
 | [Higher-degree finite-field box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md) | Extends the Gaussian polynomial mechanism to arbitrary finite-field degree by Boolean Möbius inversion | Unchecked candidate; likely classical infrastructure |
 | [Gaussian citation-network boundary report](related-results/GaussianCitationNetworkBoundaryReport.md) | Records rigorous reductions for Gaussian Erdős--Moser and identifies the classical Wolstenholme-prime obstruction | Reduction only |
 | [Binary $s_{18}$ problem](related-results/S18TwoAdicReduction.md) | Reduces a published binary supercongruence to one sharpened scaling lemma | Reduction only |
-| [Cooper level-11 rare primes](related-results/CooperLevel11RarePrimes.md) | Extends exact tests and isolates the $n=1$ obstruction for the two exceptional primes | Computational result and structural clue |
+| [Cooper level-11 rare primes](related-results/CooperLevel11RarePrimes.md) | Isolates the $n=1$ obstruction and a 350-case first-order law that would make it equivalent to every $r=1$ congruence; rejects the naive $X_0(11)$ trace-$2$ explanation | Computational theorem target |
 
 These neighboring results are not all logical consequences of A183068. Their
 connection is methodological: $p$-adic residue strata supply vanishing, and a
