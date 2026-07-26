@@ -73,4 +73,3 @@ Deployment scores are intentionally conservative. Finite-field Fourier bias
 and local \(p\)-adic dynamics are structurally adjacent to coding and
 cryptography, but this repository does not yet prove a protocol-level
 security or performance improvement.
-
