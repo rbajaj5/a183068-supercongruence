@@ -70,6 +70,10 @@ statement, proof mechanism, exact $p=3$ boundary, source paper, and
 reproduction command. Its present status is an unchecked proof candidate,
 not a peer-reviewed theorem.
 
+An [adjacent-scale experiment](related-results/GaussianLucasScalingExperiment.md)
+has also found a possible $p^{3r}$ strengthening. This is explicitly recorded
+as a computational conjecture, not as a proved result.
+
 ## Suggested reading order
 
 1. Read Sections 1--3 of [PROOF.md](PROOF.md) for the statement and carry

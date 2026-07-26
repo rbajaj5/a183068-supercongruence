@@ -88,6 +88,15 @@ Status labels are deliberately conservative:
 - **Full proof:** [Gaussian Wolstenholme network, Theorem 4](related-results/GaussianWolstenholmeCitationNetwork.md#5-the-gaussian-lucas-congruence)
 - **Exact checker:** [`verify_gaussian_wolstenholme.py`](verification/related/verify_gaussian_wolstenholme.py)
 
+### GWL-SCALE — adjacent prime-power scaling
+
+- **Claim under investigation:** The inert-prime Gaussian Lucas difference
+  appears divisible by $p^{3r}$ between scales $p^{r-1}$ and $p^r$; at
+  $p=3$ the observed sharp exponent is $3r-1$.
+- **Status:** Computational conjecture; no proof or priority claim.
+- **Report:** [Adjacent-scale Gaussian Lucas experiment](related-results/GaussianLucasScalingExperiment.md)
+- **Exact experiment:** [`experiment_gaussian_lucas_scaling.py`](verification/related/experiment_gaussian_lucas_scaling.py)
+
 ### GPS — Gaussian power sums
 
 - **Claim:** Two printed small-prime Gaussian power-sum formulas hold, while
