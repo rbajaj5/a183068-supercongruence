@@ -16,6 +16,9 @@ import argparse
 from dataclasses import dataclass
 from verify_gaussian_wolstenholme import (
     Gaussian,
+    gadd,
+    ginv,
+    gmul,
     rectangular_binomial,
     vp_integer,
 )
@@ -241,6 +244,81 @@ def minimum_result(
     return minimum, witnesses
 
 
+def check_level_one_leading_term(
+    p: int = 7,
+    bound: int = 3,
+    precision: int = 5,
+) -> tuple[int, Gaussian, Gaussian]:
+    """Check the explicit leading-term formula modulo p."""
+    modulus = p**precision
+    reciprocal_sum_1 = (0, 0)
+    reciprocal_sum_2 = (0, 0)
+    for a in range(1, p + 1):
+        for b in range(1, p + 1):
+            if a == p and b == p:
+                continue
+            inverse = ginv(a, b, modulus)
+            reciprocal_sum_1 = gadd(
+                reciprocal_sum_1, inverse, modulus
+            )
+            reciprocal_sum_2 = gadd(
+                reciprocal_sum_2,
+                gmul(inverse, inverse, modulus),
+                modulus,
+            )
+
+    alpha = (
+        reciprocal_sum_1[0] // p**2 % p,
+        reciprocal_sum_1[1] // p**2 % p,
+    )
+    beta = (
+        reciprocal_sum_2[0] // p % p,
+        reciprocal_sum_2[1] // p % p,
+    )
+    inverse_two = pow(2, -1, p)
+    checks = 0
+
+    for a, b, c, d in small_rectangles(bound):
+        lower = rectangular_binomial(
+            a, b, c, d, p, precision
+        )
+        upper = rectangular_binomial(
+            p * a, p * b, p * c, p * d, p, precision
+        )
+        assert lower[0] == upper[0] == 0
+        ratio = gmul(
+            upper[1],
+            ginv(lower[1][0], lower[1][1], modulus),
+            modulus,
+        )
+        actual = (
+            ((ratio[0] - 1) % modulus) // p**3 % p,
+            (ratio[1] % modulus) // p**3 % p,
+        )
+
+        delta = ((a - c) % p, (b - d) % p)
+        phi_1 = (c * d * delta[0] % p, c * d * delta[1] % p)
+        phi_2 = gmul(phi_1, ((a - 1) % p, (b - 1) % p), p)
+        predicted_first = gmul(alpha, phi_1, p)
+        predicted_second = gmul(beta, phi_2, p)
+        predicted = (
+            (
+                predicted_first[0]
+                - inverse_two * predicted_second[0]
+            )
+            % p,
+            (
+                predicted_first[1]
+                - inverse_two * predicted_second[1]
+            )
+            % p,
+        )
+        assert actual == predicted
+        checks += 1
+
+    return checks, alpha, beta
+
+
 def run(deep: bool = False) -> None:
     precision = 18
     rectangles = small_rectangles(3)
@@ -262,6 +340,12 @@ def run(deep: bool = False) -> None:
     print(
         "\np=3 boundary (1,2,1,1): "
         f"v_3={boundary.display()}"
+    )
+
+    leading_checks, alpha, beta = check_level_one_leading_term()
+    print(
+        "\nLeading-term formula at p=7: "
+        f"{leading_checks} checks; alpha={alpha}; beta={beta}"
     )
 
     scaling_rectangles = [

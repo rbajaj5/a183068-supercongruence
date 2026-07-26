@@ -330,7 +330,106 @@ its valuation contribution is
 which is nonnegative. Multiplying (20) by the lower-scale coefficient proves
 (1) and (2). ∎
 
-## 5. Checks and remaining review
+## 5. Leading term and equality
+
+The block proof also isolates the generic equality cases. For a polynomial or
+convergent power series $f$, put
+
+```math
+T_f(X,Y)=
+\sum_{u=0}^{X-1}\sum_{v=0}^{Y-1}f(u+iv)
+```
+
+and define the five-term functional
+
+```math
+\begin{aligned}
+\Phi(f)={}&T_f(A,B)+T_f(A-C,B-D)\\
+&-T_f(A-C,B)-T_f(A,B-D)-T_f(C,D).
+\end{aligned}
+\tag{22}
+```
+
+Direct summation gives
+
+```math
+\Phi(1)=0,
+\tag{23}
+```
+
+```math
+\Phi(Z)=
+CD\bigl(A-C+i(B-D)\bigr),
+\tag{24}
+```
+
+and
+
+```math
+\Phi(Z^2)=
+CD\bigl(A-C+i(B-D)\bigr)
+\bigl(A+iB-1-i\bigr).
+\tag{25}
+```
+
+Let
+
+```math
+\alpha_{p,r}=p^{-2r}S_{r,1}\pmod p,
+\qquad
+\beta_{p,r}=p^{-r}S_{r,2}\pmod p.
+\tag{26}
+```
+
+For $p\ge7$, reduction of $U_r$ modulo $p$ shows
+$S_{r,3}\equiv0\pmod p$. All terms of degree at least $3$ in (15) are
+therefore one power beyond $p^{3r}$: the cubic term gains a power from
+$S_{r,3}$, and for $k\ge4$,
+
+```math
+rk-v_p(k)\ge3r+1.
+```
+
+If
+
+```math
+R_{p,r}=
+\frac{Q(p^rA,p^rB;p^rC,p^rD)}
+{Q(p^{r-1}A,p^{r-1}B;p^{r-1}C,p^{r-1}D)},
+```
+
+then (15), (22), and the first-order exponential expansion yield
+
+```math
+\frac{R_{p,r}-1}{p^{3r}}
+\equiv
+CD\bigl(A-C+i(B-D)\bigr)
+\left(
+\alpha_{p,r}
+-
+\frac{\beta_{p,r}}2
+\bigl(A+iB-1-i\bigr)
+\right)
+\pmod p.
+\tag{27}
+```
+
+Consequently the exponent is exactly $3r$ whenever the lower-scale
+coefficient is a $p$-adic unit and the right side of (27) is nonzero.
+Extra valuation can come from:
+
+1. positive valuation of the lower-scale coefficient;
+2. $p\mid CD$;
+3. $A-C+i(B-D)\equiv0\pmod p$; or
+4. vanishing of the final block constant in parentheses.
+
+This explains why equality dominates the small grids while leaving room for
+structured exceptional cases. The formula was checked against all 27
+rectangles in the $p=7,r=1$ grid. At $p=3$, the cubic logarithmic term can
+already contribute at order $3r-1$, so (27) is not the relevant leading-term
+formula.
+
+## 6. Checks and remaining review
 
 The exact companion experiment recovers:
 
