@@ -285,6 +285,25 @@ Source-status labels are separate from proof status:
 - **Proof:** [Degree-five Jacobian collisions and a non-CM elliptic Frobenius packet](related-results/JacobianDegreeFiveEllipticFrobenius.md)
 - **Exact checker:** [`verify_jacobian_degree_five.py`](verification/related/verify_jacobian_degree_five.py)
 
+### JC6-FF - degree-six genus-three Frobenius obstruction
+
+- **Claim:** For Gallagher's canonical degree-six weighted-lift Keller map,
+  the tangent locus is a smooth plane quartic. At \(p=13\), its local
+  \(L\)-polynomial is
+  \[
+  1+16T^2-26T^3+208T^4+2197T^6.
+  \]
+  Together with explicit finite orbit packets, this gives the complete
+  collision count. The raw adjacent difference is a \(13\)-adic unit at
+  every level \(r\ge2\). Removing the genus-three and finite packets restores
+  exact adjacent valuation \(2r-2\).
+- **Status:** Complete theorem with exact extension-field enumeration,
+  algebraic-closure smoothness and orbit-factorization certificates, a
+  period-\(12\) obstruction proof, and corrected tower checks. Literature
+  priority is provisional.
+- **Proof:** [Degree-six genus-three Frobenius obstruction](related-results/JacobianDegreeSixGenusThree.md)
+- **Exact checker:** [`verify_jacobian_degree_six.py`](verification/related/verify_jacobian_degree_six.py)
+
 ## Gaussian-integer results
 
 ### GWL-POLY — Gaussian box polynomial

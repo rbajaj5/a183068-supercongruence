@@ -149,6 +149,16 @@ The note gives the complete local zeta factorization, isolates a sharp
 characteristic-\(17\) boundary exception, and proves an exact
 Frobenius-corrected adjacent valuation of \(2r-2\).
 
+The
+[degree-six follow-on](related-results/JacobianDegreeSixGenusThree.md)
+makes the first higher-genus rung explicit. At \(p=13\), the tangent locus is
+a smooth genus-three quartic with a computed degree-six local
+\(L\)-polynomial. Its Frobenius packet forces the raw adjacent collision
+difference to be a \(13\)-adic unit at every level. Removing the complete
+curve and finite-orbit packet restores the exact valuation \(2r-2\). This is
+both a new theorem candidate and a useful warning: higher-degree collision
+counts need Frobenius correction before a supercongruence can exist.
+
 ## Public Gaussian-prime follow-on
 
 The most concise shareable follow-on is
@@ -236,6 +246,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/JacobianDegreeFiveEllipticFrobenius.md](related-results/JacobianDegreeFiveEllipticFrobenius.md):
   degree-five collision formula, explicit non-CM elliptic factor, local zeta
   function, and corrected adjacent-extension law.
+- [related-results/JacobianDegreeSixGenusThree.md](related-results/JacobianDegreeSixGenusThree.md):
+  degree-six genus-three local \(L\)-polynomial, permanent raw obstruction at
+  \(p=13\), and corrected adjacent-extension law.
 - [GAUSSIAN_LUCAS.md](GAUSSIAN_LUCAS.md): the public entry point for the
   Gaussian-prime follow-on.
 - [related-results/](related-results/): the complete related proof drafts and
@@ -243,7 +256,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all twenty-one
+- [verification/run_all.py](verification/run_all.py): one command for all twenty-two
   verification programs.
 
 The broader working repository remains available at
