@@ -49,6 +49,23 @@ v(R_{2,r}-1)\ge6r-3.
 \qquad\text{(3)}
 ```
 
+In fact, put
+
+```math
+g=A-C+i(B-D).
+```
+
+If $g\ne0$, then the exact valuation is
+
+```math
+v(R_{2,r}-1)
+=
+6r-3+v\!\left(CDg\right).
+\qquad\text{(3a)}
+```
+
+If $g=0$, then $A=C,\ B=D$, and $R_{2,r}=1$.
+
 More precisely,
 
 ```math
@@ -401,9 +418,235 @@ is a unit of the $\varpi$-adic valuation ring by Lemma 1. Its residue
 field is $\mathbb F_2$, so every unit reduces to $1$. Also
 $i\equiv1\pmod\varpi$.
 Dividing (34) by $\varpi^{6r-3}$ therefore proves (4), and hence the
-theorem. ∎
+original leading-residue assertion. The stronger exact formula (3a) requires
+a relative, rather than absolute, estimate on the higher moments. We prove
+it next. ∎
 
-## 5. The denominator loss and the difference
+## 5. Relative error and the exact valuation
+
+Retain
+
+```math
+g=A-C+i(B-D),
+\qquad
+t=v(CDg),
+```
+
+and suppose first that $g\ne0$. The five-rectangle functional has the
+exact translated-corner form
+
+```math
+\Phi(f)
+=
+\sum_{u=0}^{C-1}\sum_{v=0}^{D-1}
+\left(
+f(u+iv+g)-f(u+iv)
+\right).
+\qquad\text{(35a)}
+```
+
+This identity is obtained by cancelling the four overlapping rectangles in
+(32). For $k\ge1$, define
+
+```math
+q_k(z,g)=\frac{(z+g)^k-z^k}{g}
+\in\mathbb Z[i][z,g]
+```
+
+and let angle brackets denote the normalized rectangular average over
+$0\le u<C,\ 0\le v<D$. Then
+
+```math
+\Phi(Z^k)=CDg\,\mathcal B_k,
+\qquad
+\mathcal B_k=\left\langle q_k(u+iv,g)\right\rangle.
+\qquad\text{(35b)}
+```
+
+The normalized average need not be a Gaussian integer. The following
+elementary power-sum estimate controls its possible denominator.
+
+### Lemma 3
+
+For $N\ge1$ and $m\ge0$,
+
+```math
+v_2\!\left(
+\frac1N\sum_{j=0}^{N-1}j^m
+\right)\ge-1.
+\qquad\text{(35c)}
+```
+
+Consequently, if $P\in\mathbb Z[i][u,v]$, then
+
+```math
+v\!\left(
+\frac1{CD}
+\sum_{u=0}^{C-1}\sum_{v=0}^{D-1}P(u,v)
+\right)\ge-4.
+\qquad\text{(35d)}
+```
+
+#### Proof
+
+For $m=0$, the normalized average in (35c) equals $1$. For $m\ge1$,
+put $T_m(N)=\sum_{j<N}j^m$. If $N=2M$, expansion of
+$(j+M)^m$ gives
+
+```math
+T_m(2M)=2T_m(M)+M K
+```
+
+for an integer $K$. Induction on $v_2(N)$, with the odd case
+immediate, gives
+
+```math
+v_2(T_m(N))\ge v_2(N)-1,
+```
+
+which is (35c). Expand $P$ into monomials. Each normalized
+one-variable power sum loses at most one ordinary $2$-adic power.
+Since $v(2)=2$, a product of two such averages loses at most four
+$\varpi$-powers. The ultrametric inequality proves (35d). ∎
+
+Applied to (35b), Lemma 3 gives
+
+```math
+v(\mathcal B_k)\ge-4.
+\qquad\text{(35e)}
+```
+
+Two low moments have better bounds. Directly,
+
+```math
+\mathcal B_2
+=
+2\langle u+iv\rangle+g
+=
+A-1+i(B-1)
+\in\mathbb Z[i].
+\qquad\text{(35f)}
+```
+
+Also,
+
+```math
+\mathcal B_4
+=
+4\langle z^3\rangle
++6g\langle z^2\rangle
++4g^2\langle z\rangle
++g^3.
+\qquad\text{(35g)}
+```
+
+Writing
+
+```math
+\mu_m(N)=\frac1N\sum_{j=0}^{N-1}j^m,
+```
+
+one has
+
+```math
+\begin{aligned}
+\langle z\rangle
+&=\mu_1(C)+i\mu_1(D),\\
+\langle z^2\rangle
+&=\mu_2(C)-\mu_2(D)+2i\mu_1(C)\mu_1(D).
+\end{aligned}
+```
+
+Lemma 3 applied termwise, and the analogous binomial expansion of
+$\langle z^3\rangle$, therefore give
+
+```math
+v(\langle z\rangle)\ge-2,\qquad
+v(\langle z^2\rangle)\ge-2,\qquad
+v(\langle z^3\rangle)\ge-4.
+```
+
+The coefficients $4,6,4$ in (35g) compensate these possible losses, so
+$v(\mathcal B_4)\ge0$.
+
+Now write
+
+```math
+a_{r,k}
+=
+\frac{(-1)^{k+1}}{k}2^{rk}S_{r,k}.
+```
+
+Lemma 1 gives, for $k\ge2$,
+
+```math
+v(a_{r,k})
+\ge
+4r+2k(r-1)-2v_2(k).
+\qquad\text{(35h)}
+```
+
+If $k\ge3$ and $(r,k)\ne(2,4)$, then
+
+```math
+(r-1)(k-1)\ge v_2(k)+2.
+```
+
+Thus (35h) is at least $6r+2$, and (35b), (35e) imply
+
+```math
+v\!\left(a_{r,k}\Phi(Z^k)\right)
+\ge
+t+6r-2.
+\qquad\text{(35i)}
+```
+
+For $k=2$, (35f) and (35h) give
+
+```math
+v(a_{r,2})\ge8r-6\ge6r-2,
+```
+
+so (35i) again holds. In the remaining case $(r,k)=(2,4)$,
+(35g) gives $v(\mathcal B_4)\ge0$, while (35h) gives
+$v(a_{2,4})\ge12>10=6r-2$. Hence (35i) holds for every
+$k\ge2$, and the bounds tend to infinity with $k$.
+
+Applying (25) to the five normalized block products gives the exact
+identity
+
+```math
+\log R_{2,r}
+=
+\sum_{k\ge1}a_{r,k}\Phi(Z^k).
+```
+
+The preceding estimates therefore strengthen (34) to
+
+```math
+\log R_{2,r}
+=
+2^rS_{r,1}\,CDg
++O\!\left(\varpi^{\,t+6r-2}\right).
+\qquad\text{(35j)}
+```
+
+The first term has exact valuation $t+6r-3$ by Lemma 1. This is at
+least $9$, so the $\varpi$-adic exponential preserves its valuation
+and its relative one-power error. Thus
+
+```math
+R_{2,r}-1
+=
+2^rS_{r,1}\,CDg\,(1+\varpi\eta)
+```
+
+for some $\eta\in\mathcal O_{\mathbb Q_2(i)}$. This proves (3a). If
+$g=0$, (35a) makes the five-rectangle functional vanish identically,
+so $R_{2,r}=1$.
+∎
+
+## 6. The denominator loss and the difference
 
 It remains to account for the fact that $Q$ need not itself be a
 $\varpi$-adic integer.
@@ -428,7 +671,7 @@ W(A-C,B-D;C,D)-W(0,0;C,D).
 \qquad\text{(37)}
 ```
 
-### Lemma 3
+### Lemma 4
 
 For every admissible rectangle,
 
@@ -534,11 +777,13 @@ Q(2^{r-1}A,2^{r-1}B;2^{r-1}C,2^{r-1}D)
 
 (3), (38), and (39) prove (6).
 
-## 6. Exact checks and review boundary
+## 7. Exact checks and review boundary
 
-The companion exact-arithmetic script verifies (4) on all admissible
-rectangles with $A,B\le6$, at both $r=2$ and $r=3$: 810 checks with
-no mismatch. At each scale, 72 of 405 ratios attain the lower bound.
+The companion exact-arithmetic script verifies the full exact formula (3a)
+on all admissible rectangles with $A,B\le6$, at both $r=2$ and $r=3$:
+810 checks with no mismatch. At each scale, 72 of 405 ratios attain the
+lower bound. It also checks a targeted rectangle with excess valuation
+$53$ at four consecutive scales.
 
 Run:
 
@@ -552,7 +797,8 @@ The main independent-review targets are:
 2. the uniform tail estimates in (19), (21), and (26);
 3. the exact block factorization (30);
 4. the use of the five-term functional with inverse block factors; and
-5. the parity induction in Lemma 3.
+5. the normalized power-sum estimate and exceptional moments in Section 5;
+6. the parity induction in Lemma 4.
 
 No novelty claim should be made before a priority search and independent
 review.

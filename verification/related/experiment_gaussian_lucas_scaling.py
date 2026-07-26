@@ -510,16 +510,24 @@ def ramified_two_valuations(
 
 def check_ramified_two_pattern(
     bound: int = 6,
-) -> tuple[int, int]:
-    """Check the proposed leading residue at r=2 and r=3."""
+) -> tuple[int, int, int]:
+    """Check the exact ramified valuation formula at r=2 and r=3."""
     checks = 0
     equality_cases = 0
+    maximum_excess = 0
     for r in (2, 3):
         for rectangle in small_rectangles(bound):
             a, b, c, d = rectangle
             lower, difference, ratio = ramified_two_valuations(
                 r, rectangle
             )
+            leading_factor = (
+                c * d * (a - c),
+                c * d * (b - d),
+            )
+            excess = one_plus_i_valuation(leading_factor)
+            assert excess < INFINITY
+            assert ratio == 6 * r - 3 + excess
             predicted_ratio_equality = (
                 c * d * (a + b - c - d)
             ) % 2 == 1
@@ -532,7 +540,26 @@ def check_ramified_two_pattern(
             ) == predicted_difference_equality
             checks += 1
             equality_cases += int(predicted_difference_equality)
-    return checks, equality_cases
+            maximum_excess = max(maximum_excess, excess)
+    return checks, equality_cases, maximum_excess
+
+
+def check_ramified_two_high_valuation() -> tuple[int, int]:
+    """Check a targeted rectangle with a large predicted excess."""
+    rectangle = (16_777_218, 16_777_218, 2, 2)
+    a, b, c, d = rectangle
+    leading_factor = (
+        c * d * (a - c),
+        c * d * (b - d),
+    )
+    excess = one_plus_i_valuation(leading_factor)
+    assert excess == 53
+    checks = 0
+    for r in (2, 3, 4, 5):
+        ratio = ramified_two_valuations(r, rectangle)[2]
+        assert ratio == 6 * r - 3 + excess
+        checks += 1
+    return checks, excess
 
 
 def run(deep: bool = False) -> None:
@@ -567,10 +594,18 @@ def run(deep: bool = False) -> None:
         "Leading-term formula at p=3: "
         f"{check_three_adic_leading_term()} checks; alpha=(1, 2)"
     )
-    two_checks, two_equalities = check_ramified_two_pattern()
+    two_checks, two_equalities, two_maximum_excess = (
+        check_ramified_two_pattern()
+    )
     print(
-        "Ramified p=2 leading pattern: "
-        f"{two_checks} checks; sharp difference cases={two_equalities}"
+        "Ramified p=2 exact ratio formula: "
+        f"{two_checks} checks; maximum excess={two_maximum_excess}; "
+        f"sharp difference cases={two_equalities}"
+    )
+    high_checks, high_excess = check_ramified_two_high_valuation()
+    print(
+        "Ramified p=2 high-valuation witness: "
+        f"{high_checks} scales; excess={high_excess}"
     )
     print(
         "Ramified p=2 reciprocal-sum base: "
