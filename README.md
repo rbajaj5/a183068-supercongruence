@@ -54,13 +54,14 @@ separate verification project, not a prerequisite for reading the argument.
 | --- | --- |
 | Written proof | Complete draft |
 | Exact computation | 105 congruence cases, including $r=3$ samples |
-| Machine-assisted referee audit | Completed with no mathematical error reported after the $p=2$ sourcing clarification |
+| Machine-assisted referee audit | Two exact-text audits completed; no proof-level error reported, and the second audit narrowed one finite-test sharpness remark |
 | Conventional specialist review | Pending |
 | Literature-priority search | Preliminary only |
 | Lean formalization | Not attempted in this repository |
 
-The audit and computation are evidence, not substitutes for peer review.
-Please report any gap, attribution issue, or earlier proof.
+The [audit log](AUDIT.md) records what was checked and what changed. The
+audits and computations are evidence, not substitutes for peer review. Please
+report any gap, attribution issue, or earlier proof.
 
 ## Public research policy
 

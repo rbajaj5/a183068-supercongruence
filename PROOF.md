@@ -162,7 +162,10 @@ where
 This follows by factoring each multinomial coefficient into binomial
 coefficients and applying the prime-power form of the
 Ljunggren--Jacobsthal congruence to every nontrivial factor.  Zero
-components contribute factors equal to $1$.
+components contribute factors equal to $1$.  Since a product of units each
+congruent to $1$ modulo $p^m$ is again congruent to $1$ modulo $p^m$, the
+individual binomial congruences combine to give the displayed multinomial
+congruence.
 
 For references, see G. S. Kazandzidis,
 ["Congruences on the binomial coefficients"](https://eudml.org/doc/238547)
@@ -172,9 +175,13 @@ The prime-power quotient form, including the losses of one power at
 $p=3$ and two at $p=2$, is recorded in Section 2 of Robert Osburn,
 Brundaban Sahu and Armin Straub,
 ["Supercongruences for sporadic sequences"](https://arxiv.org/abs/1312.2195).
+For a companion treatment of multivariate Apéry-type supercongruences, see
+Armin Straub,
+["Multivariate Apéry numbers and supercongruences of rational functions"](https://arxiv.org/abs/1401.0854).
 
 There is a small sign qualification at $p=2$ in their formulation: the
-binomial quotient may be congruent to $\varepsilon\in\{1,-1\}$, rather
+binomial quotient may be congruent to
+$\varepsilon\in\lbrace1,-1\rbrace$, rather
 than always to $1$.  In the equal-index specialization used here, the
 exceptional sign requires the lower scaled bottom entry $2^s b$ to be
 odd.  This is impossible when $s\ge1$; when $s=0$, the modulus in
@@ -184,8 +191,10 @@ congruence to $1$ asserted in Lemma 2 is valid for every $s$.
 The minimum-valuation hypothesis in Lemma 2 is intentional.  At $p=2$,
 the superficially stronger bound obtained by replacing $3s$ with a sum
 of the valuations of the binomial arguments is false in general.
-Independent finite tests found the exponent in Lemma 2 sharp for each of
-$p=2,3,5$.
+Independent finite tests found the exponent in Lemma 2 sharp for
+$p=3,5$, and for $p=2$ when $s=0$.  For $p=2$ and $s\ge1$, the tested
+range attained the stronger exponent $3s+2$ rather than the stated
+$3s+1$; the weaker bound in Lemma 2 is all that the proof below uses.
 
 ### 4. Scaling an individual summand
 
@@ -318,10 +327,11 @@ needed for the proof above.
 ## Computational checks and provenance
 
 After the proof was written, one exact computation rechecked the theorem in all
-80 cases with $p\in\{2,3,5,7,11\}$, $r\in\{1,2\}$, and
+80 cases with $p\in\lbrace2,3,5,7,11\rbrace$,
+$r\in\lbrace1,2\rbrace$, and
 $1\le n\le8$.  A separate audit expanded this to 105 cases, including
 cases with $r=3$.  It also tested Lemmas 1--3 directly for
-$p\in\{2,3,5\}$ through the stated small ranges, with no failures.
+$p\in\lbrace2,3,5\rbrace$ through the stated small ranges, with no failures.
 Exact Laurent-polynomial arithmetic verified the constant-term representation
 for $n=1,2,3$.
 
