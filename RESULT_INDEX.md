@@ -129,6 +129,21 @@ Status labels are deliberately conservative:
 - **Proof:** [Finite-field determinant bias and supercongruence](related-results/FiniteFieldDeterminantBiasSupercongruence.md)
 - **Exact checker:** [`verify_finite_field_determinant_bias.py`](verification/related/verify_finite_field_determinant_bias.py)
 
+### FF-PFAFF - finite-field Pfaffian bias
+
+- **Claim:** The Pfaffian additive-character sum on alternating
+  \(2m\)-by-\(2m\) matrices has an exact closed form, Fourier bias of order
+  \(q^{-3}\), and the sharp adjacent-extension valuation
+  \[
+  v_p(\mathcal P_m(p^r)-\mathcal P_m(p^{r-1}))
+  =(m^2-m+1)(r-1).
+  \]
+- **Status:** Complete elementary theorem with exact checks. Alternating-rank
+  counts are classical; the sharp valuation and two-ended formulation appear
+  new in a targeted search, with priority provisional.
+- **Proof:** [Pfaffian bias and supercongruence](related-results/FiniteFieldPfaffianBiasSupercongruence.md)
+- **Exact checker:** [`verify_finite_field_pfaffian_bias.py`](verification/related/verify_finite_field_pfaffian_bias.py)
+
 ## Gaussian-integer results
 
 ### GWL-POLY — Gaussian box polynomial
