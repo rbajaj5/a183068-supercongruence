@@ -63,6 +63,11 @@ The [audit log](AUDIT.md) records what was checked and what changed. The
 audits and computations are evidence, not substitutes for peer review. Please
 report any gap, attribution issue, or earlier proof.
 
+For an Economist-style assessment of every result in the repository, see the
+public [mathematical research portfolio](RANKINGS.md). It scores
+math-community value, deployment value, novelty confidence, breadth,
+maturity, and cost remaining separately.
+
 ## Public research policy
 
 This repository is public so that claims can be inspected, reproduced, and
@@ -141,6 +146,8 @@ To reproduce every computation in the expanded repository, run
 - [RESULT_INDEX.md](RESULT_INDEX.md): the claim-level ledger. Consult this
   before beginning a new search; it separates distinct theorems even when they
   share one proof note.
+- [RANKINGS.md](RANKINGS.md): the public multi-criteria ranking of every
+  claim-level result and open target.
 - [PROOF.md](PROOF.md): the complete proof and references.
 - [verification/verify_a183068.py](verification/verify_a183068.py): a small
   exact-integer regression check.
@@ -153,7 +160,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all eleven
+- [verification/run_all.py](verification/run_all.py): one command for all sixteen
   verification programs.
 
 The broader working repository remains available at

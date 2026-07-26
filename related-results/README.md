@@ -11,6 +11,11 @@ The common mechanism is:
 3. transfer the surviving terms by scaling, Frobenius, or translation; and
 4. measure whether the transfer error supplies the required power of $p$.
 
+The complete Economist-style scorecard is
+[`RANKINGS.md`](../RANKINGS.md). It scores every claim-level result, including
+the finite-field determinant, Pfaffian, and hyperdeterminant branch, while
+keeping proof maturity and cost remaining separate from estimated impact.
+
 ## Recommended reading order
 
 | Order | Note | Connection to A183068 | Status |
