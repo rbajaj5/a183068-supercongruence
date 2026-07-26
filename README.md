@@ -62,6 +62,19 @@ separate verification project, not a prerequisite for reading the argument.
 The audit and computation are evidence, not substitutes for peer review.
 Please report any gap, attribution issue, or earlier proof.
 
+## Public research policy
+
+This repository is public so that claims can be inspected, reproduced, and
+corrected. Publication here follows five rules:
+
+1. source conjectures and prior authors are credited explicitly;
+2. theorem, proof candidate, computation, and conjecture are labeled
+   separately;
+3. machine assistance and exact checks are not described as peer review;
+4. counterexamples, failed approaches, and corrections remain auditable; and
+5. priority and novelty are treated as pending until the literature and
+   specialists have been checked.
+
 ## Public Gaussian-prime follow-on
 
 The most concise shareable follow-on is
@@ -102,6 +115,14 @@ this connects to Dwork/Frobenius questions, generalized factorials, and
 compatible $p$-adic dynamics. The Blaschke-product comparison is an analytic
 analogy, not a claim that the Gaussian ratios are classical Blaschke products.
 
+The follow-on
+[finite-quotient dynamics theorem](related-results/GaussianProductDynamicsConjectures.md)
+shows that every unit translation of the normalized product has exactly the
+same return-valuation filtration as ordinary addition. Modulo
+$(1+i)^n$, every orbit has length $2^{\lceil n/2\rceil}$. This gives a precise
+negative cryptographic conclusion: the maps are bijective and predictable,
+but not full-cycle generators. Compatible conjugacy to addition remains open.
+
 ## Suggested reading order
 
 1. Read Sections 1--3 of [PROOF.md](PROOF.md) for the statement and carry
@@ -131,7 +152,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all ten
+- [verification/run_all.py](verification/run_all.py): one command for all eleven
   verification programs.
 
 The broader working repository remains available at

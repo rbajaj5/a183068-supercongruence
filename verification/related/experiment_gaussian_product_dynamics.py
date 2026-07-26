@@ -15,7 +15,9 @@ on Z_2[i] / (1+i)^n.  Quotient classes are encoded by their unique first
 
 from __future__ import annotations
 
+import argparse
 from fractions import Fraction
+from itertools import combinations
 
 from verify_gaussian_product_isometry import (
     GaussianRational,
@@ -25,6 +27,7 @@ from verify_gaussian_product_isometry import (
     gmul,
     gsub,
     normalized_product,
+    vpi,
 )
 
 
@@ -137,6 +140,14 @@ def cycle_lengths(mapping: list[int]) -> list[int]:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--deep",
+        action="store_true",
+        help="also check r=2, translation 1, through precision 15",
+    )
+    args = parser.parse_args()
+
     translations: dict[str, GaussianRational] = {
         "1": ONE,
         "i": (Fraction(0), Fraction(1)),
@@ -174,6 +185,36 @@ def main() -> None:
         "all-unit cycle-profile checks: "
         f"{exhaustive_checks} exact quotient maps passed"
     )
+
+    normal_form_checks = 0
+    for r in (2, 3):
+        representatives = quotient_representatives(7)
+        errors = [
+            gsub(normalized_isometry(r, value), value)
+            for value in representatives
+        ]
+        for left, right in combinations(range(len(representatives)), 2):
+            source_difference = gsub(
+                representatives[left], representatives[right]
+            )
+            error_difference = gsub(errors[left], errors[right])
+            if error_difference != (Fraction(0), Fraction(0)):
+                assert vpi(error_difference) >= 4 + vpi(
+                    source_difference
+                )
+            normal_form_checks += 1
+    print(
+        "mod-4 Lipschitz normal form: "
+        f"{normal_form_checks} exact pair checks passed"
+    )
+
+    if args.deep:
+        for precision in range(13, 16):
+            lengths = cycle_lengths(permutation(2, ONE, precision))
+            expected_length = 2 ** ((precision + 1) // 2)
+            expected_count = 2 ** (precision // 2)
+            assert lengths == [expected_length] * expected_count
+        print("deep r=2, translation 1: precisions 13 through 15 passed")
 
 
 if __name__ == "__main__":
