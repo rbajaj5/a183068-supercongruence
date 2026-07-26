@@ -255,8 +255,7 @@ priority.
 The companion
 [`verify_finite_field_pfaffian_bias.py`](../verification/related/verify_finite_field_pfaffian_bias.py)
 
-- enumerates every alternating matrix in six small prime-field cases and
+- enumerates every alternating matrix in five small prime-field cases and
   counts its Pfaffian residue;
 - verifies the two equivalent count formulas;
 - checks the sharp valuation (8) over a larger exact grid.
-
