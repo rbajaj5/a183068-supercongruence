@@ -2,13 +2,15 @@
 
 ## Status
 
-**Structural synthesis with a proved abstract lemma, July 26, 2026.**
+**Structural synthesis with a proved local isometry theorem, July 26, 2026.**
 
 This note reorganizes the existing Gaussian Lucas proofs around normalized
 finite products and their logarithmic moments. The dominant-moment lemma below
-is elementary but reusable. The proposed splitting-type program is a research
-direction, not a claimed theorem. No novelty claim is made for the general
-language of non-Archimedean analytic products.
+is elementary but reusable. Section 6 proves that the normalized mixed-block
+product is an exact analytic isometry, and indeed a disk automorphism, at the
+ramified prime. The proposed splitting-type program is a research direction,
+not a claimed theorem. No novelty claim is made for the general language of
+non-Archimedean analytic products or inverse-function arguments.
 
 The motivating coefficient is Definition 2 in Nikita Kalinin,
 ["Wolstenholme's theorem over Gaussian integers"](https://arxiv.org/abs/2504.07978).
@@ -278,7 +280,156 @@ The theorem is therefore an instance of a general phenomenon:
 > An exact supercongruence exponent is the valuation of the first surviving
 > logarithmic moment, provided every later moment lies one level deeper.
 
-## 6. Relation with Blaschke products
+## 6. The mixed-block product is an exact disk isometry
+
+The same coefficient estimates contain more information than the rectangular
+congruence. Let
+
+```math
+\mathcal O=\mathbb Z_2[i],
+\qquad
+c_r=c_{r,1}=2^rS_{r,1}.
+\tag{21}
+```
+
+### Theorem
+
+For every \(r\ge2\) and all distinct \(Z,W\in\mathcal O\),
+
+```math
+v_\varpi\!\left(F_r(Z)-F_r(W)\right)
+=
+6r-3+v_\varpi(Z-W).
+\tag{22}
+```
+
+More precisely,
+
+```math
+F_r(Z)-F_r(W)
+=
+c_r(Z-W)(1+\varpi\eta_{Z,W})
+\tag{23}
+```
+
+for some \(\eta_{Z,W}\in\mathcal O\). Therefore the normalized map
+
+```math
+G_r(Z)=\frac{F_r(Z)-1}{c_r}
+\tag{24}
+```
+
+is a bijective analytic isometry of \(\mathcal O\):
+
+```math
+v_\varpi\!\left(G_r(Z)-G_r(W)\right)
+=
+v_\varpi(Z-W).
+\tag{25}
+```
+
+Equivalently,
+
+```math
+F_r:\mathcal O\longrightarrow1+c_r\mathcal O
+\tag{26}
+```
+
+is a bijection and a similarity of ratio \(|c_r|_\varpi\). Its derivative has
+constant valuation
+
+```math
+v_\varpi\!\left(F_r'(Z)\right)=6r-3
+\qquad(Z\in\mathcal O).
+\tag{27}
+```
+
+### Proof
+
+Write \(L_r=\log F_r\). The reciprocal-moment estimates used above give the
+slightly stronger coefficient statement
+
+```math
+v_\varpi(c_r)=6r-3,
+\qquad
+v_\varpi(c_{r,k})\ge6r-2
+\quad(k\ge2).
+\tag{28}
+```
+
+For \(Z,W\in\mathcal O\),
+
+```math
+\begin{aligned}
+L_r(Z)-L_r(W)
+&=
+c_r(Z-W)
++
+\sum_{k\ge2}c_{r,k}(Z^k-W^k)\\
+&=
+c_r(Z-W)(1+\varpi\alpha_{Z,W}),
+\end{aligned}
+\tag{29}
+```
+
+because \((Z^k-W^k)/(Z-W)\in\mathcal O\). Now
+
+```math
+F_r(Z)-F_r(W)
+=
+F_r(W)
+\left(\exp(L_r(Z)-L_r(W))-1\right).
+\tag{30}
+```
+
+The first factor lies in \(1+\varpi\mathcal O\), and the quotient
+\((\exp D-1)/D\) does as well. Substitution of (29) proves (23), hence
+(22) and (25).
+
+Taking \(W=0\) in (23) shows
+
+```math
+G_r(Z)\equiv Z\pmod\varpi.
+\tag{31}
+```
+
+Put \(G_r(Z)=Z+\varpi K_r(Z)\). Equation (23) also shows that \(K_r\) is
+1-Lipschitz. For a prescribed \(Y\in\mathcal O\), the map
+
+```math
+Z\longmapsto Y-\varpi K_r(Z)
+\tag{32}
+```
+
+is a strict contraction of the complete ring \(\mathcal O\). Its unique fixed
+point satisfies \(G_r(Z)=Y\). Thus \(G_r\) is surjective; (25) already gives
+injectivity. Differentiating (23), or taking limits of its difference
+quotients, gives (27). \(\square\)
+
+The four-coset lift also supplies a scale law for the leading coefficient:
+
+```math
+c_{r+1}
+=
+8c_r(1+\varpi\theta_r),
+\qquad
+\theta_r\in\mathcal O.
+\tag{33}
+```
+
+Indeed,
+\(S_{r+1,1}\equiv4S_{r,1}\pmod{\varpi^{4r+2}}\); multiplication by
+\(2^{r+1}\) puts the error in
+\(\varpi^{6r+4}\), one level above \(8c_r\). Since
+\(8=i\varpi^6\), each scale increases the leading valuation by exactly six.
+This is the local renormalization law behind the slope \(6r-3\).
+
+The exact checker
+[`verify_gaussian_product_isometry.py`](../verification/related/verify_gaussian_product_isometry.py)
+tests (22) and (25) on 600 pairs at scales \(r=2,3\), using exact arithmetic
+in \(\mathbb Q(i)\).
+
+## 7. Relation with Blaschke products
 
 The analogy with a finite Blaschke product is structural, not literal.
 Both constructions:
@@ -295,7 +446,7 @@ lattice block with its translation. Its distinguished property is
 circle. "Non-Archimedean canonical product" is therefore the more accurate
 description.
 
-## 7. Splitting-type research program
+## 8. Splitting-type research program
 
 The product viewpoint suggests organizing Gaussian Lucas congruences locally,
 according to the behavior of a rational prime in \(\mathbb Z[i]\).
@@ -314,7 +465,7 @@ R_{\mathfrak p,r}-1
 c_{\mathfrak p,r}\,
 CD\bigl(A-C+i(B-D)\bigr)
 +\text{one valuation level deeper},
-\tag{21}
+\tag{34}
 ```
 
 where \(c_{\mathfrak p,r}\) is the first reciprocal moment of the relevant
@@ -325,16 +476,18 @@ case is the important obstruction: rational \(p\)-scaling mixes the two prime
 ideals, so a theorem should be formulated after localization and suitable
 normalization rather than by copying the inert statement.
 
-## 8. Review boundary
+## 9. Review boundary
 
 The identities (3), (8), and (12)--(14), and the dominant-moment lemma are
 proved algebraically. Equation (20) is the existing ramified-prime theorem,
-not a new independent proof.
+not a new independent proof. The disk-isometry theorem is a new deduction
+from the same reciprocal-moment bounds; its contraction argument is standard
+non-Archimedean analytic infrastructure.
 
 The claims still requiring specialist attention are:
 
 1. the full ramified reciprocal-moment estimates used to verify (17);
-2. priority for the exact ramified theorem;
+2. priority for the exact ramified and disk-isometry theorems;
 3. the correct normalization at split primes; and
-4. whether the local formulation (21) is already implicit in a general
+4. whether the local formulation (34) is already implicit in a general
    theorem on factorial products over local fields.

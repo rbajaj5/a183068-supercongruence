@@ -14,6 +14,7 @@ SCRIPTS = (
     "verification/related/verify_gaussian_twists.py",
     "verification/related/verify_gaussian_power_sums.py",
     "verification/related/verify_gaussian_wolstenholme.py",
+    "verification/related/verify_gaussian_product_isometry.py",
     "verification/related/verify_higher_degree_box_polynomial.py",
     "verification/related/verify_gaussian_erdos_moser.py",
 )

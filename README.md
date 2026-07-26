@@ -94,11 +94,13 @@ requires conventional review and a priority search.
 
 The accompanying
 [canonical-product synthesis](related-results/GaussianLucasCanonicalProducts.md)
-rewrites these ratios as non-Archimedean finite products. It extracts a
-dominant-first-moment lemma and organizes the inert, split, and ramified cases
-as one local research program. The Blaschke-product comparison in that note is
-an analytic analogy, not a claim that the Gaussian ratios are classical
-Blaschke products.
+rewrites these ratios as non-Archimedean finite products. It also proves that,
+after normalization by the first logarithmic coefficient, the ramified block
+is a bijective analytic isometry of $\mathbb Z_2[i]$. The
+[literature map](related-results/GaussianLucasLiteraturePuzzle.md) explains how
+this connects to Dwork/Frobenius questions, generalized factorials, and
+compatible $p$-adic dynamics. The Blaschke-product comparison is an analytic
+analogy, not a claim that the Gaussian ratios are classical Blaschke products.
 
 ## Suggested reading order
 
@@ -129,7 +131,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all nine
+- [verification/run_all.py](verification/run_all.py): one command for all ten
   verification programs.
 
 The broader working repository remains available at

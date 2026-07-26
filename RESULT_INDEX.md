@@ -123,6 +123,27 @@ Status labels are deliberately conservative:
 - **Note:** [Gaussian Lucas canonical products](related-results/GaussianLucasCanonicalProducts.md)
 - **Depends on:** [Ramified-prime theorem](related-results/GaussianLucasRamifiedTwoTheorem.md)
 
+### GL-ISO — ramified Gaussian disk isometry
+
+- **Claim:** For \(r\ge2\), the mixed-block product satisfies
+  \(v_{1+i}(F_r(Z)-F_r(W))=6r-3+v_{1+i}(Z-W)\). After division by its
+  first logarithmic coefficient, it is a bijective analytic isometry of
+  \(\mathbb Z_2[i]\).
+- **Status:** Complete deduction from the ramified reciprocal-moment theorem;
+  exact checks are present, while conventional review and priority remain
+  pending.
+- **Proof:** [Gaussian Lucas canonical products, Section 6](related-results/GaussianLucasCanonicalProducts.md#6-the-mixed-block-product-is-an-exact-disk-isometry)
+- **Exact checker:** [`verify_gaussian_product_isometry.py`](verification/related/verify_gaussian_product_isometry.py)
+
+### GL-MAP — literature and structural map
+
+- **Claim:** The current results sit at the intersection of Gaussian
+  Wolstenholme--Lucas congruences, local product expansions, generalized
+  factorial ideals, Dwork/Frobenius questions, and compatible \(p\)-adic
+  dynamics.
+- **Status:** Literature synthesis, not a theorem or a novelty certificate.
+- **Note:** [Gaussian Lucas literature puzzle](related-results/GaussianLucasLiteraturePuzzle.md)
+
 ### GPS — Gaussian power sums
 
 - **Claim:** Two printed small-prime Gaussian power-sum formulas hold, while
