@@ -16,8 +16,8 @@ The common mechanism is:
 | Order | Note | Connection to A183068 | Status |
 | ---: | --- | --- | --- |
 | 1 | [Landau-depth synthesis](LandauDepthSupercongruenceSynthesis.md) | Extracts the A183068 carry-and-scaling proof into a computable theorem; contains an infinite all-prime $p^{2r}$ family and an all-prime $p^{3r}$ subfamily | Complete proof candidate; internal recheck passed, independent review pending |
-| 2 | [Frobenius quotients of constant-term sequences](FrobeniusQuotientConstantTerms.md) | Proves the universal first-order expansion, identifies the exact rank-one condition behind the Cooper law, and turns A183068 into a Frobenius-quotient CT congruence | Complete elementary theorem; Dwork boundary explicit |
-| 3 | [p-adic Arzelà--Ascoli framework](PadicArzelaAscoliSupercongruenceTowers.md) | Separates the vertical limit already supplied by A183068 from the horizontal equicontinuity needed for $\mathbb Z_p$ interpolation and defect profiles | Complete elementary framework; horizontal A183068 estimate remains open |
+| 2 | [Frobenius quotients of constant-term sequences](FrobeniusQuotientConstantTerms.md) | Proves the universal first-order expansion, identifies the exact rank-one condition behind the Cooper law, and gives exact counterexamples to two proposed Dwork shortcuts | Complete elementary theorem; Dwork boundaries certified |
+| 3 | [p-adic Arzelà--Ascoli framework](PadicArzelaAscoliSupercongruenceTowers.md) | Proves the vertical limit supplied by A183068, uses the Banach contraction $x\mapsto px$ to rule out a global continuous interpolation, and proves uniform quadratic contraction of every normalized defect at zero | Complete elementary framework and obstruction; unit-shell estimate open |
 | 4 | [Gaussian Frobenius twists](GaussianFrobeniusTwists.md) | Shows that discard-and-rescale proofs lift to roots-of-unity weights; specializes A183068 to a Gaussian split/inert congruence | Complete elementary deduction; priority unchecked |
 | 5 | [Cubic $(\eta)$ congruence at $p=3$](EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to fill a small-prime gap in a published theorem | Complete unchecked draft |
 | 6 | [Gaussian Wolstenholme citation network](GaussianWolstenholmeCitationNetwork.md) | Replaces scaling by translation-invariant Gaussian residue blocks | Three major candidate results with exact certificates; independent review required |
@@ -28,7 +28,7 @@ The common mechanism is:
 | 11 | [Higher-degree finite-field box polynomials](HigherDegreeFiniteFieldBoxPolynomials.md) | Generalizes the Gaussian polynomial factorization to every finite-field degree | Complete elementary theorem; likely classical infrastructure |
 | 12 | [Binary $s_{18}$ reduction](S18TwoAdicReduction.md) | Isolates the exact sharpened scaling lemma still needed at $p=2$ | Substantial reduction; naive factor-by-factor proof refuted |
 | 13 | [Gaussian citation-network boundary report](GaussianCitationNetworkBoundaryReport.md) | Records rigorous limits of the Gaussian search, including Erdős--Moser reductions | Reduction and bounded search, not a global solution |
-| 14 | [Cooper level-11 rare primes](CooperLevel11RarePrimes.md) | Isolates the first obstruction and records a 350-case first-order Frobenius law reducing the full $r=1$ conjecture to it | Computational theorem target; trace-$2$ shortcut refuted |
+| 14 | [Cooper level-11 rare primes](CooperLevel11RarePrimes.md) | Isolates the first obstruction and records a 350-case first-order Frobenius law reducing the full $r=1$ conjecture to it | Computational theorem target; fixed-prime automata route is conditional on finding a rational diagonal |
 
 ## Strongest present claims
 
@@ -40,6 +40,10 @@ The directory currently contains these especially reviewable claims:
   sequences and its A183068 corollary;
 - the vertical-limit theorem and normalized-defect compactness framework for
   supercongruence towers;
+- the Banach fixed-point obstruction proving that the nonconstant A183068
+  tower limit cannot extend continuously to all of $\mathbb Z_p$;
+- the exact quadratic scaling and uniform equicontinuity at zero of the
+  normalized A183068 defects;
 - the cubic $(\eta)$ congruence at the missing prime $3$;
 - the Gaussian Lucas congruence modulo $p^3$ at every inert prime $p>5$; and
 - the exact adjacent-scale valuation at the ramified prime $1+i$;
@@ -65,7 +69,8 @@ The individual correspondence is:
 | --- | --- |
 | Landau depth | `verification/related/verify_landau_supercongruence.py` |
 | Frobenius quotient identity | Coefficientwise algebraic proof; no checker required |
-| p-adic Arzelà--Ascoli framework | Elementary ultrametric and compactness proofs; no checker required |
+| Dwork and continuity boundaries | `verification/related/verify_dwork_boundaries.py` |
+| p-adic Arzelà--Ascoli framework | Elementary ultrametric, contraction, and compactness proofs |
 | Cubic $(\eta)$ | `verification/related/verify_eta_prime3.py` |
 | Cooper level 11 | `verification/related/verify_cooper_level11.py` |
 | Gaussian Frobenius twists | `verification/related/verify_gaussian_twists.py` |

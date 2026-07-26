@@ -1,7 +1,7 @@
 # Frobenius quotients of constant-term sequences
 
-**Status:** elementary theorem and an explicit A183068 corollary. No novelty
-claim is made.
+**Status:** elementary theorem, an explicit A183068 corollary, and two exact
+Dwork-boundary certificates. No novelty claim is made.
 
 This note isolates the valid algebraic part of a proposed Dwork explanation
 for the Cooper level-11 first-order law. It also records exactly what remains
@@ -173,6 +173,72 @@ requires:
 A reference to the Newton-polytope criterion alone does not close the third
 step.
 
+### 3.1 The unique-interior hypothesis does not imply the rank-one pairing
+
+There is a one-variable counterexample. Let
+
+```math
+\Lambda(x)=1+2x^{-1}+x.
+```
+
+Its Newton polytope is the interval $[-1,1]$, whose unique interior lattice
+point is the origin. Thus the standard Dwork theorem applies. At $p=3$,
+however,
+
+```math
+R_3=
+2x^{-3}+4x^{-2}+6x^{-1}+4+3x+x^2.
+```
+
+Consequently,
+
+```math
+\mathrm{CT}(R_3)=4,
+\qquad
+\mathrm{CT}\!\left(\Lambda(x^3)R_3\right)=6,
+\qquad
+A(1)=1.
+```
+
+Modulo $3$, the two sides of (8) for $m=1$ are therefore $0$ and $1$.
+This proves that the unique-interior Dwork congruences do not, by themselves,
+imply the Cooper rank-one condition.
+
+### 3.2 The displayed A183068 polynomial has three interior lattice points
+
+The Laurent polynomial $P$ in [`PROOF.md`](../PROOF.md) also fails the
+unique-interior hypothesis. Its Newton polytope is the product of the
+$w$-interval $[-1,1]$ with a three-polytope $Q$ in coordinates $(x,y,z)$.
+An exact facet description of $Q$ is
+
+```math
+\begin{gathered}
+-x\le1,\quad -y\le2,\quad -z\le1,\quad z\le1,\quad y\le2,\\
+x-z\le1,\quad x+z\le1,\quad 2x-y\le2.
+\end{gathered}
+```
+
+Enumerating the lattice points satisfying all inequalities strictly gives
+
+```math
+(0,-1,0),\qquad(0,0,0),\qquad(0,1,0).
+```
+
+Hence the four-dimensional Newton polytope of $P$ has the three interior
+lattice points
+
+```math
+(0,0,-1,0),\qquad
+(0,0,0,0),\qquad
+(0,0,1,0)
+```
+
+in $(w,x,y,z)$ coordinates. The Samol--van Straten and
+Mellit--Vlasenko unique-interior theorem therefore cannot be invoked for this
+particular representation. A different Laurent-polynomial representation
+might still satisfy their hypothesis, but it would need to be exhibited and
+checked.
+
 ## 4. Application to the Cooper level-11 target
 
 Once a fixed constant-term model
@@ -238,3 +304,6 @@ of a balanced Laurent polynomial.
 3. O. Gorodetsky,
    *New representations for all sporadic Apéry-like sequences, with
    applications to congruences*, <https://arxiv.org/abs/2102.11839>.
+
+The exact finite certificates in Sections 3.1 and 3.2 are reproduced by
+[`verify_dwork_boundaries.py`](../verification/related/verify_dwork_boundaries.py).

@@ -1,6 +1,7 @@
 # Cooper's level-11 rare-prime supercongruence
 
-**Status:** exact computation and proof target, not a proof, 2026-07-25.
+**Status:** exact computation, conditional finite-state decision route, and
+proof target; the first-order law remains unproved, 2026-07-26.
 
 Let $T(0)=1$ and
 
@@ -170,7 +171,49 @@ The following exact checks passed:
 These computations strengthen the evidence, especially at $5581$, but do
 not prove (2).
 
-## 5. Research direction
+## 5. What finite automata can decide
+
+There is a useful but conditional route from diagonals to a finite proof.
+Suppose an explicit rational function is found whose diagonal is the
+generating function of $T$. The Rowland--Yassawi construction then produces,
+for each fixed prime $p$ outside a finite exceptional set, a finite automaton
+computing $T(n)$ modulo $p^2$ from the base-$p$ digits of $n$.
+
+Under that premise, every sequence in
+
+```math
+T(pn),\qquad T(n),\qquad nT(n-1)q_p \pmod {p^2}
+\qquad\text{(11)}
+```
+
+is $p$-automatic. Equality in (6) for every $n$ is therefore a finite-state
+equivalence problem: form an automaton for the difference and check that no
+reachable state has nonzero output. This would give a rigorous,
+machine-checkable certificate for any one fixed prime, including $59$ or
+$5581$.
+
+The missing premise matters. Cooper gives recurrence (1) and a modular
+parametrization, but not a rational-diagonal representation for this level-11
+sequence. A $D$-finite recurrence by itself does not supply such a
+representation. Thus the automaton is a concrete target, not something that
+can presently be run.
+
+This route is also prime-local. Separate automata modulo $p^\alpha$ do not
+by themselves provide a modulus of continuity common to all $\alpha$, and
+they do not overcome the global continuity obstruction described in
+[the compactness note](PadicArzelaAscoliSupercongruenceTowers.md). The
+Apéry-number congruences of Rowland--Yassawi--Krattenthaler are a valuable
+model, but their differentiated-recurrence argument is specific additional
+structure, not a theorem that every four-term recurrence inherits.
+
+References:
+
+- E. Rowland and R. Yassawi,
+  [*Automatic congruences for diagonals of rational functions*](https://arxiv.org/abs/1310.8635).
+- C. Krattenthaler, E. Rowland, and R. Yassawi,
+  [*Lucas congruences for the Apéry numbers modulo $p^2$*](https://arxiv.org/abs/2005.04801).
+
+## 6. Research direction
 
 The next useful theorem is the first-order law (6). It would imply the
 formerly proposed equivalence
@@ -179,7 +222,7 @@ formerly proposed equivalence
 q_p=0
 \quad\Longrightarrow\quad
 T(pn)\equiv T(n)\pmod {p^2}\ \text{for every }n,
-\qquad\text{(11)}
+\qquad\text{(12)}
 ```
 
 from the level-11 modular parametrization or a Frobenius matrix. This would
@@ -192,8 +235,8 @@ This is the boundary where the project genuinely becomes a Dwork/Frobenius
 problem.
 
 Source: S. Cooper,
-*Apéry-like sequences defined by four-term recurrence relations*,
-<https://arxiv.org/abs/2302.00757>, Conjecture 11.1.
+[*Apéry-like sequences defined by four-term recurrence relations*](https://arxiv.org/abs/2302.00757),
+Conjecture 11.1.
 
 Run the reproducibility script with
 

@@ -49,21 +49,36 @@ Status labels are deliberately conservative:
 - **Claim:** Every integral Laurent-polynomial constant-term sequence has a
   universal first-order Frobenius expansion modulo $p^2$. The $n=1$ A183068
   theorem therefore gives an explicit vanishing constant term for every
-  prime.
+  prime. The unique-interior Dwork theorem does not imply the additional
+  rank-one pairing needed for the Cooper law.
 - **Status:** Complete elementary theorem and corollary; no novelty claim.
 - **Proof:** [Frobenius-quotient identity](related-results/FrobeniusQuotientConstantTerms.md)
-- **Exact checker:** None required.
+- **Exact boundary checker:** [`verify_dwork_boundaries.py`](verification/related/verify_dwork_boundaries.py)
 
 ### AA-TOWER — p-adic compactness of supercongruence towers
 
 - **Claim:** A uniform adjacent-scale valuation tending to infinity gives a
   quantitative uniform limit of the full tower. A uniform horizontal modulus
   extends that limit to $\mathbb Z_p$, while equicontinuity of normalized
-  defects gives subsequential defect profiles by Arzelà--Ascoli.
-- **Status:** Complete elementary framework. The required horizontal estimate
-  is not yet proved for A183068.
+  defects gives subsequential defect profiles by Arzelà--Ascoli. For A183068,
+  the scale-invariant limit is nonconstant, so the Banach contraction
+  $x\mapsto px$ proves that no continuous extension to all of $\mathbb Z_p$
+  exists. Its normalized defects nevertheless obey
+  $D_r(p^h n)=p^{2h}D_{r+h}(n)$ and are uniformly equicontinuous at zero.
+- **Status:** Complete elementary framework and obstruction. Horizontal
+  interpolation on the unit shell remains open.
 - **Proof:** [p-adic Arzelà--Ascoli framework](related-results/PadicArzelaAscoliSupercongruenceTowers.md)
-- **Exact checker:** None required.
+- **Exact boundary checker:** [`verify_dwork_boundaries.py`](verification/related/verify_dwork_boundaries.py)
+
+### DWORK-BOUNDARY — exact failure of the proposed shortcut
+
+- **Claim:** The displayed A183068 Laurent polynomial has three, not one,
+  interior lattice points. Moreover, the unique-interior hypothesis by itself
+  does not imply the Cooper rank-one pairing; the Laurent polynomial
+  $1+2x^{-1}+x$ fails it at $p=3$.
+- **Status:** Complete exact counterexamples.
+- **Proof:** [Frobenius-quotient identity, Section 3](related-results/FrobeniusQuotientConstantTerms.md#3-what-the-standard-dwork-theorem-does-not-supply-automatically)
+- **Exact checker:** [`verify_dwork_boundaries.py`](verification/related/verify_dwork_boundaries.py)
 
 ### GFT — Gaussian Frobenius twists
 
@@ -216,7 +231,9 @@ Status labels are deliberately conservative:
   equivalent to every level-$r=1$ congruence.
 - **Status:** Obstruction scan reproduced; first-order law is a computational
   theorem target. The naive $X_0(11)$ trace-$2$ interpretation is refuted by
-  exact witnesses.
+  exact witnesses. A rational-diagonal representation would turn each
+  fixed-prime instance into a finite-automaton equivalence problem, but no
+  such representation is currently supplied.
 - **Report:** [Cooper level-11 report](related-results/CooperLevel11RarePrimes.md)
 - **Exact checker:** [`verify_cooper_level11.py`](verification/related/verify_cooper_level11.py)
 

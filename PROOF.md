@@ -322,7 +322,10 @@ To verify this representation, extract successively the central coefficients giv
 $\binom{2n}{n}$, $\binom nk^2$,
 $\binom{2n+2k}{2k}$, and $\binom{2k}{k}$.  This representation
 explains why a Dwork-type congruence is plausible, although it is not
-needed for the proof above.
+needed for the proof above. Its Newton polytope has three interior lattice
+points, not one, so the standard Samol--van Straten and Mellit--Vlasenko
+unique-interior theorem does not apply to this particular representation;
+see the [exact boundary certificate](related-results/FrobeniusQuotientConstantTerms.md#32-the-displayed-a183068-polynomial-has-three-interior-lattice-points).
 
 ## Computational checks and provenance
 
