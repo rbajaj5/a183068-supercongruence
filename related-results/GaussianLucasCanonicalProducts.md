@@ -67,7 +67,8 @@ The mixed residue block at scale \(2^r\) is
 U_r=
 \left\{
 a+bi:
-1\le a,b\le2^r,\ 
+1\le a,b\le2^r,
+\qquad
 \text{\(a,b\) are not both even}
 \right\}.
 \tag{4}
