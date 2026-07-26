@@ -144,6 +144,22 @@ Status labels are deliberately conservative:
 - **Proof:** [Pfaffian bias and supercongruence](related-results/FiniteFieldPfaffianBiasSupercongruence.md)
 - **Exact checker:** [`verify_finite_field_pfaffian_bias.py`](verification/related/verify_finite_field_pfaffian_bias.py)
 
+### FF-HYPERDET - hyperdeterminant Fourier packet
+
+- **Claim:** Cayley's \(2\times2\times2\) hyperdeterminant has explicit
+  square/nonsquare fibers over every odd finite field. Its additive Fourier
+  coefficient contains one quadratic Gauss sum; pairing the two quadratic
+  character classes gives an integer sequence satisfying
+  \[
+  v_p(\mathcal K(p^r)-\mathcal K(p^{r-1}))=8(r-1)
+  \]
+  for every odd prime.
+- **Status:** Complete elementary theorem with exact checks. Matrix-pencil
+  ingredients are classical; the paired Fourier supercongruence appears new
+  in a targeted search, with priority provisional.
+- **Proof:** [Hyperdeterminant Fourier supercongruence](related-results/HyperdeterminantFourierSupercongruence.md)
+- **Exact checker:** [`verify_hyperdeterminant_fourier.py`](verification/related/verify_hyperdeterminant_fourier.py)
+
 ## Gaussian-integer results
 
 ### GWL-POLY — Gaussian box polynomial
