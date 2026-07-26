@@ -121,6 +121,44 @@ Equation (9), including its sign, is the sole unresolved lemma in this
 draft.  It is a sharpened product version of the binary Jacobsthal
 congruence used in the published proof.
 
+### Why a factor-by-factor bound does not immediately prove (9)
+
+The factorization
+
+```math
+S(a,b)=
+\frac{\binom{2a}{a}\binom{2b}{b}}{\binom{a+b}{a}}
+```
+
+is useful, but a tempting signed-Jacobsthal estimate for each individual
+factor is one power too strong. For example, take
+
+```math
+(m,r,\ell)=(3,2,1).
+```
+
+The ordinary binomial quotient coming from (8) is
+
+```math
+\frac{\binom{18}{12}}{\binom96}=221.
+```
+
+However,
+
+```math
+v_2(221-1)=2,\qquad v_2(221+1)=1,
+```
+
+whereas the proposed individual-factor exponent
+$r+1+2v_2(\ell)$ is $3$. Thus no choice of sign makes this factor congruent
+to $\pm1$ modulo $2^3$.
+
+The full product in (9) may still gain the missing power through the squared
+binomial factor or cancellation among factor errors. What fails is the claim
+that the desired exponent follows from the $H$-binomial quotient by itself.
+The unresolved content is therefore valuation interaction as well as sign
+bookkeeping.
+
 ## 4. Exact evidence
 
 The sequence recurrence was evaluated exactly through $n=5,000$.

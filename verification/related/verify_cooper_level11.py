@@ -110,6 +110,52 @@ def first_obstruction_scan(limit: int) -> list[int]:
     return hits
 
 
+def first_order_frobenius_checks(prime_limit: int, max_n: int) -> int:
+    """Check D_p(n) = n*T(n-1)*q_p modulo p in an exact finite range."""
+    small = t11_exact(max_n)
+    tested = 0
+    for p in primes_below(prime_limit + 1):
+        if p in (2, 11):
+            continue
+        differences = t11_padic_differences(p, max_n)
+        assert all(difference % p == 0 for difference in differences)
+        q_p = differences[0] // p % p
+        for n, difference in enumerate(differences, 1):
+            actual = difference // p % p
+            predicted = n * small[n - 1] * q_p % p
+            assert actual == predicted
+            tested += 1
+    return tested
+
+
+def base_three_refinement_checks(max_n: int) -> int:
+    """Check the three observed base-3 branches for T modulo 9."""
+    exact = t11_exact(3 * max_n + 2)
+    assert all(value % 3 == 1 for value in exact)
+
+    def b(n: int) -> int:
+        return (exact[n] - 1) // 3 % 3
+
+    def digit_energy(n: int) -> int:
+        digits = []
+        while n:
+            digits.append(n % 3)
+            n //= 3
+        digits.append(0)
+        return sum(
+            digit * (2 - digit) + (1 - digit) * following
+            for digit, following in zip(digits, digits[1:])
+        ) % 3
+
+    for n in range(max_n + 1):
+        assert b(3 * n) == (b(n) + n) % 3
+        assert b(3 * n + 1) == (b(n) + 1) % 3
+        assert b(3 * n + 2) == (b(n) - n) % 3
+    for n in range(3 * max_n + 3):
+        assert b(n) == digit_energy(n)
+    return 3 * (max_n + 1)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -118,6 +164,12 @@ def main() -> None:
         help="reproduce the longer checks reported in the research note",
     )
     args = parser.parse_args()
+
+    initial = t11_exact(5)
+    assert [value % 3 for value in initial[:3]] == [1, 1, 1]
+    assert [value % 5 for value in initial[:5]] == [1, 4, 3, 3, 4]
+    assert ((initial[3] - initial[1]) // 3) % 3 == 1
+    assert ((initial[5] - initial[1]) // 5) % 5 == 1
 
     exact = t11_exact(600)
     for p in (3, 5, 7, 59):
@@ -135,7 +187,25 @@ def main() -> None:
         assert all(value == 0 for value in differences)
         print(f"p={p}: T(p*n) == T(n) mod p^2 for 1 <= n <= {max_n}")
 
+    frobenius_prime_limit = 1_000 if args.extended else 200
+    frobenius_n_limit = 50 if args.extended else 20
+    frobenius_cases = first_order_frobenius_checks(
+        frobenius_prime_limit, frobenius_n_limit
+    )
+
+    base_three_limit = 10_000 if args.extended else 2_000
+    base_three_cases = base_three_refinement_checks(base_three_limit)
+
     print(f"odd-prime n=1 scan below {scan_limit}: {hits}")
+    print(
+        "first-order Frobenius law:"
+        f" {frobenius_cases} exact pairs"
+        f" (p <= {frobenius_prime_limit}, n <= {frobenius_n_limit})"
+    )
+    print(
+        "base-3 modulo-9 refinement:"
+        f" {base_three_cases} exact identities through n={base_three_limit}"
+    )
     print("all Cooper level-11 checks passed")
 
 
