@@ -137,6 +137,19 @@ Status labels are deliberately conservative:
 - **Proof:** [Gaussian Lucas canonical products, Section 6](related-results/GaussianLucasCanonicalProducts.md#6-the-mixed-block-product-is-an-exact-disk-isometry)
 - **Exact checker:** [`verify_gaussian_product_isometry.py`](verification/related/verify_gaussian_product_isometry.py)
 
+### GL-DYN — translated-product return filtration
+
+- **Conjecture:** For every unit \(u\), the translated isometry
+  \(T_{r,u}=G_r+u\) satisfies
+  \(v_{1+i}(T_{r,u}^{2^m}(Z)-Z)=2m\). Thus every orbit modulo
+  \((1+i)^n\) has length \(2^{\lceil n/2\rceil}\), exactly as for ordinary
+  addition. A stronger conjecture asks for a compatible conjugacy to
+  translation.
+- **Status:** Computational conjectures; 318 all-unit quotient maps and
+  deeper selected tests pass exactly.
+- **Note:** [Gaussian product dynamics](related-results/GaussianProductDynamicsConjectures.md)
+- **Exact experiment:** [`experiment_gaussian_product_dynamics.py`](verification/related/experiment_gaussian_product_dynamics.py)
+
 ### GL-MAP — literature and structural map
 
 - **Claim:** The current results sit at the intersection of Gaussian

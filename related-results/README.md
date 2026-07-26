@@ -20,12 +20,13 @@ The common mechanism is:
 | 3 | [Cubic $(\eta)$ congruence at $p=3$](EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to fill a small-prime gap in a published theorem | Complete unchecked draft |
 | 4 | [Gaussian Wolstenholme citation network](GaussianWolstenholmeCitationNetwork.md) | Replaces scaling by translation-invariant Gaussian residue blocks | Three major candidate results with exact certificates; independent review required |
 | 5 | [Gaussian canonical-product synthesis](GaussianLucasCanonicalProducts.md) | Extracts the dominant logarithmic-moment mechanism, proves that the normalized ramified block is a bijective disk isometry, and extends it to a first-moment-dominance chamber | Proved local theorem plus open research program |
-| 6 | [Gaussian Lucas literature puzzle](GaussianLucasLiteraturePuzzle.md) | Connects the product theorem to Dwork/Frobenius theory, generalized factorials, and compatible $p$-adic dynamics | Literature map; bridges ranked by strength |
-| 7 | [Gaussian power-sum conjectures](GaussianPowerSumConjectures.md) | Uses fourth-root and affine-orbit cancellation in the same residue-stratification spirit | Two formula proofs and exact counterexamples; independent review required |
-| 8 | [Higher-degree finite-field box polynomials](HigherDegreeFiniteFieldBoxPolynomials.md) | Generalizes the Gaussian polynomial factorization to every finite-field degree | Complete elementary theorem; likely classical infrastructure |
-| 9 | [Binary $s_{18}$ reduction](S18TwoAdicReduction.md) | Isolates the exact sharpened scaling lemma still needed at $p=2$ | Substantial reduction, not a proof |
-| 10 | [Gaussian citation-network boundary report](GaussianCitationNetworkBoundaryReport.md) | Records rigorous limits of the Gaussian search, including Erdős--Moser reductions | Reduction and bounded search, not a global solution |
-| 11 | [Cooper level-11 rare primes](CooperLevel11RarePrimes.md) | Tests another published supercongruence family and isolates its first obstruction | Computational result and structural clue |
+| 6 | [Gaussian product dynamics](GaussianProductDynamicsConjectures.md) | Tests translated disk isometries on every finite ramified quotient and conjectures an exact return-valuation law and conjugacy to addition | Exact computational conjectures; 318 all-unit quotient maps plus deeper tests |
+| 7 | [Gaussian Lucas literature puzzle](GaussianLucasLiteraturePuzzle.md) | Connects the product theorem to Dwork/Frobenius theory, generalized factorials, and compatible $p$-adic dynamics | Literature map; bridges ranked by strength |
+| 8 | [Gaussian power-sum conjectures](GaussianPowerSumConjectures.md) | Uses fourth-root and affine-orbit cancellation in the same residue-stratification spirit | Two formula proofs and exact counterexamples; independent review required |
+| 9 | [Higher-degree finite-field box polynomials](HigherDegreeFiniteFieldBoxPolynomials.md) | Generalizes the Gaussian polynomial factorization to every finite-field degree | Complete elementary theorem; likely classical infrastructure |
+| 10 | [Binary $s_{18}$ reduction](S18TwoAdicReduction.md) | Isolates the exact sharpened scaling lemma still needed at $p=2$ | Substantial reduction, not a proof |
+| 11 | [Gaussian citation-network boundary report](GaussianCitationNetworkBoundaryReport.md) | Records rigorous limits of the Gaussian search, including Erdős--Moser reductions | Reduction and bounded search, not a global solution |
+| 12 | [Cooper level-11 rare primes](CooperLevel11RarePrimes.md) | Tests another published supercongruence family and isolates its first obstruction | Computational result and structural clue |
 
 ## Strongest present claims
 
@@ -61,6 +62,7 @@ The individual correspondence is:
 | Gaussian power sums | `verification/related/verify_gaussian_power_sums.py` |
 | Gaussian Wolstenholme network | `verification/related/verify_gaussian_wolstenholme.py` |
 | Gaussian product isometry | `verification/related/verify_gaussian_product_isometry.py` |
+| Gaussian product dynamics | `verification/related/experiment_gaussian_product_dynamics.py` (run separately; computational conjecture) |
 | Higher-degree box polynomials | `verification/related/verify_higher_degree_box_polynomial.py` |
 | Gaussian Erdős--Moser boundary search | `verification/related/verify_gaussian_erdos_moser.py` |
 

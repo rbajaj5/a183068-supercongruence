@@ -218,6 +218,14 @@ Classify the cycle structure of \(G_r\) modulo \(\varpi^n\), and then of
 translated maps \(Z\mapsto a+G_r(Z)\). Isometry gives bijectivity for free;
 ergodicity requires the much stronger single-cycle condition at every level.
 
+The first exact experiment now gives a rigid candidate answer. For every unit
+translation tested, every orbit modulo \(\varpi^n\) has length
+\(2^{\lceil n/2\rceil}\), exactly the profile of ordinary addition by a unit,
+and therefore not a full cycle once \(n\ge2\). The
+[dynamics note](GaussianProductDynamicsConjectures.md) formulates the stronger
+return-valuation and conjugacy conjectures and records 318 exhaustive
+all-unit quotient checks.
+
 ### E. Higher-degree residue blocks
 
 Kalinin originally sought finite-field-extension analogues. The same blueprint
