@@ -6,6 +6,15 @@ organized for Paul D. Hanna, the author of the sequence, and for a specialist
 who wants to audit the argument without first reading the larger research
 repository or a Lean formalization.
 
+## Current research portfolio
+
+The continually updated Economist-style scorecard is
+**[RANKINGS.md](RANKINGS.md)**. It ranks every completed result and open
+target by mathematical-community value, deployment value, novelty
+confidence, breadth, maturity, and cost remaining. The present top structural
+result is the all-degree weighted-lift collision theorem; source status and
+proof status are recorded separately.
+
 ## The result
 
 Define
