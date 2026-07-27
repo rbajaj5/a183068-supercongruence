@@ -11,8 +11,9 @@ repository or a Lean formalization.
 The continually updated Economist-style scorecard is
 **[RANKINGS.md](RANKINGS.md)**. It ranks every completed result and open
 target by mathematical-community value, deployment value, novelty
-confidence, breadth, maturity, and cost remaining. The present top structural
-result is the all-degree weighted-lift collision theorem; source status and
+confidence, breadth, maturity, and cost remaining. The present central
+structural line is the all-degree weighted-lift collision theorem together
+with its fixed-precision Frobenius obstruction automata; source status and
 proof status are recorded separately.
 
 ## The result
@@ -167,6 +168,16 @@ by an exact period-\(156\) Frobenius automaton: divisibility by \(5\) occurs
 in exactly \(28\) level classes. The same canonical correction again leaves
 the exact valuation \(2r-2\).
 
+The
+[Frobenius obstruction-automaton theorem](related-results/FrobeniusObstructionAutomata.md)
+now closes the structural loop. At every good prime and every fixed
+precision \(p^k\), the raw successful levels form an eventually periodic set
+with rational density, equivalently a unary regular language. The state is
+the curve's Frobenius-recurrence state together with the finite-orbit phase.
+For the genus-six example, the exact densities through \(5^4\) are
+\(7/39,8/195,2/195,\) and \(11/3900\). This is an exact finite-state
+classification, not a claim of pseudorandomness or cryptographic hardness.
+
 ## Public Gaussian-prime follow-on
 
 The most concise shareable follow-on is
@@ -245,6 +256,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/WeightedLiftCollisionSynthesis.md](related-results/WeightedLiftCollisionSynthesis.md):
   the all-degree tangent-curve collision theorem, genus ladder, zeta
   decomposition, and universal corrected tower.
+- [related-results/FrobeniusObstructionAutomata.md](related-results/FrobeniusObstructionAutomata.md):
+  the fixed-\(p\)-adic-precision automaton theorem, rational-density law,
+  and higher-precision degree-six and degree-seven examples.
 - [related-results/JacobianCounterexampleFiniteFieldCounts.md](related-results/JacobianCounterexampleFiniteFieldCounts.md):
   complete finite-field fiber statistics, collision zeta function, and the
   characteristic-\(3\) adjacent-extension gain for the Fable counterexample.
@@ -267,7 +281,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all twenty-three
+- [verification/run_all.py](verification/run_all.py): one command for all twenty-four
   verification programs.
 
 The broader working repository remains available at
