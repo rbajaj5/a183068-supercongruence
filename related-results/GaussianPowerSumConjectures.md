@@ -281,7 +281,7 @@ v_{11}(\mathcal G_{90}(11))=4.
 
 The follow-on
 [cubic angular-residue theorem](GaussianAngularResidueTheorem.md) proves
-that for every such prime and every odd \(1\le r\le p-2\),
+that for every such prime and every odd \(1\le r\le2p-1\),
 
 ```math
 \mathcal G_{r(p-1)}(p)
@@ -296,9 +296,11 @@ In particular, \(r=p-2\) gives
 \mathcal G_{(p-2)(p-1)}(p)\equiv0\pmod {p^4}
 ```
 
-for every inert prime \(p\ge7\).  Thus the isolated failure above is the
-first member of a universal counterexample family.  A corrected formula
-outside the first range \(1\le r\le p-2\) remains open.
+for every inert prime \(p\ge7\).  The same vanishing holds at \(r=p\) and
+\(r=2p-1\), so the isolated failure above is the first of three universal
+zero families in the proved range.  The formula cannot extend unchanged:
+it already fails at the next odd multiplier \((p,r)=(7,15)\).  A corrected
+formula for \(r\ge2p+1\) remains open.
 
 ## 6. Conjecture 1 is inconsistent as printed
 

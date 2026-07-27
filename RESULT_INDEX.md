@@ -553,13 +553,14 @@ Source-status labels are separate from proof status:
 ### GPS-CUBIC — cubic angular residue
 
 - **Claim:** For every inert prime \(p\ge7\) and odd
-  \(1\le r\le p-2\),
+  \(1\le r\le2p-1\),
   \[
   \mathcal G_{r(p-1)}(p)\equiv
   -i\,p^3\binom{r+2}{3}B_{p-3}\pmod {p^4}.
   \]
-  Hence \(r=p-2\) is a universal counterexample family to the printed
-  constant-valuation conjecture.
+  Hence \(r=p-2,p,2p-1\) are universal counterexample families to the
+  printed constant-valuation conjecture.  The formula itself already fails
+  at the next odd multiplier for \((p,r)=(7,15)\).
 - **Status:** Complete proof candidate with exact checks; independent review
   and literature priority pending.
 - **Proof:** [Cubic angular residue](related-results/GaussianAngularResidueTheorem.md)

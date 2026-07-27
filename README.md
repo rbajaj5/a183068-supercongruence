@@ -20,8 +20,9 @@ source status and proof status are recorded separately.
 The newest result is the
 [cubic angular-residue theorem](related-results/GaussianAngularResidueTheorem.md):
 for every inert prime \(p\ge7\), it replaces a printed constant-valuation
-conjecture by an explicit congruence modulo \(p^4\) and produces a universal
-counterexample at \(r=p-2\).
+conjecture by an explicit congruence modulo \(p^4\) for every odd
+\(1\le r\le2p-1\), produces three universal zeros, and exhibits failure of
+that formula immediately outside the proved range.
 
 ## The result
 
