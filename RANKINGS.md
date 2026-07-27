@@ -45,18 +45,19 @@ theorem.
 | 17 | [QC-SQ: square-cyclotomic Landau lift](related-results/QCalculusCyclotomicSupercongruences.md#3-a-universal-square-cyclotomic-q-congruence) | **6** | 1 | 4 | 9 | 9 | 3 | Complete deduction from Clark's q-Babbage theorem; exact polynomial checks pass and the A183068 q-lift is explicit. |
 | 18 | [A183068: all-prime supercongruence](PROOF.md) | **6** | 1 | 6 | 6 | 8 | 3 | Machine-audited proof draft of a named all-prime conjecture; specialist review pending. |
 | 19 | [FF-PFAFF: Pfaffian bias and supercongruence](related-results/FiniteFieldPfaffianBiasSupercongruence.md) | **6** | 6 | 6 | 8 | 8 | 4 | Proved elementary theorem with exact checks; rank counts are classical and priority of the valuation formulation is provisional. |
-| 20 | [GL-DYN: translated-product return filtration](related-results/GaussianProductDynamicsConjectures.md) | **6** | 6 | 7 | 7 | 7 | 5 | Complete local dynamical deduction; compatible global conjugacy remains open. |
-| 21 | [ETA-3: cubic extension at \(p=3\)](related-results/EtaPrime3CubicExtension.md) | **6** | 1 | 6 | 5 | 6 | 5 | Complete unchecked draft addressing an exceptional prime in a published theorem. |
-| 22 | [GWL-POWER: obstruction and corrected theorem](related-results/GaussianWolstenholmeCitationNetwork.md#3-the-exact-obstruction-to-the-higher-power-conjecture) | **6** | 1 | 7 | 5 | 6 | 5 | Complete unchecked correction and infinite failure mechanism for a printed conjecture. |
-| 23 | [FQ-CT: first Frobenius quotient](related-results/FrobeniusQuotientConstantTerms.md) | **5** | 2 | 3 | 8 | 9 | 3 | Complete elementary theorem and boundary analysis; no novelty claim. |
-| 24 | [FF-DET: determinant bias and supercongruence](related-results/FiniteFieldDeterminantBiasSupercongruence.md) | **5** | 7 | 4 | 8 | 9 | 3 | Proved elementary theorem; count is classical and priority of the sharp adjacent-extension formulation is provisional. |
-| 25 | [BS-DWORK: Bhatt--Singh/Dwork period scaling](related-results/BhattSinghDworkPeriodSupercongruence.md) | **5** | 1 | 3 | 6 | 8 | 3 | Complete elementary deduction with exact checks; no novelty claim. |
-| 26 | [GPS: Gaussian power sums](related-results/GaussianPowerSumConjectures.md) | **5** | 1 | 6 | 4 | 6 | 5 | Complete unchecked proofs of two formulas plus exact counterexamples to two broader claims. |
-| 27 | [DWORK-BOUNDARY: failure of the proposed shortcut](related-results/FrobeniusQuotientConstantTerms.md#3-what-the-standard-dwork-theorem-does-not-supply-automatically) | **4** | 1 | 5 | 5 | 9 | 2 | Complete exact counterexamples delimiting the constant-term approach. |
-| 28 | [GFT: Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md) | **4** | 3 | 4 | 7 | 8 | 3 | Complete elementary deduction; literature priority unchecked. |
-| 29 | [AA-TOWER: \(p\)-adic compactness framework](related-results/PadicArzelaAscoliSupercongruenceTowers.md) | **4** | 2 | 3 | 6 | 8 | 4 | Complete framework and obstruction; horizontal unit-shell interpolation remains open. |
-| 30 | [BOX-d: higher-degree box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md) | **4** | 2 | 2 | 8 | 7 | 3 | Complete unchecked theorem; likely classical infrastructure. |
-| 31 | [GWL-POLY: Gaussian box polynomial](related-results/GaussianWolstenholmeCitationNetwork.md#2-the-polynomial-conjecture) | **4** | 1 | 6 | 4 | 6 | 5 | Complete unchecked finite-field polynomial formulas. |
+| 20 | [JC-THERMO: valuation partition polynomial](related-results/FrobeniusTransferThermodynamics.md) | **6** | 3 | 4 | 9 | 9 | 2 | Complete finite-state deduction: one rational transfer series recovers every fixed-precision density, with the full degree-seven \(5^4\) partition polynomial checked directly. |
+| 21 | [GL-DYN: translated-product return filtration](related-results/GaussianProductDynamicsConjectures.md) | **6** | 6 | 7 | 7 | 7 | 5 | Complete local dynamical deduction; compatible global conjugacy remains open. |
+| 22 | [ETA-3: cubic extension at \(p=3\)](related-results/EtaPrime3CubicExtension.md) | **6** | 1 | 6 | 5 | 6 | 5 | Complete unchecked draft addressing an exceptional prime in a published theorem. |
+| 23 | [GWL-POWER: obstruction and corrected theorem](related-results/GaussianWolstenholmeCitationNetwork.md#3-the-exact-obstruction-to-the-higher-power-conjecture) | **6** | 1 | 7 | 5 | 6 | 5 | Complete unchecked correction and infinite failure mechanism for a printed conjecture. |
+| 24 | [FQ-CT: first Frobenius quotient](related-results/FrobeniusQuotientConstantTerms.md) | **5** | 2 | 3 | 8 | 9 | 3 | Complete elementary theorem and boundary analysis; no novelty claim. |
+| 25 | [FF-DET: determinant bias and supercongruence](related-results/FiniteFieldDeterminantBiasSupercongruence.md) | **5** | 7 | 4 | 8 | 9 | 3 | Proved elementary theorem; count is classical and priority of the sharp adjacent-extension formulation is provisional. |
+| 26 | [BS-DWORK: Bhatt--Singh/Dwork period scaling](related-results/BhattSinghDworkPeriodSupercongruence.md) | **5** | 1 | 3 | 6 | 8 | 3 | Complete elementary deduction with exact checks; no novelty claim. |
+| 27 | [GPS: Gaussian power sums](related-results/GaussianPowerSumConjectures.md) | **5** | 1 | 6 | 4 | 6 | 5 | Complete unchecked proofs of two formulas plus exact counterexamples to two broader claims. |
+| 28 | [DWORK-BOUNDARY: failure of the proposed shortcut](related-results/FrobeniusQuotientConstantTerms.md#3-what-the-standard-dwork-theorem-does-not-supply-automatically) | **4** | 1 | 5 | 5 | 9 | 2 | Complete exact counterexamples delimiting the constant-term approach. |
+| 29 | [GFT: Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md) | **4** | 3 | 4 | 7 | 8 | 3 | Complete elementary deduction; literature priority unchecked. |
+| 30 | [AA-TOWER: \(p\)-adic compactness framework](related-results/PadicArzelaAscoliSupercongruenceTowers.md) | **4** | 2 | 3 | 6 | 8 | 4 | Complete framework and obstruction; horizontal unit-shell interpolation remains open. |
+| 31 | [BOX-d: higher-degree box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md) | **4** | 2 | 2 | 8 | 7 | 3 | Complete unchecked theorem; likely classical infrastructure. |
+| 32 | [GWL-POLY: Gaussian box polynomial](related-results/GaussianWolstenholmeCitationNetwork.md#2-the-polynomial-conjecture) | **4** | 1 | 6 | 4 | 6 | 5 | Complete unchecked finite-field polynomial formulas. |
 
 ## Reductions, computational targets, and synthesis
 
@@ -76,7 +77,7 @@ The strongest current theorem-generating assets are now the linked
 LD-2/LD-3 \(\rightarrow\) QC-SQ/QC-CUBIC line, the relative-invariant line
 FF-DET \(\rightarrow\) FF-PFAFF \(\rightarrow\) FF-HYPERDET, and the
 collision-zeta ladder
-JC-WL \(\rightarrow\) JC-AUTO
+JC-WL \(\rightarrow\) JC-AUTO \(\rightarrow\) JC-THERMO
 \(\rightarrow\) \{JC-FF, JC4-FF, JC5-FF, JC6-FF, JC7-FF\}.
 The degree-five rung is the first to replace finite quadratic monodromy by a
 non-CM elliptic Frobenius packet; degree six is the first explicit
@@ -84,7 +85,9 @@ higher-genus packet and gives a permanent raw obstruction at \(p=13\).
 Degree seven turns the obstruction into an exact period-\(156\) automaton.
 JC-AUTO then proves that this finite-state behavior, including rational
 densities at every fixed \(p\)-adic precision, is universal for the good
-weighted-lift collision towers.
+weighted-lift collision towers. JC-THERMO records all of those thresholds
+in one valuation partition polynomial and makes residue-degree base change
+an exact time-decimation operation.
 The q-calculus
 line is especially broad: Landau depth predicts cyclotomic multiplicity,
 while a quadratic pair-energy computes the complete second q-jet. The

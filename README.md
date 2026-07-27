@@ -178,6 +178,19 @@ For the genus-six example, the exact densities through \(5^4\) are
 \(7/39,8/195,2/195,\) and \(11/3900\). This is an exact finite-state
 classification, not a claim of pseudorandomness or cryptographic hardness.
 
+The
+[finite-state thermodynamics follow-on](related-results/FrobeniusTransferThermodynamics.md)
+makes the statistical-mechanics dictionary exact rather than metaphorical.
+Its transfer matrix gives a rational two-variable orbit series, and a single
+valuation partition polynomial records every fixed congruence threshold. For
+the degree-seven \(p=5\) automaton, the complete precision-\(5^4\) polynomial
+is
+\[
+16000+2700u+600u^2+145u^3+55u^4.
+\]
+At fixed precision this is a finite analytic system, so no physical phase
+transition or randomness claim is made.
+
 ## Public Gaussian-prime follow-on
 
 The most concise shareable follow-on is
@@ -259,6 +272,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/FrobeniusObstructionAutomata.md](related-results/FrobeniusObstructionAutomata.md):
   the fixed-\(p\)-adic-precision automaton theorem, rational-density law,
   and higher-precision degree-six and degree-seven examples.
+- [related-results/FrobeniusTransferThermodynamics.md](related-results/FrobeniusTransferThermodynamics.md):
+  the exact transfer-matrix formulation and degree-seven valuation partition
+  polynomial.
 - [related-results/JacobianCounterexampleFiniteFieldCounts.md](related-results/JacobianCounterexampleFiniteFieldCounts.md):
   complete finite-field fiber statistics, collision zeta function, and the
   characteristic-\(3\) adjacent-extension gain for the Fable counterexample.
@@ -281,7 +297,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all twenty-four
+- [verification/run_all.py](verification/run_all.py): one command for all twenty-five
   verification programs.
 
 The broader working repository remains available at
