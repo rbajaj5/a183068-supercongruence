@@ -25,6 +25,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 1B | [All-degree weighted-lift collision theorem](WeightedLiftCollisionSynthesis.md) | Turns collision counting into one second divided-difference curve in every degree; gives a genus ladder and a universal corrected tower | Complete theorem with cross-degree checks; priority preliminary |
 | 1C | [Frobenius obstruction automata](FrobeniusObstructionAutomata.md) | Converts every fixed-precision raw collision congruence into an eventually periodic unary language with rational density; the corrected tower remains universal | Complete structural theorem with exact checks through four precisions; priority preliminary |
 | 1C.1 | [Finite-state Frobenius thermodynamics](FrobeniusTransferThermodynamics.md) | Packages all fixed-precision valuation strata into one rational orbit series and one partition polynomial; gives the complete degree-seven \(5^4\) distribution | Complete structural deduction with direct full-period check; priority preliminary |
+| 1C.2 | [All-precision unit-root lifting](PadicValuationExpansion.md) | Proves the degree-seven trace period \(39\cdot5^{k-1}\) at every precision, computes the \(5^5\) and \(5^6\) valuation polynomials, and identifies the profinite valuation grid | Complete structural theorem with direct certificates; priority preliminary |
 | 1D | [Finite-field counts for the Fable Jacobian counterexample](JacobianCounterexampleFiniteFieldCounts.md) | Uses the same adjacent-extension viewpoint to organize cubic fibers, collisions, and Frobenius counts of the new counterexample | Complete elementary theorem with exact checks; priority preliminary |
 | 1E | [Degree-four Jacobian Frobenius obstruction](JacobianDegreeFourFrobeniusObstruction.md) | Shows how quadratic Artin factors obstruct raw adjacency and how two-step or corrected towers recover exact congruences | Complete elementary theorem with exact checks; priority preliminary |
 | 1F | [Degree-five elliptic Frobenius packet](JacobianDegreeFiveEllipticFrobenius.md) | Shows the next transition: a tangent cubic contributes a non-CM elliptic trace, and removing the full Frobenius packet leaves an exact \(2r-2\) tower | Complete theorem with direct finite-field and tower checks; priority preliminary |
@@ -89,6 +90,7 @@ The individual correspondence is:
 | All-degree weighted-lift collisions | `verification/related/verify_weighted_lift_collision_synthesis.py` |
 | Frobenius obstruction automata | `verification/related/verify_frobenius_obstruction_automata.py` |
 | Finite-state Frobenius thermodynamics | `verification/related/verify_frobenius_transfer_thermodynamics.py` |
+| All-precision unit-root lifting | `verification/related/verify_padic_valuation_expansion.py` |
 | Fable Jacobian-counterexample counts | `verification/related/verify_jacobian_counterexample_counts.py` |
 | Degree-four Jacobian collisions | `verification/related/verify_jacobian_degree_four.py` |
 | Degree-five Jacobian collisions | `verification/related/verify_jacobian_degree_five.py` |
