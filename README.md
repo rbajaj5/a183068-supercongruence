@@ -191,6 +191,17 @@ is
 At fixed precision this is a finite analytic system, so no physical phase
 transition or randomness claim is made.
 
+The
+[all-precision lifting theorem](related-results/PadicValuationExpansion.md)
+then proves that the degree-seven unit-root trace has exact period
+\(39\cdot5^{k-1}\) modulo \(5^k\) for every \(k\). A single Hensel factor
+and matrix tangent certificate modulo \(125\) force every subsequent period
+lift. The complete \(5^5\) and \(5^6\) valuation polynomials are checked over
+\(97500\) and \(487500\) clock classes. The nested divisibility layers live
+on the profinite grid
+\(\mathbf Z/156\mathbf Z\times\mathbf Z_5\), where truncated valuation is
+an exact sum of clopen indicator functions.
+
 ## Public Gaussian-prime follow-on
 
 The most concise shareable follow-on is
@@ -275,6 +286,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/FrobeniusTransferThermodynamics.md](related-results/FrobeniusTransferThermodynamics.md):
   the exact transfer-matrix formulation and degree-seven valuation partition
   polynomial.
+- [related-results/PadicValuationExpansion.md](related-results/PadicValuationExpansion.md):
+  the all-precision unit-root period theorem, higher valuation polynomials,
+  and profinite clopen expansion.
 - [related-results/JacobianCounterexampleFiniteFieldCounts.md](related-results/JacobianCounterexampleFiniteFieldCounts.md):
   complete finite-field fiber statistics, collision zeta function, and the
   characteristic-\(3\) adjacent-extension gain for the Fable counterexample.
@@ -297,7 +311,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all twenty-five
+- [verification/run_all.py](verification/run_all.py): one command for all twenty-six
   verification programs.
 
 The broader working repository remains available at

@@ -251,6 +251,22 @@ Source-status labels are separate from proof status:
 - **Proof:** [Finite-state thermodynamics of Frobenius obstruction towers](related-results/FrobeniusTransferThermodynamics.md)
 - **Exact checker:** [`verify_frobenius_transfer_thermodynamics.py`](verification/related/verify_frobenius_transfer_thermodynamics.py)
 
+### JC-LIFT - all-precision unit-root period lifting
+
+- **Claim:** For the degree-seven genus-six collision example at \(p=5\),
+  the unit-root Frobenius trace has exact period
+  \(39\cdot5^{k-1}\) modulo \(5^k\) for every \(k\geq1\). Consequently,
+  \(156\cdot5^{k-1}\) is an eventual period of the complete raw obstruction
+  packet. The proof uses a Hensel factor modulo \(125\) and a general vector
+  period-lifting lemma. The precision-\(5^5\) and precision-\(5^6\)
+  valuation partition polynomials are computed exactly, and all precision
+  layers assemble on the profinite clock
+  \(\mathbf Z/156\mathbf Z\times\mathbf Z_5\).
+- **Status:** Complete structural theorem with direct Hensel, matrix, period,
+  and full-cycle certificates. Literature priority is provisional.
+- **Proof:** [Precision lifting and a \(p\)-adic valuation expansion](related-results/PadicValuationExpansion.md)
+- **Exact checker:** [`verify_padic_valuation_expansion.py`](verification/related/verify_padic_valuation_expansion.py)
+
 ### JC-FF - finite-field arithmetic of the Fable counterexample
 
 - **Claim:** For the three-dimensional Jacobian-conjecture counterexample
