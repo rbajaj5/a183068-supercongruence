@@ -550,6 +550,21 @@ Source-status labels are separate from proof status:
 - **Proof:** [Gaussian power-sum conjectures](related-results/GaussianPowerSumConjectures.md)
 - **Exact checker:** [`verify_gaussian_power_sums.py`](verification/related/verify_gaussian_power_sums.py)
 
+### GPS-CUBIC — cubic angular residue
+
+- **Claim:** For every inert prime \(p\ge7\) and odd
+  \(1\le r\le p-2\),
+  \[
+  \mathcal G_{r(p-1)}(p)\equiv
+  -i\,p^3\binom{r+2}{3}B_{p-3}\pmod {p^4}.
+  \]
+  Hence \(r=p-2\) is a universal counterexample family to the printed
+  constant-valuation conjecture.
+- **Status:** Complete proof candidate with exact checks; independent review
+  and literature priority pending.
+- **Proof:** [Cubic angular residue](related-results/GaussianAngularResidueTheorem.md)
+- **Exact checker:** [`verify_gaussian_angular_residue.py`](verification/related/verify_gaussian_angular_residue.py)
+
 ### BOX-d — higher-degree box polynomials
 
 - **Claim:** The finite-field box-polynomial mechanism extends to arbitrary

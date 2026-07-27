@@ -227,7 +227,7 @@ The last inequality follows at once from Legendre's formula; here
 $0\leq r\leq3$ and $k\geq r+4$.  Thus all later terms have strictly
 larger valuation, (14) cannot be cancelled, and (3) follows.
 
-## 5. The inert-prime conjecture is false
+## 5. The inert-prime conjecture is false and has a cubic first residue
 
 Conjecture 2 of the source asserts that, for $p\geq7$ with
 $p\equiv3\pmod4$,
@@ -279,17 +279,26 @@ v_{11}(\mathcal G_{90}(11))=4.
 \qquad\text{(22)}
 ```
 
-The normalized residue
+The follow-on
+[cubic angular-residue theorem](GaussianAngularResidueTheorem.md) proves
+that for every such prime and every odd \(1\le r\le p-2\),
 
 ```math
-\frac{\mathcal G_{r(p-1)}(p)}{p^3}\pmod p
+\mathcal G_{r(p-1)}(p)
+\equiv
+-i\,p^3\binom{r+2}{3}B_{p-3}
+\pmod {p^4}.
 ```
 
-vanishes systematically at $r\equiv0,-1,-2\pmod p$ in the tested
-inert primes.  This explains why a constant valuation $3$ cannot be
-correct, but the roots at $-1$ and $-2$ do not lift as the literal
-integer factors $r+1$ and $r+2$.  A corrected all-$r$ valuation
-formula remains open.
+In particular, \(r=p-2\) gives
+
+```math
+\mathcal G_{(p-2)(p-1)}(p)\equiv0\pmod {p^4}
+```
+
+for every inert prime \(p\ge7\).  Thus the isolated failure above is the
+first member of a universal counterexample family.  A corrected formula
+outside the first range \(1\le r\le p-2\) remains open.
 
 ## 6. Conjecture 1 is inconsistent as printed
 
@@ -333,6 +342,10 @@ The companion script performs:
 3. a direct modular check of (24); and
 4. verification of the four affine orbits and the unit calculation
    (15)--(16).
+
+The separate checker
+`verification/related/verify_gaussian_angular_residue.py` verifies the
+cubic residue and universal counterexample family.
 
 Run:
 

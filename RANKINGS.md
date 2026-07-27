@@ -18,9 +18,9 @@ All scores run from 1 to 10:
   and completion. A larger number means more work.
 
 These are editorial estimates, not claims of priority, correctness, or peer
-review. Close scores should be read as the same tier. Proof status remains
-controlling: a high-value conjectural target is not thereby promoted to a
-theorem.
+review. Close scores should be read as the same tier, and equal ranks are
+marked with `=`. Proof status remains controlling: a high-value conjectural
+target is not thereby promoted to a theorem.
 
 ## Completed drafts, theorems, and deductions
 
@@ -28,7 +28,8 @@ theorem.
 | ---: | --- | :---: | :---: | :---: | :---: | :---: | :---: | --- |
 | 1 | [GWL-TWO: ramified Gaussian prime theorem](related-results/GaussianLucasRamifiedTwoTheorem.md) | **8** | 2 | 8 | 8 | 7 | 5 | Complete proof candidate with machine-assisted audits and exact checks; specialist review and priority search pending. |
 | 2 | [GWL-SCALE: Gaussian prime-power scaling](related-results/GaussianLucasPrimePowerTheorem.md) | **8** | 2 | 8 | 8 | 6 | 6 | Complete proof candidate with exact checks; independent review and priority search pending. |
-| 3 | [JC-WL: all-degree weighted-lift collision theorem](related-results/WeightedLiftCollisionSynthesis.md) | **8** | 3 | 8 | 10 | 8 | 4 | Complete all-degree collision, genus-ladder, zeta-factor, and corrected-tower theorem with exact checks through generic degree seven; priority provisional. |
+| 3= | [GPS-CUBIC: cubic angular residue](related-results/GaussianAngularResidueTheorem.md) | **8** | 2 | 7 | 7 | 8 | 3 | Complete proof candidate correcting a named conjecture: explicit mod-\(p^4\) residue and a universal inert-prime counterexample family; 1,087 exact checks pass, while specialist review and priority remain pending. |
+| 3= | [JC-WL: all-degree weighted-lift collision theorem](related-results/WeightedLiftCollisionSynthesis.md) | **8** | 3 | 8 | 10 | 8 | 4 | Complete all-degree collision, genus-ladder, zeta-factor, and corrected-tower theorem with exact checks through generic degree seven; priority provisional. |
 | 4 | [JC-AUTO: fixed-precision Frobenius obstruction automata](related-results/FrobeniusObstructionAutomata.md) | **8** | 3 | 7 | 10 | 9 | 3 | Complete theorem: every fixed-precision raw congruence language is eventually periodic with rational density; higher-precision genus-three and genus-six checks pass; priority provisional. |
 | 5 | [JC5-FF: degree-five elliptic Frobenius packet](related-results/JacobianDegreeFiveEllipticFrobenius.md) | **8** | 3 | 8 | 9 | 8 | 4 | Complete collision-count, non-CM elliptic-factor, local-zeta, and corrected-tower theorem with direct extension-field checks; priority provisional. |
 | 6 | [JC6-FF: degree-six genus-three Frobenius obstruction](related-results/JacobianDegreeSixGenusThree.md) | **8** | 3 | 8 | 9 | 8 | 4 | Complete genus-three local-\(L\)-polynomial, permanent raw obstruction, and corrected-tower theorem with exact extension-field and symbolic certificates; priority provisional. |
@@ -77,7 +78,12 @@ stated target. Maturity records the work presently in the repository.
 
 ## Portfolio reading
 
-The strongest current theorem-generating assets are now the linked
+The active first-priority line is now Gaussian and harmonic: GWL-TWO and
+GWL-SCALE supply the local lifting side, while GPS-CUBIC supplies an explicit
+\(C_4\)-Fourier projection and radial Bernoulli residue. The collision/Jacobian
+line remains active at lower priority rather than being discarded.
+
+The other strongest current theorem-generating assets are the linked
 LD-2/LD-3 \(\rightarrow\) QC-SQ/QC-CUBIC line, the relative-invariant line
 FF-DET \(\rightarrow\) FF-PFAFF \(\rightarrow\) FF-HYPERDET
 \(\rightarrow\) \{FF-CONV, FF-HCONV\}, and the
