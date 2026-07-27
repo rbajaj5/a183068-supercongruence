@@ -574,6 +574,19 @@ Source-status labels are separate from proof status:
 - **Proof:** [Higher-degree box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md)
 - **Exact checker:** [`verify_higher_degree_box_polynomial.py`](verification/related/verify_higher_degree_box_polynomial.py)
 
+### GQ2-LIFT — exact dyadic orientation lifting
+
+- **Claim:** For the \(2\)-adic root \(X\equiv5\pmod8\) of
+  \(X^3+2X^2+1=0\), there is a unique \(\alpha\in\mathbb Z_2\) with
+  \(X^\alpha=-1/3\). At level \(2^k\), the complete solution set is the
+  single class \(e\equiv\alpha\pmod {2^{k-2}}\), and the standard
+  representative either stays fixed or gains the next high binary digit.
+  The limiting exponent is not an ordinary integer.
+- **Status:** Complete elementary sharpening of Roe--Turturean Remark C.7;
+  no claim of novelty and no change to their main classification theorem.
+- **Proof:** [Exact dyadic orientation lifts](related-results/GQ2OrientationLifts.md)
+- **Exact checker:** [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py)
+
 ## Reductions and computational reports
 
 ### s18-2 — binary supercongruence reduction

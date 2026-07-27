@@ -27,6 +27,12 @@ conjecture by an explicit congruence modulo \(p^4\) for every odd
 \(1\le r\le2p-1\), produces three universal zeros, and exhibits failure of
 that formula immediately outside the proved range.
 
+The newest auxiliary lifting result is
+[GQ2-LIFT](related-results/GQ2OrientationLifts.md), an exact \(2\)-adic
+orientation law sharpening Roe--Turturean Remark C.7. It is included as a
+clean local-to-global boundary example, not as a supercongruence or a novelty
+claim.
+
 ## The result
 
 Define

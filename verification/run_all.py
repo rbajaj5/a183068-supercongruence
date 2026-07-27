@@ -37,6 +37,7 @@ SCRIPTS = (
     "verification/related/experiment_gaussian_product_dynamics.py",
     "verification/related/verify_higher_degree_box_polynomial.py",
     "verification/related/verify_gaussian_erdos_moser.py",
+    "verification/related/verify_gq2_orientation_lifts.py",
 )
 
 
