@@ -11,10 +11,17 @@ repository or a Lean formalization.
 The continually updated Economist-style scorecard is
 **[RANKINGS.md](RANKINGS.md)**. It ranks every completed result and open
 target by mathematical-community value, deployment value, novelty
-confidence, breadth, maturity, and cost remaining. The present central
-structural line is the all-degree weighted-lift collision theorem together
-with its fixed-precision Frobenius obstruction automata; source status and
-proof status are recorded separately.
+confidence, breadth, maturity, and cost remaining. The present first-priority
+line is Gaussian and harmonic: ramified and inert Gaussian-prime lifting,
+angular Fourier projections, and their radial Bernoulli residues. The
+all-degree weighted-lift collision program remains active at lower priority;
+source status and proof status are recorded separately.
+
+The newest result is the
+[cubic angular-residue theorem](related-results/GaussianAngularResidueTheorem.md):
+for every inert prime \(p\ge7\), it replaces a printed constant-valuation
+conjecture by an explicit congruence modulo \(p^4\) and produces a universal
+counterexample at \(r=p-2\).
 
 ## The result
 
