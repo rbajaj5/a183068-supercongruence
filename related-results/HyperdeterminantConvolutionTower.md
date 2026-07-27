@@ -359,6 +359,13 @@ finite-field restriction, additive-energy, and Kakeya-type questions. The
 exact scalar spectrum above makes that problem unusually structured, but it
 does not by itself prove an ambient restriction or Kakeya estimate.
 
+The
+[Gaussian angular X-ray spectrum](GaussianKakeyaSpectrum.md) gives the
+corresponding operator-algebra calculation in the two-dimensional anisotropic
+Gaussian plane.  It shows exactly what must be added here: the number of
+structured tensor directions lying in each dual hyperplane, stratified by
+dual tensor orbit.
+
 This is the intended harmonic-analysis direction of the project. No
 geometric-Langlands interpretation is needed for the results in this note.
 

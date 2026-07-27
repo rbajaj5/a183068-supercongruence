@@ -565,6 +565,19 @@ Source-status labels are separate from proof status:
 - **Proof:** [Cubic angular residue](related-results/GaussianAngularResidueTheorem.md)
 - **Exact checker:** [`verify_gaussian_angular_residue.py`](verification/related/verify_gaussian_angular_residue.py)
 
+### GK-SPEC — Gaussian angular X-ray spectrum
+
+- **Claim:** Averaging along the unit-norm Gaussian directions at an inert
+  prime produces a commuting operator with exactly three Fourier packets:
+  constants, square-norm frequencies, and nonsquare-norm frequencies.
+  Selecting one translated line in every such direction has an exact second
+  moment and occupies at least \(p^2(p+1)/(3p-1)\) points.
+- **Status:** Complete elementary spectral calculation and planar incidence
+  corollary; no novelty claim. The structured tensor-direction extension is
+  open.
+- **Proof:** [Gaussian angular X-ray spectrum](related-results/GaussianKakeyaSpectrum.md)
+- **Exact checker:** [`verify_gaussian_kakeya_spectrum.py`](verification/related/verify_gaussian_kakeya_spectrum.py)
+
 ### BOX-d — higher-degree box polynomials
 
 - **Claim:** The finite-field box-polynomial mechanism extends to arbitrary

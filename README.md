@@ -23,6 +23,12 @@ for every inert prime \(p\ge7\), it replaces a printed constant-valuation
 conjecture by an explicit congruence modulo \(p^4\) and produces a universal
 counterexample at \(r=p-2\).
 
+The accompanying
+[Gaussian angular X-ray note](related-results/GaussianKakeyaSpectrum.md)
+puts the Fourier side into spectral-theory form: its commuting line averages
+have three exact packets, and the note identifies translation-phase
+interaction as the boundary between that calculation and Kakeya.
+
 ## The result
 
 Define
