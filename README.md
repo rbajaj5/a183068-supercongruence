@@ -159,6 +159,14 @@ curve and finite-orbit packet restores the exact valuation \(2r-2\). This is
 both a new theorem candidate and a useful warning: higher-degree collision
 counts need Frobenius correction before a supercongruence can exist.
 
+The
+[degree-seven follow-on](related-results/JacobianDegreeSevenGenusSix.md)
+continues the ladder with an integral seed having good reduction at \(p=5\).
+Its tangent curve has genus six. The raw collision congruence is controlled
+by an exact period-\(156\) Frobenius automaton: divisibility by \(5\) occurs
+in exactly \(28\) level classes. The same canonical correction again leaves
+the exact valuation \(2r-2\).
+
 ## Public Gaussian-prime follow-on
 
 The most concise shareable follow-on is
@@ -249,6 +257,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/JacobianDegreeSixGenusThree.md](related-results/JacobianDegreeSixGenusThree.md):
   degree-six genus-three local \(L\)-polynomial, permanent raw obstruction at
   \(p=13\), and corrected adjacent-extension law.
+- [related-results/JacobianDegreeSevenGenusSix.md](related-results/JacobianDegreeSevenGenusSix.md):
+  degree-seven genus-six local \(L\)-polynomial, period-\(156\) raw
+  obstruction automaton, and corrected adjacent-extension law.
 - [GAUSSIAN_LUCAS.md](GAUSSIAN_LUCAS.md): the public entry point for the
   Gaussian-prime follow-on.
 - [related-results/](related-results/): the complete related proof drafts and
@@ -256,7 +267,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all twenty-two
+- [verification/run_all.py](verification/run_all.py): one command for all twenty-three
   verification programs.
 
 The broader working repository remains available at
