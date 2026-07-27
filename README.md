@@ -17,6 +17,9 @@ angular Fourier projections, and their radial Bernoulli residues. The
 all-degree weighted-lift collision program remains active at lower priority;
 source status and proof status are recorded separately.
 
+The ranking is canonical rather than chronological: GWL-TWO currently holds
+the crown, GWL-SCALE is the heir, and GPS-CUBIC is the first ascendant.
+
 The newest result is the
 [cubic angular-residue theorem](related-results/GaussianAngularResidueTheorem.md):
 for every inert prime \(p\ge7\), it replaces a printed constant-valuation

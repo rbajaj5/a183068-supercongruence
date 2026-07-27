@@ -22,6 +22,20 @@ review. Close scores should be read as the same tier, and equal ranks are
 marked with `=`. Proof status remains controlling: a high-value conjectural
 target is not thereby promoted to a theorem.
 
+## The crown and line of succession
+
+This file is the canonical portfolio order. The present hierarchy is:
+
+1. **Crown — GWL-TWO:** the exact ramified-prime theorem;
+2. **Heir — GWL-SCALE:** prime-power Gaussian scaling; and
+3. **First ascendant — GPS-CUBIC:** the published cubic residue correction
+   through \(r=2p-1\).
+
+A new computation does not inherit the crown merely by being new. Promotion
+requires a stronger mathematical conclusion, improved proof maturity, or a
+materially better priority assessment. Major developments must update this
+section, the detailed scorecard, and the root README together.
+
 ## Completed drafts, theorems, and deductions
 
 | Rank | ID and result | Math-community value | Deployment value | Novelty confidence | Breadth | Maturity | Cost remaining | Mathematical status |
