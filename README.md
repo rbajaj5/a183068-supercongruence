@@ -129,6 +129,21 @@ the note carefully separates the proved scalar pushforward spectrum from
 the still-open ambient Fourier transform of a hyperdeterminant level set.
 It makes no geometric-Langlands or cryptographic-extractor claim.
 
+The companion
+[constant-spectrum theorem](related-results/DeterminantPfaffianConvolutionTowers.md)
+does the same for determinant and Pfaffian. For convolution length \(\ell\),
+both zero and nonzero fibers satisfy the sharp general law
+\[
+v_p\!\left(N_{\ell,\star}(p^r)-N_{\ell,\star}(p^{r-1})\right)
+=(\ell E-1)(r-1).
+\]
+It also gives an exact, rather than bounded, total-variation mixing formula.
+At the algorithmic level, the determinant/Pfaffian spectrum has two orbits
+and the hyperdeterminant spectrum has three. Their arbitrary convolution
+powers therefore require only a constant number of scalar exponentiations,
+not a length-\(q\) FFT. This is a structured spectral shortcut, not an
+improvement to general audio-codec FFTs.
+
 ## Public Jacobian-counterexample follow-on
 
 The
@@ -301,6 +316,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/HyperdeterminantConvolutionTower.md](related-results/HyperdeterminantConvolutionTower.md):
   exact additive convolution fibers, sharp adjacent-extension valuations,
   Fourier mixing, and the boundary of the ambient restriction/Kakeya problem.
+- [related-results/DeterminantPfaffianConvolutionTowers.md](related-results/DeterminantPfaffianConvolutionTowers.md):
+  the constant-spectrum compiler, two infinite sharp convolution families,
+  and exact determinant/Pfaffian mixing.
 - [related-results/WeightedLiftCollisionSynthesis.md](related-results/WeightedLiftCollisionSynthesis.md):
   the all-degree tangent-curve collision theorem, genus ladder, zeta
   decomposition, and universal corrected tower.
@@ -335,7 +353,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all twenty-seven
+- [verification/run_all.py](verification/run_all.py): one command for all twenty-eight
   verification programs.
 
 The broader working repository remains available at
