@@ -234,6 +234,23 @@ Source-status labels are separate from proof status:
 - **Proof:** [Frobenius obstruction automata](related-results/FrobeniusObstructionAutomata.md)
 - **Exact checker:** [`verify_frobenius_obstruction_automata.py`](verification/related/verify_frobenius_obstruction_automata.py)
 
+### JC-THERMO - valuation partition polynomial
+
+- **Claim:** Every fixed-precision Frobenius obstruction orbit has a rational
+  two-variable orbit series and a finite valuation partition polynomial that
+  recovers every congruence-threshold density. Residue-degree \(f\) base
+  change acts by the exact time decimation \(T\mapsto T^f\). For the
+  degree-seven example at \(p=5\), the complete precision-\(5^4\) polynomial
+  on its \(19500\)-class period is
+  \[
+  16000+2700u+600u^2+145u^3+55u^4.
+  \]
+- **Status:** Complete structural deduction with a direct full-period
+  checker. The finite-state formalism is standard; its collision-tower
+  application and explicit partition polynomial have provisional priority.
+- **Proof:** [Finite-state thermodynamics of Frobenius obstruction towers](related-results/FrobeniusTransferThermodynamics.md)
+- **Exact checker:** [`verify_frobenius_transfer_thermodynamics.py`](verification/related/verify_frobenius_transfer_thermodynamics.py)
+
 ### JC-FF - finite-field arithmetic of the Fable counterexample
 
 - **Claim:** For the three-dimensional Jacobian-conjecture counterexample
