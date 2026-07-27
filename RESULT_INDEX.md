@@ -304,6 +304,24 @@ Source-status labels are separate from proof status:
 - **Proof:** [Degree-six genus-three Frobenius obstruction](related-results/JacobianDegreeSixGenusThree.md)
 - **Exact checker:** [`verify_jacobian_degree_six.py`](verification/related/verify_jacobian_degree_six.py)
 
+### JC7-FF - degree-seven genus-six Frobenius automaton
+
+- **Claim:** An integral generic-degree-seven weighted lift has a smooth
+  genus-six tangent quintic at \(p=5\), with local \(L\)-polynomial
+  \[
+  1+2T^3+7T^4-16T^5-34T^6-80T^7
+  +175T^8+250T^9+15625T^{12}.
+  \]
+  The raw adjacent collision difference is divisible by \(5\) in exactly
+  \(28\) of \(156\) level classes. Removing the genus-six and finite packets
+  restores exact adjacent valuation \(2r-2\).
+- **Status:** Complete theorem with exact point counts through
+  \(\mathbb F_{5^6}\), symbolic smoothness and orbit certificates, a complete
+  period-\(156\) obstruction proof, and corrected tower checks. Literature
+  priority is provisional.
+- **Proof:** [Degree-seven genus-six Frobenius automaton](related-results/JacobianDegreeSevenGenusSix.md)
+- **Exact checker:** [`verify_jacobian_degree_seven.py`](verification/related/verify_jacobian_degree_seven.py)
+
 ## Gaussian-integer results
 
 ### GWL-POLY — Gaussian box polynomial

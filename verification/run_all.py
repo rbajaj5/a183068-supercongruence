@@ -19,6 +19,7 @@ SCRIPTS = (
     "verification/related/verify_jacobian_degree_four.py",
     "verification/related/verify_jacobian_degree_five.py",
     "verification/related/verify_jacobian_degree_six.py",
+    "verification/related/verify_jacobian_degree_seven.py",
     "verification/related/verify_eta_prime3.py",
     "verification/related/verify_cooper_level11.py",
     "verification/related/verify_dwork_boundaries.py",
