@@ -50,17 +50,18 @@ theorem.
 | 22 | [FF-PFAFF: Pfaffian bias and supercongruence](related-results/FiniteFieldPfaffianBiasSupercongruence.md) | **6** | 6 | 6 | 8 | 8 | 4 | Proved elementary theorem with exact checks; rank counts are classical and priority of the valuation formulation is provisional. |
 | 23 | [JC-THERMO: valuation partition polynomial](related-results/FrobeniusTransferThermodynamics.md) | **6** | 3 | 4 | 9 | 9 | 2 | Complete finite-state deduction: one rational transfer series recovers every fixed-precision density, with the full degree-seven \(5^4\) partition polynomial checked directly. |
 | 24 | [GL-DYN: translated-product return filtration](related-results/GaussianProductDynamicsConjectures.md) | **6** | 6 | 7 | 7 | 7 | 5 | Complete local dynamical deduction; compatible global conjugacy remains open. |
-| 25 | [ETA-3: cubic extension at \(p=3\)](related-results/EtaPrime3CubicExtension.md) | **6** | 1 | 6 | 5 | 6 | 5 | Complete unchecked draft addressing an exceptional prime in a published theorem. |
-| 26 | [GWL-POWER: obstruction and corrected theorem](related-results/GaussianWolstenholmeCitationNetwork.md#3-the-exact-obstruction-to-the-higher-power-conjecture) | **6** | 1 | 7 | 5 | 6 | 5 | Complete unchecked correction and infinite failure mechanism for a printed conjecture. |
-| 27 | [FQ-CT: first Frobenius quotient](related-results/FrobeniusQuotientConstantTerms.md) | **5** | 2 | 3 | 8 | 9 | 3 | Complete elementary theorem and boundary analysis; no novelty claim. |
-| 28 | [FF-DET: determinant bias and supercongruence](related-results/FiniteFieldDeterminantBiasSupercongruence.md) | **5** | 7 | 4 | 8 | 9 | 3 | Proved elementary theorem; count is classical and priority of the sharp adjacent-extension formulation is provisional. |
-| 29 | [BS-DWORK: Bhatt--Singh/Dwork period scaling](related-results/BhattSinghDworkPeriodSupercongruence.md) | **5** | 1 | 3 | 6 | 8 | 3 | Complete elementary deduction with exact checks; no novelty claim. |
-| 30 | [GPS: Gaussian power sums](related-results/GaussianPowerSumConjectures.md) | **5** | 1 | 6 | 4 | 6 | 5 | Complete unchecked proofs of two formulas plus exact counterexamples to two broader claims. |
-| 31 | [DWORK-BOUNDARY: failure of the proposed shortcut](related-results/FrobeniusQuotientConstantTerms.md#3-what-the-standard-dwork-theorem-does-not-supply-automatically) | **4** | 1 | 5 | 5 | 9 | 2 | Complete exact counterexamples delimiting the constant-term approach. |
-| 32 | [GFT: Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md) | **4** | 3 | 4 | 7 | 8 | 3 | Complete elementary deduction; literature priority unchecked. |
-| 33 | [AA-TOWER: \(p\)-adic compactness framework](related-results/PadicArzelaAscoliSupercongruenceTowers.md) | **4** | 2 | 3 | 6 | 8 | 4 | Complete framework and obstruction; horizontal unit-shell interpolation remains open. |
-| 34 | [BOX-d: higher-degree box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md) | **4** | 2 | 2 | 8 | 7 | 3 | Complete unchecked theorem; likely classical infrastructure. |
-| 35 | [GWL-POLY: Gaussian box polynomial](related-results/GaussianWolstenholmeCitationNetwork.md#2-the-polynomial-conjecture) | **4** | 1 | 6 | 4 | 6 | 5 | Complete unchecked finite-field polynomial formulas. |
+| 25 | [USAMO-HAM: dyadic Hamming supercongruence](related-results/USAMODyadicHammingSupercongruence.md) | **6** | 6 | 6 | 9 | 8 | 3 | Complete exact-enumeration, Walsh-packet, polynomial-tower, and exceptional-prime theorem with more than 5,000 checks; priority provisional. |
+| 26 | [ETA-3: cubic extension at \(p=3\)](related-results/EtaPrime3CubicExtension.md) | **6** | 1 | 6 | 5 | 6 | 5 | Complete unchecked draft addressing an exceptional prime in a published theorem. |
+| 27 | [GWL-POWER: obstruction and corrected theorem](related-results/GaussianWolstenholmeCitationNetwork.md#3-the-exact-obstruction-to-the-higher-power-conjecture) | **6** | 1 | 7 | 5 | 6 | 5 | Complete unchecked correction and infinite failure mechanism for a printed conjecture. |
+| 28 | [FQ-CT: first Frobenius quotient](related-results/FrobeniusQuotientConstantTerms.md) | **5** | 2 | 3 | 8 | 9 | 3 | Complete elementary theorem and boundary analysis; no novelty claim. |
+| 29 | [FF-DET: determinant bias and supercongruence](related-results/FiniteFieldDeterminantBiasSupercongruence.md) | **5** | 7 | 4 | 8 | 9 | 3 | Proved elementary theorem; count is classical and priority of the sharp adjacent-extension formulation is provisional. |
+| 30 | [BS-DWORK: Bhatt--Singh/Dwork period scaling](related-results/BhattSinghDworkPeriodSupercongruence.md) | **5** | 1 | 3 | 6 | 8 | 3 | Complete elementary deduction with exact checks; no novelty claim. |
+| 31 | [GPS: Gaussian power sums](related-results/GaussianPowerSumConjectures.md) | **5** | 1 | 6 | 4 | 6 | 5 | Complete unchecked proofs of two formulas plus exact counterexamples to two broader claims. |
+| 32 | [DWORK-BOUNDARY: failure of the proposed shortcut](related-results/FrobeniusQuotientConstantTerms.md#3-what-the-standard-dwork-theorem-does-not-supply-automatically) | **4** | 1 | 5 | 5 | 9 | 2 | Complete exact counterexamples delimiting the constant-term approach. |
+| 33 | [GFT: Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md) | **4** | 3 | 4 | 7 | 8 | 3 | Complete elementary deduction; literature priority unchecked. |
+| 34 | [AA-TOWER: \(p\)-adic compactness framework](related-results/PadicArzelaAscoliSupercongruenceTowers.md) | **4** | 2 | 3 | 6 | 8 | 4 | Complete framework and obstruction; horizontal unit-shell interpolation remains open. |
+| 35 | [BOX-d: higher-degree box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md) | **4** | 2 | 2 | 8 | 7 | 3 | Complete unchecked theorem; likely classical infrastructure. |
+| 36 | [GWL-POLY: Gaussian box polynomial](related-results/GaussianWolstenholmeCitationNetwork.md#2-the-polynomial-conjecture) | **4** | 1 | 6 | 4 | 6 | 5 | Complete unchecked finite-field polynomial formulas. |
 
 ## Reductions, computational targets, and synthesis
 
@@ -102,6 +103,9 @@ ambient restriction/Kakeya transform, which is not yet proved.
 FF-CONV gives the constant-spectrum companion: it compiles the determinant
 and Pfaffian packets into all convolution fibers, exact mixing, and two
 infinite sharp supercongruence families.
+USAMO-HAM supplies a different radix-two branch: a forced-halving geometry
+becomes a Hamming-orbit transform, a compressed XOR-convolution algorithm,
+and a derivative-controlled \(p\)-adic tower.
 The q-calculus line is especially broad: Landau depth predicts cyclotomic
 multiplicity, while a quadratic pair-energy computes the complete second
 q-jet. The
