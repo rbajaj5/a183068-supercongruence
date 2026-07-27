@@ -108,6 +108,27 @@ $q\mapsto q^{p^2}$ is the second Frobenius iterate. This is an
 interpretation of the elementary polynomial theorem, not a claim that
 prismatic cohomology was used in its proof.
 
+## Public finite-field Fourier follow-on
+
+The
+[hyperdeterminant convolution theorem](related-results/HyperdeterminantConvolutionTower.md)
+uses exact Fourier inversion on \(\mathbf F_q\) to determine the distribution
+of every sum
+\[
+\Delta(T_1)+\cdots+\Delta(T_m).
+\]
+Each convolution power has only three fiber classes: zero, nonzero square,
+and nonsquare. For every odd prime and every class it proves the sharp law
+\[
+v_p\!\left(C_m^\sigma(p^r)-C_m^\sigma(p^{r-1})\right)
+=(4m-1)(r-1).
+\]
+The same calculation gives a quantitative total-variation mixing bound.
+This is finite-field harmonic analysis in the restriction/Kakeya orbit:
+the note carefully separates the proved scalar pushforward spectrum from
+the still-open ambient Fourier transform of a hyperdeterminant level set.
+It makes no geometric-Langlands or cryptographic-extractor claim.
+
 ## Public Jacobian-counterexample follow-on
 
 The
@@ -277,6 +298,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/QCalculusCyclotomicSupercongruences.md](related-results/QCalculusCyclotomicSupercongruences.md):
   the q-calculus theorem generator, square A183068 lift, corrected cubic
   theorem, and prismatic interpretation.
+- [related-results/HyperdeterminantConvolutionTower.md](related-results/HyperdeterminantConvolutionTower.md):
+  exact additive convolution fibers, sharp adjacent-extension valuations,
+  Fourier mixing, and the boundary of the ambient restriction/Kakeya problem.
 - [related-results/WeightedLiftCollisionSynthesis.md](related-results/WeightedLiftCollisionSynthesis.md):
   the all-degree tangent-curve collision theorem, genus ladder, zeta
   decomposition, and universal corrected tower.
@@ -311,7 +335,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all twenty-six
+- [verification/run_all.py](verification/run_all.py): one command for all twenty-seven
   verification programs.
 
 The broader working repository remains available at

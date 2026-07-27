@@ -192,6 +192,26 @@ Source-status labels are separate from proof status:
 - **Proof:** [Hyperdeterminant Fourier supercongruence](related-results/HyperdeterminantFourierSupercongruence.md)
 - **Exact checker:** [`verify_hyperdeterminant_fourier.py`](verification/related/verify_hyperdeterminant_fourier.py)
 
+### FF-HCONV - hyperdeterminant convolution tower
+
+- **Claim:** Every \(m\)-fold additive convolution fiber of Cayley's
+  \(2\times2\times2\) hyperdeterminant has an explicit three-class formula
+  (zero, nonzero square, and nonsquare). For every odd prime, \(m\geq1\),
+  \(r\geq2\), and each of the three classes,
+  \[
+  v_p\!\left(C_m^\sigma(p^r)-C_m^\sigma(p^{r-1})\right)
+  =(4m-1)(r-1).
+  \]
+  The same spectrum gives an explicit total-variation mixing estimate for
+  sums of independent hyperdeterminants.
+- **Status:** Complete elementary Fourier theorem with exact convolution,
+  valuation, and mixing checks. The finite-field Fourier machinery is
+  classical; priority of this explicit family is provisional. This is a
+  scalar pushforward result, not yet an ambient restriction or Kakeya
+  theorem.
+- **Proof:** [Fourier convolution towers for the hyperdeterminant](related-results/HyperdeterminantConvolutionTower.md)
+- **Exact checker:** [`verify_hyperdeterminant_convolution.py`](verification/related/verify_hyperdeterminant_convolution.py)
+
 ### JC-WL - all-degree weighted-lift collision theorem
 
 - **Claim:** If a normalized weighted-lift Keller map has generic fiber
