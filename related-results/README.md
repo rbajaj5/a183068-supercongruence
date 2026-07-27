@@ -43,6 +43,7 @@ impact.
 | 7 | [Gaussian canonical-product synthesis](GaussianLucasCanonicalProducts.md) | Extracts the dominant logarithmic-moment mechanism, proves that the normalized ramified block is a bijective disk isometry, and extends it to a first-moment-dominance chamber | Proved local theorem plus open research program |
 | 8 | [Gaussian product dynamics](GaussianProductDynamicsConjectures.md) | Proves the exact return valuation and finite-quotient cycle profile for every unit translation; asks whether the map is actually conjugate to addition | Complete deduction from the ramified moment estimates; conjugacy open |
 | 9 | [Cubic angular residue](GaussianAngularResidueTheorem.md) | Combines a \(C_4\) Fourier projection with Kummer congruence; replaces a false constant-valuation conjecture by an explicit residue and a universal inert-prime counterexample family | Complete proof candidate with 1,087 exact residue checks; independent review and priority search required |
+| 9A | [Gaussian angular X-ray spectrum](GaussianKakeyaSpectrum.md) | Recasts unit-norm Gaussian directions as three spectral idempotents, proves the exact planar second moment, and isolates the higher-dimensional phase-selection obstruction | Complete elementary bridge; no novelty claim; structured tensor-direction spectrum open |
 | 10 | [Gaussian Lucas literature puzzle](GaussianLucasLiteraturePuzzle.md) | Connects the product theorem to Dwork/Frobenius theory, generalized factorials, and compatible $p$-adic dynamics | Literature map; bridges ranked by strength |
 | 11 | [Gaussian power-sum conjectures](GaussianPowerSumConjectures.md) | Uses fourth-root and affine-orbit cancellation in the same residue-stratification spirit | Two formula proofs, a cubic residue theorem, and exact counterexamples; independent review required |
 | 12 | [Higher-degree finite-field box polynomials](HigherDegreeFiniteFieldBoxPolynomials.md) | Generalizes the Gaussian polynomial factorization to every finite-field degree | Complete elementary theorem; likely classical infrastructure |
@@ -121,6 +122,7 @@ The individual correspondence is:
 | Gaussian Frobenius twists | `verification/related/verify_gaussian_twists.py` |
 | Gaussian power sums | `verification/related/verify_gaussian_power_sums.py` |
 | Gaussian cubic angular residue | `verification/related/verify_gaussian_angular_residue.py` |
+| Gaussian angular X-ray spectrum | `verification/related/verify_gaussian_kakeya_spectrum.py` |
 | Gaussian Wolstenholme network | `verification/related/verify_gaussian_wolstenholme.py` |
 | Gaussian product isometry | `verification/related/verify_gaussian_product_isometry.py` |
 | Gaussian product dynamics | `verification/related/experiment_gaussian_product_dynamics.py` (run separately; includes deeper finite-quotient tests) |
