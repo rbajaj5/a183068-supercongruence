@@ -213,6 +213,27 @@ Source-status labels are separate from proof status:
 - **Proof:** [All-degree collision theorem for weighted-lift Keller maps](related-results/WeightedLiftCollisionSynthesis.md)
 - **Exact checker:** [`verify_weighted_lift_collision_synthesis.py`](verification/related/verify_weighted_lift_collision_synthesis.py)
 
+### JC-AUTO - fixed-precision Frobenius obstruction automata
+
+- **Claim:** For every good prime \(p\) and fixed \(k\ge1\), the levels
+  satisfying
+  \[
+  p^k\mid\mathcal V_r-\mathcal V_{r-1}
+  \]
+  form an eventually periodic set with rational density. Equivalently,
+  their unary encodings form a regular language. A deterministic state is
+  supplied explicitly by the curve-trace recurrence modulo \(p^k\) and the
+  finite Frobenius-orbit phase. Modulo \(p\), deleting the vanishing
+  coefficients of the local \(L\)-polynomial gives an invertible
+  lower-order automaton and a sharper period bound. The corrected tower
+  always retains exact valuation \(2r-2\).
+- **Status:** Complete structural theorem with exact recurrence checks at
+  four successive precisions for the genus-three and genus-six examples.
+  Standard finite-state infrastructure is applied to the weighted-lift
+  collision tower; literature priority for this formulation is provisional.
+- **Proof:** [Frobenius obstruction automata](related-results/FrobeniusObstructionAutomata.md)
+- **Exact checker:** [`verify_frobenius_obstruction_automata.py`](verification/related/verify_frobenius_obstruction_automata.py)
+
 ### JC-FF - finite-field arithmetic of the Fable counterexample
 
 - **Claim:** For the three-dimensional Jacobian-conjecture counterexample
