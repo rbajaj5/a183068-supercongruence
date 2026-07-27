@@ -145,4 +145,3 @@ The accompanying exact checker constructs the Hensel root and all exponent
 classes through precision \(2^{32}\):
 
 [`verify_gq2_orientation_lifts.py`](../verification/related/verify_gq2_orientation_lifts.py).
-
