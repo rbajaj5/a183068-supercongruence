@@ -178,6 +178,16 @@ For the genus-six example, the exact densities through \(5^4\) are
 \(7/39,8/195,2/195,\) and \(11/3900\). This is an exact finite-state
 classification, not a claim of pseudorandomness or cryptographic hardness.
 
+The
+[Gaussian base-change theorem](related-results/GaussianBaseChangeJacobianCollisions.md)
+connects this collision program to prime ideals. A prime ideal with
+ramification index \(e\) and residue degree \(f\) gives exact corrected
+valuation \(2ef(r-1)\). Over \(\mathbf Z[i]\), split primes use Frobenius
+\(F\), while inert primes use \(F^2\). In degree four, this squared
+Frobenius kills all quadratic Artin signs: every good inert Gaussian prime
+has raw valuation \(2r-2\), and the complete Tate correction has valuation
+\(4r-4\).
+
 ## Public Gaussian-prime follow-on
 
 The most concise shareable follow-on is
@@ -259,6 +269,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/FrobeniusObstructionAutomata.md](related-results/FrobeniusObstructionAutomata.md):
   the fixed-\(p\)-adic-precision automaton theorem, rational-density law,
   and higher-precision degree-six and degree-seven examples.
+- [related-results/GaussianBaseChangeJacobianCollisions.md](related-results/GaussianBaseChangeJacobianCollisions.md):
+  the prime-ideal \(2ef(r-1)\) theorem and the split/inert Gaussian
+  degree-four collision law.
 - [related-results/JacobianCounterexampleFiniteFieldCounts.md](related-results/JacobianCounterexampleFiniteFieldCounts.md):
   complete finite-field fiber statistics, collision zeta function, and the
   characteristic-\(3\) adjacent-extension gain for the Fable counterexample.
@@ -281,7 +294,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all twenty-four
+- [verification/run_all.py](verification/run_all.py): one command for all twenty-five
   verification programs.
 
 The broader working repository remains available at

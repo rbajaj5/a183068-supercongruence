@@ -24,11 +24,12 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 1A | [q-calculus and cyclotomic supercongruences](QCalculusCyclotomicSupercongruences.md) | Turns Landau depth into exact root-of-unity multiplicity; gives a square q-lift of A183068 and an explicit corrected cubic theorem for depth-three families | Complete deductions from Clark and Straub; exact polynomial checks; priority preliminary |
 | 1B | [All-degree weighted-lift collision theorem](WeightedLiftCollisionSynthesis.md) | Turns collision counting into one second divided-difference curve in every degree; gives a genus ladder and a universal corrected tower | Complete theorem with cross-degree checks; priority preliminary |
 | 1C | [Frobenius obstruction automata](FrobeniusObstructionAutomata.md) | Converts every fixed-precision raw collision congruence into an eventually periodic unary language with rational density; the corrected tower remains universal | Complete structural theorem with exact checks through four precisions; priority preliminary |
-| 1D | [Finite-field counts for the Fable Jacobian counterexample](JacobianCounterexampleFiniteFieldCounts.md) | Uses the same adjacent-extension viewpoint to organize cubic fibers, collisions, and Frobenius counts of the new counterexample | Complete elementary theorem with exact checks; priority preliminary |
-| 1E | [Degree-four Jacobian Frobenius obstruction](JacobianDegreeFourFrobeniusObstruction.md) | Shows how quadratic Artin factors obstruct raw adjacency and how two-step or corrected towers recover exact congruences | Complete elementary theorem with exact checks; priority preliminary |
-| 1F | [Degree-five elliptic Frobenius packet](JacobianDegreeFiveEllipticFrobenius.md) | Shows the next transition: a tangent cubic contributes a non-CM elliptic trace, and removing the full Frobenius packet leaves an exact \(2r-2\) tower | Complete theorem with direct finite-field and tower checks; priority preliminary |
-| 1G | [Degree-six genus-three Frobenius obstruction](JacobianDegreeSixGenusThree.md) | Gives the first explicit higher-genus packet and a permanent raw obstruction at \(p=13\) | Complete theorem with extension-field and symbolic checks; priority preliminary |
-| 1H | [Degree-seven genus-six Frobenius automaton](JacobianDegreeSevenGenusSix.md) | Produces the period-\(156\) example that motivates the general fixed-precision automaton | Complete theorem with exact counts through \(\mathbf F_{5^6}\); priority preliminary |
+| 1D | [Gaussian base change for Jacobian collisions](GaussianBaseChangeJacobianCollisions.md) | Moves the collision theorem to prime ideals; split Gaussian primes use \(F\), inert primes use \(F^2\), and the degree-four Artin obstruction disappears in the inert tower | Complete theorem with exact split/inert checks; priority preliminary |
+| 1E | [Finite-field counts for the Fable Jacobian counterexample](JacobianCounterexampleFiniteFieldCounts.md) | Uses the same adjacent-extension viewpoint to organize cubic fibers, collisions, and Frobenius counts of the new counterexample | Complete elementary theorem with exact checks; priority preliminary |
+| 1F | [Degree-four Jacobian Frobenius obstruction](JacobianDegreeFourFrobeniusObstruction.md) | Shows how quadratic Artin factors obstruct raw adjacency and how two-step or corrected towers recover exact congruences | Complete elementary theorem with exact checks; priority preliminary |
+| 1G | [Degree-five elliptic Frobenius packet](JacobianDegreeFiveEllipticFrobenius.md) | Shows the next transition: a tangent cubic contributes a non-CM elliptic trace, and removing the full Frobenius packet leaves an exact \(2r-2\) tower | Complete theorem with direct finite-field and tower checks; priority preliminary |
+| 1H | [Degree-six genus-three Frobenius obstruction](JacobianDegreeSixGenusThree.md) | Gives the first explicit higher-genus packet and a permanent raw obstruction at \(p=13\) | Complete theorem with extension-field and symbolic checks; priority preliminary |
+| 1I | [Degree-seven genus-six Frobenius automaton](JacobianDegreeSevenGenusSix.md) | Produces the period-\(156\) example that motivates the general fixed-precision automaton | Complete theorem with exact counts through \(\mathbf F_{5^6}\); priority preliminary |
 | 2 | [Frobenius quotients of constant-term sequences](FrobeniusQuotientConstantTerms.md) | Proves the universal first-order expansion, identifies the exact rank-one condition behind the Cooper law, and gives exact counterexamples to two proposed Dwork shortcuts | Complete elementary theorem; Dwork boundaries certified |
 | 3 | [p-adic Arzelà--Ascoli framework](PadicArzelaAscoliSupercongruenceTowers.md) | Proves the vertical limit supplied by A183068, uses the Banach contraction $x\mapsto px$ to rule out a global continuous interpolation, and proves uniform quadratic contraction of every normalized defect at zero | Complete elementary framework and obstruction; unit-shell estimate open |
 | 4 | [Gaussian Frobenius twists](GaussianFrobeniusTwists.md) | Shows that discard-and-rescale proofs lift to roots-of-unity weights; specializes A183068 to a Gaussian split/inert congruence | Complete elementary deduction; priority unchecked |
@@ -52,6 +53,8 @@ The directory currently contains these especially reviewable claims:
 - the fixed-precision Frobenius automaton theorem, which makes every good
   weighted-lift raw-congruence level set eventually periodic with rational
   density;
+- the prime-ideal base-change theorem and its split/inert Gaussian
+  specialization for the degree-four collision tower;
 - the universal first-order Frobenius-quotient identity for constant-term
   sequences and its A183068 corollary;
 - the vertical-limit theorem and normalized-defect compactness framework for
@@ -87,6 +90,7 @@ The individual correspondence is:
 | q-calculus and cyclotomic lifts | `verification/related/verify_q_calculus_supercongruence.py` |
 | All-degree weighted-lift collisions | `verification/related/verify_weighted_lift_collision_synthesis.py` |
 | Frobenius obstruction automata | `verification/related/verify_frobenius_obstruction_automata.py` |
+| Gaussian base change for Jacobian collisions | `verification/related/verify_gaussian_base_change_collisions.py` |
 | Fable Jacobian-counterexample counts | `verification/related/verify_jacobian_counterexample_counts.py` |
 | Degree-four Jacobian collisions | `verification/related/verify_jacobian_degree_four.py` |
 | Degree-five Jacobian collisions | `verification/related/verify_jacobian_degree_five.py` |

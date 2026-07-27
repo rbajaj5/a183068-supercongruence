@@ -234,6 +234,27 @@ Source-status labels are separate from proof status:
 - **Proof:** [Frobenius obstruction automata](related-results/FrobeniusObstructionAutomata.md)
 - **Exact checker:** [`verify_frobenius_obstruction_automata.py`](verification/related/verify_frobenius_obstruction_automata.py)
 
+### JC-GAUSS - Gaussian base change of collision towers
+
+- **Claim:** At a good prime ideal \(\mathfrak p\) with ramification index
+  \(e\) and residue degree \(f\), the completely corrected collision tower
+  has exact adjacent valuation \(2ef(r-1)\), and every fixed-precision raw
+  congruence pattern is eventually periodic. For maps defined over
+  \(\mathbf Z\), base change replaces Frobenius \(F\) by \(F^f\). Thus split
+  Gaussian primes see \(F\), while inert primes see \(F^2\). In the
+  degree-four lift, inert base change freezes every quadratic Artin sign and
+  gives the uncorrected law
+  \[
+  v_p\bigl(\mathcal V_4(p^{2r})-\mathcal V_4(p^{2r-2})\bigr)=2r-2.
+  \]
+  The complete correction has valuation \(4r-4\).
+- **Status:** Complete prime-ideal and degree-four theorem with exact
+  split/inert checks. It combines standard base-change algebra with the
+  repository's collision formula; literature priority for this formulation
+  is provisional.
+- **Proof:** [Gaussian base change for Jacobian collisions](related-results/GaussianBaseChangeJacobianCollisions.md)
+- **Exact checker:** [`verify_gaussian_base_change_collisions.py`](verification/related/verify_gaussian_base_change_collisions.py)
+
 ### JC-FF - finite-field arithmetic of the Fable counterexample
 
 - **Claim:** For the three-dimensional Jacobian-conjecture counterexample
