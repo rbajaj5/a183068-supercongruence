@@ -212,6 +212,27 @@ Source-status labels are separate from proof status:
 - **Proof:** [Fourier convolution towers for the hyperdeterminant](related-results/HyperdeterminantConvolutionTower.md)
 - **Exact checker:** [`verify_hyperdeterminant_convolution.py`](verification/related/verify_hyperdeterminant_convolution.py)
 
+### FF-CONV - determinant and Pfaffian convolution towers
+
+- **Claim:** A finite-field invariant whose nontrivial additive Fourier
+  coefficients all equal \(q^E U(q)\), with \(U(0)\) a unit, has explicit
+  zero and nonzero fibers at every convolution length \(\ell\). Both classes
+  satisfy the sharp adjacent law
+  \[
+  v_p\!\left(N_{\ell,\star}(p^r)-N_{\ell,\star}(p^{r-1})\right)
+  =(E\ell-1)(r-1).
+  \]
+  Applying this to determinant and Pfaffian produces two infinite
+  supercongruence families and an exact total-variation mixing identity.
+  More generally, the orbit-spectrum compiler evaluates an arbitrary
+  convolution power from one scalar power per dual orbit; these examples
+  require only two or three spectral packets.
+- **Status:** Complete elementary Fourier theorem with exact checks,
+  including \(p=2\). The input character sums and Fourier inversion are
+  classical; priority of the all-convolution formulation is provisional.
+- **Proof:** [Constant-spectrum determinant and Pfaffian convolution towers](related-results/DeterminantPfaffianConvolutionTowers.md)
+- **Exact checker:** [`verify_determinant_pfaffian_convolution.py`](verification/related/verify_determinant_pfaffian_convolution.py)
+
 ### JC-WL - all-degree weighted-lift collision theorem
 
 - **Claim:** If a normalized weighted-lift Keller map has generic fiber
