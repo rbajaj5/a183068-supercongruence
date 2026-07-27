@@ -233,6 +233,30 @@ Source-status labels are separate from proof status:
 - **Proof:** [Constant-spectrum determinant and Pfaffian convolution towers](related-results/DeterminantPfaffianConvolutionTowers.md)
 - **Exact checker:** [`verify_determinant_pfaffian_convolution.py`](verification/related/verify_determinant_pfaffian_convolution.py)
 
+### USAMO-HAM - dyadic Hamming supercongruence
+
+- **Claim:** The number \(T(n)\) of labeled all-isosceles triangulations of
+  a regular \(n\)-gon is determined exactly by the odd part of \(n\):
+  it is \(n/2\) for powers of two, \(n/3\) when the odd part is \(3\), \(n\)
+  when the odd part is \(2^b+1\) with \(b\geq2\), and zero otherwise. The
+  support becomes the radius-two Hamming ball in binary. Its Walsh spectrum
+  has \(d+1\) Krawtchouk packets, and its \(\ell\)-fold zero-XOR count
+  \(Z_\ell(d)\) is an integer-valued polynomial satisfying
+  \[
+  Z_\ell(p^r)\equiv Z_\ell(p^{r-1})\pmod {p^{r-1}}
+  \]
+  for \(p>\ell\). A derivative obstruction decides sharpness; the first
+  exception is
+  \[
+  v_{439}\!\left(Z_6(439^r)-Z_6(439^{r-1})\right)=r.
+  \]
+- **Status:** Complete elementary theorem with exact geometric, Walsh,
+  convolution, polynomial, and valuation checks. The USAMO classification
+  and Hamming-scheme Fourier theory are classical; priority of the exact
+  enumeration and assembled tower is provisional.
+- **Proof:** [From an isosceles triangulation to a Hamming-scheme supercongruence](related-results/USAMODyadicHammingSupercongruence.md)
+- **Exact checker:** [`verify_usamo_hamming_supercongruence.py`](verification/related/verify_usamo_hamming_supercongruence.py)
+
 ### JC-WL - all-degree weighted-lift collision theorem
 
 - **Claim:** If a normalized weighted-lift Keller map has generic fiber

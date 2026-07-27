@@ -29,6 +29,7 @@ impact.
 | 1C.2 | [All-precision unit-root lifting](PadicValuationExpansion.md) | Proves the degree-seven trace period \(39\cdot5^{k-1}\) at every precision, computes the \(5^5\) and \(5^6\) valuation polynomials, and identifies the profinite valuation grid | Complete structural theorem with direct certificates; priority preliminary |
 | 1C.3 | [Hyperdeterminant convolution tower](HyperdeterminantConvolutionTower.md) | Uses exact finite-field Fourier inversion to determine every convolution fiber, prove a sharp infinite adjacent-extension family, and quantify mixing; it isolates the ambient restriction/Kakeya transform as the next problem | Complete elementary theorem with exact checks; priority preliminary |
 | 1C.4 | [Determinant and Pfaffian convolution towers](DeterminantPfaffianConvolutionTowers.md) | Extracts a constant-spectrum Fourier compiler and obtains all convolution fibers, exact mixing, and sharp \((\ell E-1)(r-1)\) towers for two classical relative invariants | Complete elementary theorem with exact checks; priority preliminary |
+| 1C.5 | [USAMO dyadic Hamming supercongruence](USAMODyadicHammingSupercongruence.md) | Turns the forced-halving solution of a named olympiad problem into an exact enumeration, a \(d+1\)-packet Walsh algorithm, and a polynomial adjacent-extension tower with exceptional prime \(439\) | Complete elementary theorem with exact checks; priority preliminary |
 | 1D | [Finite-field counts for the Fable Jacobian counterexample](JacobianCounterexampleFiniteFieldCounts.md) | Uses the same adjacent-extension viewpoint to organize cubic fibers, collisions, and Frobenius counts of the new counterexample | Complete elementary theorem with exact checks; priority preliminary |
 | 1E | [Degree-four Jacobian Frobenius obstruction](JacobianDegreeFourFrobeniusObstruction.md) | Shows how quadratic Artin factors obstruct raw adjacency and how two-step or corrected towers recover exact congruences | Complete elementary theorem with exact checks; priority preliminary |
 | 1F | [Degree-five elliptic Frobenius packet](JacobianDegreeFiveEllipticFrobenius.md) | Shows the next transition: a tangent cubic contributes a non-CM elliptic trace, and removing the full Frobenius packet leaves an exact \(2r-2\) tower | Complete theorem with direct finite-field and tower checks; priority preliminary |
@@ -69,6 +70,8 @@ The directory currently contains these especially reviewable claims:
   Fourier mixing law for Cayley's \(2\times2\times2\) hyperdeterminant;
 - the constant-spectrum convolution theorem and its determinant and Pfaffian
   supercongruence families;
+- the exact USAMO isosceles-triangulation count and the resulting
+  Hamming-scheme supercongruence with its first exceptional prime;
 - the cubic $(\eta)$ congruence at the missing prime $3$;
 - the Gaussian Lucas congruence modulo $p^3$ at every inert prime $p>5$; and
 - the exact adjacent-scale valuation at the ramified prime $1+i$;
@@ -108,6 +111,7 @@ The individual correspondence is:
 | p-adic Arzelà--Ascoli framework | Elementary ultrametric, contraction, and compactness proofs |
 | Hyperdeterminant convolution tower | `verification/related/verify_hyperdeterminant_convolution.py` |
 | Determinant and Pfaffian convolution towers | `verification/related/verify_determinant_pfaffian_convolution.py` |
+| USAMO dyadic Hamming tower | `verification/related/verify_usamo_hamming_supercongruence.py` |
 | Cubic $(\eta)$ | `verification/related/verify_eta_prime3.py` |
 | Cooper level 11 | `verification/related/verify_cooper_level11.py` |
 | Gaussian Frobenius twists | `verification/related/verify_gaussian_twists.py` |

@@ -144,6 +144,15 @@ powers therefore require only a constant number of scalar exponentiations,
 not a length-\(q\) FFT. This is a structured spectral shortcut, not an
 improvement to general audio-codec FFTs.
 
+The
+[USAMO dyadic follow-on](related-results/USAMODyadicHammingSupercongruence.md)
+starts from the forced-halving proof of 2008 USAMO Problem 4. It gives the
+exact number of all-isosceles triangulations, identifies the admissible
+binary indices with a radius-two Hamming ball, and reduces its \(2^d\)-point
+Walsh convolution to \(d+1\) Krawtchouk packets. The resulting zero-XOR
+polynomials form an adjacent-extension supercongruence family whose first
+exceptional prime is \(439\).
+
 ## Public Jacobian-counterexample follow-on
 
 The
@@ -319,6 +328,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/DeterminantPfaffianConvolutionTowers.md](related-results/DeterminantPfaffianConvolutionTowers.md):
   the constant-spectrum compiler, two infinite sharp convolution families,
   and exact determinant/Pfaffian mixing.
+- [related-results/USAMODyadicHammingSupercongruence.md](related-results/USAMODyadicHammingSupercongruence.md):
+  exact isosceles-triangulation counts, Hamming-orbit Walsh compression, and
+  the derivative-controlled adjacent tower.
 - [related-results/WeightedLiftCollisionSynthesis.md](related-results/WeightedLiftCollisionSynthesis.md):
   the all-degree tangent-curve collision theorem, genus ladder, zeta
   decomposition, and universal corrected tower.
@@ -353,7 +365,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all twenty-eight
+- [verification/run_all.py](verification/run_all.py): one command for all twenty-nine
   verification programs.
 
 The broader working repository remains available at
