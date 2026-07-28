@@ -49,6 +49,7 @@ impact.
 | 13 | [Binary $s_{18}$ reduction](S18TwoAdicReduction.md) | Isolates the exact sharpened scaling lemma still needed at $p=2$ | Substantial reduction; naive factor-by-factor proof refuted |
 | 14 | [Gaussian citation-network boundary report](GaussianCitationNetworkBoundaryReport.md) | Records rigorous limits of the Gaussian search, including Erdős--Moser reductions | Reduction and bounded search, not a global solution |
 | 15 | [Cooper level-11 rare primes](CooperLevel11RarePrimes.md) | Isolates the first obstruction and records a 350-case first-order Frobenius law reducing the full $r=1$ conjecture to it | Computational theorem target; fixed-prime automata route is conditional on finding a rational diagonal |
+| 16 | [Public 2-adic Roe-inspired follow-on](../ROE_2ADIC.md) | Gives a clean comparison case for small-prime lifting, identifies the source's shear as outer Dehn twists, and computes the exact affine commutator filtration | Complete elementary sharpening and structural extraction from Roe--Turturean; checked through \(2^{32}\); no novelty claim |
 
 ## Strongest present claims
 
@@ -126,6 +127,7 @@ The individual correspondence is:
 | Gaussian product dynamics | `verification/related/experiment_gaussian_product_dynamics.py` (run separately; includes deeper finite-quotient tests) |
 | Higher-degree box polynomials | `verification/related/verify_higher_degree_box_polynomial.py` |
 | Gaussian Erdős--Moser boundary search | `verification/related/verify_gaussian_erdos_moser.py` |
+| Exact GQ2 orientation lifts | `verification/related/verify_gq2_orientation_lifts.py` |
 
 The binary $s_{18}$ file is a reduction rather than a completed theorem and
 does not yet have a dedicated checker.
