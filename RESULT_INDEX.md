@@ -598,7 +598,9 @@ Source-status labels are separate from proof status:
   $\binom{2m-1}{j}$ and total-variation cutoff at
   $((2m-1)/2)\log(2m-1)$. Restricting instead to the fixed Cayley generators
   $\mathcal T_{\pm1},5^{\pm1},-1$ produces a cyclotomic unit spectrum and
-  explicit spectral-gap bounds of order $4^{-m}$.
+  explicit spectral-gap bounds of order $4^{-m}$. Affine words also admit a
+  unique translation-first grammar, and finite-group almost periodicity gives
+  large difference sets of approximate symmetries for dense twist averages.
 - **Status:** Complete elementary sharpening of Roe--Turturean Remark C.7;
   no claim of novelty and no change to their main classification theorem.
 - **Public landing page:** [Public 2-adic Roe-inspired follow-on](ROE_2ADIC.md)
@@ -608,6 +610,8 @@ Source-status labels are separate from proof status:
 - **Sampling checker:** [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py)
 - **Fixed-generator corollary:** [A fixed-generator Cayley walk on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistCayleyWalk.md)
 - **Cayley checker:** [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py)
+- **Grammar and almost-periodicity corollary:** [Affine-word grammar and almost periodicity of dyadic twists](related-results/DyadicTwistGrammarAlmostPeriodicity.md)
+- **Grammar checker:** [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py)
 - **Current-PDF audit:** [Targeted Appendix C--D audit](related-results/GQ2CurrentPdfAudit.md)
 - **Appendix checker:** [`verify_gq2_appendices.py`](verification/related/verify_gq2_appendices.py)
 

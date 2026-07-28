@@ -9,9 +9,11 @@ The detailed proofs and checker are:
 - [orientation lifts, Dehn twists, and affine symmetry](related-results/GQ2OrientationLifts.md);
 - [exact sampling and mixing on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistSampler.md);
 - [a fixed-generator Cayley walk on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistCayleyWalk.md);
-- [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py); and
-- [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py); and
-- [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py).
+- [affine-word grammar and almost periodicity of dyadic twists](related-results/DyadicTwistGrammarAlmostPeriodicity.md);
+- [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py);
+- [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py);
+- [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py); and
+- [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py).
 
 [RT]: https://roed314.github.io/gq2/paper.pdf
 [Gropper]: https://arxiv.org/abs/2303.04309
@@ -174,6 +176,32 @@ Thus the calculation is cyclotomic, and the relaxation time is
 $\Theta(4^m)$. This quantifies the algorithmic price of restricting the
 sampler to fixed local group operations.
 
+### 7. Grammar and twist almost periodicity
+
+Writing $T_b=M(1,b)$ and $U_u=M(u,0)$ gives the exact rewrite rule
+
+$$
+U_uT_b=T_{ub}U_u.
+$$
+
+Every affine word therefore has a unique translation-first normal form
+$T_bU_u$. On a fixed unit fiber, averaging any bounded observable over a
+dense set $A$ of twist parameters is exactly additive convolution on
+$\mathbb Z/2^m\mathbb Z$.
+
+Wigderson's finite-group almost-periodicity theorem then gives a set $X$ of
+density at least
+
+$$
+\alpha^{Cp/\varepsilon^2}
+$$
+
+such that every $c\in X-X$ is an $\ell^p$-almost period, with error at most
+$\varepsilon$, for the averaged observable. Fourier characters identify
+these approximate symmetries with cyclotomic phases. This is a specialization
+of an existing theorem, not a new priority claim or an improvement of the
+Cayley spectral gap.
+
 ## Source boundary
 
 | Item | Status |
@@ -187,6 +215,8 @@ sampler to fixed local group operations.
 | Equivariance on the Appendix C.5 defect stages | Deduction recorded here |
 | Optimal lift-bit sampler and coordinate-refresh spectrum | Elementary deduction recorded here; classical finite-probability machinery |
 | Fixed-generator Cayley walk and cyclotomic gap bounds | Elementary deduction recorded here; priority not claimed |
+| Affine normal-form grammar | Elementary deduction recorded here |
+| Twist almost-periodicity estimate | Direct specialization of Wigderson/Croot--Sisask; no novelty claim |
 
 This project does not claim to correct Roe--Turturean's presentation theorem.
 It does not claim a new A183068 supercongruence. Literature novelty is not
@@ -208,6 +238,10 @@ The Cayley-walk checker constructs the full transition matrices through
 modulus $2^5$ and verifies symmetry, stochasticity, irreducibility,
 nonnegative spectrum, the cyclotomic unit eigenfunction, and both gap bounds.
 
+The grammar checker verifies more than 2.4 million exact rewrite identities,
+all unique normal forms through modulus $2^7$, and 10,912 exact
+twist-convolution identities.
+
 A second exact checker independently reproduces the manuscript's Proposition
 C.10 norm calculations and the Appendix D counts for $S_3$ and $S_4$. See the
 [current-PDF audit](related-results/GQ2CurrentPdfAudit.md).
@@ -218,6 +252,7 @@ Run:
 python verification/related/verify_gq2_orientation_lifts.py
 python verification/related/verify_dyadic_dehn_twist_sampler.py
 python verification/related/verify_dyadic_dehn_twist_cayley.py
+python verification/related/verify_dyadic_twist_grammar.py
 ```
 
 ## Next theorem target

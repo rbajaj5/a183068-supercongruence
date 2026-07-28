@@ -67,7 +67,10 @@ is an exact classical-algorithmic corollary, not a solution of a
 mapping-class-group open problem. The
 [fixed-generator follow-on](related-results/DyadicDehnTwistCayleyWalk.md)
 turns the same twists and unit scalings into a genuine Cayley walk with
-cyclotomic eigenvalues and explicit spectral-gap bounds.
+cyclotomic eigenvalues and explicit spectral-gap bounds. The
+[grammar and almost-periodicity note](related-results/DyadicTwistGrammarAlmostPeriodicity.md)
+then gives affine words a unique translation-first normal form and applies
+finite-group almost periodicity to dense averages of twist observables.
 
 ## The result
 
