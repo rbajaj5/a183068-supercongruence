@@ -313,7 +313,7 @@ lift. The complete $5^5$ and $5^6$ valuation polynomials are checked over
 $97500$ and $487500$ clock classes. The nested divisibility layers live
 on the profinite grid
 $\mathbf Z/156\mathbf Z\times\mathbf Z_5$, where truncated valuation is
-an exact sum of clopen indicator functions.
+an exact finite sum of nested residue-cylinder indicators.
 
 ## Public Gaussian-prime follow-on
 
@@ -410,7 +410,7 @@ To reproduce every computation in the expanded repository, run
   polynomial.
 - [related-results/PadicValuationExpansion.md](related-results/PadicValuationExpansion.md):
   the all-precision unit-root period theorem, higher valuation polynomials,
-  and profinite clopen expansion.
+  and nested finite-quotient valuation expansion.
 - [related-results/JacobianCounterexampleFiniteFieldCounts.md](related-results/JacobianCounterexampleFiniteFieldCounts.md):
   complete finite-field fiber statistics, collision zeta function, and the
   characteristic-$3$ adjacent-extension gain for the Fable counterexample.

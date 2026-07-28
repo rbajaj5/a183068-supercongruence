@@ -12,7 +12,7 @@ modulo \(125\). The period-lifting lemma is elementary. The unit-root
 application and the explicit high-precision distributions are structural
 follow-ons in this repository; literature priority remains preliminary.
 
-## 1. Valuation as a clopen expansion
+## 1. Valuation as nested residue-class indicators
 
 Put \(v_p(0)=+\infty\). For \(x\in\mathbf Z_p\) and \(k\geq1\), define
 
@@ -35,10 +35,12 @@ d_k(x)
 Indeed, both sides count the integers \(h\) with \(1\leq h\leq k\) and
 \(p^h\mid x\).
 
-Every set \(p^h\mathbf Z_p\) is clopen. Thus (2) is an exact expansion of
-the truncated valuation into locally constant scale components. It is closer
-to a van der Put or \(p\)-adic wavelet expansion than to a classical Taylor
-series.
+Every set \(p^h\mathbf Z_p\) is the inverse image of \(0\) under reduction
+modulo \(p^h\), hence is both open and closed. Thus (2) is an exact expansion
+of the truncated valuation into nested residue-class indicators. No
+separation theorem or product-compactness theorem is needed for this fact.
+The formula is closer to a van der Put or \(p\)-adic wavelet expansion than
+to a classical Taylor series.
 
 There is also a Mahler expansion. If
 \(f_h(x)=\mathbf 1_{p^h\mathbf Z_p}(x)\), then
@@ -56,6 +58,27 @@ a_{h,n}
 Formula (3) is simply the Newton forward-difference formula
 \(a_{h,n}=\Delta^nf_h(0)\). Equation (2), rather than (3), is the useful
 form for congruence strata.
+
+### Berkovich boundary and possible extension
+
+The distinction is visible in
+[Murayama's notes on Berkovich spaces](https://www.math.purdue.edu/~murayama/Berkovich.pdf).
+The ordinary non-Archimedean field is totally disconnected and its balls are
+open and closed. The Berkovich closed disc adds multiplicative-seminorm
+points and becomes a path-connected tree.
+
+The clock used below remains the elementary profinite space
+\(\mathbf Z/156\mathbf Z\times\mathbf Z_5\). No affinoid algebra \(A\) and
+no identification with a Berkovich spectrum \(\mathcal M(A)\) are
+constructed here. Consequently, the residue-cylinder expansion is not being
+presented as Berkovich analytic geometry.
+
+A genuine Berkovich extension would first require an analytic family whose
+values at classical points recover the Frobenius defect. One could then ask
+whether the negative logarithm of its seminorm organizes valuation thresholds
+along a skeleton by a piecewise-affine slope law. Constructing that family
+and proving such a law are open targets, not consequences of the finite
+period calculation.
 
 ## 2. A vector period-lifting lemma
 
@@ -391,7 +414,8 @@ Its inverse-limit clock is
 
 For \(h\geq1\), let \(\mathcal A_h\subset\mathcal X\) be the eventual set
 of clock states on which the raw adjacent defect is divisible by \(5^h\).
-It is a clopen cylinder, and
+It is the inverse image of a subset of the finite quotient
+\(\mathbf Z/L_h\mathbf Z\), hence a clopen cylinder, and
 
 \[
 \mathcal A_{h+1}\subseteq\mathcal A_h.
@@ -418,6 +442,10 @@ D(x)=\sum_{h\geq1}\mathbf1_{\mathcal A_h}(x)
 
 is the corresponding extended valuation, possibly \(+\infty\) on
 \(\bigcap_h\mathcal A_h\).
+
+The continuity assertion is for each finite truncation \(D_k\). The
+extended-valued limit \(D\) is not being asserted to be a continuous
+real-valued function at points where it is infinite.
 
 ### Proof
 
