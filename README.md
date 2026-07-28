@@ -43,8 +43,13 @@ finite affine quotient and the complete spectrum of a Dehn-twist coordinate
 refresh chain. A second corollary replaces coordinate refresh by the fixed
 Cayley generators $\mathcal T_{\pm1}$, $5^{\pm1}$, and $-1$; its cyclotomic
 spectrum gives explicit two-sided spectral-gap bounds and
-$\Theta(4^m)$ relaxation. Source ingredients and new deductions are separated
-explicitly on the landing page. A separate
+$\Theta(4^m)$ relaxation. The
+[affine splitting proxy](related-results/GQ2AffineSplittingProxy.md) now
+computes the first continuous-cohomology obstruction explicitly: it is the
+parity of the cross-commutator between sign and $5$-adic lifts. This solves
+the linear proxy but not the genuine nonabelian-kernel splitting problem.
+Source ingredients and new deductions are separated explicitly on the
+landing page. A separate
 [current-PDF audit](related-results/GQ2CurrentPdfAudit.md) reproduces the
 Appendix C norm identities and the complete $S_3$ and $S_4$ counts without
 finding a new error.
@@ -60,7 +65,9 @@ The newest auxiliary lifting result is
 [GQ2-LIFT](ROE_2ADIC.md), an exact $2$-adic
 orientation law sharpening Roe--Turturean Remark C.7 together with the exact
 $\mathbb Z_2$-family of outer Dehn twists hidden in their HNN shear and the
-resulting affine commutator filtration. It is included as a clean
+resulting affine commutator filtration. Its explicit splitting-proxy model
+realizes the two $H^2$ classes and proves the even/odd section criterion. It
+is included as a clean
 local-to-global boundary example, not as a supercongruence or a novelty
 claim. The [sampling follow-on](related-results/DyadicDehnTwistSampler.md)
 is an exact classical-algorithmic corollary, not a solution of a

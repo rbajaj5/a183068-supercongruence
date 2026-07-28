@@ -49,7 +49,7 @@ impact.
 | 13 | [Binary $s_{18}$ reduction](S18TwoAdicReduction.md) | Isolates the exact sharpened scaling lemma still needed at $p=2$ | Substantial reduction; naive factor-by-factor proof refuted |
 | 14 | [Gaussian citation-network boundary report](GaussianCitationNetworkBoundaryReport.md) | Records rigorous limits of the Gaussian search, including Erdős--Moser reductions | Reduction and bounded search, not a global solution |
 | 15 | [Cooper level-11 rare primes](CooperLevel11RarePrimes.md) | Isolates the first obstruction and records a 350-case first-order Frobenius law reducing the full $r=1$ conjecture to it | Computational theorem target; fixed-prime automata route is conditional on finding a rational diagonal |
-| 16 | [Public 2-adic Roe-inspired follow-on](../ROE_2ADIC.md) | Gives a clean comparison case for small-prime lifting, identifies the source's shear as outer Dehn twists, and computes the exact affine commutator filtration | Complete elementary sharpening and structural extraction from Roe--Turturean; checked through \(2^{32}\); no novelty claim |
+| 16 | [Public 2-adic Roe-inspired follow-on](../ROE_2ADIC.md) | Gives a clean comparison case for small-prime lifting, identifies the source's shear as outer Dehn twists, computes the exact affine commutator filtration, and realizes the first affine splitting obstruction as a parity class | Complete elementary sharpening and structural extraction from Roe--Turturean; checked through \(2^{32}\) plus 2.35 million splitting-proxy identities; actual kernel pushout open |
 
 ## Strongest present claims
 
@@ -128,6 +128,7 @@ The individual correspondence is:
 | Higher-degree box polynomials | `verification/related/verify_higher_degree_box_polynomial.py` |
 | Gaussian Erdős--Moser boundary search | `verification/related/verify_gaussian_erdos_moser.py` |
 | Exact GQ2 orientation lifts | `verification/related/verify_gq2_orientation_lifts.py` |
+| GQ2 affine splitting proxy | `verification/related/verify_gq2_affine_splitting_proxy.py` |
 
 The binary $s_{18}$ file is a reduction rather than a completed theorem and
 does not yet have a dedicated checker.
