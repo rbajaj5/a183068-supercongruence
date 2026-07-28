@@ -224,6 +224,132 @@ With their right-conjugation convention, \(\Theta_b\) is the composite of
 the same element of \(\operatorname{Out}(D_0)\). The “shear” used in their
 marking argument is therefore literally the outer class of a Dehn twist.
 
+## The affine symmetry behind Proposition 3.9
+
+The twist subgroup is the translation half of a larger exact affine
+structure. Roe--Turturean decompose the abelianization as
+
+\[
+B_{\mathrm{ab}}
+=C_2t\oplus\mathbb Z_2\bar S\oplus\mathbb Z_2\bar Y
+\]
+
+and prove that every orientation-preserving automorphism has a unique pair
+\((u,b)\in\mathbb Z_2^\times\times\mathbb Z_2\) with
+
+\[
+t\longmapsto t,\qquad
+\bar S\longmapsto u\bar S,\qquad
+\bar Y\longmapsto\bar Y+b\bar S.
+\]
+
+### Theorem (affine shadow and exact commutator depth)
+
+There is a canonical isomorphism
+
+\[
+\operatorname{Aut}(B_{\mathrm{ab}},\chi)
+\cong
+\mathbb Z_2\rtimes\mathbb Z_2^\times,
+\]
+
+where the corresponding matrices on \((\bar S,\bar Y)\) are
+
+\[
+M(u,b)=
+\begin{pmatrix}
+u&b\\
+0&1
+\end{pmatrix}
+\]
+
+and
+
+\[
+M(u,b)M(v,c)=M(uv,b+uc).
+\]
+
+Moreover:
+
+1. the natural map
+   \[
+   \operatorname{Out}(D_0)\longrightarrow
+   \operatorname{Aut}(B_{\mathrm{ab}},\chi)
+   \]
+   is surjective;
+2. the translation subgroup \(M(1,b)\) has the explicit Dehn-twist section
+   \(b\mapsto[\mathcal T_b]\);
+3. diagonal scaling conjugates translation by
+   \[
+   M(u,0)M(1,b)M(u,0)^{-1}=M(1,ub);
+   \]
+4. with the source convention
+   \([g,h]=g^{-1}h^{-1}gh\),
+   \[
+   [M(u,0),M(1,b)]
+   =M\!\left(1,(1-u^{-1})b\right);
+   \]
+   hence, whenever \((u-1)b\ne0\),
+   \[
+   v_2\!\left((1-u^{-1})b\right)
+   =v_2(u-1)+v_2(b);
+   \]
+5. the closed commutator subgroup of the affine shadow is exactly the
+   translation subgroup \(2\mathbb Z_2\), and its lower central series is
+   \[
+   \gamma_n=2^{n-1}\mathbb Z_2
+   \qquad(n\ge2)
+   \]
+   inside the translations.
+
+#### Proof
+
+The matrix formula gives the multiplication law and the semidirect product.
+Surjectivity is Roe--Turturean Proposition 3.9; inner automorphisms act
+trivially on the abelianization, so their map factors through
+\(\operatorname{Out}(D_0)\). The preceding Dehn-twist theorem supplies the
+translation section.
+
+The conjugation and commutator formulas follow by multiplying the displayed
+matrices. Since \(u\) is a \(2\)-adic unit,
+
+\[
+1-u^{-1}=u^{-1}(u-1),
+\]
+
+which proves the valuation identity.
+
+Every \(2\)-adic unit is odd, so \(u-1\in2\mathbb Z_2\). All commutators
+therefore translate by an element of \(2\mathbb Z_2\). Conversely \(u=3\)
+gives
+
+\[
+1-u^{-1}=\frac23,
+\]
+
+whose valuation is exactly \(1\); varying \(b\) produces all of
+\(2\mathbb Z_2\). Repeating the same argument on
+\(2^r\mathbb Z_2\) proves the lower-central-series formula.
+\(\square\)
+
+### Finite-level consequence
+
+Modulo \(2^m\), the affine shadow has exactly
+
+\[
+2^m\varphi(2^m)=2^{2m-1}
+\]
+
+elements for \(m\ge1\). Every reduction from level \(m+1\) to level \(m\)
+has a four-element kernel: two choices for the new unit digit and two choices
+for the new translation digit. This is a literal two-coordinate lifting
+tower rather than an analogy with one.
+
+The theorem concerns the affine quotient of the outer automorphism group.
+Proposition 3.9 supplies lifts of the unit-scaling matrices, but not a
+canonical multiplicative section of the entire affine group. No such section
+is asserted here.
+
 ### Equivariance of the defect tower
 
 The filtration \(\lambda_k\) in Appendix C.5 is characteristic, so every
@@ -273,6 +399,7 @@ checked separately.
 
 The accompanying exact checker constructs the Hensel root and all exponent
 classes through precision \(2^{32}\). It also verifies the finite-level
-composition, inverse, and exact-depth laws for the Dehn-twist matrices:
+composition, inverse, and exact-depth laws for the Dehn-twist matrices, plus
+the affine group law and its commutator filtration:
 
 [`verify_gq2_orientation_lifts.py`](../verification/related/verify_gq2_orientation_lifts.py).

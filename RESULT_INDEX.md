@@ -584,7 +584,10 @@ Source-status labels are separate from proof status:
   The limiting exponent is not an ordinary integer. The cyclic HNN
   presentation also gives an exact pro-\(2\) Dehn-twist tower
   \(\mathbb Z_2\hookrightarrow\operatorname{Out}(D_0)\), with congruence
-  depth exactly \(v_2(b)\), acting equivariantly on every defect stage.
+  depth exactly \(v_2(b)\), acting equivariantly on every defect stage. The
+  full orientation-preserving abelian shadow is the affine group
+  \(\mathbb Z_2\rtimes\mathbb Z_2^\times\); its commutator filtration has
+  exact successive translation layers \(2^r\mathbb Z_2\).
 - **Status:** Complete elementary sharpening of Roe--Turturean Remark C.7;
   no claim of novelty and no change to their main classification theorem.
 - **Proof:** [Exact dyadic orientation lifts](related-results/GQ2OrientationLifts.md)

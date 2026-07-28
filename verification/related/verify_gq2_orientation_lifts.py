@@ -126,11 +126,106 @@ def check_dehn_twists(precision: int) -> int:
     return checks
 
 
+def affine_product(
+    left: tuple[int, int], right: tuple[int, int], modulus: int
+) -> tuple[int, int]:
+    """Multiply affine pairs (unit, translation) modulo a power of two."""
+
+    unit, translation = left
+    other_unit, other_translation = right
+    return (
+        (unit * other_unit) % modulus,
+        (translation + unit * other_translation) % modulus,
+    )
+
+
+def affine_inverse(pair: tuple[int, int], modulus: int) -> tuple[int, int]:
+    """Invert an affine pair modulo a power of two."""
+
+    unit, translation = pair
+    inverse_unit = pow(unit, -1, modulus)
+    return (inverse_unit, (-inverse_unit * translation) % modulus)
+
+
+def affine_commutator(
+    left: tuple[int, int], right: tuple[int, int], modulus: int
+) -> tuple[int, int]:
+    """Use the convention [g,h] = g^-1 h^-1 g h."""
+
+    return affine_product(
+        affine_product(
+            affine_product(
+                affine_inverse(left, modulus),
+                affine_inverse(right, modulus),
+                modulus,
+            ),
+            left,
+            modulus,
+        ),
+        right,
+        modulus,
+    )
+
+
+def check_affine_shadow(precision: int) -> int:
+    """Check the affine law, commutator formula, and central filtration."""
+
+    checks = 0
+    for level in range(1, precision + 1):
+        modulus = 2**level
+        units = range(1, modulus, 2)
+
+        assert len(tuple(units)) * modulus == 2 ** (2 * level - 1)
+        checks += 1
+
+        for unit in units:
+            inverse_unit = pow(unit, -1, modulus)
+            for translation in range(modulus):
+                scaling = (unit, 0)
+                twist = (1, translation)
+                conjugate = affine_product(
+                    affine_product(scaling, twist, modulus),
+                    affine_inverse(scaling, modulus),
+                    modulus,
+                )
+                assert conjugate == (1, (unit * translation) % modulus)
+
+                commutator = affine_commutator(scaling, twist, modulus)
+                expected = (
+                    1,
+                    ((1 - inverse_unit) * translation) % modulus,
+                )
+                assert commutator == expected
+                checks += 2
+
+        commutator_parameters = {
+            affine_commutator((unit, 0), (1, translation), modulus)[1]
+            for unit in units
+            for translation in range(modulus)
+        }
+        assert commutator_parameters == set(range(0, modulus, 2))
+        checks += 1
+
+        for depth in range(1, level):
+            next_parameters = {
+                affine_commutator((unit, 0), (1, translation), modulus)[1]
+                for unit in units
+                for translation in range(0, modulus, 2**depth)
+            }
+            assert next_parameters == set(
+                range(0, modulus, 2 ** (depth + 1))
+            )
+            checks += 1
+
+    return checks
+
+
 def main() -> None:
     precision = 32
     root = hensel_root(precision)
     classes = exponent_classes(precision)
     twist_checks = check_dehn_twists(16)
+    affine_checks = check_affine_shadow(9)
 
     assert root % 8 == 5
     assert polynomial(root) % (2**precision) == 0
@@ -142,6 +237,7 @@ def main() -> None:
     for level, exponent in classes[-5:]:
         print(f"  k={level}: e={exponent} modulo 2^{level - 2}")
     print(f"checked {twist_checks} finite-level Dehn-twist identities")
+    print(f"checked {affine_checks} finite-level affine identities")
     print("all exact orientation-lift checks passed")
 
 
