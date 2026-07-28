@@ -435,6 +435,18 @@ Source-status labels are separate from proof status:
   [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py),
   and [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py).
 
+### GQ2-SHELL — dyadic Dehn-twist conjugacy moments
+
+- **Claim:** In the finite affine shadow modulo \(2^m\), two nonzero
+  translation images are conjugate exactly when they have the same \(2\)-adic
+  depth. The depth-\(v\) class has size \(2^{m-v-1}\), and its weighted
+  moments satisfy \(D_{m+1,j}-2D_{m,j}=2^{jm}\) exactly.
+- **Status:** Complete elementary deduction in the affine quotient; it does
+  not classify conjugacy in the full outer automorphism group and makes no
+  novelty claim.
+- **Proof:** [Conjugacy shells and exact depth moments](related-results/DyadicDehnTwistConjugacyMoments.md)
+- **Exact checker:** [`verify_dyadic_dehn_twist_conjugacy.py`](verification/related/verify_dyadic_dehn_twist_conjugacy.py)
+
 ## Reductions and computational reports
 
 ### CAT-ODD — Catalan ballot-power supercongruences

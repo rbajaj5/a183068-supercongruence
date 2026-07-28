@@ -23,8 +23,11 @@ follow-on prompted by David Roe and David Turturean's
 \(\mathbf Q_2\)*](https://roed314.github.io/gq2/paper.pdf).
 It records exact orientation lifting, a dyadic Dehn-twist tower, its affine
 commutator filtration, two finite-quotient sampling models, and an
-almost-periodicity specialization. The packet includes a targeted audit of
-the current source PDF and five exact checkers.
+almost-periodicity specialization. A further
+[conjugacy-shell theorem](related-results/DyadicDehnTwistConjugacyMoments.md)
+classifies every finite affine twist image by depth and gives an exact
+adjacent-level valuation identity for all depth moments. The packet includes
+a targeted audit of the current source PDF and exact checkers.
 
 This material is a structural comparison for small-prime lifting. It is not
 claimed as a new A183068 congruence or a correction of Roe--Turturean's main
