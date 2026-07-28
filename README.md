@@ -49,6 +49,18 @@ explicitly on the landing page. A separate
 Appendix C norm identities and the complete $S_3$ and $S_4$ counts without
 finding a new error.
 
+### Controller-filtered orbit follow-on
+
+The
+[controller-filtered periodic-orbit note](related-results/FilteredOrbitSupercongruences.md)
+gives a finite-state compiler from primitive cycles to adjacent
+prime-power congruences. It handles bounded controller memory, Pareto
+labels, and integral changes of denomination; reduced Schottky words supply
+an explicit closed form. A Gold-style theorem then proves that no fixed
+finite trace horizon determines the next normalized defect. This is a
+checked application and synthesis of the classical Dold congruence, not a
+novelty claim for the underlying orbit theorem.
+
 The newest result is the
 [cubic angular-residue theorem](related-results/GaussianAngularResidueTheorem.md):
 for every inert prime $p\ge7$, it replaces a printed constant-valuation
@@ -301,7 +313,7 @@ lift. The complete $5^5$ and $5^6$ valuation polynomials are checked over
 $97500$ and $487500$ clock classes. The nested divisibility layers live
 on the profinite grid
 $\mathbf Z/156\mathbf Z\times\mathbf Z_5$, where truncated valuation is
-an exact sum of clopen indicator functions.
+an exact finite sum of nested residue-cylinder indicators.
 
 ## Public Gaussian-prime follow-on
 
@@ -398,7 +410,7 @@ To reproduce every computation in the expanded repository, run
   polynomial.
 - [related-results/PadicValuationExpansion.md](related-results/PadicValuationExpansion.md):
   the all-precision unit-root period theorem, higher valuation polynomials,
-  and profinite clopen expansion.
+  and nested finite-quotient valuation expansion.
 - [related-results/JacobianCounterexampleFiniteFieldCounts.md](related-results/JacobianCounterexampleFiniteFieldCounts.md):
   complete finite-field fiber statistics, collision zeta function, and the
   characteristic-$3$ adjacent-extension gain for the Fable counterexample.

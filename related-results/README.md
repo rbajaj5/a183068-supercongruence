@@ -50,6 +50,7 @@ impact.
 | 14 | [Gaussian citation-network boundary report](GaussianCitationNetworkBoundaryReport.md) | Records rigorous limits of the Gaussian search, including Erdős--Moser reductions | Reduction and bounded search, not a global solution |
 | 15 | [Cooper level-11 rare primes](CooperLevel11RarePrimes.md) | Isolates the first obstruction and records a 350-case first-order Frobenius law reducing the full $r=1$ conjecture to it | Computational theorem target; fixed-prime automata route is conditional on finding a rational diagonal |
 | 16 | [Public 2-adic Roe-inspired follow-on](../ROE_2ADIC.md) | Gives a clean comparison case for small-prime lifting, identifies the source's shear as outer Dehn twists, and computes the exact affine commutator filtration | Complete elementary sharpening and structural extraction from Roe--Turturean; checked through \(2^{32}\); no novelty claim |
+| 17 | [Controller-filtered periodic-orbit congruences](FilteredOrbitSupercongruences.md) | Reinterprets adjacent prime-power laws through primitive cycles of finite transition systems; controller memory, Pareto labels, and integral valuation maps compile automatically | Complete classical Dold deduction with Schottky and Gold-style corollaries; 260,164 exact checks; no novelty claim for Dold |
 
 ## Strongest present claims
 
