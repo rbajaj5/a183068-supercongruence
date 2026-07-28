@@ -600,7 +600,9 @@ Source-status labels are separate from proof status:
   $\mathcal T_{\pm1},5^{\pm1},-1$ produces a cyclotomic unit spectrum and
   explicit spectral-gap bounds of order $4^{-m}$. Affine words also admit a
   unique translation-first grammar, and finite-group almost periodicity gives
-  large difference sets of approximate symmetries for dense twist averages.
+  large difference sets of approximate symmetries for dense twist averages;
+  the exact-period subgroup is computed by the gcd of the cyclotomic Fourier
+  support.
 - **Status:** Complete elementary sharpening of Roe--Turturean Remark C.7;
   no claim of novelty and no change to their main classification theorem.
 - **Public landing page:** [Public 2-adic Roe-inspired follow-on](ROE_2ADIC.md)

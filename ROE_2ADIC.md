@@ -202,6 +202,25 @@ these approximate symmetries with cyclotomic phases. This is a specialization
 of an existing theorem, not a new priority claim or an improvement of the
 Cayley spectral gap.
 
+For an individual averaged observable $h$, the exact periods are also
+computable. If
+
+$$
+d=\gcd\left(2^m,\{k:\widehat h(k)\neq0\}\right),
+$$
+
+then
+
+$$
+\mathrm{Per}(h)
+=
+\frac{2^m}{d}\mathbb Z/2^m\mathbb Z.
+$$
+
+Parseval's identity gives the corresponding quantitative error formula for
+cyclotomic Bohr sets. This exact gcd certificate is an elementary Fourier
+deduction.
+
 ## Source boundary
 
 | Item | Status |
@@ -239,8 +258,9 @@ modulus $2^5$ and verifies symmetry, stochasticity, irreducibility,
 nonnegative spectrum, the cyclotomic unit eigenfunction, and both gap bounds.
 
 The grammar checker verifies more than 2.4 million exact rewrite identities,
-all unique normal forms through modulus $2^7$, and 10,912 exact
-twist-convolution identities.
+all unique normal forms through modulus $2^7$, 10,912 exact
+twist-convolution identities, and 258 complete cyclotomic period
+classifications.
 
 A second exact checker independently reproduces the manuscript's Proposition
 C.10 norm calculations and the Appendix D counts for $S_3$ and $S_4$. See the

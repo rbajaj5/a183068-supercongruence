@@ -70,7 +70,9 @@ turns the same twists and unit scalings into a genuine Cayley walk with
 cyclotomic eigenvalues and explicit spectral-gap bounds. The
 [grammar and almost-periodicity note](related-results/DyadicTwistGrammarAlmostPeriodicity.md)
 then gives affine words a unique translation-first normal form and applies
-finite-group almost periodicity to dense averages of twist observables.
+finite-group almost periodicity to dense averages of twist observables. Its
+Fourier refinement computes the complete exact-period subgroup from one gcd
+of the cyclotomic support.
 
 ## The result
 

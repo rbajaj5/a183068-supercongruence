@@ -196,7 +196,119 @@ finite-field subspace step has a general-abelian analogue in which subspaces
 are replaced by Bohr sets. In the dyadic translation group, those Bohr sets
 are cut out by a small family of $2^m$-th-root cyclotomic phases.
 
-## 4. Boundary of the deduction
+## 4. An exact cyclotomic period certificate
+
+Almost periodicity guarantees many approximate periods without computing
+them individually. On the finite dyadic group, Fourier inversion also gives
+an exact certificate.
+
+Normalize the Fourier transform by
+
+$$
+\widehat h(k)
+=
+\mathbb E_y h(y)\overline{\chi_k(y)}.
+$$
+
+### Theorem 3
+
+For every $c\in R_m$,
+
+$$
+\boxed{
+\left\|h(\mathbin{\cdot}-c)-h\right\|_2^2
+=
+\sum_{k=0}^{2^m-1}
+\left|\widehat h(k)\right|^2
+\left|\zeta_m^{-kc}-1\right|^2.
+}
+\tag{7}
+$$
+
+Let
+
+$$
+S(h)=\{k:\widehat h(k)\neq0\},
+\qquad
+d=\gcd\bigl(2^m,S(h)\bigr),
+\tag{8}
+$$
+
+where $d=2^m$ if $S(h)$ is empty. Then the complete group of exact periods
+of $h$ is
+
+$$
+\boxed{
+\mathrm{Per}(h)
+=
+\frac{2^m}{d}\mathbb Z/2^m\mathbb Z.
+}
+\tag{9}
+$$
+
+In particular, it has exactly $d$ elements. For the averaged twist observable
+$H_{A,u}$,
+
+$$
+S(H_{A,u})
+\subseteq
+S(\mu_A)\cap S(g_u),
+\tag{10}
+$$
+
+so cancellation in either factor can only enlarge the exact period group.
+
+#### Proof
+
+Fourier inversion gives
+
+$$
+h(y-c)-h(y)
+=
+\sum_k
+\widehat h(k)\chi_k(y)
+\left(\zeta_m^{-kc}-1\right).
+$$
+
+Parseval's identity is exactly (7). The left side vanishes precisely when
+
+$$
+2^m\mid kc
+\qquad\text{for every }k\in S(h).
+$$
+
+By Bezout's identity, these divisibilities are equivalent to
+$2^m\mid dc$, which in turn is equivalent to $c$ being a multiple of
+$2^m/d$. This proves (9). Finally,
+$\widehat{H_{A,u}}=\widehat{\mu_A}\widehat{g_u}$ proves (10). $\square$
+
+There is also a quantitative version. For a frequency set $\Gamma$ and
+$\delta>0$, define the cyclotomic Bohr set
+
+$$
+B(\Gamma,\delta)
+=
+\left\{
+c:
+\left|\zeta_m^{kc}-1\right|\leq\delta
+\text{ for every }k\in\Gamma
+\right\}.
+$$
+
+Equation (7) immediately yields, for every $c\in B(\Gamma,\delta)$,
+
+$$
+\left\|h(\mathbin{\cdot}-c)-h\right\|_2^2
+\leq
+\delta^2\sum_{k\in\Gamma}|\widehat h(k)|^2
++4\sum_{k\notin\Gamma}|\widehat h(k)|^2.
+\tag{11}
+$$
+
+Thus the exact gcd certificate and the approximate Bohr-set certificate are
+two levels of the same cyclotomic computation.
+
+## 5. Boundary of the deduction
 
 The theorem concerns an averaged observable on one additive translation
 fiber. It does not imply:
@@ -211,7 +323,7 @@ The value is structural. Proposition 1 turns affine words into canonical
 syntax, while Theorem 2 says that dense averages of the translation
 constituents admit a compressed approximate-symmetry set.
 
-## 5. Verification
+## 6. Verification
 
 Run:
 
@@ -220,8 +332,9 @@ python verification/related/verify_dyadic_twist_grammar.py
 ```
 
 The checker verifies the three rewriting identities, uniqueness and
-exhaustion of normal forms through modulus $2^7$, and the exact identity
-between twist averaging and additive convolution.
+exhaustion of normal forms through modulus $2^7$, the exact identity between
+twist averaging and additive convolution, and the gcd classification of
+every exact period for the checked observables.
 
 ## References
 
