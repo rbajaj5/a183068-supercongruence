@@ -213,6 +213,77 @@ Source-status labels are separate from proof status:
 - **Proof:** [All-degree collision theorem for weighted-lift Keller maps](related-results/WeightedLiftCollisionSynthesis.md)
 - **Exact checker:** [`verify_weighted_lift_collision_synthesis.py`](verification/related/verify_weighted_lift_collision_synthesis.py)
 
+### JC-AUTO - fixed-precision Frobenius obstruction automata
+
+- **Claim:** For every good prime \(p\) and fixed \(k\ge1\), the levels
+  satisfying
+  \[
+  p^k\mid\mathcal V_r-\mathcal V_{r-1}
+  \]
+  form an eventually periodic set with rational density. Equivalently,
+  their unary encodings form a regular language. A deterministic state is
+  supplied explicitly by the curve-trace recurrence modulo \(p^k\) and the
+  finite Frobenius-orbit phase. Modulo \(p\), deleting the vanishing
+  coefficients of the local \(L\)-polynomial gives an invertible
+  lower-order automaton and a sharper period bound. The corrected tower
+  always retains exact valuation \(2r-2\).
+- **Status:** Complete structural theorem with exact recurrence checks at
+  four successive precisions for the genus-three and genus-six examples.
+  Standard finite-state infrastructure is applied to the weighted-lift
+  collision tower; literature priority for this formulation is provisional.
+- **Proof:** [Frobenius obstruction automata](related-results/FrobeniusObstructionAutomata.md)
+- **Exact checker:** [`verify_frobenius_obstruction_automata.py`](verification/related/verify_frobenius_obstruction_automata.py)
+
+### JC-THERMO - valuation partition polynomial
+
+- **Claim:** Every fixed-precision Frobenius obstruction orbit has a rational
+  two-variable orbit series and a finite valuation partition polynomial that
+  recovers every congruence-threshold density. Residue-degree \(f\) base
+  change acts by the exact time decimation \(T\mapsto T^f\). For the
+  degree-seven example at \(p=5\), the complete precision-\(5^4\) polynomial
+  on its \(19500\)-class period is
+  \[
+  16000+2700u+600u^2+145u^3+55u^4.
+  \]
+- **Status:** Complete structural deduction with a direct full-period
+  checker. The finite-state formalism is standard; its collision-tower
+  application and explicit partition polynomial have provisional priority.
+- **Proof:** [Finite-state thermodynamics of Frobenius obstruction towers](related-results/FrobeniusTransferThermodynamics.md)
+- **Exact checker:** [`verify_frobenius_transfer_thermodynamics.py`](verification/related/verify_frobenius_transfer_thermodynamics.py)
+
+### JC-LIFT - all-precision unit-root period lifting
+
+- **Claim:** For the degree-seven genus-six collision example at \(p=5\),
+  the unit-root Frobenius trace has exact period
+  \(39\cdot5^{k-1}\) modulo \(5^k\) for every \(k\geq1\). Consequently,
+  \(156\cdot5^{k-1}\) is an eventual period of the complete raw obstruction
+  packet. The proof uses a Hensel factor modulo \(125\) and a general vector
+  period-lifting lemma. The precision-\(5^5\) and precision-\(5^6\)
+  valuation partition polynomials are computed exactly, and all precision
+  layers assemble on the profinite clock
+  \(\mathbf Z/156\mathbf Z\times\mathbf Z_5\).
+- **Status:** Complete structural theorem with direct Hensel, matrix, period,
+  and full-cycle certificates. Literature priority is provisional.
+- **Proof:** [Precision lifting and a \(p\)-adic valuation expansion](related-results/PadicValuationExpansion.md)
+- **Exact checker:** [`verify_padic_valuation_expansion.py`](verification/related/verify_padic_valuation_expansion.py)
+
+### JC-HENSEL - weighted valuation filter
+
+- **Claim:** The degree-seven raw Frobenius defect at \(p=5\) has \(28\)
+  inverse-limit roots: \(25\) on phases of common valuation \(2\), one on
+  a phase of common valuation \(3\), and two on a phase of common valuation
+  \(4\). Weighted Hensel counting gives exactly \(80\) successful classes
+  at every precision \(5^k\), \(k\geq5\), hence density
+  \(4/(39\cdot5^{k-2})\). The complete partition polynomial is explicit for
+  every \(k\), with limiting mean \(61/260\) and variance
+  \(66577/202800\).
+- **Status:** Complete structural theorem with exact phase, derivative, and
+  full precision-\(5^7\) certificates. General interpolation and Hensel
+  infrastructure is standard; priority of the explicit application is
+  provisional.
+- **Proof:** [A Hensel valuation filter for Frobenius supercongruences](related-results/HenselValuationFilter.md)
+- **Exact checker:** [`verify_hensel_valuation_filter.py`](verification/related/verify_hensel_valuation_filter.py)
+
 ### JC-FF - finite-field arithmetic of the Fable counterexample
 
 - **Claim:** For the three-dimensional Jacobian-conjecture counterexample
@@ -284,6 +355,43 @@ Source-status labels are separate from proof status:
   provisional.
 - **Proof:** [Degree-five Jacobian collisions and a non-CM elliptic Frobenius packet](related-results/JacobianDegreeFiveEllipticFrobenius.md)
 - **Exact checker:** [`verify_jacobian_degree_five.py`](verification/related/verify_jacobian_degree_five.py)
+
+### JC6-FF - degree-six genus-three Frobenius obstruction
+
+- **Claim:** For Gallagher's canonical degree-six weighted-lift Keller map,
+  the tangent locus is a smooth plane quartic. At \(p=13\), its local
+  \(L\)-polynomial is
+  \[
+  1+16T^2-26T^3+208T^4+2197T^6.
+  \]
+  Together with explicit finite orbit packets, this gives the complete
+  collision count. The raw adjacent difference is a \(13\)-adic unit at
+  every level \(r\ge2\). Removing the genus-three and finite packets restores
+  exact adjacent valuation \(2r-2\).
+- **Status:** Complete theorem with exact extension-field enumeration,
+  algebraic-closure smoothness and orbit-factorization certificates, a
+  period-\(12\) obstruction proof, and corrected tower checks. Literature
+  priority is provisional.
+- **Proof:** [Degree-six genus-three Frobenius obstruction](related-results/JacobianDegreeSixGenusThree.md)
+- **Exact checker:** [`verify_jacobian_degree_six.py`](verification/related/verify_jacobian_degree_six.py)
+
+### JC7-FF - degree-seven genus-six Frobenius automaton
+
+- **Claim:** An integral generic-degree-seven weighted lift has a smooth
+  genus-six tangent quintic at \(p=5\), with local \(L\)-polynomial
+  \[
+  1+2T^3+7T^4-16T^5-34T^6-80T^7
+  +175T^8+250T^9+15625T^{12}.
+  \]
+  The raw adjacent collision difference is divisible by \(5\) in exactly
+  \(28\) of \(156\) level classes. Removing the genus-six and finite packets
+  restores exact adjacent valuation \(2r-2\).
+- **Status:** Complete theorem with exact point counts through
+  \(\mathbb F_{5^6}\), symbolic smoothness and orbit certificates, a complete
+  period-\(156\) obstruction proof, and corrected tower checks. Literature
+  priority is provisional.
+- **Proof:** [Degree-seven genus-six Frobenius automaton](related-results/JacobianDegreeSevenGenusSix.md)
+- **Exact checker:** [`verify_jacobian_degree_seven.py`](verification/related/verify_jacobian_degree_seven.py)
 
 ## Gaussian-integer results
 

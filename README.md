@@ -11,8 +11,9 @@ repository or a Lean formalization.
 The continually updated Economist-style scorecard is
 **[RANKINGS.md](RANKINGS.md)**. It ranks every completed result and open
 target by mathematical-community value, deployment value, novelty
-confidence, breadth, maturity, and cost remaining. The present top structural
-result is the all-degree weighted-lift collision theorem; source status and
+confidence, breadth, maturity, and cost remaining. The present central
+structural line is the all-degree weighted-lift collision theorem together
+with its fixed-precision Frobenius obstruction automata; source status and
 proof status are recorded separately.
 
 ## The result
@@ -149,6 +150,72 @@ The note gives the complete local zeta factorization, isolates a sharp
 characteristic-\(17\) boundary exception, and proves an exact
 Frobenius-corrected adjacent valuation of \(2r-2\).
 
+The
+[degree-six follow-on](related-results/JacobianDegreeSixGenusThree.md)
+makes the first higher-genus rung explicit. At \(p=13\), the tangent locus is
+a smooth genus-three quartic with a computed degree-six local
+\(L\)-polynomial. Its Frobenius packet forces the raw adjacent collision
+difference to be a \(13\)-adic unit at every level. Removing the complete
+curve and finite-orbit packet restores the exact valuation \(2r-2\). This is
+both a new theorem candidate and a useful warning: higher-degree collision
+counts need Frobenius correction before a supercongruence can exist.
+
+The
+[degree-seven follow-on](related-results/JacobianDegreeSevenGenusSix.md)
+continues the ladder with an integral seed having good reduction at \(p=5\).
+Its tangent curve has genus six. The raw collision congruence is controlled
+by an exact period-\(156\) Frobenius automaton: divisibility by \(5\) occurs
+in exactly \(28\) level classes. The same canonical correction again leaves
+the exact valuation \(2r-2\).
+
+The
+[Frobenius obstruction-automaton theorem](related-results/FrobeniusObstructionAutomata.md)
+now closes the structural loop. At every good prime and every fixed
+precision \(p^k\), the raw successful levels form an eventually periodic set
+with rational density, equivalently a unary regular language. The state is
+the curve's Frobenius-recurrence state together with the finite-orbit phase.
+For the genus-six example, the exact densities through \(5^4\) are
+\(7/39,8/195,2/195,\) and \(11/3900\). This is an exact finite-state
+classification, not a claim of pseudorandomness or cryptographic hardness.
+
+The
+[finite-state thermodynamics follow-on](related-results/FrobeniusTransferThermodynamics.md)
+makes the statistical-mechanics dictionary exact rather than metaphorical.
+Its transfer matrix gives a rational two-variable orbit series, and a single
+valuation partition polynomial records every fixed congruence threshold. For
+the degree-seven \(p=5\) automaton, the complete precision-\(5^4\) polynomial
+is
+\[
+16000+2700u+600u^2+145u^3+55u^4.
+\]
+At fixed precision this is a finite analytic system, so no physical phase
+transition or randomness claim is made.
+
+The
+[all-precision lifting theorem](related-results/PadicValuationExpansion.md)
+then proves that the degree-seven unit-root trace has exact period
+\(39\cdot5^{k-1}\) modulo \(5^k\) for every \(k\). A single Hensel factor
+and matrix tangent certificate modulo \(125\) force every subsequent period
+lift. The complete \(5^5\) and \(5^6\) valuation polynomials are checked over
+\(97500\) and \(487500\) clock classes. The nested divisibility layers live
+on the profinite grid
+\(\mathbf Z/156\mathbf Z\times\mathbf Z_5\), where truncated valuation is
+an exact sum of clopen indicator functions.
+
+The
+[Hensel valuation filter](related-results/HenselValuationFilter.md)
+then resolves every higher precision. The inverse-limit zero set has
+\(28\) points carrying finite-precision weights \(1\), \(5\), and \(25\);
+their weighted count is always \(80\). Consequently the successful density
+is exactly
+\[
+\frac4{39\cdot5^{k-2}}
+\qquad(k\geq5),
+\]
+and one closed formula gives the complete valuation partition polynomial
+at every precision. The resulting limiting valuation law has mean
+\(61/260\) and variance \(66577/202800\).
+
 ## Public Gaussian-prime follow-on
 
 The most concise shareable follow-on is
@@ -227,6 +294,18 @@ To reproduce every computation in the expanded repository, run
 - [related-results/WeightedLiftCollisionSynthesis.md](related-results/WeightedLiftCollisionSynthesis.md):
   the all-degree tangent-curve collision theorem, genus ladder, zeta
   decomposition, and universal corrected tower.
+- [related-results/FrobeniusObstructionAutomata.md](related-results/FrobeniusObstructionAutomata.md):
+  the fixed-\(p\)-adic-precision automaton theorem, rational-density law,
+  and higher-precision degree-six and degree-seven examples.
+- [related-results/FrobeniusTransferThermodynamics.md](related-results/FrobeniusTransferThermodynamics.md):
+  the exact transfer-matrix formulation and degree-seven valuation partition
+  polynomial.
+- [related-results/PadicValuationExpansion.md](related-results/PadicValuationExpansion.md):
+  the all-precision unit-root period theorem, higher valuation polynomials,
+  and profinite clopen expansion.
+- [related-results/HenselValuationFilter.md](related-results/HenselValuationFilter.md):
+  the weighted Hensel root classification, exact geometric density tail,
+  and closed all-precision partition polynomial.
 - [related-results/JacobianCounterexampleFiniteFieldCounts.md](related-results/JacobianCounterexampleFiniteFieldCounts.md):
   complete finite-field fiber statistics, collision zeta function, and the
   characteristic-\(3\) adjacent-extension gain for the Fable counterexample.
@@ -236,6 +315,12 @@ To reproduce every computation in the expanded repository, run
 - [related-results/JacobianDegreeFiveEllipticFrobenius.md](related-results/JacobianDegreeFiveEllipticFrobenius.md):
   degree-five collision formula, explicit non-CM elliptic factor, local zeta
   function, and corrected adjacent-extension law.
+- [related-results/JacobianDegreeSixGenusThree.md](related-results/JacobianDegreeSixGenusThree.md):
+  degree-six genus-three local \(L\)-polynomial, permanent raw obstruction at
+  \(p=13\), and corrected adjacent-extension law.
+- [related-results/JacobianDegreeSevenGenusSix.md](related-results/JacobianDegreeSevenGenusSix.md):
+  degree-seven genus-six local \(L\)-polynomial, period-\(156\) raw
+  obstruction automaton, and corrected adjacent-extension law.
 - [GAUSSIAN_LUCAS.md](GAUSSIAN_LUCAS.md): the public entry point for the
   Gaussian-prime follow-on.
 - [related-results/](related-results/): the complete related proof drafts and
@@ -243,7 +328,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all twenty-one
+- [verification/run_all.py](verification/run_all.py): one command for all twenty-seven
   verification programs.
 
 The broader working repository remains available at
