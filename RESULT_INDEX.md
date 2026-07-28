@@ -130,14 +130,14 @@ Source-status labels are separate from proof status:
 
 ### BS-DWORK — Bhatt--Singh/Dwork period scaling
 
-- **Claim:** For \(A_d(n)=(dn)!/(n!)^d\), multinomial scaling and a
-  base-\(p\) digit-sum estimate give
-  \[
+- **Claim:** For $A_d(n)=(dn)!/(n!)^d$, multinomial scaling and a
+  base-$p$ digit-sum estimate give
+  $$
   v_p(A_d(np^r)-A_d(np^{r-1}))
   \ge 3(r+v_p(n))-\epsilon_p+s_p(n)v_p(d!).
-  \]
+  $$
   This places an explicit all-prime supercongruence beside the
-  Bhatt--Singh \(F\)-pure-threshold tower for Fermat Calabi--Yau
+  Bhatt--Singh $F$-pure-threshold tower for Fermat Calabi--Yau
   hypersurfaces.
 - **Status:** Complete elementary deduction with exact checks; no novelty
   claim and priority unchecked.
@@ -146,14 +146,14 @@ Source-status labels are separate from proof status:
 
 ### FF-DET - finite-field determinant bias
 
-- **Claim:** The additive determinant character sum over \(n\)-by-\(n\)
-  matrices over \(\mathbf F_q\) has an exact closed form. Its high-degree end
+- **Claim:** The additive determinant character sum over $n$-by-$n$
+  matrices over $\mathbf F_q$ has an exact closed form. Its high-degree end
   gives a uniform non-asymptotic Fourier-bias bound, while its low-degree end
   gives the sharp adjacent-extension identity
-  \[
+  $$
   v_p(\mathcal S_n(p^r)-\mathcal S_n(p^{r-1}))
   =\frac{n^2-n+2}{2}(r-1).
-  \]
+  $$
 - **Status:** Complete elementary theorem with exact checks; new to this
   program. The rank count is classical; the sharp adjacent-extension
   valuation and two-ended formulation appear new in a targeted search, with
@@ -164,12 +164,12 @@ Source-status labels are separate from proof status:
 ### FF-PFAFF - finite-field Pfaffian bias
 
 - **Claim:** The Pfaffian additive-character sum on alternating
-  \(2m\)-by-\(2m\) matrices has an exact closed form, Fourier bias of order
-  \(q^{-3}\), and the sharp adjacent-extension valuation
-  \[
+  $2m$-by-$2m$ matrices has an exact closed form, Fourier bias of order
+  $q^{-3}$, and the sharp adjacent-extension valuation
+  $$
   v_p(\mathcal P_m(p^r)-\mathcal P_m(p^{r-1}))
   =(m^2-m+1)(r-1).
-  \]
+  $$
 - **Status:** Complete elementary theorem with exact checks. Alternating-rank
   counts are classical; the sharp valuation and two-ended formulation appear
   new in a targeted search, with priority provisional.
@@ -178,13 +178,13 @@ Source-status labels are separate from proof status:
 
 ### FF-HYPERDET - hyperdeterminant Fourier packet
 
-- **Claim:** Cayley's \(2\times2\times2\) hyperdeterminant has explicit
+- **Claim:** Cayley's $2\times2\times2$ hyperdeterminant has explicit
   square/nonsquare fibers over every odd finite field. Its additive Fourier
   coefficient contains one quadratic Gauss sum; pairing the two quadratic
   character classes gives an integer sequence satisfying
-  \[
+  $$
   v_p(\mathcal K(p^r)-\mathcal K(p^{r-1}))=8(r-1)
-  \]
+  $$
   for every odd prime.
 - **Status:** Complete elementary theorem with exact checks. Matrix-pencil
   ingredients are classical; the paired Fourier supercongruence appears new
@@ -194,14 +194,14 @@ Source-status labels are separate from proof status:
 
 ### FF-HCONV - hyperdeterminant convolution tower
 
-- **Claim:** Every \(m\)-fold additive convolution fiber of Cayley's
-  \(2\times2\times2\) hyperdeterminant has an explicit three-class formula
-  (zero, nonzero square, and nonsquare). For every odd prime, \(m\geq1\),
-  \(r\geq2\), and each of the three classes,
-  \[
+- **Claim:** Every $m$-fold additive convolution fiber of Cayley's
+  $2\times2\times2$ hyperdeterminant has an explicit three-class formula
+  (zero, nonzero square, and nonsquare). For every odd prime, $m\geq1$,
+  $r\geq2$, and each of the three classes,
+  $$
   v_p\!\left(C_m^\sigma(p^r)-C_m^\sigma(p^{r-1})\right)
   =(4m-1)(r-1).
-  \]
+  $$
   The same spectrum gives an explicit total-variation mixing estimate for
   sums of independent hyperdeterminants.
 - **Status:** Complete elementary Fourier theorem with exact convolution,
@@ -215,41 +215,41 @@ Source-status labels are separate from proof status:
 ### FF-CONV - determinant and Pfaffian convolution towers
 
 - **Claim:** A finite-field invariant whose nontrivial additive Fourier
-  coefficients all equal \(q^E U(q)\), with \(U(0)\) a unit, has explicit
-  zero and nonzero fibers at every convolution length \(\ell\). Both classes
+  coefficients all equal $q^E U(q)$, with $U(0)$ a unit, has explicit
+  zero and nonzero fibers at every convolution length $\ell$. Both classes
   satisfy the sharp adjacent law
-  \[
+  $$
   v_p\!\left(N_{\ell,\star}(p^r)-N_{\ell,\star}(p^{r-1})\right)
   =(E\ell-1)(r-1).
-  \]
+  $$
   Applying this to determinant and Pfaffian produces two infinite
   supercongruence families and an exact total-variation mixing identity.
   More generally, the orbit-spectrum compiler evaluates an arbitrary
   convolution power from one scalar power per dual orbit; these examples
   require only two or three spectral packets.
 - **Status:** Complete elementary Fourier theorem with exact checks,
-  including \(p=2\). The input character sums and Fourier inversion are
+  including $p=2$. The input character sums and Fourier inversion are
   classical; priority of the all-convolution formulation is provisional.
 - **Proof:** [Constant-spectrum determinant and Pfaffian convolution towers](related-results/DeterminantPfaffianConvolutionTowers.md)
 - **Exact checker:** [`verify_determinant_pfaffian_convolution.py`](verification/related/verify_determinant_pfaffian_convolution.py)
 
 ### USAMO-HAM - dyadic Hamming supercongruence
 
-- **Claim:** The number \(T(n)\) of labeled all-isosceles triangulations of
-  a regular \(n\)-gon is determined exactly by the odd part of \(n\):
-  it is \(n/2\) for powers of two, \(n/3\) when the odd part is \(3\), \(n\)
-  when the odd part is \(2^b+1\) with \(b\geq2\), and zero otherwise. The
+- **Claim:** The number $T(n)$ of labeled all-isosceles triangulations of
+  a regular $n$-gon is determined exactly by the odd part of $n$:
+  it is $n/2$ for powers of two, $n/3$ when the odd part is $3$, $n$
+  when the odd part is $2^b+1$ with $b\geq2$, and zero otherwise. The
   support becomes the radius-two Hamming ball in binary. Its Walsh spectrum
-  has \(d+1\) Krawtchouk packets, and its \(\ell\)-fold zero-XOR count
-  \(Z_\ell(d)\) is an integer-valued polynomial satisfying
-  \[
+  has $d+1$ Krawtchouk packets, and its $\ell$-fold zero-XOR count
+  $Z_\ell(d)$ is an integer-valued polynomial satisfying
+  $$
   Z_\ell(p^r)\equiv Z_\ell(p^{r-1})\pmod {p^{r-1}}
-  \]
-  for \(p>\ell\). A derivative obstruction decides sharpness; the first
+  $$
+  for $p>\ell$. A derivative obstruction decides sharpness; the first
   exception is
-  \[
+  $$
   v_{439}\!\left(Z_6(439^r)-Z_6(439^{r-1})\right)=r.
-  \]
+  $$
 - **Status:** Complete elementary theorem with exact geometric, Walsh,
   convolution, polynomial, and valuation checks. The USAMO classification
   and Hamming-scheme Fourier theory are classical; priority of the exact
@@ -260,38 +260,38 @@ Source-status labels are separate from proof status:
 ### JC-WL - all-degree weighted-lift collision theorem
 
 - **Claim:** If a normalized weighted-lift Keller map has generic fiber
-  degree \(n\), its finite-field collision obstruction is the projective
+  degree $n$, its finite-field collision obstruction is the projective
   second divided-difference curve
-  \[
+  $$
   \frac{\Phi(t)-\Phi(r)-(t-r)\Phi'(r)}{(t-r)^2}=0
-  \]
-  of degree \(n-2\) and arithmetic genus
-  \((n-3)(n-4)/2\). The complete collision count is the sum of a Tate term,
+  $$
+  of degree $n-2$ and arithmetic genus
+  $(n-3)(n-4)/2$. The complete collision count is the sum of a Tate term,
   twice the curve's Frobenius trace, and explicit finite infinity,
   diagonal, and bitangency packets, with one boundary correction when the
   seed's linear coefficient vanishes. Removing the complete non-Tate packet
-  gives exact adjacent valuation \(2r-2\) in every degree.
+  gives exact adjacent valuation $2r-2$ in every degree.
 - **Status:** Complete all-degree theorem with exact cross-degree checks for
-  degrees \(3\) through \(7\), manufactured boundary exceptions, and smooth
-  canonical reductions through genus \(6\). Literature priority is
+  degrees $3$ through $7$, manufactured boundary exceptions, and smooth
+  canonical reductions through genus $6$. Literature priority is
   provisional.
 - **Proof:** [All-degree collision theorem for weighted-lift Keller maps](related-results/WeightedLiftCollisionSynthesis.md)
 - **Exact checker:** [`verify_weighted_lift_collision_synthesis.py`](verification/related/verify_weighted_lift_collision_synthesis.py)
 
 ### JC-AUTO - fixed-precision Frobenius obstruction automata
 
-- **Claim:** For every good prime \(p\) and fixed \(k\ge1\), the levels
+- **Claim:** For every good prime $p$ and fixed $k\ge1$, the levels
   satisfying
-  \[
+  $$
   p^k\mid\mathcal V_r-\mathcal V_{r-1}
-  \]
+  $$
   form an eventually periodic set with rational density. Equivalently,
   their unary encodings form a regular language. A deterministic state is
-  supplied explicitly by the curve-trace recurrence modulo \(p^k\) and the
-  finite Frobenius-orbit phase. Modulo \(p\), deleting the vanishing
-  coefficients of the local \(L\)-polynomial gives an invertible
+  supplied explicitly by the curve-trace recurrence modulo $p^k$ and the
+  finite Frobenius-orbit phase. Modulo $p$, deleting the vanishing
+  coefficients of the local $L$-polynomial gives an invertible
   lower-order automaton and a sharper period bound. The corrected tower
-  always retains exact valuation \(2r-2\).
+  always retains exact valuation $2r-2$.
 - **Status:** Complete structural theorem with exact recurrence checks at
   four successive precisions for the genus-three and genus-six examples.
   Standard finite-state infrastructure is applied to the weighted-lift
@@ -303,57 +303,74 @@ Source-status labels are separate from proof status:
 
 - **Claim:** Every fixed-precision Frobenius obstruction orbit has a rational
   two-variable orbit series and a finite valuation partition polynomial that
-  recovers every congruence-threshold density. Residue-degree \(f\) base
-  change acts by the exact time decimation \(T\mapsto T^f\). For the
-  degree-seven example at \(p=5\), the complete precision-\(5^4\) polynomial
-  on its \(19500\)-class period is
-  \[
+  recovers every congruence-threshold density. Residue-degree $f$ base
+  change acts by the exact time decimation $T\mapsto T^f$. For the
+  degree-seven example at $p=5$, the complete precision-$5^4$ polynomial
+  on its $19500$-class period is
+  $$
   16000+2700u+600u^2+145u^3+55u^4.
-  \]
+  $$
 - **Status:** Complete structural deduction with a direct full-period
   checker. The finite-state formalism is standard; its collision-tower
   application and explicit partition polynomial have provisional priority.
 - **Proof:** [Finite-state thermodynamics of Frobenius obstruction towers](related-results/FrobeniusTransferThermodynamics.md)
 - **Exact checker:** [`verify_frobenius_transfer_thermodynamics.py`](verification/related/verify_frobenius_transfer_thermodynamics.py)
 
+### JC-PRED - exact predictive-state complexity
+
+- **Claim:** For the degree-seven $p=5$, precision-$5^4$ valuation
+  cycle, the least output period is $19{,}500$, the valuation partition is
+  not a one-step Markov lumping, and the least scalar history that determines
+  the next valuation has length $1{,}824$. At that length all
+  $19{,}500$ histories are distinct, so the coarsest deterministic quotient
+  preserving the complete future valuation sequence has no nontrivial state
+  compression. The deterministic shift does not mix; a separately chosen
+  lazy phase walk has second eigenvalue modulus
+  $\cos(\pi/19500)$.
+- **Status:** Complete exact application of classical predictive-state and
+  mixing theory. The arithmetic values and witness are checked directly;
+  no general novelty claim is made for the finite-state machinery.
+- **Proof:** [Exact predictive-state complexity](related-results/FrobeniusPredictiveStateTheorem.md)
+- **Exact checker:** [`verify_frobenius_predictive_state.py`](verification/related/verify_frobenius_predictive_state.py)
+
 ### JC-LIFT - all-precision unit-root period lifting
 
-- **Claim:** For the degree-seven genus-six collision example at \(p=5\),
+- **Claim:** For the degree-seven genus-six collision example at $p=5$,
   the unit-root Frobenius trace has exact period
-  \(39\cdot5^{k-1}\) modulo \(5^k\) for every \(k\geq1\). Consequently,
-  \(156\cdot5^{k-1}\) is an eventual period of the complete raw obstruction
-  packet. The proof uses a Hensel factor modulo \(125\) and a general vector
-  period-lifting lemma. The precision-\(5^5\) and precision-\(5^6\)
+  $39\cdot5^{k-1}$ modulo $5^k$ for every $k\geq1$. Consequently,
+  $156\cdot5^{k-1}$ is an eventual period of the complete raw obstruction
+  packet. The proof uses a Hensel factor modulo $125$ and a general vector
+  period-lifting lemma. The precision-$5^5$ and precision-$5^6$
   valuation partition polynomials are computed exactly, and all precision
   layers assemble on the profinite clock
-  \(\mathbf Z/156\mathbf Z\times\mathbf Z_5\).
+  $\mathbf Z/156\mathbf Z\times\mathbf Z_5$.
 - **Status:** Complete structural theorem with direct Hensel, matrix, period,
   and full-cycle certificates. Literature priority is provisional.
-- **Proof:** [Precision lifting and a \(p\)-adic valuation expansion](related-results/PadicValuationExpansion.md)
+- **Proof:** [Precision lifting and a $p$-adic valuation expansion](related-results/PadicValuationExpansion.md)
 - **Exact checker:** [`verify_padic_valuation_expansion.py`](verification/related/verify_padic_valuation_expansion.py)
 
 ### JC-FF - finite-field arithmetic of the Fable counterexample
 
 - **Claim:** For the three-dimensional Jacobian-conjecture counterexample
   publicly credited to Claude Fable, every odd finite-field fiber has size
-  \(0\), \(1\), or \(3\), with a complete closed factorization-type
+  $0$, $1$, or $3$, with a complete closed factorization-type
   distribution. The collision variance is
-  \[
+  $$
   \mathcal V(q)=
   \begin{cases}
-  (q-1)(q^2+2),&\operatorname{char}\mathbb F_q\ne3,\\
-  q^2(q-1),&\operatorname{char}\mathbb F_q=3,
+  (q-1)(q^2+2),&\mathrm{char}\mathbb F_q\ne3,\\
+  q^2(q-1),&\mathrm{char}\mathbb F_q=3,
   \end{cases}
-  \]
+  $$
   yielding an exact collision zeta function and
-  \[
+  $$
   v_p(\mathcal V(p^r)-\mathcal V(p^{r-1}))
   =
   \begin{cases}
   r-1,&p\ge5,\\
   2r-2,&p=3.
   \end{cases}
-  \]
+  $$
 - **Status:** Complete elementary theorem with prime-field and
   extension-field checks. It answers the unweighted finite-field version of
   a counting direction raised in the immediate literature; priority remains
@@ -364,15 +381,15 @@ Source-status labels are separate from proof status:
 ### JC4-FF - degree-four Frobenius obstruction and repair
 
 - **Claim:** For Gallagher's degree-four weighted-lift Keller map, the
-  off-diagonal collision count over \(\mathbb F_q\), in characteristic at
-  least \(5\), is
-  \[
+  off-diagonal collision count over $\mathbb F_q$, in characteristic at
+  least $5$, is
+  $$
   \mathcal V_4(q)
   =(q-1)\left(q^2+3+\chi_q(2)+2\chi_q(-2)+2\chi_q(6)\right).
-  \]
+  $$
   Its zeta function has three explicit quadratic Artin factors. Those factors
-  make the raw adjacent difference a \(p\)-adic unit unless
-  \(p\equiv1\pmod {24}\). Passing from \(r\) to \(r-2\), or adding the
+  make the raw adjacent difference a $p$-adic unit unless
+  $p\equiv1\pmod {24}$. Passing from $r$ to $r-2$, or adding the
   explicit Frobenius correction, restores sharp valuation laws.
 - **Status:** Complete elementary theorem with direct prime-field and
   quadratic-extension checks. Literature priority is provisional.
@@ -383,20 +400,20 @@ Source-status labels are separate from proof status:
 
 - **Claim:** For Gallagher's degree-five weighted-lift Keller map, the
   tangent-secant obstruction is a smooth plane cubic whose Jacobian is
-  \[
+  $$
   E:\ y^2=x^3-2594700x-2076643440.
-  \]
+  $$
   Away from the explicitly listed bad characteristics, the off-diagonal
   collision count is
-  \[
+  $$
   \mathcal V_5(q)
   =(q-1)\bigl(q^2+2a_E(q)-2+2I(q)+2D(q)+H(q)\bigr),
-  \]
-  with one additional \(-q(q-1)\) term in characteristic \(17\).
-  Here \(I,D,H\) are finite root-count packets. The local zeta function
+  $$
+  with one additional $-q(q-1)$ term in characteristic $17$.
+  Here $I,D,H$ are finite root-count packets. The local zeta function
   factors into Tate, elliptic, and finite Artin pieces. Removing the complete
   non-Tate packet gives a corrected tower with exact adjacent valuation
-  \(2r-2\).
+  $2r-2$.
 - **Status:** Complete theorem with direct prime-field and
   quadratic-extension collision checks, an explicit plane-cubic/elliptic
   identification, and exact tower checks. Literature priority is
@@ -407,18 +424,18 @@ Source-status labels are separate from proof status:
 ### JC6-FF - degree-six genus-three Frobenius obstruction
 
 - **Claim:** For Gallagher's canonical degree-six weighted-lift Keller map,
-  the tangent locus is a smooth plane quartic. At \(p=13\), its local
-  \(L\)-polynomial is
-  \[
+  the tangent locus is a smooth plane quartic. At $p=13$, its local
+  $L$-polynomial is
+  $$
   1+16T^2-26T^3+208T^4+2197T^6.
-  \]
+  $$
   Together with explicit finite orbit packets, this gives the complete
-  collision count. The raw adjacent difference is a \(13\)-adic unit at
-  every level \(r\ge2\). Removing the genus-three and finite packets restores
-  exact adjacent valuation \(2r-2\).
+  collision count. The raw adjacent difference is a $13$-adic unit at
+  every level $r\ge2$. Removing the genus-three and finite packets restores
+  exact adjacent valuation $2r-2$.
 - **Status:** Complete theorem with exact extension-field enumeration,
   algebraic-closure smoothness and orbit-factorization certificates, a
-  period-\(12\) obstruction proof, and corrected tower checks. Literature
+  period-$12$ obstruction proof, and corrected tower checks. Literature
   priority is provisional.
 - **Proof:** [Degree-six genus-three Frobenius obstruction](related-results/JacobianDegreeSixGenusThree.md)
 - **Exact checker:** [`verify_jacobian_degree_six.py`](verification/related/verify_jacobian_degree_six.py)
@@ -426,17 +443,17 @@ Source-status labels are separate from proof status:
 ### JC7-FF - degree-seven genus-six Frobenius automaton
 
 - **Claim:** An integral generic-degree-seven weighted lift has a smooth
-  genus-six tangent quintic at \(p=5\), with local \(L\)-polynomial
-  \[
+  genus-six tangent quintic at $p=5$, with local $L$-polynomial
+  $$
   1+2T^3+7T^4-16T^5-34T^6-80T^7
   +175T^8+250T^9+15625T^{12}.
-  \]
-  The raw adjacent collision difference is divisible by \(5\) in exactly
-  \(28\) of \(156\) level classes. Removing the genus-six and finite packets
-  restores exact adjacent valuation \(2r-2\).
+  $$
+  The raw adjacent collision difference is divisible by $5$ in exactly
+  $28$ of $156$ level classes. Removing the genus-six and finite packets
+  restores exact adjacent valuation $2r-2$.
 - **Status:** Complete theorem with exact point counts through
-  \(\mathbb F_{5^6}\), symbolic smoothness and orbit certificates, a complete
-  period-\(156\) obstruction proof, and corrected tower checks. Literature
+  $\mathbb F_{5^6}$, symbolic smoothness and orbit certificates, a complete
+  period-$156$ obstruction proof, and corrected tower checks. Literature
   priority is provisional.
 - **Proof:** [Degree-seven genus-six Frobenius automaton](related-results/JacobianDegreeSevenGenusSix.md)
 - **Exact checker:** [`verify_jacobian_degree_seven.py`](verification/related/verify_jacobian_degree_seven.py)
@@ -508,10 +525,10 @@ Source-status labels are separate from proof status:
 
 ### GL-ISO — ramified Gaussian disk isometry
 
-- **Claim:** For \(r\ge2\), the mixed-block product satisfies
-  \(v_{1+i}(F_r(Z)-F_r(W))=6r-3+v_{1+i}(Z-W)\). After division by its
+- **Claim:** For $r\ge2$, the mixed-block product satisfies
+  $v_{1+i}(F_r(Z)-F_r(W))=6r-3+v_{1+i}(Z-W)$. After division by its
   first logarithmic coefficient, it is a bijective analytic isometry of
-  \(\mathbb Z_2[i]\). The same conclusion holds throughout the
+  $\mathbb Z_2[i]$. The same conclusion holds throughout the
   finite-dimensional parameter region where the first logarithmic moment
   dominates every later moment by one valuation level.
 - **Status:** Complete deduction from the ramified reciprocal-moment theorem;
@@ -522,10 +539,10 @@ Source-status labels are separate from proof status:
 
 ### GL-DYN — translated-product return filtration
 
-- **Claim:** For every unit \(u\), the translated isometry
-  \(T_{r,u}=G_r+u\) satisfies
-  \(v_{1+i}(T_{r,u}^{2^m}(Z)-Z)=2m\). Thus every orbit modulo
-  \((1+i)^n\) has length \(2^{\lceil n/2\rceil}\), exactly as for ordinary
+- **Claim:** For every unit $u$, the translated isometry
+  $T_{r,u}=G_r+u$ satisfies
+  $v_{1+i}(T_{r,u}^{2^m}(Z)-Z)=2m$. Thus every orbit modulo
+  $(1+i)^n$ has length $2^{\lceil n/2\rceil}$, exactly as for ordinary
   addition.
 - **Status:** Complete deduction from the ramified reciprocal-moment
   estimates. A stronger compatible-conjugacy statement remains conjectural;
@@ -537,7 +554,7 @@ Source-status labels are separate from proof status:
 
 - **Claim:** The current results sit at the intersection of Gaussian
   Wolstenholme--Lucas congruences, local product expansions, generalized
-  factorial ideals, Dwork/Frobenius questions, and compatible \(p\)-adic
+  factorial ideals, Dwork/Frobenius questions, and compatible $p$-adic
   dynamics.
 - **Status:** Literature synthesis, not a theorem or a novelty certificate.
 - **Note:** [Gaussian Lucas literature puzzle](related-results/GaussianLucasLiteraturePuzzle.md)
@@ -552,15 +569,15 @@ Source-status labels are separate from proof status:
 
 ### GPS-CUBIC — cubic angular residue
 
-- **Claim:** For every inert prime \(p\ge7\) and odd
-  \(1\le r\le2p-1\),
-  \[
+- **Claim:** For every inert prime $p\ge7$ and odd
+  $1\le r\le2p-1$,
+  $$
   \mathcal G_{r(p-1)}(p)\equiv
   -i\,p^3\binom{r+2}{3}B_{p-3}\pmod {p^4}.
-  \]
-  Hence \(r=p-2,p,2p-1\) are universal counterexample families to the
+  $$
+  Hence $r=p-2,p,2p-1$ are universal counterexample families to the
   printed constant-valuation conjecture.  The formula itself already fails
-  at the next odd multiplier for \((p,r)=(7,15)\).
+  at the next odd multiplier for $(p,r)=(7,15)$.
 - **Status:** Complete proof candidate with exact checks; independent review
   and literature priority pending.
 - **Proof:** [Cubic angular residue](related-results/GaussianAngularResidueTheorem.md)
