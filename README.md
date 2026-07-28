@@ -20,6 +20,27 @@ source status and proof status are recorded separately.
 The ranking is canonical rather than chronological: GWL-TWO currently holds
 the crown, GWL-SCALE is the heir, and GPS-CUBIC is the first ascendant.
 
+## Public follow-on tracks
+
+### Gaussian-prime follow-on
+
+The principal public research line is the Gaussian-prime stack:
+
+- [ramified-prime theorem](related-results/GaussianLucasRamifiedTwoTheorem.md);
+- [prime-power scaling](related-results/GaussianLucasPrimePowerTheorem.md);
+- [cubic angular residue](related-results/GaussianAngularResidueTheorem.md);
+- [canonical products](related-results/GaussianLucasCanonicalProducts.md).
+
+### 2-adic Roe-inspired follow-on
+
+The second public line is
+**[orientation lifting, Dehn twists, and affine symmetry](ROE_2ADIC.md)**.
+It extracts an exact dyadic lifting package from the Roe--Turturean
+presentation: a nonintegral compatible orientation exponent, a
+\(\mathbb Z_2\)-family of outer Dehn twists, and the affine commutator
+filtration. Source ingredients and new deductions are separated explicitly
+on its landing page.
+
 The newest result is the
 [cubic angular-residue theorem](related-results/GaussianAngularResidueTheorem.md):
 for every inert prime \(p\ge7\), it replaces a printed constant-valuation
@@ -28,7 +49,7 @@ conjecture by an explicit congruence modulo \(p^4\) for every odd
 that formula immediately outside the proved range.
 
 The newest auxiliary lifting result is
-[GQ2-LIFT](related-results/GQ2OrientationLifts.md), an exact \(2\)-adic
+[GQ2-LIFT](ROE_2ADIC.md), an exact \(2\)-adic
 orientation law sharpening Roe--Turturean Remark C.7 together with the exact
 \(\mathbb Z_2\)-family of outer Dehn twists hidden in their HNN shear and the
 resulting affine commutator filtration. It is included as a clean

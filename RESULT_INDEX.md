@@ -590,6 +590,7 @@ Source-status labels are separate from proof status:
   exact successive translation layers \(2^r\mathbb Z_2\).
 - **Status:** Complete elementary sharpening of Roe--Turturean Remark C.7;
   no claim of novelty and no change to their main classification theorem.
+- **Public landing page:** [Public 2-adic Roe-inspired follow-on](ROE_2ADIC.md)
 - **Proof:** [Exact dyadic orientation lifts](related-results/GQ2OrientationLifts.md)
 - **Exact checker:** [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py)
 
