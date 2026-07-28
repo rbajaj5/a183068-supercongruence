@@ -36,6 +36,18 @@ requires a stronger mathematical conclusion, improved proof maturity, or a
 materially better priority assessment. Major developments must update this
 section, the detailed scorecard, and the root README together.
 
+### Latest portfolio update
+
+**2026-07-27.** GAL-LIFT enters the completed-framework tier at rank 34=.
+Its breadth and maturity are high, but its novelty score is intentionally low:
+the inverse-limit theorem and the \(H^2/H^1\) square-zero deformation package
+are standard infrastructure.  The update therefore changes the coverage of
+the portfolio without changing the crown, heir, or first ascendant.
+
+The separate random-knot crossing-cube work is scored in the
+`unsolved-problems` repository.  It is not a supercongruence result and is not
+inserted into this table merely because it uses finite-group characters.
+
 ## Completed drafts, theorems, and deductions
 
 | Rank | ID and result | Math-community value | Deployment value | Novelty confidence | Breadth | Maturity | Cost remaining | Mathematical status |
