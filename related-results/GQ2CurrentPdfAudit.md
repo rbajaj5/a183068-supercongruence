@@ -69,7 +69,7 @@ right-conjugation convention, and tested generation. It found
 Thus the displayed value
 
 $$
-|\operatorname{Sur}(\Gamma_A,S_3)|=6
+|\mathrm{Sur}(\Gamma_A,S_3)|=6
 $$
 
 is reproduced exactly.
@@ -84,7 +84,7 @@ Using $O_2(S_4)=V_4$, the same exhaustive calculation found
 Thus the displayed value
 
 $$
-|\operatorname{Sur}(\Gamma_A,S_4)|=72
+|\mathrm{Sur}(\Gamma_A,S_4)|=72
 $$
 
 is also reproduced exactly.

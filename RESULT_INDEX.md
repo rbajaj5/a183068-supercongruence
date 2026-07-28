@@ -341,8 +341,8 @@ Source-status labels are separate from proof status:
   $$
   \mathcal V(q)=
   \begin{cases}
-  (q-1)(q^2+2),&\operatorname{char}\mathbb F_q\ne3,\\
-  q^2(q-1),&\operatorname{char}\mathbb F_q=3,
+  (q-1)(q^2+2),&\mathrm{char}\mathbb F_q\ne3,\\
+  q^2(q-1),&\mathrm{char}\mathbb F_q=3,
   \end{cases}
   $$
   yielding an exact collision zeta function and
@@ -583,7 +583,7 @@ Source-status labels are separate from proof status:
   representative either stays fixed or gains the next high binary digit.
   The limiting exponent is not an ordinary integer. The cyclic HNN
   presentation also gives an exact pro-$2$ Dehn-twist tower
-  $\mathbb Z_2\hookrightarrow\operatorname{Out}(D_0)$, with congruence
+  $\mathbb Z_2\hookrightarrow\mathrm{Out}(D_0)$, with congruence
   depth exactly $v_2(b)$, acting equivariantly on every defect stage. The
   full orientation-preserving abelian shadow is the affine group
   $\mathbb Z_2\rtimes\mathbb Z_2^\times$; its commutator filtration has

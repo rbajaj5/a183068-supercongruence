@@ -159,7 +159,7 @@ Then:
 2. $\mathcal T_b\mathcal T_c=\mathcal T_{b+c}$;
 3. $b\mapsto[\mathcal T_b]$ is a continuous injection
    $$
-   \mathbb Z_2\hookrightarrow\operatorname{Out}(D_0);
+   \mathbb Z_2\hookrightarrow\mathrm{Out}(D_0);
    $$
 4. every $\mathcal T_b$ preserves the canonical orientation; and
 5. on the free part of the abelianization, with ordered basis
@@ -220,9 +220,9 @@ $$
 $$
 
 With their right-conjugation convention,
-$\Theta_b=\operatorname{conj}_{S^b}\circ\mathcal T_b$: conjugation by $S^b$
+$\Theta_b=\mathrm{conj}_{S^b}\circ\mathcal T_b$: conjugation by $S^b$
 is applied after the twist. Hence the two families determine the same element
-of $\operatorname{Out}(D_0)$. The “shear” used in their marking argument is
+of $\mathrm{Out}(D_0)$. The “shear” used in their marking argument is
 therefore literally the outer class of a Dehn twist.
 
 ## The affine symmetry behind Proposition 3.9
@@ -249,7 +249,7 @@ $$
 There is a canonical isomorphism
 
 $$
-\operatorname{Aut}(B_{\mathrm{ab}},\chi)
+\mathrm{Aut}(B_{\mathrm{ab}},\chi)
 \cong
 \mathbb Z_2\rtimes\mathbb Z_2^\times,
 $$
@@ -274,8 +274,8 @@ Moreover:
 
 1. the natural map
    $$
-   \operatorname{Out}(D_0)\longrightarrow
-   \operatorname{Aut}(B_{\mathrm{ab}},\chi)
+   \mathrm{Out}(D_0)\longrightarrow
+   \mathrm{Aut}(B_{\mathrm{ab}},\chi)
    $$
    is surjective;
 2. the translation subgroup $M(1,b)$ has the explicit Dehn-twist section
@@ -308,7 +308,7 @@ Moreover:
 The matrix formula gives the multiplication law and the semidirect product.
 Surjectivity is Roe--Turturean Proposition 3.9; inner automorphisms act
 trivially on the abelianization, so their map factors through
-$\operatorname{Out}(D_0)$. The preceding Dehn-twist theorem supplies the
+$\mathrm{Out}(D_0)$. The preceding Dehn-twist theorem supplies the
 translation section.
 
 The conjugation and commutator formulas follow by multiplying the displayed
@@ -402,7 +402,7 @@ This calculation rules out a purely formal vanishing argument for that
 linear coefficient module. It does **not** decide whether the surjection
 
 $$
-\operatorname{Out}(D_0)\twoheadrightarrow
+\mathrm{Out}(D_0)\twoheadrightarrow
 T\rtimes U
 $$
 

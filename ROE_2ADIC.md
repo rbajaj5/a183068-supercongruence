@@ -63,7 +63,7 @@ b\longmapsto[\mathcal T_b]
 $$
 
 embeds $\mathbb Z_2$ continuously into
-$\operatorname{Out}(D_0)$. These are the pro-$2$ HNN Dehn twists. Their
+$\mathrm{Out}(D_0)$. These are the pro-$2$ HNN Dehn twists. Their
 depth on the abelianization is exactly $v_2(b)$.
 
 ### 3. The affine shadow
@@ -71,7 +71,7 @@ depth on the abelianization is exactly $v_2(b)$.
 The full orientation-preserving abelian shadow is
 
 $$
-\operatorname{Aut}(B_{\mathrm{ab}},\chi)
+\mathrm{Aut}(B_{\mathrm{ab}},\chi)
 \cong
 \mathbb Z_2\rtimes\mathbb Z_2^\times,
 $$
@@ -84,7 +84,7 @@ M(u,b)=
 $$
 
 Roe--Turturean Proposition 3.9 makes the natural map from
-$\operatorname{Out}(D_0)$ onto this affine group surjective. The twists
+$\mathrm{Out}(D_0)$ onto this affine group surjective. The twists
 give an explicit section of its translation subgroup.
 
 The commutator depth is exact:
@@ -148,7 +148,7 @@ python verification/related/verify_gq2_orientation_lifts.py
 Proposition 3.9 gives a surjection
 
 $$
-\operatorname{Out}(D_0)\twoheadrightarrow
+\mathrm{Out}(D_0)\twoheadrightarrow
 \mathbb Z_2\rtimes\mathbb Z_2^\times.
 $$
 
