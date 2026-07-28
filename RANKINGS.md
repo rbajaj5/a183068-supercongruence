@@ -64,9 +64,10 @@ stated target. Maturity records the work presently in the repository.
 | Rank | ID and result | Math-community value | Deployment value | Novelty confidence | Breadth | Maturity | Cost remaining | Current mathematical status |
 | ---: | --- | :---: | :---: | :---: | :---: | :---: | :---: | --- |
 | 1 | [C11: Cooper level-11 exceptional primes](related-results/CooperLevel11RarePrimes.md) | **8** | 1 | 7 | 8 | 3 | 8 | Published Lucas foundation plus reproducible first-order targets; the rank-one Cartier identity remains unproved. |
-| 2 | [s18-2: binary supercongruence reduction](related-results/S18TwoAdicReduction.md) | **7** | 1 | 7 | 6 | 3 | 8 | Substantial reduction to one sharpened scaling lemma; target not proved. |
-| 3 | [GL-MAP: Gaussian literature and structural map](related-results/GaussianLucasLiteraturePuzzle.md) | **3** | 1 | 1 | 7 | 8 | 2 | Literature synthesis, not a theorem or novelty certificate. |
-| 4 | [G-BOUNDARY: classical Gaussian obstructions](related-results/GaussianCitationNetworkBoundaryReport.md) | **3** | 1 | 4 | 4 | 6 | 5 | Rigorous reductions and bounded searches, not solutions of the classical problems. |
+| 2 | [CAT-ODD: Catalan ballot-power supercongruences](related-results/CatalanBallotPowerSupercongruenceAudit.md) | **7** | 1 | 5 | 8 | 2 | 8 | Three named \(p^{3r}\) conjectures unified as one computational target; sharp \(p=2,3\) refinements are experimental. |
+| 3 | [s18-2: binary supercongruence reduction](related-results/S18TwoAdicReduction.md) | **7** | 1 | 7 | 6 | 3 | 8 | Substantial reduction to one sharpened scaling lemma; target not proved. |
+| 4 | [GL-MAP: Gaussian literature and structural map](related-results/GaussianLucasLiteraturePuzzle.md) | **3** | 1 | 1 | 7 | 8 | Literature synthesis, not a theorem or novelty certificate. |
+| 5 | [G-BOUNDARY: classical Gaussian obstructions](related-results/GaussianCitationNetworkBoundaryReport.md) | **3** | 1 | 4 | 4 | 6 | 5 | Rigorous reductions and bounded searches, not solutions of the classical problems. |
 
 ## Portfolio reading
 
