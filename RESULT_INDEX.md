@@ -120,6 +120,20 @@ Source-status labels are separate from proof status:
 - **Proof:** [Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md)
 - **Exact checker:** [`verify_gaussian_twists.py`](verification/related/verify_gaussian_twists.py)
 
+### CDE-DEFECT — Chowla--Dwork--Evans split-prime defect
+
+- **Claim:** The published Chowla--Dwork--Evans modulo-\(p^2\) theorem is
+  equivalent to the normalized first-defect law
+  \[
+  \frac{\binom{(p-1)/2}{(p-1)/4}-2a}{p}
+  \equiv a q_p(2)-(2a)^{-1}\pmod p
+  \]
+  for \(p=a^2+b^2\), \(a\equiv1\pmod4\). Extra divisibility occurs exactly
+  when \(2a^2q_p(2)\equiv1\pmod p\).
+- **Status:** Exact corollary of a published theorem; no novelty claim.
+- **Note:** [Split-prime defect](related-results/ChowlaDworkEvansSplitDefect.md)
+- **Exact checker:** [`verify_chowla_dwork_evans_defect.py`](verification/related/verify_chowla_dwork_evans_defect.py)
+
 ### ETA-3 — cubic extension at the exceptional prime
 
 - **Claim:** A cubic $\eta$-sequence congruence extends to the omitted prime

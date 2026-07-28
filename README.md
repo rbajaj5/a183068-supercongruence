@@ -151,6 +151,20 @@ Frobenius-corrected adjacent valuation of \(2r-2\).
 
 ## Public Gaussian-prime follow-on
 
+The most direct classical precedent is the
+[Chowla--Dwork--Evans split-prime defect](related-results/ChowlaDworkEvansSplitDefect.md).
+Their published modulo-\(p^2\) lift of Gauss's binomial congruence gives the
+exact normalized defect
+
+```math
+\frac{\binom{(p-1)/2}{(p-1)/4}-2a}{p}
+\equiv a q_p(2)-(2a)^{-1}\pmod p
+```
+
+when \(p=a^2+b^2\) and \(a\equiv1\pmod4\). The repository note is a
+reformulation and exact regression check of a known theorem, not a novelty
+claim.
+
 The most concise shareable follow-on is
 **[Kalinin's Gaussian Lucas congruence](GAUSSIAN_LUCAS.md)**. It gives the
 statement, proof mechanism, exact $p=3$ boundary, source paper, and

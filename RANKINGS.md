@@ -54,6 +54,7 @@ theorem.
 | 26 | [AA-TOWER: \(p\)-adic compactness framework](related-results/PadicArzelaAscoliSupercongruenceTowers.md) | **4** | 2 | 3 | 6 | 8 | 4 | Complete framework and obstruction; horizontal unit-shell interpolation remains open. |
 | 27 | [BOX-d: higher-degree box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md) | **4** | 2 | 2 | 8 | 7 | 3 | Complete unchecked theorem; likely classical infrastructure. |
 | 28 | [GWL-POLY: Gaussian box polynomial](related-results/GaussianWolstenholmeCitationNetwork.md#2-the-polynomial-conjecture) | **4** | 1 | 6 | 4 | 6 | 5 | Complete unchecked finite-field polynomial formulas. |
+| 29 | [CDE-DEFECT: Chowla--Dwork--Evans split-prime defect](related-results/ChowlaDworkEvansSplitDefect.md) | **4** | 1 | 1 | 6 | 10 | 1 | Exact reformulation of a published modulo-\(p^2\) theorem, with 1,125 exact regression checks and no novelty claim. |
 
 ## Reductions, computational targets, and synthesis
 

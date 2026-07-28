@@ -29,6 +29,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 2 | [Frobenius quotients of constant-term sequences](FrobeniusQuotientConstantTerms.md) | Proves the universal first-order expansion, identifies the exact rank-one condition behind the Cooper law, and gives exact counterexamples to two proposed Dwork shortcuts | Complete elementary theorem; Dwork boundaries certified |
 | 3 | [p-adic Arzelà--Ascoli framework](PadicArzelaAscoliSupercongruenceTowers.md) | Proves the vertical limit supplied by A183068, uses the Banach contraction $x\mapsto px$ to rule out a global continuous interpolation, and proves uniform quadratic contraction of every normalized defect at zero | Complete elementary framework and obstruction; unit-shell estimate open |
 | 4 | [Gaussian Frobenius twists](GaussianFrobeniusTwists.md) | Shows that discard-and-rescale proofs lift to roots-of-unity weights; specializes A183068 to a Gaussian split/inert congruence | Complete elementary deduction; priority unchecked |
+| 4A | [Chowla--Dwork--Evans split-prime defect](ChowlaDworkEvansSplitDefect.md) | Rewrites their published modulo-\(p^2\) lift as an exact normalized defect and exceptional-prime criterion | Published theorem plus exact corollary; no novelty claim |
 | 5 | [Cubic $(\eta)$ congruence at $p=3$](EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to fill a small-prime gap in a published theorem | Complete unchecked draft |
 | 6 | [Gaussian Wolstenholme citation network](GaussianWolstenholmeCitationNetwork.md) | Replaces scaling by translation-invariant Gaussian residue blocks | Three major candidate results with exact certificates; independent review required |
 | 7 | [Gaussian canonical-product synthesis](GaussianLucasCanonicalProducts.md) | Extracts the dominant logarithmic-moment mechanism, proves that the normalized ramified block is a bijective disk isometry, and extends it to a first-moment-dominance chamber | Proved local theorem plus open research program |
@@ -89,6 +90,7 @@ The individual correspondence is:
 | Cubic $(\eta)$ | `verification/related/verify_eta_prime3.py` |
 | Cooper level 11 | `verification/related/verify_cooper_level11.py` |
 | Gaussian Frobenius twists | `verification/related/verify_gaussian_twists.py` |
+| Chowla--Dwork--Evans split-prime defect | `verification/related/verify_chowla_dwork_evans_defect.py` |
 | Gaussian power sums | `verification/related/verify_gaussian_power_sums.py` |
 | Gaussian Wolstenholme network | `verification/related/verify_gaussian_wolstenholme.py` |
 | Gaussian product isometry | `verification/related/verify_gaussian_product_isometry.py` |
