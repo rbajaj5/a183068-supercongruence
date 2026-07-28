@@ -15,6 +15,21 @@ confidence, breadth, maturity, and cost remaining. The present top structural
 result is the all-degree weighted-lift collision theorem; source status and
 proof status are recorded separately.
 
+## Public 2-adic Roe--Turturean follow-on
+
+The **[2-adic Roe-inspired packet](ROE_2ADIC.md)** is a separate public
+follow-on prompted by David Roe and David Turturean's
+[*A Presentation of the Absolute Galois Group of
+\(\mathbf Q_2\)*](https://roed314.github.io/gq2/paper.pdf).
+It records exact orientation lifting, a dyadic Dehn-twist tower, its affine
+commutator filtration, two finite-quotient sampling models, and an
+almost-periodicity specialization. The packet includes a targeted audit of
+the current source PDF and five exact checkers.
+
+This material is a structural comparison for small-prime lifting. It is not
+claimed as a new A183068 congruence or a correction of Roe--Turturean's main
+presentation theorem.
+
 ## The result
 
 Define
@@ -265,13 +280,15 @@ To reproduce every computation in the expanded repository, run
   function, and corrected adjacent-extension law.
 - [GAUSSIAN_LUCAS.md](GAUSSIAN_LUCAS.md): the public entry point for the
   Gaussian-prime follow-on.
+- [ROE_2ADIC.md](ROE_2ADIC.md): the public entry point for the exact
+  Roe--Turturean-inspired \(2\)-adic lifting and Dehn-twist packet.
 - [related-results/](related-results/): the complete related proof drafts and
   reductions. These are stored locally in this repository rather than merely
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all twenty-three
-  verification programs.
+- [verification/run_all.py](verification/run_all.py): one command for all
+  included verification programs.
 
 The broader working repository remains available at
 [rbajaj5/oeis-conjecture-proofs](https://github.com/rbajaj5/oeis-conjecture-proofs).

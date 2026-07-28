@@ -416,6 +416,25 @@ Source-status labels are separate from proof status:
 - **Proof:** [Higher-degree box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md)
 - **Exact checker:** [`verify_higher_degree_box_polynomial.py`](verification/related/verify_higher_degree_box_polynomial.py)
 
+### GQ2-LIFT — exact dyadic orientation lifting
+
+- **Claim:** The compatible orientation classes in Roe--Turturean Remark C.7
+  define one nonintegral \(2\)-adic exponent. The associated HNN shears give
+  an exact \(\mathbb Z_2\)-tower of outer Dehn twists whose affine shadow has
+  an explicit commutator filtration, optimal lift-bit sampler, fixed-generator
+  Cayley bounds, and normal-form grammar.
+- **Status:** Complete elementary sharpening and structural extraction with a
+  targeted current-PDF audit. No correction of the source theorem and no
+  novelty claim.
+- **Public landing page:** [Public 2-adic Roe-inspired follow-on](ROE_2ADIC.md)
+- **Proof:** [Exact dyadic orientation lifts](related-results/GQ2OrientationLifts.md)
+- **Current-source audit:** [Targeted Appendix C--D audit](related-results/GQ2CurrentPdfAudit.md)
+- **Exact checkers:** [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py),
+  [`verify_gq2_appendices.py`](verification/related/verify_gq2_appendices.py),
+  [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py),
+  [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py),
+  and [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py).
+
 ## Reductions and computational reports
 
 ### CAT-ODD — Catalan ballot-power supercongruences
