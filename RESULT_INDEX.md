@@ -87,6 +87,21 @@ Source-status labels are separate from proof status:
 - **Proof:** [Frobenius-quotient identity](related-results/FrobeniusQuotientConstantTerms.md)
 - **Exact boundary checker:** [`verify_dwork_boundaries.py`](verification/related/verify_dwork_boundaries.py)
 
+### CTRL-DOLD - controller-filtered periodic-orbit congruences
+
+- **Claim:** Every integral primitive-cycle weight on a finite transition
+  system satisfies the Dold congruence and hence
+  $G_{\ell^r}\equiv G_{\ell^{r-1}}\pmod{\ell^r}$. Bounded controller
+  memory, Pareto labels, and integral changes of denomination preserve the
+  theorem. Reduced Schottky words give an explicit closed-form family, while
+  a disjoint prime-power cycle proves that no uniform finite observation
+  horizon determines the next normalized defect.
+- **Status:** Complete elementary deduction and application; no novelty
+  claimed for the underlying Dold theorem. Exact checker passes 260,164
+  assertions.
+- **Proof:** [Controller-filtered orbit supercongruences](related-results/FilteredOrbitSupercongruences.md)
+- **Exact checker:** [`verify_filtered_orbit_supercongruence.py`](verification/related/verify_filtered_orbit_supercongruence.py)
+
 ### AA-TOWER — p-adic compactness of supercongruence towers
 
 - **Claim:** A uniform adjacent-scale valuation tending to infinity gives a

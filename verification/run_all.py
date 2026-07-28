@@ -29,6 +29,7 @@ SCRIPTS = (
     "verification/related/verify_eta_prime3.py",
     "verification/related/verify_cooper_level11.py",
     "verification/related/verify_dwork_boundaries.py",
+    "verification/related/verify_filtered_orbit_supercongruence.py",
     "verification/related/verify_gaussian_twists.py",
     "verification/related/verify_gaussian_power_sums.py",
     "verification/related/verify_gaussian_angular_residue.py",
