@@ -33,6 +33,7 @@ SCRIPTS = (
     "verification/related/verify_dyadic_dehn_twist_sampler.py",
     "verification/related/verify_dyadic_dehn_twist_cayley.py",
     "verification/related/verify_dyadic_twist_grammar.py",
+    "verification/related/verify_dyadic_dehn_twist_conjugacy.py",
     "verification/related/verify_higher_degree_box_polynomial.py",
     "verification/related/verify_gaussian_erdos_moser.py",
 )

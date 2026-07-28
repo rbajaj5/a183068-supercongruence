@@ -10,6 +10,7 @@ The detailed proofs and checker are:
 - [exact sampling and mixing on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistSampler.md);
 - [a fixed-generator Cayley walk on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistCayleyWalk.md);
 - [affine-word grammar and almost periodicity of dyadic twists](related-results/DyadicTwistGrammarAlmostPeriodicity.md);
+- [conjugacy shells and exact twist-depth moments](related-results/DyadicDehnTwistConjugacyMoments.md);
 - [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py);
 - [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py);
 - [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py); and
@@ -242,6 +243,15 @@ The grammar checker verifies more than 2.4 million exact rewrite identities,
 all unique normal forms through modulus $2^7$, and 10,912 exact
 twist-convolution identities.
 
+The conjugacy checker verifies every translation shell and centralizer through
+modulus \(2^8\). It also checks the exact adjacent depth-moment identity
+
+$$
+D_{m+1,j}-2D_{m,j}=2^{jm}
+$$
+
+through \(m=16\) and \(j=8\).
+
 A second exact checker independently reproduces the manuscript's Proposition
 C.10 norm calculations and the Appendix D counts for $S_3$ and $S_4$. See the
 [current-PDF audit](related-results/GQ2CurrentPdfAudit.md).
@@ -253,6 +263,7 @@ python verification/related/verify_gq2_orientation_lifts.py
 python verification/related/verify_dyadic_dehn_twist_sampler.py
 python verification/related/verify_dyadic_dehn_twist_cayley.py
 python verification/related/verify_dyadic_twist_grammar.py
+python verification/related/verify_dyadic_dehn_twist_conjugacy.py
 ```
 
 ## Next theorem target
