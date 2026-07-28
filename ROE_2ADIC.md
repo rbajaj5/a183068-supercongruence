@@ -10,10 +10,12 @@ The detailed proofs and checker are:
 - [exact sampling and mixing on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistSampler.md);
 - [a fixed-generator Cayley walk on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistCayleyWalk.md);
 - [affine-word grammar and almost periodicity of dyadic twists](related-results/DyadicTwistGrammarAlmostPeriodicity.md);
+- [the affine splitting proxy and its exact parity obstruction](related-results/GQ2AffineSplittingProxy.md);
 - [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py);
 - [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py);
-- [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py); and
-- [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py).
+- [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py);
+- [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py); and
+- [`verify_gq2_affine_splitting_proxy.py`](verification/related/verify_gq2_affine_splitting_proxy.py).
 
 [RT]: https://roed314.github.io/gq2/paper.pdf
 [Gropper]: https://arxiv.org/abs/2303.04309
@@ -202,6 +204,25 @@ these approximate symmetries with cyclotomic phases. This is a specialization
 of an existing theorem, not a new priority claim or an improvement of the
 Cayley spectral gap.
 
+For an individual averaged observable $h$, the exact periods are also
+computable. If
+
+$$
+d=\gcd\left(2^m,\{k:\widehat h(k)\neq0\}\right),
+$$
+
+then
+
+$$
+\mathrm{Per}(h)
+=
+\frac{2^m}{d}\mathbb Z/2^m\mathbb Z.
+$$
+
+Parseval's identity gives the corresponding quantitative error formula for
+cyclotomic Bohr sets. This exact gcd certificate is an elementary Fourier
+deduction.
+
 ## Source boundary
 
 | Item | Status |
@@ -239,8 +260,14 @@ modulus $2^5$ and verifies symmetry, stochasticity, irreducibility,
 nonnegative spectrum, the cyclotomic unit eigenfunction, and both gap bounds.
 
 The grammar checker verifies more than 2.4 million exact rewrite identities,
-all unique normal forms through modulus $2^7$, and 10,912 exact
-twist-convolution identities.
+all unique normal forms through modulus $2^7$, 10,912 exact
+twist-convolution identities, and 258 complete cyclotomic period
+classifications.
+
+The affine-splitting checker verifies 2,352,127 exact finite-level identities:
+the $5$-adic cocycle, the proxy automorphisms, the parity splitting criterion,
+the two sign-cohomology classes, and the incompatible finite Yablo
+truncations.
 
 A second exact checker independently reproduces the manuscript's Proposition
 C.10 norm calculations and the Appendix D counts for $S_3$ and $S_4$. See the
@@ -253,9 +280,10 @@ python verification/related/verify_gq2_orientation_lifts.py
 python verification/related/verify_dyadic_dehn_twist_sampler.py
 python verification/related/verify_dyadic_dehn_twist_cayley.py
 python verification/related/verify_dyadic_twist_grammar.py
+python verification/related/verify_gq2_affine_splitting_proxy.py
 ```
 
-## Next theorem target
+## The affine splitting proxy
 
 Proposition 3.9 gives a surjection
 
@@ -271,17 +299,23 @@ unit-scaling lifts produce a generally nonabelian, $K$-valued factor set.
 Killing that factor set, compatibly with the translation section, is the
 actual splitting problem.
 
-The natural linear proxy is not automatically zero:
+The natural linear proxy is nonzero:
 
 $$
 H^2_{\mathrm{cont}}(\mathbb Z_2^\times,\mathbb Z_2(1))
 \cong\mathbb Z/2.
 $$
 
-Here $\mathbb Z_2(1)$ means the additive module on which a unit acts by
-multiplication. This calculation does not yet identify the actual
-kernel-valued extension class; a compatible abelian pushout from $K$ would
-still have to be constructed.
+The [explicit calculation](related-results/GQ2AffineSplittingProxy.md)
+constructs both classes. Writing
+$\mathbb Z_2^\times=\{\pm1\}\times\langle5\rangle$, the nonzero class is
+exactly the parity of the cross-commutator between lifts of the sign and
+$5$-adic directions. The proxy extension splits if and only if that parity
+is even.
 
-No answer is claimed yet. A splitting theorem or a nonzero obstruction would
-be a materially stronger result than the present structural extraction.
+This closes the linear proxy, not the original problem. The next genuine
+target is to construct a compatible equivariant pushout
+$K\twoheadrightarrow\mathbb Z_2(1)$ and compute the resulting parity. An odd
+answer would prove that the affine quotient of $\mathrm{Out}(D_0)$ has
+no continuous section; an even answer would only show that this first proxy
+is silent.

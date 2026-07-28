@@ -590,9 +590,11 @@ Source-status labels are separate from proof status:
   exact successive translation layers $2^r\mathbb Z_2$. The natural linear
   coefficient calculation is
   $H^2_{\mathrm{cont}}(\mathbb Z_2^\times,\mathbb Z_2(1))
-  \cong\mathbb Z/2$, so the first abelian proxy for the full splitting
-  problem does not vanish formally; the actual kernel-valued extension class
-  remains unidentified. At finite level, the affine coordinates give an
+  \cong\mathbb Z/2$. Both proxy classes admit explicit profinite extension
+  models: the class is the parity of the cross-commutator between sign and
+  $5$-adic lifts, and the proxy splits exactly in the even case. The actual
+  kernel-valued extension class remains unidentified. At finite level, the
+  affine coordinates give an
   information-theoretically optimal $2m-1$-bit exact sampler. The natural
   coordinate-refresh chain has eigenvalues $1-j/(2m-1)$ with multiplicity
   $\binom{2m-1}{j}$ and total-variation cutoff at
@@ -600,7 +602,9 @@ Source-status labels are separate from proof status:
   $\mathcal T_{\pm1},5^{\pm1},-1$ produces a cyclotomic unit spectrum and
   explicit spectral-gap bounds of order $4^{-m}$. Affine words also admit a
   unique translation-first grammar, and finite-group almost periodicity gives
-  large difference sets of approximate symmetries for dense twist averages.
+  large difference sets of approximate symmetries for dense twist averages;
+  the exact-period subgroup is computed by the gcd of the cyclotomic Fourier
+  support.
 - **Status:** Complete elementary sharpening of Roe--Turturean Remark C.7;
   no claim of novelty and no change to their main classification theorem.
 - **Public landing page:** [Public 2-adic Roe-inspired follow-on](ROE_2ADIC.md)
@@ -612,6 +616,8 @@ Source-status labels are separate from proof status:
 - **Cayley checker:** [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py)
 - **Grammar and almost-periodicity corollary:** [Affine-word grammar and almost periodicity of dyadic twists](related-results/DyadicTwistGrammarAlmostPeriodicity.md)
 - **Grammar checker:** [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py)
+- **Affine splitting proxy:** [The affine splitting proxy for the dyadic Demushkin tower](related-results/GQ2AffineSplittingProxy.md)
+- **Splitting-proxy checker:** [`verify_gq2_affine_splitting_proxy.py`](verification/related/verify_gq2_affine_splitting_proxy.py)
 - **Current-PDF audit:** [Targeted Appendix C--D audit](related-results/GQ2CurrentPdfAudit.md)
 - **Appendix checker:** [`verify_gq2_appendices.py`](verification/related/verify_gq2_appendices.py)
 
