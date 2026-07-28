@@ -267,6 +267,23 @@ Source-status labels are separate from proof status:
 - **Proof:** [Precision lifting and a \(p\)-adic valuation expansion](related-results/PadicValuationExpansion.md)
 - **Exact checker:** [`verify_padic_valuation_expansion.py`](verification/related/verify_padic_valuation_expansion.py)
 
+### JC-HENSEL - weighted valuation filter
+
+- **Claim:** The degree-seven raw Frobenius defect at \(p=5\) has \(28\)
+  inverse-limit roots: \(25\) on phases of common valuation \(2\), one on
+  a phase of common valuation \(3\), and two on a phase of common valuation
+  \(4\). Weighted Hensel counting gives exactly \(80\) successful classes
+  at every precision \(5^k\), \(k\geq5\), hence density
+  \(4/(39\cdot5^{k-2})\). The complete partition polynomial is explicit for
+  every \(k\), with limiting mean \(61/260\) and variance
+  \(66577/202800\).
+- **Status:** Complete structural theorem with exact phase, derivative, and
+  full precision-\(5^7\) certificates. General interpolation and Hensel
+  infrastructure is standard; priority of the explicit application is
+  provisional.
+- **Proof:** [A Hensel valuation filter for Frobenius supercongruences](related-results/HenselValuationFilter.md)
+- **Exact checker:** [`verify_hensel_valuation_filter.py`](verification/related/verify_hensel_valuation_filter.py)
+
 ### JC-FF - finite-field arithmetic of the Fable counterexample
 
 - **Claim:** For the three-dimensional Jacobian-conjecture counterexample

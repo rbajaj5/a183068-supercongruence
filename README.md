@@ -202,6 +202,20 @@ on the profinite grid
 \(\mathbf Z/156\mathbf Z\times\mathbf Z_5\), where truncated valuation is
 an exact sum of clopen indicator functions.
 
+The
+[Hensel valuation filter](related-results/HenselValuationFilter.md)
+then resolves every higher precision. The inverse-limit zero set has
+\(28\) points carrying finite-precision weights \(1\), \(5\), and \(25\);
+their weighted count is always \(80\). Consequently the successful density
+is exactly
+\[
+\frac4{39\cdot5^{k-2}}
+\qquad(k\geq5),
+\]
+and one closed formula gives the complete valuation partition polynomial
+at every precision. The resulting limiting valuation law has mean
+\(61/260\) and variance \(66577/202800\).
+
 ## Public Gaussian-prime follow-on
 
 The most concise shareable follow-on is
@@ -289,6 +303,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/PadicValuationExpansion.md](related-results/PadicValuationExpansion.md):
   the all-precision unit-root period theorem, higher valuation polynomials,
   and profinite clopen expansion.
+- [related-results/HenselValuationFilter.md](related-results/HenselValuationFilter.md):
+  the weighted Hensel root classification, exact geometric density tail,
+  and closed all-precision partition polynomial.
 - [related-results/JacobianCounterexampleFiniteFieldCounts.md](related-results/JacobianCounterexampleFiniteFieldCounts.md):
   complete finite-field fiber statistics, collision zeta function, and the
   characteristic-\(3\) adjacent-extension gain for the Fable counterexample.
@@ -311,7 +328,7 @@ To reproduce every computation in the expanded repository, run
   linked from the larger working repository.
 - [verification/related/](verification/related/): the corresponding exact
   checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all twenty-six
+- [verification/run_all.py](verification/run_all.py): one command for all twenty-seven
   verification programs.
 
 The broader working repository remains available at
