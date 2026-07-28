@@ -17,11 +17,60 @@ angular Fourier projections, and their radial Bernoulli residues. The
 all-degree weighted-lift collision program remains active at lower priority;
 source status and proof status are recorded separately.
 
+The ranking is canonical rather than chronological: GWL-TWO currently holds
+the crown, GWL-SCALE is the heir, and GPS-CUBIC is the first ascendant.
+
+## Public follow-on tracks
+
+### Gaussian-prime follow-on
+
+The principal public research line is the Gaussian-prime stack:
+
+- [ramified-prime theorem](related-results/GaussianLucasRamifiedTwoTheorem.md);
+- [prime-power scaling](related-results/GaussianLucasPrimePowerTheorem.md);
+- [cubic angular residue](related-results/GaussianAngularResidueTheorem.md);
+- [canonical products](related-results/GaussianLucasCanonicalProducts.md).
+
+### 2-adic Roe-inspired follow-on
+
+The second public line is
+**[orientation lifting, Dehn twists, and affine symmetry](ROE_2ADIC.md)**.
+It extracts an exact dyadic lifting package from the Roe--Turturean
+presentation: a nonintegral compatible orientation exponent, a
+$\mathbb Z_2$-family of outer Dehn twists, and the affine commutator
+filtration. Its newest corollary gives an optimal exact sampler for every
+finite affine quotient and the complete spectrum of a Dehn-twist coordinate
+refresh chain. A second corollary replaces coordinate refresh by the fixed
+Cayley generators $\mathcal T_{\pm1}$, $5^{\pm1}$, and $-1$; its cyclotomic
+spectrum gives explicit two-sided spectral-gap bounds and
+$\Theta(4^m)$ relaxation. Source ingredients and new deductions are separated
+explicitly on the landing page. A separate
+[current-PDF audit](related-results/GQ2CurrentPdfAudit.md) reproduces the
+Appendix C norm identities and the complete $S_3$ and $S_4$ counts without
+finding a new error.
+
 The newest result is the
 [cubic angular-residue theorem](related-results/GaussianAngularResidueTheorem.md):
-for every inert prime \(p\ge7\), it replaces a printed constant-valuation
-conjecture by an explicit congruence modulo \(p^4\) and produces a universal
-counterexample at \(r=p-2\).
+for every inert prime $p\ge7$, it replaces a printed constant-valuation
+conjecture by an explicit congruence modulo $p^4$ for every odd
+$1\le r\le2p-1$, produces three universal zeros, and exhibits failure of
+that formula immediately outside the proved range.
+
+The newest auxiliary lifting result is
+[GQ2-LIFT](ROE_2ADIC.md), an exact $2$-adic
+orientation law sharpening Roe--Turturean Remark C.7 together with the exact
+$\mathbb Z_2$-family of outer Dehn twists hidden in their HNN shear and the
+resulting affine commutator filtration. It is included as a clean
+local-to-global boundary example, not as a supercongruence or a novelty
+claim. The [sampling follow-on](related-results/DyadicDehnTwistSampler.md)
+is an exact classical-algorithmic corollary, not a solution of a
+mapping-class-group open problem. The
+[fixed-generator follow-on](related-results/DyadicDehnTwistCayleyWalk.md)
+turns the same twists and unit scalings into a genuine Cayley walk with
+cyclotomic eigenvalues and explicit spectral-gap bounds. The
+[grammar and almost-periodicity note](related-results/DyadicTwistGrammarAlmostPeriodicity.md)
+then gives affine words a unique translation-first normal form and applies
+finite-group almost periodicity to dense averages of twist observables.
 
 ## The result
 
@@ -119,17 +168,17 @@ prismatic cohomology was used in its proof.
 
 The
 [hyperdeterminant convolution theorem](related-results/HyperdeterminantConvolutionTower.md)
-uses exact Fourier inversion on \(\mathbf F_q\) to determine the distribution
+uses exact Fourier inversion on $\mathbf F_q$ to determine the distribution
 of every sum
-\[
+$$
 \Delta(T_1)+\cdots+\Delta(T_m).
-\]
+$$
 Each convolution power has only three fiber classes: zero, nonzero square,
 and nonsquare. For every odd prime and every class it proves the sharp law
-\[
+$$
 v_p\!\left(C_m^\sigma(p^r)-C_m^\sigma(p^{r-1})\right)
 =(4m-1)(r-1).
-\]
+$$
 The same calculation gives a quantitative total-variation mixing bound.
 This is finite-field harmonic analysis in the restriction/Kakeya orbit:
 the note carefully separates the proved scalar pushforward spectrum from
@@ -138,45 +187,45 @@ It makes no geometric-Langlands or cryptographic-extractor claim.
 
 The companion
 [constant-spectrum theorem](related-results/DeterminantPfaffianConvolutionTowers.md)
-does the same for determinant and Pfaffian. For convolution length \(\ell\),
+does the same for determinant and Pfaffian. For convolution length $\ell$,
 both zero and nonzero fibers satisfy the sharp general law
-\[
+$$
 v_p\!\left(N_{\ell,\star}(p^r)-N_{\ell,\star}(p^{r-1})\right)
 =(\ell E-1)(r-1).
-\]
+$$
 It also gives an exact, rather than bounded, total-variation mixing formula.
 At the algorithmic level, the determinant/Pfaffian spectrum has two orbits
 and the hyperdeterminant spectrum has three. Their arbitrary convolution
 powers therefore require only a constant number of scalar exponentiations,
-not a length-\(q\) FFT. This is a structured spectral shortcut, not an
+not a length-$q$ FFT. This is a structured spectral shortcut, not an
 improvement to general audio-codec FFTs.
 
 The
 [USAMO dyadic follow-on](related-results/USAMODyadicHammingSupercongruence.md)
 starts from the forced-halving proof of 2008 USAMO Problem 4. It gives the
 exact number of all-isosceles triangulations, identifies the admissible
-binary indices with a radius-two Hamming ball, and reduces its \(2^d\)-point
-Walsh convolution to \(d+1\) Krawtchouk packets. The resulting zero-XOR
+binary indices with a radius-two Hamming ball, and reduces its $2^d$-point
+Walsh convolution to $d+1$ Krawtchouk packets. The resulting zero-XOR
 polynomials form an adjacent-extension supercongruence family whose first
-exceptional prime is \(439\).
+exceptional prime is $439$.
 
 ## Public Jacobian-counterexample follow-on
 
 The
 [all-degree weighted-lift synthesis](related-results/WeightedLiftCollisionSynthesis.md)
-is the central theorem for this branch. A generic fiber degree \(n\) produces
-one tangent curve of degree \(n-2\) and arithmetic genus
-\((n-3)(n-4)/2\). The exact collision zeta function separates into Tate,
+is the central theorem for this branch. A generic fiber degree $n$ produces
+one tangent curve of degree $n-2$ and arithmetic genus
+$(n-3)(n-4)/2$. The exact collision zeta function separates into Tate,
 curve-Frobenius, and finite permutation factors. Removing the last two gives
-a universal corrected adjacent valuation of \(2r-2\).
+a universal corrected adjacent valuation of $2r-2$.
 
 The
 [finite-field counting theorem for the Fable Jacobian counterexample](related-results/JacobianCounterexampleFiniteFieldCounts.md)
 turns the counterexample's cubic fibers into exact arithmetic data. It gives
 the complete factorization-type distribution over every odd finite field,
 the image and collision counts, the local zeta function of the self-fiber
-product, and the exact adjacent-extension valuations. Characteristic \(3\)
-has an additional \(p\)-adic layer because the fixed mixed coefficient
+product, and the exact adjacent-extension valuations. Characteristic $3$
+has an additional $p$-adic layer because the fixed mixed coefficient
 forbids triple-root cubics there.
 
 This is elementary finite-field counting organized by the supercongruence
@@ -188,7 +237,7 @@ The
 [degree-four follow-on](related-results/JacobianDegreeFourFrobeniusObstruction.md)
 shows where this simple picture first breaks. Its collision zeta function has
 three quadratic Artin factors. Their extension-parity signs destroy the raw
-adjacent congruence at seven of the eight prime classes modulo \(24\); a
+adjacent congruence at seven of the eight prime classes modulo $24$; a
 two-step tower or an explicit Frobenius correction restores a sharp
 congruence. This separates polynomial/Tate data from finite-monodromy data in
 an entirely explicit example.
@@ -199,35 +248,35 @@ is the next structural transition. The tangent locus is now a smooth plane
 cubic, and the exact collision count contains the Frobenius trace of an
 explicit non-CM elliptic curve, together with finite root-count corrections.
 The note gives the complete local zeta factorization, isolates a sharp
-characteristic-\(17\) boundary exception, and proves an exact
-Frobenius-corrected adjacent valuation of \(2r-2\).
+characteristic-$17$ boundary exception, and proves an exact
+Frobenius-corrected adjacent valuation of $2r-2$.
 
 The
 [degree-six follow-on](related-results/JacobianDegreeSixGenusThree.md)
-makes the first higher-genus rung explicit. At \(p=13\), the tangent locus is
+makes the first higher-genus rung explicit. At $p=13$, the tangent locus is
 a smooth genus-three quartic with a computed degree-six local
-\(L\)-polynomial. Its Frobenius packet forces the raw adjacent collision
-difference to be a \(13\)-adic unit at every level. Removing the complete
-curve and finite-orbit packet restores the exact valuation \(2r-2\). This is
+$L$-polynomial. Its Frobenius packet forces the raw adjacent collision
+difference to be a $13$-adic unit at every level. Removing the complete
+curve and finite-orbit packet restores the exact valuation $2r-2$. This is
 both a new theorem candidate and a useful warning: higher-degree collision
 counts need Frobenius correction before a supercongruence can exist.
 
 The
 [degree-seven follow-on](related-results/JacobianDegreeSevenGenusSix.md)
-continues the ladder with an integral seed having good reduction at \(p=5\).
+continues the ladder with an integral seed having good reduction at $p=5$.
 Its tangent curve has genus six. The raw collision congruence is controlled
-by an exact period-\(156\) Frobenius automaton: divisibility by \(5\) occurs
-in exactly \(28\) level classes. The same canonical correction again leaves
-the exact valuation \(2r-2\).
+by an exact period-$156$ Frobenius automaton: divisibility by $5$ occurs
+in exactly $28$ level classes. The same canonical correction again leaves
+the exact valuation $2r-2$.
 
 The
 [Frobenius obstruction-automaton theorem](related-results/FrobeniusObstructionAutomata.md)
 now closes the structural loop. At every good prime and every fixed
-precision \(p^k\), the raw successful levels form an eventually periodic set
+precision $p^k$, the raw successful levels form an eventually periodic set
 with rational density, equivalently a unary regular language. The state is
 the curve's Frobenius-recurrence state together with the finite-orbit phase.
-For the genus-six example, the exact densities through \(5^4\) are
-\(7/39,8/195,2/195,\) and \(11/3900\). This is an exact finite-state
+For the genus-six example, the exact densities through $5^4$ are
+$7/39,8/195,2/195,$ and $11/3900$. This is an exact finite-state
 classification, not a claim of pseudorandomness or cryptographic hardness.
 
 The
@@ -235,23 +284,23 @@ The
 makes the statistical-mechanics dictionary exact rather than metaphorical.
 Its transfer matrix gives a rational two-variable orbit series, and a single
 valuation partition polynomial records every fixed congruence threshold. For
-the degree-seven \(p=5\) automaton, the complete precision-\(5^4\) polynomial
+the degree-seven $p=5$ automaton, the complete precision-$5^4$ polynomial
 is
-\[
+$$
 16000+2700u+600u^2+145u^3+55u^4.
-\]
+$$
 At fixed precision this is a finite analytic system, so no physical phase
 transition or randomness claim is made.
 
 The
 [all-precision lifting theorem](related-results/PadicValuationExpansion.md)
 then proves that the degree-seven unit-root trace has exact period
-\(39\cdot5^{k-1}\) modulo \(5^k\) for every \(k\). A single Hensel factor
-and matrix tangent certificate modulo \(125\) force every subsequent period
-lift. The complete \(5^5\) and \(5^6\) valuation polynomials are checked over
-\(97500\) and \(487500\) clock classes. The nested divisibility layers live
+$39\cdot5^{k-1}$ modulo $5^k$ for every $k$. A single Hensel factor
+and matrix tangent certificate modulo $125$ force every subsequent period
+lift. The complete $5^5$ and $5^6$ valuation polynomials are checked over
+$97500$ and $487500$ clock classes. The nested divisibility layers live
 on the profinite grid
-\(\mathbf Z/156\mathbf Z\times\mathbf Z_5\), where truncated valuation is
+$\mathbf Z/156\mathbf Z\times\mathbf Z_5$, where truncated valuation is
 an exact sum of clopen indicator functions.
 
 ## Public Gaussian-prime follow-on
@@ -342,7 +391,7 @@ To reproduce every computation in the expanded repository, run
   the all-degree tangent-curve collision theorem, genus ladder, zeta
   decomposition, and universal corrected tower.
 - [related-results/FrobeniusObstructionAutomata.md](related-results/FrobeniusObstructionAutomata.md):
-  the fixed-\(p\)-adic-precision automaton theorem, rational-density law,
+  the fixed-$p$-adic-precision automaton theorem, rational-density law,
   and higher-precision degree-six and degree-seven examples.
 - [related-results/FrobeniusTransferThermodynamics.md](related-results/FrobeniusTransferThermodynamics.md):
   the exact transfer-matrix formulation and degree-seven valuation partition
@@ -352,7 +401,7 @@ To reproduce every computation in the expanded repository, run
   and profinite clopen expansion.
 - [related-results/JacobianCounterexampleFiniteFieldCounts.md](related-results/JacobianCounterexampleFiniteFieldCounts.md):
   complete finite-field fiber statistics, collision zeta function, and the
-  characteristic-\(3\) adjacent-extension gain for the Fable counterexample.
+  characteristic-$3$ adjacent-extension gain for the Fable counterexample.
 - [related-results/JacobianDegreeFourFrobeniusObstruction.md](related-results/JacobianDegreeFourFrobeniusObstruction.md):
   degree-four collision formula, quadratic Artin factors, obstruction to raw
   adjacency, and Frobenius-corrected supercongruence.
@@ -360,10 +409,10 @@ To reproduce every computation in the expanded repository, run
   degree-five collision formula, explicit non-CM elliptic factor, local zeta
   function, and corrected adjacent-extension law.
 - [related-results/JacobianDegreeSixGenusThree.md](related-results/JacobianDegreeSixGenusThree.md):
-  degree-six genus-three local \(L\)-polynomial, permanent raw obstruction at
-  \(p=13\), and corrected adjacent-extension law.
+  degree-six genus-three local $L$-polynomial, permanent raw obstruction at
+  $p=13$, and corrected adjacent-extension law.
 - [related-results/JacobianDegreeSevenGenusSix.md](related-results/JacobianDegreeSevenGenusSix.md):
-  degree-seven genus-six local \(L\)-polynomial, period-\(156\) raw
+  degree-seven genus-six local $L$-polynomial, period-$156$ raw
   obstruction automaton, and corrected adjacent-extension law.
 - [GAUSSIAN_LUCAS.md](GAUSSIAN_LUCAS.md): the public entry point for the
   Gaussian-prime follow-on.

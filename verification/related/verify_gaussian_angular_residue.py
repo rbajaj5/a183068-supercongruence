@@ -74,10 +74,9 @@ def verify_prime(prime: int) -> tuple[int, int]:
     assert first[1] // prime**3 % prime == -bernoulli % prime
 
     checks = 0
-    last_actual = (0, 0)
-    for r in range(1, prime - 1, 2):
+    universal_roots = 0
+    for r in range(1, 2 * prime, 2):
         actual = gaussian_sum(powers, modulus)
-        last_actual = actual
         coefficient = comb(r + 2, 3)
         expected_from_first = scalar_multiply(first, coefficient, modulus)
         expected_from_bernoulli = (
@@ -96,24 +95,42 @@ def verify_prime(prime: int) -> tuple[int, int]:
             actual,
             expected_from_bernoulli,
         )
+        if r in {prime - 2, prime, 2 * prime - 1}:
+            assert actual == (0, 0), (prime, r, actual)
+            universal_roots += 1
         powers = [
             gaussian_multiply(power, step, modulus)
             for power, step in zip(powers, steps)
         ]
         checks += 1
 
-    # The last admissible odd multiplier is r = p - 2.  Its cubic
-    # coefficient contains p, so it supplies a universal p^4 counterexample
-    # to the printed constant-valuation prediction.
-    assert last_actual == (0, 0)
-    return checks, 1
+    # The proven interval is genuinely nontrivial: the same cubic formula
+    # already fails at the next odd multiplier for p = 7.
+    if prime == 7:
+        r = 2 * prime + 1
+        actual = gaussian_sum(powers, modulus)
+        coefficient = comb(r + 2, 3)
+        expected = (
+            0,
+            (-prime**3 * coefficient * bernoulli) % modulus,
+        )
+        assert actual == (0, 2058)
+        assert expected == (0, 1372)
+        assert actual != expected
+
+    return checks, universal_roots
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--extended", action="store_true")
+    parser.add_argument(
+        "--limit",
+        type=int,
+        help="override the prime bound (large bounds are cubic-time)",
+    )
     args = parser.parse_args()
-    limit = 503 if args.extended else 199
+    limit = args.limit if args.limit is not None else (251 if args.extended else 199)
 
     primes = [
         prime
@@ -130,9 +147,10 @@ def main() -> None:
     print(f"inert primes checked: {len(primes)}")
     print(f"cubic angular residues checked: {residue_checks}")
     print(
-        "universal r=p-2 counterexamples checked: "
+        "universal r in {p-2,p,2p-1} counterexamples checked: "
         f"{universal_counterexamples}"
     )
+    print("first-outside-range failure checked: p=7, r=15")
 
 
 if __name__ == "__main__":
