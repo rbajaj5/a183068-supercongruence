@@ -72,6 +72,17 @@ cyclotomic eigenvalues and explicit spectral-gap bounds. The
 then gives affine words a unique translation-first normal form and applies
 finite-group almost periodicity to dense averages of twist observables.
 
+### General Galois lift-tower follow-on
+
+The [Galois lift-tower note](related-results/GaloisRepresentationLiftTowers.md)
+extracts the general deformation-theoretic architecture suggested by Khare's
+$p$-adic approximation work. Compatible
+$\mathcal O/\varpi^n$-valued representations have a unique
+$\mathcal O$-valued limit; a failed one-step lift defines a canonical
+$H^2$ defect, while corrections and their ambiguity live in $H^1$. The note
+also explains why compatible trace congruences are only shadows of a genuine
+Galois lift and do not by themselves prove a supercongruence.
+
 ## The result
 
 Define

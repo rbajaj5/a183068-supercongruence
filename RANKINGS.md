@@ -36,6 +36,18 @@ requires a stronger mathematical conclusion, improved proof maturity, or a
 materially better priority assessment. Major developments must update this
 section, the detailed scorecard, and the root README together.
 
+### Latest portfolio update
+
+**2026-07-27.** GAL-LIFT enters the completed-framework tier at rank 34=.
+Its breadth and maturity are high, but its novelty score is intentionally low:
+the inverse-limit theorem and the \(H^2/H^1\) square-zero deformation package
+are standard infrastructure.  The update therefore changes the coverage of
+the portfolio without changing the crown, heir, or first ascendant.
+
+The separate random-knot crossing-cube work is scored in the
+`unsolved-problems` repository.  It is not a supercongruence result and is not
+inserted into this table merely because it uses finite-group characters.
+
 ## Completed drafts, theorems, and deductions
 
 | Rank | ID and result | Math-community value | Deployment value | Novelty confidence | Breadth | Maturity | Cost remaining | Mathematical status |
@@ -76,6 +88,7 @@ section, the detailed scorecard, and the root README together.
 | 33 | [GFT: Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md) | **4** | 3 | 4 | 7 | 8 | 3 | Complete elementary deduction; literature priority unchecked. |
 | 34= | [GQ2-LIFT: orientation lifting, Dehn twists, affine symmetry, grammar, and sampling](ROE_2ADIC.md) | **4** | 3 | 3 | 8 | 9 | 1 | Complete elementary sharpening, an exact $\mathbb Z_2$-tower of outer Dehn twists, affine commutator filtration, normal-form grammar, optimal finite-level sampler, refresh spectrum, fixed-generator cyclotomic gap bounds, an imported twist almost-periodicity corollary, and a nonzero $\mathbb Z/2$ linear obstruction proxy; no novelty claim and no effect on the source's main theorem. |
 | 34= | [AA-TOWER: $p$-adic compactness framework](related-results/PadicArzelaAscoliSupercongruenceTowers.md) | **4** | 2 | 3 | 6 | 8 | 4 | Complete framework and obstruction; horizontal unit-shell interpolation remains open. |
+| 34= | [GAL-LIFT: compatible Galois lift towers](related-results/GaloisRepresentationLiftTowers.md) | **4** | 2 | 1 | 9 | 9 | 1 | Complete self-contained account of standard inverse-limit and square-zero deformation theory, including the $H^2$ obstruction, $H^1$ correction torsor, supercongruence boundary, and exact finite checks; no novelty claim. |
 | 35 | [BOX-d: higher-degree box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md) | **4** | 2 | 2 | 8 | 7 | 3 | Complete unchecked theorem; likely classical infrastructure. |
 | 36 | [GWL-POLY: Gaussian box polynomial](related-results/GaussianWolstenholmeCitationNetwork.md#2-the-polynomial-conjecture) | **4** | 1 | 6 | 4 | 6 | 5 | Complete unchecked finite-field polynomial formulas. |
 
