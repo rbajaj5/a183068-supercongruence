@@ -4,17 +4,20 @@ This is the public landing page for the $2$-adic project prompted by David
 Roe and David Turturean's
 [*A Presentation of the Absolute Galois Group of $\mathbb Q_2$*][RT].
 
-The detailed proofs and checker are:
+The detailed proofs and checkers are:
 
 - [orientation lifts, Dehn twists, and affine symmetry](related-results/GQ2OrientationLifts.md);
 - [exact sampling and mixing on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistSampler.md);
 - [a fixed-generator Cayley walk on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistCayleyWalk.md);
 - [affine-word grammar and almost periodicity of dyadic twists](related-results/DyadicTwistGrammarAlmostPeriodicity.md);
 - [conjugacy shells and exact twist-depth moments](related-results/DyadicDehnTwistConjugacyMoments.md);
+- [the mixed dyadic obstruction in the affine shadow](related-results/DyadicAffineMixedCohomology.md);
 - [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py);
 - [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py);
-- [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py); and
-- [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py).
+- [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py);
+- [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py);
+- [`verify_dyadic_dehn_twist_conjugacy.py`](verification/related/verify_dyadic_dehn_twist_conjugacy.py); and
+- [`verify_dyadic_affine_mixed_cohomology.py`](verification/related/verify_dyadic_affine_mixed_cohomology.py).
 
 [RT]: https://roed314.github.io/gq2/paper.pdf
 [Gropper]: https://arxiv.org/abs/2303.04309
@@ -203,6 +206,48 @@ these approximate symmetries with cyclotomic phases. This is a specialization
 of an existing theorem, not a new priority claim or an improvement of the
 Cayley spectral gap.
 
+### 8. Conjugacy shells and exact moments
+
+Inside the finite affine quotient modulo \(2^m\), two nonzero twist images
+\(T_b,T_c\) are conjugate exactly when
+
+$$
+v_2(b)=v_2(c).
+$$
+
+The depth-\(v\) class has size \(2^{m-v-1}\), and the weighted shell moments
+
+$$
+D_{m,j}=\sum_{b\ne0}2^{jv_2(b)}
+$$
+
+satisfy the sharp adjacent identity
+
+$$
+D_{m+1,j}-2D_{m,j}=2^{jm}.
+$$
+
+This classifies only the finite affine images, not conjugacy in the full
+outer automorphism group.
+
+### 9. The mixed linear obstruction
+
+For the natural multiplicative action on \(M=\mathbb Z_2(1)\), continuous
+cohomology gives
+
+$$
+H^2_{\mathrm{cont}}(\mathbb Z_2^\times,M)
+\cong\mathbb Z/2.
+$$
+
+The nonzero class restricts to zero on both
+\(\{\pm1\}\) and \(1+4\mathbb Z_2\): it measures an incompatibility between
+the two separately split factors. An explicit extension \(E_a\) splits
+exactly when \(a\) is even.
+
+This computes the linear obstruction space. It does not identify the
+kernel-valued class of the actual outer-automorphism quotient.
+
 ## Source boundary
 
 | Item | Status |
@@ -218,6 +263,8 @@ Cayley spectral gap.
 | Fixed-generator Cayley walk and cyclotomic gap bounds | Elementary deduction recorded here; priority not claimed |
 | Affine normal-form grammar | Elementary deduction recorded here |
 | Twist almost-periodicity estimate | Direct specialization of Wigderson/Croot--Sisask; no novelty claim |
+| Translation conjugacy shells and exact moments | Elementary affine-quotient deduction; no novelty claim |
+| Mixed \(H^2_{\mathrm{cont}}\) calculation and explicit extension | Standard continuous-cohomology calculation completed here; no novelty claim |
 
 This project does not claim to correct Roe--Turturean's presentation theorem.
 It does not claim a new A183068 supercongruence. Literature novelty is not
@@ -252,6 +299,11 @@ $$
 
 through \(m=16\) and \(j=8\).
 
+The mixed-obstruction checker verifies the two-class sign-cohomology quotient,
+786,420 finite cocycle and involution identities, and 1,692,232 finite
+splitting tests. In every tested quotient the explicit extension splits
+exactly for even cross parameter.
+
 A second exact checker independently reproduces the manuscript's Proposition
 C.10 norm calculations and the Appendix D counts for $S_3$ and $S_4$. See the
 [current-PDF audit](related-results/GQ2CurrentPdfAudit.md).
@@ -264,6 +316,7 @@ python verification/related/verify_dyadic_dehn_twist_sampler.py
 python verification/related/verify_dyadic_dehn_twist_cayley.py
 python verification/related/verify_dyadic_twist_grammar.py
 python verification/related/verify_dyadic_dehn_twist_conjugacy.py
+python verification/related/verify_dyadic_affine_mixed_cohomology.py
 ```
 
 ## Next theorem target
@@ -282,7 +335,8 @@ unit-scaling lifts produce a generally nonabelian, $K$-valued factor set.
 Killing that factor set, compatibly with the translation section, is the
 actual splitting problem.
 
-The natural linear proxy is not automatically zero:
+The [linear proxy](related-results/DyadicAffineMixedCohomology.md) is now
+computed:
 
 $$
 H^2_{\mathrm{cont}}(\mathbb Z_2^\times,\mathbb Z_2(1))
@@ -290,9 +344,13 @@ H^2_{\mathrm{cont}}(\mathbb Z_2^\times,\mathbb Z_2(1))
 $$
 
 Here $\mathbb Z_2(1)$ means the additive module on which a unit acts by
-multiplication. This calculation does not yet identify the actual
-kernel-valued extension class; a compatible abelian pushout from $K$ would
-still have to be constructed.
+multiplication. Its nonzero class is mixed: it vanishes on both factors
+\(\{\pm1\}\) and \(1+4\mathbb Z_2\), but not on their product.
+
+The remaining target is therefore concrete. One must construct a compatible
+abelian pushout from \(K\) to \(\mathbb Z_2(1)\) and determine the resulting
+single obstruction bit. The present calculation does not supply that
+pushout or identify the actual kernel-valued extension class.
 
 No answer is claimed yet. A splitting theorem or a nonzero obstruction would
 be a materially stronger result than the present structural extraction.

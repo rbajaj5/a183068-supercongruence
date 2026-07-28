@@ -441,6 +441,20 @@ Source-status labels are separate from proof status:
 - **Proof:** [The pro-\(2\) Dehn-twist tower](related-results/GQ2OrientationLifts.md#theorem-exact-pro-2-dehn-twist-tower)
 - **Exact checker:** [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py)
 
+### GQ2-H2 — mixed dyadic affine obstruction
+
+- **Claim:** For the natural multiplicative action,
+  \(H^2_{\mathrm{cont}}(\mathbb Z_2^\times,\mathbb Z_2(1))\cong\mathbb Z/2\).
+  The nonzero class vanishes on each factor
+  \(\{\pm1\}\) and \(1+4\mathbb Z_2\), and has an explicit extension model
+  whose splitting is governed by one parity bit.
+- **Status:** Complete standard continuous-cohomology calculation with an
+  explicit representative. It computes only the linear proxy, not the
+  kernel-valued class of the full Roe--Turturean outer-automorphism quotient,
+  and makes no novelty claim.
+- **Proof:** [Mixed dyadic obstruction](related-results/DyadicAffineMixedCohomology.md)
+- **Exact checker:** [`verify_dyadic_affine_mixed_cohomology.py`](verification/related/verify_dyadic_affine_mixed_cohomology.py)
+
 ### GQ2-SAMPLE — exact sampling on the dyadic twist shadow
 
 - **Claim:** Independent dyadic lift bits give an optimal exact uniform
