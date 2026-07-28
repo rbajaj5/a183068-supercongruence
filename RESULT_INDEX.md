@@ -615,6 +615,24 @@ Source-status labels are separate from proof status:
 - **Current-PDF audit:** [Targeted Appendix C--D audit](related-results/GQ2CurrentPdfAudit.md)
 - **Appendix checker:** [`verify_gq2_appendices.py`](verification/related/verify_gq2_appendices.py)
 
+### GAL-LIFT - compatible Galois lift towers
+
+- **Claim:** For a complete DVR $\mathcal O$, compatible continuous
+  representations modulo $\varpi^n$ have a unique continuous
+  $\mathcal O$-valued inverse limit. Across a square-zero extension, the
+  multiplicative failure of any set-theoretic lift is a canonical class in
+  $H^2(\Gamma,\mathrm{ad}(\bar\rho)\otimes I)$; it vanishes exactly when a
+  lift exists, and lift corrections are governed by $H^1$. Compatible trace
+  congruences are necessary shadows of such a tower but do not imply that a
+  representation or surplus supercongruence exists.
+- **Status:** Complete self-contained exposition of standard
+  deformation-theoretic infrastructure; no novelty claim.
+- **Proof:** [Compatible Galois lift towers and their cohomological defects](related-results/GaloisRepresentationLiftTowers.md)
+- **Exact checker:** [`verify_galois_lift_defects.py`](verification/related/verify_galois_lift_defects.py)
+- **Source line:** Khare's $p$-adic approximations, Khare--Ramakrishna
+  torsion lifting, Fakhruddin--Khare--Patrikis relative deformation theory,
+  and the Khare--Larsen/Merkurjev--Scavia lifting boundary.
+
 ## Reductions and computational reports
 
 ### s18-2 — binary supercongruence reduction
