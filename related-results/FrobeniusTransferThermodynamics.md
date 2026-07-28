@@ -9,24 +9,30 @@ the degree-seven valuation partition polynomial in Section 4, is a new
 deduction within this repository. Literature priority is preliminary.
 
 The terminology is deliberately limited. At fixed prime and fixed
-\(p\)-adic precision the system is finite, so there is no thermodynamic phase
+$p$-adic precision the system is finite, so there is no thermodynamic phase
 transition and no assertion of physical randomness. The value of the
 dictionary is that all congruence thresholds are encoded simultaneously by
 one polynomial.
 
+The companion
+[predictive-state theorem](FrobeniusPredictiveStateTheorem.md) computes the
+exact model-selection cost of the degree-seven valuation observable: it is
+not a one-step Markov lumping, requires $1{,}824$ scalar lags for exact
+prediction, and admits no nontrivial deterministic predictive quotient.
+
 ## 1. A finite arithmetic dynamical system
 
-Let \(S\) be a finite set, let \(T:S\to S\), and let
+Let $S$ be a finite set, let $T:S\to S$, and let
 
-\[
+$$
 d:S\longrightarrow\{0,1,\ldots,k\}
 \tag{1}
-\]
+$$
 
-be an integer-valued observable. In the collision application, \(S\) is the
+be an integer-valued observable. In the collision application, $S$ is the
 Frobenius-recurrence state together with the finite-orbit phase and
 
-\[
+$$
 d(S_r)
 =
 \min\!\left\{
@@ -34,23 +40,23 @@ k,\,
 v_p\!\left(\mathcal V_r-\mathcal V_{r-1}\right)
 \right\}.
 \tag{2}
-\]
+$$
 
-For an initial state \(s\), define its orbit series
+For an initial state $s$, define its orbit series
 
-\[
+$$
 G_s(z,u)
 =
 \sum_{r\geq0}u^{d(T^rs)}z^r.
 \tag{3}
-\]
+$$
 
 ### Theorem 1 (rational orbit series)
 
-The series \(G_s(z,u)\) is rational. More precisely, suppose the orbit of
-\(s\) has preperiod \(a\) and eventual period \(\ell\). Then
+The series $G_s(z,u)$ is rational. More precisely, suppose the orbit of
+$s$ has preperiod $a$ and eventual period $\ell$. Then
 
-\[
+$$
 \begin{aligned}
 G_s(z,u)
 ={}&
@@ -64,155 +70,155 @@ u^{d(T^{a+j}s)}z^j
 }.
 \end{aligned}
 \tag{4}
-\]
+$$
 
-If \(P\) is the \(0\)-\(1\) transition matrix
+If $P$ is the $0$-$1$ transition matrix
 
-\[
+$$
 P_{xy}=
 \begin{cases}
 1,&T(x)=y,\\
 0,&\text{otherwise},
 \end{cases}
 \tag{5}
-\]
+$$
 
-and \(w(u)_x=u^{d(x)}\), then equivalently
+and $w(u)_x=u^{d(x)}$, then equivalently
 
-\[
+$$
 G_s(z,u)
 =
 e_s^{\mathsf T}(I-zP)^{-1}w(u).
 \tag{6}
-\]
+$$
 
 #### Proof
 
 Split the orbit into its finite prefix and its repeating cycle. Summing the
-cycle gives the geometric denominator \(1-z^\ell\), proving (4).
-Furthermore, the \(x\)-coordinate of \(P^rw(u)\) is
-\(u^{d(T^rx)}\), which proves (6). \(\square\)
+cycle gives the geometric denominator $1-z^\ell$, proving (4).
+Furthermore, the $x$-coordinate of $P^rw(u)$ is
+$u^{d(T^rx)}$, which proves (6). $\square$
 
 Thus rationality is not a heuristic imported from statistical mechanics.
 It is an exact consequence of the finite arithmetic state space.
 
 ## 2. The valuation partition polynomial
 
-Let \(C=(s_0,\ldots,s_{\ell-1})\) be one periodic orbit, and write
+Let $C=(s_0,\ldots,s_{\ell-1})$ be one periodic orbit, and write
 
-\[
+$$
 N_j
 =
 \#\{0\leq r<\ell:d(s_r)=j\}.
 \tag{7}
-\]
+$$
 
 Define
 
-\[
+$$
 Z_C(u)
 =
 \sum_{r=0}^{\ell-1}u^{d(s_r)}
 =
 \sum_{j=0}^{k}N_ju^j.
 \tag{8}
-\]
+$$
 
 This is the finite valuation partition polynomial. Every fixed congruence
 threshold can be recovered from it.
 
 ### Theorem 2 (all thresholds in one polynomial)
 
-For \(1\leq h\leq k\), the density on \(C\) of levels satisfying the
-congruence modulo \(p^h\) is
+For $1\leq h\leq k$, the density on $C$ of levels satisfying the
+congruence modulo $p^h$ is
 
-\[
+$$
 \delta_h
 =
 \frac1\ell\sum_{j=h}^{k}N_j.
 \tag{9}
-\]
+$$
 
 The average truncated valuation is
 
-\[
+$$
 \frac1\ell\sum_{r=0}^{\ell-1}d(s_r)
 =
 \sum_{h=1}^{k}\delta_h.
 \tag{10}
-\]
+$$
 
 #### Proof
 
-The event \(d(s_r)\geq h\) occurs precisely in the strata indexed by
-\(j\geq h\), proving (9). For every integer \(0\leq j\leq k\),
+The event $d(s_r)\geq h$ occurs precisely in the strata indexed by
+$j\geq h$, proving (9). For every integer $0\leq j\leq k$,
 
-\[
+$$
 j=\sum_{h=1}^{k}\mathbf 1_{\{j\geq h\}}.
 \tag{11}
-\]
+$$
 
-Average this identity over the cycle to obtain (10). \(\square\)
+Average this identity over the cycle to obtain (10). $\square$
 
-For a real parameter \(\beta\), put
+For a real parameter $\beta$, put
 
-\[
+$$
 \Psi_C(\beta)
 =
 \log\!\left(\frac{Z_C(e^\beta)}{\ell}\right).
 \tag{12}
-\]
+$$
 
-Then \(\Psi_C'(0)\) is the average in (10) and \(\Psi_C''(0)\) is its
-variance. As \(\beta\to+\infty\),
+Then $\Psi_C'(0)$ is the average in (10) and $\Psi_C''(0)$ is its
+variance. As $\beta\to+\infty$,
 
-\[
+$$
 \frac{\Psi_C(\beta)}{\beta}
 \longrightarrow
 \max_{0\leq r<\ell}d(s_r).
 \tag{13}
-\]
+$$
 
 This is the precise finite-state meaning of a zero-temperature limit here.
-Because \(Z_C(e^\beta)\) is a finite positive sum, \(\Psi_C\) is real
-analytic: at fixed \(p\) and \(k\), there is no phase transition.
+Because $Z_C(e^\beta)$ is a finite positive sum, $\Psi_C$ is real
+analytic: at fixed $p$ and $k$, there is no phase transition.
 
 ## 3. Residue-degree base change as time decimation
 
 The preceding construction also describes the effect of changing the
-residue field. Suppose now that \(T\) is a permutation and that \(C\) is a
-cycle of length \(\ell\). Replacing \(\mathbf F_p\) by
-\(\mathbf F_{p^f}\) replaces Frobenius \(T\) by \(T^f\).
+residue field. Suppose now that $T$ is a permutation and that $C$ is a
+cycle of length $\ell$. Replacing $\mathbf F_p$ by
+$\mathbf F_{p^f}$ replaces Frobenius $T$ by $T^f$.
 
 ### Theorem 3 (cycle splitting under base change)
 
-Put \(g=\gcd(\ell,f)\). Under \(T^f\), the cycle \(C\) splits into \(g\)
-cycles of length \(\ell/g\). If their partition polynomials are
-\(Z_{C,0}^{(f)},\ldots,Z_{C,g-1}^{(f)}\), then
+Put $g=\gcd(\ell,f)$. Under $T^f$, the cycle $C$ splits into $g$
+cycles of length $\ell/g$. If their partition polynomials are
+$Z_{C,0}^{(f)},\ldots,Z_{C,g-1}^{(f)}$, then
 
-\[
+$$
 \sum_{a=0}^{g-1}Z_{C,a}^{(f)}(u)=Z_C(u).
 \tag{14}
-\]
+$$
 
 #### Proof
 
-Identify \(C\) with \(\mathbf Z/\ell\mathbf Z\), so \(T\) is addition by
-\(1\) and \(T^f\) is addition by \(f\). The subgroup generated by \(f\)
-has size \(\ell/g\) and \(g\) cosets. These cosets partition \(C\), and
-partitioning the sum (8) proves (14). \(\square\)
+Identify $C$ with $\mathbf Z/\ell\mathbf Z$, so $T$ is addition by
+$1$ and $T^f$ is addition by $f$. The subgroup generated by $f$
+has size $\ell/g$ and $g$ cosets. These cosets partition $C$, and
+partitioning the sum (8) proves (14). $\square$
 
-For \(f=2\), an even Frobenius cycle splits into its two parity classes.
+For $f=2$, an even Frobenius cycle splits into its two parity classes.
 This is the exact mechanism behind the disappearance of quadratic Artin
 signs after an inert quadratic base change. The theorem itself is not
 specific to Gaussian primes; it applies to every residue-degree extension.
 
 ## 4. Exact degree-seven partition polynomial
 
-Consider the degree-seven weighted-lift example at \(p=5\) from the
+Consider the degree-seven weighted-lift example at $p=5$ from the
 [genus-six note](JacobianDegreeSevenGenusSix.md). Let
 
-\[
+$$
 d_r
 =
 \min\!\left\{
@@ -220,81 +226,81 @@ d_r
 v_5\!\left(\mathcal V_r-\mathcal V_{r-1}\right)
 \right\}.
 \tag{15}
-\]
+$$
 
-The fixed-precision automaton has a common eventual period \(19500\) through
-precision \(5^4\). The four threshold counts on that period are
+The fixed-precision automaton has a common eventual period $19500$ through
+precision $5^4$. The four threshold counts on that period are
 
-\[
+$$
 \begin{array}{c|cccc}
 h&1&2&3&4\\ \hline
 \#\{r:d_r\geq h\}&3500&800&200&55.
 \end{array}
 \tag{16}
-\]
+$$
 
 Subtracting successive threshold counts gives the exact strata
 
-\[
+$$
 (N_0,N_1,N_2,N_3,N_4)
 =
 (16000,2700,600,145,55).
 \tag{17}
-\]
+$$
 
 ### Corollary 4
 
-The degree-seven valuation partition polynomial through precision \(5^4\)
+The degree-seven valuation partition polynomial through precision $5^4$
 is
 
-\[
+$$
 \boxed{
 Z_4(u)
 =
 16000+2700u+600u^2+145u^3+55u^4.
 }
 \tag{18}
-\]
+$$
 
 Consequently,
 
-\[
+$$
 \Psi_4'(0)=\frac{911}{3900}
 \tag{19}
-\]
+$$
 
 and
 
-\[
+$$
 \Psi_4''(0)=\frac{4852379}{15210000}.
 \tag{20}
-\]
+$$
 
 #### Proof
 
-The exact densities at precisions \(5,5^2,5^3,5^4\) are respectively
+The exact densities at precisions $5,5^2,5^3,5^4$ are respectively
 
-\[
+$$
 \frac7{39},\qquad
 \frac8{195},\qquad
 \frac2{195},\qquad
 \frac{11}{3900}.
 \tag{21}
-\]
+$$
 
-Multiplication by the common period \(19500\) gives (16), and successive
+Multiplication by the common period $19500$ gives (16), and successive
 subtraction gives (17) and (18). Equations (19) and (20) are the first two
-moments of (18), normalized by \(19500\). \(\square\)
+moments of (18), normalized by $19500$. $\square$
 
-The degree-six example at \(p=13\) lies at the opposite extreme: every raw
-adjacent difference is a \(13\)-adic unit, so its valuation partition
+The degree-six example at $p=13$ lies at the opposite extreme: every raw
+adjacent difference is a $13$-adic unit, so its valuation partition
 polynomial at every positive fixed precision is concentrated in degree
 zero.
 
 ## 5. What a genuine thermodynamic limit would require
 
 The finite-state result does not yet provide a statistical-mechanical limit
-as the precision \(k\), prime \(p\), genus, or fiber degree grows. A
+as the precision $k$, prime $p$, genus, or fiber degree grows. A
 nontrivial limit theorem would require:
 
 1. a specified scaling family of arithmetic state spaces;
@@ -310,12 +316,12 @@ Deng--Hani's derivation of wave kinetic theory illustrates the additional
 work needed to justify a physical scaling limit: high-order expansions,
 structural cancellations, and uniform error control.
 
-There is also a genuinely \(p\)-adic operator-theoretic comparison:
+There is also a genuinely $p$-adic operator-theoretic comparison:
 Costa--Dynes--Petsche prove convergence of normalized iterates to a dominant
 eigenprojection under a specific matrix congruence hypothesis. Applying that
 theorem here would require a compatible family of transition operators as
-\(k\) grows and verification of its congruence hypothesis. A separate finite
-automaton at every \(k\) does not supply either condition automatically.
+$k$ grows and verification of its congruence hypothesis. A separate finite
+automaton at every $k$ does not supply either condition automatically.
 
 No such limit is claimed here. What has been proved is the exact microscopic
 finite-state system that any future limit must start from.
@@ -324,7 +330,7 @@ finite-state system that any future limit must start from.
 
 The checker
 [`verify_frobenius_transfer_thermodynamics.py`](../verification/related/verify_frobenius_transfer_thermodynamics.py)
-computes the full \(19500\)-class histogram modulo \(5^4\), rather than
+computes the full $19500$-class histogram modulo $5^4$, rather than
 deducing it only from the four displayed density fractions.
 
 Run:
@@ -341,6 +347,6 @@ References:
 - Y. Deng and Z. Hani,
   [Rigorous justification of the wave kinetic theory](https://arxiv.org/abs/2207.08358).
 - R. Costa, P. Dynes, and C. Petsche,
-  [A \(p\)-adic Perron--Frobenius theorem](https://arxiv.org/abs/1509.01702).
+  [A $p$-adic Perron--Frobenius theorem](https://arxiv.org/abs/1509.01702).
 - [Frobenius obstruction automata](FrobeniusObstructionAutomata.md), for the
   recurrence theorem and the four threshold densities used in Section 4.
