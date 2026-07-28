@@ -596,7 +596,9 @@ Source-status labels are separate from proof status:
   information-theoretically optimal $2m-1$-bit exact sampler. The natural
   coordinate-refresh chain has eigenvalues $1-j/(2m-1)$ with multiplicity
   $\binom{2m-1}{j}$ and total-variation cutoff at
-  $((2m-1)/2)\log(2m-1)$.
+  $((2m-1)/2)\log(2m-1)$. Restricting instead to the fixed Cayley generators
+  $\mathcal T_{\pm1},5^{\pm1},-1$ produces a cyclotomic unit spectrum and
+  explicit spectral-gap bounds of order $4^{-m}$.
 - **Status:** Complete elementary sharpening of Roe--Turturean Remark C.7;
   no claim of novelty and no change to their main classification theorem.
 - **Public landing page:** [Public 2-adic Roe-inspired follow-on](ROE_2ADIC.md)
@@ -604,6 +606,8 @@ Source-status labels are separate from proof status:
 - **Exact checker:** [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py)
 - **Sampling corollary:** [Exact sampling and mixing on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistSampler.md)
 - **Sampling checker:** [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py)
+- **Fixed-generator corollary:** [A fixed-generator Cayley walk on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistCayleyWalk.md)
+- **Cayley checker:** [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py)
 - **Current-PDF audit:** [Targeted Appendix C--D audit](related-results/GQ2CurrentPdfAudit.md)
 - **Appendix checker:** [`verify_gq2_appendices.py`](verification/related/verify_gq2_appendices.py)
 

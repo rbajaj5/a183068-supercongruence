@@ -40,8 +40,11 @@ presentation: a nonintegral compatible orientation exponent, a
 $\mathbb Z_2$-family of outer Dehn twists, and the affine commutator
 filtration. Its newest corollary gives an optimal exact sampler for every
 finite affine quotient and the complete spectrum of a Dehn-twist coordinate
-refresh chain. Source ingredients and new deductions are separated explicitly
-on the landing page. A separate
+refresh chain. A second corollary replaces coordinate refresh by the fixed
+Cayley generators $\mathcal T_{\pm1}$, $5^{\pm1}$, and $-1$; its cyclotomic
+spectrum gives explicit two-sided spectral-gap bounds and
+$\Theta(4^m)$ relaxation. Source ingredients and new deductions are separated
+explicitly on the landing page. A separate
 [current-PDF audit](related-results/GQ2CurrentPdfAudit.md) reproduces the
 Appendix C norm identities and the complete $S_3$ and $S_4$ counts without
 finding a new error.
@@ -61,7 +64,10 @@ resulting affine commutator filtration. It is included as a clean
 local-to-global boundary example, not as a supercongruence or a novelty
 claim. The [sampling follow-on](related-results/DyadicDehnTwistSampler.md)
 is an exact classical-algorithmic corollary, not a solution of a
-mapping-class-group open problem.
+mapping-class-group open problem. The
+[fixed-generator follow-on](related-results/DyadicDehnTwistCayleyWalk.md)
+turns the same twists and unit scalings into a genuine Cayley walk with
+cyclotomic eigenvalues and explicit spectral-gap bounds.
 
 ## The result
 

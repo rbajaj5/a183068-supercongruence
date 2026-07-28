@@ -8,8 +8,10 @@ The detailed proofs and checker are:
 
 - [orientation lifts, Dehn twists, and affine symmetry](related-results/GQ2OrientationLifts.md);
 - [exact sampling and mixing on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistSampler.md);
+- [a fixed-generator Cayley walk on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistCayleyWalk.md);
 - [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py); and
-- [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py).
+- [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py); and
+- [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py).
 
 [RT]: https://roed314.github.io/gq2/paper.pdf
 [Gropper]: https://arxiv.org/abs/2303.04309
@@ -144,6 +146,34 @@ The translation-coordinate updates are images of the dyadic Dehn twists.
 This is a classical mixing calculation on the exact affine quotient, not a
 claim about mixing in the full outer automorphism group.
 
+### 6. A fixed-generator cyclotomic walk
+
+Coordinate refresh uses direct access to the binary lift coordinates. There
+is also a genuine right Cayley walk using only the fixed generators
+
+$$
+\mathcal T_1,\quad\mathcal T_{-1},\quad5,\quad5^{-1},\quad-1.
+$$
+
+For the one-half-lazy symmetric walk on $G_m$, $m\geq4$, its spectral gap
+$\gamma_m$ satisfies
+
+$$
+\frac15\left(1-\cos\frac{2\pi}{2^m}\right)
+\leq\gamma_m\leq
+\frac15\left(1-\cos\frac{2\pi}{2^{m-2}}\right).
+$$
+
+The unit eigenvalues are traces of $2^{m-2}$-th roots of unity:
+
+$$
+\frac{\zeta^k+\zeta^{-k}+(-1)^s}{3}.
+$$
+
+Thus the calculation is cyclotomic, and the relaxation time is
+$\Theta(4^m)$. This quantifies the algorithmic price of restricting the
+sampler to fixed local group operations.
+
 ## Source boundary
 
 | Item | Status |
@@ -156,6 +186,7 @@ claim about mixing in the full outer automorphism group.
 | Exact affine commutator and lower-central filtration | Deduction recorded here |
 | Equivariance on the Appendix C.5 defect stages | Deduction recorded here |
 | Optimal lift-bit sampler and coordinate-refresh spectrum | Elementary deduction recorded here; classical finite-probability machinery |
+| Fixed-generator Cayley walk and cyclotomic gap bounds | Elementary deduction recorded here; priority not claimed |
 
 This project does not claim to correct Roe--Turturean's presentation theorem.
 It does not claim a new A183068 supercongruence. Literature novelty is not
@@ -173,6 +204,10 @@ The sampler checker additionally verifies every binary parametrization and
 four-element lift fiber through modulus $2^8$, the Walsh eigenvalue identity,
 and the exact chi-square formula.
 
+The Cayley-walk checker constructs the full transition matrices through
+modulus $2^5$ and verifies symmetry, stochasticity, irreducibility,
+nonnegative spectrum, the cyclotomic unit eigenfunction, and both gap bounds.
+
 A second exact checker independently reproduces the manuscript's Proposition
 C.10 norm calculations and the Appendix D counts for $S_3$ and $S_4$. See the
 [current-PDF audit](related-results/GQ2CurrentPdfAudit.md).
@@ -182,6 +217,7 @@ Run:
 ```text
 python verification/related/verify_gq2_orientation_lifts.py
 python verification/related/verify_dyadic_dehn_twist_sampler.py
+python verification/related/verify_dyadic_dehn_twist_cayley.py
 ```
 
 ## Next theorem target
