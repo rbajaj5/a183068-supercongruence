@@ -416,24 +416,60 @@ Source-status labels are separate from proof status:
 - **Proof:** [Higher-degree box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md)
 - **Exact checker:** [`verify_higher_degree_box_polynomial.py`](verification/related/verify_higher_degree_box_polynomial.py)
 
-### GQ2-LIFT — exact dyadic orientation lifting
+### GQ2-ORIENT — exact dyadic orientation lifting
 
 - **Claim:** The compatible orientation classes in Roe--Turturean Remark C.7
-  define one nonintegral \(2\)-adic exponent. The associated HNN shears give
-  an exact \(\mathbb Z_2\)-tower of outer Dehn twists whose affine shadow has
-  an explicit commutator filtration, optimal lift-bit sampler, fixed-generator
-  Cayley bounds, and normal-form grammar.
-- **Status:** Complete elementary sharpening and structural extraction with a
-  targeted current-PDF audit. No correction of the source theorem and no
-  novelty claim.
+  define one nonintegral \(2\)-adic exponent, with a unique lift at every
+  finite precision.
+- **Status:** Complete elementary sharpening with a targeted current-PDF
+  audit. It is not a correction of the source classification theorem and
+  makes no novelty claim.
 - **Public landing page:** [Public 2-adic Roe-inspired follow-on](ROE_2ADIC.md)
 - **Proof:** [Exact dyadic orientation lifts](related-results/GQ2OrientationLifts.md)
 - **Current-source audit:** [Targeted Appendix C--D audit](related-results/GQ2CurrentPdfAudit.md)
-- **Exact checkers:** [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py),
-  [`verify_gq2_appendices.py`](verification/related/verify_gq2_appendices.py),
-  [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py),
-  [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py),
-  and [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py).
+- **Exact checkers:** [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py)
+  and [`verify_gq2_appendices.py`](verification/related/verify_gq2_appendices.py).
+
+### GQ2-TWIST — dyadic HNN Dehn-twist tower
+
+- **Claim:** The HNN shears extend to an exact
+  \(\mathbb Z_2\)-parameterized tower of outer Dehn twists. Its finite affine
+  shadow has an explicit multiplication law and exact commutator filtration.
+- **Status:** Complete elementary structural extraction in the
+  Roe--Turturean setting; no claim about a broader mapping-class group and no
+  novelty claim.
+- **Proof:** [The pro-\(2\) Dehn-twist tower](related-results/GQ2OrientationLifts.md#theorem-exact-pro-2-dehn-twist-tower)
+- **Exact checker:** [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py)
+
+### GQ2-SAMPLE — exact sampling on the dyadic twist shadow
+
+- **Claim:** Independent dyadic lift bits give an optimal exact uniform
+  sampler for the finite affine shadow. A coordinate-refresh chain has an
+  explicit spectrum and cutoff-scale mixing description.
+- **Status:** Complete algorithmic corollary. The probability arguments are
+  classical; the specialization keeps the Dehn-twist coordinate explicit.
+- **Proof:** [Exact sampling and mixing](related-results/DyadicDehnTwistSampler.md)
+- **Exact checker:** [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py)
+
+### GQ2-CAYLEY — fixed-generator dyadic twist walk
+
+- **Claim:** Two finite twist generators and three unit scalings generate an
+  explicit state-independent random walk on the affine quotient, with a
+  proved cyclotomic spectral-gap estimate.
+- **Status:** Complete elementary estimate for this finite group; recorded as
+  a deduction, not a priority claim.
+- **Proof:** [Fixed-generator Cayley walk](related-results/DyadicDehnTwistCayleyWalk.md)
+- **Exact checker:** [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py)
+
+### GQ2-GRAMMAR — affine twist grammar and almost periodicity
+
+- **Claim:** Affine words admit an exact normal form under explicit
+  production and rewriting rules. The translation coordinate also supports
+  a direct finite-group specialization of convolution almost periodicity.
+- **Status:** Complete normal-form deduction and classical
+  almost-periodicity specialization; no novelty claim.
+- **Proof:** [Affine-word grammar and almost periodicity](related-results/DyadicTwistGrammarAlmostPeriodicity.md)
+- **Exact checker:** [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py)
 
 ### GQ2-SHELL — dyadic Dehn-twist conjugacy moments
 

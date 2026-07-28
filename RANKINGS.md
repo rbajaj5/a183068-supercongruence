@@ -55,8 +55,12 @@ theorem.
 | 27 | [BOX-d: higher-degree box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md) | **4** | 2 | 2 | 8 | 7 | 3 | Complete unchecked theorem; likely classical infrastructure. |
 | 28 | [GWL-POLY: Gaussian box polynomial](related-results/GaussianWolstenholmeCitationNetwork.md#2-the-polynomial-conjecture) | **4** | 1 | 6 | 4 | 6 | 5 | Complete unchecked finite-field polynomial formulas. |
 | 29 | [CDE-DEFECT: Chowla--Dwork--Evans split-prime defect](related-results/ChowlaDworkEvansSplitDefect.md) | **4** | 1 | 1 | 6 | 10 | 1 | Exact reformulation of a published modulo-\(p^2\) theorem, with 1,125 exact regression checks and no novelty claim. |
-| 30 | [GQ2-LIFT: Roe--Turturean orientation lifting and dyadic Dehn twists](ROE_2ADIC.md) | **4** | 3 | 3 | 8 | 9 | 1 | Complete elementary sharpening, source audit, exact affine filtration, and finite-level samplers; no correction or novelty claim. |
-| 31 | [GQ2-SHELL: dyadic Dehn-twist conjugacy moments](related-results/DyadicDehnTwistConjugacyMoments.md) | **3** | 3 | 1 | 6 | 10 | 1 | Complete elementary affine-quotient theorem and exact adjacent depth-moment identity; no novelty claim. |
+| 30 | [GQ2-ORIENT: Roe--Turturean exact orientation lift](related-results/GQ2OrientationLifts.md) | **4** | 2 | 3 | 6 | 9 | 1 | Complete elementary sharpening: the compatible finite classes determine one nonintegral \(2\)-adic exponent; no correction or novelty claim. |
+| 31 | [GQ2-TWIST: dyadic HNN Dehn-twist tower and affine filtration](related-results/GQ2OrientationLifts.md#theorem-exact-pro-2-dehn-twist-tower) | **4** | 3 | 3 | 7 | 9 | 1 | Complete exact \(\mathbb Z_2\)-parameterized outer-twist tower and affine commutator-depth theorem; scope is the Roe--Turturean follow-on. |
+| 32 | [GQ2-SAMPLE: exact sampling on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistSampler.md) | **3** | 5 | 2 | 6 | 9 | 1 | Complete optimal lift-bit sampler and exact coordinate-refresh spectrum; classical probability applied to the Roe--Turturean quotient. |
+| 33 | [GQ2-CAYLEY: fixed-generator dyadic Dehn-twist walk](related-results/DyadicDehnTwistCayleyWalk.md) | **3** | 5 | 2 | 6 | 9 | 1 | Complete elementary spectral-gap estimate for an explicit affine Cayley walk; no priority claim. |
+| 34 | [GQ2-GRAMMAR: affine twist grammar and almost periodicity](related-results/DyadicTwistGrammarAlmostPeriodicity.md) | **3** | 3 | 1 | 7 | 8 | 2 | Complete normal-form theorem plus a direct finite-group almost-periodicity specialization; no novelty claim. |
+| 35 | [GQ2-SHELL: dyadic Dehn-twist conjugacy moments](related-results/DyadicDehnTwistConjugacyMoments.md) | **3** | 3 | 1 | 6 | 10 | 1 | Complete elementary affine-quotient theorem and exact adjacent depth-moment identity; no novelty claim. |
 
 ## Reductions, computational targets, and synthesis
 
