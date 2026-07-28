@@ -49,7 +49,7 @@ impact.
 | 13 | [Binary $s_{18}$ reduction](S18TwoAdicReduction.md) | Isolates the exact sharpened scaling lemma still needed at $p=2$ | Substantial reduction; naive factor-by-factor proof refuted |
 | 14 | [Gaussian citation-network boundary report](GaussianCitationNetworkBoundaryReport.md) | Records rigorous limits of the Gaussian search, including Erdős--Moser reductions | Reduction and bounded search, not a global solution |
 | 15 | [Cooper level-11 rare primes](CooperLevel11RarePrimes.md) | Isolates the first obstruction and records a 350-case first-order Frobenius law reducing the full $r=1$ conjecture to it | Computational theorem target; fixed-prime automata route is conditional on finding a rational diagonal |
-| 16 | [Exact dyadic orientation lifts](GQ2OrientationLifts.md) | Gives a clean comparison case for small-prime lifting: an exact order calculation produces one compatible exponent class at every level, while the limit need not be a finite witness | Complete elementary sharpening of Roe--Turturean Remark C.7; checked through \(2^{32}\); no novelty claim |
+| 16 | [Exact dyadic orientation lifts and Dehn twists](GQ2OrientationLifts.md) | Gives a clean comparison case for small-prime lifting and identifies the source's shear as an exact \(\mathbb Z_2\)-family of outer Dehn twists acting on the defect tower | Complete elementary sharpening and structural extraction from Roe--Turturean; checked through \(2^{32}\); no novelty claim |
 
 ## Strongest present claims
 

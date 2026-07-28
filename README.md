@@ -29,9 +29,10 @@ that formula immediately outside the proved range.
 
 The newest auxiliary lifting result is
 [GQ2-LIFT](related-results/GQ2OrientationLifts.md), an exact \(2\)-adic
-orientation law sharpening Roe--Turturean Remark C.7. It is included as a
-clean local-to-global boundary example, not as a supercongruence or a novelty
-claim.
+orientation law sharpening Roe--Turturean Remark C.7 together with the exact
+\(\mathbb Z_2\)-family of outer Dehn twists hidden in their HNN shear. It is
+included as a clean local-to-global boundary example, not as a
+supercongruence or a novelty claim.
 
 ## The result
 

@@ -61,10 +61,76 @@ def exponent_classes(precision: int) -> list[tuple[int, int]]:
     return classes
 
 
+def multiply(
+    left: tuple[tuple[int, int], tuple[int, int]],
+    right: tuple[tuple[int, int], tuple[int, int]],
+    modulus: int,
+) -> tuple[tuple[int, int], tuple[int, int]]:
+    """Multiply two 2-by-2 matrices modulo the supplied modulus."""
+
+    return (
+        (
+            (left[0][0] * right[0][0] + left[0][1] * right[1][0])
+            % modulus,
+            (left[0][0] * right[0][1] + left[0][1] * right[1][1])
+            % modulus,
+        ),
+        (
+            (left[1][0] * right[0][0] + left[1][1] * right[1][0])
+            % modulus,
+            (left[1][0] * right[0][1] + left[1][1] * right[1][1])
+            % modulus,
+        ),
+    )
+
+
+def twist_matrix(
+    parameter: int, modulus: int
+) -> tuple[tuple[int, int], tuple[int, int]]:
+    """The action of a Dehn twist on the (S,Y) part of the abelianization."""
+
+    return ((1, parameter % modulus), (0, 1))
+
+
+def check_dehn_twists(precision: int) -> int:
+    """Check composition, inverses, and exact dyadic depth at finite levels."""
+
+    checks = 0
+    identity = ((1, 0), (0, 1))
+
+    for level in range(1, precision + 1):
+        modulus = 2**level
+        parameters = range(-8, 9)
+        for left_parameter in parameters:
+            for right_parameter in parameters:
+                left = twist_matrix(left_parameter, modulus)
+                right = twist_matrix(right_parameter, modulus)
+                assert multiply(left, right, modulus) == twist_matrix(
+                    left_parameter + right_parameter, modulus
+                )
+                checks += 1
+
+        for parameter in parameters:
+            matrix = twist_matrix(parameter, modulus)
+            inverse = twist_matrix(-parameter, modulus)
+            assert multiply(matrix, inverse, modulus) == identity
+            checks += 1
+
+    for depth in range(0, precision):
+        for odd_unit in (-7, -5, -3, -1, 1, 3, 5, 7):
+            parameter = (2**depth) * odd_unit
+            assert twist_matrix(parameter, 2**depth) == identity
+            assert twist_matrix(parameter, 2 ** (depth + 1)) != identity
+            checks += 1
+
+    return checks
+
+
 def main() -> None:
     precision = 32
     root = hensel_root(precision)
     classes = exponent_classes(precision)
+    twist_checks = check_dehn_twists(16)
 
     assert root % 8 == 5
     assert polynomial(root) % (2**precision) == 0
@@ -75,6 +141,7 @@ def main() -> None:
     print("last five classes:")
     for level, exponent in classes[-5:]:
         print(f"  k={level}: e={exponent} modulo 2^{level - 2}")
+    print(f"checked {twist_checks} finite-level Dehn-twist identities")
     print("all exact orientation-lift checks passed")
 
 

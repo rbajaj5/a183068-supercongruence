@@ -581,7 +581,10 @@ Source-status labels are separate from proof status:
   \(X^\alpha=-1/3\). At level \(2^k\), the complete solution set is the
   single class \(e\equiv\alpha\pmod {2^{k-2}}\), and the standard
   representative either stays fixed or gains the next high binary digit.
-  The limiting exponent is not an ordinary integer.
+  The limiting exponent is not an ordinary integer. The cyclic HNN
+  presentation also gives an exact pro-\(2\) Dehn-twist tower
+  \(\mathbb Z_2\hookrightarrow\operatorname{Out}(D_0)\), with congruence
+  depth exactly \(v_2(b)\), acting equivariantly on every defect stage.
 - **Status:** Complete elementary sharpening of Roe--Turturean Remark C.7;
   no claim of novelty and no change to their main classification theorem.
 - **Proof:** [Exact dyadic orientation lifts](related-results/GQ2OrientationLifts.md)
