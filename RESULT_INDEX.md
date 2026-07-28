@@ -437,6 +437,18 @@ Source-status labels are separate from proof status:
 
 ## Reductions and computational reports
 
+### CAT-ODD — Catalan ballot-power supercongruences
+
+- **Claim:** The three named conjectures A183069, A361889, and A361892 have
+  one common \(p^{3r}\) shape for \(p\ge5\). Exact tests also support sharp
+  losses to \(3r-1\) at \(p=3\), and at \(p=2\) for \(r\ge2\), with exponent
+  \(1\) at \(p=2,r=1\).
+- **Status:** Reproducible computational target, not a proof. The official
+  conjectures pass 1,164 exact cases and the proposed small-prime refinements
+  pass 1,047.
+- **Report:** [Catalan ballot-power audit](related-results/CatalanBallotPowerSupercongruenceAudit.md)
+- **Exact checker:** [`verify_catalan_ballot_supercongruences.py`](verification/related/verify_catalan_ballot_supercongruences.py)
+
 ### s18-2 — binary supercongruence reduction
 
 - **Claim:** A published binary supercongruence is reduced to one sharpened

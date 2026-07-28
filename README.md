@@ -122,6 +122,16 @@ $q\mapsto q^{p^2}$ is the second Frobenius iterate. This is an
 interpretation of the elementary polynomial theorem, not a claim that
 prismatic cohomology was used in its proof.
 
+## Public Catalan ballot-power audit
+
+The
+[Catalan ballot-power audit](related-results/CatalanBallotPowerSupercongruenceAudit.md)
+checks the three parallel named conjectures A183069, A361889, and A361892 in
+1,164 exact cases. It also records a sharp computational refinement at the
+small primes \(2\) and \(3\), supported by another 1,047 exact cases. The
+natural target is one theorem for the odd ballot-power family rather than
+three isolated OEIS proofs. This is a computational target, not a proof.
+
 ## Public Jacobian-counterexample follow-on
 
 The
@@ -253,6 +263,9 @@ To reproduce every computation in the expanded repository, run
 - [related-results/QCalculusCyclotomicSupercongruences.md](related-results/QCalculusCyclotomicSupercongruences.md):
   the q-calculus theorem generator, square A183068 lift, corrected cubic
   theorem, and prismatic interpretation.
+- [related-results/CatalanBallotPowerSupercongruenceAudit.md](related-results/CatalanBallotPowerSupercongruenceAudit.md):
+  exact audit of three named \(p^{3r}\) conjectures and their proposed sharp
+  small-prime refinements.
 - [related-results/WeightedLiftCollisionSynthesis.md](related-results/WeightedLiftCollisionSynthesis.md):
   the all-degree tangent-curve collision theorem, genus ladder, zeta
   decomposition, and universal corrected tower.
