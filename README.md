@@ -38,8 +38,10 @@ The second public line is
 It extracts an exact dyadic lifting package from the Roe--Turturean
 presentation: a nonintegral compatible orientation exponent, a
 $\mathbb Z_2$-family of outer Dehn twists, and the affine commutator
-filtration. Source ingredients and new deductions are separated explicitly
-on its landing page. A separate
+filtration. Its newest corollary gives an optimal exact sampler for every
+finite affine quotient and the complete spectrum of a Dehn-twist coordinate
+refresh chain. Source ingredients and new deductions are separated explicitly
+on the landing page. A separate
 [current-PDF audit](related-results/GQ2CurrentPdfAudit.md) reproduces the
 Appendix C norm identities and the complete $S_3$ and $S_4$ counts without
 finding a new error.
@@ -57,7 +59,9 @@ orientation law sharpening Roe--Turturean Remark C.7 together with the exact
 $\mathbb Z_2$-family of outer Dehn twists hidden in their HNN shear and the
 resulting affine commutator filtration. It is included as a clean
 local-to-global boundary example, not as a supercongruence or a novelty
-claim.
+claim. The [sampling follow-on](related-results/DyadicDehnTwistSampler.md)
+is an exact classical-algorithmic corollary, not a solution of a
+mapping-class-group open problem.
 
 ## The result
 

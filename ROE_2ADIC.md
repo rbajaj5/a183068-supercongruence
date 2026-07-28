@@ -7,7 +7,9 @@ Roe and David Turturean's
 The detailed proofs and checker are:
 
 - [orientation lifts, Dehn twists, and affine symmetry](related-results/GQ2OrientationLifts.md);
-- [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py).
+- [exact sampling and mixing on the dyadic Dehn-twist shadow](related-results/DyadicDehnTwistSampler.md);
+- [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py); and
+- [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py).
 
 [RT]: https://roed314.github.io/gq2/paper.pdf
 [Gropper]: https://arxiv.org/abs/2303.04309
@@ -109,6 +111,39 @@ therefore symmetries of the $D_0$ half of the existing proof tower, not a
 separate analogy. This note does not construct a corresponding twist family
 for $D_R$.
 
+### 5. Exact sampling and mixing
+
+Modulo $2^m$, every affine-shadow element has unique coordinates
+
+$$
+M((-1)^\sigma5^a,b),
+\qquad
+\sigma\in C_2,\quad
+a\in C_{2^{m-2}},\quad
+b\in\mathbb Z/2^m\mathbb Z.
+$$
+
+These are $2m-1$ binary coordinates. They give an information-theoretically
+optimal exact uniform sampler, and every lift from level $m$ to level $m+1$
+uses precisely two new independent bits. A random coordinate-refresh chain
+has the explicit Boolean-cube spectrum
+
+$$
+1-\frac j{2m-1}
+\quad\text{with multiplicity}\quad
+\binom{2m-1}{j},
+$$
+
+and total-variation cutoff at
+
+$$
+\frac{2m-1}{2}\log(2m-1).
+$$
+
+The translation-coordinate updates are images of the dyadic Dehn twists.
+This is a classical mixing calculation on the exact affine quotient, not a
+claim about mixing in the full outer automorphism group.
+
 ## Source boundary
 
 | Item | Status |
@@ -120,6 +155,7 @@ for $D_R$.
 | Identification of the shear's outer class with the HNN Dehn twist | Deduction recorded here |
 | Exact affine commutator and lower-central filtration | Deduction recorded here |
 | Equivariance on the Appendix C.5 defect stages | Deduction recorded here |
+| Optimal lift-bit sampler and coordinate-refresh spectrum | Elementary deduction recorded here; classical finite-probability machinery |
 
 This project does not claim to correct Roe--Turturean's presentation theorem.
 It does not claim a new A183068 supercongruence. Literature novelty is not
@@ -133,6 +169,10 @@ The exact checker currently verifies:
 - 5,024 finite-level Dehn-twist identities; and
 - 349,578 finite-level affine and commutator-filtration identities.
 
+The sampler checker additionally verifies every binary parametrization and
+four-element lift fiber through modulus $2^8$, the Walsh eigenvalue identity,
+and the exact chi-square formula.
+
 A second exact checker independently reproduces the manuscript's Proposition
 C.10 norm calculations and the Appendix D counts for $S_3$ and $S_4$. See the
 [current-PDF audit](related-results/GQ2CurrentPdfAudit.md).
@@ -141,6 +181,7 @@ Run:
 
 ```text
 python verification/related/verify_gq2_orientation_lifts.py
+python verification/related/verify_dyadic_dehn_twist_sampler.py
 ```
 
 ## Next theorem target
