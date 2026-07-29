@@ -4,6 +4,9 @@ This is the public landing page for the $2$-adic project prompted by David
 Roe and David Turturean's
 [*A Presentation of the Absolute Galois Group of $\mathbb Q_2$*][RT].
 
+For a compact source-facing account, see
+[the note for Roe and Turturean](ROE_TURTUREAN_NOTE.md).
+
 Its role inside the larger repository is governed by the
 [dyadic audit policy](DYADIC_POLICY.md). The Roe--Turturean work is a
 structural example of why binary lifting needs additional data; it is not a
