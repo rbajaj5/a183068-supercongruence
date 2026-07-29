@@ -44,6 +44,7 @@ bookkeeping.
 | 6 | [JC4-FF: degree-four Frobenius obstruction](related-results/JacobianDegreeFourFrobeniusObstruction.md) | **7** | 3 | 8 | 8 | 8 | 3 | Complete collision-count, Artin-factor, obstruction, and corrected-supercongruence theorem with exact extension-field checks; priority provisional. |
 | 7 | [JC-FF: finite-field arithmetic of the Fable counterexample](related-results/JacobianCounterexampleFiniteFieldCounts.md) | **7** | 2 | 8 | 7 | 8 | 3 | Complete elementary fiber-distribution, collision-zeta, and adjacent-valuation theorem with exact extension-field checks; priority provisional. |
 | 8 | [QC-CUBIC: corrected cubic q-supercongruence](related-results/QCalculusCyclotomicSupercongruences.md#4-the-second-q-jet-and-a-corrected-cubic-theorem) | **7** | 1 | 5 | 9 | 8 | 4 | Complete deduction from Straub's q-Ljunggren theorem with exact polynomial checks; full priority search pending. |
+| 9 | [EULER-PRODUCT: colored product Frobenius tower](related-results/EulerProductGaussianTower.md) | **7** | 1 | 6 | 10 | 9 | 2 | Complete coefficientwise \(p^{2r}\) theorem for arbitrary integral multicolored Euler products with degree weight \(m^d\), \(d\ge1\); proves Bala's full quadratic product packet and Gaussian twists, while leaving the special A380290 cubic gain open. |
 | 9 | [LD-2: Landau-depth family](related-results/LandauDepthSupercongruenceSynthesis.md) | **7** | 1 | 5 | 9 | 7 | 4 | Complete proof candidate giving an infinite all-prime family; independent review pending. |
 | 10 | [GL-CANON: canonical-product synthesis](related-results/GaussianLucasCanonicalProducts.md) | **7** | 3 | 6 | 9 | 7 | 5 | Proved structural lemma and synthesis; the split-prime program remains conjectural. |
 | 11 | [GL-ISO: ramified Gaussian disk isometry](related-results/GaussianLucasCanonicalProducts.md#6-the-mixed-block-product-is-an-exact-disk-isometry) | **7** | 4 | 7 | 8 | 7 | 5 | Complete deduction with exact checks; conventional review and priority pending. |
@@ -105,6 +106,10 @@ The degree-five rung is the first to replace finite quadratic monodromy by a
 non-CM elliptic Frobenius packet. The q-calculus
 line is especially broad: Landau depth predicts cyclotomic multiplicity,
 while a quadratic pair-energy computes the complete second q-jet. The
+colored Euler-product theorem is the broadest completed Bala-queue closure:
+one occupation-stratum argument proves the whole quadratic product packet.
+Its Gaussian specialization is sharp, while the untwisted \(d=2\) cubic
+gain remains a distinct target. The
 Gaussian prime-power and ramified results retain the highest estimated
 community value, but also carry more specialist review and priority risk.
 
