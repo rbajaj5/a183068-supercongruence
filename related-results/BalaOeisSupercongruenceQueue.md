@@ -1,10 +1,11 @@
 # Peter Bala's OEIS supercongruence queue
 
-**Status:** two prime-level conjecture families proved below; the complete
-A333593 prime-power tower reduced to Coster's generalized Apéry theorem; two
-deeper prime-power towers retained as exact computational targets. Literature
-priority is preliminary, and the new arguments have not been independently
-reviewed.
+**Status:** the A365029 boundary theorem and full \(r=1\) adjacent
+supercongruence are proved; the A375178 prime-level family is proved; the
+complete A333593 prime-power tower is reduced to Coster's generalized Apéry
+theorem. Two higher-level towers remain exact computational targets.
+Literature priority is preliminary, and the new arguments have not been
+independently reviewed.
 
 The broader
 [supercongruence literature census](SupercongruenceLiteratureCensus.md)
@@ -20,7 +21,7 @@ representative targets by mechanism.
 
 | OEIS entry | Conjectural statement | Present result |
 | --- | --- | --- |
-| [A365029] | \(a(p-1)\equiv1\pmod{p^3}\), plus an all-\(n,r\) \(p^{3r}\) tower | The first congruence is proved below in the stronger two-parameter form \(p^{A+B}\); the tower remains a target |
+| [A365029] | \(a(p-1)\equiv1\pmod{p^3}\), plus an all-\(n,r\) \(p^{3r}\) tower | The first congruence is proved below in the stronger two-parameter form \(p^{A+B}\); the full \(r=1\) adjacent congruence is also proved; only \(r\ge2\) remains |
 | [A375178] | An odd-power family satisfies \(b_m(p)\equiv1\pmod{p^{2m+3}}\), plus a stronger tower for \(r\ge2\) | The entire prime-level family is proved below; the tower remains a target |
 | [A375179], [A375180] | Two parallel signed odd-power families have the same proposed exponents | Retained as one consolidated extension of the A375178 program; neither follows formally from Theorem 2 below |
 | [A333593] | \(a(np^r)\equiv a(np^{r-1})\pmod{p^{3r}}\) | Proved below by an exact decomposition into a Coster generalized Apéry tower and a Jacobsthal--Kazandzidis binomial tower |
@@ -96,8 +97,10 @@ has factorial arguments below \(p\). Each binomial coefficient therefore
 has \(p\)-adic valuation exactly \(1\). Its contribution to (1) is divisible
 by \(p^{A+B}\). Adding the terms proves (2). \(\square\)
 
-This proof is termwise and sharp in the tested range. It does not prove the
-separate adjacent-scale \(p^{3r}\) conjecture for \(C_{2,1}(np^r)\).
+This proof is termwise and sharp in the tested range. The separate
+adjacent-scale conjecture is now proved at \(r=1\) in the
+[prime-level A365029 note](A365029PrimeLevelTheorem.md); its higher levels
+remain open.
 
 ## 3. The full prime-level odd-power theorem for A375178
 
@@ -335,18 +338,26 @@ Every asserted bound passes, and each displayed open-tower exponent is
 attained somewhere in the tested range. The A365029 and A375178 tower
 computations are evidence only.
 
+The separate A365029 prime-level checker adds 35,356 exact checks. It
+verifies the complete \(r=1\) theorem, its shifted-transfer and Lucas
+sublemmas, and 177 higher-level complete-block instances. Those last 177
+checks support, but do not prove, the \(r\ge2\) lifting lemma.
+
 Run:
 
 ```text
 python verification/related/verify_bala_oeis_supercongruences.py
+python verification/related/verify_a365029_prime_level.py
 ```
 
 ## 6. Next proof order
 
 The economical order is:
 
-1. **A365029 tower.** Its boundary congruence is now termwise and the tower
-   has the same observed cubic exponent.
+1. **A365029 tower above \(r=1\).** The boundary and full prime-level
+   adjacent congruences are proved. The remaining task is to lift the
+   reciprocal-square block cancellation from
+   \(\mathbb F_p\) to \(\mathbb Z/p^r\mathbb Z\).
 2. **A375178 tower.** The prime-level harmonic cancellation is now proved,
    but the additional \(3r\) block gain must be made uniform.
 3. **A364183 integrality.** Resolve the even/odd factorial-ratio branches
