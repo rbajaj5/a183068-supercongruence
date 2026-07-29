@@ -72,9 +72,12 @@ It contains two short proofs:
 - the complete A375178 prime-level family
   \(b_m(p)\equiv1\pmod {p^{2m+3}}\) for \(p\ge2m+5\).
 
-The deeper A333593, A365029, and A375178 prime-power towers remain clearly
-labelled computational targets. The accompanying checker performs 719 exact
-tests and keeps proved statements separate from experimental evidence.
+It also closes the complete A333593 \(p^{3r}\) tower by an exact
+decomposition into a published Coster generalized Apéry tower and a
+Jacobsthal--Kazandzidis central-binomial tower. The deeper A365029 and
+A375178 prime-power towers remain clearly labelled computational targets.
+The accompanying checker performs 1,175 exact tests and keeps proved
+statements separate from experimental evidence.
 
 ## Attribution
 

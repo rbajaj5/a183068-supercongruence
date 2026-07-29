@@ -1,8 +1,10 @@
 # Peter Bala's OEIS supercongruence queue
 
-**Status:** two prime-level conjecture families proved below; three deeper
-prime-power towers retained as exact computational targets. Literature
-priority is preliminary, and the proofs have not been independently reviewed.
+**Status:** two prime-level conjecture families proved below; the complete
+A333593 prime-power tower reduced to Coster's generalized Apéry theorem; two
+deeper prime-power towers retained as exact computational targets. Literature
+priority is preliminary, and the new arguments have not been independently
+reviewed.
 
 ## 1. Source inventory
 
@@ -14,7 +16,7 @@ representative targets by mechanism.
 | --- | --- | --- |
 | [A365029] | \(a(p-1)\equiv1\pmod{p^3}\), plus an all-\(n,r\) \(p^{3r}\) tower | The first congruence is proved below in the stronger two-parameter form \(p^{A+B}\); the tower remains a target |
 | [A375178] | An odd-power family satisfies \(b_m(p)\equiv1\pmod{p^{2m+3}}\), plus a stronger tower for \(r\ge2\) | The entire prime-level family is proved below; the tower remains a target |
-| [A333593] | \(a(np^r)\equiv a(np^{r-1})\pmod{p^{3r}}\) | Peter proved the \(n=r=1\) case; 128 further exact cases are recorded here |
+| [A333593] | \(a(np^r)\equiv a(np^{r-1})\pmod{p^{3r}}\) | Proved below by an exact decomposition into a Coster generalized Apéry tower and a Jacobsthal--Kazandzidis binomial tower |
 | [A364118] | An Apéry linear combination gains two or three powers beyond the underlying tower | Modular/Apéry target; not yet reduced to the termwise framework |
 | [A364183] | A parity-sensitive height-one factorial ratio is integral and satisfies a \(p^{3r}\) tower | Integrality itself is still conjectural on the OEIS entry; treat before the tower |
 
@@ -207,19 +209,97 @@ b_m(p^r)\equiv b_m(p^{r-1})
 requires a new block decomposition: the clean \(k=1,\ldots,p-1\) harmonic
 argument above does not simply iterate.
 
-## 4. Exact status of the remaining first queue
+## 4. The A333593 tower is a Coster corollary
+
+Define
+
+```math
+A(N)=
+\sum_{k=0}^{N}
+(-1)^{N+k}\binom{N+k-1}{k}^{2}
+```
+
+and the generalized Apéry sum
+
+```math
+W(t)=
+\sum_{k=0}^{t}
+(-1)^k\binom{t+k}{k}^{2}.
+\tag{10}
+```
+
+The OEIS sequence A333593 is \(A(N)\).
+
+### Theorem 3
+
+For every prime \(p\ge5\) and positive integers \(n,r\),
+
+```math
+\boxed{
+A(np^r)\equiv A(np^{r-1})\pmod {p^{3r}}.
+}
+\tag{11}
+```
+
+#### Proof
+
+Separating the final summand in \(A(N)\) gives the exact identity
+
+```math
+A(N)=
+(-1)^N W(N-1)+\binom{2N-1}{N}^{2}.
+\tag{12}
+```
+
+[Coster's] generalized Apéry theorem applies to
+\(W=w_{0,2,-1}\): for \(p\ge5\),
+
+```math
+W(np^r-1)\equiv W(np^{r-1}-1)\pmod {p^{3r}}.
+\tag{13}
+```
+
+The standard Jacobsthal--Kazandzidis binomial congruence gives
+
+```math
+\binom{2np^r}{np^r}
+\equiv
+\binom{2np^{r-1}}{np^{r-1}}
+\pmod {p^{3r}}.
+\tag{14}
+```
+
+Because \(2\) is a \(p\)-adic unit,
+\(\binom{2N-1}{N}=\frac12\binom{2N}{N}\), so (14) remains valid
+after dividing by \(2\) and squaring. Finally \(p\) is odd, hence
+
+```math
+(-1)^{np^r}=(-1)^{np^{r-1}}=(-1)^n.
+```
+
+Substituting (13)--(14) into (12) proves (11). \(\square\)
+
+This closes the full conjecture recorded on A333593, but it should be
+described as a new reduction to a published theorem rather than as a new
+independent supercongruence mechanism. [Coster] states the required result as
+Theorem 4 of his report *Supercongruences* and refers to pages 49--55 of his
+1988 thesis for its technical proof.
+
+## 5. Exact status of the remaining first queue
 
 The dependency-free checker records:
 
 - 390 instances of Theorem 1, for \(1\le A\le6\), \(1\le B\le5\), and
   odd primes through \(43\);
 - 56 instances of Theorem 2, for \(1\le m\le6\) and primes through \(43\);
-- 128 instances of the open A333593 tower;
+- 584 checks of Theorem 3 and its reduction: 200 exact decompositions,
+  128 final tower congruences, and 256 component congruences;
 - 128 instances of the open A365029 tower; and
 - 17 higher-level instances of the open A375178 family.
 
-Every asserted bound passes, and each displayed exponent is attained
-somewhere in the tested range. The tower computations are evidence only.
+Every asserted bound passes, and each displayed open-tower exponent is
+attained somewhere in the tested range. The A365029 and A375178 tower
+computations are evidence only.
 
 Run:
 
@@ -227,19 +307,17 @@ Run:
 python verification/related/verify_bala_oeis_supercongruences.py
 ```
 
-## 5. Next proof order
+## 6. Next proof order
 
 The economical order is:
 
 1. **A365029 tower.** Its boundary congruence is now termwise and the tower
    has the same observed cubic exponent.
-2. **A333593 tower.** Peter's existing \(r=1,n=1\) proof supplies the base,
-   and the signed pairing is explicit.
-3. **A375178 tower.** The prime-level harmonic cancellation is now proved,
+2. **A375178 tower.** The prime-level harmonic cancellation is now proved,
    but the additional \(3r\) block gain must be made uniform.
-4. **A364183 integrality.** Resolve the even/odd factorial-ratio branches
+3. **A364183 integrality.** Resolve the even/odd factorial-ratio branches
    before discussing supercongruences.
-5. **A364118.** Use its Apéry/modular structure rather than forcing a
+4. **A364118.** Use its Apéry/modular structure rather than forcing a
    termwise proof.
 
 This ordering is a research-budget decision, not a ranking of Peter's
@@ -253,8 +331,17 @@ certificate. Both proofs use standard binomial-valuation and finite
 multiple-harmonic-sum identities, so overlap with the literature remains
 possible.
 
+[Kallat's] 2026 proof of Bala's A028342 congruence uses cyclic actions on
+colored permutations: full orbits disappear modulo the modulus and fixed
+points determine the prime-power residues. It is a valuable nearby precedent,
+but it does not directly supply an action on the truncated factorial sums in
+this queue. The operative input for Theorem 3 is instead Coster's generalized
+Apéry theorem.
+
 [A333593]: https://oeis.org/A333593
 [A365029]: https://oeis.org/A365029
 [A375178]: https://oeis.org/A375178
 [A364118]: https://oeis.org/A364118
 [A364183]: https://oeis.org/A364183
+[Coster]: https://ir.cwi.nl/pub/5804/5804D.pdf
+[Kallat]: https://arxiv.org/abs/2607.18313
