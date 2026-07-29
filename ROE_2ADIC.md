@@ -23,6 +23,8 @@ The detailed proofs and checkers are:
 - [closed surjection counts for finite abelian \(2\)-targets](related-results/GQ2FiniteAbelianCounts.md);
 - [exact surjection counts for dihedral \(2\)-groups](related-results/GQ2DihedralCounts.md);
 - [exact surjection counts for generalized quaternion \(2\)-groups](related-results/GQ2QuaternionCounts.md);
+- [exact semidihedral and modular target counts](related-results/GQ2MaximalCyclicCounts.md);
+- [the higher-extraspecial generator-rank obstruction](related-results/GQ2ExtraspecialObstruction.md);
 - [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py);
 - [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py);
 - [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py);
@@ -30,8 +32,9 @@ The detailed proofs and checkers are:
 - [`verify_dyadic_dehn_twist_conjugacy.py`](verification/related/verify_dyadic_dehn_twist_conjugacy.py);
 - [`verify_dyadic_affine_mixed_cohomology.py`](verification/related/verify_dyadic_affine_mixed_cohomology.py);
 - [`verify_gq2_finite_abelian_counts.py`](verification/related/verify_gq2_finite_abelian_counts.py);
-- [`verify_gq2_dihedral_counts.py`](verification/related/verify_gq2_dihedral_counts.py); and
-- [`verify_gq2_quaternion_counts.py`](verification/related/verify_gq2_quaternion_counts.py).
+- [`verify_gq2_dihedral_counts.py`](verification/related/verify_gq2_dihedral_counts.py);
+- [`verify_gq2_quaternion_counts.py`](verification/related/verify_gq2_quaternion_counts.py); and
+- [`verify_gq2_maximal_cyclic_counts.py`](verification/related/verify_gq2_maximal_cyclic_counts.py).
 
 [RT]: https://roed314.github.io/gq2/paper.pdf
 [Gropper]: https://arxiv.org/abs/2303.04309
@@ -298,8 +301,7 @@ broader counting question; it does not address nonabelian targets.
 For the dihedral group \(D_{2^m}\) of order \(2^m\),
 
 $$
-\left|\operatorname{Sur}(G_{\mathbb Q_2},D_{2^m})\right|
-=
+\left|\operatorname{Sur}(G_{\mathbb Q_2},D_{2^m})\right|=
 \begin{cases}
 144,&m=3,\\
 2^{2m+1},&m\ge4.
@@ -332,6 +334,40 @@ relator fibers; from \(Q_{32}\) onward the count stabilizes. The
 [separate proof](related-results/GQ2QuaternionCounts.md) contains the
 seven-pattern calculation and the literature boundary.
 
+### 13. Higher extraspecial groups are excluded by rank
+
+An extraspecial group \(E\) of order \(2^{1+2n}\) satisfies
+
+$$
+E/\Phi(E)\cong(C_2)^{2n}.
+$$
+
+It therefore needs \(2n\) generators. Since the displayed maximal pro-\(2\)
+source has only three generators, no extraspecial group of order at least
+\(32\) can be a quotient of \(G_{\mathbb Q_2}\). The order-\(8\) boundary
+consists of \(D_8\) and \(Q_8\), whose counts appear above.
+
+The
+[separate obstruction note](related-results/GQ2ExtraspecialObstruction.md)
+explains why the pure extraspecial target is not the right place to look for
+a new quadratic Gauss-sign count.
+
+### 14. The remaining maximal-cyclic families
+
+The same rotation/reflection calculation also treats the semidihedral and
+modular groups:
+
+| Target | Surjections | Extension classes |
+| --- | ---: | ---: |
+| \(SD_{16}\) | \(576\) | \(36\) |
+| \(SD_{2^m}\), \(m\ge5\) | \(2^{2m+1}\) | \(32\) |
+| \(M_{2^m}\), \(m\ge4\) | \(9\cdot2^{2m-2}\) | \(9\cdot2^{m-2}\) |
+
+Ito and Yamagishi already published these extension counts. The
+[separate proof and certificate](related-results/GQ2MaximalCyclicCounts.md)
+give a direct derivation from \(A^2S^4[S,Y]\), rather than a new
+enumeration claim.
+
 ## Source boundary
 
 | Item | Status |
@@ -352,6 +388,8 @@ seven-pattern calculation and the literature boundary.
 | Finite abelian \(2\)-target surjection formula | Elementary consequence of the source abelianization; solved special case of Section 11, item 4; no novelty claim |
 | Dihedral \(2\)-target surjection formula | Direct relator calculation solving the first nonabelian family in Section 11, item 4; no novelty claim |
 | Generalized-quaternion \(2\)-target surjection formula | Direct relator calculation with two exceptional bottom levels; published enumeration exists, so this is a new derivation and certificate rather than a priority claim |
+| Semidihedral and modular \(2\)-target formulas | Direct relator calculation completing the maximal-cyclic nonabelian families; Ito--Yamagishi already published the extension counts |
+| Higher-extraspecial obstruction | Elementary Frattini-rank consequence of the three-generator source presentation; no novelty claim |
 
 This project does not claim to correct Roe--Turturean's presentation theorem.
 It does not claim a new A183068 supercongruence. Literature novelty is not
@@ -403,6 +441,12 @@ The generalized-quaternion checker evaluates another 266,752 exact
 relator-coordinate identities, exhaustively enumerates every triple through
 \(Q_{128}\), and checks the closed extension counts through \(Q_{2^{16}}\).
 
+The maximal-cyclic checker evaluates 532,480 relator-coordinate identities,
+exhaustively enumerates both semidihedral and modular triples through group
+order \(128\), independently counts their automorphism groups through order
+\(256\), checks the closed formulas through order \(2^{16}\), and asserts
+the extraspecial generator-rank boundary.
+
 A second exact checker independently reproduces the manuscript's Proposition
 C.10 norm calculations and the Appendix D counts for $S_3$ and $S_4$. See the
 [current-PDF audit](related-results/GQ2CurrentPdfAudit.md).
@@ -419,6 +463,7 @@ python verification/related/verify_dyadic_affine_mixed_cohomology.py
 python verification/related/verify_gq2_finite_abelian_counts.py
 python verification/related/verify_gq2_dihedral_counts.py
 python verification/related/verify_gq2_quaternion_counts.py
+python verification/related/verify_gq2_maximal_cyclic_counts.py
 ```
 
 ## Next theorem target

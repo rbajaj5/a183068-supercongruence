@@ -54,6 +54,10 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 12 | [Binary $s_{18}$ reduction](S18TwoAdicReduction.md) | Isolates the exact sharpened scaling lemma still needed at $p=2$ | Substantial reduction; naive factor-by-factor proof refuted |
 | 13 | [Gaussian citation-network boundary report](GaussianCitationNetworkBoundaryReport.md) | Records rigorous limits of the Gaussian search, including Erdős--Moser reductions | Reduction and bounded search, not a global solution |
 | 14 | [Cooper level-11 rare primes](CooperLevel11RarePrimes.md) | Isolates the first obstruction and records a 350-case first-order Frobenius law reducing the full $r=1$ conjecture to it | Computational theorem target; fixed-prime automata route is conditional on finding a rational diagonal |
+| 15 | [Finite abelian \(G_{\mathbb Q_2}\) targets](GQ2FiniteAbelianCounts.md) | Opens the Roe--Turturean finite-target lane with a Frattini-shadow count | Complete elementary formula; no novelty claim |
+| 15A | [Dihedral and quaternion \(G_{\mathbb Q_2}\) targets](GQ2DihedralCounts.md) / [quaternion targets](GQ2QuaternionCounts.md) | Introduces the rotation/reflection relator calculation and its low binary boundary layers | Complete direct derivations; enumeration literature exists |
+| 15B | [Semidihedral and modular targets](GQ2MaximalCyclicCounts.md) | Completes the maximal-cyclic nonabelian families in the same coordinate language | Complete direct derivation and certificate; Ito--Yamagishi already published the counts |
+| 15C | [Extraspecial rank obstruction](GQ2ExtraspecialObstruction.md) | Closes the higher pure-extraspecial branch before enumeration: the targets need at least four generators | Complete elementary obstruction |
 
 ## Strongest present claims
 
@@ -123,6 +127,7 @@ The individual correspondence is:
 | Roe--Turturean finite abelian \(2\)-target counts | `verification/related/verify_gq2_finite_abelian_counts.py` |
 | Roe--Turturean dihedral \(2\)-target counts | `verification/related/verify_gq2_dihedral_counts.py` |
 | Roe--Turturean generalized-quaternion \(2\)-target counts | `verification/related/verify_gq2_quaternion_counts.py` |
+| Roe--Turturean semidihedral/modular counts and extraspecial rank boundary | `verification/related/verify_gq2_maximal_cyclic_counts.py` |
 | Gaussian Erdős--Moser boundary search | `verification/related/verify_gaussian_erdos_moser.py` |
 
 The binary $s_{18}$ file is a reduction rather than a completed theorem and
