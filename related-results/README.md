@@ -40,6 +40,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 4E | [Colored Euler-product Frobenius theorem](EulerProductGaussianTower.md) | Proves one coefficientwise \(p^{2r}\) theorem containing Bala's full quadratic product packet, the A380290 baseline, and split/inert Gaussian part-count twists | Complete elementary proof candidate; the special untwisted A380290 cubic conjecture remains open |
 | 4F | [Dyadic hypercube defect](DyadicHypercubeDefect.md) | Proves the sharp binary law \(e(1)=1\), \(e(r)=2r\) for \(r\ge2\), identifies the exact first-level modulus-\(4\) obstruction, and specializes it for A380290 to a lacunary binary theta coefficient | Complete elementary theorem and exact checks; no priority claim for the standard \(2\)-derivation |
 | 4G | [Complete Gaussian local table for Euler products](EulerProductGaussianLocalTable.md) | Combines the odd and dyadic theorems into one split/inert/ramified prime-ideal law, including the \(i\mapsto-1\) binary cross-twist and exact \((1+i)\)-adic exponents | Complete corollary and exact local-valuation checks; withdrawn Witt--Hadamard near-match excluded as proof input |
+| 4H | [Walsh analysis of the dyadic hypercube defect](DyadicHypercubeWalshAnalysis.md) | Shows that every output coordinate has a matching quadratic graph and computes its exact model count, Walsh spectrum, influences, noise stability, and every affine-face restriction | Complete combinatorial corollary and exhaustive checks; classical Boolean Fourier machinery |
 | 4A | [Chowla--Dwork--Evans split-prime defect](ChowlaDworkEvansSplitDefect.md) | Rewrites their published modulo-\(p^2\) lift as an exact normalized defect and exceptional-prime criterion | Published theorem plus exact corollary; no novelty claim |
 | 5 | [Cubic $(\eta)$ congruence at $p=3$](EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to fill a small-prime gap in a published theorem | Complete unchecked draft |
 | 6 | [Gaussian Wolstenholme citation network](GaussianWolstenholmeCitationNetwork.md) | Replaces scaling by translation-invariant Gaussian residue blocks | Three major candidate results with exact certificates; independent review required |
@@ -108,6 +109,7 @@ The individual correspondence is:
 | A228960/A350383 coefficient pair | `verification/related/verify_cyclotomic_coefficient_pair.py` |
 | Colored Euler-product tower | `verification/related/verify_euler_product_gaussian_tower.py` |
 | Dyadic hypercube defect | `verification/related/verify_dyadic_hypercube_defect.py` |
+| Dyadic hypercube Walsh analysis | `verification/related/verify_dyadic_hypercube_walsh.py` |
 | Chowla--Dwork--Evans split-prime defect | `verification/related/verify_chowla_dwork_evans_defect.py` |
 | Gaussian power sums | `verification/related/verify_gaussian_power_sums.py` |
 | Gaussian Wolstenholme network | `verification/related/verify_gaussian_wolstenholme.py` |

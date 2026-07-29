@@ -465,6 +465,12 @@ No connection to the Four-Colour Theorem is used in the proof. The
 hypercube arises because a coefficient modulo \(4\) has two binary digits
 and the first Frobenius defect has Boolean degree two.
 
+The companion
+[Walsh analysis](DyadicHypercubeWalshAnalysis.md) shows more precisely
+that every individual output coefficient has a matching interaction graph.
+It computes the exact model count, Fourier spectrum, influences, noise
+stability, and every coordinate-face restriction.
+
 ## 8. The exact A380290 first-lift obstruction
 
 The first-lift problem can be made completely explicit for Bala's

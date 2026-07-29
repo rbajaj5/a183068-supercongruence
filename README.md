@@ -157,6 +157,13 @@ against the lacunary binary theta series supported on
 \(2^a s^2\) with \(s\) odd; in particular, every even \(n\) gains the
 first-lift modulus \(4\).
 
+The companion
+**[Walsh analysis](related-results/DyadicHypercubeWalshAnalysis.md)**
+determines the complete Boolean Fourier behavior of every individual defect
+coefficient. Its quadratic interaction graph is a matching, giving exact
+model counts, influences, noise stability, and restrictions to every affine
+face of the coefficient hypercube.
+
 The resulting
 **[complete Gaussian local table](related-results/EulerProductGaussianLocalTable.md)**
 now places the same Euler-product tower at every local type in
