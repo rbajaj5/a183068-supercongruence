@@ -197,6 +197,31 @@ proof.
 - **Proof:** [Binomial-power Frobenius theorem](related-results/BinomialPowerFrobeniusTheorem.md)
 - **Exact checker:** [`verify_binomial_power_frobenius.py`](verification/related/verify_binomial_power_frobenius.py)
 
+### QUADRATIC-GAUSSIAN — A005259 and A333592-family polynomial towers
+
+- **Claim:** If
+  \[
+  \mathcal A_N(X)=
+  \sum_k\left(\binom Nk\binom{N+k}k\right)^2X^k
+  \]
+  and
+  \[
+  \mathcal B_N^{u,v}(X)=
+  \sum_{k=0}^{uN}\binom{vN+k-1}k^2X^k,
+  \]
+  then, for either family \(\mathcal F\),
+  \[
+  \mathcal F_{np^r}(X)\equiv
+  \mathcal F_{np^{r-1}}(X^p)\pmod {p^{2r}}
+  \]
+  for every prime \(p\), with \(u,v\ge1\) in the second family.
+  Evaluation at \(X=i\) gives the split, inert, and ramified Gaussian
+  specializations.
+- **Status:** Complete elementary deduction from classical scaling.  This
+  does not prove A333592's stronger untwisted cubic conjecture.
+- **Proof:** [Quadratic queue theorem](related-results/QuadraticGaussianQueueTheorem.md)
+- **Exact checker:** [`verify_quadratic_gaussian_queue.py`](verification/related/verify_quadratic_gaussian_queue.py)
+
 ### GBQ-MAP — Gaussian routing of the Bala--OEIS census
 
 - **Claim:** The reproducible 110-record Bala corpus divides exhaustively
@@ -212,8 +237,10 @@ proof.
 - **Claim:** In 195 exact adjacent-scale tests, A005260 retains exponent
   \(3r\) for \(p\ge5\) and \(3r-1\) at \(p=3\), while A005259 and A333592
   retain \(2r\). Exact equality witnesses reject naive cubic twisted claims;
-  the A005260 observation is now proved by BINOMIAL-POWER.
-- **Status:** Computational triage, not a proof.
+  all three observations are now proved by BINOMIAL-POWER and
+  QUADRATIC-GAUSSIAN.
+- **Status:** Historical computational triage; its three positive targets
+  are now theorems.
 - **Report:** [Bala Gaussian-twist pilot](related-results/BalaGaussianTwistPilot.md)
 - **Exact checker:** [`verify_bala_gaussian_twist_pilot.py`](verification/related/verify_bala_gaussian_twist_pilot.py)
 

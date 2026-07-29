@@ -85,6 +85,13 @@ The proof establishes a stronger coefficientwise congruence for every
 \(m\ge3\), includes \(p=2\), and shows directly that \(p=3\) is a genuine
 one-power boundary.
 
+The A005259 and A333592 observations are now closed by the
+[quadratic queue theorem](QuadraticGaussianQueueTheorem.md).  It proves
+their coefficientwise \(p^{2r}\) towers for every prime, including the
+ramified binary cross-twist.  The exact witnesses above remain useful:
+they show why those termwise theorems cannot simply be promoted to cubic
+Gaussian congruences.
+
 ## 5. Reproduction
 
 Run:
