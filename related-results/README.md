@@ -36,6 +36,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 4 | [Gaussian Frobenius twists](GaussianFrobeniusTwists.md) | Shows that discard-and-rescale proofs lift to roots-of-unity weights; specializes A183068 to a Gaussian split/inert congruence | Complete elementary deduction; priority unchecked |
 | 4B | [Binomial-power polynomial Frobenius theorem](BinomialPowerFrobeniusTheorem.md) | Proves the coefficientwise \(X\mapsto X^p\) tower for every exponent \(m\ge3\), including the multiplicity bonus \(v_p(m)\) and all Gaussian local cases | Complete elementary deduction; priority not established |
 | 4C | [Quadratic A005259/A333592-family polynomial towers](QuadraticGaussianQueueTheorem.md) | Closes the two remaining Gaussian-pilot targets at coefficientwise exponent \(2r\) and covers every positive parameter pair in the broader A333592 family | Complete classical-scaling corollary; not the stronger A333592 cubic conjecture |
+| 4D | [Cyclotomic coefficient-pair theorem](CyclotomicCoefficientPairTheorem.md) | Proves the A228960 and A350383 \(p^{2r}\) conjectures in coefficientwise form and specializes them at \(X=i\) | Complete elementary proof candidate; priority search preliminary |
 | 4A | [Chowla--Dwork--Evans split-prime defect](ChowlaDworkEvansSplitDefect.md) | Rewrites their published modulo-\(p^2\) lift as an exact normalized defect and exceptional-prime criterion | Published theorem plus exact corollary; no novelty claim |
 | 5 | [Cubic $(\eta)$ congruence at $p=3$](EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to fill a small-prime gap in a published theorem | Complete unchecked draft |
 | 6 | [Gaussian Wolstenholme citation network](GaussianWolstenholmeCitationNetwork.md) | Replaces scaling by translation-invariant Gaussian residue blocks | Three major candidate results with exact certificates; independent review required |
@@ -101,6 +102,7 @@ The individual correspondence is:
 | Bala Gaussian-twist pilot | `verification/related/verify_bala_gaussian_twist_pilot.py` |
 | Binomial-power polynomial theorem | `verification/related/verify_binomial_power_frobenius.py` |
 | Quadratic A005259/A333592 towers | `verification/related/verify_quadratic_gaussian_queue.py` |
+| A228960/A350383 coefficient pair | `verification/related/verify_cyclotomic_coefficient_pair.py` |
 | Chowla--Dwork--Evans split-prime defect | `verification/related/verify_chowla_dwork_evans_defect.py` |
 | Gaussian power sums | `verification/related/verify_gaussian_power_sums.py` |
 | Gaussian Wolstenholme network | `verification/related/verify_gaussian_wolstenholme.py` |

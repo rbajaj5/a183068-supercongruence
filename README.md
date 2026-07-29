@@ -124,6 +124,15 @@ containing A333592, for every prime including \(2\).  The second theorem
 covers every positive parameter pair in the broader OEIS family.  This does
 not settle A333592's stronger untwisted cubic conjecture.
 
+The first two constant-term targets are also now closed by one
+**[cyclotomic coefficient-pair theorem](related-results/CyclotomicCoefficientPairTheorem.md)**.
+For every prime \(p\ge5\), it proves coefficientwise \(p^{2r}\) Frobenius
+towers for the polynomials underlying A228960 and A350383.  Evaluation at
+\(X=1\) proves both named OEIS conjectures, while \(X=i\) gives their
+Gaussian split/inert specializations.  The proof records exact failures at
+\(p=3\), and at \(p=2\) for A350383; it does not claim Bala's broader
+cyclotomic-rational-function principle.
+
 ## Attribution
 
 - Paul D. Hanna created A183068 in December 2010 as the central terms of
