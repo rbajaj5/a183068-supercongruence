@@ -33,6 +33,7 @@ SCRIPTS = (
     "verification/related/verify_euler_product_gaussian_tower.py",
     "verification/related/verify_dyadic_hypercube_defect.py",
     "verification/related/verify_dyadic_hypercube_walsh.py",
+    "verification/related/verify_affine_spectrum_hashing.py",
     "verification/related/verify_chowla_dwork_evans_defect.py",
     "verification/related/verify_gaussian_power_sums.py",
     "verification/related/verify_gaussian_wolstenholme.py",

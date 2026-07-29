@@ -348,9 +348,12 @@ proof.
   full-rank product formula and supplies a measurement-design certificate.
 - **Source status:** Known theorem/application: the general identity is the
   binary hashing formulation of the classical Crapo--Rota Critical Theorem.
-- **Status:** Complete proof and 1,134 exact checks in the auxiliary public
-  repository; no novelty claim for the characteristic-polynomial law.
-- **Proof and priority audit:** [Exact matroid hashing law](https://github.com/rbajaj5/hypercube-probabilistic-estimates/blob/main/notes/MatroidHashingLaw.md)
+- **Status:** Complete proof and 1,134 exact checks in this repository; no
+  novelty claim for the characteristic-polynomial law.
+- **Proofs:** [Affine-spectrum specialization](related-results/AffineSpectrumHashing.md)
+  and [exact matroid hashing law](related-results/MatroidHashingLaw.md).
+- **Priority audit:** [Hypercube hashing literature audit](related-results/HypercubeHashingPriorityAudit.md).
+- **Exact checker:** [`verify_affine_spectrum_hashing.py`](verification/related/verify_affine_spectrum_hashing.py).
 - **Portfolio role:** Supporting infrastructure; it does not strengthen a
   supercongruence exponent.
 
