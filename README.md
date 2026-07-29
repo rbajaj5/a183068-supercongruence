@@ -94,7 +94,7 @@ The highest-value specialist-review targets are:
 
 1. the exact ramified Gaussian valuation at \(1+i\);
 2. inert Gaussian adjacent prime-power scaling;
-3. the new [A365029 prime-level theorem](related-results/A365029PrimeLevelTheorem.md);
+3. the new [first two A365029 levels](related-results/A365029FirstTwoLevels.md);
 4. the all-degree weighted-lift collision theorem;
 5. the degree-five elliptic Frobenius packet; and
 6. the original A183068 proof.
