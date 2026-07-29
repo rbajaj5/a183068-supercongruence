@@ -52,6 +52,13 @@ a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}.
 idea in plain language; the carry calculation and small-prime bookkeeping
 follow underneath for verification.
 
+**[Read the Bala version](BALA_VERSION.md)** for a constructive completion of
+the digit-counting, Morita \(p\)-adic gamma, block-decomposition, and
+creative-microscoping routes suggested in the AI material forwarded after the
+initial correspondence. It records which suggestions become the present
+proof, which merely repackage its scaling lemma, and which q-theoretic
+extension remains open.
+
 ## Attribution
 
 - Paul D. Hanna created A183068 in December 2010 as the central terms of
