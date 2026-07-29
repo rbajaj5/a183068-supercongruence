@@ -21,13 +21,15 @@ The detailed proofs and checkers are:
 - [conjugacy shells and exact twist-depth moments](related-results/DyadicDehnTwistConjugacyMoments.md);
 - [the mixed dyadic obstruction in the affine shadow](related-results/DyadicAffineMixedCohomology.md);
 - [closed surjection counts for finite abelian \(2\)-targets](related-results/GQ2FiniteAbelianCounts.md);
+- [exact surjection counts for dihedral \(2\)-groups](related-results/GQ2DihedralCounts.md);
 - [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py);
 - [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py);
 - [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py);
 - [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py);
-- [`verify_dyadic_dehn_twist_conjugacy.py`](verification/related/verify_dyadic_dehn_twist_conjugacy.py); and
-- [`verify_dyadic_affine_mixed_cohomology.py`](verification/related/verify_dyadic_affine_mixed_cohomology.py); and
-- [`verify_gq2_finite_abelian_counts.py`](verification/related/verify_gq2_finite_abelian_counts.py).
+- [`verify_dyadic_dehn_twist_conjugacy.py`](verification/related/verify_dyadic_dehn_twist_conjugacy.py);
+- [`verify_dyadic_affine_mixed_cohomology.py`](verification/related/verify_dyadic_affine_mixed_cohomology.py);
+- [`verify_gq2_finite_abelian_counts.py`](verification/related/verify_gq2_finite_abelian_counts.py); and
+- [`verify_gq2_dihedral_counts.py`](verification/related/verify_gq2_dihedral_counts.py).
 
 [RT]: https://roed314.github.io/gq2/paper.pdf
 [Gropper]: https://arxiv.org/abs/2303.04309
@@ -289,6 +291,29 @@ This follows from
 count. It solves the finite abelian \(2\)-group subcase of the source's
 broader counting question; it does not address nonabelian targets.
 
+### 11. The first nonabelian family
+
+For the dihedral group \(D_{2^m}\) of order \(2^m\),
+
+$$
+\left|\operatorname{Sur}(G_{\mathbb Q_2},D_{2^m})\right|
+=
+\begin{cases}
+144,&m=3,\\
+2^{2m+1},&m\ge4.
+\end{cases}
+$$
+
+After division by automorphisms, this gives \(18\) \(D_8\)-extensions and
+exactly \(16\) \(D_{2^m}\)-extensions for every \(m\ge4\).
+
+The proof evaluates \(A^2S^4[S,Y]\) in rotation/reflection coordinates.
+The eight reflection patterns reduce to linear congruences; the
+all-rotation pattern cannot generate, six patterns contribute uniformly,
+and one first-level pattern distinguishes \(D_8\) from the stable tower.
+This is the first finite-target count in the packet where the commutator
+layer is visible.
+
 ## Source boundary
 
 | Item | Status |
@@ -307,6 +332,7 @@ broader counting question; it does not address nonabelian targets.
 | Translation conjugacy shells and exact moments | Elementary affine-quotient deduction; no novelty claim |
 | Mixed \(H^2_{\mathrm{cont}}\) calculation and explicit extension | Standard continuous-cohomology calculation completed here; no novelty claim |
 | Finite abelian \(2\)-target surjection formula | Elementary consequence of the source abelianization; solved special case of Section 11, item 4; no novelty claim |
+| Dihedral \(2\)-target surjection formula | Direct relator calculation solving the first nonabelian family in Section 11, item 4; no novelty claim |
 
 This project does not claim to correct Roe--Turturean's presentation theorem.
 It does not claim a new A183068 supercongruence. Literature novelty is not
@@ -350,6 +376,10 @@ The finite-abelian-target checker exhaustively enumerates all 66 invariant
 factor types of order at most \(2^8\), and separately checks the cyclic and
 elementary-abelian closed forms.
 
+The dihedral checker evaluates 266,752 exact relator-coordinate identities,
+exhaustively enumerates every triple through \(D_{128}\), and checks the
+closed extension counts through \(D_{2^{16}}\).
+
 A second exact checker independently reproduces the manuscript's Proposition
 C.10 norm calculations and the Appendix D counts for $S_3$ and $S_4$. See the
 [current-PDF audit](related-results/GQ2CurrentPdfAudit.md).
@@ -364,6 +394,7 @@ python verification/related/verify_dyadic_twist_grammar.py
 python verification/related/verify_dyadic_dehn_twist_conjugacy.py
 python verification/related/verify_dyadic_affine_mixed_cohomology.py
 python verification/related/verify_gq2_finite_abelian_counts.py
+python verification/related/verify_gq2_dihedral_counts.py
 ```
 
 ## Next theorem target

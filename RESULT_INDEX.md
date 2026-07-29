@@ -709,6 +709,26 @@ proof.
 - **Proof:** [Closed finite abelian target counts](related-results/GQ2FiniteAbelianCounts.md)
 - **Exact checker:** [`verify_gq2_finite_abelian_counts.py`](verification/related/verify_gq2_finite_abelian_counts.py)
 
+### GQ2-DIHEDRAL — exact dihedral \(2\)-target counts
+
+- **Claim:** For the dihedral group \(D_{2^m}\) of order \(2^m\),
+  \[
+  |\operatorname{Sur}(G_{\mathbb Q_2},D_{2^m})|
+  =
+  \begin{cases}
+  144,&m=3,\\
+  2^{2m+1},&m\ge4.
+  \end{cases}
+  \]
+- **Consequence:** There are \(18\) \(D_8\)-extensions of \(\mathbb Q_2\)
+  and \(16\) \(D_{2^m}\)-extensions for every \(m\ge4\).
+- **Status:** Complete direct calculation from the Roe--Turturean relator,
+  solving the first nonabelian family in their explicit-counting direction.
+  Existing local-field enumeration literature makes this a new derivation,
+  not presently a priority claim.
+- **Proof:** [Exact dihedral target counts](related-results/GQ2DihedralCounts.md)
+- **Exact checker:** [`verify_gq2_dihedral_counts.py`](verification/related/verify_gq2_dihedral_counts.py)
+
 ### GQ2-TWIST — dyadic HNN Dehn-twist tower
 
 - **Claim:** The HNN shears extend to an exact
