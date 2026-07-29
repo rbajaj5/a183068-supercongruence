@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import importlib.util
 import itertools
+from math import comb, isqrt
 from pathlib import Path
 
 
@@ -370,15 +371,98 @@ def check_gaussian_local_table() -> int:
     return checks
 
 
+def a380290_series_mod_two(index: int, target: int) -> list[int]:
+    """Return F(x)^index modulo 2 through the target degree."""
+
+    coefficients = [0] * (target + 1)
+    coefficients[0] = 1
+    for part_size in range(1, target + 1):
+        exponent = index * part_size**2
+        factor = [
+            comb(exponent + occupation - 1, occupation) % 2
+            for occupation in range(target // part_size + 1)
+        ]
+        result = [0] * (target + 1)
+        for degree, value in enumerate(coefficients):
+            if not value:
+                continue
+            for occupation, factor_value in enumerate(factor):
+                new_degree = degree + part_size * occupation
+                if new_degree > target:
+                    break
+                if factor_value:
+                    result[new_degree] ^= 1
+        coefficients = result
+    return coefficients
+
+
+def has_square_odd_part(value: int) -> bool:
+    while value % 2 == 0:
+        value //= 2
+    return isqrt(value) ** 2 == value
+
+
+def a380290_theta_defect(index: int) -> int:
+    if index % 2 == 0:
+        return 0
+    coefficients = a380290_series_mod_two(index, index)
+    return (
+        sum(
+            coefficients[index - theta_degree]
+            for theta_degree in range(1, index + 1)
+            if has_square_odd_part(theta_degree)
+        )
+        % 2
+    )
+
+
+def check_a380290_theta_obstruction() -> int:
+    checks = 0
+    for index in range(1, 21):
+        upper = EULER.evaluate_one(
+            EULER.euler_product_polynomial(
+                2 * index, 2, (EULER.constant(-1),)
+            )
+        )
+        lower = EULER.evaluate_one(
+            EULER.euler_product_polynomial(
+                index, 2, (EULER.constant(-1),)
+            )
+        )
+        difference = upper - lower
+        if index % 2 == 0:
+            assert difference % 4 == 0
+        else:
+            assert (difference // 2) % 2 == a380290_theta_defect(index)
+        checks += 1
+
+    expected_support = {
+        1, 3, 7, 13, 15, 19, 25, 27, 29, 31, 37, 43, 45,
+        51, 53, 57, 61, 63,
+    }
+    actual_support = {
+        index
+        for index in range(1, 65)
+        if a380290_theta_defect(index)
+    }
+    assert actual_support == expected_support
+    checks += 64
+
+    print(f"A380290 theta-obstruction checks: {checks}")
+    print(f"A380290 first 64 defect support: {sorted(actual_support)}")
+    return checks
+
+
 def main() -> None:
     universal = check_universal_quadratic_identity()
     euler = check_euler_defect_identity()
     tower = check_binary_tower()
     stress = check_restored_tower_stress()
     gaussian = check_gaussian_local_table()
+    theta = check_a380290_theta_obstruction()
     print(
         "total exact checks: "
-        f"{universal + euler + tower + stress + gaussian}"
+        f"{universal + euler + tower + stress + gaussian + theta}"
     )
 
 

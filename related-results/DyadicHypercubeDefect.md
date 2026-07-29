@@ -465,12 +465,106 @@ No connection to the Four-Colour Theorem is used in the proof. The
 hypercube arises because a coefficient modulo \(4\) has two binary digits
 and the first Frobenius defect has Boolean degree two.
 
-## 8. Next target
+## 8. The exact A380290 first-lift obstruction
 
-The remaining binary classification problem is now confined to the first
+The first-lift problem can be made completely explicit for Bala's
+A380290 product. Put
+
+```math
+F(y)=\prod_{m\geq1}(1-y^m)^{-m^2},
+\qquad
+a(n)=[y^n]F(y)^n,
+\qquad\text{(23)}
+```
+
+and define the binary theta series
+
+```math
+\Theta_2(y)
+=
+\sum_{\substack{a\geq0\\s\geq1\ {\rm odd}}}
+y^{2^a s^2}
+\quad\text{in }\mathbb F_2[[y]].
+\qquad\text{(24)}
+```
+
+### Theorem 5 (A380290 binary theta obstruction)
+
+If \(n\) is even, then
+
+```math
+a(2n)\equiv a(n)\pmod4.
+\qquad\text{(25)}
+```
+
+If \(n\) is odd, then
+
+```math
+\frac{a(2n)-a(n)}2
+\equiv
+[y^n]F(y)^n\Theta_2(y)
+\pmod2.
+\qquad\text{(26)}
+```
+
+Consequently, for odd \(n\),
+
+```math
+a(2n)\equiv a(n)\pmod4
+\quad\Longleftrightarrow\quad
+[y^n]F(y)^n\Theta_2(y)=0
+\quad\text{in }\mathbb F_2.
+\qquad\text{(27)}
+```
+
+#### Proof
+
+For A380290, formula (13) has one color, \(Z=1\), \(d=2\), and
+\(h_m=-1\). If \(n\) is even, the factor \(n\bmod2\) makes the entire
+first defect vanish, proving (25).
+
+Now suppose that \(n\) is odd. The logarithmic factor in (13) is
+
+```math
+B(x)=\sum_{m\ {\rm odd}}\frac{x^m}{1+x^m}
+=
+\sum_{\substack{m\ {\rm odd}\\k\geq1}}x^{mk}
+\quad\text{in }\mathbb F_2[[x]].
+\qquad\text{(28)}
+```
+
+Only the even-degree part of \(B\) can contribute against
+\(\phi(P_n)=F(x^2)^n\). The coefficient of \(x^{2t}\) in \(B\) is the
+number of odd divisors of \(t\), modulo \(2\). A positive integer has an
+odd number of divisors exactly when it is a square. Hence this coefficient
+is \(1\) exactly when the odd part of \(t\) is a square, equivalently when
+
+```math
+t=2^a s^2
+\qquad(a\geq0,\ s\ {\rm odd}).
+```
+
+Thus the even-degree part of \(B(x)\) is
+\(\Theta_2(x^2)\). Taking the coefficient of \(x^{2n}\) in (13) and
+putting \(y=x^2\) proves (26), and (27) follows. \(\square\)
+
+The first 64 defect bits are \(1\) precisely at
+
+```text
+1, 3, 7, 13, 15, 19, 25, 27, 29, 31, 37, 43, 45,
+51, 53, 57, 61, 63.
+```
+
+This list is a finite certificate, not a claimed periodicity or density
+law.
+
+## 9. Next target
+
+The universal binary classification problem is now confined to the first
 lift: determine which exponent patterns make the explicit logarithmic
-defect (13) vanish in central degree. One can then ask which special
-families gain powers beyond the sharp universal exponent \(2r\).
+defect (13) vanish in central degree. For A380290, Theorem 5 reduces that
+question to the diagonal parity problem (27). One can then ask which
+special families gain powers beyond the sharp universal exponent \(2r\).
 
 The checker verifies the universal quadratic and polarization identities,
 the coefficient formula (5), the exact Euler-product identity (8), the

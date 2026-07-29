@@ -152,7 +152,10 @@ Boolean map on the two coefficient-bit layers. After normalization, the
 defect is additive over Euler factors and is supported exactly on odd part
 sizes with odd exponent multiplicity. This is a complete \(p=2\)
 replacement, not an attempt to infer the binary case from the odd-prime
-theorem.
+theorem. For A380290 itself, the first defect is now an explicit diagonal
+against the lacunary binary theta series supported on
+\(2^a s^2\) with \(s\) odd; in particular, every even \(n\) gains the
+first-lift modulus \(4\).
 
 The resulting
 **[complete Gaussian local table](related-results/EulerProductGaussianLocalTable.md)**
