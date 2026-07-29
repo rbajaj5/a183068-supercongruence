@@ -139,6 +139,7 @@ The integrity checker also protects the published
 | [`AUDIT.md`](AUDIT.md) | Corrections and machine-assisted audits |
 | [`DYADIC_POLICY.md`](DYADIC_POLICY.md) | Required checklist for all-prime and ramified claims |
 | [`ROE_2ADIC.md`](ROE_2ADIC.md) | Public Roe--Turturean-inspired dyadic packet |
+| [`ROE_TURTUREAN_NOTE.md`](ROE_TURTUREAN_NOTE.md) | Short source-facing statement of the finite abelian \(2\)-target result |
 
 ## Public research policy
 
