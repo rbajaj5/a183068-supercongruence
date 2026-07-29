@@ -196,18 +196,44 @@ Thus \(H(1,q)\equiv0\pmod p\). Equation (6), together with (7), is
 divisible by \(p^2\). Since \(q=2m+1\), this proves divisibility by
 \(p^{q+2}=p^{2m+3}\). \(\square\)
 
-The exponent is attained in the exact tested range. The higher-level OEIS
-conjecture
+### The published cubic baseline
+
+There is already a complete adjacent-scale baseline for every exponent, not
+only the odd exponents in Bala's family. For an integer \(q\ge2\), set
+
+```math
+B_q(N)=
+\sum_{k=0}^{N-1}\binom{N+k-1}{k}^{q}.
+```
+
+Then, for \(p\ge5\) and positive integers \(n,r\),
+
+```math
+B_q(np^r)\equiv B_q(np^{r-1})\pmod {p^{3r}}.
+\tag{9}
+```
+
+Indeed,
+
+```math
+B_q(N)=w_{0,q,1}(N-1),
+```
+
+so (9) is exactly the \(B\ge2\) branch of [Coster's] generalized Apéry
+theorem. Thus the open A375178-family target is not the existence of a cubic
+tower. It is the uniform gain of a further \(q=2m+1\) powers at \(n=1\) and
+\(r\ge2\):
 
 ```math
 b_m(p^r)\equiv b_m(p^{r-1})
 \pmod {p^{3r+2m+1}}
 \qquad(r\ge2)
-\tag{9}
+\tag{10}
 ```
 
-requires a new block decomposition: the clean \(k=1,\ldots,p-1\) harmonic
-argument above does not simply iterate.
+The exponent in Theorem 2 is attained in the exact tested range. Reaching
+(10) still requires a refinement beyond Coster's cubic theorem: the clean
+\(k=1,\ldots,p-1\) harmonic argument above does not simply iterate.
 
 ## 4. The A333593 tower is a Coster corollary
 
@@ -225,7 +251,7 @@ and the generalized Apéry sum
 W(t)=
 \sum_{k=0}^{t}
 (-1)^k\binom{t+k}{k}^{2}.
-\tag{10}
+\tag{11}
 ```
 
 The OEIS sequence A333593 is \(A(N)\).
@@ -238,7 +264,7 @@ For every prime \(p\ge5\) and positive integers \(n,r\),
 \boxed{
 A(np^r)\equiv A(np^{r-1})\pmod {p^{3r}}.
 }
-\tag{11}
+\tag{12}
 ```
 
 #### Proof
@@ -248,7 +274,7 @@ Separating the final summand in \(A(N)\) gives the exact identity
 ```math
 A(N)=
 (-1)^N W(N-1)+\binom{2N-1}{N}^{2}.
-\tag{12}
+\tag{13}
 ```
 
 [Coster's] generalized Apéry theorem applies to
@@ -256,7 +282,7 @@ A(N)=
 
 ```math
 W(np^r-1)\equiv W(np^{r-1}-1)\pmod {p^{3r}}.
-\tag{13}
+\tag{14}
 ```
 
 The standard Jacobsthal--Kazandzidis binomial congruence gives
@@ -266,7 +292,7 @@ The standard Jacobsthal--Kazandzidis binomial congruence gives
 \equiv
 \binom{2np^{r-1}}{np^{r-1}}
 \pmod {p^{3r}}.
-\tag{14}
+\tag{15}
 ```
 
 Because \(2\) is a \(p\)-adic unit,
@@ -277,7 +303,7 @@ after dividing by \(2\) and squaring. Finally \(p\) is odd, hence
 (-1)^{np^r}=(-1)^{np^{r-1}}=(-1)^n.
 ```
 
-Substituting (13)--(14) into (12) proves (11). \(\square\)
+Substituting (14)--(15) into (13) proves (12). \(\square\)
 
 This closes the full conjecture recorded on A333593, but it should be
 described as a new reduction to a published theorem rather than as a new
@@ -292,6 +318,7 @@ The dependency-free checker records:
 - 390 instances of Theorem 1, for \(1\le A\le6\), \(1\le B\le5\), and
   odd primes through \(43\);
 - 56 instances of Theorem 2, for \(1\le m\le6\) and primes through \(43\);
+- 343 instances of Coster's cubic baseline (9), for \(2\le q\le8\);
 - 584 checks of Theorem 3 and its reduction: 200 exact decompositions,
   128 final tower congruences, and 256 component congruences;
 - 128 instances of the open A365029 tower; and

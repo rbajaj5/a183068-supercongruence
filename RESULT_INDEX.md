@@ -72,7 +72,9 @@ Source-status labels are separate from proof status:
   \(p^{3r+2m+1}\) tower are the first two retained targets.
 - **Source status:** Named open problems.
 - **Status:** Computational: 145 exact tower checks, with each conjectured
-  exponent attained; no general proof claimed.
+  exponent attained; no general proof of the strengthened targets claimed.
+  Coster's theorem already gives the \(p^{3r}\) baseline for the complete
+  A375178 exponent family.
 - **Queue:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
 
