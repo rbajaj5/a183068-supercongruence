@@ -4,7 +4,7 @@
 
 Your paper,
 [*A Presentation of the Absolute Galois Group of
-$\mathbb Q_2$*](https://roed314.github.io/gq2/paper/paper.html),
+Q₂*](https://roed314.github.io/gq2/paper/paper.html),
 asks in Section 11 for explicit formulas for
 
 $$
@@ -22,10 +22,7 @@ provides a simple test case for the broader Fourier-inversion program.
 Write
 
 $$
-H\cong
-(C_2)^e\oplus
-\bigoplus_{j=1}^{h}C_{2^{\lambda_j}},
-\qquad \lambda_j\ge2.
+H\cong (C_2)^e\oplus\bigoplus_{j=1}^{h}C_{2^{\lambda_j}},\qquad \lambda_j\ge2.
 $$
 
 Put
@@ -43,27 +40,17 @@ $$
 Then
 
 $$
-\boxed{
-\left|\mathrm{Sur}(G_{\mathbb Q_2},H)\right|
-=
-q^2\,2^h
-\left(P_d+(2^e-1)4P_{d-1}\right).
-}
+\boxed{\left|\mathrm{Sur}(G_{\mathbb Q_2},H)\right|=q^2\,2^h\left(P_d+(2^e-1)4P_{d-1}\right)}
 $$
 
 Consequently the count vanishes when
 $\dim_{\mathbb F_2}(H/2H)>3$, as expected from the three-generator
-maximal pro-$2$ quotient.
+maximal pro-2 quotient.
 
 For cyclic targets this becomes
 
 $$
-\left|\mathrm{Sur}(G_{\mathbb Q_2},C_{2^m})\right|
-=
-\begin{cases}
-7,&m=1,\\
-3\cdot2^{2m-1},&m\ge2.
-\end{cases}
+\left|\mathrm{Sur}(G_{\mathbb Q_2},C_{2^m})\right|=\begin{cases}7,&m=1,\\3\cdot2^{2m-1},&m\ge2.\end{cases}
 $$
 
 After division by
@@ -71,10 +58,7 @@ $\left|\mathrm{Aut}(C_{2^m})\right|$, the number of cyclic
 $2^m$-extensions of $\mathbb Q_2$ is therefore
 
 $$
-\begin{cases}
-7,&m=1,\\
-3\cdot2^m,&m\ge2.
-\end{cases}
+\begin{cases}7,&m=1,\\3\cdot2^m,&m\ge2.\end{cases}
 $$
 
 The first value recovers the seven quadratic extensions of
@@ -85,10 +69,7 @@ $\mathbb Q_2$.
 Your marked Demushkin presentation gives
 
 $$
-D_0=
-\left\langle A,S,Y\ \middle|\
-A^2S^4[S,Y]=1
-\right\rangle_{\mathrm{pro}\text{-}2}.
+D_0=\left\langle A,S,Y\ \middle|\ A^2S^4[S,Y]=1\right\rangle_{\mathrm{pro}\text{-}2}.
 $$
 
 In the abelianization, writing
@@ -150,12 +131,7 @@ The first nonabelian boundary is now also explicit. If $D_{2^m}$ denotes
 the dihedral group of order $2^m$, then
 
 $$
-\left|\mathrm{Sur}(G_{\mathbb Q_2},D_{2^m})\right|
-=
-\begin{cases}
-144,&m=3,\\
-2^{2m+1},&m\ge4.
-\end{cases}
+\left|\mathrm{Sur}(G_{\mathbb Q_2},D_{2^m})\right|=\begin{cases}144,&m=3,\\2^{2m+1},&m\ge4.\end{cases}
 $$
 
 Thus there are $18$ $D_8$-extensions of $\mathbb Q_2$ and $16$
