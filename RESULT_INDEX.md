@@ -315,7 +315,9 @@ proof.
   governed by an explicit alternating additive-convolution matrix over
   \(\mathbb F_2\). Its rank and radical determine the complete plateaued
   Walsh spectrum, and finite Fourier inversion recovers every joint output
-  count exactly.
+  count exactly. The same rank profile gives exact collision probability and
+  chi-squared distance from uniform, together with support and
+  total-variation bounds.
 - **Status:** Complete finite-dimensional theorem with exhaustive exact
   checks; the general quadratic-form Fourier theorem is classical.
 - **Proof:** [Joint Walsh spectra for the dyadic defect](related-results/DyadicHypercubeJointSpectrum.md)

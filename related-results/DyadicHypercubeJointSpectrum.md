@@ -275,7 +275,126 @@ An immediate deviation bound is
 
 The exact formula (14), rather than this bound, is usually preferable.
 
-## 5. Why this is useful
+## 5. Exact collision and nonuniformity certificates
+
+Let $P_\Gamma(y)=N_\Gamma(y)/2^{2|A|}$ be the output distribution under
+uniform coefficient bits, and let $U(y)=2^{-m}$ be the uniform distribution
+on the output cube. We use
+
+```math
+\chi^2(P_\Gamma\|U)
+=
+\sum_y\frac{(P_\Gamma(y)-U(y))^2}{U(y)}.
+```
+
+### Theorem 3 (rank-profile identities)
+
+The collision probability is
+
+```math
+\begin{aligned}
+\mathrm{Col}(P_\Gamma)
+&=
+\sum_y P_\Gamma(y)^2\\
+&=
+2^{-m}
+\left(
+1+
+\sum_{\substack{\lambda\ne0\\r_\lambda=0}}
+2^{-2s_\lambda}
+\right).
+\end{aligned}
+\qquad\text{(17)}
+```
+
+Equivalently, for independent uniform coefficient arrays $w,w'$,
+
+```math
+\Pr\!\left(Q_\Gamma(w)=Q_\Gamma(w')\right)
+=
+\mathrm{Col}(P_\Gamma).
+\qquad\text{(18)}
+```
+
+The chi-squared distance from uniform is exactly
+
+```math
+\chi^2(P_\Gamma\|U)
+=
+\sum_{\substack{\lambda\ne0\\r_\lambda=0}}
+2^{-2s_\lambda}.
+\qquad\text{(19)}
+```
+
+Consequently,
+
+```math
+\left|\mathrm{supp}\,P_\Gamma\right|
+\ge
+\frac{2^m}
+{1+\displaystyle
+\sum_{\substack{\lambda\ne0\\r_\lambda=0}}
+2^{-2s_\lambda}}
+\qquad\text{(20)}
+```
+
+and
+
+```math
+\|P_\Gamma-U\|_{\mathrm{TV}}
+\le
+\frac12
+\left(
+\sum_{\substack{\lambda\ne0\\r_\lambda=0}}
+2^{-2s_\lambda}
+\right)^{1/2}.
+\qquad\text{(21)}
+```
+
+#### Proof
+
+The output Fourier transform is
+
+```math
+\widehat P_\Gamma(\lambda)
+=
+\sum_y P_\Gamma(y)(-1)^{\lambda\cdot y}
+=b_\lambda.
+```
+
+Parseval on $\mathbb F_2^m$ gives
+
+```math
+\sum_y P_\Gamma(y)^2
+=
+2^{-m}\sum_\lambda b_\lambda^2.
+```
+
+Now use Theorem 1: $b_0=1$, while every nonzero $b_\lambda$ is either
+zero or has square $2^{-2s_\lambda}$. This proves (17)--(19). The support
+bound (20) is Cauchy--Schwarz:
+
+```math
+1
+=
+\left(\sum_{y\in\mathrm{supp}\,P_\Gamma}P_\Gamma(y)\right)^2
+\le
+\left|\mathrm{supp}\,P_\Gamma\right|
+\sum_yP_\Gamma(y)^2.
+```
+
+Finally, Cauchy--Schwarz applied to
+$\frac12\sum_y|P_\Gamma(y)-2^{-m}|$ and (19) gives (21).
+$\square$
+
+Equations (19)--(21) are deterministic statements about the image of the
+uniform ambient coefficient cube. They do not assert pseudorandomness of
+the structured coefficient vectors produced by an Euler product.
+Unlike the pointwise count (14), these collision and distance certificates
+do not require the Gauss-sum signs $\sigma_\lambda$: ranks and radical
+restrictions alone determine them.
+
+## 6. Why this is useful
 
 Theorem 2 converts a simultaneous modulus-$4$ classification into finite
 linear algebra:
@@ -297,7 +416,7 @@ The matrix (4) is a finite additive-convolution matrix: its entry depends
 only on $\alpha+\beta$. That is the precise point where the hypercube
 analysis meets the additive structure of monomial exponents.
 
-## 6. Verification and provenance
+## 7. Verification and provenance
 
 The existing checker
 
@@ -311,8 +430,10 @@ now also:
   monomial supports;
 - checks the rank, radical, Walsh-support, and plateau-height assertions
   for every output functional;
-- compares (14) with exhaustive joint model counts; and
-- tests the uniform-output criterion.
+- compares (14) with exhaustive joint model counts;
+- tests the uniform-output criterion; and
+- compares the collision, chi-squared, support, and total-variation
+  consequences with exhaustive output distributions.
 
 The general rank theorem for quadratic Boolean functions is classical.
 See Ryan O'Donnell,

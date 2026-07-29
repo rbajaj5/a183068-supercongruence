@@ -168,7 +168,8 @@ For several output coefficients at once, the
 **[joint-spectrum theorem](related-results/DyadicHypercubeJointSpectrum.md)**
 reduces every XOR test to the rank and radical of an alternating
 additive-convolution matrix. Fourier inversion then gives the exact joint
-distribution of the finite defect map.
+distribution of the finite defect map. The same rank profile gives exact
+collision and chi-squared formulas, plus support and total-variation bounds.
 
 The resulting
 **[complete Gaussian local table](related-results/EulerProductGaussianLocalTable.md)**
