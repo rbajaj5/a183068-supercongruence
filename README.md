@@ -154,6 +154,15 @@ sizes with odd exponent multiplicity. This is a complete \(p=2\)
 replacement, not an attempt to infer the binary case from the odd-prime
 theorem.
 
+The resulting
+**[complete Gaussian local table](related-results/EulerProductGaussianLocalTable.md)**
+now places the same Euler-product tower at every local type in
+\(\mathbb Z[i]\): inert odd primes have the conjugating twist, split odd
+primes satisfy the congruence at both conjugate prime ideals, and the
+ramified prime has depth \((1+i)^2\) at the first lift and
+\((1+i)^{4r}\) thereafter. This is a specialization theorem, not a
+Gaussian-factorial claim.
+
 ## Attribution
 
 - Paul D. Hanna created A183068 in December 2010 as the central terms of

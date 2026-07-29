@@ -289,12 +289,97 @@ def check_restored_tower_stress() -> int:
     return checks
 
 
+def gaussian_uniformizer_valuation(value: tuple[int, int]) -> int:
+    """Return the (1+i)-adic valuation of a Gaussian integer."""
+
+    real, imag = value
+    if real == 0 and imag == 0:
+        return 10**9
+    answer = 0
+    while (real - imag) % 2 == 0:
+        real, imag = (real + imag) // 2, (imag - real) // 2
+        answer += 1
+    return answer
+
+
+def gaussian_prime_valuation(
+    value: tuple[int, int], prime: tuple[int, int]
+) -> int:
+    """Return the valuation at a Gaussian prime of rational-prime norm."""
+
+    real, imag = value
+    prime_real, prime_imag = prime
+    norm = prime_real**2 + prime_imag**2
+    answer = 0
+    while real != 0 or imag != 0:
+        numerator_real = real * prime_real + imag * prime_imag
+        numerator_imag = imag * prime_real - real * prime_imag
+        if numerator_real % norm or numerator_imag % norm:
+            break
+        real = numerator_real // norm
+        imag = numerator_imag // norm
+        answer += 1
+    return answer
+
+
+def check_gaussian_local_table() -> int:
+    checks = 0
+    rule = EULER.constant(-1)
+
+    for prime in (3, 7, 11):
+        for level in (1, 2):
+            difference = EULER.gaussian_difference(
+                prime, level, 1, 2, rule
+            )
+            actual = min(
+                EULER.valuation(difference[0], prime),
+                EULER.valuation(difference[1], prime),
+            )
+            assert actual >= 2 * level
+            checks += 1
+
+    split_primes = {
+        5: (2, 1),
+        13: (3, 2),
+        17: (4, 1),
+    }
+    for rational_prime, gaussian_prime in split_primes.items():
+        difference = EULER.gaussian_difference(
+            rational_prime, 1, 1, 2, rule
+        )
+        conjugate = (gaussian_prime[0], -gaussian_prime[1])
+        assert gaussian_prime_valuation(difference, gaussian_prime) >= 2
+        assert gaussian_prime_valuation(difference, conjugate) >= 2
+        checks += 2
+
+    for level in (1, 2, 3, 4):
+        difference = EULER.gaussian_difference(2, level, 1, 1, rule)
+        target = 2 if level == 1 else 4 * level
+        assert gaussian_uniformizer_valuation(difference) >= target
+        checks += 1
+
+    even_only = lambda part_size: int(part_size % 2 == 0)
+    for level in (2, 3, 4, 5):
+        difference = EULER.gaussian_difference(
+            2, level, 1, 1, even_only
+        )
+        assert gaussian_uniformizer_valuation(difference) == 4 * level
+        checks += 1
+
+    print(f"Gaussian local-table checks: {checks}")
+    return checks
+
+
 def main() -> None:
     universal = check_universal_quadratic_identity()
     euler = check_euler_defect_identity()
     tower = check_binary_tower()
     stress = check_restored_tower_stress()
-    print(f"total exact checks: {universal + euler + tower + stress}")
+    gaussian = check_gaussian_local_table()
+    print(
+        "total exact checks: "
+        f"{universal + euler + tower + stress + gaussian}"
+    )
 
 
 if __name__ == "__main__":
