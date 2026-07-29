@@ -34,6 +34,11 @@ Therefore the first group contributes zero and the second group is exactly the
 sum defining $a(np^{r-1})$. That is the whole argument. The detailed proof
 below verifies the carry count, the scaling exponent, and the binary edge case.
 
+The binary edge case is governed by the repository-wide
+[dyadic audit policy](DYADIC_POLICY.md). In particular, the odd-prime
+scaling theorem is not being applied blindly at \(2\): its exponent loss,
+possible sign, and the boundary \(r=1\) are discharged separately below.
+
 ## Why multinomial carries appear
 
 The summand can be rewritten as one multinomial coefficient:

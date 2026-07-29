@@ -41,6 +41,9 @@ proof all recognize the same useful decomposition:
 
 That recognition is correct. The mathematical work lies in making steps
 2--3 uniform in \(r\) and valid at the exceptional primes \(2\) and \(3\).
+The treatment of \(2\) also instantiates the repository-wide
+[dyadic audit policy](DYADIC_POLICY.md): normalization, sign, exponent loss,
+and the first lifting level are separate proof obligations.
 
 ## 2. Completing the digit-counting route
 
