@@ -109,6 +109,15 @@ contacted about the proposed proof on July 24, 2026.
    with $p\mid k$ with the preceding $p$-adic level.
 4. A separate parity argument closes the only deficient case, $p=2,r=1$.
 
+The repository-wide
+**[dyadic audit policy](DYADIC_POLICY.md)** explains why the prime \(2\)
+cannot be treated as a routine substitution into an odd-prime proof. It
+requires every all-prime claim to record its binary valuation normalization,
+sign, first-level boundary, cancellation mechanism, and proof status. The
+policy also distinguishes the A183068 parity repair from the ramified
+Gaussian prime \(1+i\), the unresolved binary \(s_{18}\) reduction, and the
+architectural Roe--Turturean comparison.
+
 This is an ordinary mathematical proof. A future Lean development would be a
 separate verification project, not a prerequisite for reading the argument.
 
@@ -146,7 +155,9 @@ corrected. Publication here follows six rules:
    specialists have been checked; and
 6. each research result is identified as a **named open problem**, an
    **explicit source direction**, or a **structural follow-on**, so a new
-   theorem is not quietly presented as a solved published conjecture.
+   theorem is not quietly presented as a solved published conjecture; and
+7. an all-prime theorem is not called complete until its \(p=2\) case has
+   passed the [dyadic audit checklist](DYADIC_POLICY.md).
 
 ## Public q-calculus follow-on
 
@@ -295,6 +306,8 @@ To reproduce every computation in the expanded repository, run
   share one proof note.
 - [RANKINGS.md](RANKINGS.md): the public multi-criteria ranking of every
   claim-level result and open target.
+- [DYADIC_POLICY.md](DYADIC_POLICY.md): the repository-wide rule for
+  binary valuations, signs, ramification, boundary levels, and status.
 - [PROOF.md](PROOF.md): the complete proof and references.
 - [verification/verify_a183068.py](verification/verify_a183068.py): a small
   exact-integer regression check.

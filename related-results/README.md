@@ -20,6 +20,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 
 | Order | Note | Connection to A183068 | Status |
 | ---: | --- | --- | --- |
+| 0 | [Repository-wide dyadic audit policy](../DYADIC_POLICY.md) | Defines what must be checked before any all-prime or ramified theorem is called complete | Governing proof and ranking policy |
 | 1 | [Landau-depth synthesis](LandauDepthSupercongruenceSynthesis.md) | Extracts the A183068 carry-and-scaling proof into a computable theorem; contains an infinite all-prime $p^{2r}$ family and an all-prime $p^{3r}$ subfamily | Complete proof candidate; internal recheck passed, independent review pending |
 | 1A | [q-calculus and cyclotomic supercongruences](QCalculusCyclotomicSupercongruences.md) | Turns Landau depth into exact root-of-unity multiplicity; gives a square q-lift of A183068 and an explicit corrected cubic theorem for depth-three families | Complete deductions from Clark and Straub; exact polynomial checks; priority preliminary |
 | 1B | [Peter Bala's OEIS queue](BalaOeisSupercongruenceQueue.md) | Proves the A365029 boundary family and complete A375178 prime-level odd-power family; closes A333593 via Coster and Jacobsthal--Kazandzidis; isolates Coster's cubic baseline beneath the stronger A375178 target | Two complete elementary proofs, published-theorem reductions, and 1,518 exact checks; priority preliminary |
@@ -110,4 +111,9 @@ Inclusion here means that a result is sufficiently coherent for Paul and other
 specialists to inspect. It does not promote an unchecked candidate to a
 theorem. Corrections, prior-art references, and failed cases should remain in
 the repository so that the development history is auditable.
+
+For all-prime statements, status also depends on the
+[dyadic audit policy](../DYADIC_POLICY.md). An odd-prime proof with an open
+\(p=2\) step remains a reduction or target; a ramified \(1+i\) theorem must
+state its valuation normalization separately.
 

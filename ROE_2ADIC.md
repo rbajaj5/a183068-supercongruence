@@ -4,6 +4,11 @@ This is the public landing page for the $2$-adic project prompted by David
 Roe and David Turturean's
 [*A Presentation of the Absolute Galois Group of $\mathbb Q_2$*][RT].
 
+Its role inside the larger repository is governed by the
+[dyadic audit policy](DYADIC_POLICY.md). The Roe--Turturean work is a
+structural example of why binary lifting needs additional data; it is not a
+source for the A183068 multinomial scaling lemma.
+
 The detailed proofs and checkers are:
 
 - [orientation lifts, Dehn twists, and affine symmetry](related-results/GQ2OrientationLifts.md);

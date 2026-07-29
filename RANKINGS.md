@@ -22,6 +22,16 @@ review. Close scores should be read as the same tier. Proof status remains
 controlling: a high-value conjectural target is not thereby promoted to a
 theorem.
 
+## Dyadic maturity rule
+
+The repository's [dyadic audit policy](DYADIC_POLICY.md) is part of the
+scoring rubric. An all-prime claim cannot receive complete-proof maturity
+while its \(p=2\) transfer, sign, ramification, or first-level boundary
+remains unresolved. A binary exception is recorded as proof cost even when
+every odd-prime case is complete. Conversely, a separate ramified
+\(1+i\)-argument is scored as substantive work rather than as routine
+bookkeeping.
+
 ## Completed drafts, theorems, and deductions
 
 | Rank | ID and result | Math-community value | Deployment value | Novelty confidence | Breadth | Maturity | Cost remaining | Mathematical status |

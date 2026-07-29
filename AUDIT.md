@@ -3,6 +3,12 @@
 This file records machine-assisted audits of the exact public proof text.
 An audit is evidence about a draft, not peer review or formal verification.
 
+All future all-prime audits also apply the repository's
+[dyadic audit policy](DYADIC_POLICY.md). A report that checks only odd primes
+does not certify an all-prime theorem; it must identify the binary
+normalization, scaling sign, first-level boundary, and any required
+cancellation.
+
 ## Exact-text audit, July 26, 2026
 
 The second audit reported **no proof-level errors** and independently checked:

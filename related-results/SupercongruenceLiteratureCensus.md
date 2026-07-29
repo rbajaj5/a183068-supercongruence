@@ -38,6 +38,12 @@ The working census therefore uses a second pass:
 Exact-formula searches reduce false novelty claims, but they do not establish
 priority.  A negative search result is recorded only as "no proof located."
 
+The second pass also applies the repository's
+[dyadic audit policy](../DYADIC_POLICY.md). A theorem cited for \(p\ge5\), or
+for odd primes, does not close an all-prime OEIS statement. The \(p=2\)
+normalization, sign, first lifting level, and any ramification must be matched
+separately.
+
 ## 2. The theorem-routing table
 
 | Mechanism | Published starting points | Bala/OEIS families it should be checked against | Boundary |
@@ -51,6 +57,21 @@ priority.  A negative search result is recorded only as "no proof located."
 | \(p\)-adic gamma and hypergeometric transformations | Long--Ramakrishna and subsequent truncated-hypergeometric work | Prime-level and truncated hypergeometric conjectures, including enhanced Apéry combinations | A gamma quotient is a representation, not the needed valuation estimate by itself. |
 | Creative \(q\)-microscoping | Guo--Zudilin and later Dwork-type \(q\)-congruences | Proposed cyclotomic lifts of binomial and hypergeometric towers | A suitable \(q\)-analogue must be proved. The most obvious multilevel \(q\)-lift can be false even when the integer congruence is true. |
 | Orbit counting and CRT | Kallat's proof of A028342 | Exponential generating functions with a direct labeled-combinatorial model | This is a distinct mechanism from factorial-ratio scaling and should not be forced onto truncated binomial sums without an actual action. |
+
+### Dyadic routing overlay
+
+Every row in the table has a binary boundary:
+
+- scaling theorems may lose powers or return a sign rather than \(1\);
+- harmonic and gamma expansions can have exceptional denominators at \(2\);
+- a Dwork theorem stated for odd \(p\) does not silently include \(2\);
+- an even-order \(q\)-specialization can fail although its odd-order analogue
+  holds; and
+- over \(\mathbb Z[i]\), the prime above \(2\) is the ramified uniformizer
+  \(1+i\), not an inert or split odd prime.
+
+The census therefore records “all odd primes proved” and “all primes proved”
+as different statuses.
 
 ## 3. Statements already removed from the open queue
 
