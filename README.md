@@ -56,8 +56,10 @@ follow underneath for verification.
 the digit-counting, Morita \(p\)-adic gamma, block-decomposition, and
 creative-microscoping routes suggested in the AI material forwarded after the
 initial correspondence. It records which suggestions become the present
-proof, which merely repackage its scaling lemma, and which q-theoretic
-extension remains open.
+proof and which merely repackage its scaling lemma. The creative-microscoping
+discussion is closed: the valid cyclotomic vanishing argument is proved, and
+the tempting all-level one-variable \(q\)-promotion is ruled out by an exact
+counterexample.
 
 ## Attribution
 
