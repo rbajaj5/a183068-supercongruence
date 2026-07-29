@@ -403,6 +403,64 @@ def check_joint_spectra() -> int:
         assert uniform_by_bias == (len(count_values) == 1)
         checks += 1
 
+        total_points = 2**dimension
+        uniform_mass = Fraction(1, 2**output_dimension)
+        probabilities = [
+            Fraction(actual_counts.get(output, 0), total_points)
+            for output in range(2**output_dimension)
+        ]
+        collision = sum(
+            (probability * probability for probability in probabilities),
+            Fraction(0),
+        )
+        spectral_collision = Fraction(
+            sum((bias * bias for bias in biases), Fraction(0)),
+            2**output_dimension,
+        )
+        assert collision == spectral_collision
+
+        chi_squared = (
+            2**output_dimension
+            * sum(
+                (
+                    (probability - uniform_mass) ** 2
+                    for probability in probabilities
+                ),
+                Fraction(0),
+            )
+        )
+        spectral_chi_squared = sum(
+            (bias * bias for bias in biases[1:]),
+            Fraction(0),
+        )
+        assert chi_squared == spectral_chi_squared
+
+        support_size = sum(probability > 0 for probability in probabilities)
+        assert support_size * collision >= 1
+
+        total_variation = Fraction(
+            sum(
+                (
+                    abs(probability - uniform_mass)
+                    for probability in probabilities
+                ),
+                Fraction(0),
+            ),
+            2,
+        )
+        assert 4 * total_variation * total_variation <= chi_squared
+
+        absolute_bias_sum = sum(
+            (abs(bias) for bias in biases[1:]),
+            Fraction(0),
+        )
+        assert all(
+            abs(probability - uniform_mass)
+            <= uniform_mass * absolute_bias_sum
+            for probability in probabilities
+        )
+        checks += 5 + len(probabilities)
+
     print(f"joint-spectrum and model-count checks: {checks}")
     return checks
 
