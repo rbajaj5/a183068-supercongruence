@@ -37,6 +37,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 3 | [p-adic Arzelà--Ascoli framework](PadicArzelaAscoliSupercongruenceTowers.md) | Proves the vertical limit supplied by A183068, uses the Banach contraction $x\mapsto px$ to rule out a global continuous interpolation, and proves uniform quadratic contraction of every normalized defect at zero | Complete elementary framework and obstruction; unit-shell estimate open |
 | 4 | [Gaussian Frobenius twists](GaussianFrobeniusTwists.md) | Shows that discard-and-rescale proofs lift to roots-of-unity weights; specializes A183068 to a Gaussian split/inert congruence | Complete elementary deduction; priority unchecked |
 | 4J | [Finite lattice-walk Frobenius congruences](LatticeWalkFrobeniusCongruences.md) | Gives the exact trace-sequence bridge from finite transfer matrices to Gaussian and Eisenstein split/inert/ramified congruences; separates finite-width SAW models from the conjectural SLE limit | Complete elementary theorem and 174 exact checks; unramified part is standard, ramified priority not established |
+| 4J-N | [Walsh-chaos congruences for planar noise](BlackNoiseWalshCongruences.md) | Turns color-reversal symmetry into a \(3r-2\) Gaussian-prime congruence for finite percolation and coalescing-walk noise-stability polynomials; separates this finite identity from black-noise scaling limits | Complete elementary theorem and 3,890 exact checks; priority provisional |
 | 4B | [Binomial-power polynomial Frobenius theorem](BinomialPowerFrobeniusTheorem.md) | Proves the coefficientwise \(X\mapsto X^p\) tower for every exponent \(m\ge3\), including the multiplicity bonus \(v_p(m)\) and all Gaussian local cases | Complete elementary deduction; priority not established |
 | 4C | [Quadratic A005259/A333592-family polynomial towers](QuadraticGaussianQueueTheorem.md) | Closes the two remaining Gaussian-pilot targets at coefficientwise exponent \(2r\) and covers every positive parameter pair in the broader A333592 family | Complete classical-scaling corollary; not the stronger A333592 cubic conjecture |
 | 4D | [Cyclotomic coefficient-pair theorem](CyclotomicCoefficientPairTheorem.md) | Proves the A228960 and A350383 \(p^{2r}\) conjectures in coefficientwise form and specializes them at \(X=i\) | Complete elementary proof candidate; priority search preliminary |
@@ -117,6 +118,7 @@ The individual correspondence is:
 | Cooper level 11 | `verification/related/verify_cooper_level11.py` |
 | Gaussian Frobenius twists | `verification/related/verify_gaussian_twists.py` |
 | Finite lattice-walk Frobenius congruences | `verification/related/verify_lattice_walk_frobenius.py` |
+| Planar-noise Walsh congruences | `verification/related/verify_black_noise_chaos_filter.py` |
 | Bala Gaussian-twist pilot | `verification/related/verify_bala_gaussian_twist_pilot.py` |
 | Binomial-power polynomial theorem | `verification/related/verify_binomial_power_frobenius.py` |
 | Quadratic A005259/A333592 towers | `verification/related/verify_quadratic_gaussian_queue.py` |
