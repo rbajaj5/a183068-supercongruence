@@ -99,6 +99,22 @@ problems, and 5 derived sequences. Its
 shows an important boundary: an untwisted cubic supercongruence need not
 remain cubic after an \(i^k\)-twist.
 
+The pilot's strongest target is now a corollary of the
+**[binomial-power polynomial theorem](related-results/BinomialPowerFrobeniusTheorem.md)**,
+which shows for every \(m\ge3\) that
+
+```math
+P_{np^r}^{(m)}(X)\equiv P_{np^{r-1}}^{(m)}(X^p),
+\qquad
+P_N^{(m)}(X)=\sum_k\binom Nk^mX^k.
+```
+
+The exponent is
+\(3r-\varepsilon_p+v_p(m)\), where the usual scaling loss is \(2\) at
+\(p=2\), \(1\) at \(p=3\), and \(0\) for \(p\ge5\).  Its Gaussian
+specialization handles split, inert, and ramified primes; the proof is an
+elementary scaling deduction and makes no priority claim.
+
 ## Attribution
 
 - Paul D. Hanna created A183068 in December 2010 as the central terms of
