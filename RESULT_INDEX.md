@@ -33,6 +33,38 @@ Source-status labels are separate from proof status:
 - **Proof:** [PROOF.md](PROOF.md)
 - **Exact checker:** [`verify_a183068.py`](verification/verify_a183068.py)
 
+## Named OEIS follow-ons
+
+### BALA-BOUNDARY — A365029 boundary family
+
+- **Claim:** For every odd prime \(p\) and positive integers \(A,B\), the
+  two-parameter A365029 family satisfies
+  \(C_{A,B}(p-1)\equiv1\pmod {p^{A+B}}\). The OEIS conjecture is the case
+  \((A,B)=(2,1)\).
+- **Source status:** Named open problem, strengthened.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#2-a-stronger-boundary-theorem-for-a365029)
+- **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
+
+### BALA-ODD — A375178 prime-level odd-power family
+
+- **Claim:** For \(m\ge1\) and primes \(p\ge2m+5\),
+  \(b_m(p)\equiv1\pmod {p^{2m+3}}\).
+- **Source status:** Named open problem.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#3-the-full-prime-level-odd-power-theorem-for-a375178)
+- **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
+
+### BALA-TOWERS — first remaining Bala tower queue
+
+- **Claim:** The A333593 and A365029 \(p^{3r}\) towers and the A375178-family
+  \(p^{3r+2m+1}\) tower are the first three retained targets.
+- **Source status:** Named open problems.
+- **Status:** Computational: 273 exact tower checks, with each conjectured
+  exponent attained; no general proof claimed.
+- **Queue:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md)
+- **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
+
 ## Direct generalizations
 
 ### LD-2 — Landau-depth family
