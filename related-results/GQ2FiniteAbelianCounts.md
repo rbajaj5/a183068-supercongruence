@@ -26,10 +26,7 @@ Every homomorphism from $G_{\mathbb Q_2}$ to a finite $2$-group factors
 through its maximal pro-$2$ quotient
 
 $$
-D_0=
-\left\langle A,S,Y\ \middle|\
-A^2S^4[S,Y]=1
-\right\rangle_{\mathrm{pro}\text{-}2}.
+D_0= \left\langle A,S,Y\ \middle|\ A^2S^4[S,Y]=1 \right\rangle_{\mathrm{pro}\text{-}2}.
 $$
 
 After abelianization the relation is
@@ -47,17 +44,14 @@ $$
 gives
 
 $$
-D_0^{\mathrm{ab}}
-\cong C_2\oplus\mathbb Z_2\oplus\mathbb Z_2,
-\tag{1}
+D_0^{\mathrm{ab}} \cong C_2\oplus\mathbb Z_2\oplus\mathbb Z_2, \tag{1}
 $$
 
 with coordinates $t,\bar S,\bar Y$. Thus a homomorphism to a finite
 abelian $2$-group $H$ is a triple
 
 $$
-(z,x,y)\in H[2]\times H\times H,
-\tag{2}
+(z,x,y)\in H[2]\times H\times H, \tag{2}
 $$
 
 and it is surjective exactly when $z,x,y$ generate $H$.
@@ -67,29 +61,19 @@ and it is surjective exactly when $z,x,y$ generate $H$.
 Write the invariant-factor decomposition in the form
 
 $$
-H\cong
-(C_2)^e\oplus
-\bigoplus_{j=1}^{h}C_{2^{\lambda_j}},
-\qquad \lambda_j\ge2,
-\tag{3}
+H\cong (C_2)^e\oplus \bigoplus_{j=1}^{h}C_{2^{\lambda_j}}, \qquad \lambda_j\ge2, \tag{3}
 $$
 
 and put
 
 $$
-d=e+h=\dim_{\mathbb F_2}(H/2H),\qquad q=|2H|.
-\tag{4}
+d=e+h=\dim_{\mathbb F_2}(H/2H),\qquad q=|2H|. \tag{4}
 $$
 
 For $j\ge0$, define
 
 $$
-P_j=
-\begin{cases}
-\displaystyle\prod_{i=0}^{j-1}(4-2^i),&0\le j\le2,\\
-0,&j>2.
-\end{cases}
-\tag{5}
+P_j= \begin{cases} \displaystyle\prod_{i=0}^{j-1}(4-2^i),&0\le j\le2,\\ 0,&j>2. \end{cases} \tag{5}
 $$
 
 Thus $P_0=1$, $P_1=3$, and $P_2=6$.
@@ -99,15 +83,7 @@ Thus $P_0=1$, $P_1=3$, and $P_2=6$.
 For every nontrivial finite abelian $2$-group $H$,
 
 $$
-\boxed{
-\left|\mathrm{Sur}(G_{\mathbb Q_2},H)\right|
-=
-q^2\,2^h
-\left(
-P_d+(2^e-1)\,4P_{d-1}
-\right).
-}
-\tag{6}
+\boxed{ \left|\mathrm{Sur}(G_{\mathbb Q_2},H)\right| = q^2\,2^h \left( P_d+(2^e-1)\,4P_{d-1} \right). } \tag{6}
 $$
 
 Here the second summand inside the parentheses is absent when $e=0$.
@@ -119,8 +95,7 @@ For a finite $2$-group, a set generates $H$ if and only if its image
 generates the Frattini quotient
 
 $$
-V=H/2H\cong\mathbb F_2^d.
-\tag{7}
+V=H/2H\cong\mathbb F_2^d. \tag{7}
 $$
 
 The reduction map
@@ -136,10 +111,7 @@ Each ordered pair in $V^2$ has $q^2$ lifts to $H^2$.
 It remains to count
 
 $$
-N(d,e)=
-\#\{(\bar x,\bar y,\bar z)\in V^2\times E:
-\langle\bar x,\bar y,\bar z\rangle=V\}.
-\tag{8}
+N(d,e)= \left|\{(\bar x,\bar y,\bar z)\in V^2\times E: \langle\bar x,\bar y,\bar z\rangle=V\}\right|. \tag{8}
 $$
 
 If $\bar z=0$, the ordered pair $(\bar x,\bar y)$ must span $V$.
@@ -151,8 +123,7 @@ $P_{d-1}$ spanning ordered pairs in that quotient, and each pair has
 four lifts to $V^2$. Therefore
 
 $$
-N(d,e)=P_d+(2^e-1)\,4P_{d-1}.
-\tag{9}
+N(d,e)=P_d+(2^e-1)\,4P_{d-1}. \tag{9}
 $$
 
 Multiplying (9) by the lift multiplicity $q^2 2^h$ proves (6).
@@ -163,13 +134,7 @@ $\square$
 For a cyclic target,
 
 $$
-\left|\mathrm{Sur}(G_{\mathbb Q_2},C_{2^m})\right|
-=
-\begin{cases}
-7,&m=1,\\
-3\cdot2^{2m-1},&m\ge2.
-\end{cases}
-\tag{10}
+\left|\mathrm{Sur}(G_{\mathbb Q_2},C_{2^m})\right| = \begin{cases} 7,&m=1,\\ 3\cdot2^{2m-1},&m\ge2. \end{cases} \tag{10}
 $$
 
 Dividing by
@@ -177,15 +142,7 @@ $\left|\mathrm{Aut}(C_{2^m})\right|=\varphi(2^m)$ gives the number
 of cyclic $2^m$-extensions of $\mathbb Q_2$:
 
 $$
-\boxed{
-\#\{C_{2^m}\text{-extensions of }\mathbb Q_2\}
-=
-\begin{cases}
-7,&m=1,\\
-3\cdot2^m,&m\ge2.
-\end{cases}
-}
-\tag{11}
+\boxed{ \left|\{C_{2^m}\text{-extensions of }\mathbb Q_2\}\right| = \begin{cases} 7,&m=1,\\ 3\cdot2^m,&m\ge2. \end{cases} } \tag{11}
 $$
 
 The first value recovers the seven quadratic extensions of
@@ -194,11 +151,7 @@ $\mathbb Q_2$.
 For elementary abelian targets,
 
 $$
-\left|\mathrm{Sur}(G_{\mathbb Q_2},(C_2)^d)\right|
-=
-\prod_{i=0}^{d-1}(8-2^i)
-\qquad(1\le d\le3),
-\tag{12}
+\left|\mathrm{Sur}(G_{\mathbb Q_2},(C_2)^d)\right| = \prod_{i=0}^{d-1}(8-2^i) \qquad(1\le d\le3), \tag{12}
 $$
 
 giving $7,42,168$ for $d=1,2,3$, and zero for $d>3$.
