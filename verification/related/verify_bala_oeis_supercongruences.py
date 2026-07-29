@@ -1,8 +1,8 @@
 """Exact checks for the Peter Bala OEIS supercongruence queue.
 
-Two families in BalaOeisSupercongruenceQueue.md are proved there.  The
-remaining tower checks in this file are explicitly computational evidence,
-not proofs.
+Three results in BalaOeisSupercongruenceQueue.md are proved or reduced there.
+The remaining A365029 and A375178 tower checks in this file are explicitly
+computational evidence, not proofs.
 """
 
 from functools import lru_cache
@@ -64,6 +64,20 @@ def a333593(n: int) -> int:
     )
 
 
+@lru_cache(maxsize=None)
+def coster_signed_apery(n: int) -> int:
+    """The generalized Apéry sum w_(0,2,-1)(n) used by Coster."""
+    return sum(
+        (-1) ** k * generalized_binomial(n + k, k) ** 2
+        for k in range(n + 1)
+    )
+
+
+def a333593_central_tail(n: int) -> int:
+    """The final summand separated from A333593."""
+    return generalized_binomial(2 * n - 1, n) ** 2
+
+
 def check_a365029_boundary_theorem() -> tuple[int, int]:
     """Check a_{A,B}(p-1)=1 mod p^(A+B)."""
     checks = 0
@@ -111,25 +125,60 @@ def check_a375178_prime_level_theorem() -> tuple[int, int]:
     return checks, minimum_slack
 
 
-def check_a333593_tower_evidence() -> tuple[int, int]:
-    """Check Bala's still-open A333593 p^(3r) tower."""
-    checks = 0
+def check_a333593_coster_reduction() -> tuple[int, int]:
+    """Check the exact decomposition and both published tower components."""
+    identity_checks = 0
+    for n in range(1, 201):
+        expected = (
+            (-1) ** n * coster_signed_apery(n - 1)
+            + a333593_central_tail(n)
+        )
+        assert a333593(n) == expected, n
+        identity_checks += 1
+
+    tower_checks = 0
     minimum_slack = 10**9
     for prime in TOWER_PRIMES:
         for level in range(1, 4):
             for n in range(1, 16):
                 if n * prime**level > 500:
                     continue
-                difference = a333593(n * prime**level) - a333593(
-                    n * prime ** (level - 1)
+                upper = n * prime**level
+                lower = n * prime ** (level - 1)
+                target = 3 * level
+
+                apery_difference = (
+                    coster_signed_apery(upper - 1)
+                    - coster_signed_apery(lower - 1)
                 )
-                slack = valuation(difference, prime) - 3 * level
+                central_difference = (
+                    a333593_central_tail(upper)
+                    - a333593_central_tail(lower)
+                )
+                final_difference = a333593(upper) - a333593(lower)
+
+                assert valuation(apery_difference, prime) >= target, (
+                    "Coster component",
+                    prime,
+                    level,
+                    n,
+                )
+                assert valuation(central_difference, prime) >= target, (
+                    "central component",
+                    prime,
+                    level,
+                    n,
+                )
+                slack = valuation(final_difference, prime) - target
                 assert slack >= 0, (prime, level, n, slack)
                 minimum_slack = min(minimum_slack, slack)
-                checks += 1
-    assert checks == 128
+                tower_checks += 1
+    assert identity_checks == 200
+    assert tower_checks == 128
     assert minimum_slack == 0
-    return checks, minimum_slack
+    assertion_checks = identity_checks + 3 * tower_checks
+    assert assertion_checks == 584
+    return assertion_checks, minimum_slack
 
 
 def check_a365029_tower_evidence() -> tuple[int, int]:
@@ -180,7 +229,7 @@ def check_a375178_tower_evidence() -> tuple[int, int]:
 def main() -> None:
     boundary_checks, boundary_slack = check_a365029_boundary_theorem()
     prime_checks, prime_slack = check_a375178_prime_level_theorem()
-    a333_checks, a333_slack = check_a333593_tower_evidence()
+    a333_checks, a333_slack = check_a333593_coster_reduction()
     a365_checks, a365_slack = check_a365029_tower_evidence()
     odd_checks, odd_slack = check_a375178_tower_evidence()
 
@@ -193,7 +242,7 @@ def main() -> None:
         f"{prime_checks} (minimum slack {prime_slack})"
     )
     print(
-        "open A333593 tower evidence: "
+        "proved A333593 Coster-reduction checks: "
         f"{a333_checks} (minimum slack {a333_slack})"
     )
     print(

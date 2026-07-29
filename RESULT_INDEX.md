@@ -55,12 +55,23 @@ Source-status labels are separate from proof status:
 - **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#3-the-full-prime-level-odd-power-theorem-for-a375178)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
 
-### BALA-TOWERS — first remaining Bala tower queue
+### A333-COSTER — complete A333593 tower
 
-- **Claim:** The A333593 and A365029 \(p^{3r}\) towers and the A375178-family
-  \(p^{3r+2m+1}\) tower are the first three retained targets.
+- **Claim:** For every prime \(p\ge5\) and positive integers \(n,r\),
+  \(A(np^r)\equiv A(np^{r-1})\pmod {p^{3r}}\) for A333593.
+- **Source status:** Named open problem.
+- **Status:** Complete reduction to Coster's published generalized Apéry
+  theorem and the Jacobsthal--Kazandzidis binomial congruence; priority of
+  the reduction is preliminary.
+- **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#4-the-a333593-tower-is-a-coster-corollary)
+- **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
+
+### BALA-TOWERS — remaining first Bala tower queue
+
+- **Claim:** The A365029 \(p^{3r}\) tower and the A375178-family
+  \(p^{3r+2m+1}\) tower are the first two retained targets.
 - **Source status:** Named open problems.
-- **Status:** Computational: 273 exact tower checks, with each conjectured
+- **Status:** Computational: 145 exact tower checks, with each conjectured
   exponent attained; no general proof claimed.
 - **Queue:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
