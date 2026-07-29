@@ -118,7 +118,7 @@ $m\ge3$:
 
 The four patterns with $\alpha=1$ detect the central square.
 
-### Pattern $(1,0,0)$
+### Pattern 100
 
 Here the relation is
 
@@ -130,7 +130,7 @@ $$\frac N2+4s=0\pmod N. \tag{10}$$
 - If $N\ge16$, equation (10) has four solutions for $s$, all even.
   Generation then requires $y$ odd, giving $N\cdot4\cdot(N/2)=2N^2$.
 
-### Patterns $(1,0,1)$ and $(1,1,0)$
+### Patterns 101 and 110
 
 For $(1,0,1)$ the relation is
 
@@ -141,7 +141,7 @@ $2N^2$. When $N\ge8$ they are even, and generation requires $a$ and $y$
 to have opposite parity, so the count is $N^2$. The pattern $(1,1,0)$ is
 identical with $s$ and $y$ exchanged.
 
-### Pattern $(1,1,1)$
+### Pattern 111
 
 Now
 
@@ -234,11 +234,11 @@ python verification/related/verify_gq2_quaternion_counts.py
 ## References
 
 - D. Roe and D. Turturean,
-  [*A Presentation of the Absolute Galois Group of
-  $\mathbb Q_2$*][RT], especially Proposition 1.1 and Section 11.
+  [*A Presentation of the Absolute Galois Group of Q₂*][RT], especially
+  Proposition 1.1 and Section 11.
 - M. Yamagishi,
-  [*On the number of Galois $p$-extensions of a local
-  field*][Yamagishi], Proc. Amer. Math. Soc. 123 (1995), 2373--2380.
+  [*On the number of Galois p-extensions of a local field*][Yamagishi],
+  Proc. Amer. Math. Soc. 123 (1995), 2373--2380.
 - C. Awtrey, J. Beuerle, and J. Schrader,
-  [*Constructing Galois $2$-extensions of the $2$-adic
-  Numbers*][ABS], North Carolina J. Math. Stat. 3 (2017).
+  [*Constructing Galois 2-extensions of the 2-adic Numbers*][ABS],
+  North Carolina J. Math. Stat. 3 (2017).
