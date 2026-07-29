@@ -22,14 +22,16 @@ The detailed proofs and checkers are:
 - [the mixed dyadic obstruction in the affine shadow](related-results/DyadicAffineMixedCohomology.md);
 - [closed surjection counts for finite abelian \(2\)-targets](related-results/GQ2FiniteAbelianCounts.md);
 - [exact surjection counts for dihedral \(2\)-groups](related-results/GQ2DihedralCounts.md);
+- [exact surjection counts for generalized quaternion \(2\)-groups](related-results/GQ2QuaternionCounts.md);
 - [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py);
 - [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py);
 - [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py);
 - [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py);
 - [`verify_dyadic_dehn_twist_conjugacy.py`](verification/related/verify_dyadic_dehn_twist_conjugacy.py);
 - [`verify_dyadic_affine_mixed_cohomology.py`](verification/related/verify_dyadic_affine_mixed_cohomology.py);
-- [`verify_gq2_finite_abelian_counts.py`](verification/related/verify_gq2_finite_abelian_counts.py); and
-- [`verify_gq2_dihedral_counts.py`](verification/related/verify_gq2_dihedral_counts.py).
+- [`verify_gq2_finite_abelian_counts.py`](verification/related/verify_gq2_finite_abelian_counts.py);
+- [`verify_gq2_dihedral_counts.py`](verification/related/verify_gq2_dihedral_counts.py); and
+- [`verify_gq2_quaternion_counts.py`](verification/related/verify_gq2_quaternion_counts.py).
 
 [RT]: https://roed314.github.io/gq2/paper.pdf
 [Gropper]: https://arxiv.org/abs/2303.04309
@@ -314,6 +316,22 @@ and one first-level pattern distinguishes \(D_8\) from the stable tower.
 This is the first finite-target count in the packet where the commutator
 layer is visible.
 
+### 12. The generalized-quaternion boundary
+
+For the generalized quaternion group \(Q_{2^m}\) of order \(2^m\), the
+same coordinate method gives:
+
+| Target | Surjections | Extension classes |
+| --- | ---: | ---: |
+| \(Q_8\) | \(144\) | \(6\) |
+| \(Q_{16}\) | \(640\) | \(20\) |
+| \(Q_{2^m}\), \(m\ge5\) | \(2^{2m+1}\) | \(16\) |
+
+The central square of a quaternion reflection changes the first two
+relator fibers; from \(Q_{32}\) onward the count stabilizes. The
+[separate proof](related-results/GQ2QuaternionCounts.md) contains the
+seven-pattern calculation and the literature boundary.
+
 ## Source boundary
 
 | Item | Status |
@@ -333,6 +351,7 @@ layer is visible.
 | Mixed \(H^2_{\mathrm{cont}}\) calculation and explicit extension | Standard continuous-cohomology calculation completed here; no novelty claim |
 | Finite abelian \(2\)-target surjection formula | Elementary consequence of the source abelianization; solved special case of Section 11, item 4; no novelty claim |
 | Dihedral \(2\)-target surjection formula | Direct relator calculation solving the first nonabelian family in Section 11, item 4; no novelty claim |
+| Generalized-quaternion \(2\)-target surjection formula | Direct relator calculation with two exceptional bottom levels; published enumeration exists, so this is a new derivation and certificate rather than a priority claim |
 
 This project does not claim to correct Roe--Turturean's presentation theorem.
 It does not claim a new A183068 supercongruence. Literature novelty is not
@@ -380,6 +399,10 @@ The dihedral checker evaluates 266,752 exact relator-coordinate identities,
 exhaustively enumerates every triple through \(D_{128}\), and checks the
 closed extension counts through \(D_{2^{16}}\).
 
+The generalized-quaternion checker evaluates another 266,752 exact
+relator-coordinate identities, exhaustively enumerates every triple through
+\(Q_{128}\), and checks the closed extension counts through \(Q_{2^{16}}\).
+
 A second exact checker independently reproduces the manuscript's Proposition
 C.10 norm calculations and the Appendix D counts for $S_3$ and $S_4$. See the
 [current-PDF audit](related-results/GQ2CurrentPdfAudit.md).
@@ -395,6 +418,7 @@ python verification/related/verify_dyadic_dehn_twist_conjugacy.py
 python verification/related/verify_dyadic_affine_mixed_cohomology.py
 python verification/related/verify_gq2_finite_abelian_counts.py
 python verification/related/verify_gq2_dihedral_counts.py
+python verification/related/verify_gq2_quaternion_counts.py
 ```
 
 ## Next theorem target
