@@ -1,39 +1,31 @@
-# The A183068 supercongruence
+# A183068 and a public supercongruence research program
 
-This repository is a short, self-contained account of a proposed proof of the
-supercongruence attached to [OEIS A183068](https://oeis.org/A183068). It is
-organized for Paul D. Hanna, the author of the sequence, and for a specialist
-who wants to audit the argument without first reading the larger research
-repository or a Lean formalization.
+This repository began with a proposed proof of Peter Bala's
+[OEIS A183068](https://oeis.org/A183068) supercongruence and has grown into a
+public portfolio of related \(p\)-adic, Gaussian-integer, cyclotomic, and
+finite-field results.
 
-## Current research portfolio
+The repository is a research record, not a journal. Every claim has a proof
+status, a source status, and—where appropriate—an exact checker. Machine
+assistance and finite verification are disclosed and are not called peer
+review.
 
-The continually updated Economist-style scorecard is
-**[RANKINGS.md](RANKINGS.md)**. It ranks every completed result and open
-target by mathematical-community value, deployment value, novelty
-confidence, breadth, maturity, and cost remaining. The present top structural
-result is the all-degree weighted-lift collision theorem; source status and
-proof status are recorded separately.
+## Start here
 
-## Public 2-adic Roe--Turturean follow-on
+| If you want to… | Read | Status |
+| --- | --- | --- |
+| Understand the original theorem | [Friendly proof](PROOF.md) | Machine-audited draft; specialist review pending |
+| See the response to Peter Bala's suggested proof routes | **[BALA_VERSION.md](BALA_VERSION.md)** | Preserved public bridge document |
+| Check what was audited and corrected | [Audit log](AUDIT.md) | Exact-text audit record |
+| Find one precise mathematical claim | [Claim-level result index](RESULT_INDEX.md) | Controlling status ledger |
+| Compare the portfolio economically | [Economist-style rankings](RANKINGS.md) | Editorial scores, not correctness claims |
+| Browse the wider program | [Related-results reading map](related-results/README.md) | Theorem, reduction, computation, and synthesis lanes |
+| Reproduce the computations | [`verification/run_all.py`](verification/run_all.py) | Exact checkers with no floating-point tolerance unless stated |
 
-The **[2-adic Roe-inspired packet](ROE_2ADIC.md)** is a separate public
-follow-on prompted by David Roe and David Turturean's
-[*A Presentation of the Absolute Galois Group of
-\(\mathbf Q_2\)*](https://roed314.github.io/gq2/paper.pdf).
-It records exact orientation lifting, a dyadic Dehn-twist tower, its affine
-commutator filtration, two finite-quotient sampling models, and an
-almost-periodicity specialization. A further
-[conjugacy-shell theorem](related-results/DyadicDehnTwistConjugacyMoments.md)
-classifies every finite affine twist image by depth and gives an exact
-adjacent-level valuation identity for all depth moments. The packet includes
-a targeted audit of the current source PDF and exact checkers.
+The repository workflow and promotion rules are documented in
+[RESEARCH_WORKFLOW.md](RESEARCH_WORKFLOW.md).
 
-This material is a structural comparison for small-prime lifting. It is not
-claimed as a new A183068 congruence or a correction of Roe--Turturean's main
-presentation theorem.
-
-## The result
+## Core theorem
 
 Define
 
@@ -41,405 +33,130 @@ Define
 a(n)=\sum_{k=0}^{n}\frac{(2n+2k)!}{k!^4(n-k)!^2}.
 ```
 
-Peter Bala conjectured in July 2024 that for every prime $p$ and all positive
-integers $n,r$,
+The proposed theorem is
 
 ```math
-a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}.
+a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}
 ```
 
-**[Read the friendly proof](PROOF.md).** Its first screen gives the complete
-idea in plain language; the carry calculation and small-prime bookkeeping
-follow underneath for verification.
+for every prime \(p\) and all positive integers \(n,r\).
 
-**[Read the Bala version](BALA_VERSION.md)** for a constructive completion of
-the digit-counting, Morita \(p\)-adic gamma, block-decomposition, and
-creative-microscoping routes suggested in the AI material forwarded after the
-initial correspondence. It records which suggestions become the present
-proof and which merely repackage its scaling lemma. The creative-microscoping
-discussion is closed: the valid cyclotomic vanishing argument is proved, and
-the tempting all-level one-variable \(q\)-promotion is ruled out by an exact
-counterexample.
+The proof has four ingredients:
 
-## Peter Bala's other OEIS conjectures
+1. each summand is a six-part multinomial coefficient;
+2. Legendre carry counting kills the terms with \(p\nmid k\);
+3. Ljunggren--Jacobsthal--Kazandzidis scaling transfers the terms with
+   \(p\mid k\) to the previous level; and
+4. a separate parity argument repairs the exceptional \(p=2,r=1\) case.
 
-The first follow-up to Peter's postscript is now available:
-**[Peter Bala's OEIS supercongruence queue](related-results/BalaOeisSupercongruenceQueue.md)**.
-It contains two short proofs:
+The [friendly proof](PROOF.md) contains the complete argument. The
+[dyadic policy](DYADIC_POLICY.md) explains why the prime \(2\) is audited
+separately throughout the repository.
 
-- the first A365029 conjecture, strengthened to
-  \(C_{A,B}(p-1)\equiv1\pmod {p^{A+B}}\) for every odd prime; and
-- the complete A375178 prime-level family
-  \(b_m(p)\equiv1\pmod {p^{2m+3}}\) for \(p\ge2m+5\).
+## Portfolio dashboard
 
-It also closes the complete A333593 \(p^{3r}\) tower by an exact
-decomposition into a published Coster generalized Apéry tower and a
-Jacobsthal--Kazandzidis central-binomial tower. The deeper A365029 and
-A375178 prime-power towers remain clearly labelled computational targets.
-For the latter, Coster's published theorem supplies the complete
-\(p^{3r}\) baseline for every exponent \(q\ge2\); Bala's target asks for a
-further \(q\) powers. The accompanying checker performs 1,518 exact tests
-and keeps proved statements separate from experimental evidence.
+The portfolio is organized by mathematical mechanism rather than by the date
+that a file was added.
 
-The companion
-**[supercongruence literature and Bala--OEIS census](related-results/SupercongruenceLiteratureCensus.md)**
-starts from a reproducible 110-record OEIS search, removes known Coster,
-Straub, Pan--Sun, and Dwork consequences from the open queue, and consolidates
-the remaining entries into theorem families.  It is a research-routing map,
-not a claim that all 110 records are open or that a negative search certifies
-novelty.
+| Lane | Flagship results | What the lane contributes |
+| --- | --- | --- |
+| Core and named OEIS problems | [A183068](PROOF.md), [Bala queue](related-results/BalaOeisSupercongruenceQueue.md), [literature census](related-results/SupercongruenceLiteratureCensus.md) | Named conjectures, published baselines, and a reproducible target queue |
+| General theorem engines | [Landau depth](related-results/LandauDepthSupercongruenceSynthesis.md), [q-calculus](related-results/QCalculusCyclotomicSupercongruences.md), [binomial-power Frobenius](related-results/BinomialPowerFrobeniusTheorem.md), [Euler products](related-results/EulerProductGaussianTower.md) | Reusable carry, transfer, Frobenius, and cyclotomic mechanisms |
+| Gaussian local arithmetic | [Inert-prime scaling](related-results/GaussianLucasPrimePowerTheorem.md), [ramified \(1+i\) theorem](related-results/GaussianLucasRamifiedTwoTheorem.md), [canonical products](related-results/GaussianLucasCanonicalProducts.md) | Split/inert/ramified prime separation and exact local valuations |
+| Dyadic structure | [Dyadic policy](DYADIC_POLICY.md), [Euler-product defect](related-results/DyadicHypercubeDefect.md), [Roe-inspired packet](ROE_2ADIC.md) | Explicit binary normalization, parity, lift, and first-level boundary analysis |
+| Finite-field and Frobenius packets | [Weighted-lift collisions](related-results/WeightedLiftCollisionSynthesis.md), [degree-five elliptic packet](related-results/JacobianDegreeFiveEllipticFrobenius.md), [hyperdeterminant Fourier packet](related-results/HyperdeterminantFourierSupercongruence.md) | Exact zeta factors, corrected adjacent towers, and finite-field Fourier structure |
+| Measurement and certification | [Dyadic joint spectrum](related-results/DyadicHypercubeJointSpectrum.md), [exact matroid hashing law](https://github.com/rbajaj5/hypercube-probabilistic-estimates/blob/main/notes/MatroidHashingLaw.md) | Exact collision probabilities and efficient finite-spectrum measurement design |
 
-The follow-up
-**[Gaussian generalization map](related-results/BalaGaussianGeneralizationMap.md)**
-classifies all 110 records by the operation a Gaussian extension would
-actually require: 40 finite-sum Frobenius twists, 37 constant-term base
-changes, 14 Gaussian factorial/block constructions, 14 modular or partition
-problems, and 5 derived sequences. Its
-[195-case exact pilot](related-results/BalaGaussianTwistPilot.md) already
-shows an important boundary: an untwisted cubic supercongruence need not
-remain cubic after an \(i^k\)-twist.
+The last lane improves the experimental and certification infrastructure of
+the program. It does not strengthen a \(p\)-adic exponent by itself.
 
-The pilot's strongest target is now a corollary of the
-**[binomial-power polynomial theorem](related-results/BinomialPowerFrobeniusTheorem.md)**,
-which shows for every \(m\ge3\) that
+## Status language
 
-```math
-P_{np^r}^{(m)}(X)\equiv P_{np^{r-1}}^{(m)}(X^p),
-\qquad
-P_N^{(m)}(X)=\sum_k\binom Nk^mX^k.
-```
+The exact label in [RESULT_INDEX.md](RESULT_INDEX.md) controls. In brief:
 
-The exponent is
-\(3r-\varepsilon_p+v_p(m)\), where the usual scaling loss is \(2\) at
-\(p=2\), \(1\) at \(p=3\), and \(0\) for \(p\ge5\).  Its Gaussian
-specialization handles split, inert, and ramified primes; the proof is an
-elementary scaling deduction and makes no priority claim.
-
-The pilot's other two observations are now closed at their sharp tested
-termwise exponent by the
-**[quadratic queue theorem](related-results/QuadraticGaussianQueueTheorem.md)**.
-It proves coefficientwise \(p^{2r}\) Frobenius towers for the classical
-Apéry polynomials A005259 and the negative-binomial-square polynomials
-containing A333592, for every prime including \(2\).  The second theorem
-covers every positive parameter pair in the broader OEIS family.  This does
-not settle A333592's stronger untwisted cubic conjecture.
-
-The first two constant-term targets are also now closed by one
-**[cyclotomic coefficient-pair theorem](related-results/CyclotomicCoefficientPairTheorem.md)**.
-For every prime \(p\ge5\), it proves coefficientwise \(p^{2r}\) Frobenius
-towers for the polynomials underlying A228960 and A350383.  Evaluation at
-\(X=1\) proves both named OEIS conjectures, while \(X=i\) gives their
-Gaussian split/inert specializations.  The proof records exact failures at
-\(p=3\), and at \(p=2\) for A350383; it does not claim Bala's broader
-cyclotomic-rational-function principle.
-
-The MacMahon-product target has produced a broader
-**[colored Euler-product theorem](related-results/EulerProductGaussianTower.md)**.
-For arbitrary integral product powers, any degree weight \(m^d\) with
-\(d\ge1\), and every odd prime, it proves a coefficientwise \(p^{2r}\)
-Frobenius tower.  This establishes the full quadratic product packet in
-Bala's notes, strengthens its prime range from \(p\ge7\) to \(p\ge3\), and
-gives split/inert Gaussian specializations at \(Z=i\).  For A380290 it is a
-quadratic baseline: the advertised untwisted \(p^{3r}\) conjecture remains
-open, and exact Gaussian witnesses show that the cubic exponent does not
-survive the part-count twist.
-
-The binary boundary is resolved separately by the
-**[dyadic hypercube defect theorem](related-results/DyadicHypercubeDefect.md)**.
-It proves the sharp binary law \(e(1)=1\), \(e(r)=2r\) for \(r\ge2\), and
-identifies the exact first-level modulus-\(4\) obstruction as a quadratic
-Boolean map on the two coefficient-bit layers. After normalization, the
-defect is additive over Euler factors and is supported exactly on odd part
-sizes with odd exponent multiplicity. This is a complete \(p=2\)
-replacement, not an attempt to infer the binary case from the odd-prime
-theorem. For A380290 itself, the first defect is now an explicit diagonal
-against the lacunary binary theta series supported on
-\(2^a s^2\) with \(s\) odd; in particular, every even \(n\) gains the
-first-lift modulus \(4\).
-
-The companion
-**[Walsh analysis](related-results/DyadicHypercubeWalshAnalysis.md)**
-determines the complete Boolean Fourier behavior of every individual defect
-coefficient. Its quadratic interaction graph is a matching, giving exact
-model counts, influences, noise stability, and restrictions to every affine
-face of the coefficient hypercube.
-
-For several output coefficients at once, the
-**[joint-spectrum theorem](related-results/DyadicHypercubeJointSpectrum.md)**
-reduces every XOR test to the rank and radical of an alternating
-additive-convolution matrix. Fourier inversion then gives the exact joint
-distribution of the finite defect map. The same rank profile gives exact
-collision and chi-squared formulas, plus support and total-variation bounds.
-
-The resulting
-**[complete Gaussian local table](related-results/EulerProductGaussianLocalTable.md)**
-now places the same Euler-product tower at every local type in
-\(\mathbb Z[i]\): inert odd primes have the conjugating twist, split odd
-primes satisfy the congruence at both conjugate prime ideals, and the
-ramified prime has depth \((1+i)^2\) at the first lift and
-\((1+i)^{4r}\) thereafter. This is a specialization theorem, not a
-Gaussian-factorial claim.
-
-## Attribution
-
-- Paul D. Hanna created A183068 in December 2010 as the central terms of
-  triangle A183065.
-- Peter Bala added the factorial-sum formula and the supercongruence conjecture
-  in July 2024.
-- The present proof draft was prepared by Ravi Bajaj and Alexander Burns.
-
-The attribution above follows the live OEIS record. Paul D. Hanna was first
-contacted about the proposed proof on July 24, 2026.
-
-## The proof in four steps
-
-1. Each summand is a six-part multinomial coefficient.
-2. Legendre's formula shows that terms with $p\nmid k$ vanish modulo
-   $p^{2r}$.
-3. A Ljunggren--Jacobsthal--Kazandzidis scaling congruence identifies the terms
-   with $p\mid k$ with the preceding $p$-adic level.
-4. A separate parity argument closes the only deficient case, $p=2,r=1$.
-
-The repository-wide
-**[dyadic audit policy](DYADIC_POLICY.md)** explains why the prime \(2\)
-cannot be treated as a routine substitution into an odd-prime proof. It
-requires every all-prime claim to record its binary valuation normalization,
-sign, first-level boundary, cancellation mechanism, and proof status. The
-policy also distinguishes the A183068 parity repair from the ramified
-Gaussian prime \(1+i\), the unresolved binary \(s_{18}\) reduction, and the
-architectural Roe--Turturean comparison.
-
-This is an ordinary mathematical proof. A future Lean development would be a
-separate verification project, not a prerequisite for reading the argument.
-
-## Present status
-
-| Item | Status |
+| Label | Meaning |
 | --- | --- |
-| Written proof | Complete draft |
-| Exact computation | 105 congruence cases, including $r=3$ samples |
-| Machine-assisted referee audit | Two exact-text audits completed; no proof-level error reported, and the second audit narrowed one finite-test sharpness remark |
-| Conventional specialist review | Pending |
-| Literature-priority search | Preliminary only |
-| Lean formalization | Not attempted in this repository |
+| **Published theorem** | A cited external source proves the statement used here |
+| **Audited draft** | A complete argument received a separate machine-assisted exact-text audit; not peer reviewed |
+| **Complete unchecked draft** | A complete written proof and checks are present; independent review and priority work remain |
+| **Deduction** | An explicit consequence of a broader theorem or proof candidate |
+| **Reduction** | A target has been reduced to a smaller unresolved statement |
+| **Computational** | Exact finite evidence or a certificate is present, but no general proof is claimed |
+| **Framework or synthesis** | Organizes mechanisms or literature without claiming a new theorem |
 
-The [audit log](AUDIT.md) records what was checked and what changed. The
-audits and computations are evidence, not substitutes for peer review. Please
-report any gap, attribution issue, or earlier proof.
+Source status is recorded separately as **named open problem**,
+**explicit source direction**, or **structural follow-on**. A high ranking
+never upgrades a proof status.
 
-For an Economist-style assessment of every result in the repository, see the
-public [mathematical research portfolio](RANKINGS.md). It scores
-math-community value, deployment value, novelty confidence, breadth,
-maturity, and cost remaining separately.
+## Current review queue
+
+The highest-value specialist-review targets are:
+
+1. the exact ramified Gaussian valuation at \(1+i\);
+2. inert Gaussian adjacent prime-power scaling;
+3. the all-degree weighted-lift collision theorem;
+4. the degree-five elliptic Frobenius packet; and
+5. the original A183068 proof.
+
+See [RANKINGS.md](RANKINGS.md) for the complete multi-criteria assessment and
+the separate queue of reductions and computational targets.
+
+## Reproduction
+
+Run the core checker:
+
+```text
+python verification/verify_a183068.py
+```
+
+Run every registered exact checker:
+
+```text
+python verification/run_all.py
+```
+
+Run the repository integrity and local-link audit:
+
+```text
+python verification/check_repository_integrity.py
+```
+
+The integrity checker also protects the published
+[`BALA_VERSION.md`](BALA_VERSION.md) bridge document from accidental edits.
+
+## Repository structure
+
+| Path | Purpose |
+| --- | --- |
+| [`PROOF.md`](PROOF.md) | Readable core proof |
+| [`BALA_VERSION.md`](BALA_VERSION.md) | Preserved response to the proof routes supplied by Peter Bala |
+| [`RESULT_INDEX.md`](RESULT_INDEX.md) | Claim-level status ledger |
+| [`RANKINGS.md`](RANKINGS.md) | Economist-style portfolio assessment |
+| [`RELATED_RESULTS.md`](RELATED_RESULTS.md) | Compact relationship map |
+| [`related-results/`](related-results/README.md) | Full follow-on notes |
+| [`verification/`](verification/) | Exact checkers and experiments |
+| [`AUDIT.md`](AUDIT.md) | Corrections and machine-assisted audits |
+| [`DYADIC_POLICY.md`](DYADIC_POLICY.md) | Required checklist for all-prime and ramified claims |
+| [`ROE_2ADIC.md`](ROE_2ADIC.md) | Public Roe--Turturean-inspired dyadic packet |
 
 ## Public research policy
 
-This repository is public so that claims can be inspected, reproduced, and
-corrected. Publication here follows six rules:
+1. Cite the originating sequence, conjecture, and prior theorem.
+2. Separate theorem, proof candidate, computation, reduction, and analogy.
+3. Preserve counterexamples and corrections.
+4. Treat negative literature searches as routing evidence, not proof of
+   novelty.
+5. Require an explicit \(p=2\) analysis before calling an all-prime theorem
+   complete.
+6. Keep verification scripts reproducible and distinguish them from proofs.
+7. Promote a claim only through the gates in
+   [RESEARCH_WORKFLOW.md](RESEARCH_WORKFLOW.md).
 
-1. source conjectures and prior authors are credited explicitly;
-2. theorem, proof candidate, computation, and conjecture are labeled
-   separately;
-3. machine assistance and exact checks are not described as peer review;
-4. counterexamples, failed approaches, and corrections remain auditable; and
-5. priority and novelty are treated as pending until the literature and
-   specialists have been checked; and
-6. each research result is identified as a **named open problem**, an
-   **explicit source direction**, or a **structural follow-on**, so a new
-   theorem is not quietly presented as a solved published conjecture; and
-7. an all-prime theorem is not called complete until its \(p=2\) case has
-   passed the [dyadic audit checklist](DYADIC_POLICY.md).
+## Attribution
 
-## Public q-calculus follow-on
+- Paul D. Hanna created A183068 in December 2010.
+- Peter Bala added the factorial-sum formula and supercongruence conjecture in
+  July 2024.
+- The present proof draft was prepared by Ravi Bajaj and Alexander Burns.
 
-The
-[q-calculus lift](related-results/QCalculusCyclotomicSupercongruences.md)
-refines the Landau carry argument at roots of unity. It proves a
-square-cyclotomic q-supercongruence containing A183068 and computes the full
-second cyclotomic defect for every depth-three balanced multinomial family.
-
-The note also records the precise connection with Bhatt--Scholze prisms:
-$\Phi_p(q)=[p]_q$ is the q-crystalline prismatic ideal and
-$q\mapsto q^{p^2}$ is the second Frobenius iterate. This is an
-interpretation of the elementary polynomial theorem, not a claim that
-prismatic cohomology was used in its proof.
-
-## Public Catalan ballot-power audit
-
-The
-[Catalan ballot-power audit](related-results/CatalanBallotPowerSupercongruenceAudit.md)
-checks the three parallel named conjectures A183069, A361889, and A361892 in
-1,164 exact cases. It also records a sharp computational refinement at the
-small primes \(2\) and \(3\), supported by another 1,047 exact cases. The
-natural target is one theorem for the odd ballot-power family rather than
-three isolated OEIS proofs. This is a computational target, not a proof.
-
-## Public Jacobian-counterexample follow-on
-
-The
-[all-degree weighted-lift synthesis](related-results/WeightedLiftCollisionSynthesis.md)
-is the central theorem for this branch. A generic fiber degree \(n\) produces
-one tangent curve of degree \(n-2\) and arithmetic genus
-\((n-3)(n-4)/2\). The exact collision zeta function separates into Tate,
-curve-Frobenius, and finite permutation factors. Removing the last two gives
-a universal corrected adjacent valuation of \(2r-2\).
-
-The
-[finite-field counting theorem for the Fable Jacobian counterexample](related-results/JacobianCounterexampleFiniteFieldCounts.md)
-turns the counterexample's cubic fibers into exact arithmetic data. It gives
-the complete factorization-type distribution over every odd finite field,
-the image and collision counts, the local zeta function of the self-fiber
-product, and the exact adjacent-extension valuations. Characteristic \(3\)
-has an additional \(p\)-adic layer because the fixed mixed coefficient
-forbids triple-root cubics there.
-
-This is elementary finite-field counting organized by the supercongruence
-program. It is not an application of geometric Langlands, localization, or
-ultrafilters. The formulas are complete and exactly checked; literature
-priority remains provisional.
-
-The
-[degree-four follow-on](related-results/JacobianDegreeFourFrobeniusObstruction.md)
-shows where this simple picture first breaks. Its collision zeta function has
-three quadratic Artin factors. Their extension-parity signs destroy the raw
-adjacent congruence at seven of the eight prime classes modulo \(24\); a
-two-step tower or an explicit Frobenius correction restores a sharp
-congruence. This separates polynomial/Tate data from finite-monodromy data in
-an entirely explicit example.
-
-The
-[degree-five follow-on](related-results/JacobianDegreeFiveEllipticFrobenius.md)
-is the next structural transition. The tangent locus is now a smooth plane
-cubic, and the exact collision count contains the Frobenius trace of an
-explicit non-CM elliptic curve, together with finite root-count corrections.
-The note gives the complete local zeta factorization, isolates a sharp
-characteristic-\(17\) boundary exception, and proves an exact
-Frobenius-corrected adjacent valuation of \(2r-2\).
-
-## Public Gaussian-prime follow-on
-
-The most direct classical precedent is the
-[Chowla--Dwork--Evans split-prime defect](related-results/ChowlaDworkEvansSplitDefect.md).
-Their published modulo-\(p^2\) lift of Gauss's binomial congruence gives the
-exact normalized defect
-
-```math
-\frac{\binom{(p-1)/2}{(p-1)/4}-2a}{p}
-\equiv a q_p(2)-(2a)^{-1}\pmod p
-```
-
-when \(p=a^2+b^2\) and \(a\equiv1\pmod4\). The repository note is a
-reformulation and exact regression check of a known theorem, not a novelty
-claim.
-
-The most concise shareable follow-on is
-**[Kalinin's Gaussian Lucas congruence](GAUSSIAN_LUCAS.md)**. It gives the
-statement, proof mechanism, exact $p=3$ boundary, source paper, and
-reproduction command. Its present status is an unchecked proof candidate,
-not a peer-reviewed theorem.
-
-An [adjacent-scale experiment](related-results/GaussianLucasScalingExperiment.md)
-led to a [prime-power proof candidate](related-results/GaussianLucasPrimePowerTheorem.md)
-with exponent $3r$ for inert primes $p>5$ and $3r-1$ at $p=3$. It requires
-independent review and a priority search.
-
-At the ramified prime $2=-i(1+i)^2$, a separate
-[proof candidate](related-results/GaussianLucasRamifiedTwoTheorem.md)
-determines the adjacent ratio valuation exactly:
-
-```math
-v_{1+i}(R_{2,r}-1)
-=
-6r-3+
-v_{1+i}\!\left(CD(A-C+i(B-D))\right)
-```
-
-for every nontrivial rectangle and $r\ge2$. It also gives the difference
-exponent $6r-4$. The mechanism is a four-coset reciprocal-sum lift, a
-normalized power-sum estimate, and a parity induction for the possible
-denominator loss. It has exact checks and machine-assisted audits, but still
-requires conventional review and a priority search.
-
-The accompanying
-[canonical-product synthesis](related-results/GaussianLucasCanonicalProducts.md)
-rewrites these ratios as non-Archimedean finite products. It also proves that,
-after normalization by the first logarithmic coefficient, the ramified block
-is a bijective analytic isometry of $\mathbb Z_2[i]$. The
-[literature map](related-results/GaussianLucasLiteraturePuzzle.md) explains how
-this connects to Dwork/Frobenius questions, generalized factorials, and
-compatible $p$-adic dynamics. The Blaschke-product comparison is an analytic
-analogy, not a claim that the Gaussian ratios are classical Blaschke products.
-
-For the broader Bala queue, the
-[Gaussian generalization map](related-results/BalaGaussianGeneralizationMap.md)
-separates three increasingly strong notions: extending coefficients to
-\(\mathbb Z[i]\), proving a Frobenius twist, and proving a theorem at a chosen
-Gaussian prime ideal. It also makes the split/inert/ramified case distinction
-mandatory before a candidate enters the proof queue.
-
-The follow-on
-[finite-quotient dynamics theorem](related-results/GaussianProductDynamicsConjectures.md)
-shows that every unit translation of the normalized product has exactly the
-same return-valuation filtration as ordinary addition. Modulo
-$(1+i)^n$, every orbit has length $2^{\lceil n/2\rceil}$. This gives a precise
-negative cryptographic conclusion: the maps are bijective and predictable,
-but not full-cycle generators. Compatible conjugacy to addition remains open.
-
-## Suggested reading order
-
-1. Read Sections 1--3 of [PROOF.md](PROOF.md) for the statement and carry
-   estimate.
-2. Check the precise small-prime losses in Lemma 2.
-3. Audit the three cases in Lemma 3, especially $p=2,r=1$.
-4. Run `python verification/verify_a183068.py`.
-5. Consult [RELATED_RESULTS.md](RELATED_RESULTS.md) only after the core proof.
-
-To reproduce every computation in the expanded repository, run
-`python verification/run_all.py`.
-
-## Repository map
-
-- [RESULT_INDEX.md](RESULT_INDEX.md): the claim-level ledger. Consult this
-  before beginning a new search; it separates distinct theorems even when they
-  share one proof note.
-- [RANKINGS.md](RANKINGS.md): the public multi-criteria ranking of every
-  claim-level result and open target.
-- [DYADIC_POLICY.md](DYADIC_POLICY.md): the repository-wide rule for
-  binary valuations, signs, ramification, boundary levels, and status.
-- [PROOF.md](PROOF.md): the complete proof and references.
-- [verification/verify_a183068.py](verification/verify_a183068.py): a small
-  exact-integer regression check.
-- [RELATED_RESULTS.md](RELATED_RESULTS.md): an index of every current result
-  produced by the same program, separated by audit status.
-- [related-results/QCalculusCyclotomicSupercongruences.md](related-results/QCalculusCyclotomicSupercongruences.md):
-  the q-calculus theorem generator, square A183068 lift, corrected cubic
-  theorem, and prismatic interpretation.
-- [related-results/CatalanBallotPowerSupercongruenceAudit.md](related-results/CatalanBallotPowerSupercongruenceAudit.md):
-  exact audit of three named \(p^{3r}\) conjectures and their proposed sharp
-  small-prime refinements.
-- [related-results/WeightedLiftCollisionSynthesis.md](related-results/WeightedLiftCollisionSynthesis.md):
-  the all-degree tangent-curve collision theorem, genus ladder, zeta
-  decomposition, and universal corrected tower.
-- [related-results/JacobianCounterexampleFiniteFieldCounts.md](related-results/JacobianCounterexampleFiniteFieldCounts.md):
-  complete finite-field fiber statistics, collision zeta function, and the
-  characteristic-\(3\) adjacent-extension gain for the Fable counterexample.
-- [related-results/JacobianDegreeFourFrobeniusObstruction.md](related-results/JacobianDegreeFourFrobeniusObstruction.md):
-  degree-four collision formula, quadratic Artin factors, obstruction to raw
-  adjacency, and Frobenius-corrected supercongruence.
-- [related-results/JacobianDegreeFiveEllipticFrobenius.md](related-results/JacobianDegreeFiveEllipticFrobenius.md):
-  degree-five collision formula, explicit non-CM elliptic factor, local zeta
-  function, and corrected adjacent-extension law.
-- [GAUSSIAN_LUCAS.md](GAUSSIAN_LUCAS.md): the public entry point for the
-  Gaussian-prime follow-on.
-- [ROE_2ADIC.md](ROE_2ADIC.md): the public entry point for the exact
-  Roe--Turturean-inspired \(2\)-adic lifting and Dehn-twist packet.
-- [related-results/](related-results/): the complete related proof drafts and
-  reductions. These are stored locally in this repository rather than merely
-  linked from the larger working repository.
-- [verification/related/](verification/related/): the corresponding exact
-  checkers.
-- [verification/run_all.py](verification/run_all.py): one command for all
-  included verification programs.
-
-The broader working repository remains available at
-[rbajaj5/oeis-conjecture-proofs](https://github.com/rbajaj5/oeis-conjecture-proofs).
+Corrections, prior-art references, and specialist reviews are welcome.

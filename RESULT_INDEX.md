@@ -323,6 +323,26 @@ proof.
 - **Proof:** [Joint Walsh spectra for the dyadic defect](related-results/DyadicHypercubeJointSpectrum.md)
 - **Exact checker:** [`verify_dyadic_hypercube_walsh.py`](verification/related/verify_dyadic_hypercube_walsh.py)
 
+### HASH-MATROID — exact linear measurement law
+
+- **Claim:** For every finite nonempty \(A\subseteq\mathbb F_2^n\), if
+  \(M_A\) is the binary matroid represented by the distinct nonzero
+  differences \((A+A)\setminus\{0\}\), then a uniformly random linear map
+  \(L:\mathbb F_2^n\to\mathbb F_2^t\) is injective on \(A\) with probability
+  \[
+  \frac{\chi_{M_A}(2^t)}
+       {2^{t\,\operatorname{rank}(M_A)}}.
+  \]
+  For each affine Walsh support in DYADIC-JOINT this specializes to the exact
+  full-rank product formula and supplies a measurement-design certificate.
+- **Source status:** Known theorem/application: the general identity is the
+  binary hashing formulation of the classical Crapo--Rota Critical Theorem.
+- **Status:** Complete proof and 1,134 exact checks in the auxiliary public
+  repository; no novelty claim for the characteristic-polynomial law.
+- **Proof and priority audit:** [Exact matroid hashing law](https://github.com/rbajaj5/hypercube-probabilistic-estimates/blob/main/notes/MatroidHashingLaw.md)
+- **Portfolio role:** Supporting infrastructure; it does not strengthen a
+  supercongruence exponent.
+
 ### GBQ-MAP — Gaussian routing of the Bala--OEIS census
 
 - **Claim:** The reproducible 110-record Bala corpus divides exhaustively
