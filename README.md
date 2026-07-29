@@ -115,6 +115,15 @@ The exponent is
 specialization handles split, inert, and ramified primes; the proof is an
 elementary scaling deduction and makes no priority claim.
 
+The pilot's other two observations are now closed at their sharp tested
+termwise exponent by the
+**[quadratic queue theorem](related-results/QuadraticGaussianQueueTheorem.md)**.
+It proves coefficientwise \(p^{2r}\) Frobenius towers for the classical
+Apéry polynomials A005259 and the negative-binomial-square polynomials
+containing A333592, for every prime including \(2\).  The second theorem
+covers every positive parameter pair in the broader OEIS family.  This does
+not settle A333592's stronger untwisted cubic conjecture.
+
 ## Attribution
 
 - Paul D. Hanna created A183068 in December 2010 as the central terms of

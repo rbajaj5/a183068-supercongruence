@@ -165,9 +165,12 @@ P_{np^r}(X)\equiv P_{np^{r-1}}(X^p).
 
 The [binomial-power Frobenius theorem](BinomialPowerFrobeniusTheorem.md)
 proves this as its \(m=4\) case and gives a unified result for every
-\(m\ge3\).  The other two observations remain computational triage.
-Together they demonstrate that the twist exponent must be determined from
-the termwise filtration rather than copied from the untwisted theorem.
+\(m\ge3\).  The
+[quadratic queue theorem](QuadraticGaussianQueueTheorem.md) proves the
+A005259 and A333592 observations.  Thus every positive target in the pilot
+is now closed at its tested termwise exponent.  The exact counterexamples
+still demonstrate that the twist exponent must be determined from the
+termwise filtration rather than copied from the untwisted theorem.
 
 ## 5. Route C: constant terms and Frobenius base change
 
@@ -278,9 +281,9 @@ obstruction.
 
 | Rank | Target | Route | Immediate deliverable | Main risk |
 | ---: | --- | --- | --- | --- |
-| 1 | Nearby depth-three finite sums, using the proved A005260 theorem as model | T | Compute whether the scaling quotient remains deep after weighting | Twisting can remove cancellation used by the untwisted proof |
-| 2 | A183068 and the repository's Landau-depth family | T | Package the already-proved general Frobenius-twist corollary family | Mostly a reusable corollary, not a new local mechanism |
-| 3 | A228960, A350383, A331562, A380290 | C | Produce explicit \(\mathbb Z[i]\) period models and inspect Frobenius eigenspaces | Dwork hypotheses or exponent may fail |
+| 1 | A228960, A350383, A331562, A380290 | C | Produce explicit \(\mathbb Z[i]\) period models and inspect Frobenius eigenspaces | Dwork hypotheses or exponent may fail |
+| 2 | Nearby depth-three finite sums beyond the closed pilot | T | Compute whether the scaling quotient remains deep after weighting | Twisting can remove cancellation used by the untwisted proof |
+| 3 | A183068 and the repository's Landau-depth family | T | Package the already-proved general Frobenius-twist corollary family | Mostly a reusable corollary, not a new local mechanism |
 | 4 | A008793 and A049505 | M | Identify a quartic-character or CM decomposition | No canonical Gaussian object may exist |
 | 5 | A364506, A364509, A008978, A002897 | F | Define and prove integrality of the Gaussian block analogue | Definition and denominator control precede congruences |
 | 6 | Derived entries | D | Trace every claim back to compatible source theorems | Derived operations may not commute with Frobenius |
@@ -302,6 +305,7 @@ Already available:
 - the A183068 split/inert specialization and ramified cross-twist;
 - the all-prime binomial-power polynomial theorem for every \(m\ge3\),
   including its prime-specific multiplicity bonus and small-prime losses;
+- the all-prime coefficientwise quadratic towers for A005259 and A333592;
 - a complete classification of the reproducible 110-record census by
   Gaussian proof route; and
 - a 195-case exact pilot that rejects one overly strong extrapolation.
