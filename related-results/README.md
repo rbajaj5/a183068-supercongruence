@@ -43,6 +43,8 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 4G | [Complete Gaussian local table for Euler products](EulerProductGaussianLocalTable.md) | Combines the odd and dyadic theorems into one split/inert/ramified prime-ideal law, including the \(i\mapsto-1\) binary cross-twist and exact \((1+i)\)-adic exponents | Complete corollary and exact local-valuation checks; withdrawn Witt--Hadamard near-match excluded as proof input |
 | 4H | [Walsh analysis of the dyadic hypercube defect](DyadicHypercubeWalshAnalysis.md) | Shows that every output coordinate has a matching quadratic graph and computes its exact model count, Walsh spectrum, influences, noise stability, and every affine-face restriction | Complete combinatorial corollary and exhaustive checks; classical Boolean Fourier machinery |
 | 4I | [Joint spectrum of the dyadic hypercube defect](DyadicHypercubeJointSpectrum.md) | Reduces every XOR of output coordinates to an alternating convolution matrix; recovers exact joint counts, collision probability, chi-squared distance, and distribution bounds from ranks, radicals, and Gauss-sum signs | Complete finite-dimensional theorem and exhaustive checks; classical quadratic-form Fourier theorem |
+| 4J | [Exact hashing of affine Fourier spectra](AffineSpectrumHashing.md) | Converts affine Walsh-support dimension into an exact random-hash success probability and a \(\log_2(s)\)-scale sufficient measurement budget | Complete specialization of the classical binary full-rank formula with exact checks |
+| 4K | [Exact matroid law for linear hashing](MatroidHashingLaw.md) | Extends the affine formula to every finite Fourier support through the characteristic polynomial of its difference matroid | Complete application of the classical Crapo--Rota Critical Theorem; [priority audit](HypercubeHashingPriorityAudit.md) |
 | 4A | [Chowla--Dwork--Evans split-prime defect](ChowlaDworkEvansSplitDefect.md) | Rewrites their published modulo-\(p^2\) lift as an exact normalized defect and exceptional-prime criterion | Published theorem plus exact corollary; no novelty claim |
 | 5 | [Cubic $(\eta)$ congruence at $p=3$](EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to fill a small-prime gap in a published theorem | Complete unchecked draft |
 | 6 | [Gaussian Wolstenholme citation network](GaussianWolstenholmeCitationNetwork.md) | Replaces scaling by translation-invariant Gaussian residue blocks | Three major candidate results with exact certificates; independent review required |
@@ -118,6 +120,7 @@ The individual correspondence is:
 | Dyadic hypercube defect | `verification/related/verify_dyadic_hypercube_defect.py` |
 | Dyadic hypercube Walsh analysis | `verification/related/verify_dyadic_hypercube_walsh.py` |
 | Dyadic hypercube joint spectrum | `verification/related/verify_dyadic_hypercube_walsh.py` |
+| Affine-spectrum and matroid hashing laws | `verification/related/verify_affine_spectrum_hashing.py` |
 | Chowla--Dwork--Evans split-prime defect | `verification/related/verify_chowla_dwork_evans_defect.py` |
 | Gaussian power sums | `verification/related/verify_gaussian_power_sums.py` |
 | Gaussian Wolstenholme network | `verification/related/verify_gaussian_wolstenholme.py` |
