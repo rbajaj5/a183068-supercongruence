@@ -17,12 +17,14 @@ The detailed proofs and checkers are:
 - [affine-word grammar and almost periodicity of dyadic twists](related-results/DyadicTwistGrammarAlmostPeriodicity.md);
 - [conjugacy shells and exact twist-depth moments](related-results/DyadicDehnTwistConjugacyMoments.md);
 - [the mixed dyadic obstruction in the affine shadow](related-results/DyadicAffineMixedCohomology.md);
+- [closed surjection counts for finite abelian \(2\)-targets](related-results/GQ2FiniteAbelianCounts.md);
 - [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py);
 - [`verify_dyadic_dehn_twist_sampler.py`](verification/related/verify_dyadic_dehn_twist_sampler.py);
 - [`verify_dyadic_dehn_twist_cayley.py`](verification/related/verify_dyadic_dehn_twist_cayley.py);
 - [`verify_dyadic_twist_grammar.py`](verification/related/verify_dyadic_twist_grammar.py);
 - [`verify_dyadic_dehn_twist_conjugacy.py`](verification/related/verify_dyadic_dehn_twist_conjugacy.py); and
-- [`verify_dyadic_affine_mixed_cohomology.py`](verification/related/verify_dyadic_affine_mixed_cohomology.py).
+- [`verify_dyadic_affine_mixed_cohomology.py`](verification/related/verify_dyadic_affine_mixed_cohomology.py); and
+- [`verify_gq2_finite_abelian_counts.py`](verification/related/verify_gq2_finite_abelian_counts.py).
 
 [RT]: https://roed314.github.io/gq2/paper.pdf
 [Gropper]: https://arxiv.org/abs/2303.04309
@@ -253,6 +255,37 @@ exactly when \(a\) is even.
 This computes the linear obstruction space. It does not identify the
 kernel-valued class of the actual outer-automorphism quotient.
 
+### 10. Closed counts for finite abelian \(2\)-targets
+
+Roe--Turturean Section 11 asks for explicit finite-target surjection counts.
+For a finite abelian \(2\)-group
+
+$$
+H\cong(C_2)^e\oplus
+\bigoplus_{j=1}^h C_{2^{\lambda_j}},
+\qquad \lambda_j\ge2,
+$$
+
+put \(d=e+h\), \(q=|2H|\), and
+
+$$
+P_j=\prod_{i=0}^{j-1}(4-2^i)
+\quad(0\le j\le2),\qquad P_j=0\quad(j>2).
+$$
+
+Then the exact answer is
+
+$$
+\left|\operatorname{Sur}(G_{\mathbb Q_2},H)\right|
+=q^2\,2^h
+\left(P_d+(2^e-1)4P_{d-1}\right).
+$$
+
+This follows from
+\(D_0^{\mathrm{ab}}\cong C_2\oplus\mathbb Z_2^2\) and a Frattini-quotient
+count. It solves the finite abelian \(2\)-group subcase of the source's
+broader counting question; it does not address nonabelian targets.
+
 ## Source boundary
 
 | Item | Status |
@@ -270,6 +303,7 @@ kernel-valued class of the actual outer-automorphism quotient.
 | Twist almost-periodicity estimate | Direct specialization of Wigderson/Croot--Sisask; no novelty claim |
 | Translation conjugacy shells and exact moments | Elementary affine-quotient deduction; no novelty claim |
 | Mixed \(H^2_{\mathrm{cont}}\) calculation and explicit extension | Standard continuous-cohomology calculation completed here; no novelty claim |
+| Finite abelian \(2\)-target surjection formula | Elementary consequence of the source abelianization; solved special case of Section 11, item 4; no novelty claim |
 
 This project does not claim to correct Roe--Turturean's presentation theorem.
 It does not claim a new A183068 supercongruence. Literature novelty is not
@@ -309,6 +343,10 @@ The mixed-obstruction checker verifies the two-class sign-cohomology quotient,
 splitting tests. In every tested quotient the explicit extension splits
 exactly for even cross parameter.
 
+The finite-abelian-target checker exhaustively enumerates all 66 invariant
+factor types of order at most \(2^8\), and separately checks the cyclic and
+elementary-abelian closed forms.
+
 A second exact checker independently reproduces the manuscript's Proposition
 C.10 norm calculations and the Appendix D counts for $S_3$ and $S_4$. See the
 [current-PDF audit](related-results/GQ2CurrentPdfAudit.md).
@@ -322,6 +360,7 @@ python verification/related/verify_dyadic_dehn_twist_cayley.py
 python verification/related/verify_dyadic_twist_grammar.py
 python verification/related/verify_dyadic_dehn_twist_conjugacy.py
 python verification/related/verify_dyadic_affine_mixed_cohomology.py
+python verification/related/verify_gq2_finite_abelian_counts.py
 ```
 
 ## Next theorem target
