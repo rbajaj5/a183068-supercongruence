@@ -32,6 +32,22 @@ every odd-prime case is complete. Conversely, a separate ramified
 \(1+i\)-argument is scored as substantive work rather than as routine
 bookkeeping.
 
+## Executive allocation view
+
+The detailed tables below are the controlling scorecard. For quick research
+allocation, the portfolio currently has four tiers:
+
+| Tier | Results | Recommended use of effort |
+| --- | --- | --- |
+| **A: specialist review now** | GWL-TWO, GWL-SCALE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
+| **B: broad theorem engines** | LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER | Reuse on named conjectures and consolidate families |
+| **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, HASH-MATROID, FQ-CT | Improve experiments, certification, and proof organization |
+| **D: retained open targets** | C11, CAT-ODD, BALA-TOWERS, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
+
+Tier A has the highest estimated mathematical payoff. Tier C is deliberately
+kept separate: these results can make the portfolio faster and more coherent
+without increasing a supercongruence exponent.
+
 ## Completed drafts, theorems, and deductions
 
 | Rank | ID and result | Math-community value | Deployment value | Novelty confidence | Breadth | Maturity | Cost remaining | Mathematical status |
@@ -72,6 +88,7 @@ bookkeeping.
 | 25 | [DYADIC-WALSH: matching spectrum of the binary defect](related-results/DyadicHypercubeWalshAnalysis.md) | **4** | 3 | 2 | 8 | 10 | 1 | Complete exact Boolean-Fourier classification of each defect coordinate, including face counts and noise stability; useful for CSP verification, but based on classical matching-quadratic analysis. |
 | 25 | [DYADIC-JOINT: joint spectrum of the binary defect](related-results/DyadicHypercubeJointSpectrum.md) | **4** | 4 | 2 | 9 | 10 | 1 | Exact joint model counts, collision probability, chi-squared distance, support bound, and total-variation certificate from alternating convolution ranks; classical quadratic-form Fourier analysis. |
 | 26 | [AA-TOWER: \(p\)-adic compactness framework](related-results/PadicArzelaAscoliSupercongruenceTowers.md) | **4** | 2 | 3 | 6 | 8 | 4 | Complete framework and obstruction; horizontal unit-shell interpolation remains open. |
+| 26 | [HASH-MATROID: exact linear measurement law](https://github.com/rbajaj5/hypercube-probabilistic-estimates/blob/main/notes/MatroidHashingLaw.md) | **4** | 6 | 2 | 9 | 9 | 1 | Complete exact application of the classical Crapo--Rota Critical Theorem to finite Fourier supports; gives measurement certificates for dyadic defect spectra but no stronger \(p\)-adic modulus. |
 | 27 | [BOX-d: higher-degree box polynomials](related-results/HigherDegreeFiniteFieldBoxPolynomials.md) | **4** | 2 | 2 | 8 | 7 | 3 | Complete unchecked theorem; likely classical infrastructure. |
 | 28 | [GWL-POLY: Gaussian box polynomial](related-results/GaussianWolstenholmeCitationNetwork.md#2-the-polynomial-conjecture) | **4** | 1 | 6 | 4 | 6 | 5 | Complete unchecked finite-field polynomial formulas. |
 | 29 | [CDE-DEFECT: Chowla--Dwork--Evans split-prime defect](related-results/ChowlaDworkEvansSplitDefect.md) | **4** | 1 | 1 | 6 | 10 | 1 | Exact reformulation of a published modulo-\(p^2\) theorem, with 1,125 exact regression checks and no novelty claim. |
