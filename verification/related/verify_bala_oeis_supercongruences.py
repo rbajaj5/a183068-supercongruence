@@ -45,13 +45,17 @@ def a365029_family(n: int, exponent_a: int, exponent_b: int) -> int:
 
 
 @lru_cache(maxsize=None)
-def bala_odd_power(n: int, m: int) -> int:
-    """The A375178 family b_m(n), whose exponent is 2m+1."""
-    exponent = 2 * m + 1
+def bala_power(n: int, exponent: int) -> int:
+    """The generalized A375178 sum with arbitrary positive exponent."""
     return sum(
         generalized_binomial(n + k - 1, k) ** exponent
         for k in range(n)
     )
+
+
+def bala_odd_power(n: int, m: int) -> int:
+    """The A375178 family b_m(n), whose exponent is 2m+1."""
+    return bala_power(n, 2 * m + 1)
 
 
 @lru_cache(maxsize=None)
@@ -121,6 +125,37 @@ def check_a375178_prime_level_theorem() -> tuple[int, int]:
             minimum_slack = min(minimum_slack, slack)
             checks += 1
     assert checks == 56
+    assert minimum_slack == 0
+    return checks, minimum_slack
+
+
+def check_coster_a375178_baseline() -> tuple[int, int]:
+    """Check Coster's p^(3r) tower for all exponents q >= 2."""
+    checks = 0
+    minimum_slack = 10**9
+    for exponent in range(2, 9):
+        for prime in (5, 7, 11, 13):
+            for level in (1, 2):
+                for n in range(1, 9):
+                    upper = n * prime**level
+                    if upper > 300:
+                        continue
+                    lower = n * prime ** (level - 1)
+                    difference = (
+                        bala_power(upper, exponent)
+                        - bala_power(lower, exponent)
+                    )
+                    slack = valuation(difference, prime) - 3 * level
+                    assert slack >= 0, (
+                        exponent,
+                        prime,
+                        level,
+                        n,
+                        slack,
+                    )
+                    minimum_slack = min(minimum_slack, slack)
+                    checks += 1
+    assert checks == 343
     assert minimum_slack == 0
     return checks, minimum_slack
 
@@ -229,6 +264,7 @@ def check_a375178_tower_evidence() -> tuple[int, int]:
 def main() -> None:
     boundary_checks, boundary_slack = check_a365029_boundary_theorem()
     prime_checks, prime_slack = check_a375178_prime_level_theorem()
+    baseline_checks, baseline_slack = check_coster_a375178_baseline()
     a333_checks, a333_slack = check_a333593_coster_reduction()
     a365_checks, a365_slack = check_a365029_tower_evidence()
     odd_checks, odd_slack = check_a375178_tower_evidence()
@@ -240,6 +276,10 @@ def main() -> None:
     print(
         "proved A375178-family prime cases: "
         f"{prime_checks} (minimum slack {prime_slack})"
+    )
+    print(
+        "published Coster baseline cases: "
+        f"{baseline_checks} (minimum slack {baseline_slack})"
     )
     print(
         "proved A333593 Coster-reduction checks: "
@@ -255,7 +295,7 @@ def main() -> None:
     )
     print(
         "all "
-        f"{boundary_checks + prime_checks + a333_checks + a365_checks + odd_checks} "
+        f"{boundary_checks + prime_checks + baseline_checks + a333_checks + a365_checks + odd_checks} "
         "Bala-queue checks passed"
     )
 

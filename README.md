@@ -76,8 +76,10 @@ It also closes the complete A333593 \(p^{3r}\) tower by an exact
 decomposition into a published Coster generalized Apéry tower and a
 Jacobsthal--Kazandzidis central-binomial tower. The deeper A365029 and
 A375178 prime-power towers remain clearly labelled computational targets.
-The accompanying checker performs 1,175 exact tests and keeps proved
-statements separate from experimental evidence.
+For the latter, Coster's published theorem supplies the complete
+\(p^{3r}\) baseline for every exponent \(q\ge2\); Bala's target asks for a
+further \(q\) powers. The accompanying checker performs 1,518 exact tests
+and keeps proved statements separate from experimental evidence.
 
 ## Attribution
 
