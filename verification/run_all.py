@@ -44,6 +44,7 @@ SCRIPTS = (
     "verification/related/verify_gq2_dihedral_counts.py",
     "verification/related/verify_gq2_quaternion_counts.py",
     "verification/related/verify_gq2_maximal_cyclic_counts.py",
+    "verification/related/verify_lattice_walk_frobenius.py",
     "verification/related/verify_dyadic_affine_mixed_cohomology.py",
     "verification/related/verify_dyadic_dehn_twist_sampler.py",
     "verification/related/verify_dyadic_dehn_twist_cayley.py",

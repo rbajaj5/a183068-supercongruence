@@ -190,6 +190,28 @@ proof.
 - **Proof:** [Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md)
 - **Exact checker:** [`verify_gaussian_twists.py`](verification/related/verify_gaussian_twists.py)
 
+### WALK-FROB — finite lattice-walk Frobenius congruences
+
+- **Claim:** If \(M\) is a finite matrix over a number ring and
+  \(a_N=\operatorname{tr}(M^N)\), then at a prime ideal with a Frobenius lift
+  \(\sigma\),
+  \[
+  a_{np^r}\equiv\sigma(a_{np^{r-1}})\pmod{\mathfrak p^r}.
+  \]
+  This yields explicit split/inert tables over \(\mathbb Z[i]\) and
+  \(\mathbb Z[\omega]\), plus ramified uniformizer congruences at \(1+i\)
+  and \(1-\omega\). Weighted closed-walk counts and periodic finite-width
+  transfer-matrix partition functions are immediate applications.
+- **Boundary:** This does not assert a congruence for unrestricted
+  infinite-lattice self-avoiding-walk counts, and it does not use the
+  conjectural \(\mathrm{SLE}_{8/3}\) scaling limit as a proof step.
+- **Source status:** Structural follow-on. The unramified part is standard
+  number-field Gauss-congruence infrastructure; priority of the ramified
+  formulation is not established.
+- **Status:** Complete elementary theorem with exact checks.
+- **Proof:** [Lattice-walk Frobenius congruences](related-results/LatticeWalkFrobeniusCongruences.md)
+- **Exact checker:** [`verify_lattice_walk_frobenius.py`](verification/related/verify_lattice_walk_frobenius.py)
+
 ### BINOMIAL-POWER — all-prime binomial-power polynomial tower
 
 - **Claim:** For \(m\ge3\) and
