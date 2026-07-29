@@ -1,12 +1,14 @@
-"""Exact checks for the Walsh analysis of the dyadic hypercube defect.
+"""Exact checks for the Walsh spectra of the dyadic hypercube defect.
 
-The proof is in related-results/DyadicHypercubeWalshAnalysis.md. These
-finite checks are regression certificates, not substitutes for the proof.
+The proofs are in related-results/DyadicHypercubeWalshAnalysis.md and
+related-results/DyadicHypercubeJointSpectrum.md. These finite checks are
+regression certificates, not substitutes for the proofs.
 """
 
 from __future__ import annotations
 
 import itertools
+from collections import Counter
 from fractions import Fraction
 from math import comb
 
@@ -239,11 +241,178 @@ def check_affine_faces() -> int:
     return checks
 
 
+def parity(value: int) -> int:
+    return value.bit_count() % 2
+
+
+def gf2_rank(rows: list[int]) -> int:
+    basis: dict[int, int] = {}
+    for row in rows:
+        value = row
+        while value:
+            pivot = value.bit_length() - 1
+            if pivot in basis:
+                value ^= basis[pivot]
+            else:
+                basis[pivot] = value
+                break
+    return len(basis)
+
+
+def joint_output_table(
+    support: tuple[Exponent, ...],
+    targets: tuple[Exponent, ...],
+) -> list[int]:
+    size = len(support)
+    dimension = 2 * size
+    data = [matching_data(support, target) for target in targets]
+    outputs: list[int] = []
+    for mask in range(2**dimension):
+        coefficients = tuple(
+            ((mask >> index) & 1)
+            + 2 * ((mask >> (size + index)) & 1)
+            for index in range(size)
+        )
+        output = 0
+        for coordinate, (pairs, diagonal) in enumerate(data):
+            output |= (
+                matching_coordinate_defect(coefficients, pairs, diagonal)
+                << coordinate
+            )
+        outputs.append(output)
+    return outputs
+
+
+def scalar_test_values(outputs: list[int], functional: int) -> list[int]:
+    return [parity(output & functional) for output in outputs]
+
+
+def polar_rows(values: list[int], dimension: int) -> list[int]:
+    constant = values[0]
+    rows: list[int] = []
+    for left in range(dimension):
+        row = 0
+        for right in range(dimension):
+            entry = (
+                values[(1 << left) ^ (1 << right)]
+                ^ values[1 << left]
+                ^ values[1 << right]
+                ^ constant
+            )
+            row |= entry << right
+        rows.append(row)
+    return rows
+
+
+def radical(rows: list[int], dimension: int) -> list[int]:
+    return [
+        value
+        for value in range(2**dimension)
+        if all(parity(row & value) == 0 for row in rows)
+    ]
+
+
+def walsh_from_values(values: list[int], dimension: int) -> list[Fraction]:
+    return [
+        Fraction(
+            sum(
+                (-1) ** (values[point] ^ parity(frequency & point))
+                for point in range(2**dimension)
+            ),
+            2**dimension,
+        )
+        for frequency in range(2**dimension)
+    ]
+
+
+def check_joint_spectra() -> int:
+    cases = (
+        (
+            tuple((index,) for index in range(4)),
+            ((1,), (2,), (3,)),
+        ),
+        (
+            tuple((index,) for index in range(4)),
+            ((2,), (3,), (4,), (5,)),
+        ),
+        (
+            ((0, 0), (1, 0), (0, 1), (1, 1)),
+            ((1, 0), (0, 1), (1, 1), (2, 1)),
+        ),
+    )
+    checks = 0
+    for support, targets in cases:
+        dimension = 2 * len(support)
+        output_dimension = len(targets)
+        outputs = joint_output_table(support, targets)
+        actual_counts = Counter(outputs)
+        biases: list[Fraction] = []
+
+        for functional in range(2**output_dimension):
+            values = scalar_test_values(outputs, functional)
+            rows = polar_rows(values, dimension)
+            rank = gf2_rank(rows)
+            assert rank % 2 == 0
+            half_rank = rank // 2
+            radical_points = radical(rows, dimension)
+            restriction_zero = all(values[value] == 0 for value in radical_points)
+
+            walsh = walsh_from_values(values, dimension)
+            nonzero = {
+                frequency: coefficient
+                for frequency, coefficient in enumerate(walsh)
+                if coefficient
+            }
+            compatible = {
+                frequency
+                for frequency in range(2**dimension)
+                if all(
+                    parity(frequency & value) == values[value]
+                    for value in radical_points
+                )
+            }
+            assert set(nonzero) == compatible
+            assert len(nonzero) == 2**rank
+            assert all(
+                abs(coefficient) == Fraction(1, 2**half_rank)
+                for coefficient in nonzero.values()
+            )
+            assert (walsh[0] != 0) == restriction_zero
+            if restriction_zero:
+                assert abs(walsh[0]) == Fraction(1, 2**half_rank)
+            biases.append(walsh[0])
+            checks += len(walsh) + len(radical_points) + 5
+
+        reconstructed: dict[int, int] = {}
+        scale = Fraction(2**dimension, 2**output_dimension)
+        for output in range(2**output_dimension):
+            count = scale * sum(
+                (-1) ** parity(functional & output) * biases[functional]
+                for functional in range(2**output_dimension)
+            )
+            assert count.denominator == 1
+            reconstructed[output] = count.numerator
+            assert reconstructed[output] == actual_counts.get(output, 0)
+            checks += 1
+
+        uniform_by_bias = all(bias == 0 for bias in biases[1:])
+        count_values = {
+            actual_counts.get(output, 0)
+            for output in range(2**output_dimension)
+        }
+        assert uniform_by_bias == (len(count_values) == 1)
+        checks += 1
+
+    print(f"joint-spectrum and model-count checks: {checks}")
+    return checks
+
+
 def main() -> None:
     coordinate = check_coordinate_counts()
     walsh = check_walsh_and_influences()
     faces = check_affine_faces()
-    print(f"total exact checks: {coordinate + walsh + faces}")
+    joint = check_joint_spectra()
+    print(f"total exact checks: {coordinate + walsh + faces + joint}")
 
 
 if __name__ == "__main__":

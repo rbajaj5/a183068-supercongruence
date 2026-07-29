@@ -297,6 +297,30 @@ proof.
 - **Proof:** [Dyadic hypercube defect](related-results/DyadicHypercubeDefect.md)
 - **Exact checker:** [`verify_dyadic_hypercube_defect.py`](verification/related/verify_dyadic_hypercube_defect.py)
 
+### DYADIC-WALSH — one-coordinate Boolean spectrum
+
+- **Claim:** For any finite monomial support, each coefficient of the first
+  dyadic Frobenius defect is a sum of disjoint Boolean AND gates and at most
+  one linear high bit. Its exact model count, Walsh spectrum, influences,
+  noise stability, and restriction to every affine face follow in closed
+  form.
+- **Status:** Complete combinatorial corollary with exhaustive exact checks;
+  the Boolean Fourier machinery is classical.
+- **Proof:** [Walsh analysis of the dyadic hypercube defect](related-results/DyadicHypercubeWalshAnalysis.md)
+- **Exact checker:** [`verify_dyadic_hypercube_walsh.py`](verification/related/verify_dyadic_hypercube_walsh.py)
+
+### DYADIC-JOINT — exact joint spectrum of several defect coordinates
+
+- **Claim:** Every XOR test of finitely many dyadic defect coordinates is
+  governed by an explicit alternating additive-convolution matrix over
+  \(\mathbb F_2\). Its rank and radical determine the complete plateaued
+  Walsh spectrum, and finite Fourier inversion recovers every joint output
+  count exactly.
+- **Status:** Complete finite-dimensional theorem with exhaustive exact
+  checks; the general quadratic-form Fourier theorem is classical.
+- **Proof:** [Joint Walsh spectra for the dyadic defect](related-results/DyadicHypercubeJointSpectrum.md)
+- **Exact checker:** [`verify_dyadic_hypercube_walsh.py`](verification/related/verify_dyadic_hypercube_walsh.py)
+
 ### GBQ-MAP — Gaussian routing of the Bala--OEIS census
 
 - **Claim:** The reproducible 110-record Bala corpus divides exhaustively
