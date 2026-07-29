@@ -23,8 +23,8 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 0 | [Repository-wide dyadic audit policy](../DYADIC_POLICY.md) | Defines what must be checked before any all-prime or ramified theorem is called complete | Governing proof and ranking policy |
 | 1 | [Landau-depth synthesis](LandauDepthSupercongruenceSynthesis.md) | Extracts the A183068 carry-and-scaling proof into a computable theorem; contains an infinite all-prime $p^{2r}$ family and an all-prime $p^{3r}$ subfamily | Complete proof candidate; internal recheck passed, independent review pending |
 | 1A | [q-calculus and cyclotomic supercongruences](QCalculusCyclotomicSupercongruences.md) | Turns Landau depth into exact root-of-unity multiplicity; gives a square q-lift of A183068 and an explicit corrected cubic theorem for depth-three families | Complete deductions from Clark and Straub; exact polynomial checks; priority preliminary |
-| 1B | [Peter Bala's OEIS queue](BalaOeisSupercongruenceQueue.md) | Proves the A365029 boundary family and complete \(r=1\) adjacent congruence, plus the A375178 prime-level odd-power family; closes A333593 via Coster and Jacobsthal--Kazandzidis | Three complete elementary proofs, published-theorem reductions, and exact checks; priority preliminary |
-| 1B-A | [A365029 prime-level theorem](A365029PrimeLevelTheorem.md) | Proves \(a(np)\equiv a(n)\pmod {p^3}\) by shifted scaling plus half-system reciprocal-square cancellation, and isolates the exact higher-level block lemma | Complete unchecked proof; 35,356 exact checks |
+| 1B | [Peter Bala's OEIS queue](BalaOeisSupercongruenceQueue.md) | Proves the A365029 boundary family and first two adjacent levels, plus the A375178 prime-level odd-power family; closes A333593 via Coster and Jacobsthal--Kazandzidis | Three complete elementary proof packets, published-theorem reductions, and exact checks; priority preliminary |
+| 1B-A | [First two A365029 levels](A365029FirstTwoLevels.md) | Proves the \(p^3\) and \(p^6\) adjacent congruences by shifted scaling plus one- and two-digit harmonic cancellation | Complete unchecked proof; 67,310 exact checks |
 | 1B-L | [Supercongruence literature and Bala--OEIS census](SupercongruenceLiteratureCensus.md) | Maps a reproducible 110-record OEIS search to the published theorem families and consolidates the genuinely live targets before more proof work is spent | Literature map with explicit source and priority boundaries |
 | 1B-G | [Gaussian generalization map for the Bala queue](BalaGaussianGeneralizationMap.md) | Routes all 110 census records through five Gaussian proof architectures and separates formal coefficient changes from Frobenius twists and prime-ideal theorems | Exhaustive research map; no novelty claim |
 | 1B-GE | [Exact Bala Gaussian-twist pilot](BalaGaussianTwistPilot.md) | Tests three finite-sum routes and supplies exact counterexamples to blindly preserving the untwisted cubic exponent | 195 exact checks; computational triage |
@@ -94,7 +94,7 @@ The individual correspondence is:
 | --- | --- |
 | Landau depth | `verification/related/verify_landau_supercongruence.py` |
 | Peter Bala's OEIS queue | `verification/related/verify_bala_oeis_supercongruences.py` |
-| A365029 prime-level theorem | `verification/related/verify_a365029_prime_level.py` |
+| First two A365029 levels | `verification/related/verify_a365029_first_two_levels.py` |
 | q-calculus and cyclotomic lifts | `verification/related/verify_q_calculus_supercongruence.py` |
 | All-degree weighted-lift collisions | `verification/related/verify_weighted_lift_collision_synthesis.py` |
 | Fable Jacobian-counterexample counts | `verification/related/verify_jacobian_counterexample_counts.py` |
