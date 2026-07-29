@@ -480,12 +480,18 @@ proof.
   \[
   v_p(\mathcal K(p^r)-\mathcal K(p^{r-1}))=8(r-1)
   \]
-  for every odd prime.
+  for every odd prime. The same fibers determine the full Rényi profile,
+  localize every divergence from uniformity on the three
+  zero/square/nonsquare classes, make Pinsker asymptotically sharp, and give
+  an exact collision-entropy law for every additive convolution power.
 - **Status:** Complete elementary theorem with exact checks. Matrix-pencil
-  ingredients are classical; the paired Fourier supercongruence appears new
-  in a targeted search, with priority provisional.
+  ingredients and the entropy deductions are classical; the paired Fourier
+  supercongruence appears new in a targeted search, with priority
+  provisional.
 - **Proof:** [Hyperdeterminant Fourier supercongruence](related-results/HyperdeterminantFourierSupercongruence.md)
+- **Entropy companion:** [Hyperdeterminant entropy profile](related-results/HyperdeterminantEntropyProfile.md)
 - **Exact checker:** [`verify_hyperdeterminant_fourier.py`](verification/related/verify_hyperdeterminant_fourier.py)
+- **Entropy checker:** [`verify_hyperdeterminant_entropy.py`](verification/related/verify_hyperdeterminant_entropy.py)
 
 ### JC-WL - all-degree weighted-lift collision theorem
 

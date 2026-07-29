@@ -9,6 +9,13 @@ sum. Pairing the coefficients attached to the two quadratic-character
 classes removes that obstruction and gives a sharp integer
 adjacent-extension supercongruence.
 
+The companion
+[entropy profile](HyperdeterminantEntropyProfile.md) uses the same exact
+fibers and Fourier coefficient to determine every Rényi entropy and
+divergence from uniformity, localize the entropy deficit on the
+zero/square/nonsquare quotient, and compute collision entropy under every
+additive convolution power.
+
 The matrix-pencil and quadratic-form ingredients are classical. A targeted
 search did not locate the paired Fourier product or its exact
 adjacent-\(p^r\) valuation. Those formulations are recorded as apparently
@@ -357,3 +364,7 @@ The companion
 - checks every individual discriminant fiber against (2) and (3);
 - verifies the paired product (9);
 - checks the exact valuation (10) on a larger prime-and-extension grid.
+
+The entropy consequences have a separate
+[`verify_hyperdeterminant_entropy.py`](../verification/related/verify_hyperdeterminant_entropy.py)
+checker.
