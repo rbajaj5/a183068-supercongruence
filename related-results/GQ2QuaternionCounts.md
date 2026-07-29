@@ -3,7 +3,7 @@
 ## Status and source boundary
 
 Roe and Turturean ask for explicit formulas for the number of surjections
-from $G_{\mathbb Q_2}$ to a finite group. Their marked maximal pro-$2$
+from $G_{\mathbb Q_2}$ to a finite group. Their marked maximal pro-2
 presentation turns the generalized-quaternion case into a short coordinate
 calculation.
 
@@ -61,7 +61,7 @@ is exactly what creates the two low-order exceptions.
 
 ## 3. Evaluate the dyadic relator
 
-Every map to a finite $2$-group factors through the marked maximal pro-$2$
+Every map to a finite $2$-group factors through the marked maximal pro-2
 quotient in Roe--Turturean Proposition 1.1:
 
 $$D_0=\left\langle A,S,Y\ \middle|\ A^2S^4[S,Y]=1\right\rangle_{\mathrm{pro}\text{-}2},\qquad[S,Y]=S^{-1}Y^{-1}SY. \tag{5}$$
@@ -182,7 +182,7 @@ where $u$ is odd modulo $N$ and $v$ is arbitrary modulo $N$. Hence
 $$\left|\mathrm{Aut}(Q_{2^m})\right|=N\varphi(N)=\frac{N^2}{2}=2^{2m-3}. \tag{15}$$
 
 Postcomposition by target automorphisms acts freely on surjections.
-Dividing (1) by (15), with the separate order-$24$ calculation for $Q_8$,
+Dividing (1) by (15), with the separate order-24 calculation for $Q_8$,
 gives $6$, $20$, and $16$ extension classes.
 
 ## 7. External checks
