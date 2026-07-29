@@ -41,7 +41,7 @@ allocation, the portfolio currently has four tiers:
 | --- | --- | --- |
 | **A: specialist review now** | GWL-TWO, GWL-SCALE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
 | **B: broad theorem engines** | LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER | Reuse on named conjectures and consolidate families |
-| **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, HASH-MATROID, FQ-CT, GQ2-ABCOUNT, GQ2-DIHEDRAL | Improve experiments, certification, and proof organization |
+| **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, HASH-MATROID, FQ-CT, GQ2-ABCOUNT, GQ2-DIHEDRAL, GQ2-QUATERNION | Improve experiments, certification, and proof organization |
 | **D: retained open targets** | C11, CAT-ODD, BALA-TOWERS, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
 
 Tier A has the highest estimated mathematical payoff. Tier C is deliberately
@@ -95,6 +95,7 @@ without increasing a supercongruence exponent.
 | 29 | [CDE-DEFECT: Chowla--Dwork--Evans split-prime defect](related-results/ChowlaDworkEvansSplitDefect.md) | **4** | 1 | 1 | 6 | 10 | 1 | Exact reformulation of a published modulo-\(p^2\) theorem, with 1,125 exact regression checks and no novelty claim. |
 | 30 | [GQ2-ABCOUNT: finite abelian \(2\)-target counts](related-results/GQ2FiniteAbelianCounts.md) | **4** | 1 | 1 | 6 | 10 | 1 | Complete closed formula solving the finite abelian \(2\)-group subcase of Roe--Turturean's explicit-counting question; elementary from their abelianization and no novelty claim. |
 | 30 | [GQ2-DIHEDRAL: exact dihedral \(2\)-target counts](related-results/GQ2DihedralCounts.md) | **4** | 1 | 1 | 6 | 10 | 1 | Complete direct relator calculation for the first nonabelian target family; existing enumeration literature makes this a new derivation rather than a priority claim. |
+| 30 | [GQ2-QUATERNION: exact generalized-quaternion \(2\)-target counts](related-results/GQ2QuaternionCounts.md) | **4** | 1 | 1 | 6 | 10 | 1 | Complete direct relator calculation with exceptional \(Q_8,Q_{16}\) layers and a stable all-orders formula; published enumeration exists, so no priority claim. |
 | 30 | [GQ2-ORIENT: Roe--Turturean exact orientation lift](related-results/GQ2OrientationLifts.md) | **4** | 2 | 3 | 6 | 9 | 1 | Complete elementary sharpening: the compatible finite classes determine one nonintegral \(2\)-adic exponent; no correction or novelty claim. |
 | 31 | [GQ2-TWIST: dyadic HNN Dehn-twist tower and affine filtration](related-results/GQ2OrientationLifts.md#theorem-exact-pro-2-dehn-twist-tower) | **4** | 3 | 3 | 7 | 9 | 1 | Complete exact \(\mathbb Z_2\)-parameterized outer-twist tower and affine commutator-depth theorem; scope is the Roe--Turturean follow-on. |
 | 32 | [QUADRATIC-GAUSSIAN: A005259/A333592-family polynomial towers](related-results/QuadraticGaussianQueueTheorem.md) | **3** | 1 | 1 | 6 | 9 | 1 | Complete all-prime coefficientwise \(p^{2r}\) deduction for A005259 and every positive parameter pair in the A333592 family; classical-scaling infrastructure, not the stronger cubic conjecture. |

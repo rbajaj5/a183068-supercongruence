@@ -153,3 +153,9 @@ rather than only a linearized commutator correction, becomes visible.
 
 Ravi Andrew Bajaj and Alexander Burns.
 
+## Additional note
+
+The generalized-quaternion boundary proposed above has since been solved
+separately in
+[Exact generalized-quaternion target counts](related-results/GQ2QuaternionCounts.md).
+

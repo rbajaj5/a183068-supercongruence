@@ -729,6 +729,29 @@ proof.
 - **Proof:** [Exact dihedral target counts](related-results/GQ2DihedralCounts.md)
 - **Exact checker:** [`verify_gq2_dihedral_counts.py`](verification/related/verify_gq2_dihedral_counts.py)
 
+### GQ2-QUATERNION — exact generalized-quaternion \(2\)-target counts
+
+- **Claim:** For the generalized quaternion group \(Q_{2^m}\) of order
+  \(2^m\),
+  \[
+  |\operatorname{Sur}(G_{\mathbb Q_2},Q_{2^m})|
+  =
+  \begin{cases}
+  144,&m=3,\\
+  640,&m=4,\\
+  2^{2m+1},&m\ge5.
+  \end{cases}
+  \]
+- **Consequence:** There are \(6\) \(Q_8\)-extensions, \(20\)
+  \(Q_{16}\)-extensions, and \(16\) \(Q_{2^m}\)-extensions for every
+  \(m\ge5\).
+- **Status:** Complete direct calculation from the Roe--Turturean relator.
+  Yamagishi's counting method and later local-field tables cover the
+  enumeration, so this is a short new derivation and exact certificate, not
+  a priority claim.
+- **Proof:** [Exact generalized-quaternion target counts](related-results/GQ2QuaternionCounts.md)
+- **Exact checker:** [`verify_gq2_quaternion_counts.py`](verification/related/verify_gq2_quaternion_counts.py)
+
 ### GQ2-TWIST — dyadic HNN Dehn-twist tower
 
 - **Claim:** The HNN shears extend to an exact
