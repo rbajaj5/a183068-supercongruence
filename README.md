@@ -81,6 +81,14 @@ For the latter, Coster's published theorem supplies the complete
 further \(q\) powers. The accompanying checker performs 1,518 exact tests
 and keeps proved statements separate from experimental evidence.
 
+The companion
+**[supercongruence literature and Bala--OEIS census](related-results/SupercongruenceLiteratureCensus.md)**
+starts from a reproducible 110-record OEIS search, removes known Coster,
+Straub, Pan--Sun, and Dwork consequences from the open queue, and consolidates
+the remaining entries into theorem families.  It is a research-routing map,
+not a claim that all 110 records are open or that a negative search certifies
+novelty.
+
 ## Attribution
 
 - Paul D. Hanna created A183068 in December 2010 as the central terms of

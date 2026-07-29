@@ -6,6 +6,12 @@ deeper prime-power towers retained as exact computational targets. Literature
 priority is preliminary, and the new arguments have not been independently
 reviewed.
 
+The broader
+[supercongruence literature census](SupercongruenceLiteratureCensus.md)
+starts from 110 OEIS records returned by the reproducible query
+`"Peter Bala" supercongruence`, separates already-published instances from
+open refinements, and consolidates the next targets by proof mechanism.
+
 ## 1. Source inventory
 
 Peter Bala's OEIS postscript points to a substantial, coherent collection
@@ -16,6 +22,7 @@ representative targets by mechanism.
 | --- | --- | --- |
 | [A365029] | \(a(p-1)\equiv1\pmod{p^3}\), plus an all-\(n,r\) \(p^{3r}\) tower | The first congruence is proved below in the stronger two-parameter form \(p^{A+B}\); the tower remains a target |
 | [A375178] | An odd-power family satisfies \(b_m(p)\equiv1\pmod{p^{2m+3}}\), plus a stronger tower for \(r\ge2\) | The entire prime-level family is proved below; the tower remains a target |
+| [A375179], [A375180] | Two parallel signed odd-power families have the same proposed exponents | Retained as one consolidated extension of the A375178 program; neither follows formally from Theorem 2 below |
 | [A333593] | \(a(np^r)\equiv a(np^{r-1})\pmod{p^{3r}}\) | Proved below by an exact decomposition into a Coster generalized Apéry tower and a Jacobsthal--Kazandzidis binomial tower |
 | [A364118] | An Apéry linear combination gains two or three powers beyond the underlying tower | Modular/Apéry target; not yet reduced to the termwise framework |
 | [A364183] | A parity-sensitive height-one factorial ratio is integral and satisfies a \(p^{3r}\) tower | Integrality itself is still conjectural on the OEIS entry; treat before the tower |
@@ -368,6 +375,8 @@ Apéry theorem.
 [A333593]: https://oeis.org/A333593
 [A365029]: https://oeis.org/A365029
 [A375178]: https://oeis.org/A375178
+[A375179]: https://oeis.org/A375179
+[A375180]: https://oeis.org/A375180
 [A364118]: https://oeis.org/A364118
 [A364183]: https://oeis.org/A364183
 [Coster]: https://ir.cwi.nl/pub/5804/5804D.pdf
