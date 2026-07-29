@@ -144,6 +144,13 @@ quadratic baseline: the advertised untwisted \(p^{3r}\) conjecture remains
 open, and exact Gaussian witnesses show that the cubic exponent does not
 survive the part-count twist.
 
+The binary boundary is resolved separately by the
+**[dyadic hypercube defect theorem](related-results/DyadicHypercubeDefect.md)**.
+It proves the sharp unrestricted modulus \(2^{2r-1}\) and identifies the
+exact modulus-\(4\) obstruction as a quadratic Boolean map on the two
+coefficient-bit layers. This is a complete \(p=2\) replacement, not an
+attempt to infer the binary case from the odd-prime theorem.
+
 ## Attribution
 
 - Paul D. Hanna created A183068 in December 2010 as the central terms of
