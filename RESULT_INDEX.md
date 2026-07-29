@@ -222,6 +222,31 @@ proof.
 - **Proof:** [Quadratic queue theorem](related-results/QuadraticGaussianQueueTheorem.md)
 - **Exact checker:** [`verify_quadratic_gaussian_queue.py`](verification/related/verify_quadratic_gaussian_queue.py)
 
+### CYCLOTOMIC-PAIR — A228960 and A350383 coefficientwise towers
+
+- **Claim:** If
+  \[
+  \mathcal C_N(X)=\sum_{3k\le N}\binom Nk\binom N{3k}X^k
+  \]
+  and
+  \[
+  \mathcal D_N(X)=
+  \sum_{3k\le N}(-1)^{N-k}
+  \binom{N+k-1}k\binom N{3k}X^k,
+  \]
+  then, for either family \(\mathcal F\) and every prime \(p\ge5\),
+  \[
+  \mathcal F_{np^r}(X)\equiv
+  \mathcal F_{np^{r-1}}(X^p)\pmod {p^{2r}}.
+  \]
+  At \(X=1\) this proves the named A228960 and A350383 conjectures; at
+  \(X=i\) it gives their split/inert Gaussian specializations.
+- **Status:** Complete elementary proof candidate with explicit small-prime
+  counterexamples; priority search preliminary.  The broader cyclotomic
+  rational-function conjecture remains open.
+- **Proof:** [Cyclotomic coefficient-pair theorem](related-results/CyclotomicCoefficientPairTheorem.md)
+- **Exact checker:** [`verify_cyclotomic_coefficient_pair.py`](verification/related/verify_cyclotomic_coefficient_pair.py)
+
 ### GBQ-MAP — Gaussian routing of the Bala--OEIS census
 
 - **Claim:** The reproducible 110-record Bala corpus divides exhaustively

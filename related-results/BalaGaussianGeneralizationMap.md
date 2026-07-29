@@ -199,9 +199,13 @@ A333097 A348410 A350383 A351857 A351858 A352373 A362722 A362733
 A363864 A363867 A363871 A364303 A380290
 ```
 
-The most economical first inspections are A228960, A350383, A331562, and
-A380290 because their live records already advertise coefficient or
-power-series structure.  The required output is an explicit Laurent
+The first two inspections, A228960 and A350383, are now closed by the
+[cyclotomic coefficient-pair theorem](CyclotomicCoefficientPairTheorem.md).
+Their factorizations expose finite binomial sums, and a direct
+discard-and-rescale proof is stronger and simpler than a Dwork conversion.
+The next economical inspections are A331562 and A380290 because their live
+records still advertise coefficient or power-series structure without an
+available finite-sum closure.  Their required output is an explicit Laurent
 polynomial or rational diagonal and a written match to a Dwork theorem, not
 another numerical congruence table.
 
@@ -281,12 +285,17 @@ obstruction.
 
 | Rank | Target | Route | Immediate deliverable | Main risk |
 | ---: | --- | --- | --- | --- |
-| 1 | A228960, A350383, A331562, A380290 | C | Produce explicit \(\mathbb Z[i]\) period models and inspect Frobenius eigenspaces | Dwork hypotheses or exponent may fail |
+| 1 | A331562, A380290 | C | Produce explicit \(\mathbb Z[i]\) period models and inspect Frobenius eigenspaces | Dwork hypotheses or exponent may fail |
 | 2 | Nearby depth-three finite sums beyond the closed pilot | T | Compute whether the scaling quotient remains deep after weighting | Twisting can remove cancellation used by the untwisted proof |
 | 3 | A183068 and the repository's Landau-depth family | T | Package the already-proved general Frobenius-twist corollary family | Mostly a reusable corollary, not a new local mechanism |
 | 4 | A008793 and A049505 | M | Identify a quartic-character or CM decomposition | No canonical Gaussian object may exist |
 | 5 | A364506, A364509, A008978, A002897 | F | Define and prove integrality of the Gaussian block analogue | Definition and denominator control precede congruences |
 | 6 | Derived entries | D | Trace every claim back to compatible source theorems | Derived operations may not commute with Frobenius |
+
+A228960 and A350383 have left this open queue: one coefficientwise theorem
+proves both \(p^{2r}\) towers for \(p\ge5\) and supplies their split/inert
+Gaussian specializations.  The broader cyclotomic-rational-function
+principle recorded on A228960 remains open.
 
 Two larger repository targets sit outside the literal 110-record query but
 belong in the working queue: A183068 itself and the recently inspected

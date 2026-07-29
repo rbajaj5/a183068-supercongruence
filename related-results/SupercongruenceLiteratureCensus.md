@@ -96,6 +96,7 @@ The following examples show why the routing pass is necessary.
 | [A375178](https://oeis.org/A375178), cubic baseline | Coster supplies the \(p^{3r}\) tower for every exponent \(q\ge2\).  Bala's stronger \(p^{3r+q}\) odd-power tower remains open. |
 | [A365029](https://oeis.org/A365029), boundary | The repository proves the stronger prime-boundary result \(C_{A,B}(p-1)\equiv1\pmod {p^{A+B}}\).  The adjacent-scale tower remains open. |
 | [A183068](https://oeis.org/A183068) | This repository contains a proposed all-prime proof and exact checks.  It remains a proof candidate pending conventional specialist review. |
+| [A228960](https://oeis.org/A228960) and [A350383](https://oeis.org/A350383) | The repository's cyclotomic coefficient-pair theorem proves both displayed \(p^{2r}\) towers for \(p\ge5\), coefficientwise.  The broader cyclotomic-rational-function principle on A228960 remains open. |
 
 ## 4. Consolidated live targets
 
@@ -110,9 +111,8 @@ than separate papers.
 | 4 | [A008793](https://oeis.org/A008793), plane partitions in a cube | Its nonlinear congruence \(a(np^r)\equiv a(np^{r-1})^p\pmod {p^{4r}}\) has independent enumerative content and does not resemble a routine Coster corollary | \(p\)-adic logarithm of MacMahon's product |
 | 5 | [A331562](https://oeis.org/A331562), all row sequences | Rows \(2,3,4\) are known; a uniform row theorem would replace infinitely many entries with one statement | Transfer matrix or rational-diagonal representation |
 | 6 | [A364173](https://oeis.org/A364173)--[A364185](https://oeis.org/A364185) | The entries mix parity-dependent factorial ratios, and some still state integrality only conjecturally | Landau step functions first, supercongruences second |
-| 7 | [A228960](https://oeis.org/A228960) and [A350383](https://oeis.org/A350383) | Bala proposes a broad cyclotomic-rational-function \(p^{2r}\) principle | Constant-term conversion and a precise Dwork/Newton-polytope audit |
-| 8 | [A380290](https://oeis.org/A380290) and related coefficient-power transforms | These are natural Dwork candidates, but the precise period and Hasse--Witt hypotheses have not been matched | Laurent-polynomial period construction |
-| 9 | [A333592](https://oeis.org/A333592) | The neighboring A333593 reduction does not automatically settle this unweighted positive sum or its two-parameter extension | Exact comparison with Coster's \(w_{A,B,\epsilon}\) families |
+| 7 | [A380290](https://oeis.org/A380290) and related coefficient-power transforms | These are natural Dwork candidates, but the precise period and Hasse--Witt hypotheses have not been matched | Laurent-polynomial period construction |
+| 8 | [A333592](https://oeis.org/A333592) | The coefficientwise quadratic tower is proved in this repository, but its stronger untwisted cubic conjecture remains open | Exact comparison with Coster's \(w_{A,B,\epsilon}\) families |
 
 The first three targets are closest to the current repository machinery.  The
 plane-partition target is less likely to be quick, but a successful result
