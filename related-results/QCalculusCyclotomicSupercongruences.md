@@ -202,6 +202,39 @@ When $n=p^r$, evaluation at $q=1$ turns the modulus into $p^e$.
 The q-congruence is finer than that specialization because it retains
 the primitive-root information before the carry levels are collapsed.
 
+### The square theorem does not promote to a product modulus
+
+For the A183068 case, it is tempting to conjecture the adjacent-scale
+strengthening
+
+```math
+\mathcal A_{4,2}(Np^r;q)
+\stackrel{?}{\equiv}
+\mathcal A_{4,2}(Np^{r-1};q^{p^2})
+\pmod{\prod_{i=1}^{r}\Phi_{p^i}(q)^2}.
+\qquad\text{(13a)}
+```
+
+At $q=1$, its modulus would become $p^{2r}$. However, (13a) is false
+already for $(p,r,N)=(2,2,1)$. Reducing at a primitive fourth root $q=i$
+gives exactly
+
+```math
+\mathcal A_{4,2}(4;i)=26,
+\qquad
+\mathcal A_{4,2}(2;i^4)=3246,
+```
+
+so the difference is $-3220$, not zero. It is therefore not divisible even
+by $\Phi_4(q)$.
+
+This counterexample fixes the scope of Theorem 2. The exact cyclotomic
+filtration still proves the entire vanishing stratum after specialization,
+but the rescaling stratum needs the prime-sensitive integer
+Ljunggren--Jacobsthal--Kazandzidis estimate. The one-level q-congruence is a
+valid refinement; it is not an independent all-level proof of the classical
+supercongruence.
+
 ## 4. The second q-jet and a corrected cubic theorem
 
 For a tuple $\mathbf b=(b_1,\ldots,b_m)$ define its pair energy
@@ -436,7 +469,8 @@ The dependency-free checker verifies:
 
 - 44,590 exact cyclotomic Landau identities;
 - 1,567 active A183068 cyclotomic levels, including the binary bonus;
-- 24 square-cyclotomic polynomial congruences at scales $2,3,4,5$; and
+- 24 square-cyclotomic polynomial congruences at scales $2,3,4,5$;
+- the exact $-3220$ obstruction to the natural multilevel promotion; and
 - 12 corrected cubic polynomial congruences for $p=5,7$.
 
 The program performs arithmetic in

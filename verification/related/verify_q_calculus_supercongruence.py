@@ -254,6 +254,26 @@ def check_square_congruences() -> int:
     return checks
 
 
+def check_natural_multilevel_obstruction() -> int:
+    """Check the exact obstruction to the tempting all-level q-lift.
+
+    At q = i, reduction modulo Phi_4(q) = q^2 + 1 gives
+
+        A_4,2(4; q) - A_4,2(2; q^4) = -3220,
+
+    so the difference is not divisible by Phi_4(q), much less by
+    [4]_q^2 = Phi_2(q)^2 Phi_4(q)^2.
+    """
+    modulus = PolynomialModulus(list(cyclotomic(4)))
+    calculator = QMultinomialCalculator(modulus)
+    left = calculator.a_uv(4, 2, 4)
+    right = calculator.a_uv(4, 2, 2, 4)
+    assert left == [26]
+    assert right == [3246]
+    assert modulus.subtract(left, right) == [-3220]
+    return 1
+
+
 def check_corrected_cubic_congruences() -> int:
     """Check the explicit Straub correction modulo Phi_p(q)^3."""
     checks = 0
@@ -290,16 +310,19 @@ def main() -> None:
     landau_checks = check_cyclotomic_landau_identity()
     filtration_checks = check_a183068_cyclotomic_filtration()
     square_checks = check_square_congruences()
+    obstruction_checks = check_natural_multilevel_obstruction()
     cubic_checks = check_corrected_cubic_congruences()
     total = (
         landau_checks
         + filtration_checks
         + square_checks
+        + obstruction_checks
         + cubic_checks
     )
     print(f"cyclotomic Landau identities: {landau_checks}")
     print(f"A183068 active cyclotomic levels: {filtration_checks}")
     print(f"square q-congruences: {square_checks}")
+    print(f"natural multilevel obstructions: {obstruction_checks}")
     print(f"corrected cubic q-congruences: {cubic_checks}")
     print(f"all {total} q-calculus checks passed")
 

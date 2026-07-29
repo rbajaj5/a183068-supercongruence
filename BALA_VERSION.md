@@ -242,14 +242,14 @@ F(pN',p\ell)\equiv F(N',\ell)\pmod {p^{2r}}
 for every prime. Combined with the vanishing result, summing over \(\ell\)
 proves the conjecture.
 
-## 5. What creative microscoping contributes
+## 5. Closing the creative-microscoping route
 
 Guo and Zudilin's creative-microscoping method is a genuine but different
 route: it constructs specialized \(q\)-analogues and proves congruences
 modulo powers of cyclotomic polynomials.
 
-The public project already contains a partial completion of this suggestion.
-Define the \(q\)-multinomial summand
+For the present sequence, the suggestion can be resolved completely without
+leaving a further theorem as an open obligation. Define
 
 ```math
 F_q(N,k)=M_q(k,k,k,k,N-k,N-k).
@@ -263,7 +263,18 @@ v_{\Phi_{p^i}(q)}(F_q(N,k))
 2+\left\lfloor\frac{2(k\bmod p^i)}{p^i}\right\rfloor
 ```
 
-at every active level. The project also proves the square-cyclotomic lift
+at every active level. Therefore, if \(p^r\mid N\) and \(p\nmid k\),
+
+```math
+\prod_{i=1}^{r}\Phi_{p^i}(q)^2
+\quad\text{divides}\quad F_q(N,k).
+```
+
+Evaluating at \(q=1\) gives \(p^{2r}\mid F_1(N,k)\). Thus creative
+microscoping supplies a complete cyclotomic proof of the vanishing half of
+the argument.
+
+The project also proves the valid single-level square-cyclotomic lift
 
 ```math
 \mathcal A_{4,2}(nN;q)
@@ -275,15 +286,54 @@ at every active level. The project also proves the square-cyclotomic lift
 See
 [Q-calculus and cyclotomic supercongruences](related-results/QCalculusCyclotomicSupercongruences.md).
 
-This does not yet replace the all-level \(p^{2r}\) proof. For \(n=p^r\),
-specializing the single factor \(\Phi_{p^r}(q)^2\) at \(q=1\) supplies
-\(p^2\), not \(p^{2r}\). A complete creative-microscope proof would require
-a compatible multilevel cyclotomic modulus or another mechanism tying the
-levels together.
+There is a tempting way to try to promote this lift to the whole theorem:
 
-Accordingly, creative microscoping is a legitimate follow-on research
-direction, but it is not an omitted one-line justification of the original
-congruence.
+```math
+\mathcal A_{4,2}(Np^r;q)
+\stackrel{?}{\equiv}
+\mathcal A_{4,2}(Np^{r-1};q^{p^2})
+\pmod{
+  \prod_{i=1}^{r}\Phi_{p^i}(q)^2
+}.
+\qquad\text{(CM)}
+```
+
+At \(q=1\), the proposed modulus becomes \(p^{2r}\), so (CM) would be
+exactly the desired all-level creative-microscope proof.
+
+However, (CM) is false. Take \(p=2\), \(r=2\), and \(N=1\). At a primitive
+fourth root \(q=i\), exact Gaussian-multinomial evaluation gives
+
+```math
+\mathcal A_{4,2}(4;i)=26,
+\qquad
+\mathcal A_{4,2}(2;i^4)=\mathcal A_{4,2}(2;1)=3246.
+```
+
+Their difference is
+
+```math
+26-3246=-3220\ne0.
+```
+
+Hence the difference is not even divisible by \(\Phi_4(q)\), whereas the
+proposed modulus contains \(\Phi_4(q)^2\). This is an exact counterexample,
+not a failure of numerical precision.
+
+The outcome is therefore definitive:
+
+1. the cyclotomic filtration completely proves the vanishing of the
+   \(p\nmid k\) stratum;
+2. the square-cyclotomic theorem is a valid one-level \(q\)-refinement;
+3. the natural all-level promotion that would independently imply
+   \(p^{2r}\) is false; and
+4. the \(p\mid k\) stratum must use the prime-sensitive multinomial scaling
+   lemma from Sections 3--4.
+
+Thus creative microscoping closes into the same termwise proof rather than
+leaving a separate extension open. A differently normalized or corrected
+\(q\)-analogue could be studied on its own, but no such conjecture is needed
+or asserted here.
 
 ## 6. Completed route map
 
@@ -294,7 +344,7 @@ congruence.
 | Morita \(\Gamma_p\) | Express the scaling quotient through unit blocks | Exact identity above; required estimate is the same scaling lemma | Complete interpretation, not a second proof |
 | Block decomposition | Separate surviving and vanishing strata | Implemented by the \(p\mid k\) split and valuation filtration | Complete |
 | Exceptional primes | Account for losses at \(2,3\) | Explicit \(\epsilon_p\) plus the \(p=2,r=1\) parity endgame | Complete |
-| Creative microscoping | Seek a cyclotomic refinement | Exact q-carry filtration and square-cyclotomic lift | Partial; multilevel lift remains open |
+| Creative microscoping | Resolve the cyclotomic interpretation | Exact q-carry proof of vanishing; square one-level lift; exact counterexample to the natural multilevel promotion | Complete; no open claim is used |
 | Generic Dwork shortcut | Explain the result through a Laurent polynomial | The displayed polynomial has three interior lattice points | Standard unique-interior shortcut does not apply |
 
 ## 7. Verification and review target
@@ -319,8 +369,10 @@ For a focused human review, the two load-bearing points are:
 2. the central-binomial parity repair at \(p=2,r=1\).
 
 The complete linear argument is in [`PROOF.md`](PROOF.md). This Bala version
-records how the forwarded suggestions autocomplete into that argument and
-which q-theoretic extension remains genuinely open.
+records how the forwarded suggestions autocomplete into that argument. It
+also separates the valid square-cyclotomic theorem from the false natural
+multilevel promotion, so none of the forwarded proof routes is left as an
+unresolved obligation.
 
 ## References
 
