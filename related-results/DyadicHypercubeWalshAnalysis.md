@@ -6,7 +6,7 @@ classical. No priority claim is made for the matching-spectrum calculation.
 
 ## 1. One output coefficient is a matching quadratic
 
-Let \(A\subset\mathbb N^d\) be finite and write
+Let $A\subset\mathbb N^d$ be finite and write
 
 ```math
 F=\sum_{\alpha\in A}a_\alpha X^\alpha,
@@ -26,7 +26,7 @@ The dyadic defect is
 \qquad\text{(2)}
 ```
 
-Fix a target monomial \(X^\gamma\). Let \(P_\gamma\) be the set of
+Fix a target monomial $X^\gamma$. Let $P_\gamma$ be the set of
 unordered pairs
 
 ```math
@@ -51,8 +51,8 @@ and put
 \qquad\text{(4)}
 ```
 
-The pairs in \(P_\gamma\) are disjoint: once \(\alpha\) is chosen, its
-possible partner is uniquely \(\gamma-\alpha\). Thus \(P_\gamma\) is a
+The pairs in $P_\gamma$ are disjoint: once $\alpha$ is chosen, its
+possible partner is uniquely $\gamma-\alpha$. Thus $P_\gamma$ is a
 matching, not an arbitrary graph.
 
 ### Theorem 1 (matching normal form)
@@ -104,13 +104,13 @@ The coefficient formula from the
 \epsilon_\alpha\epsilon_\beta X^{\alpha+\beta}.
 ```
 
-Extracting \(X^\gamma\) gives (5). The uniqueness of
-\(\gamma-\alpha\) proves that its quadratic graph is a matching.
-\(\square\)
+Extracting $X^\gamma$ gives (5). The uniqueness of
+$\gamma-\alpha$ proves that its quadratic graph is a matching.
+$\square$
 
 ## 2. Exact counts on the coefficient cube
 
-Choose the residues \(a_\alpha\bmod4\) independently and uniformly. Then:
+Choose the residues $a_\alpha\bmod4$ independently and uniformly. Then:
 
 ```math
 \Pr(q_\gamma=0)
@@ -123,7 +123,7 @@ Choose the residues \(a_\alpha\bmod4\) independently and uniformly. Then:
 \qquad\text{(7)}
 ```
 
-Equivalently, among the \(4^{|A|}\) coefficient arrays modulo \(4\), the
+Equivalently, among the $4^{|A|}$ coefficient arrays modulo $4$, the
 number with vanishing target defect is
 
 ```math
@@ -137,10 +137,10 @@ number with vanishing target defect is
 \qquad\text{(8)}
 ```
 
-When \(k_\gamma=0=\delta_\gamma\), the second line gives all
-\(4^{|A|}\) arrays, as it should.
+When $k_\gamma=0=\delta_\gamma$, the second line gives all
+$4^{|A|}$ arrays, as it should.
 
-Indeed, each product \(x_jy_j\) equals \(1\) with probability \(1/4\).
+Indeed, each product $x_jy_j$ equals $1$ with probability $1/4$.
 Therefore
 
 ```math
@@ -151,7 +151,7 @@ Therefore
 \qquad\text{(9)}
 ```
 
-A free linear bit \(z\) makes the expectation zero. Equation (7) follows
+A free linear bit $z$ makes the expectation zero. Equation (7) follows
 from
 
 ```math
@@ -165,7 +165,7 @@ coefficients are random.
 
 ## 3. Complete Walsh spectrum
 
-For a Boolean variable \(u\), write
+For a Boolean variable $u$, write
 
 ```math
 \chi_u=(-1)^u.
@@ -182,7 +182,7 @@ The sign function of one matching edge satisfies
 
 ### Theorem 2 (flat matching spectrum)
 
-For \(g_\gamma=(-1)^{q_\gamma}\),
+For $g_\gamma=(-1)^{q_\gamma}$,
 
 ```math
 g_\gamma
@@ -197,12 +197,12 @@ g_\gamma
 
 Consequently:
 
-1. exactly \(4^k\) Walsh coefficients are nonzero;
-2. every nonzero coefficient has absolute value \(2^{-k}\);
-3. the constant coefficient is \(2^{-k}\) if \(\delta=0\), and \(0\)
-   if \(\delta=1\);
-4. each matching variable has influence \(1/2\);
-5. the diagonal high bit, when present, has influence \(1\); and
+1. exactly $4^k$ Walsh coefficients are nonzero;
+2. every nonzero coefficient has absolute value $2^{-k}$;
+3. the constant coefficient is $2^{-k}$ if $\delta=0$, and $0$
+   if $\delta=1$;
+4. each matching variable has influence $1/2$;
+5. the diagonal high bit, when present, has influence $1$; and
 6. the total influence is
 
    ```math
@@ -211,7 +211,7 @@ Consequently:
    ```
 
 The formula also gives the exact noise stability. If two hypercube points
-are \(\rho\)-correlated in the standard Fourier sense, then
+are $\rho$-correlated in the standard Fourier sense, then
 
 ```math
 \mathrm{Stab}_\rho(g_\gamma)
@@ -224,13 +224,13 @@ are \(\rho\)-correlated in the standard Fourier sense, then
 #### Proof
 
 Multiplying (10) over the disjoint matching edges proves (11). Each edge
-offers four Walsh characters with coefficients of magnitude \(1/2\), so
-the product has \(4^k\) coefficients of magnitude \(2^{-k}\). Multiplying
-by \(\chi_z\) shifts every Fourier set by \(z\), proving the first three
+offers four Walsh characters with coefficients of magnitude $1/2$, so
+the product has $4^k$ coefficients of magnitude $2^{-k}$. Multiplying
+by $\chi_z$ shifts every Fourier set by $z$, proving the first three
 claims.
 
-Flipping \(x_j\) changes \(x_jy_j\) exactly when \(y_j=1\), which has
-probability \(1/2\); similarly for \(y_j\). Flipping \(z\) always changes
+Flipping $x_j$ changes $x_jy_j$ exactly when $y_j=1$, which has
+probability $1/2$; similarly for $y_j$. Flipping $z$ always changes
 the output. This proves (12).
 
 Finally, noise stability is
@@ -247,16 +247,16 @@ For each edge, the four squared Fourier weights contribute
 \frac{(1+\rho)^2}{4}.
 ```
 
-The optional character \(\chi_z\) contributes \(\rho^\delta\), proving
-(13). \(\square\)
+The optional character $\chi_z$ contributes $\rho^\delta$, proving
+(13). $\square$
 
 ## 4. Every affine face has the same normal form
 
 Fix any subset of the active bits to constants. An intact matching edge
-remains \(xy\). If one endpoint is fixed to \(0\), its term disappears. If
-one endpoint is fixed to \(1\), the other endpoint becomes a linear term.
+remains $xy$. If one endpoint is fixed to $0$, its term disappears. If
+one endpoint is fixed to $1$, the other endpoint becomes a linear term.
 Fixing both endpoints contributes a constant. The same alternatives hold
-for the diagonal bit \(z\).
+for the diagonal bit $z$.
 
 ### Theorem 3 (face closure)
 
@@ -269,8 +269,8 @@ c+\sum_{j=1}^{k'}x_jy_j+\sum_{\ell=1}^{t}z_\ell
 \qquad\text{(14)}
 ```
 
-If \(t>0\), the restricted function is balanced. If \(t=0\), its signed
-bias has absolute value \(2^{-k'}\). Hence the number of zeros on every
+If $t>0$, the restricted function is balanced. If $t=0$, its signed
+bias has absolute value $2^{-k'}$. Hence the number of zeros on every
 face is known exactly.
 
 This closure property is useful for partial coefficient information:
@@ -279,7 +279,7 @@ It only deletes matching edges or converts them into linear constraints.
 
 ## 5. CSP and verification interpretation
 
-For one target coefficient, the modulus-\(4\) obstruction is an
+For one target coefficient, the modulus-$4$ obstruction is an
 XOR-of-ANDs constraint on a matching. It has:
 
 - an exact model count from (8);
