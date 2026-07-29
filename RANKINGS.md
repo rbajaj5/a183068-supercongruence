@@ -41,7 +41,7 @@ allocation, the portfolio currently has four tiers:
 | --- | --- | --- |
 | **A: specialist review now** | GWL-TWO, GWL-SCALE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
 | **B: broad theorem engines** | LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER | Reuse on named conjectures and consolidate families |
-| **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, HASH-MATROID, FQ-CT, WALK-FROB, GQ2-ABCOUNT, GQ2-DIHEDRAL, GQ2-QUATERNION, GQ2-MAXCYCLIC, GQ2-EXTRASPECIAL | Improve experiments, certification, and proof organization |
+| **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, BLACK-WALSH, HASH-MATROID, FQ-CT, WALK-FROB, GQ2-ABCOUNT, GQ2-DIHEDRAL, GQ2-QUATERNION, GQ2-MAXCYCLIC, GQ2-EXTRASPECIAL | Improve experiments, certification, and proof organization |
 | **D: retained open targets** | C11, CAT-ODD, BALA-TOWERS, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
 
 Tier A has the highest estimated mathematical payoff. Tier C is deliberately
@@ -86,6 +86,7 @@ without increasing a supercongruence exponent.
 | 24 | [DWORK-BOUNDARY: failure of the proposed shortcut](related-results/FrobeniusQuotientConstantTerms.md#3-what-the-standard-dwork-theorem-does-not-supply-automatically) | **4** | 1 | 5 | 5 | 9 | 2 | Complete exact counterexamples delimiting the constant-term approach. |
 | 25 | [GFT: Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md) | **4** | 3 | 4 | 7 | 8 | 3 | Complete elementary deduction; literature priority unchecked. |
 | 25 | [WALK-FROB: finite lattice-walk Frobenius congruences](related-results/LatticeWalkFrobeniusCongruences.md) | **4** | 3 | 2 | 8 | 9 | 2 | Complete trace/Euler-product proof with Gaussian and Eisenstein local tables and ramified uniformizer bounds; unramified theorem is standard infrastructure, and no SAW-to-SLE arithmetic implication is claimed. |
+| 25 | [BLACK-WALSH: planar-noise Walsh congruence](related-results/BlackNoiseWalshCongruences.md) | **4** | 4 | 3 | 8 | 9 | 2 | Complete lacunary-spectrum theorem giving a \(3r-2\) congruence at every Gaussian prime for complement-odd finite noise observables; black-noise scaling limits are cited context, not proof input. |
 | 25 | [BALA-BOUNDARY: strengthened A365029 boundary family](related-results/BalaOeisSupercongruenceQueue.md#2-a-stronger-boundary-theorem-for-a365029) | **4** | 1 | 6 | 7 | 8 | 2 | Complete termwise proof strengthening a named OEIS conjecture to modulus \(p^{A+B}\); 390 exact checks pass. |
 | 25 | [DYADIC-WALSH: matching spectrum of the binary defect](related-results/DyadicHypercubeWalshAnalysis.md) | **4** | 3 | 2 | 8 | 10 | 1 | Complete exact Boolean-Fourier classification of each defect coordinate, including face counts and noise stability; useful for CSP verification, but based on classical matching-quadratic analysis. |
 | 25 | [DYADIC-JOINT: joint spectrum of the binary defect](related-results/DyadicHypercubeJointSpectrum.md) | **4** | 4 | 2 | 9 | 10 | 1 | Exact joint model counts, collision probability, chi-squared distance, support bound, and total-variation certificate from alternating convolution ranks; classical quadratic-form Fourier analysis. |
