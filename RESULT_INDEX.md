@@ -179,6 +179,26 @@ proof.
 - **Proof:** [Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md)
 - **Exact checker:** [`verify_gaussian_twists.py`](verification/related/verify_gaussian_twists.py)
 
+### GBQ-MAP — Gaussian routing of the Bala--OEIS census
+
+- **Claim:** The reproducible 110-record Bala corpus divides exhaustively
+  into 40 finite-sum twists, 37 coefficient/constant-term problems, 14
+  factorial/block constructions, 14 modular-product problems, and 5 derived
+  sequences.
+- **Status:** Complete research-routing classification; not a theorem or
+  priority certificate.
+- **Map:** [Gaussian generalization map](related-results/BalaGaussianGeneralizationMap.md)
+
+### GBQ-PILOT — exact Gaussian-twist boundary experiment
+
+- **Claim:** In 195 exact adjacent-scale tests, A005260 retains exponent
+  \(3r\) for \(p\ge5\) but only \(2r\) at \(p=3\), while A005259 and A333592
+  retain \(2r\). Exact equality witnesses reject the naive cubic twisted
+  claim in all three boundary cases.
+- **Status:** Computational triage, not a proof.
+- **Report:** [Bala Gaussian-twist pilot](related-results/BalaGaussianTwistPilot.md)
+- **Exact checker:** [`verify_bala_gaussian_twist_pilot.py`](verification/related/verify_bala_gaussian_twist_pilot.py)
+
 ### CDE-DEFECT — Chowla--Dwork--Evans split-prime defect
 
 - **Claim:** The published Chowla--Dwork--Evans modulo-\(p^2\) theorem is

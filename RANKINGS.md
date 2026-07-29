@@ -87,8 +87,10 @@ stated target. Maturity records the work presently in the repository.
 | 2 | [CAT-ODD: Catalan ballot-power supercongruences](related-results/CatalanBallotPowerSupercongruenceAudit.md) | **7** | 1 | 5 | 8 | 2 | 8 | Three named \(p^{3r}\) conjectures unified as one computational target; sharp \(p=2,3\) refinements are experimental. |
 | 2 | [BALA-TOWERS: A365029 and A375178 towers](related-results/BalaOeisSupercongruenceQueue.md#5-exact-status-of-the-remaining-first-queue) | **7** | 1 | 6 | 8 | 4 | 6 | Two named OEIS prime-power targets with 145 exact checks; A333593 is closed, and Coster supplies the complete cubic baseline beneath the stronger A375178 target. |
 | 3 | [s18-2: binary supercongruence reduction](related-results/S18TwoAdicReduction.md) | **7** | 1 | 7 | 6 | 3 | 8 | Substantial reduction to one sharpened scaling lemma; target not proved. |
-| 4 | [GL-MAP: Gaussian literature and structural map](related-results/GaussianLucasLiteraturePuzzle.md) | **3** | 1 | 1 | 7 | 8 | Literature synthesis, not a theorem or novelty certificate. |
-| 5 | [G-BOUNDARY: classical Gaussian obstructions](related-results/GaussianCitationNetworkBoundaryReport.md) | **3** | 1 | 4 | 4 | 6 | 5 | Rigorous reductions and bounded searches, not solutions of the classical problems. |
+| 4 | [GBQ-PILOT: Bala Gaussian-twist pilot](related-results/BalaGaussianTwistPilot.md) | **5** | 1 | 3 | 7 | 7 | 7 | 195 exact tests identify A005260 as a plausible depth-three twist target and disprove naive cubic extrapolations for A005259 and A333592; no proof yet. |
+| 5 | [GBQ-MAP: Gaussian routing of the Bala census](related-results/BalaGaussianGeneralizationMap.md) | **4** | 1 | 1 | 10 | 9 | 3 | Exhaustive routing of 110 records into five proof architectures; high portfolio breadth, but not a theorem or novelty certificate. |
+| 6 | [GL-MAP: Gaussian literature and structural map](related-results/GaussianLucasLiteraturePuzzle.md) | **3** | 1 | 1 | 7 | 8 | Literature synthesis, not a theorem or novelty certificate. |
+| 7 | [G-BOUNDARY: classical Gaussian obstructions](related-results/GaussianCitationNetworkBoundaryReport.md) | **3** | 1 | 4 | 4 | 6 | 5 | Rigorous reductions and bounded searches, not solutions of the classical problems. |
 
 ## Portfolio reading
 

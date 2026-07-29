@@ -44,6 +44,14 @@ for odd primes, does not close an all-prime OEIS statement. The \(p=2\)
 normalization, sign, first lifting level, and any ramification must be matched
 separately.
 
+A complementary
+[Gaussian generalization map](BalaGaussianGeneralizationMap.md) classifies
+all 110 records by the proof operation a Gaussian extension would require.
+It should be consulted before adding an \(i^k\)-twist: only 40 records have a
+direct finite-sum route, and even there the
+[exact pilot](BalaGaussianTwistPilot.md) shows that the untwisted exponent can
+drop after twisting.
+
 ## 2. The theorem-routing table
 
 | Mechanism | Published starting points | Bala/OEIS families it should be checked against | Boundary |
