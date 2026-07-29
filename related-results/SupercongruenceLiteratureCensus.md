@@ -66,6 +66,15 @@ drop after twisting.
 | Creative \(q\)-microscoping | Guo--Zudilin and later Dwork-type \(q\)-congruences | Proposed cyclotomic lifts of binomial and hypergeometric towers | A suitable \(q\)-analogue must be proved. The most obvious multilevel \(q\)-lift can be false even when the integer congruence is true. |
 | Orbit counting and CRT | Kallat's proof of A028342 | Exponential generating functions with a direct labeled-combinatorial model | This is a distinct mechanism from factorial-ratio scaling and should not be forced onto truncated binomial sums without an actual action. |
 
+One superficially close item must not be used as infrastructure:
+Hartosh Singh Bal's 2025 preprint on Witt--Hadamard calculus, norm descent,
+and prime-ideal ladders was
+[withdrawn](https://arxiv.org/abs/2509.25038). The current arXiv record
+states that its number-field Dold-congruence and norm-descent formulations
+and proofs contain major errors. Its vocabulary is relevant to the
+Euler-product program, but none of its withdrawn number-field claims are
+used in this repository.
+
 ### Dyadic routing overlay
 
 Every row in the table has a binary boundary:
@@ -97,7 +106,7 @@ The following examples show why the routing pass is necessary.
 | [A365029](https://oeis.org/A365029), boundary | The repository proves the stronger prime-boundary result \(C_{A,B}(p-1)\equiv1\pmod {p^{A+B}}\).  The adjacent-scale tower remains open. |
 | [A183068](https://oeis.org/A183068) | This repository contains a proposed all-prime proof and exact checks.  It remains a proof candidate pending conventional specialist review. |
 | [A228960](https://oeis.org/A228960) and [A350383](https://oeis.org/A350383) | The repository's cyclotomic coefficient-pair theorem proves both displayed \(p^{2r}\) towers for \(p\ge5\), coefficientwise.  The broader cyclotomic-rational-function principle on A228960 remains open. |
-| [A380290](https://oeis.org/A380290) and Bala's associated Euler-product packet | The colored Euler-product theorem proves the complete coefficientwise \(p^{2r}\) baseline for every odd prime, arbitrary integral mixed powers, and every degree weight \(m^d\), \(d\ge1\).  The special untwisted A380290 \(p^{3r}\) conjecture remains open. |
+| [A380290](https://oeis.org/A380290) and Bala's associated Euler-product packet | The colored Euler-product theorem proves the complete coefficientwise \(p^{2r}\) baseline for every odd prime, arbitrary integral mixed powers, and every degree weight \(m^d\), \(d\ge1\). The dyadic theorem restores \(2^{2r}\) for every \(r\ge2\), with a sharp first-level quadratic defect, and the Gaussian local table records the split, inert, and ramified specializations. The special untwisted A380290 \(p^{3r}\) conjecture remains open. |
 
 ## 4. Consolidated live targets
 
