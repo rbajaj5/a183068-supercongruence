@@ -1,4 +1,4 @@
-# A finite-target follow-on to the $G_{\mathbb Q_2}$ presentation
+# Finite-target counts from the Q₂ Galois presentation
 
 ## Short note for David Roe and David Turturean
 
@@ -28,7 +28,7 @@ $$
 Put
 
 $$
-d=e+h,\qquad q=|2H|,
+d=e+h,\qquad q=|2H|.
 $$
 
 and define
@@ -47,19 +47,12 @@ Consequently the count vanishes when
 $\dim_{\mathbb F_2}(H/2H)>3$, as expected from the three-generator
 maximal pro-2 quotient.
 
-For cyclic targets this becomes
+For cyclic targets, the surjection and extension counts are:
 
-$$
-\left|\mathrm{Sur}(G_{\mathbb Q_2},C_{2^m})\right|=\begin{cases}7,&m=1,\\3\cdot2^{2m-1},&m\ge2.\end{cases}
-$$
-
-After division by
-$\left|\mathrm{Aut}(C_{2^m})\right|$, the number of cyclic
-$2^m$-extensions of $\mathbb Q_2$ is therefore
-
-$$
-\begin{cases}7,&m=1,\\3\cdot2^m,&m\ge2.\end{cases}
-$$
+| Target | Surjections from $G_{\mathbb Q_2}$ | Extension classes |
+|---|---:|---:|
+| $C_2$ | $7$ | $7$ |
+| $C_{2^m}$, $m\ge2$ | $3\cdot2^{2m-1}$ | $3\cdot2^m$ |
 
 The first value recovers the seven quadratic extensions of
 $\mathbb Q_2$.
@@ -127,15 +120,15 @@ counting direction.
 
 ## Nonabelian follow-on now completed
 
-The first nonabelian boundary is now also explicit. If $D_{2^m}$ denotes
-the dihedral group of order $2^m$, then
+The first nonabelian boundary is now also explicit. Here $D_{2^m}$ denotes
+the dihedral group of order $2^m$:
 
-$$
-\left|\mathrm{Sur}(G_{\mathbb Q_2},D_{2^m})\right|=\begin{cases}144,&m=3,\\2^{2m+1},&m\ge4.\end{cases}
-$$
+| Target | Surjections from $G_{\mathbb Q_2}$ | Extension classes |
+|---|---:|---:|
+| $D_8$ | $144$ | $18$ |
+| $D_{2^m}$, $m\ge4$ | $2^{2m+1}$ | $16$ |
 
-Thus there are $18$ $D_8$-extensions of $\mathbb Q_2$ and $16$
-$D_{2^m}$-extensions for every $m\ge4$. The
+The
 [complete dihedral proof](related-results/GQ2DihedralCounts.md) reduces the
 source relator to seven linear congruences indexed by the nonzero reflection
 patterns and checks every triple through $D_{128}$.
