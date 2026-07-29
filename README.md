@@ -89,6 +89,16 @@ the remaining entries into theorem families.  It is a research-routing map,
 not a claim that all 110 records are open or that a negative search certifies
 novelty.
 
+The follow-up
+**[Gaussian generalization map](related-results/BalaGaussianGeneralizationMap.md)**
+classifies all 110 records by the operation a Gaussian extension would
+actually require: 40 finite-sum Frobenius twists, 37 constant-term base
+changes, 14 Gaussian factorial/block constructions, 14 modular or partition
+problems, and 5 derived sequences. Its
+[195-case exact pilot](related-results/BalaGaussianTwistPilot.md) already
+shows an important boundary: an untwisted cubic supercongruence need not
+remain cubic after an \(i^k\)-twist.
+
 ## Attribution
 
 - Paul D. Hanna created A183068 in December 2010 as the central terms of
@@ -278,6 +288,13 @@ is a bijective analytic isometry of $\mathbb Z_2[i]$. The
 this connects to Dwork/Frobenius questions, generalized factorials, and
 compatible $p$-adic dynamics. The Blaschke-product comparison is an analytic
 analogy, not a claim that the Gaussian ratios are classical Blaschke products.
+
+For the broader Bala queue, the
+[Gaussian generalization map](related-results/BalaGaussianGeneralizationMap.md)
+separates three increasingly strong notions: extending coefficients to
+\(\mathbb Z[i]\), proving a Frobenius twist, and proving a theorem at a chosen
+Gaussian prime ideal. It also makes the split/inert/ramified case distinction
+mandatory before a candidate enters the proof queue.
 
 The follow-on
 [finite-quotient dynamics theorem](related-results/GaussianProductDynamicsConjectures.md)
