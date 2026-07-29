@@ -101,7 +101,7 @@ def main() -> None:
         (
             "A005260",
             fourth_power_franel,
-            lambda prime, r: (3 if prime >= 5 else 2) * r,
+            lambda prime, r: 3 * r - (1 if prime == 3 else 0),
         ),
         ("A005259", apery, lambda _prime, r: 2 * r),
         ("A333592", negative_binomial_square, lambda _prime, r: 2 * r),

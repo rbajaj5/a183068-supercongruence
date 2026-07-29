@@ -58,7 +58,7 @@ This gives 65 exact cases per sequence and 195 in total.
 
 | Sequence | Bound holding throughout the grid | Equality occurs? | Stronger bound rejected? |
 | --- | --- | --- | --- |
-| A005260 | \(v_p\ge3r\) for \(p\ge5\); \(v_3\ge2r\) | Yes | \(v_3\ge3r\), e.g. \(p=3,r=1,n=2\) has valuation \(2\) |
+| A005260 | \(v_p\ge3r\) for \(p\ge5\); \(v_3\ge3r-1\) | Yes | \(v_3\ge3r\), e.g. \(p=3,r=1,n=2\) has valuation \(2\) |
 | A005259 | \(v_p\ge2r\) | Yes | \(v_p\ge3r\), e.g. \(p=5,r=1,n=1\) has valuation \(2\) |
 | A333592 | \(v_p\ge2r\) | Yes | \(v_p\ge3r\), e.g. \(p=5,r=1,n=1\) has valuation \(2\) |
 
@@ -78,10 +78,12 @@ transfer lemmas.  If those lemmas hold term by term to exponent \(e\), the
 [general twist theorem](GaussianFrobeniusTwists.md) applies.  If the integer
 proof obtains its final power only after summing, that power may disappear.
 
-A005260 is the strongest next target in this pilot: the data suggest that
-its depth-three behavior survives the Gaussian twist for \(p\ge5\), while
-\(p=3\) is a genuine lower-exponent boundary.  This remains a conjectural
-interpretation until a termwise proof is supplied.
+The A005260 target produced by this pilot is now closed as the \(m=4\)
+case of the
+[binomial-power Frobenius theorem](BinomialPowerFrobeniusTheorem.md).
+The proof establishes a stronger coefficientwise congruence for every
+\(m\ge3\), includes \(p=2\), and shows directly that \(p=3\) is a genuine
+one-power boundary.
 
 ## 5. Reproduction
 

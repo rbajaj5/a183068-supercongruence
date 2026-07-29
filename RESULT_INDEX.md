@@ -179,6 +179,24 @@ proof.
 - **Proof:** [Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md)
 - **Exact checker:** [`verify_gaussian_twists.py`](verification/related/verify_gaussian_twists.py)
 
+### BINOMIAL-POWER — all-prime binomial-power polynomial tower
+
+- **Claim:** For \(m\ge3\) and
+  \(P_N^{(m)}(X)=\sum_k\binom Nk^mX^k\),
+  \[
+  P_{np^r}^{(m)}(X)\equiv P_{np^{r-1}}^{(m)}(X^p)
+  \pmod {p^{E_{p,m}(r)}},
+  \]
+  where
+  \(E_{p,m}(r)=3r-\varepsilon_p+v_p(m)\) and
+  \(\varepsilon_2=2,\varepsilon_3=1,\varepsilon_p=0\) for \(p\ge5\).
+  Evaluation at \(X=i\) gives the split/inert Gaussian theorem and the
+  ramified \(i\mapsto-1\) cross-twist.
+- **Status:** Complete elementary deduction; literature priority not
+  established.
+- **Proof:** [Binomial-power Frobenius theorem](related-results/BinomialPowerFrobeniusTheorem.md)
+- **Exact checker:** [`verify_binomial_power_frobenius.py`](verification/related/verify_binomial_power_frobenius.py)
+
 ### GBQ-MAP — Gaussian routing of the Bala--OEIS census
 
 - **Claim:** The reproducible 110-record Bala corpus divides exhaustively
@@ -192,9 +210,9 @@ proof.
 ### GBQ-PILOT — exact Gaussian-twist boundary experiment
 
 - **Claim:** In 195 exact adjacent-scale tests, A005260 retains exponent
-  \(3r\) for \(p\ge5\) but only \(2r\) at \(p=3\), while A005259 and A333592
-  retain \(2r\). Exact equality witnesses reject the naive cubic twisted
-  claim in all three boundary cases.
+  \(3r\) for \(p\ge5\) and \(3r-1\) at \(p=3\), while A005259 and A333592
+  retain \(2r\). Exact equality witnesses reject naive cubic twisted claims;
+  the A005260 observation is now proved by BINOMIAL-POWER.
 - **Status:** Computational triage, not a proof.
 - **Report:** [Bala Gaussian-twist pilot](related-results/BalaGaussianTwistPilot.md)
 - **Exact checker:** [`verify_bala_gaussian_twist_pilot.py`](verification/related/verify_bala_gaussian_twist_pilot.py)
@@ -315,8 +333,8 @@ proof.
   \[
   \mathcal V(q)=
   \begin{cases}
-  (q-1)(q^2+2),&\operatorname{char}\mathbb F_q\ne3,\\
-  q^2(q-1),&\operatorname{char}\mathbb F_q=3,
+  (q-1)(q^2+2),&\mathrm{char}\,\mathbb F_q\ne3,\\
+  q^2(q-1),&\mathrm{char}\,\mathbb F_q=3,
   \end{cases}
   \]
   yielding an exact collision zeta function and

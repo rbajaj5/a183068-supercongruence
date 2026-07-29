@@ -25,6 +25,7 @@ SCRIPTS = (
     "verification/related/verify_dwork_boundaries.py",
     "verification/related/verify_gaussian_twists.py",
     "verification/related/verify_bala_gaussian_twist_pilot.py",
+    "verification/related/verify_binomial_power_frobenius.py",
     "verification/related/verify_chowla_dwork_evans_defect.py",
     "verification/related/verify_gaussian_power_sums.py",
     "verification/related/verify_gaussian_wolstenholme.py",
