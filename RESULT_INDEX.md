@@ -271,6 +271,26 @@ proof.
 - **Proof:** [Colored Euler-product theorem](related-results/EulerProductGaussianTower.md)
 - **Exact checker:** [`verify_euler_product_gaussian_tower.py`](verification/related/verify_euler_product_gaussian_tower.py)
 
+### DYADIC-Q — binary Euler-product tower and hypercube defect
+
+- **Claim:** Every integral colored Euler product with degree weight
+  \(m^d\), \(d\ge1\), satisfies the coefficientwise binary tower
+  \[
+  \mathcal E_{n2^r}(\mathbf Z)\equiv
+  \mathcal E_{n2^{r-1}}(\mathbf Z^2)\pmod {2^{2r-1}}.
+  \]
+  At \(r=1\), the exact missing bit is the coefficient of the quadratic
+  operator
+  \(\mathfrak q(F)=(F^2-\phi(F))/2\bmod2\), an explicit degree-two Boolean
+  map on the two bit layers of the truncated coefficient vector.
+- **Source status:** Structural follow-on.
+- **Dyadic status:** Complete, including the binary scaling sign and a sharp
+  modulus-\(4\) counterexample.
+- **Status:** Complete unchecked elementary proof; the operator is standard
+  \(2\)-derivation infrastructure and no priority claim is made.
+- **Proof:** [Dyadic hypercube defect](related-results/DyadicHypercubeDefect.md)
+- **Exact checker:** [`verify_dyadic_hypercube_defect.py`](verification/related/verify_dyadic_hypercube_defect.py)
+
 ### GBQ-MAP — Gaussian routing of the Bala--OEIS census
 
 - **Claim:** The reproducible 110-record Bala corpus divides exhaustively
