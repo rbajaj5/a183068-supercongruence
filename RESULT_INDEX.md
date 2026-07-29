@@ -56,6 +56,16 @@ proof.
 - **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#2-a-stronger-boundary-theorem-for-a365029)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
 
+### A365029-R1 — full prime-level adjacent congruence
+
+- **Claim:** For every prime \(p\ge5\) and positive integer \(n\),
+  \(a(np)\equiv a(n)\pmod {p^3}\) for A365029.
+- **Source status:** Named open problem; this is the complete \(r=1\) case
+  of Peter Bala's proposed \(p^{3r}\) tower.
+- **Status:** Complete unchecked proof; priority preliminary.
+- **Proof:** [Prime-level A365029 theorem](related-results/A365029PrimeLevelTheorem.md)
+- **Exact checker:** [`verify_a365029_prime_level.py`](verification/related/verify_a365029_prime_level.py)
+
 ### BALA-ODD — A375178 prime-level odd-power family
 
 - **Claim:** For \(m\ge1\) and primes \(p\ge2m+5\),
@@ -76,15 +86,16 @@ proof.
 - **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#4-the-a333593-tower-is-a-coster-corollary)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
 
-### BALA-TOWERS — remaining first Bala tower queue
+### BALA-TOWERS — remaining higher-level Bala tower queue
 
-- **Claim:** The A365029 \(p^{3r}\) tower and the A375178-family
-  \(p^{3r+2m+1}\) tower are the first two retained targets.
+- **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge2\) and the
+  A375178-family \(p^{3r+2m+1}\) tower are the first two retained targets.
 - **Source status:** Named open problems.
-- **Status:** Computational: 145 exact tower checks, with each conjectured
-  exponent attained; no general proof of the strengthened targets claimed.
-  Coster's theorem already gives the \(p^{3r}\) baseline for the complete
-  A375178 exponent family.
+- **Status:** Reduction plus computation. A365029 is reduced to lifting an
+  explicit complete-block cancellation from \(\mathbb F_p\) to
+  \(\mathbb Z/p^r\mathbb Z\), with 177 higher-level block checks. Coster's
+  theorem already gives the \(p^{3r}\) baseline for the complete A375178
+  exponent family.
 - **Queue:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
 
