@@ -9,7 +9,7 @@ classical.
 
 ## 1. A finite defect map
 
-Let \(A\subset\mathbb N^d\) be a finite monomial support and write
+Let $A\subset\mathbb N^d$ be a finite monomial support and write
 
 ```math
 F=\sum_{\alpha\in A}
@@ -20,7 +20,7 @@ F=\sum_{\alpha\in A}
 \qquad\text{(1)}
 ```
 
-For a finite target set \(\Gamma\subset\mathbb N^d\), define
+For a finite target set $\Gamma\subset\mathbb N^d$, define
 
 ```math
 Q_\Gamma(\epsilon,\eta)
@@ -32,7 +32,7 @@ Q_\Gamma(\epsilon,\eta)
 \qquad\text{(2)}
 ```
 
-Here \(\phi(X^\alpha)=X^{2\alpha}\), extended coefficientwise; it doubles
+Here $\phi(X^\alpha)=X^{2\alpha}$, extended coefficientwise; it doubles
 monomial exponents without squaring the integer coefficients.
 
 Thus
@@ -50,8 +50,8 @@ product of matchings.
 
 ## 2. The alternating convolution matrix
 
-Let \(\lambda=(\lambda_\gamma)_{\gamma\in\Gamma}\) be a linear functional
-on the output, extended by zero outside \(\Gamma\). The scalar test
+Let $\lambda=(\lambda_\gamma)_{\gamma\in\Gamma}$ be a linear functional
+on the output, extended by zero outside $\Gamma$. The scalar test
 
 ```math
 Q_\lambda
@@ -71,7 +71,7 @@ Q_\lambda(\epsilon,\eta)
 \qquad\text{(3)}
 ```
 
-Define the alternating matrix \(B_\lambda\), indexed by \(A\), by
+Define the alternating matrix $B_\lambda$, indexed by $A$, by
 
 ```math
 (B_\lambda)_{\alpha,\beta}
@@ -106,7 +106,7 @@ R_\lambda
 \qquad\text{(6)}
 ```
 
-Because the polar form vanishes on \(R_\lambda\), the restriction
+Because the polar form vanishes on $R_\lambda$, the restriction
 
 ```math
 r_\lambda=Q_\lambda|_{R_\lambda}
@@ -117,7 +117,7 @@ is linear.
 
 ## 3. Plateaued spectrum theorem
 
-For a covector \(\xi\in W^*\), use the normalized Walsh transform
+For a covector $\xi\in W^*$, use the normalized Walsh transform
 
 ```math
 \widehat g_\lambda(\xi)
@@ -141,11 +141,11 @@ The Walsh coefficient in (8) is nonzero exactly when
 
 Consequently:
 
-1. exactly \(2^{2s_\lambda}\) Walsh coefficients are nonzero;
-2. every nonzero coefficient has absolute value \(2^{-s_\lambda}\);
-3. \(Q_\lambda\) is balanced exactly when
-   \(r_\lambda\ne0\); and
-4. if \(r_\lambda=0\), then
+1. exactly $2^{2s_\lambda}$ Walsh coefficients are nonzero;
+2. every nonzero coefficient has absolute value $2^{-s_\lambda}$;
+3. $Q_\lambda$ is balanced exactly when
+   $r_\lambda\ne0$; and
+4. if $r_\lambda=0$, then
 
    ```math
    \mathbb E(-1)^{Q_\lambda}
@@ -156,12 +156,12 @@ Consequently:
    \qquad\text{(10)}
    ```
 
-The sign \(\sigma_\lambda\) is the ordinary quadratic Gauss-sum sign
+The sign $\sigma_\lambda$ is the ordinary quadratic Gauss-sum sign
 (equivalently, the Arf sign after quotienting by the radical).
 
 #### Proof
 
-Let \(r\in R_\lambda\). Since \(r\) is in the polar radical,
+Let $r\in R_\lambda$. Since $r$ is in the polar radical,
 
 ```math
 Q_\lambda(w+r)
@@ -170,29 +170,29 @@ Q_\lambda(w)+Q_\lambda(r).
 \qquad\text{(11)}
 ```
 
-Translate the sum (8) by \(r\). A nonzero Walsh coefficient must satisfy
+Translate the sum (8) by $r$. A nonzero Walsh coefficient must satisfy
 
 ```math
 Q_\lambda(r)+\xi(r)=0
 ```
 
-for every \(r\in R_\lambda\), which is exactly (9).
+for every $r\in R_\lambda$, which is exactly (9).
 
-Conversely, choose a complement \(U\) to \(R_\lambda\). The induced polar
-form on \(U\) is nondegenerate and has dimension \(2s_\lambda\). When (9)
-holds, summing first over the radical contributes \(|R_\lambda|\), while
-the remaining nondegenerate quadratic Gauss sum on \(U\) has absolute
-value \(2^{s_\lambda}\). After the normalization in (8), the magnitude is
-\(2^{-s_\lambda}\).
+Conversely, choose a complement $U$ to $R_\lambda$. The induced polar
+form on $U$ is nondegenerate and has dimension $2s_\lambda$. When (9)
+holds, summing first over the radical contributes $|R_\lambda|$, while
+the remaining nondegenerate quadratic Gauss sum on $U$ has absolute
+value $2^{s_\lambda}$. After the normalization in (8), the magnitude is
+$2^{-s_\lambda}$.
 
 The covectors satisfying (9) form an affine space of dimension
-\(2s_\lambda\), proving the first two claims. The zero-frequency
-coefficient is nonzero exactly when \(r_\lambda=0\), proving the balance
-criterion and (10). \(\square\)
+$2s_\lambda$, proving the first two claims. The zero-frequency
+coefficient is nonzero exactly when $r_\lambda=0$, proving the balance
+criterion and (10). $\square$
 
 ## 4. Exact joint output distribution
 
-Let \(m=|\Gamma|\), and for \(y\in\mathbb F_2^\Gamma\) put
+Let $m=|\Gamma|$, and for $y\in\mathbb F_2^\Gamma$ put
 
 ```math
 N_\Gamma(y)
@@ -213,12 +213,12 @@ b_\lambda
 \qquad\text{(13)}
 ```
 
-By Theorem 1, \(b_\lambda\) is either \(0\) or
-\(\sigma_\lambda2^{-s_\lambda}\).
+By Theorem 1, $b_\lambda$ is either $0$ or
+$\sigma_\lambda2^{-s_\lambda}$.
 
 ### Theorem 2 (joint model-count formula)
 
-For every output \(y\),
+For every output $y$,
 
 ```math
 N_\Gamma(y)
@@ -229,7 +229,7 @@ N_\Gamma(y)
 \qquad\text{(14)}
 ```
 
-In particular, \(Q_\Gamma\) is uniformly distributed on its full output
+In particular, $Q_\Gamma$ is uniformly distributed on its full output
 cube exactly when
 
 ```math
@@ -239,12 +239,12 @@ b_\lambda=0
 \qquad\text{(15)}
 ```
 
-or equivalently, when every nonzero scalar test \(Q_\lambda\) restricts
+or equivalently, when every nonzero scalar test $Q_\lambda$ restricts
 nontrivially to its polar radical.
 
 #### Proof
 
-The indicator of \(Q_\Gamma(w)=y\) has the finite Fourier expansion
+The indicator of $Q_\Gamma(w)=y$ has the finite Fourier expansion
 
 ```math
 \mathbf{1}_{Q_\Gamma(w)=y}
@@ -254,8 +254,8 @@ The indicator of \(Q_\Gamma(w)=y\) has the finite Fourier expansion
 (-1)^{\lambda\cdot(Q_\Gamma(w)+y)}.
 ```
 
-Sum over \(w\in W\) and use (13). This proves (14). Fourier inversion
-also proves the equivalence (15). \(\square\)
+Sum over $w\in W$ and use (13). This proves (14). Fourier inversion
+also proves the equivalence (15). $\square$
 
 An immediate deviation bound is
 
@@ -277,24 +277,24 @@ The exact formula (14), rather than this bound, is usually preferable.
 
 ## 5. Why this is useful
 
-Theorem 2 converts a simultaneous modulus-\(4\) classification into finite
+Theorem 2 converts a simultaneous modulus-$4$ classification into finite
 linear algebra:
 
-1. choose the output coordinates \(\Gamma\);
-2. for each \(\lambda\), build the Hankel-like convolution matrix (4);
-3. row-reduce it over \(\mathbb F_2\);
+1. choose the output coordinates $\Gamma$;
+2. for each $\lambda$, build the Hankel-like convolution matrix (4);
+3. row-reduce it over $\mathbb F_2$;
 4. test the radical restriction (7);
 5. compute the Gauss-sum sign when it survives; and
 6. recover every joint count by (14).
 
 This is an exact model-counting method for the quadratic CSP generated by
 the dyadic defect. It can be much smaller than enumerating
-\(4^{|A|}\) coefficient arrays. It does not say that the structured
+$4^{|A|}$ coefficient arrays. It does not say that the structured
 coefficient vectors arising from Euler products are uniformly distributed
 inside the ambient cube.
 
 The matrix (4) is a finite additive-convolution matrix: its entry depends
-only on \(\alpha+\beta\). That is the precise point where the hypercube
+only on $\alpha+\beta$. That is the precise point where the hypercube
 analysis meets the additive structure of monomial exponents.
 
 ## 6. Verification and provenance
