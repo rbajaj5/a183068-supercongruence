@@ -688,6 +688,27 @@ proof.
 - **Exact checkers:** [`verify_gq2_orientation_lifts.py`](verification/related/verify_gq2_orientation_lifts.py)
   and [`verify_gq2_appendices.py`](verification/related/verify_gq2_appendices.py).
 
+### GQ2-ABCOUNT — finite abelian \(2\)-target counts
+
+- **Claim:** If
+  \(H\cong(C_2)^e\oplus\bigoplus_{j=1}^h C_{2^{\lambda_j}}\), with
+  \(\lambda_j\ge2\), \(d=e+h\), and \(q=|2H|\), then
+  \[
+  |\operatorname{Sur}(G_{\mathbb Q_2},H)|
+  =
+  q^2\,2^h\left(P_d+(2^e-1)4P_{d-1}\right),
+  \]
+  where \(P_j=\prod_{i=0}^{j-1}(4-2^i)\) for \(j\le2\) and \(P_j=0\)
+  for \(j>2\).
+- **Consequence:** There are \(7\) quadratic extensions of \(\mathbb Q_2\)
+  and \(3\cdot2^m\) cyclic \(2^m\)-extensions for \(m\ge2\).
+- **Status:** Complete elementary consequence of the Roe--Turturean
+  abelianization. It solves the finite abelian \(2\)-group subcase of their
+  explicit-counting question, not the general finite-target problem, and
+  makes no novelty claim.
+- **Proof:** [Closed finite abelian target counts](related-results/GQ2FiniteAbelianCounts.md)
+- **Exact checker:** [`verify_gq2_finite_abelian_counts.py`](verification/related/verify_gq2_finite_abelian_counts.py)
+
 ### GQ2-TWIST — dyadic HNN Dehn-twist tower
 
 - **Claim:** The HNN shears extend to an exact

@@ -141,6 +141,28 @@ It does not prove the A183068 binary scaling lemma. The connection is
 architectural: in both settings an odd-prime template is insufficient, and
 the binary repair must be made explicit.
 
+The comparison is now exact at the level of lift fibers. For a finite
+abelian \(2\)-target \(H\), the Roe--Turturean source reduces to
+
+\[
+D_0^{\mathrm{ab}}\cong C_2\oplus\mathbb Z_2^2.
+\]
+
+Surjectivity is decided entirely on the finite Frattini shadow \(H/2H\);
+once that shadow is fixed, higher lifts contribute a uniform factor. The
+[closed count](related-results/GQ2FiniteAbelianCounts.md) is
+
+\[
+|\operatorname{Sur}(G_{\mathbb Q_2},H)|
+=|2H|^2\,2^h
+\left(P_d+(2^e-1)4P_{d-1}\right).
+\]
+
+This is the same proof architecture used in the repository's dyadic
+supercongruences: a finite parity or carry shadow determines the exceptional
+binary behavior, while the higher \(2\)-adic levels lift uniformly. The
+objects remain different, so neither theorem logically implies the other.
+
 ## Editorial consequences
 
 This policy applies to:
