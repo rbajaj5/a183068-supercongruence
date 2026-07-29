@@ -247,6 +247,30 @@ proof.
 - **Proof:** [Cyclotomic coefficient-pair theorem](related-results/CyclotomicCoefficientPairTheorem.md)
 - **Exact checker:** [`verify_cyclotomic_coefficient_pair.py`](verification/related/verify_cyclotomic_coefficient_pair.py)
 
+### EULER-PRODUCT — colored product Frobenius tower
+
+- **Claim:** For \(d\ge1\), finitely many colors, arbitrary integers
+  \(h_{\nu,m}\), and
+  \[
+  \mathcal E_N(\mathbf Z)=
+  [x^N]\prod_{\nu,m}
+  (1-Z_\nu x^m)^{Nh_{\nu,m}m^d},
+  \]
+  every odd prime satisfies
+  \[
+  \mathcal E_{np^r}(\mathbf Z)\equiv
+  \mathcal E_{np^{r-1}}(\mathbf Z^p)\pmod {p^{2r}}.
+  \]
+  This proves the quadratic product families in Bala's A380290/A380291
+  notes, including all integral mixed powers, and gives the split/inert
+  Gaussian specialization at \(Z=i\).
+- **Status:** Complete elementary proof candidate.  For A380290 this is a
+  quadratic baseline, not the stronger conjectured untwisted cubic tower.
+  The coefficientwise and Gaussian exponents are sharp; \(d=0\) and \(p=2\)
+  have explicit counterexamples.
+- **Proof:** [Colored Euler-product theorem](related-results/EulerProductGaussianTower.md)
+- **Exact checker:** [`verify_euler_product_gaussian_tower.py`](verification/related/verify_euler_product_gaussian_tower.py)
+
 ### GBQ-MAP — Gaussian routing of the Bala--OEIS census
 
 - **Claim:** The reproducible 110-record Bala corpus divides exhaustively

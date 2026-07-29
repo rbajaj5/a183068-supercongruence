@@ -203,11 +203,19 @@ The first two inspections, A228960 and A350383, are now closed by the
 [cyclotomic coefficient-pair theorem](CyclotomicCoefficientPairTheorem.md).
 Their factorizations expose finite binomial sums, and a direct
 discard-and-rescale proof is stronger and simpler than a Dwork conversion.
-The next economical inspections are A331562 and A380290 because their live
-records still advertise coefficient or power-series structure without an
-available finite-sum closure.  Their required output is an explicit Laurent
-polynomial or rational diagonal and a written match to a Dwork theorem, not
-another numerical congruence table.
+
+A380290 has also produced a closure at the generic quadratic exponent.  The
+[colored Euler-product theorem](EulerProductGaussianTower.md) proves a
+coefficientwise \(p^{2r}\) Frobenius law for arbitrary integral multicolored
+products weighted by \(m^d\), \(d\ge1\), at every odd prime.  It contains the
+full product packet in Bala's notes and gives a split/inert part-count twist.
+Exact equality witnesses show that this Gaussian twist is only quadratic.
+The remaining A380290 problem is therefore the special untwisted
+\(p^{3r}\) gain, not the construction of a generic quadratic period model.
+
+The next economical unresolved inspection is A331562.  Its required output
+is an explicit Laurent polynomial or rational diagonal and a written match
+to a Dwork theorem, not another numerical congruence table.
 
 Primary starting points are Mellit--Vlasenko's
 [constant-term congruences](https://arxiv.org/abs/1306.5811) and
@@ -285,17 +293,23 @@ obstruction.
 
 | Rank | Target | Route | Immediate deliverable | Main risk |
 | ---: | --- | --- | --- | --- |
-| 1 | A331562, A380290 | C | Produce explicit \(\mathbb Z[i]\) period models and inspect Frobenius eigenspaces | Dwork hypotheses or exponent may fail |
-| 2 | Nearby depth-three finite sums beyond the closed pilot | T | Compute whether the scaling quotient remains deep after weighting | Twisting can remove cancellation used by the untwisted proof |
-| 3 | A183068 and the repository's Landau-depth family | T | Package the already-proved general Frobenius-twist corollary family | Mostly a reusable corollary, not a new local mechanism |
-| 4 | A008793 and A049505 | M | Identify a quartic-character or CM decomposition | No canonical Gaussian object may exist |
-| 5 | A364506, A364509, A008978, A002897 | F | Define and prove integrality of the Gaussian block analogue | Definition and denominator control precede congruences |
-| 6 | Derived entries | D | Trace every claim back to compatible source theorems | Derived operations may not commute with Frobenius |
+| 1 | A331562 | C | Produce a uniform rational diagonal for all rows and inspect the cubic Frobenius mechanism | Known rows \(2,3,4\) may rely on representations that do not persist |
+| 2 | A380290 cubic remainder | C | Explain the extra untwisted power beyond the proved coefficientwise quadratic tower | The Gaussian twist has exact quadratic witnesses, so the gain is a special cancellation |
+| 3 | Nearby depth-three finite sums beyond the closed pilot | T | Compute whether the scaling quotient remains deep after weighting | Twisting can remove cancellation used by the untwisted proof |
+| 4 | A183068 and the repository's Landau-depth family | T | Package the already-proved general Frobenius-twist corollary family | Mostly a reusable corollary, not a new local mechanism |
+| 5 | A008793 and A049505 | M | Identify a quartic-character or CM decomposition | No canonical Gaussian object may exist |
+| 6 | A364506, A364509, A008978, A002897 | F | Define and prove integrality of the Gaussian block analogue | Definition and denominator control precede congruences |
+| 7 | Derived entries | D | Trace every claim back to compatible source theorems | Derived operations may not commute with Frobenius |
 
 A228960 and A350383 have left this open queue: one coefficientwise theorem
 proves both \(p^{2r}\) towers for \(p\ge5\) and supplies their split/inert
 Gaussian specializations.  The broader cyclotomic-rational-function
 principle recorded on A228960 remains open.
+
+A380290 has partly left the queue as well: its full quadratic baseline and
+the entire associated mixed Euler-product packet are proved for odd primes.
+Only its distinguished untwisted cubic strengthening remains in the open
+column.
 
 Two larger repository targets sit outside the literal 110-record query but
 belong in the working queue: A183068 itself and the recently inspected
@@ -315,6 +329,9 @@ Already available:
 - the all-prime binomial-power polynomial theorem for every \(m\ge3\),
   including its prime-specific multiplicity bonus and small-prime losses;
 - the all-prime coefficientwise quadratic towers for A005259 and A333592;
+- the odd-prime coefficientwise quadratic tower for arbitrary multicolored
+  integral Euler products weighted by \(m^d\), including Bala's full product
+  packet, the A380290 baseline, and its split/inert Gaussian twist;
 - a complete classification of the reproducible 110-record census by
   Gaussian proof route; and
 - a 195-case exact pilot that rejects one overly strong extrapolation.

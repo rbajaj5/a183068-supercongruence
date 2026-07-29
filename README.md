@@ -133,6 +133,17 @@ Gaussian split/inert specializations.  The proof records exact failures at
 \(p=3\), and at \(p=2\) for A350383; it does not claim Bala's broader
 cyclotomic-rational-function principle.
 
+The MacMahon-product target has produced a broader
+**[colored Euler-product theorem](related-results/EulerProductGaussianTower.md)**.
+For arbitrary integral product powers, any degree weight \(m^d\) with
+\(d\ge1\), and every odd prime, it proves a coefficientwise \(p^{2r}\)
+Frobenius tower.  This establishes the full quadratic product packet in
+Bala's notes, strengthens its prime range from \(p\ge7\) to \(p\ge3\), and
+gives split/inert Gaussian specializations at \(Z=i\).  For A380290 it is a
+quadratic baseline: the advertised untwisted \(p^{3r}\) conjecture remains
+open, and exact Gaussian witnesses show that the cubic exponent does not
+survive the part-count twist.
+
 ## Attribution
 
 - Paul D. Hanna created A183068 in December 2010 as the central terms of
