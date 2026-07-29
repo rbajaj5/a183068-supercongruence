@@ -61,6 +61,21 @@ discussion is closed: the valid cyclotomic vanishing argument is proved, and
 the tempting all-level one-variable \(q\)-promotion is ruled out by an exact
 counterexample.
 
+## Peter Bala's other OEIS conjectures
+
+The first follow-up to Peter's postscript is now available:
+**[Peter Bala's OEIS supercongruence queue](related-results/BalaOeisSupercongruenceQueue.md)**.
+It contains two short proofs:
+
+- the first A365029 conjecture, strengthened to
+  \(C_{A,B}(p-1)\equiv1\pmod {p^{A+B}}\) for every odd prime; and
+- the complete A375178 prime-level family
+  \(b_m(p)\equiv1\pmod {p^{2m+3}}\) for \(p\ge2m+5\).
+
+The deeper A333593, A365029, and A375178 prime-power towers remain clearly
+labelled computational targets. The accompanying checker performs 719 exact
+tests and keeps proved statements separate from experimental evidence.
+
 ## Attribution
 
 - Paul D. Hanna created A183068 in December 2010 as the central terms of
