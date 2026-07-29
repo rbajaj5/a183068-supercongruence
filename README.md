@@ -164,6 +164,12 @@ coefficient. Its quadratic interaction graph is a matching, giving exact
 model counts, influences, noise stability, and restrictions to every affine
 face of the coefficient hypercube.
 
+For several output coefficients at once, the
+**[joint-spectrum theorem](related-results/DyadicHypercubeJointSpectrum.md)**
+reduces every XOR test to the rank and radical of an alternating
+additive-convolution matrix. Fourier inversion then gives the exact joint
+distribution of the finite defect map.
+
 The resulting
 **[complete Gaussian local table](related-results/EulerProductGaussianLocalTable.md)**
 now places the same Euler-product tower at every local type in
