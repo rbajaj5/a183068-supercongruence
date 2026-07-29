@@ -159,3 +159,11 @@ The generalized-quaternion boundary proposed above has since been solved
 separately in
 [Exact generalized-quaternion target counts](related-results/GQ2QuaternionCounts.md).
 
+The next two outcomes are also recorded on separate pages:
+
+- [the extraspecial rank obstruction](related-results/GQ2ExtraspecialObstruction.md)
+  shows that pure extraspecial targets of order at least \(32\) cannot occur;
+- [the semidihedral and modular calculation](related-results/GQ2MaximalCyclicCounts.md)
+  gives a direct relator proof of the already published Ito--Yamagishi
+  extension counts.
+

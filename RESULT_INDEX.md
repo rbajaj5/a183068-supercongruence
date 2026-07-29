@@ -696,11 +696,10 @@ proof.
 - **Claim:** If
   \(H\cong(C_2)^e\oplus\bigoplus_{j=1}^h C_{2^{\lambda_j}}\), with
   \(\lambda_j\ge2\), \(d=e+h\), and \(q=|2H|\), then
-  \[
+  $$
   |\operatorname{Sur}(G_{\mathbb Q_2},H)|
-  =
-  q^2\,2^h\left(P_d+(2^e-1)4P_{d-1}\right),
-  \]
+  =q^2\,2^h\left(P_d+(2^e-1)4P_{d-1}\right).
+  $$
   where \(P_j=\prod_{i=0}^{j-1}(4-2^i)\) for \(j\le2\) and \(P_j=0\)
   for \(j>2\).
 - **Consequence:** There are \(7\) quadratic extensions of \(\mathbb Q_2\)
@@ -715,14 +714,13 @@ proof.
 ### GQ2-DIHEDRAL — exact dihedral \(2\)-target counts
 
 - **Claim:** For the dihedral group \(D_{2^m}\) of order \(2^m\),
-  \[
-  |\operatorname{Sur}(G_{\mathbb Q_2},D_{2^m})|
-  =
+  $$
+  |\operatorname{Sur}(G_{\mathbb Q_2},D_{2^m})|=
   \begin{cases}
   144,&m=3,\\
   2^{2m+1},&m\ge4.
   \end{cases}
-  \]
+  $$
 - **Consequence:** There are \(18\) \(D_8\)-extensions of \(\mathbb Q_2\)
   and \(16\) \(D_{2^m}\)-extensions for every \(m\ge4\).
 - **Status:** Complete direct calculation from the Roe--Turturean relator,
@@ -736,15 +734,14 @@ proof.
 
 - **Claim:** For the generalized quaternion group \(Q_{2^m}\) of order
   \(2^m\),
-  \[
-  |\operatorname{Sur}(G_{\mathbb Q_2},Q_{2^m})|
-  =
+  $$
+  |\operatorname{Sur}(G_{\mathbb Q_2},Q_{2^m})|=
   \begin{cases}
   144,&m=3,\\
   640,&m=4,\\
   2^{2m+1},&m\ge5.
   \end{cases}
-  \]
+  $$
 - **Consequence:** There are \(6\) \(Q_8\)-extensions, \(20\)
   \(Q_{16}\)-extensions, and \(16\) \(Q_{2^m}\)-extensions for every
   \(m\ge5\).
@@ -754,6 +751,48 @@ proof.
   a priority claim.
 - **Proof:** [Exact generalized-quaternion target counts](related-results/GQ2QuaternionCounts.md)
 - **Exact checker:** [`verify_gq2_quaternion_counts.py`](verification/related/verify_gq2_quaternion_counts.py)
+
+### GQ2-MAXCYCLIC — exact semidihedral and modular target counts
+
+- **Claim:** For \(m\ge4\),
+  $$
+  |\operatorname{Sur}(G_{\mathbb Q_2},SD_{2^m})|=
+  \begin{cases}
+  576,&m=4,\\
+  2^{2m+1},&m\ge5,
+  \end{cases}
+  $$
+  while
+  $$
+  |\operatorname{Sur}(G_{\mathbb Q_2},M_{2^m})|
+  =9\cdot2^{2m-2}.
+  $$
+- **Consequence:** The extension counts are \(36\) for \(SD_{16}\),
+  \(32\) for every \(SD_{2^m}\) with \(m\ge5\), and
+  \(9\cdot2^{m-2}\) for \(M_{2^m}\).
+- **Status:** Complete direct calculation from the Roe--Turturean relator
+  with an exact all-orders certificate. Ito and Yamagishi already published
+  the extension enumeration, so this is a new derivation rather than a
+  priority claim.
+- **Proof:** [Semidihedral and modular target counts](related-results/GQ2MaximalCyclicCounts.md)
+- **Exact checker:** [`verify_gq2_maximal_cyclic_counts.py`](verification/related/verify_gq2_maximal_cyclic_counts.py)
+
+### GQ2-EXTRASPECIAL — higher extraspecial rank obstruction
+
+- **Claim:** If \(E\) is extraspecial of order \(2^{1+2n}\) with \(n\ge2\),
+  then
+  $$
+  |\operatorname{Sur}(G_{\mathbb Q_2},E)|=0.
+  $$
+- **Reason:** \(E/\Phi(E)\cong(C_2)^{2n}\), so \(E\) needs \(2n\ge4\)
+  generators, whereas the maximal pro-\(2\) quotient of
+  \(G_{\mathbb Q_2}\) has three displayed generators.
+- **Status:** Complete elementary obstruction. The order-\(8\) boundary
+  consists of \(D_8\) and \(Q_8\), whose nonzero counts are recorded
+  separately.
+- **Proof:** [The extraspecial rank obstruction](related-results/GQ2ExtraspecialObstruction.md)
+- **Exact checker:** The rank boundary is included in
+  [`verify_gq2_maximal_cyclic_counts.py`](verification/related/verify_gq2_maximal_cyclic_counts.py).
 
 ### GQ2-TWIST — dyadic HNN Dehn-twist tower
 
