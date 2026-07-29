@@ -274,10 +274,12 @@ proof.
 ### DYADIC-Q — binary Euler-product tower and hypercube defect
 
 - **Claim:** Every integral colored Euler product with degree weight
-  \(m^d\), \(d\ge1\), satisfies the coefficientwise binary tower
+  \(m^d\), \(d\ge1\), satisfies the sharp coefficientwise binary tower
   \[
   \mathcal E_{n2^r}(\mathbf Z)\equiv
-  \mathcal E_{n2^{r-1}}(\mathbf Z^2)\pmod {2^{2r-1}}.
+  \mathcal E_{n2^{r-1}}(\mathbf Z^2)\pmod {2^{e(r)}},
+  \qquad
+  e(1)=1,\quad e(r)=2r\ (r\ge2).
   \]
   At \(r=1\), the exact missing bit is the coefficient of the quadratic
   operator
@@ -287,8 +289,9 @@ proof.
   closed logarithmic formula supported exactly on odd part sizes with odd
   exponent multiplicity.
 - **Source status:** Structural follow-on.
-- **Dyadic status:** Complete, including the binary scaling sign and a sharp
-  modulus-\(4\) counterexample.
+- **Dyadic status:** Complete, including the binary scaling sign, the sharp
+  modulus-\(4\) counterexample, and restoration of the full quadratic
+  exponent at every later level.
 - **Status:** Complete unchecked elementary proof; the operator is standard
   \(2\)-derivation infrastructure and no priority claim is made.
 - **Proof:** [Dyadic hypercube defect](related-results/DyadicHypercubeDefect.md)

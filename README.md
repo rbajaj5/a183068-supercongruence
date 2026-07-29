@@ -146,12 +146,13 @@ survive the part-count twist.
 
 The binary boundary is resolved separately by the
 **[dyadic hypercube defect theorem](related-results/DyadicHypercubeDefect.md)**.
-It proves the sharp unrestricted modulus \(2^{2r-1}\) and identifies the
-exact modulus-\(4\) obstruction as a quadratic Boolean map on the two
-coefficient-bit layers. After normalization, the defect is additive over
-Euler factors and is supported exactly on odd part sizes with odd exponent
-multiplicity. This is a complete \(p=2\) replacement, not an attempt to
-infer the binary case from the odd-prime theorem.
+It proves the sharp binary law \(e(1)=1\), \(e(r)=2r\) for \(r\ge2\), and
+identifies the exact first-level modulus-\(4\) obstruction as a quadratic
+Boolean map on the two coefficient-bit layers. After normalization, the
+defect is additive over Euler factors and is supported exactly on odd part
+sizes with odd exponent multiplicity. This is a complete \(p=2\)
+replacement, not an attempt to infer the binary case from the odd-prime
+theorem.
 
 ## Attribution
 

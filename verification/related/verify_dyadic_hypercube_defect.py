@@ -237,7 +237,7 @@ def check_binary_tower() -> int:
                 2, level, n, degree, rules
             )
             actual = EULER.polynomial_valuation(difference, 2)
-            target = 2 * level - 1
+            target = 1 if level == 1 else 2 * level
             assert actual >= target
             if actual == target:
                 sharp.append((degree, len(rules), level, n))
@@ -248,8 +248,44 @@ def check_binary_tower() -> int:
     )
     assert boundary[(2,)] == 2
     assert (1, 1, 1, 1) in sharp
+
+    for level in (2, 3, 4):
+        restored = EULER.frobenius_difference(
+            2, level, 1, 1, (EULER.constant(-1),)
+        )
+        assert restored[(1,)] == 2 ** (2 * level)
+        assert EULER.polynomial_valuation(restored, 2) == 2 * level
+
     print(f"binary tower coefficients: {checks}")
     print(f"sharp parameter sets: {sharp}")
+    return checks
+
+
+def check_restored_tower_stress() -> int:
+    patterns: list[tuple[int, ...]] = []
+    for period in (1, 2, 3):
+        for values in itertools.product(range(-2, 3), repeat=period):
+            if any(values):
+                patterns.append(values)
+
+    checks = 0
+    equality_cases = 0
+    for values in patterns:
+        rule = lambda part_size, values=values: values[
+            (part_size - 1) % len(values)
+        ]
+        for degree in (1, 2, 3):
+            for level in (2, 3):
+                difference = EULER.frobenius_difference(
+                    2, level, 1, degree, (rule,)
+                )
+                actual = EULER.polynomial_valuation(difference, 2)
+                assert actual >= 2 * level
+                equality_cases += actual == 2 * level
+                checks += len(difference)
+
+    print(f"restored-tower stress coefficients: {checks}")
+    print(f"restored-tower equality cases: {equality_cases}")
     return checks
 
 
@@ -257,7 +293,8 @@ def main() -> None:
     universal = check_universal_quadratic_identity()
     euler = check_euler_defect_identity()
     tower = check_binary_tower()
-    print(f"total exact checks: {universal + euler + tower}")
+    stress = check_restored_tower_stress()
+    print(f"total exact checks: {universal + euler + tower + stress}")
 
 
 if __name__ == "__main__":
