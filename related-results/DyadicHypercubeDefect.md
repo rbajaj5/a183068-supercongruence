@@ -3,9 +3,9 @@
 **Status.** Complete elementary theorem and exact finite checks. The
 quadratic operator below is standard \(2\)-derivation infrastructure; no
 priority claim is made for that operator. Its application gives the sharp
-universal binary replacement for the odd-prime Euler-product theorem at the
-first level and a uniform \(2^{2r-1}\) tower. A possible extra power above
-the first level remains a separate target.
+universal binary replacement for the odd-prime Euler-product theorem: the
+first lift has modulus \(2\), while every later lift recovers the full
+quadratic modulus \(2^{2r}\).
 
 ## 1. Setup
 
@@ -263,12 +263,13 @@ and \(1-M^2=(1+M)^2\) modulo \(2\),
 Additivity over all Euler factors proves (12), and multiplying by
 \(\phi(P_n)\) gives (13). \(\square\)
 
-## 5. The universal binary tower
+## 5. The restored binary tower
 
-The occupation-stratum proof of the odd-prime theorem also has a sharp
-binary version.
+The occupation-stratum proof first gives a uniform bound one power below
+the odd-prime theorem. The logarithmic defect then restores the missing
+power at every level above the first.
 
-### Theorem 4 (binary Euler-product tower)
+### Theorem 4 (sharp binary Euler-product tower)
 
 For every \(n,r\geq1\),
 
@@ -276,12 +277,19 @@ For every \(n,r\geq1\),
 \mathcal E_{n2^r}(\mathbf Z)
 \equiv
 \mathcal E_{n2^{r-1}}(\mathbf Z^2)
-\pmod {2^{\,2r-1}}.
+\pmod {2^{\,e(r)}},
+\qquad
+e(r)=
+\begin{cases}
+1,&r=1,\\
+2r,&r\geq2.
+\end{cases}
 \qquad\text{(15)}
 ```
 
 #### Proof
 
+We first prove the uniform modulus \(2^{2r-1}\).
 The argument of Sections 3--4 of
 [the odd-prime theorem](EulerProductGaussianTower.md) is repeated with the
 binary Ljunggren--Jacobsthal--Kazandzidis depth
@@ -293,7 +301,7 @@ binary Ljunggren--Jacobsthal--Kazandzidis depth
 
 The possible sign in the strongest binary scaling statement causes no
 loss: for \(s\geq1\) the negative-sign case is excluded in the equal-index
-application, while at \(s=0\) the modulus in (11) is \(2\), where the two
+application, while at \(s=0\) the modulus in (16) is \(2\), where the two
 signs agree.
 
 Occupation vectors not wholly divisible by \(2\) still vanish modulo
@@ -316,9 +324,106 @@ factor at valuation at most \(q+s\). It supplies at least
 \qquad\text{(18)}
 ```
 
-If \(s\geq b\), (11) has depth at least
+If \(s\geq b\), (16) has depth at least
 \(3(r-1)+1=3r-2\geq2r-1\). Expanding the product of scaling quotients one
-factor at a time now proves (10). \(\square\)
+factor at a time proves the uniform bound.
+
+It remains to recover one power when \(r\geq2\). Put
+
+```math
+N=n2^{r-1},\qquad
+c_{\nu,m}=h_{\nu,m}m^d,\qquad
+M_{\nu,m}=Z_\nu x^m.
+```
+
+There is an exact identity of formal series
+
+```math
+\frac{P_{2N}}{\phi(P_N)}
+=
+\prod_{\nu,m}
+\left(\frac{1-M_{\nu,m}}{1+M_{\nu,m}}\right)^{Nc_{\nu,m}}
+=
+\exp(-2NS),
+\qquad\text{(19)}
+```
+
+where
+
+```math
+S=
+\sum_{\nu,m}c_{\nu,m}
+\sum_{\substack{k\geq1\\k\ {\rm odd}}}
+\frac{M_{\nu,m}^k}{k}.
+\qquad\text{(20)}
+```
+
+All coefficients of \(S\) are \(2\)-adic integers. Hence
+
+```math
+P_{2N}-\phi(P_N)
+=
+\phi(P_N)
+\sum_{j\geq1}\frac{(-2N)^j}{j!}S^j.
+\qquad\text{(21)}
+```
+
+We estimate the coefficient of \(x^{2N}\), coefficientwise in the color
+variables.
+
+First record a divisibility lemma. For \(L>0\),
+
+```math
+v_2\!\left([x^L\mathbf Z^\alpha]P_N\right)
+\geq
+\max\{v_2(N)-v_2(L),0\}.
+\qquad\text{(22)}
+```
+
+Indeed, in any occupation vector of size \(L\), choose an occupied pair
+\((m,j)\) minimizing \(v_2(mj)\). This minimum is at most \(v_2(L)\).
+Writing \(q=v_2(m)\), the corresponding binomial factor has valuation at
+least
+
+```math
+v_2(N)+dq-v_2(j)
+\geq v_2(N)-v_2(L).
+```
+
+This proves (22) term by term.
+
+Consider the \(j=1\) term in (21). A monomial \(M_{\nu,m}^k\) in \(S\)
+has odd \(k\). Since \(\phi(P_N)\) has only even \(x\)-degrees, a nonzero
+contribution forces \(m\) to be even. Put \(q=v_2(m)\geq1\). If \(q\geq r\),
+the factor \(m^d\) supplies at least \(r\) powers in addition to the \(r\)
+powers in \(2N\). If \(q<r\), write
+
+```math
+2L=2N-mk.
+```
+
+Then \(v_2(L)=q-1\), so (22) supplies at least \(r-q\) powers from the
+coefficient of \(P_N\), while \(m^d\) supplies at least \(q\). Again the
+total is at least \(2r\).
+
+For \(j=2\), the scalar \((2N)^2/2\) has valuation at least \(2r-1\).
+It remains to show that the relevant coefficient of \(\phi(P_N)S^2\) is
+even. Modulo \(2\), the series \(\phi(P_N)\) has \(x\)-degrees divisible
+by \(2^r\). The series \(S\) is supported only in odd \(x\)-degrees, and
+in characteristic \(2\) every degree in \(S^2\) is congruent to \(2\)
+modulo \(4\). Since \(r\geq2\), such a degree cannot complement a multiple
+of \(2^r\) to the target degree \(2N\), itself a multiple of \(2^r\).
+The coefficient is therefore even.
+
+Finally, for \(j\geq3\),
+
+```math
+v_2\!\left(\frac{(2N)^j}{j!}\right)
+\geq rj-(j-1)\geq2r
+```
+
+because \(r\geq2\). Every term in (21) is therefore divisible by
+\(2^{2r}\), proving (15). \(\square\)
 
 ## 6. Sharp boundary
 
@@ -330,13 +435,17 @@ Take one color, \(d=1\), and \(h_m=-1\) for every \(m\). At \(n=r=1\),
 [Z^2]\mathcal E_1(Z^2)=1.
 ```
 
-Their difference is \(2\), not a multiple of \(4\). Hence the exponent
-\(2r-1\) in Theorem 3 is sharp for the stated unrestricted family.
+Their difference is \(2\), not a multiple of \(4\). Hence \(e(1)=1\) is
+sharp for the stated unrestricted family.
 Formula (8) records the missing bit as
 
 ```math
 [x^2Z^2]\mathfrak q(P_1)=1.
 ```
+
+For the same family and every \(r\geq2\), the coefficient of \(Z\) in the
+adjacent difference equals \(2^{2r}\). Thus the restored exponent
+\(e(r)=2r\) is also sharp.
 
 ## 7. Relation to dyadic lifting theory
 
@@ -358,15 +467,15 @@ and the first Frobenius defect has Boolean degree two.
 
 ## 8. Next target
 
-Exact experiments find additional cancellation in many levels \(r\geq2\).
-The next question is whether the normalized higher defect factors through
-an iterated version of \(\mathfrak q\), and which exponent patterns force
-that defect to vanish. This is deliberately not asserted here.
+The remaining binary classification problem is now confined to the first
+lift: determine which exponent patterns make the explicit logarithmic
+defect (13) vanish in central degree. One can then ask which special
+families gain powers beyond the sharp universal exponent \(2r\).
 
 The checker verifies the universal quadratic and polarization identities,
 the coefficient formula (5), the exact Euler-product identity (8), the
-closed logarithmic formula (13), the sharp boundary example, and finite
-instances of Theorem 4.
+closed logarithmic formula (13), both sharp boundary regimes, and finite
+instances of the restored Theorem 4.
 
 Run:
 

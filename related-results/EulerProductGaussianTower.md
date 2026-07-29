@@ -422,10 +422,12 @@ The degree condition is substantive.  If \(d=0\), take one color with
 \(h_m=-2\) for every \(m\).  At \(p=3,n=r=1\), the coefficient of \(Z\)
 in the upper-minus-lower polynomial is \(6\), not divisible by \(3^2\).
 
-The odd-prime condition is also substantive.  For \(d=1\),
-\(h_m=-1\), \(p=2\), and \(n=r=1\), the coefficient of \(Z^2\) differs
-by \(2\), not by a multiple of \(4\).  Any binary version needs a separate
-cross-twist and the repository's dyadic policy.
+The unmodified all-level statement at \(p=2\) fails at the first lift. For
+\(d=1\), \(h_m=-1\), and \(n=r=1\), the coefficient of \(Z^2\) differs by
+\(2\), not by a multiple of \(4\). The separate
+[dyadic hypercube theorem](DyadicHypercubeDefect.md) proves that this is the
+only universal loss: the first lift has sharp modulus \(2\), while every
+level \(r\ge2\) recovers the full coefficientwise modulus \(2^{2r}\).
 
 The scaling input is classical.  A convenient survey is R. Meštrović,
 [*Wolstenholme's theorem: its generalizations and extensions in the last
