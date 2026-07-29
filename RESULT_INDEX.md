@@ -282,7 +282,10 @@ proof.
   At \(r=1\), the exact missing bit is the coefficient of the quadratic
   operator
   \(\mathfrak q(F)=(F^2-\phi(F))/2\bmod2\), an explicit degree-two Boolean
-  map on the two bit layers of the truncated coefficient vector.
+  map on the two bit layers of the truncated coefficient vector.  After
+  division by \(\phi(F)\), this defect is additive on products and has a
+  closed logarithmic formula supported exactly on odd part sizes with odd
+  exponent multiplicity.
 - **Source status:** Structural follow-on.
 - **Dyadic status:** Complete, including the binary scaling sign and a sharp
   modulus-\(4\) counterexample.

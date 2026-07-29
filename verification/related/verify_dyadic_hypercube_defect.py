@@ -126,6 +126,37 @@ def x_coefficient(polynomial: Polynomial, x_degree: int) -> Polynomial:
     )
 
 
+def truncate_x(polynomial: Polynomial, target: int) -> Polynomial:
+    return clean(
+        {
+            monomial: value
+            for monomial, value in polynomial.items()
+            if monomial[0] <= target
+        }
+    )
+
+
+def logarithmic_defect_series(
+    base_index: int,
+    degree: int,
+    rules: tuple,
+    target: int,
+) -> Polynomial:
+    colors = len(rules)
+    answer: Polynomial = {}
+    for color, rule in enumerate(rules):
+        for part_size in range(1, target + 1):
+            exponent = base_index * rule(part_size) * part_size**degree
+            if exponent % 2 == 0:
+                continue
+            for multiple in range(1, target // part_size + 1):
+                color_degree = [0] * colors
+                color_degree[color] = multiple
+                monomial = (part_size * multiple, *color_degree)
+                answer[monomial] = answer.get(monomial, 0) + 1
+    return mod_two(answer)
+
+
 def check_universal_quadratic_identity() -> int:
     monomials = ((0, 0), (1, 0), (0, 1))
     polynomials: list[Polynomial] = []
@@ -171,7 +202,19 @@ def check_euler_defect_identity() -> int:
             )
             assert defect_from_q == normalized
             assert mod_two(defect_from_q) == mod_two(normalized)
-            checks += len(normalized)
+            logarithmic = logarithmic_defect_series(
+                n, degree, rules, 2 * n
+            )
+            closed_form = mod_two(
+                truncate_x(
+                    multiply(mod_two(phi(series)), logarithmic),
+                    2 * n,
+                )
+            )
+            assert truncate_x(mod_two(q_exact(series)), 2 * n) == closed_form
+            if n % 2 == 0:
+                assert not closed_form
+            checks += len(normalized) + len(closed_form)
     print(f"exact Euler defect coefficients: {checks}")
     return checks
 

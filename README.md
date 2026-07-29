@@ -148,8 +148,10 @@ The binary boundary is resolved separately by the
 **[dyadic hypercube defect theorem](related-results/DyadicHypercubeDefect.md)**.
 It proves the sharp unrestricted modulus \(2^{2r-1}\) and identifies the
 exact modulus-\(4\) obstruction as a quadratic Boolean map on the two
-coefficient-bit layers. This is a complete \(p=2\) replacement, not an
-attempt to infer the binary case from the odd-prime theorem.
+coefficient-bit layers. After normalization, the defect is additive over
+Euler factors and is supported exactly on odd part sizes with odd exponent
+multiplicity. This is a complete \(p=2\) replacement, not an attempt to
+infer the binary case from the odd-prime theorem.
 
 ## Attribution
 

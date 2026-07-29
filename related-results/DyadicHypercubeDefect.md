@@ -172,12 +172,103 @@ This is a finite system of quadratic equations over \(\mathbb F_2\) in
 every fixed truncation. It is the precise sense in which the binary
 boundary is a hypercube problem.
 
-## 4. The universal binary tower
+## 4. Closed logarithmic form of the defect
+
+The hypercube formula can be compressed further for products.  If \(F\)
+has constant coefficient \(1\), define its normalized defect
+
+```math
+\Lambda(F)=\frac{\mathfrak q(F)}{\phi(F)}
+\quad\text{in }R/2R.
+\qquad\text{(10)}
+```
+
+The denominator is a unit.
+
+### Theorem 3 (logarithmic dyadic defect)
+
+For units \(F,G\) with constant coefficient \(1\),
+
+```math
+\Lambda(FG)=\Lambda(F)+\Lambda(G).
+\qquad\text{(11)}
+```
+
+For the Euler product in Section 1,
+
+```math
+\Lambda(P_n)
+=
+(n\bmod2)
+\sum_{\nu,m}
+(h_{\nu,m}m^d\bmod2)
+\frac{Z_\nu x^m}{1+Z_\nu x^m}.
+\qquad\text{(12)}
+```
+
+Since \(d\geq1\), only odd part sizes with odd \(h_{\nu,m}\) contribute.
+Equivalently,
+
+```math
+\frac{P_{2n}(x,\mathbf Z)-P_n(x^2,\mathbf Z^2)}2
+\equiv
+\phi(P_n)
+(n\bmod2)
+\sum_{\substack{\nu,\ m\ {\rm odd}\\h_{\nu,m}\ {\rm odd}}}
+\frac{Z_\nu x^m}{1+Z_\nu x^m}
+\pmod2.
+\qquad\text{(13)}
+```
+
+Thus:
+
+1. if \(n\) is even, the full series difference in (13) is divisible by
+   \(4\), not merely its central coefficient;
+2. if \(n\) is odd, the obstruction depends only on the odd part sizes
+   whose product multiplicities are odd; and
+3. the apparent high-dimensional hypercube map is the coefficient form of
+   one additive logarithmic defect.
+
+#### Proof
+
+Direct expansion gives the exact product rule
+
+```math
+\mathfrak q(FG)
+=
+F^2\mathfrak q(G)+\phi(G)\mathfrak q(F).
+\qquad\text{(14)}
+```
+
+Modulo \(2\), \(F^2=\phi(F)\), so division by
+\(\phi(F)\phi(G)\) proves (11).  It follows for every integer \(e\) that
+\(\Lambda(F^e)=e\Lambda(F)\).
+
+Put \(M=Z_\nu x^m\).  Since
+
+```math
+\mathfrak q(1-M)=M^2-M
+```
+
+and \(1-M^2=(1+M)^2\) modulo \(2\),
+
+```math
+\Lambda(1-M)
+=
+\frac{M+M^2}{1+M^2}
+=
+\frac{M}{1+M}.
+```
+
+Additivity over all Euler factors proves (12), and multiplying by
+\(\phi(P_n)\) gives (13). \(\square\)
+
+## 5. The universal binary tower
 
 The occupation-stratum proof of the odd-prime theorem also has a sharp
 binary version.
 
-### Theorem 3 (binary Euler-product tower)
+### Theorem 4 (binary Euler-product tower)
 
 For every \(n,r\geq1\),
 
@@ -186,7 +277,7 @@ For every \(n,r\geq1\),
 \equiv
 \mathcal E_{n2^{r-1}}(\mathbf Z^2)
 \pmod {2^{\,2r-1}}.
-\qquad\text{(10)}
+\qquad\text{(15)}
 ```
 
 #### Proof
@@ -197,7 +288,7 @@ binary Ljunggren--Jacobsthal--Kazandzidis depth
 
 ```math
 3(\min\{b,s\}+1)-2.
-\qquad\text{(11)}
+\qquad\text{(16)}
 ```
 
 The possible sign in the strongest binary scaling statement causes no
@@ -213,7 +304,7 @@ supply
 ```math
 b-s+3s+1
 \geq r+dq+2s.
-\qquad\text{(12)}
+\qquad\text{(17)}
 ```
 
 If this is below \(2r-1\), the size constraint forces a second occupied
@@ -222,14 +313,14 @@ factor at valuation at most \(q+s\). It supplies at least
 
 ```math
 2r-1+(d-1)q+s\geq2r-1.
-\qquad\text{(13)}
+\qquad\text{(18)}
 ```
 
 If \(s\geq b\), (11) has depth at least
 \(3(r-1)+1=3r-2\geq2r-1\). Expanding the product of scaling quotients one
 factor at a time now proves (10). \(\square\)
 
-## 5. Sharp boundary
+## 6. Sharp boundary
 
 Take one color, \(d=1\), and \(h_m=-1\) for every \(m\). At \(n=r=1\),
 
@@ -247,7 +338,7 @@ Formula (8) records the missing bit as
 [x^2Z^2]\mathfrak q(P_1)=1.
 ```
 
-## 6. Relation to dyadic lifting theory
+## 7. Relation to dyadic lifting theory
 
 The connection with Roe--Turturean's
 [presentation of \(G_{\mathbb Q_2}\)](https://roed314.github.io/gq2/paper/paper.html)
@@ -265,7 +356,7 @@ No connection to the Four-Colour Theorem is used in the proof. The
 hypercube arises because a coefficient modulo \(4\) has two binary digits
 and the first Frobenius defect has Boolean degree two.
 
-## 7. Next target
+## 8. Next target
 
 Exact experiments find additional cancellation in many levels \(r\geq2\).
 The next question is whether the normalized higher defect factors through
@@ -274,7 +365,8 @@ that defect to vanish. This is deliberately not asserted here.
 
 The checker verifies the universal quadratic and polarization identities,
 the coefficient formula (5), the exact Euler-product identity (8), the
-sharp boundary example, and finite instances of Theorem 3.
+closed logarithmic formula (13), the sharp boundary example, and finite
+instances of Theorem 4.
 
 Run:
 
