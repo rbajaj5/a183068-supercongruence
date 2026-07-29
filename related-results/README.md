@@ -121,6 +121,7 @@ The individual correspondence is:
 | Gaussian product dynamics | `verification/related/experiment_gaussian_product_dynamics.py` (run separately; includes deeper finite-quotient tests) |
 | Higher-degree box polynomials | `verification/related/verify_higher_degree_box_polynomial.py` |
 | Roe--Turturean finite abelian \(2\)-target counts | `verification/related/verify_gq2_finite_abelian_counts.py` |
+| Roe--Turturean dihedral \(2\)-target counts | `verification/related/verify_gq2_dihedral_counts.py` |
 | Gaussian Erdős--Moser boundary search | `verification/related/verify_gaussian_erdos_moser.py` |
 
 The binary $s_{18}$ file is a reduction rather than a completed theorem and

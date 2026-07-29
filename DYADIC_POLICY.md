@@ -163,6 +163,14 @@ supercongruences: a finite parity or carry shadow determines the exceptional
 binary behavior, while the higher \(2\)-adic levels lift uniformly. The
 objects remain different, so neither theorem logically implies the other.
 
+The [dihedral follow-on](related-results/GQ2DihedralCounts.md) shows what
+happens one layer beyond abelianization. The source commutator becomes a
+parity-sensitive linear correction on the rotation coordinate. Six binary
+reflection patterns lift uniformly, while one exceptional pattern changes
+the \(D_8\) count before stabilizing for all larger dihedral \(2\)-groups.
+This is directly analogous to a supercongruence whose first binary level has
+a separate defect but whose higher levels obey a uniform lift law.
+
 ## Editorial consequences
 
 This policy applies to:

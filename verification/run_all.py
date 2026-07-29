@@ -41,6 +41,7 @@ SCRIPTS = (
     "verification/related/verify_gq2_orientation_lifts.py",
     "verification/related/verify_gq2_appendices.py",
     "verification/related/verify_gq2_finite_abelian_counts.py",
+    "verification/related/verify_gq2_dihedral_counts.py",
     "verification/related/verify_dyadic_affine_mixed_cohomology.py",
     "verification/related/verify_dyadic_dehn_twist_sampler.py",
     "verification/related/verify_dyadic_dehn_twist_cayley.py",
