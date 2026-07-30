@@ -3,10 +3,10 @@
 ## 1. Status and source boundary
 
 Kansal, Levin, and Savitt classify inclusions among reduced special fibers
-\(\mathcal Z(\mathbf r)\) of two-dimensional \(p\)-bounded crystalline loci,
-for odd \(p\) and an unramified extension of degree \(f>1\).  Their paper
+$\mathcal Z(\mathbf r)$ of two-dimensional $p$-bounded crystalline loci,
+for odd $p$ and an unramified extension of degree $f>1$.  Their paper
 also proves that, with one explicit exception, these inclusions can be
-detected on closed points, equivalently on semisimple mod-\(p\) Galois
+detected on closed points, equivalently on semisimple mod-$p$ Galois
 representations.
 
 This note records the exact way in which that result enters the repository's
@@ -16,11 +16,11 @@ Frobenius-packet framework:
 2. orbit decomposition converts each nested pair of supports into a
    nonnegative Dold sequence;
 3. the ordinary Gauss congruences follow automatically; and
-4. a stronger \( \ell^{hr} \) supercongruence is equivalent to extra
-   \(\ell\)-divisibility of the primitive degree strata.
+4. a stronger $ \ell^{hr} $ supercongruence is equivalent to extra
+   $\ell$-divisibility of the primitive degree strata.
 
-Here \(p\) is the residue characteristic in the crystalline-locus paper,
-whereas \(\ell\) is an index prime in the Dold/Gauss tower.  They need not be
+Here $p$ is the residue characteristic in the crystalline-locus paper,
+whereas $\ell$ is an index prime in the Dold/Gauss tower.  They need not be
 the same prime.
 
 The final point of the note is equally important: the exceptional
@@ -68,7 +68,7 @@ two degenerate families that require separate treatment.
 ### Proposition 1: the local codimension budget
 
 For the three valid moves, the change
-\(\Delta z=z(\mathbf u_{\mathrm{after}})-z(\mathbf u_{\mathrm{before}})\)
+$\Delta z=z(\mathbf u_{\mathrm{after}})-z(\mathbf u_{\mathrm{before}})$
 is:
 
 ```math
@@ -92,7 +92,7 @@ inverse boundary moves
 ```
 
 The only local operations capable of changing codimension by two are
-\(\theta\) and \(\nu\) at \((0,0)\).  This explains why the neighboring
+$\theta$ and $\nu$ at $(0,0)$.  This explains why the neighboring
 conditions in the paper's exceptional cases occur precisely at that input:
 the codimension count detects a possible missing intermediate stratum, while
 the paper's full support classification decides whether such an intermediate
@@ -110,12 +110,12 @@ from
 \nu(0,p)=(1,0).
 ```
 
-\(\square\)
+$\square$
 
 ## 3. Relative support ghosts
 
-Let \(S\subseteq T\) be Frobenius-stable, locally finite sets of geometric
-points over \(\mathbb F_q\).  Equivalently, assume that only finitely many
+Let $S\subseteq T$ be Frobenius-stable, locally finite sets of geometric
+points over $\mathbb F_q$.  Equivalently, assume that only finitely many
 Frobenius orbits of any fixed length occur.  Let
 
 ```math
@@ -141,7 +141,7 @@ groupoid cardinality.
 
 ### Theorem 2: support inclusions produce Gauss towers
 
-For every prime \(\ell\), every \(m\ge1\), and every \(r\ge1\),
+For every prime $\ell$, every $m\ge1$, and every $r\ge1$,
 
 ```math
 a_{m\ell^r}\equiv
@@ -157,7 +157,7 @@ a_{m\ell^{r-1}}
 \pmod{\ell^r}. \tag{3}
 ```
 
-Moreover, fix \(h\ge1\).  The stronger tower
+Moreover, fix $h\ge1$.  The stronger tower
 
 ```math
 a_{m\ell^r}\equiv
@@ -166,7 +166,7 @@ a_{m\ell^{r-1}}
 \qquad(\ell\nmid m,\ r\ge1) \tag{4}
 ```
 
-holds for every \(m,r\) if and only if
+holds for every $m,r$ if and only if
 
 ```math
 \ell^{(h-1)r}\mid b_{m\ell^r}
@@ -175,28 +175,28 @@ holds for every \(m,r\) if and only if
 
 #### Proof
 
-Subtract (1) at \(m\ell^r\) and \(m\ell^{r-1}\).  Every surviving divisor
-\(d\) has
+Subtract (1) at $m\ell^r$ and $m\ell^{r-1}$.  Every surviving divisor
+$d$ has
 
 ```math
 v_\ell(d)=v_\ell(m)+r,
 ```
 
-so each summand \(d\,b_d\) is divisible by
-\(\ell^{r+v_\ell(m)}\).  This proves (2).
+so each summand $d\,b_d$ is divisible by
+$\ell^{r+v_\ell(m)}$.  This proves (2).
 
 The equivalence of (4) and (5) is the higher-Dold criterion.  In one
-direction, (5) supplies \(hr\) powers in every newly appearing summand.  In
-the other, fix \(r\) and apply Möbius inversion over the divisors of \(m\)
+direction, (5) supplies $hr$ powers in every newly appearing summand.  In
+the other, fix $r$ and apply Möbius inversion over the divisors of $m$
 to the differences in (4).  This isolates
-\(m\ell^r b_{m\ell^r}\).  Dividing by \(m\ell^r\), with
-\(\ell\nmid m\), yields (5).
-\(\square\)
+$m\ell^r b_{m\ell^r}$.  Dividing by $m\ell^r$, with
+$\ell\nmid m$, yields (5).
+$\square$
 
 The theorem cleanly separates two questions:
 
 - support inclusion guarantees the baseline Gauss exponent;
-- a Bala-style exponent \(h>1\) asks for extra divisibility of the primitive
+- a Bala-style exponent $h>1$ asks for extra divisibility of the primitive
   closed-point multiplicities.
 
 ## 4. Application to the crystalline-locus poset
@@ -230,9 +230,9 @@ and its ghost sequence satisfies the ordinary Gauss congruences.
 This does not prove a stronger crystalline supercongruence.  It turns that
 question into an exact target:
 
-> For which valid \(\mu,\theta,\nu\) moves are the primitive support
-> multiplicities \(b_{m\ell^r}\) divisible by
-> \(\ell^{(h-1)r}\)?
+> For which valid $\mu,\theta,\nu$ moves are the primitive support
+> multiplicities $b_{m\ell^r}$ divisible by
+> $\ell^{(h-1)r}$?
 
 The local codimension budget in Proposition 1 is a first stratification of
 that problem.  It says how many geometric equations can disappear under a
@@ -266,7 +266,7 @@ b_d=0
 a_n=0
 ```
 
-for every \(d,n\), even though the stack inclusion is nontrivial.  Thus:
+for every $d,n$, even though the stack inclusion is nontrivial.  Thus:
 
 ### Corollary 3: support ghosts are not complete stack invariants
 
@@ -284,7 +284,7 @@ The two programs occupy different axes:
 
 | Input | Primary information | Arithmetic question |
 | --- | --- | --- |
-| Bala/OEIS sequence | weighted multiplicities in an index tower | how much \(p\)-adic divisibility survives rescaling? |
+| Bala/OEIS sequence | weighted multiplicities in an index tower | how much $p$-adic divisibility survives rescaling? |
 | crystalline-locus poset | which semisimple supports are nested | which primitive Frobenius orbits are added? |
 | combined packet | support plus degree multiplicity | when do the added degree strata have higher Dold divisibility? |
 
@@ -304,11 +304,11 @@ checks:
 
 - every local codimension change in Proposition 1 for several odd residue
   characteristics;
-- the invertible \(\mu/\nu\) boundary pair;
+- the invertible $\mu/\nu$ boundary pair;
 - exact Möbius recovery of primitive orbit multiplicities;
 - the baseline Gauss tower for deterministic random support packets; and
 - the higher-Dold criterion on manufactured packets of depths
-  \(h=1,2,3,4\).
+  $h=1,2,3,4$.
 
 The script verifies the deductions in this note; it does not machine-check
 the classification theorems of Kansal--Levin--Savitt.
@@ -316,7 +316,7 @@ the classification theorems of Kansal--Levin--Savitt.
 ## 8. Sources
 
 - Kalyani Kansal, Brandon Levin, and David Savitt,
-  [*Inclusions between \(p\)-bounded crystalline loci in dimension two*](https://arxiv.org/abs/2607.26305),
+  [*Inclusions between $p$-bounded crystalline loci in dimension two*](https://arxiv.org/abs/2607.26305),
   arXiv:2607.26305 (2026).
 - The repository's
   [arithmetic Frobenius packet framework](ArithmeticFrobeniusPacketFramework.md)
