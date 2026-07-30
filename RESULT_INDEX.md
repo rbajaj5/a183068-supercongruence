@@ -952,6 +952,31 @@ proof.
 - **Proof:** [Primitive collision orbits and the Bala supercongruence exponents](related-results/JacobianCollisionEulerOrbitBridge.md)
 - **Exact checker:** [`verify_jacobian_euler_orbit_bridge.py`](verification/related/verify_jacobian_euler_orbit_bridge.py)
 
+### CRYS-SUPPORT - crystalline support filtration and Frobenius ghosts
+
+- **Claim:** For a valid local crystalline-locus move on the difference word,
+  the codimension change is exactly \(0,-1\), or \(-2\), with change \(0\)
+  precisely for the invertible boundary pair
+  \((1,0)\leftrightarrow(0,p)\), and change \(-2\) precisely for a
+  \(\theta\)- or \(\nu\)-move at \((0,0)\). More generally, every nested
+  pair \(S\subseteq T\) of Frobenius-stable, locally finite closed-point
+  supports has nonnegative primitive multiplicities \(b_d\) and relative
+  ghost
+  \[
+  a_n=\#(T\setminus S)^{F^n}=\sum_{d\mid n}d\,b_d.
+  \]
+  Hence \(a_{m\ell^r}\equiv a_{m\ell^{r-1}}\pmod
+  {\ell^{r+v_\ell(m)}}\), while a stronger \(\ell^{hr}\) tower is
+  equivalent to \(\ell^{(h-1)r}\mid b_{m\ell^r}\) for \(\ell\nmid m\).
+  The Barsotti--Tate/Steinberg exception has identical semisimple support
+  and therefore zero relative ghost despite nontrivial stack geometry.
+- **Status:** Complete synthesis of the Kansal--Levin--Savitt
+  crystalline-locus classification with the classical Dold/Gauss orbit
+  dictionary. It does not claim that the cited paper proves a
+  supercongruence and makes no literature-priority claim.
+- **Proof:** [Crystalline-locus inclusions as Frobenius support packets](related-results/CrystallineLocusSupportFrobeniusBridge.md)
+- **Exact checker:** [`verify_crystalline_locus_support_bridge.py`](verification/related/verify_crystalline_locus_support_bridge.py)
+
 ### JC-WL - all-degree weighted-lift collision theorem
 
 - **Claim:** If a normalized weighted-lift Keller map has generic fiber
