@@ -6,7 +6,7 @@ Kansal, Levin, and Savitt classify inclusions among reduced special fibers
 $\mathcal Z(\mathbf r)$ of two-dimensional $p$-bounded crystalline loci,
 for odd $p$ and an unramified extension of degree $f>1$.  Their paper
 also proves that, with one explicit exception, these inclusions can be
-detected on closed points, equivalently on semisimple mod-$p$ Galois
+detected on closed points, equivalently on semisimple modulo $p$ Galois
 representations.
 
 This note records the exact way in which that result enters the repository's
@@ -16,7 +16,7 @@ Frobenius-packet framework:
 2. orbit decomposition converts each nested pair of supports into a
    nonnegative Dold sequence;
 3. the ordinary Gauss congruences follow automatically; and
-4. a stronger $ \ell^{hr} $ supercongruence is equivalent to extra
+4. a stronger $\ell^{hr}$ supercongruence is equivalent to extra
    $\ell$-divisibility of the primitive degree strata.
 
 Here $p$ is the residue characteristic in the crystalline-locus paper,
@@ -46,20 +46,17 @@ z(\mathbf u)=\#\{i:u_i=0\}.
 The cited paper proves
 
 ```math
-\operatorname{codim}\mathcal Z(\mathbf r)=z(\mathbf u).
+\mathrm{codim}\,\mathcal Z(\mathbf r)=z(\mathbf u).
 ```
 
 At two cyclically adjacent positions, the difference-word shadows of its
 three operations are
 
-```math
-\begin{array}{c|c|c}
-\text{move}&\text{valid input}&\text{output}\\ \hline
-\mu&(a,0),\ a>0&(a-1,p)\\
-\theta&(a,0),\ a<p&(a+1,p)\\
-\nu&(0,b)&(1,p-b).
-\end{array}
-```
+| Move | Valid input | Output |
+| --- | --- | --- |
+| $\mu$ | $(a,0)$ with $a>0$ | $(a-1,p)$ |
+| $\theta$ | $(a,0)$ with $a<p$ | $(a+1,p)$ |
+| $\nu$ | $(0,b)$ | $(1,p-b)$ |
 
 Every valid move gives an inclusion of crystalline loci.  The paper then
 classifies which moves are invertible, which inclusions are simple, and the
@@ -71,18 +68,15 @@ For the three valid moves, the change
 $\Delta z=z(\mathbf u_{\mathrm{after}})-z(\mathbf u_{\mathrm{before}})$
 is:
 
-```math
-\begin{array}{c|c}
-\text{move and input}&\Delta z\\ \hline
-\mu:(1,0)\mapsto(0,p)&0\\
-\mu:(a,0)\mapsto(a-1,p),\ a>1&-1\\
-\theta:(0,0)\mapsto(1,p)&-2\\
-\theta:(a,0)\mapsto(a+1,p),\ 0<a<p&-1\\
-\nu:(0,p)\mapsto(1,0)&0\\
-\nu:(0,0)\mapsto(1,p)&-2\\
-\nu:(0,b)\mapsto(1,p-b),\ 0<b<p&-1.
-\end{array}
-```
+| Move and input | $\Delta z$ |
+| --- | ---: |
+| $\mu:(1,0)\mapsto(0,p)$ | $0$ |
+| $\mu:(a,0)\mapsto(a-1,p)$ with $a>1$ | $-1$ |
+| $\theta:(0,0)\mapsto(1,p)$ | $-2$ |
+| $\theta:(a,0)\mapsto(a+1,p)$ with $0<a<p$ | $-1$ |
+| $\nu:(0,p)\mapsto(1,0)$ | $0$ |
+| $\nu:(0,0)\mapsto(1,p)$ | $-2$ |
+| $\nu:(0,b)\mapsto(1,p-b)$ with $0<b<p$ | $-1$ |
 
 In particular, the codimension-preserving cases are exactly the mutually
 inverse boundary moves
