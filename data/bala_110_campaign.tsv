@@ -104,8 +104,8 @@ A270919	M	queued	none	extract exact conjecture; expand the p-adic logarithm of t
 A270922	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
 A270924	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
 A283271	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A352655	D	queued	none	extract exact conjecture; identify the parent sequence and inherited defect
-A357506	D	queued	none	extract exact conjecture; identify the parent sequence and inherited defect
-A357567	D	queued	none	extract exact conjecture; identify the parent sequence and inherited defect
-A357956	D	queued	none	extract exact conjecture; identify the parent sequence and inherited defect
-A357959	D	queued	none	extract exact conjecture; identify the parent sequence and inherited defect
+A352655	D	partial	related-results/AperyRankOneDefectPacket.md	exact reduction to R1; prove the first Apéry defect relation
+A357506	D	partial	related-results/AperyRankOneDefectPacket.md	product tower follows from R1 and the p=3 boundary is checked; prove R1
+A357567	D	partial	related-results/AperyRankOneDefectPacket.md	linear and nonlinear claims reduce to R2; prove the second Apéry defect relation
+A357956	D	partial	related-results/AperyRankOneDefectPacket.md	exact reduction to R3; prove the third Apéry defect relation
+A357959	D	partial	related-results/AperyRankOneDefectPacket.md	linear and nonlinear claims follow from R1 and R3; prove those two defect relations

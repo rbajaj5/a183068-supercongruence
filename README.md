@@ -122,6 +122,10 @@ then finishes the factorial route's source audit: it proves the displayed
 root series on A002897, A008978, and A113424 integral and establishes their
 universal \(p^r\) variable-power baseline, while leaving the two genuinely
 stronger \(p^{3r}\) conjectures explicitly open.
+The [Apéry defect packet](related-results/AperyRankOneDefectPacket.md)
+also finishes the derived route's source audit: five records and two
+nonlinear companions collapse to three linear adjacent-defect congruences.
+Those three congruences remain open.
 
 See [RANKINGS.md](RANKINGS.md) for the complete multi-criteria assessment and
 the separate queue of reductions and computational targets.
