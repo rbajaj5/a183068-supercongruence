@@ -14,9 +14,9 @@ EXPECTED_ROUTES = {"T": 40, "C": 37, "F": 14, "M": 14, "D": 5}
 EXPECTED_STATUSES = {
     "proved-here": 17,
     "published-source": 12,
-    "partial": 15,
+    "partial": 16,
     "no-explicit-open": 3,
-    "queued": 63,
+    "queued": 62,
 }
 
 
