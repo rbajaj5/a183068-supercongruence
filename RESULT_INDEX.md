@@ -171,6 +171,22 @@ proof.
 - **Proof:** [An exact boundary for the rational-framing theorem](related-results/RationalFramingCounterexample.md)
 - **Exact checker:** [`verify_rational_framing_counterexample.py`](verification/related/verify_rational_framing_counterexample.py)
 
+### STRAUB-5 — prime-five multivariate Apéry packet
+
+- **Claim:** The cubic part of Straub's multivariate Apéry coefficient
+  theorem extends from its published range \(p>5\) to \(p=5\).
+- **Named records:** This closes the \(p\geq5\) towers stated on A108625,
+  A143007, and A177316.
+- **Mechanism:** At \(p=5\), Jacobsthal scaling loses no valuation because
+  \(12\) is a 5-adic unit. The remaining signed reciprocal-square block
+  vanishes by unit permutation for sign \(+1\) and complementary pairing for
+  sign \(-1\).
+- **Source status:** Published theorem for \(p>5\), with a proved-here
+  boundary extension at \(p=5\).
+- **Status:** Complete proof candidate; independent review pending.
+- **Proof:** [Straub prime-five coefficient packet](related-results/StraubPrimeFiveCoefficientPacket.md)
+- **Exact checker:** [`verify_straub_prime5_packet.py`](verification/related/verify_straub_prime5_packet.py)
+
 ### A288470-ODD — double-binomial tower
 
 - **Claim:** For every odd prime $p$ and positive integers $m,r$,

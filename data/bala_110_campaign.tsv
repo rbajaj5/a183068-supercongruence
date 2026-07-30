@@ -44,13 +44,13 @@ A005725	C	queued	none	extract exact conjecture; identify coefficient or Cartier 
 A006318	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
 A036917	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
 A060941	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A108625	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A108625	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the p=5 boundary and Straub parameter match
 A108628	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A143007	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A143007	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the p=5 boundary and Straub parameter match
 A156554	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
 A168597	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed congruence	verify exact parameter match in bibliography
 A176335	C	published-source	Coster Theorem 4 cited by live OEIS entry	verify exact parameter match in bibliography
-A177316	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A177316	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the bilateral coefficient and telescoping identity
 A228960	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
 A245926	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
 A246437	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
