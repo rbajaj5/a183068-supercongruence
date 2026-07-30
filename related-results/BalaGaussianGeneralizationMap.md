@@ -301,8 +301,10 @@ proves its all-\(m\) integrality and an all-prime \(p^r\) baseline for both
 source parameter families.
 The
 [A049505 paired-product theorem](A049505SymmetricPlanePartitionCongruences.md)
-proves all three of that record's congruences. Only A008793 remains without
-a proof or proved baseline.
+proves all three of that record's congruences. The
+[A008793 cube-product theorem](A008793CubePlanePartitionTower.md) now
+proves that final all-prime \(p^{4r}\) conjecture, so route M has no queued
+record.
 
 Finite-field “Gaussian hypergeometric” functions can be relevant here
 through Gauss sums and quartic characters.  The word *Gaussian* in that
@@ -341,7 +343,7 @@ relations remain open, so the records are classified `partial`, not
 | 2 | A380290 cubic remainder | C | Explain the extra untwisted power beyond the proved coefficientwise quadratic tower | The Gaussian twist has exact quadratic witnesses, so the gain is a special cancellation |
 | 3 | Nearby depth-three finite sums beyond the closed pilot | T | Compute whether the scaling quotient remains deep after weighting | Twisting can remove cancellation used by the untwisted proof |
 | 4 | A183068 and the repository's Landau-depth family | T | Package the already-proved general Frobenius-twist corollary family | Mostly a reusable corollary, not a new local mechanism |
-| 5 | A008793 | M | Prove the remaining hyperfactorial normalization before seeking a quartic-character or CM decomposition | No canonical Gaussian object may exist |
+| 5 | A008793 Gaussian lift | M | Seek a coefficientwise or prime-ideal refinement of the now-proved rational hyperfactorial tower | No canonical Gaussian object may exist |
 | 6 | A364506, A364509, A008978, A002897, A113424 | F | Define and prove integrality of the Gaussian block analogue | The integer coefficient roots are settled, but Gaussian denominator control is a separate theorem |
 | 7 | A352655, A357506, A357567, A357956, A357959 | D | Prove the three linear Apéry defect relations isolated by the packet theorem | Cubic baselines alone do not supply the enhanced three-power gain |
 

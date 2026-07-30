@@ -572,10 +572,9 @@ proof.
   \(a(2p)\equiv p-1\pmod {p^2}\) for A008705. Specializing EULER-PRODUCT
   closes the full \(p^{2r}\) towers on A255672, A270922, and A270924.
 - **Status:** Complete elementary proof candidate for seven named records,
-  with four additional quadratic baselines. A008793 remains without a
-  proved route-M baseline; A229452 has the separate partial result and
-  A049505 the complete follow-on below. No literature-priority claim is
-  made.
+  with four additional quadratic baselines. A229452 has the separate
+  partial result, while A049505 and A008793 are complete follow-ons below.
+  No literature-priority claim is made.
 - **Proof:** [Modular-product prime-coefficient packet](related-results/ModularProductPrimeCoefficientPacket.md)
 - **Exact checker:** [`verify_modular_product_prime_packet.py`](verification/related/verify_modular_product_prime_packet.py)
 
@@ -601,6 +600,23 @@ proof.
   families. The proposed \(p^{3r}\) towers for \(p\ge5\) remain open.
 - **Proof:** [A229452 coefficient-root baseline](related-results/A229452CoefficientRootBaseline.md)
 - **Exact checker:** [`verify_a229452_coefficient_root.py`](verification/related/verify_a229452_coefficient_root.py)
+
+### A008793-CUBE — nonlinear cube-plane-partition tower
+
+- **Claim:** For the number \(A(N)\) of plane partitions in an
+  \(N\)-cube, every prime \(p\) and all \(n,r\ge1\) satisfy
+  \[
+  A(np^r)\equiv A(np^{r-1})^p\pmod {p^{4r}}.
+  \]
+- **Mechanism:** Complementary factors give \(A(N)=2^NP(N)\). Splitting
+  \(P(pN)\) by \(p\mid s\) extracts \(P(N)^p\) exactly. Reduced-residue
+  reciprocal blocks force the remaining unit product to depth \(4r\) at
+  odd primes. At \(p=2\), its sharp depth is two powers shorter, and the
+  uniform evenness of \(A(N)\) supplies exactly those two powers.
+- **Status:** Complete elementary proof candidate for the full named
+  all-prime conjecture. No literature-priority claim is made.
+- **Proof:** [The A008793 cube-plane-partition tower](related-results/A008793CubePlanePartitionTower.md)
+- **Exact checker:** [`verify_a008793_cube_plane_partitions.py`](verification/related/verify_a008793_cube_plane_partitions.py)
 
 ### A049505-SPP — symmetric-plane-partition product
 
