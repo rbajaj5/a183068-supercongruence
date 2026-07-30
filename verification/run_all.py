@@ -20,6 +20,7 @@ SCRIPTS = (
     "verification/related/verify_finite_field_pfaffian_bias.py",
     "verification/related/verify_hyperdeterminant_fourier.py",
     "verification/related/verify_hyperdeterminant_entropy.py",
+    "verification/related/verify_zhang_four_matrix_counterexample.py",
     "verification/related/verify_jacobian_counterexample_counts.py",
     "verification/related/verify_jacobian_degree_four.py",
     "verification/related/verify_jacobian_degree_five.py",

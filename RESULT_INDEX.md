@@ -919,6 +919,23 @@ proof.
 - **Proof:** [Conjugacy shells and exact depth moments](related-results/DyadicDehnTwistConjugacyMoments.md)
 - **Exact checker:** [`verify_dyadic_dehn_twist_conjugacy.py`](verification/related/verify_dyadic_dehn_twist_conjugacy.py)
 
+### ZHANG-4 — exact counterexample to Zhang's four-matrix inequality
+
+- **Claim:** Four explicit real \(2\times2\) rank-one orthogonal projectors
+  violate Teng Zhang's Conjecture 4.1 by the exact factor \(1+\sqrt2\).
+  Dimension one satisfies the conjecture by scalar AM--GM, so the
+  counterexample is dimension-minimal. Adding \(tI_2\) to every projector
+  gives positive-definite counterexamples for every
+  \(0<t<0.1255393107\ldots\).
+- **Status:** Complete exact counterexample with an independent
+  rational-arithmetic checker. A targeted search found no prior resolution,
+  but priority remains provisional pending specialist review and author
+  feedback. Refuting this auxiliary inequality does not settle the parent
+  four-factor Recht--Ré problem.
+- **Source:** [Zhang, Conjecture 4.1](https://arxiv.org/abs/1411.5058)
+- **Proof:** [Exact \(2\times2\) counterexample](related-results/ZhangFourMatrixCounterexample.md)
+- **Exact checker:** [`verify_zhang_four_matrix_counterexample.py`](verification/related/verify_zhang_four_matrix_counterexample.py)
+
 ## Reductions and computational reports
 
 ### CAT-ODD — Catalan ballot-power supercongruences

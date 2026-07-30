@@ -33,6 +33,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 1E | [Degree-four Jacobian Frobenius obstruction](JacobianDegreeFourFrobeniusObstruction.md) | Shows how quadratic Artin factors obstruct raw adjacency and how two-step or corrected towers recover exact congruences | Complete elementary theorem with exact checks; priority preliminary |
 | 1F | [Degree-five elliptic Frobenius packet](JacobianDegreeFiveEllipticFrobenius.md) | Shows the next transition: a tangent cubic contributes a non-CM elliptic trace, and removing the full Frobenius packet leaves an exact \(2r-2\) tower | Complete theorem with direct finite-field and tower checks; priority preliminary |
 | 1G | [Hyperdeterminant entropy profile](HyperdeterminantEntropyProfile.md) | Converts the exact zero/square/nonsquare fibers and Gauss packet into complete Rényi, KL, total-variation, and additive-convolution laws | Complete entropy corollaries with exact checks; no separate priority claim |
+| 1H | [Zhang four-matrix counterexample](ZhangFourMatrixCounterexample.md) | Applies exact low-dimensional matrix analysis to a named auxiliary conjecture from the noncommutative AM--GM program | Complete dimension-minimal counterexample, positive-definite interval, and exact checker; priority provisional |
 | 2 | [Frobenius quotients of constant-term sequences](FrobeniusQuotientConstantTerms.md) | Proves the universal first-order expansion, identifies the exact rank-one condition behind the Cooper law, and gives exact counterexamples to two proposed Dwork shortcuts | Complete elementary theorem; Dwork boundaries certified |
 | 3 | [p-adic Arzelà--Ascoli framework](PadicArzelaAscoliSupercongruenceTowers.md) | Proves the vertical limit supplied by A183068, uses the Banach contraction $x\mapsto px$ to rule out a global continuous interpolation, and proves uniform quadratic contraction of every normalized defect at zero | Complete elementary framework and obstruction; unit-shell estimate open |
 | 4 | [Gaussian Frobenius twists](GaussianFrobeniusTwists.md) | Shows that discard-and-rescale proofs lift to roots-of-unity weights; specializes A183068 to a Gaussian split/inert congruence | Complete elementary deduction; priority unchecked |
@@ -111,6 +112,7 @@ The individual correspondence is:
 | Degree-five Jacobian collisions | `verification/related/verify_jacobian_degree_five.py` |
 | Hyperdeterminant Fourier packet | `verification/related/verify_hyperdeterminant_fourier.py` |
 | Hyperdeterminant entropy profile | `verification/related/verify_hyperdeterminant_entropy.py` |
+| Zhang four-matrix counterexample | `verification/related/verify_zhang_four_matrix_counterexample.py` |
 | Frobenius quotient identity | Coefficientwise algebraic proof; no checker required |
 | Dwork and continuity boundaries | `verification/related/verify_dwork_boundaries.py` |
 | p-adic Arzelà--Ascoli framework | Elementary ultrametric, contraction, and compactness proofs |

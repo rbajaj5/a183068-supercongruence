@@ -39,7 +39,7 @@ allocation, the portfolio currently has four tiers:
 
 | Tier | Results | Recommended use of effort |
 | --- | --- | --- |
-| **A: specialist review now** | GWL-TWO, GWL-SCALE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
+| **A: specialist review now** | ZHANG-4, GWL-TWO, GWL-SCALE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
 | **B: broad theorem engines** | LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER | Reuse on named conjectures and consolidate families |
 | **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, BLACK-WALSH, HASH-MATROID, FQ-CT, WALK-FROB, GQ2-ABCOUNT, GQ2-DIHEDRAL, GQ2-QUATERNION, GQ2-MAXCYCLIC, GQ2-EXTRASPECIAL | Improve experiments, certification, and proof organization |
 | **D: retained open targets** | C11, CAT-ODD, BALA-TOWERS, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
@@ -71,6 +71,7 @@ without increasing a supercongruence exponent.
 | 15 | [CYCLOTOMIC-PAIR: A228960/A350383 polynomial towers](related-results/CyclotomicCoefficientPairTheorem.md) | **6** | 1 | 5 | 6 | 9 | 2 | Complete elementary proof candidate for two named OEIS conjectures, strengthened coefficientwise and at Gaussian twists; broader cyclotomic principle and priority remain open. |
 | 15 | [BALA-ODD: A375178 prime-level odd-power family](related-results/BalaOeisSupercongruenceQueue.md#3-the-full-prime-level-odd-power-theorem-for-a375178) | **6** | 1 | 6 | 8 | 7 | 3 | Complete elementary proof of an infinite named OEIS conjecture family; 56 exact checks pass, with priority and independent review pending. |
 | 15 | [A365029-R12: first two adjacent levels](related-results/A365029FirstTwoLevels.md) | **6** | 1 | 6 | 7 | 8 | 3 | Complete elementary proof of the \(r=1,2\) cases of a named OEIS \(p^{3r}\) tower; shifted transfer and the two-digit harmonic cancellation are proved, with 67,310 exact checks. |
+| 16 | [ZHANG-4: exact four-matrix counterexample](related-results/ZhangFourMatrixCounterexample.md) | **6** | 2 | 6 | 5 | 8 | 3 | Complete dimension-minimal counterexample with an exact positive-definite interval and rational-arithmetic checker; the parent four-factor problem remains separate and priority is provisional. |
 | 16 | [FF-PFAFF: Pfaffian bias and supercongruence](related-results/FiniteFieldPfaffianBiasSupercongruence.md) | **6** | 6 | 6 | 8 | 8 | 4 | Proved elementary theorem with exact checks; rank counts are classical and priority of the valuation formulation is provisional. |
 | 17 | [GL-DYN: translated-product return filtration](related-results/GaussianProductDynamicsConjectures.md) | **6** | 6 | 7 | 7 | 7 | 5 | Complete local dynamical deduction; compatible global conjugacy remains open. |
 | 18 | [ETA-3: cubic extension at \(p=3\)](related-results/EtaPrime3CubicExtension.md) | **6** | 1 | 6 | 5 | 6 | 5 | Complete unchecked draft addressing an exceptional prime in a published theorem. |
