@@ -113,7 +113,7 @@ spectral degree left after the degree-$d$ subtraction.
 Let
 
 $$
-  g:\{-1,1\}^m\longrightarrow\mathbb Z[i].
+  g:\lbrace-1,1\rbrace^m\longrightarrow\mathbb Z[i].
 $$
 
 For $S\subseteq[m]$, put
@@ -121,7 +121,7 @@ For $S\subseteq[m]$, put
 $$
   \chi_S(x)=\prod_{j\in S}x_j,
   \qquad
-  H_g(S)=\sum_{x\in\{-1,1\}^m}g(x)\chi_S(x).
+  H_g(S)=\sum_{x\in\lbrace-1,1\rbrace^m}g(x)\chi_S(x).
 $$
 
 Define the integral spectral masses
@@ -261,10 +261,10 @@ For $n\geq1$, put
 
 $$
   \Delta_n=
-  \left\{
+  \left\lbrace
     (a,b,c)\in\mathbb Z_{\geq0}^3:
     a+b+c=n-1
-  \right\}.
+  \right\rbrace.
   \tag{13}
 $$
 
@@ -272,22 +272,25 @@ Two cells are adjacent when their difference is a permutation of
 $(1,-1,0)$. The three sides are $a=0$, $b=0$, and $c=0$. A monochromatic
 component is a Y when it meets all three sides.
 
-Color the cells by a vector $x\in\{-1,1\}^{\Delta_n}$. Define
+Color the cells by a vector
+$x\in\lbrace-1,1\rbrace^{\Delta_n}$. Define
 $Y_n(x)=1$ when the $1$-colored cells contain a Y and $Y_n(x)=-1$ when the
 $(-1)$-colored cells contain a Y.
 
 For $n\geq2$, define the majority reduction
 
 $$
+\begin{aligned}
   (R_nx)_{a,b,c}
-  =
-  \operatorname{maj}\left(
+  &=
+  \mathrm{maj}\left(
     x_{a+1,b,c},
     x_{a,b+1,c},
     x_{a,b,c+1}
   \right),
   \qquad
   (a,b,c)\in\Delta_{n-1}.
+\end{aligned}
   \tag{14}
 $$
 
@@ -353,7 +356,7 @@ $$
 $$
 
 This is Corollary 3 applied to (16). The topological theorem makes
-$Y_n$ a total $\{-1,1\}$-valued observable, while (15) gives an exact
+$Y_n$ a total $\lbrace-1,1\rbrace$-valued observable, while (15) gives an exact
 finite-scale renormalization certificate. Because the majority triples
 overlap, (15) does not by itself give a scalar recurrence for
 $\mathcal N_{Y_n}$, and no stronger valuation is inferred from it.
