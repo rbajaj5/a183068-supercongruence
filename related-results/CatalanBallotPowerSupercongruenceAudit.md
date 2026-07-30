@@ -2,8 +2,10 @@
 
 ## Status
 
-This note records exact computations and a unified conjectural target. It is
-not a proof.
+The common prime-level slice is now proved for every odd exponent in the
+[companion theorem](CatalanBallotPrimeLevelTheorem.md). This note records
+exact computations for the still-open higher levels and for the exceptional
+primes \(2\) and \(3\).
 
 For an odd integer \(m\ge 3\), put
 
@@ -33,6 +35,22 @@ Each entry records the same named conjecture:
 
 for primes \(p\ge5\) and positive integers \(n,r\).
 
+## Proved prime-level slice
+
+For every prime \(p\ge5\) and every odd \(m\ge1\), the companion theorem
+proves
+
+\[
+ B_m(p)\equiv B_m(1)=1\pmod {p^3}.
+\]
+
+The proof expands a complete ballot residue block through second order.
+Its linear term telescopes to the Wolstenholme harmonic sum, and its
+quadratic obstruction is an alternating inverse-square sum that cancels
+under \(k\leftrightarrow p-k\). This proves the \(n=r=1\) case of all three
+named conjectures, but it does not yet lift that cancellation to arbitrary
+\(n,r\).
+
 ## Exact audit of the three named conjectures
 
 The checker
@@ -53,7 +71,8 @@ official-conjecture checks in total. All pass. The valuation \(3r\) is
 attained, so the displayed exponent cannot be uniformly increased on this
 range.
 
-This is evidence for the three OEIS conjectures, not a proof of them.
+This is evidence for the still-open portions of the three OEIS conjectures,
+not a proof of the full towers.
 
 ## Small-prime refinement suggested by the data
 
@@ -87,15 +106,17 @@ priority has not been searched beyond those records.
 ## Unified target
 
 The identical valuation profile for \(m=3,5,7\) suggests studying the
-family rather than proving three isolated conjectures:
+family rather than treating the remaining levels as three isolated
+conjectures:
 
 > **Ballot-power target.** Determine the odd exponents \(m\ge3\) for which
 > \(B_m(n)\) is always integral and the adjacent-scale bounds
 > (1)--(3) hold.
 
-The integrality clause matters. Divisibility of odd power sums of Catalan
-triangle entries is itself part of the surrounding literature, and finite
-integer output is not a proof of general integrality.
+The prime-level theorem is stated in \(\mathbb Z_{(p)}\), so it does not
+silently assume this general integrality. Divisibility of odd power sums of
+Catalan triangle entries is itself part of the surrounding literature, and
+finite integer output is not a proof of general integrality.
 
 This target is structurally separate from A183068. Exact checks of A183068
 frequently attain its exponent \(2r\), so a blanket strengthening of that

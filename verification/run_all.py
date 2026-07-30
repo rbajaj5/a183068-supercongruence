@@ -12,6 +12,7 @@ SCRIPTS = (
     "verification/related/verify_arithmetic_frobenius_packet_framework.py",
     "verification/related/verify_landau_supercongruence.py",
     "verification/related/verify_catalan_ballot_supercongruences.py",
+    "verification/related/verify_catalan_ballot_prime_level.py",
     "verification/related/verify_bala_oeis_supercongruences.py",
     "verification/related/verify_bala_110_campaign.py",
     "verification/related/verify_apery_odd_moment_prime_classification.py",

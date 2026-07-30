@@ -1394,20 +1394,41 @@ proof.
 - **Proof:** [Exact \(2\times2\) counterexample](related-results/ZhangFourMatrixCounterexample.md)
 - **Exact checker:** [`verify_zhang_four_matrix_counterexample.py`](verification/related/verify_zhang_four_matrix_counterexample.py)
 
+### CAT-PRIME — all odd Catalan-ballot powers at the first prime level
+
+- **Claim:** For every prime \(p\ge5\) and every positive odd \(m\),
+  \[
+  \sum_{k=0}^{p-1}
+  \left(\binom{2p-1}{k}-\binom{2p-1}{k-1}\right)^m
+  \equiv\binom{2p-1}{p-1}\pmod {p^3}.
+  \]
+  This proves the \(n=r=1\) slice recorded on A003161, A003162,
+  A183069, A361889, and A361892.
+- **Status:** Complete elementary proof candidate. The proof uses a
+  second-order ballot-entry expansion, alternating harmonic telescoping,
+  Wolstenholme's congruence, and inverse-square pairing. The arbitrary
+  \(n,r\) towers remain open, and literature priority is provisional.
+- **Proof:** [Catalan-ballot prime-level theorem](related-results/CatalanBallotPrimeLevelTheorem.md)
+- **Exact checker:** [`verify_catalan_ballot_prime_level.py`](verification/related/verify_catalan_ballot_prime_level.py)
+
 ## Reductions and computational reports
 
 ### CAT-ODD — Catalan ballot-power supercongruences
 
 - **Claim:** The three named conjectures A183069, A361889, and A361892 have
-  one common \(p^{3r}\) shape for \(p\ge5\). Exact tests also support sharp
-  losses to \(3r-1\) at \(p=3\), and at \(p=2\) for \(r\ge2\), with exponent
-  \(1\) at \(p=2,r=1\).
+  one common \(p^{3r}\) shape for \(p\ge5\). Their \(n=r=1\) slice is proved
+  for every odd exponent in CAT-PRIME. Exact tests support the remaining
+  levels and sharp losses to \(3r-1\) at \(p=3\), and at \(p=2\) for
+  \(r\ge2\), with exponent \(1\) at \(p=2,r=1\).
 - **Dyadic status:** Experimental; the binary exponent profile is checked but
   not proved.
-- **Status:** Reproducible computational target, not a proof. The official
-  conjectures pass 1,164 exact cases and the proposed small-prime refinements
-  pass 1,047.
+- **Status:** The prime-level slice is a complete proof candidate; the
+  higher levels and exceptional-prime refinements remain reproducible
+  computational targets. The official conjectures pass 1,164 exact cases
+  and the proposed small-prime refinements pass 1,047.
+- **Prime-level proof:** [Catalan-ballot prime-level theorem](related-results/CatalanBallotPrimeLevelTheorem.md)
 - **Report:** [Catalan ballot-power audit](related-results/CatalanBallotPowerSupercongruenceAudit.md)
+- **Prime-level checker:** [`verify_catalan_ballot_prime_level.py`](verification/related/verify_catalan_ballot_prime_level.py)
 - **Exact checker:** [`verify_catalan_ballot_supercongruences.py`](verification/related/verify_catalan_ballot_supercongruences.py)
 
 ### s18-2 — binary supercongruence reduction
