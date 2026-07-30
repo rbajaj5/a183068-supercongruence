@@ -26,12 +26,13 @@ every record:
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | T: finite-sum transfer | 40 | 2 | 3 | 1 | 2 | 32 |
 | C: coefficient/constant term | 37 | 0 | 6 | 3 | 0 | 28 |
-| F: factorial/block product | 14 | 2 | 3 | 0 | 0 | 9 |
+| F: factorial/block product | 14 | 4 | 3 | 0 | 0 | 7 |
 | M: modular or infinite product | 14 | 0 | 0 | 0 | 0 | 14 |
 | D: derived or inherited | 5 | 0 | 0 | 0 | 0 | 5 |
-| **Total** | **110** | **4** | **12** | **4** | **2** | **88** |
+| **Total** | **110** | **6** | **12** | **4** | **2** | **86** |
 
-The four `proved-here` records are A141057, A288470, A357568, and A364506. The
+The six `proved-here` records are A091527, A141057, A262732, A288470,
+A357568, and A364506. The
 twelve `published-source` records are A002426, A082758, A103882, A168597,
 A176335, A184423, A186420, A234839, A363864, A363867, A363871, and
 A364509. The four partial records are A228960, A333592, A350383, and
@@ -63,7 +64,9 @@ The campaign does not use A-number order. It uses expected proof yield.
    the model: two carries close the integer tower and automatically produce
    a Gaussian Frobenius twist.
 2. **F route:** rewrite the term as a multinomial or an integral Laurent
-   product. A364506 is the model.
+   product. A364506 is one model.  The odd-unit block theorem is the second:
+   it closes A091527 and A262732 simultaneously by splitting a half-integral
+   factorial product into its divisible factors and complete odd unit blocks.
 3. **C route:** first determine whether a direct finite-sum factorization is
    simpler than invoking Dwork or Cartier operators.
 4. **M route:** take a p-adic logarithm and isolate the first moment that

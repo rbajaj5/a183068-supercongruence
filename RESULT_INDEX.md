@@ -151,6 +151,36 @@ proof.
 - **Proof:** [Multinomial-power Frobenius towers](related-results/MultinomialPowerFrobeniusTowers.md)
 - **Exact checker:** [`verify_multinomial_power_towers.py`](verification/related/verify_multinomial_power_towers.py)
 
+### ODD-UNIT-BLOCK — A091527 and A262732 towers
+
+- **Claim:** For every integer $m\ge2$, prime $p\ge5$, and positive
+  integers $n,r$, the integer coefficient sequence
+
+  ```math
+  A_m(N)
+  =
+  [x^N]\left(\frac{(1+x)^m}{(1-x)^{m-2}}\right)^N
+  =
+  4^N\binom{(mN-1)/2}{N}
+  ```
+
+  satisfies
+
+  ```math
+  A_m(np^r)\equiv A_m(np^{r-1})\pmod {p^{3r}}.
+  ```
+
+- **Source status:** The cases $m=3$ and $m=5$ are the named open
+  conjectures on A091527 and A262732.
+- **Mechanism:** Exact separation of divisible factors, classical
+  central-binomial scaling, and first- and second-reciprocal cancellation
+  over complete odd unit blocks.
+- **Boundary:** Both named sequences fail modulo $3^3$ already at
+  $n=r=1$; the exclusion of $p=3$ is sharp.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Odd-unit block Frobenius towers](related-results/OddUnitBlockFrobeniusTowers.md)
+- **Exact checker:** [`verify_odd_unit_block_towers.py`](verification/related/verify_odd_unit_block_towers.py)
+
 ### BALA-TOWERS — remaining higher-level Bala tower queue
 
 - **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) and the
