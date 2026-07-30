@@ -17,6 +17,7 @@ SCRIPTS = (
     "verification/related/verify_apery_odd_moment_prime_classification.py",
     "verification/related/verify_coefficient_framing_cubic_tower.py",
     "verification/related/verify_rational_framing_counterexample.py",
+    "verification/related/verify_straub_prime5_packet.py",
     "verification/related/verify_a365029_first_two_levels.py",
     "verification/related/verify_binomial_quotient_cancellation.py",
     "verification/related/verify_a288470_odd_prime_tower.py",

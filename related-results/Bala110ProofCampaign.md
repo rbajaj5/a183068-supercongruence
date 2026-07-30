@@ -25,16 +25,17 @@ every record:
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | T: finite-sum transfer | 40 | 6 | 3 | 2 | 2 | 27 |
-| C: coefficient/constant term | 37 | 3 | 6 | 3 | 0 | 25 |
+| C: coefficient/constant term | 37 | 6 | 6 | 3 | 0 | 22 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 |
-| **Total** | **110** | **26** | **12** | **17** | **3** | **52** |
+| **Total** | **110** | **29** | **12** | **17** | **3** | **49** |
 
-The twenty-six `proved-here` records are A002003, A008485, A008705, A008793,
-A049505, A091527, A141057, A255672, A262732, A270913, A270919, A270922,
-A270924, A275652, A275654, A288470, A348410, A351857, A352373, A357509,
-A357510, A357568, A364173, A364506, A370101, and A370102. The twelve
+The twenty-nine `proved-here` records are A002003, A008485, A008705, A008793,
+A049505, A091527, A108625, A141057, A143007, A177316, A255672, A262732,
+A270913, A270919, A270922, A270924, A275652, A275654, A288470, A348410,
+A351857, A352373, A357509, A357510, A357568, A364173, A364506, A370101, and
+A370102. The twelve
 `published-source` records are A002426, A082758, A103882, A168597, A176335,
 A184423, A186420, A234839, A363864, A363867, A363871, and A364509. The
 seventeen partial records are A008978, A023871, A023873,
@@ -96,7 +97,10 @@ The campaign does not use A-number order. It uses expected proof yield.
    general two-parameter conjecture on A352373. A
    [small exact counterexample](RationalFramingCounterexample.md) shows why
    Müller's broader framing theorem cannot be used as the source closure
-   without repair.
+   without repair. The
+   [Straub prime-five packet](StraubPrimeFiveCoefficientPacket.md) supplies
+   the omitted boundary prime in Straub's multivariate Apéry theorem and
+   closes A108625, A143007, and A177316 after exact coefficient matching.
 4. **M route:** take a p-adic logarithm and isolate the first moment that
    survives the product balance.  The
    [prime-coefficient packet](ModularProductPrimeCoefficientPacket.md)
