@@ -49,12 +49,12 @@ The following records are instances of the same family.
 
 | Record | $(\alpha,\beta)$ | Coefficient formula |
 | --- | ---: | --- |
-| [A002003](https://oeis.org/A002003) | $(1,-1)$ | $[x^N]((1+x)/(1-x))^N$, for $N>0$ |
-| [A348410](https://oeis.org/A348410) | $(-1,-2)$ | $[x^N]((1-x)(1-x^2))^{-N}$ |
-| [A351857](https://oeis.org/A351857) | $(-2,-4)$ | $[x^N]((1-x)(1-x^2))^{-2N}$ |
-| [A352373](https://oeis.org/A352373) | $(-1,-3)$ | $[x^N]((1-x)^2(1-x^2))^{-N}$ |
-| [A370101](https://oeis.org/A370101) | $(4,-3)$ | $[x^N]((1+x)^4/(1-x)^3)^N$ |
-| [A370102](https://oeis.org/A370102) | $(4,-4)$ | $[x^N]((1+x)^4/(1-x)^4)^N$ |
+| [A002003](https://oeis.org/A002003) | $(1,-1)$ | $\lbrack x^N\rbrack ((1+x)/(1-x))^N$, for $N>0$ |
+| [A348410](https://oeis.org/A348410) | $(-1,-2)$ | $\lbrack x^N\rbrack ((1-x)(1-x^2))^{-N}$ |
+| [A351857](https://oeis.org/A351857) | $(-2,-4)$ | $\lbrack x^N\rbrack ((1-x)(1-x^2))^{-2N}$ |
+| [A352373](https://oeis.org/A352373) | $(-1,-3)$ | $\lbrack x^N\rbrack ((1-x)^2(1-x^2))^{-N}$ |
+| [A370101](https://oeis.org/A370101) | $(4,-3)$ | $\lbrack x^N\rbrack ((1+x)^4/(1-x)^3)^N$ |
+| [A370102](https://oeis.org/A370102) | $(4,-4)$ | $\lbrack x^N\rbrack ((1+x)^4/(1-x)^4)^N$ |
 
 Each page proposes the $p^{3r}$ tower for $p\geq5$; A352373 also states the
 full two-parameter conjecture. The theorem therefore proves all six displayed
@@ -286,4 +286,3 @@ It also shows that the earlier separation of these records between a
 finite-sum route and a coefficient route was artificial: the controlling
 object is the period-two logarithmic derivative of the coefficient kernel.
 That is exactly the kind of consolidation the campaign is intended to find.
-
