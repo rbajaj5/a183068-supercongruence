@@ -162,10 +162,9 @@ by $p$.
 For $T\geq1$, define the reduced harmonic sums
 
 $$
-H_T=\sum_{\substack{1\leq j<T\\p\nmid j}}\frac1j,
+H_T=\sum_{j=1,\;p\nmid j}^{T-1}\frac1j,
 \qquad
-H_T^\pm=\sum_{\substack{1\leq j<T\\p\nmid j}}
-\frac{(-1)^{j+1}}j.
+H_T^\pm=\sum_{j=1,\;p\nmid j}^{T-1}\frac{(-1)^{j+1}}j.
 $$
 
 If $e=v_p(T)\geq1$, standard reduced-residue pairing gives
