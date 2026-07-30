@@ -7,6 +7,7 @@ companion Markdown note.
 from __future__ import annotations
 
 import math
+from fractions import Fraction
 
 
 def valuation(n: int, p: int) -> int:
@@ -22,6 +23,17 @@ def valuation(n: int, p: int) -> int:
 
 def rational_valuation(num: int, den: int, p: int) -> int:
     return valuation(num, p) - valuation(den, p)
+
+
+def fraction_valuation(value: Fraction, p: int) -> int:
+    return rational_valuation(value.numerator, value.denominator, p)
+
+
+def integer_binomial(top: int, lower: int) -> int:
+    """Integral extension of binomial(top, lower) to every integer top."""
+    if top >= 0:
+        return math.comb(top, lower) if top >= lower else 0
+    return (-1) ** lower * math.comb(lower - top - 1, lower)
 
 
 def t_a364506(row: int, n: int) -> int:
@@ -89,6 +101,65 @@ def quotient_relation_valuation(p: int, r: int) -> int:
     return rational_valuation(num, den, p)
 
 
+def unit_block(p: int, r: int, parameter: int) -> Fraction:
+    modulus = p**r
+    out = Fraction(1)
+    for u in range(1, modulus):
+        if u % p:
+            out *= Fraction(u + parameter * modulus, u)
+    return out
+
+
+def check_universal_quotient_cancellation() -> tuple[int, int]:
+    checks = 0
+    equality_cases = 0
+    parameters = range(-3, 6)
+    for p in (3, 5, 7):
+        for r in (2, 3):
+            blocks = {t: unit_block(p, r, t) - 1 for t in parameters}
+            required = 3 * r + (2 if p == 3 else 3)
+            for a in parameters:
+                for b in parameters:
+                    difference = (
+                        b * (b + 1) * blocks[a]
+                        - a * (a + 1) * blocks[b]
+                    )
+                    got = fraction_valuation(difference, p)
+                    assert got >= required
+                    checks += 1
+                    if got == required:
+                        equality_cases += 1
+    assert equality_cases > 0
+    return checks, equality_cases
+
+
+def a357509_family(j: int, k: int, n: int) -> int:
+    return (
+        k * k * (k - 1) * integer_binomial(j * n, n)
+        - j * j * (j - 1) * integer_binomial(k * n, n)
+    )
+
+
+def check_a357509_family() -> tuple[int, int]:
+    checks = 0
+    equality_cases = 0
+    for p in (5, 7, 11):
+        for r in (2, 3):
+            for j in range(-5, 9):
+                for k in range(-5, 9):
+                    difference = (
+                        a357509_family(j, k, p**r)
+                        - a357509_family(j, k, p ** (r - 1))
+                    )
+                    got = valuation(difference, p)
+                    assert got >= 3 * r + 3
+                    checks += 1
+                    if got == 3 * r + 3:
+                        equality_cases += 1
+    assert equality_cases > 0
+    return checks, equality_cases
+
+
 def a_family(k: int, n: int) -> int:
     return (
         9 * math.comb(2 * n, n) ** k
@@ -123,11 +194,24 @@ def check_enhanced_family() -> tuple[int, int, int]:
 
 def main() -> None:
     factorization_checks, tower_checks = check_a364506()
+    universal_checks, universal_equalities = check_universal_quotient_cancellation()
+    a357509_checks, a357509_equalities = check_a357509_family()
     quotient_checks, family_checks, equality_cases = check_enhanced_family()
-    total = factorization_checks + tower_checks + quotient_checks + family_checks
+    total = (
+        factorization_checks
+        + tower_checks
+        + universal_checks
+        + a357509_checks
+        + quotient_checks
+        + family_checks
+    )
     print("Binomial-quotient cancellation checks passed")
     print(f"A364506 factorizations: {factorization_checks}")
     print(f"A364506 tower instances: {tower_checks}")
+    print(f"universal quotient-cancellation instances: {universal_checks}")
+    print(f"sharp universal quotient instances: {universal_equalities}")
+    print(f"A357509 two-parameter instances: {a357509_checks}")
+    print(f"sharp A357509 instances: {a357509_equalities}")
     print(f"quotient-cancellation instances: {quotient_checks}")
     print(f"A357568-family instances: {family_checks}")
     print(f"sharp A357568-family instances: {equality_cases}")

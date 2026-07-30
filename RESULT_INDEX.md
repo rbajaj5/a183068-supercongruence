@@ -87,9 +87,21 @@ proof.
 - **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#4-the-a333593-tower-is-a-coster-corollary)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
 
-### BALA-BINOMIAL — A357568 and A364506
+### BALA-BINOMIAL — A357509, A357568, and A364506
 
-- **Claim 1:** For every odd prime \(p\), every \(r\ge2\), and every
+- **Claim 1:** For every prime \(p\ge5\), every \(r\ge2\), and all
+  integers \(j,k\), the complete A357509 family
+  \[
+  U_{j,k}(N)=
+  k^2(k-1)\binom{jN}{N}
+  -j^2(j-1)\binom{kN}{N}
+  \]
+  satisfies
+  \[
+  U_{j,k}(p^r)\equiv U_{j,k}(p^{r-1})
+  \pmod {p^{3r+3}}.
+  \]
+- **Claim 2:** For every odd prime \(p\), every \(r\ge2\), and every
   \(k\ge1\), the full family on A357568 satisfies
   \[
   9\binom{2p^r}{p^r}^{k}
@@ -99,11 +111,11 @@ proof.
   -k2^k\binom{3p^{r-1}}{p^{r-1}}
   \pmod {p^{3r+3}}.
   \]
-- **Claim 2:** Every row of A364506 satisfies its conjectured
+- **Claim 3:** Every row of A364506 satisfies its conjectured
   \(p^{3r}\) tower for \(p\ge5\).
-- **Source status:** Two named OEIS conjectures. The first proof uses a
-  reduced-unit quotient cancellation; the second is a reduction to the
-  classical binomial scaling theorem.
+- **Source status:** Three named OEIS conjectures. The first two proofs use
+  one universal reduced-unit quotient cancellation; the third is a
+  reduction to the classical binomial scaling theorem.
 - **Status:** Complete proof candidate; priority search preliminary.
 - **Proof:** [Binomial-quotient cancellation](related-results/BinomialQuotientCancellation.md)
 - **Exact checker:** [`verify_binomial_quotient_cancellation.py`](verification/related/verify_binomial_quotient_cancellation.py)
