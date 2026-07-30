@@ -58,8 +58,7 @@ Theorem 1.1.
 Theorem 1.2 asserts, for a periodic sequence of period $N$, a lower bound on
 
 $$
-\sum_{\substack{1\leq k<n\\p\nmid k}}
-\frac{a_{n-k}a_k}{k^2}.
+\sum_{1\leq k<n,\;p\nmid k}\frac{a_{n-k}a_k}{k^2}.
 $$
 
 Take $N=4$, $p=n=5$. Since $5\nmid4$, the asserted exponent is one. But
@@ -93,8 +92,8 @@ For framing parameter one, equation (5.3) of the paper therefore gives
 
 $$
 A(n)
-=[x^n]\exp\left(n\int V(x)\right)
-=[x^n](1-x)^{-n}(1-x^4)^{-4n}.
+=\lbrack x^n\rbrack\exp\left(n\int V(x)\right)
+=\lbrack x^n\rbrack(1-x)^{-n}(1-x^4)^{-4n}.
 $$
 
 The coefficient has the finite formula
@@ -147,4 +146,3 @@ python verification/related/verify_rational_framing_counterexample.py
 The checker verifies the 2-sequence law on 3,600 finite cases, the exact
 weighted-harmonic failure, the exact framed coefficient failure, and an
 independent coefficient expansion. All 3,620 checks pass.
-
