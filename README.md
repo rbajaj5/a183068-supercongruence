@@ -126,6 +126,12 @@ The [Apéry defect packet](related-results/AperyRankOneDefectPacket.md)
 also finishes the derived route's source audit: five records and two
 nonlinear companions collapse to three linear adjacent-defect congruences.
 Those three congruences remain open.
+The [modular-product packet](related-results/ModularProductPrimeCoefficientPacket.md)
+proves seven further named records: four by a universal prime-coefficient
+formula and three by specialization of the colored Euler-product theorem.
+It also supplies quadratic baselines for four proposed cubic towers, leaving
+only A008793, A049505, and A229452 as the route-M records without a proof or
+proved baseline.
 
 See [RANKINGS.md](RANKINGS.md) for the complete multi-criteria assessment and
 the separate queue of reductions and computational targets.

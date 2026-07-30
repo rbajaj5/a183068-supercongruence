@@ -556,6 +556,27 @@ proof.
 - **Proof:** [Colored Euler-product theorem](related-results/EulerProductGaussianTower.md)
 - **Exact checker:** [`verify_euler_product_gaussian_tower.py`](verification/related/verify_euler_product_gaussian_tower.py)
 
+### MODULAR-PRIME — seven modular-product OEIS records
+
+- **Claim:** For
+  \[
+  F(x)=\prod_{m\ge1}(1-x^m)^{h_m},
+  \qquad h_m\in\mathbb Z,
+  \]
+  and every odd prime \(p\),
+  \[
+  [x^p]F(x)^p\equiv-h_1-ph_p\pmod {p^2}.
+  \]
+  This proves the displayed prime-level claims on A008485, A008705,
+  A270913, and A270919. A separate logarithmic splitting proves
+  \(a(2p)\equiv p-1\pmod {p^2}\) for A008705. Specializing EULER-PRODUCT
+  closes the full \(p^{2r}\) towers on A255672, A270922, and A270924.
+- **Status:** Complete elementary proof candidate for seven named records,
+  with four additional quadratic baselines. A008793, A049505, and A229452
+  remain the unresolved route-M core; no literature-priority claim is made.
+- **Proof:** [Modular-product prime-coefficient packet](related-results/ModularProductPrimeCoefficientPacket.md)
+- **Exact checker:** [`verify_modular_product_prime_packet.py`](verification/related/verify_modular_product_prime_packet.py)
+
 ### DYADIC-Q — binary Euler-product tower and hypercube defect
 
 - **Claim:** Every integral colored Euler product with degree weight
