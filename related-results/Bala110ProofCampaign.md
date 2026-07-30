@@ -24,19 +24,20 @@ every record:
 
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 3 | 3 | 2 | 2 | 30 |
-| C: coefficient/constant term | 37 | 0 | 6 | 3 | 0 | 28 |
+| T: finite-sum transfer | 40 | 3 | 6 | 2 | 2 | 27 |
+| C: coefficient/constant term | 37 | 0 | 9 | 3 | 0 | 25 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 |
-| **Total** | **110** | **20** | **12** | **17** | **3** | **58** |
+| **Total** | **110** | **20** | **18** | **17** | **3** | **52** |
 
 The twenty `proved-here` records are A008485, A008705, A008793, A049505,
 A091527, A141057, A255672, A262732, A270913, A270919, A270922, A270924,
 A275652, A275654, A288470, A357509, A357510, A357568, A364173, and A364506. The
-twelve `published-source` records are A002426, A082758, A103882, A168597,
-A176335, A184423, A186420, A234839, A363864, A363867, A363871, and
-A364509. The seventeen partial records are A008978, A023871, A023873,
+eighteen `published-source` records are A002003, A002426, A082758, A103882,
+A168597, A176335, A184423, A186420, A234839, A348410, A351857, A352373,
+A363864, A363867, A363871, A364509, A370101, and A370102. The seventeen
+partial records are A008978, A023871, A023873,
 A113424, A206622, A228960, A229452, A283271, A333592, A350383, A352655,
 A357506, A357512, A357567, A357956, A357959, and A380290. A002897, A005259, and
 A005260 are retained as
@@ -89,7 +90,12 @@ The campaign does not use A-number order. It uses expected proof yield.
    A002897, A008978, and A113424; the latter two retain their stronger
    conjectural \(p^{3r}\) variable-power towers.
 3. **C route:** first determine whether a direct finite-sum factorization is
-   simpler than invoking Dwork or Cartier operators.
+   simpler than invoking Dwork or Cartier operators.  The
+   [coefficient-framing theorem](CoefficientFramingCubicTower.md) identifies
+   six records as instances of one published rational-framing theorem and
+   supplies an elementary Cartier proof of the specialization. In
+   particular, the general two-parameter conjecture on A352373 is already a
+   consequence of Müller's Theorem 1.1.
 4. **M route:** take a p-adic logarithm and isolate the first moment that
    survives the product balance.  The
    [prime-coefficient packet](ModularProductPrimeCoefficientPacket.md)

@@ -15,6 +15,7 @@ SCRIPTS = (
     "verification/related/verify_bala_oeis_supercongruences.py",
     "verification/related/verify_bala_110_campaign.py",
     "verification/related/verify_apery_odd_moment_prime_classification.py",
+    "verification/related/verify_coefficient_framing_cubic_tower.py",
     "verification/related/verify_a365029_first_two_levels.py",
     "verification/related/verify_binomial_quotient_cancellation.py",
     "verification/related/verify_a288470_odd_prime_tower.py",
