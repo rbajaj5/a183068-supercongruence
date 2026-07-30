@@ -27,18 +27,19 @@ every record:
 | T: finite-sum transfer | 40 | 2 | 3 | 1 | 2 | 32 |
 | C: coefficient/constant term | 37 | 0 | 6 | 3 | 0 | 28 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 |
-| M: modular or infinite product | 14 | 7 | 0 | 4 | 0 | 3 |
+| M: modular or infinite product | 14 | 7 | 0 | 5 | 0 | 2 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 |
-| **Total** | **110** | **17** | **12** | **15** | **3** | **63** |
+| **Total** | **110** | **17** | **12** | **16** | **3** | **62** |
 
 The seventeen `proved-here` records are A008485, A008705, A091527, A141057,
 A255672, A262732, A270913, A270919, A270922, A270924, A275652, A275654,
 A288470, A357509, A357568, A364173, and A364506. The
 twelve `published-source` records are A002426, A082758, A103882, A168597,
 A176335, A184423, A186420, A234839, A363864, A363867, A363871, and
-A364509. The fifteen partial records are A008978, A023871, A023873,
-A113424, A206622, A228960, A283271, A333592, A350383, A352655, A357506,
-A357567, A357956, A357959, and A380290. A002897, A005259, and A005260 are retained as
+A364509. The sixteen partial records are A008978, A023871, A023873,
+A113424, A206622, A228960, A229452, A283271, A333592, A350383, A352655,
+A357506, A357567, A357956, A357959, and A380290. A002897, A005259, and
+A005260 are retained as
 search-corpus records but
 classified `no-explicit-open`: their live matches concern unrelated Bala
 material or a claim now marked proved, not a live Bala supercongruence
@@ -92,8 +93,11 @@ The campaign does not use A-number order. It uses expected proof yield.
    A270919 by one universal first-coefficient lemma.  The existing colored
    Euler-product theorem proves the complete A255672, A270922, and A270924
    towers and supplies rigorous quadratic baselines for four proposed cubic
-   towers.  Only A008793, A049505, and A229452 remain without a proof or
-   proved baseline.
+   towers.  The
+   [A229452 coefficient-root theorem](A229452CoefficientRootBaseline.md)
+   also proves that record's all-\(m\) integrality conjecture, an
+   exact Lagrange bridge, and an all-prime \(p^r\) baseline. Only A008793
+   and A049505 remain without a proof or proved baseline.
 5. **D route:** identify the parent sequence and prove that the claimed
    congruence is inherited before treating it as an independent problem.
    This route is now fully triaged.  The

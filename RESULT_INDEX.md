@@ -572,10 +572,34 @@ proof.
   \(a(2p)\equiv p-1\pmod {p^2}\) for A008705. Specializing EULER-PRODUCT
   closes the full \(p^{2r}\) towers on A255672, A270922, and A270924.
 - **Status:** Complete elementary proof candidate for seven named records,
-  with four additional quadratic baselines. A008793, A049505, and A229452
-  remain the unresolved route-M core; no literature-priority claim is made.
+  with four additional quadratic baselines. A008793 and A049505 remain
+  without a proved route-M baseline; A229452 has the separate partial result
+  below. No literature-priority claim is made.
 - **Proof:** [Modular-product prime-coefficient packet](related-results/ModularProductPrimeCoefficientPacket.md)
 - **Exact checker:** [`verify_modular_product_prime_packet.py`](verification/related/verify_modular_product_prime_packet.py)
+
+### A229452-ROOT — parameterized integral coefficient root
+
+- **Claim:** For every \(m\ge1\),
+  \[
+  B_m(n)=\frac{(mn)!}{m!(n!)^m}
+  \]
+  satisfies a strong all-prime multinomial Gauss tower. Therefore
+  \[
+  E_m(x)=\exp\left(\sum_{n\ge1}\frac{B_m(n)}n x^n\right)
+  \]
+  is integral. Its canonical root \(F_m\) satisfies
+  \([x^n]F_m(x)^n=B_m(n)\) and
+  \(2[x^n]E_m(x)^n=[x^n]F_m(x)^{2n}\). The A229452 family
+  \(b_m(N)=[x^N]E_m(x)^N\) consequently satisfies an all-prime
+  \(p^r\) adjacent tower. More generally, every
+  \([x^{RN}]E_m(x)^{SN}\), with \(R\ge1\) and \(S\in\mathbb Z\), satisfies
+  the same baseline.
+- **Status:** Complete elementary proof of the record's all-\(m\)
+  integrality conjecture and universal baselines for both parameter
+  families. The proposed \(p^{3r}\) towers for \(p\ge5\) remain open.
+- **Proof:** [A229452 coefficient-root baseline](related-results/A229452CoefficientRootBaseline.md)
+- **Exact checker:** [`verify_a229452_coefficient_root.py`](verification/related/verify_a229452_coefficient_root.py)
 
 ### DYADIC-Q — binary Euler-product tower and hypercube defect
 

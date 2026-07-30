@@ -1,7 +1,8 @@
 # A prime-coefficient packet for modular products
 
 **Status:** complete elementary proof candidate for seven named OEIS records;
-quadratic baselines for four further records; three route-M records remain open
+quadratic baselines for four further records; two route-M records remain
+without a proved baseline
 
 ## 1. The source claims
 
@@ -18,7 +19,7 @@ live OEIS pages on July 29, 2026.
 | [A023873](https://oeis.org/A023873) | every integral-power derived sequence has a $p^{3r}$ tower for $p\ge7$ | $p^{2r}$ baseline proved |
 | [A049505](https://oeis.org/A049505) | three prime-power congruences for symmetric plane partitions | still open |
 | [A206622](https://oeis.org/A206622) | every integral-power derived sequence has a $p^{3r}$ tower for $p\ge5$ | $p^{2r}$ baseline proved |
-| [A229452](https://oeis.org/A229452) | a coefficient-power $p^{3r}$ tower and a parameterized extension | still open |
+| [A229452](https://oeis.org/A229452) | a coefficient-power $p^{3r}$ tower and a parameterized extension | integrality and $p^r$ baseline proved in a follow-on |
 | [A255672](https://oeis.org/A255672) | $a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}$, $p\ge3$ | proved by Theorem 4 |
 | [A270913](https://oeis.org/A270913) | $a(p)\equiv p+1\pmod {p^2}$ | proved in Corollary 2 |
 | [A270919](https://oeis.org/A270919) | $a(p)\equiv2p+2\pmod {p^2}$ | proved in Corollary 2 |
@@ -233,19 +234,21 @@ an additional cancellation after setting the marking variables equal to
 one; the coefficientwise Gaussian twist already has sharp quadratic
 witnesses.
 
-## 6. The three remaining route-M targets
+## 6. The remaining route-M targets
 
 This packet does not prove:
 
 1. the nonlinear $p^{4r}$ MacMahon-product tower on A008793;
 2. the three symmetric-plane-partition congruences on A049505; or
-3. the coefficient-power $p^{3r}$ family on A229452.
+3. the coefficient-power $p^{3r}$ gain on A229452.
 
-These are now the only route-M records without either a complete proof here
-or a proved baseline.  A008793 and A049505 require factorial-product
-normalizations that are not instances of (1).  A229452 requires a
-coefficient-root or Dwork argument for its exponential seed.  Merely calling
-these products modular does not supply the missing powers.
+The [A229452 coefficient-root follow-on](A229452CoefficientRootBaseline.md)
+now proves the all-$m$ integrality conjecture, gives an exact Lagrange bridge,
+and establishes all-prime $p^r$ towers for both source parameter families.
+Its cubic gains remain open. Thus A008793 and A049505 are the only route-M records without
+either a complete proof or a proved baseline. Their factorial-product
+normalizations are not instances of (1). Merely calling these products
+modular does not supply the missing powers.
 
 ## 7. Provenance and verification
 
