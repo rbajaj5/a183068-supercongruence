@@ -21,6 +21,7 @@ SCRIPTS = (
     "verification/related/verify_odd_unit_block_towers.py",
     "verification/related/verify_dixon_legendre_towers.py",
     "verification/related/verify_a364173_integral_tower.py",
+    "verification/related/verify_coefficient_power_gauss_baseline.py",
     "verification/related/verify_q_calculus_supercongruence.py",
     "verification/related/verify_weighted_lift_collision_synthesis.py",
     "verification/related/verify_dwork_period_supercongruence.py",

@@ -256,6 +256,14 @@ family, including \(p=3\).  These are integer
 supercongruences; defining a genuinely Gaussian block analogue remains a
 different problem.
 
+The remaining three source records have also been triaged in the
+[coefficient-root note](CoefficientPowerGaussBaseline.md).  A002897's
+former diagonal claim is already marked proved on the live record.
+For A008978 and A113424, the displayed root series are now proved integral
+and every variable-power family has an all-prime \(p^r\) tower; their
+stronger \(p^{3r}\) refinements remain open.  Thus no route-F record remains
+unclassified, although two retain genuine cubic work.
+
 This route is closest to Kalinin's
 [rectangular Gaussian products](https://arxiv.org/abs/2504.07978), but it is
 also the easiest place to create an ill-defined analogy.  The repository
@@ -313,7 +321,7 @@ obstruction.
 | 3 | Nearby depth-three finite sums beyond the closed pilot | T | Compute whether the scaling quotient remains deep after weighting | Twisting can remove cancellation used by the untwisted proof |
 | 4 | A183068 and the repository's Landau-depth family | T | Package the already-proved general Frobenius-twist corollary family | Mostly a reusable corollary, not a new local mechanism |
 | 5 | A008793 and A049505 | M | Identify a quartic-character or CM decomposition | No canonical Gaussian object may exist |
-| 6 | A364506, A364509, A008978, A002897 | F | Define and prove integrality of the Gaussian block analogue | Definition and denominator control precede congruences |
+| 6 | A364506, A364509, A008978, A002897, A113424 | F | Define and prove integrality of the Gaussian block analogue | The integer coefficient roots are settled, but Gaussian denominator control is a separate theorem |
 | 7 | Derived entries | D | Trace every claim back to compatible source theorems | Derived operations may not commute with Frobenius |
 
 A228960 and A350383 have left this open queue: one coefficientwise theorem

@@ -253,6 +253,38 @@ proof.
 - **Proof:** [A364173 integrality and half-binomial tower](related-results/A364173IntegralHalfBinomialTower.md)
 - **Exact checker:** [`verify_a364173_integral_tower.py`](verification/related/verify_a364173_integral_tower.py)
 
+### COEFF-POWER-GAUSS — integral coefficient roots and universal baseline
+
+- **Claim:** If \(A(1)=c>0\), \(c\mid A(n)\), and \(A(n)/c\) has the
+  Gauss property, then the unique series \(F\) defined by
+
+  ```math
+  [x^n]F(x)^{cn}=A(n)
+  ```
+
+  is integral. Its exponential companion \(E\) is integral, the two
+  variable-power families satisfy an exact Lagrange identity, and every
+  integral series \(H\) satisfies
+
+  ```math
+  [x^{np^r}]H(x)^{knp^r}
+  \equiv
+  [x^{np^{r-1}}]H(x)^{knp^{r-1}}
+  \pmod {p^r}.
+  ```
+
+- **Applications:** Resolves the displayed root-integrality assertions on
+  A002897, A008978, and A113424 and supplies their all-prime \(p^r\)
+  coefficient-power baseline.
+- **Boundary:** The universal exponent is sharp. The stronger
+  A008978/A113424 \(p^{3r}\) conjectures remain open.
+- **Mechanism:** Euler exponents, formal inversion and Lagrange inversion,
+  followed by cyclic word orbits and integer LTE.
+- **Status:** Complete elementary theorem; application priority
+  preliminary.
+- **Proof:** [Integral coefficient roots and the universal Gauss baseline](related-results/CoefficientPowerGaussBaseline.md)
+- **Exact checker:** [`verify_coefficient_power_gauss_baseline.py`](verification/related/verify_coefficient_power_gauss_baseline.py)
+
 ### BALA-TOWERS — remaining higher-level Bala tower queue
 
 - **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) and the

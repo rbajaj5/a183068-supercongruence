@@ -76,10 +76,10 @@ A363867	C	published-source	Straub Theorem 3.2 is cited on the live OEIS record	v
 A363871	C	published-source	Straub Theorem 3.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
 A364303	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
 A380290	C	partial	EulerProductGaussianTower.md	prove or refute the special untwisted cubic gain
-A002897	F	queued	none	extract exact conjecture; factor term and compute Landau depth
-A008978	F	queued	none	extract exact conjecture; factor term and compute Landau depth
+A002897	F	no-explicit-open	related-results/CoefficientPowerGaussBaseline.md	live diagonal claim is source-closed; retain the proved coefficient-root integrality and universal p^r baseline
+A008978	F	partial	related-results/CoefficientPowerGaussBaseline.md	F/E integrality and the universal p^r variable-power tower are proved; prove the conjectural p^(3r) gain
 A091527	F	proved-here	OddUnitBlockFrobeniusTowers.md	independent review and priority search for the full coefficient family
-A113424	F	queued	none	extract exact conjecture; factor term and compute Landau depth
+A113424	F	partial	related-results/CoefficientPowerGaussBaseline.md	F integrality and the universal p^r variable-power tower are proved; prove the conjectural p^(3r) gain
 A184423	F	published-source	Mestrovic equation (39) is cited on the live OEIS record	verify exact factorial specialization in bibliography
 A186420	F	published-source	Mestrovic equation (39) is cited on the live OEIS record	verify exact factorial specialization in bibliography
 A262732	F	proved-here	OddUnitBlockFrobeniusTowers.md	independent review and priority search for the full coefficient family
