@@ -26,19 +26,21 @@ every record:
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | T: finite-sum transfer | 40 | 2 | 3 | 1 | 2 | 32 |
 | C: coefficient/constant term | 37 | 0 | 6 | 3 | 0 | 28 |
-| F: factorial/block product | 14 | 8 | 3 | 0 | 0 | 3 |
+| F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 |
 | M: modular or infinite product | 14 | 0 | 0 | 0 | 0 | 14 |
 | D: derived or inherited | 5 | 0 | 0 | 0 | 0 | 5 |
-| **Total** | **110** | **10** | **12** | **4** | **2** | **82** |
+| **Total** | **110** | **10** | **12** | **6** | **3** | **79** |
 
 The ten `proved-here` records are A091527, A141057, A262732, A275652,
 A275654, A288470, A357509, A357568, A364173, and A364506. The
 twelve `published-source` records are A002426, A082758, A103882, A168597,
 A176335, A184423, A186420, A234839, A363864, A363867, A363871, and
-A364509. The four partial records are A228960, A333592, A350383, and
-A380290. A005259 and A005260 are retained as search-corpus records but
+A364509. The six partial records are A008978, A113424, A228960, A333592,
+A350383, and A380290. A002897, A005259, and A005260 are retained as
+search-corpus records but
 classified `no-explicit-open`: their live matches concern unrelated Bala
-material, not a Bala supercongruence conjecture.
+material or a claim now marked proved, not a live Bala supercongruence
+conjecture.
 
 These labels refer only to the exact statements already matched. They do not
 declare every comment on the corresponding OEIS page solved.
@@ -74,6 +76,11 @@ The campaign does not use A-number order. It uses expected proof yield.
    carry-interval lemma resolves the source page's integrality conjecture.
    A357509 is the fifth: a universal quadratic cancellation between
    adjacent binomial blocks proves the record's full two-parameter family.
+   The route is now fully triaged.  The
+   [coefficient-root theorem](CoefficientPowerGaussBaseline.md) proves the
+   integrality assertions and the universal all-prime \(p^r\) baseline for
+   A002897, A008978, and A113424; the latter two retain their stronger
+   conjectural \(p^{3r}\) variable-power towers.
 3. **C route:** first determine whether a direct finite-sum factorization is
    simpler than invoking Dwork or Cartier operators.
 4. **M route:** take a p-adic logarithm and isolate the first moment that

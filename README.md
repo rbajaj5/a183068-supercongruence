@@ -117,6 +117,11 @@ The [binomial-quotient cancellation theorem](related-results/BinomialQuotientCan
 also closes the complete two-parameter conjecture on
 [A357509](https://oeis.org/A357509), rather than only its displayed
 sequence.
+The [coefficient-root theorem](related-results/CoefficientPowerGaussBaseline.md)
+then finishes the factorial route's source audit: it proves the displayed
+root series on A002897, A008978, and A113424 integral and establishes their
+universal \(p^r\) variable-power baseline, while leaving the two genuinely
+stronger \(p^{3r}\) conjectures explicitly open.
 
 See [RANKINGS.md](RANKINGS.md) for the complete multi-criteria assessment and
 the separate queue of reductions and computational targets.
