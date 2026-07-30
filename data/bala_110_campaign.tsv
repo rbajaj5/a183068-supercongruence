@@ -87,7 +87,7 @@ A275652	F	proved-here	related-results/DixonLegendreHalfBinomialTowers.md	complet
 A275654	F	proved-here	related-results/DixonLegendreHalfBinomialTowers.md	complete p^(3r) tower for p >= 5; instance a=5 of the Dixon--Legendre family theorem
 A357509	F	queued	none	extract exact conjecture; factor term and compute Landau depth
 A357568	F	proved-here	BinomialQuotientCancellation.md	independent review and priority audit
-A364173	F	queued	none	extract exact conjecture; prove integrality before congruence
+A364173	F	proved-here	related-results/A364173IntegralHalfBinomialTower.md	integrality and complete p^(3r) tower for p >= 5
 A364506	F	proved-here	BinomialQuotientCancellation.md	independent review and priority audit
 A364509	F	published-source	Mestrovic and Jacobsthal reduction cited by OEIS	verify exact parameter match in bibliography
 A008485	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product

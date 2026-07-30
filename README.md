@@ -61,7 +61,7 @@ that a file was added.
 
 | Lane | Flagship results | What the lane contributes |
 | --- | --- | --- |
-| Core and named OEIS problems | [A183068](PROOF.md), [Bala queue](related-results/BalaOeisSupercongruenceQueue.md), [binomial-quotient closures](related-results/BinomialQuotientCancellation.md), [A288470 odd-prime tower](related-results/A288470OddPrimeTower.md), [A141057 multinomial-power tower](related-results/MultinomialPowerFrobeniusTowers.md), [A091527/A262732 odd-unit block towers](related-results/OddUnitBlockFrobeniusTowers.md), [A275652/A275654 Dixon--Legendre towers](related-results/DixonLegendreHalfBinomialTowers.md), [literature census](related-results/SupercongruenceLiteratureCensus.md) | Named conjectures, published baselines, new family closures, and a reproducible target queue |
+| Core and named OEIS problems | [A183068](PROOF.md), [Bala queue](related-results/BalaOeisSupercongruenceQueue.md), [binomial-quotient closures](related-results/BinomialQuotientCancellation.md), [A288470 odd-prime tower](related-results/A288470OddPrimeTower.md), [A141057 multinomial-power tower](related-results/MultinomialPowerFrobeniusTowers.md), [A091527/A262732 odd-unit block towers](related-results/OddUnitBlockFrobeniusTowers.md), [A275652/A275654 Dixon--Legendre towers](related-results/DixonLegendreHalfBinomialTowers.md), [A364173 integrality and tower](related-results/A364173IntegralHalfBinomialTower.md), [literature census](related-results/SupercongruenceLiteratureCensus.md) | Named conjectures, published baselines, new family closures, and a reproducible target queue |
 | General theorem engines | [Arithmetic Frobenius packets](related-results/ArithmeticFrobeniusPacketFramework.md), [Landau depth](related-results/LandauDepthSupercongruenceSynthesis.md), [q-calculus](related-results/QCalculusCyclotomicSupercongruences.md), [binomial-power Frobenius](related-results/BinomialPowerFrobeniusTheorem.md), [Euler products](related-results/EulerProductGaussianTower.md) | Local-to-global assembly plus reusable carry, transfer, Frobenius, and cyclotomic mechanisms |
 | Gaussian and Eisenstein local arithmetic | [Inert-prime scaling](related-results/GaussianLucasPrimePowerTheorem.md), [ramified \(1+i\) theorem](related-results/GaussianLucasRamifiedTwoTheorem.md), [lattice-walk transfer congruences](related-results/LatticeWalkFrobeniusCongruences.md), [planar-noise Walsh congruences](related-results/BlackNoiseWalshCongruences.md), [canonical products](related-results/GaussianLucasCanonicalProducts.md) | Split/inert/ramified prime separation, exact local valuations, and finite transfer- or Walsh-polynomial congruences for planar models |
 | Dyadic structure | [Dyadic policy](DYADIC_POLICY.md), [Euler-product defect](related-results/DyadicHypercubeDefect.md), [Roe-inspired packet](ROE_2ADIC.md), [finite abelian counts](related-results/GQ2FiniteAbelianCounts.md), [dihedral counts](related-results/GQ2DihedralCounts.md), [quaternion counts](related-results/GQ2QuaternionCounts.md), [maximal-cyclic counts](related-results/GQ2MaximalCyclicCounts.md), [extraspecial obstruction](related-results/GQ2ExtraspecialObstruction.md) | Explicit binary normalization, parity, finite-shadow tests, uniform lift fibers, commutator and central-square corrections, first-level boundaries, and generator-rank obstructions |
@@ -102,14 +102,17 @@ The highest-value specialist-review targets are:
 6. the degree-five elliptic Frobenius packet; and
 7. the original A183068 proof.
 
-The active Bala campaign has now closed eight census records.  Its two
-newest family theorems prove four named $p^{3r}$ towers:
+The active Bala campaign has now closed nine census records.  Its recent
+half-binomial work proves five named $p^{3r}$ towers:
 [A091527](https://oeis.org/A091527) and
 [A262732](https://oeis.org/A262732) by an
 [odd-unit block argument](related-results/OddUnitBlockFrobeniusTowers.md),
 then [A275652](https://oeis.org/A275652) and
 [A275654](https://oeis.org/A275654) by one
-[Dixon--Legendre half-binomial argument](related-results/DixonLegendreHalfBinomialTowers.md).
+[Dixon--Legendre half-binomial argument](related-results/DixonLegendreHalfBinomialTowers.md),
+and [A364173](https://oeis.org/A364173) by a related
+[factorization and carry-interval argument](related-results/A364173IntegralHalfBinomialTower.md)
+that also proves the source page's integrality conjecture.
 
 See [RANKINGS.md](RANKINGS.md) for the complete multi-criteria assessment and
 the separate queue of reductions and computational targets.

@@ -210,6 +210,37 @@ proof.
 - **Proof:** [Dixon--Legendre half-binomial towers](related-results/DixonLegendreHalfBinomialTowers.md)
 - **Exact checker:** [`verify_dixon_legendre_towers.py`](verification/related/verify_dixon_legendre_towers.py)
 
+### A364173-INTEGRAL — integrality and cubic tower
+
+- **Claim:** The gamma quotient
+
+  ```math
+  C(N)
+  =
+  \frac{
+  \Gamma(9N+1)\Gamma(2N+1)\Gamma(3N/2+1)}
+  {\Gamma(9N/2+1)\Gamma(4N+1)\Gamma(3N+1)\Gamma(N+1)}
+  ```
+
+  is an integer for every $N\ge0$.  For every prime $p\ge5$ and positive
+  integers $n,r$,
+
+  ```math
+  C(np^r)\equiv C(np^{r-1})\pmod {p^{3r}}.
+  ```
+
+- **Source status:** Both integrality and the tower are explicit
+  conjectures on A364173.
+- **Mechanism:** The even indices reduce to the Vasyunin--Bober integral
+  factorial ratio A295440.  At odd indices a three-interval carry lemma
+  proves every factorial valuation nonnegative.  Three ordinary and
+  three half-binomial transfers prove the tower.
+- **Boundary:** The tower fails at both $p=2$ and $p=3$ at its first
+  adjacent level.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [A364173 integrality and half-binomial tower](related-results/A364173IntegralHalfBinomialTower.md)
+- **Exact checker:** [`verify_a364173_integral_tower.py`](verification/related/verify_a364173_integral_tower.py)
+
 ### BALA-TOWERS — remaining higher-level Bala tower queue
 
 - **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) and the
