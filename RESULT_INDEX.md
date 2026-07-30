@@ -147,12 +147,29 @@ proof.
 - **Exceptional odd prime:** The uniform modulus at $p=3$ is $3^{3r-1}$.
 - **Named records:** A002003, A348410, A351857, A352373, A370101, and
   A370102.
-- **Source status:** Direct specialization of L. Felipe Müller's published
-  framing theorem; this repository supplies the parameter map and an
-  elementary Cartier proof of the specialization.
-- **Status:** Published theorem specialization; no novelty claim.
+- **Source status:** The previously cited rational-framing theorem does not
+  imply this claim: an exact counterexample shows that theorem fails as
+  printed. The controlling argument is the elementary Cartier proof in this
+  repository.
+- **Status:** Complete unchecked elementary proof; specialist review and
+  priority work remain.
 - **Proof:** [Two-parameter coefficient-framing tower](related-results/CoefficientFramingCubicTower.md)
 - **Exact checker:** [`verify_coefficient_framing_cubic_tower.py`](verification/related/verify_coefficient_framing_cubic_tower.py)
+
+### FRAMING-COUNTEREX — rational-framing boundary
+
+- **Claim:** The rational 2-sequence
+  $V(z)=z/(1-z)+16z^4/(1-z^4)$ is an exact counterexample to both principal
+  congruences of Müller's rational-framing theorem as printed.
+- **Small witness:** At $N=4$ and $p=5$, the weighted sum is
+  $2653/144\equiv2\pmod 5$. The associated framed coefficients satisfy
+  $A(1)=1$ and $A(5)=226$, so $v_5(A(5)-A(1))=2$, not at least $3$.
+- **Scope:** This does not refute the six coefficient-power towers above;
+  their independent elementary proof remains intact.
+- **Status:** Complete exact counterexample; author clarification and
+  specialist review pending.
+- **Proof:** [An exact boundary for the rational-framing theorem](related-results/RationalFramingCounterexample.md)
+- **Exact checker:** [`verify_rational_framing_counterexample.py`](verification/related/verify_rational_framing_counterexample.py)
 
 ### A288470-ODD — double-binomial tower
 

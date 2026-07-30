@@ -67,7 +67,7 @@ that a file was added.
 | Dyadic structure | [Dyadic policy](DYADIC_POLICY.md), [Euler-product defect](related-results/DyadicHypercubeDefect.md), [Roe-inspired packet](ROE_2ADIC.md), [finite abelian counts](related-results/GQ2FiniteAbelianCounts.md), [dihedral counts](related-results/GQ2DihedralCounts.md), [quaternion counts](related-results/GQ2QuaternionCounts.md), [maximal-cyclic counts](related-results/GQ2MaximalCyclicCounts.md), [extraspecial obstruction](related-results/GQ2ExtraspecialObstruction.md) | Explicit binary normalization, parity, finite-shadow tests, uniform lift fibers, commutator and central-square corrections, first-level boundaries, and generator-rank obstructions |
 | Finite-field and Frobenius packets | [Weighted-lift collisions](related-results/WeightedLiftCollisionSynthesis.md), [degree-five elliptic packet](related-results/JacobianDegreeFiveEllipticFrobenius.md), [hyperdeterminant Fourier packet](related-results/HyperdeterminantFourierSupercongruence.md), [hyperdeterminant entropy profile](related-results/HyperdeterminantEntropyProfile.md) | Exact zeta factors, corrected adjacent towers, finite-field Fourier structure, and arithmetic entropy laws |
 | Measurement and certification | [Dyadic joint spectrum](related-results/DyadicHypercubeJointSpectrum.md), [affine-spectrum hashing](related-results/AffineSpectrumHashing.md), [exact matroid hashing law](related-results/MatroidHashingLaw.md) | Exact collision probabilities and efficient finite-spectrum measurement design |
-| Boundary results and corrections | [Zhang four-matrix counterexample](related-results/ZhangFourMatrixCounterexample.md), [Gaussian reciprocal-power correction](related-results/GaussianWolstenholmeCitationNetwork.md#3-the-exact-obstruction-to-the-higher-power-conjecture), [Dwork boundaries](related-results/FrobeniusQuotientConstantTerms.md) | Exact counterexamples, minimal obstructions, and precise separation between a failed auxiliary route and its parent problem |
+| Boundary results and corrections | [Zhang four-matrix counterexample](related-results/ZhangFourMatrixCounterexample.md), [rational-framing counterexample](related-results/RationalFramingCounterexample.md), [Gaussian reciprocal-power correction](related-results/GaussianWolstenholmeCitationNetwork.md#3-the-exact-obstruction-to-the-higher-power-conjecture), [Dwork boundaries](related-results/FrobeniusQuotientConstantTerms.md) | Exact counterexamples, minimal obstructions, and precise separation between a failed auxiliary route and its parent problem |
 
 The last lane improves the experimental and certification infrastructure of
 the program. It does not strengthen a \(p\)-adic exponent by itself.
@@ -102,8 +102,8 @@ The highest-value specialist-review targets are:
 6. the degree-five elliptic Frobenius packet; and
 7. the original A183068 proof.
 
-The active Bala campaign has now proved 20 census records in this repository
-and matched 18 more to published sources. Its recent
+The active Bala campaign has now proved 26 census records in this repository
+and matched 12 more to published sources. Its recent
 half-binomial work proves five named $p^{3r}$ towers:
 [A091527](https://oeis.org/A091527) and
 [A262732](https://oeis.org/A262732) by an
@@ -151,10 +151,12 @@ splitting and reduced-residue reciprocal blocks, including the separate
 binary argument.
 The [coefficient-framing theorem](related-results/CoefficientFramingCubicTower.md)
 then closes six more source records at once: A002003, A348410, A351857,
-A352373, A370101, and A370102 are all specializations of Müller's published
-rational-framing theorem. The repository also gives a self-contained
-elementary proof of that specialization and records the sharper
-$3^{3r-1}$ exceptional-prime bound.
+A352373, A370101, and A370102 follow from one self-contained elementary
+Cartier proof, with the sharper $3^{3r-1}$ exceptional-prime bound.
+An [exact counterexample](related-results/RationalFramingCounterexample.md)
+shows that the broader rational-framing congruences previously cited for
+these records do not hold as printed. The six records are therefore counted
+as proved here, not as published-source closures.
 
 See [RANKINGS.md](RANKINGS.md) for the complete multi-criteria assessment and
 the separate queue of reductions and computational targets.

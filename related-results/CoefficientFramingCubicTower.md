@@ -1,12 +1,12 @@
 # A cubic tower for a two-parameter coefficient family
 
-**Status:** published-theorem specialization, with a self-contained elementary
-proof included for transparency
+**Status:** complete elementary proof candidate; independent review pending
 
-**Source boundary:** the general congruence below is a direct specialization of
-L. Felipe Müller's 2021 framing theorem. This note records the parameter match,
-an elementary one-variable proof, and the consequences for six Bala/OEIS
-records. It does not claim priority for the general theorem.
+**Source boundary:** the coefficients have the formal shape considered in
+L. Felipe Müller's 2021 framing preprint, but the general theorem there has an
+[exact counterexample](RationalFramingCounterexample.md). The elementary proof
+in Section 4 is therefore the controlling proof. Priority for the
+two-parameter theorem is not established.
 
 ## 1. The family and theorem
 
@@ -60,7 +60,7 @@ Each page proposes the $p^{3r}$ tower for $p\geq5$; A352373 also states the
 full two-parameter conjecture. The theorem therefore proves all six displayed
 towers at once, and it proves the general A352373 parameter family.
 
-## 3. Why Müller's theorem applies
+## 3. The formal framing match and the source gap
 
 Put
 
@@ -98,9 +98,13 @@ $$
 =A_{\alpha,\beta}(N).
 $$
 
-The precise part of Müller's Theorem 1.1 gives exponent $3r$ for primes at
-least five and exponent $3r-1$ at $p=3$. Since the period is two, every odd
-prime is allowed. This proves the stated theorem from the published result.
+This is the intended input shape of Müller's Theorem 1.1. However, the
+[counterexample note](RationalFramingCounterexample.md) shows that Theorems
+1.1 and 1.2 are false as printed for a different rational period-four
+2-sequence. The preprint therefore cannot serve as a valid source closure for
+the present theorem without a repaired hypothesis and proof. The
+self-contained argument below uses the special form of the period-two
+coefficients and proves exactly what is needed here.
 
 The same identification may be written in Lagrange form. If
 $y=x\phi(y)$, then
@@ -158,10 +162,9 @@ by $p$.
 For $T\geq1$, define the reduced harmonic sums
 
 $$
-H_T=\sum_{\substack{1\leq j<T\\p\nmid j}}\frac1j,
+H_T=\sum_{j=1,\;p\nmid j}^{T-1}\frac1j,
 \qquad
-H_T^\pm=\sum_{\substack{1\leq j<T\\p\nmid j}}
-\frac{(-1)^{j+1}}j.
+H_T^\pm=\sum_{j=1,\;p\nmid j}^{T-1}\frac{(-1)^{j+1}}j.
 $$
 
 If $e=v_p(T)\geq1$, standard reduced-residue pairing gives
@@ -281,7 +284,7 @@ general result.
 
 ## 6. What this changes in the 110-record campaign
 
-This single family moves six records from `queued` to `published-source`.
+This single family moves six records from `queued` to `proved-here`.
 It also shows that the earlier separation of these records between a
 finite-sum route and a coefficient route was artificial: the controlling
 object is the period-two logarithmic derivative of the coefficient kernel.
