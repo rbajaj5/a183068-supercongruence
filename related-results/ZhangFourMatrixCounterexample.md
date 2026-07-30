@@ -2,8 +2,9 @@
 
 ## Status
 
-This note gives an exact counterexample to Conjecture 4.1 in Teng Zhang's
-*A Matrix Inequality and Its Application*. The example consists of four
+This note gives an exact counterexample to Conjecture 4.1 in Teng
+Zhang's *A note on the matrix arithmetic-geometric mean inequality*. The
+example consists of four
 real rank-one orthogonal projectors, violates the proposed bound by the
 factor \(1+\sqrt2\), and has the smallest possible matrix dimension. The
 failure persists on an explicit interval of positive-definite perturbations.
