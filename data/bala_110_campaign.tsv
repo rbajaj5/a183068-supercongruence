@@ -85,7 +85,7 @@ A186420	F	published-source	Mestrovic equation (39) is cited on the live OEIS rec
 A262732	F	proved-here	OddUnitBlockFrobeniusTowers.md	independent review and priority search for the full coefficient family
 A275652	F	proved-here	related-results/DixonLegendreHalfBinomialTowers.md	complete p^(3r) tower for p >= 5; instance a=3 of the Dixon--Legendre family theorem
 A275654	F	proved-here	related-results/DixonLegendreHalfBinomialTowers.md	complete p^(3r) tower for p >= 5; instance a=5 of the Dixon--Legendre family theorem
-A357509	F	queued	none	extract exact conjecture; factor term and compute Landau depth
+A357509	F	proved-here	related-results/BinomialQuotientCancellation.md	complete two-parameter p^(3r+3) family for p >= 5 and r >= 2
 A357568	F	proved-here	BinomialQuotientCancellation.md	independent review and priority audit
 A364173	F	proved-here	related-results/A364173IntegralHalfBinomialTower.md	integrality and complete p^(3r) tower for p >= 5
 A364506	F	proved-here	BinomialQuotientCancellation.md	independent review and priority audit

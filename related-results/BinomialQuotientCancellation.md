@@ -1,4 +1,4 @@
-# Binomial-quotient cancellation and two Bala families
+# Binomial-quotient cancellation and three Bala families
 
 **Status:** complete proof candidate; exact checks are supplied; conventional
 review and a priority search are still pending
@@ -8,7 +8,10 @@ Ljunggren--Jacobsthal--Kazandzidis binomial scaling theorem.
 
 1. A Laurent product of scaled binomial coefficients inherits the ordinary
    cubic tower whenever its values are $p$-integral.
-2. A cancellation between the adjacent scaling quotients of
+2. A universal quadratic cancellation between adjacent scaling quotients
+   proves the complete two-parameter conjecture on
+   [OEIS A357509](https://oeis.org/A357509).
+3. The same cancellation between the adjacent scaling quotients of
    $\binom{2n}{n}$ and $\binom{3n}{n}$ proves the full family conjectured
    on [OEIS A357568](https://oeis.org/A357568), including the exceptional
    prime $3$.
@@ -180,6 +183,25 @@ P_r(t)=
 \prod_{u\in U_r}\left(1+\frac{t p^r}{u}\right).
 ```
 
+We also use the standard Wolstenholme lift
+
+```math
+v_p(H_1(r))\ge2r\quad(p\ge5),
+\qquad
+v_3(H_1(r))\ge2r-1.
+```
+
+Together with the stronger even estimate
+$v_p(H_2(r))\ge r$ for $p\ge5$, the logarithmic expansion used below gives,
+for every integer $t$,
+
+```math
+v_p(P_r(t)-1)\ge3r\quad(p\ge5),
+\qquad
+v_3(P_r(t)-1)\ge3r-1.
+\tag{13}
+```
+
 Cancellation of the factors whose indices are divisible by $p$ gives
 
 ```math
@@ -190,28 +212,30 @@ P_r(2)=
 \frac{\binom{3p^r}{p^r}}{\binom{3p^{r-1}}{p^{r-1}}}.
 ```
 
-### Lemma 4: the $2$-versus-$3$ quotient cancellation
+### Lemma 4: universal quadratic quotient cancellation
 
-Let $r\ge2$, and put
+Let $r\ge2$, and, for every integer $t$, put
 
 ```math
-E_r=P_r(1)-1,
-\qquad
-G_r=P_r(2)-1.
+E_r(t)=P_r(t)-1.
 ```
 
-Then
+For every prime $p\ge5$ and all integers $a,b$,
 
 ```math
-G_r-3E_r\equiv0\pmod {p^{3r+3}}
-\quad\text{if }p\ge5,
+\boxed{
+b(b+1)E_r(a)-a(a+1)E_r(b)
+\equiv0\pmod {p^{3r+3}}.
+}
+\tag{14}
 ```
 
-and
+At $p=3$, the same expression is divisible by $3^{3r+2}$.  In
+particular,
 
 ```math
-G_r-3E_r\equiv0\pmod {3^{3r+2}}
-\quad\text{if }p=3.
+E_r(2)-3E_r(1)\equiv0\pmod {3^{3r+2}}.
+\tag{15}
 ```
 
 #### Proof
@@ -232,23 +256,28 @@ Pairing $u$ with $p^r-u$ also gives the exact convergent identity
 =-\sum_{j\ge2}p^{rj}H_{j+1}(r).
 ```
 
-Use this identity to eliminate the degree-one and degree-two terms from
-$L_r(2)-3L_r(1)$.  The result has the form
+Using this identity to eliminate $H_1(r)$ gives
 
 ```math
-L_r(2)-3L_r(1)
-=\sum_{j\ge3}c_jp^{rj}H_j(r),
+\begin{aligned}
+L_r(t)
+={}&-\frac{t(t+1)}2p^{2r}H_2(r)\\
+&+\sum_{j\ge3}
+\left(
+\frac{(-1)^{j+1}t^j}{j}-\frac t2
+\right)p^{rj}H_j(r).
+\end{aligned}
+\tag{16}
 ```
 
-where
+Therefore the $H_2(r)$ term cancels from
 
 ```math
-c_j=
-\frac12+
-\frac{(-1)^{j+1}(2^j-3)}j
+b(b+1)L_r(a)-a(a+1)L_r(b).
 ```
 
-and $v_p(c_j)\ge-v_p(j)$.
+Every remaining coefficient has $p$-adic valuation at least
+$-v_p(j)$.
 
 For $j=3$, Lemma 3 gives valuation at least
 
@@ -263,9 +292,10 @@ For $j\ge4$, it gives valuation at least
 ```
 
 When $r\ge2$, these bounds are at least $3r+3$ for $p\ge5$, and at
-least $3r+2$ for $p=3$.
+least $3r+2$ for $p=3$.  This proves the required congruence between
+the logarithms.
 
-Finally, the ordinary Jacobsthal bounds give
+Finally, (13) and $\log(1+E_r(t))=L_r(t)$ give
 
 ```math
 v_p(L_r(t))\ge3r \quad(p\ge5),
@@ -273,11 +303,98 @@ v_p(L_r(t))\ge3r \quad(p\ge5),
 v_3(L_r(t))\ge3r-1.
 ```
 
-All nonlinear terms in the exponential therefore lie beyond the asserted
-precision.  Passing from logarithms back to $P_r(t)-1$ proves the
-lemma. $\square$
+All nonlinear terms in the exponential have valuation at least $6r$
+for $p\ge5$ and at least $6r-2$ for $p=3$, so they lie beyond the
+asserted precision.  Passing from logarithms back to $E_r(t)$ proves
+(14).  The ternary statement follows in the same way; taking
+$(a,b)=(2,1)$ and cancelling the $3$-adic unit $2$ gives (15).
+$\square$
 
-## 4. The A357568 family
+## 4. The complete A357509 two-parameter family
+
+For integers $j,k$, not necessarily positive, define
+
+```math
+U_{j,k}(N)
+=
+k^2(k-1)\binom{jN}{N}
+-j^2(j-1)\binom{kN}{N}.
+\tag{17}
+```
+
+The sequence A357509 is the case $(j,k)=(3,2)$.
+
+### Theorem 5: complete A357509 family
+
+For every prime $p\ge5$, every $r\ge2$, and all integers $j,k$,
+
+```math
+\boxed{
+U_{j,k}(p^r)\equiv U_{j,k}(p^{r-1})
+\pmod {p^{3r+3}}.
+}
+\tag{18}
+```
+
+#### Proof
+
+If $j=0$ or $k=0$, both sides of (18) vanish.  Assume $jk\ne0$ and
+write
+
+```math
+X_j=\frac1j\binom{jp^{r-1}}{p^{r-1}},
+\qquad
+X_k=\frac1k\binom{kp^{r-1}}{p^{r-1}}.
+\tag{19}
+```
+
+These are integers.  Exact factor cancellation and (13) give
+
+```math
+X_j=\prod_{s=1}^{r-1}P_s(j-1),
+\qquad
+X_k=\prod_{s=1}^{r-1}P_s(k-1),
+```
+
+and hence
+
+```math
+X_j\equiv X_k\equiv1\pmod {p^3}.
+\tag{20}
+```
+
+Cancellation of the factors with indices divisible by $p$ gives
+
+```math
+\binom{jp^r}{p^r}=jX_j(1+E_r(j-1)),
+\qquad
+\binom{kp^r}{p^r}=kX_k(1+E_r(k-1)).
+\tag{21}
+```
+
+Put $a=j-1$ and $b=k-1$.  The adjacent difference in (18) is
+
+```math
+jk\left(
+b(b+1)X_jE_r(a)-a(a+1)X_kE_r(b)
+\right).
+\tag{22}
+```
+
+By Lemma 4, the same expression with $X_j=X_k=1$ vanishes modulo
+$p^{3r+3}$.  The correction terms also vanish to that precision:
+(20) supplies $p^3$, while the ordinary adjacent binomial congruence
+supplies
+
+```math
+E_r(a)\equiv E_r(b)\equiv0\pmod {p^{3r}}.
+```
+
+Thus (22) is divisible by $p^{3r+3}$, proving (18).  The argument is
+unchanged for negative $j$ or $k$, using the usual integral extension
+of the binomial coefficient to a negative upper index. $\square$
+
+## 5. The A357568 power family
 
 For an integer $k\ge1$, define
 
@@ -290,7 +407,7 @@ A_k(n)=
 The sequence A357568 is $A_2$.  Its OEIS entry conjectures the same tower
 for every $k\ge1$.
 
-### Theorem 5: complete enhanced tower
+### Theorem 6: complete enhanced tower
 
 For every odd prime $p$, every $r\ge2$, and every $k\ge1$,
 
@@ -318,31 +435,31 @@ shows
 X\equiv Y\equiv1\pmod {p^3}.
 ```
 
-With $E_r,G_r$ as in Lemma 4,
+With $E=E_r(1)$ and $G=E_r(2)$ as in Lemma 4,
 
 ```math
-\binom{2p^r}{p^r}=2X(1+E_r),
+\binom{2p^r}{p^r}=2X(1+E),
 \qquad
-\binom{3p^r}{p^r}=3Y(1+G_r).
+\binom{3p^r}{p^r}=3Y(1+G).
 ```
 
-Since $v_p(E_r)\ge3r$,
+Since $v_p(E)\ge3r$,
 
 ```math
-(1+E_r)^k=1+kE_r+O(p^{6r}).
+(1+E)^k=1+kE+O(p^{6r}).
 ```
 
 Consequently, modulo $p^{3r+3}$, the adjacent difference of $A_k$ is
 
 ```math
-3k2^k\left(3X^kE_r-YG_r\right).
+3k2^k\left(3X^kE-YG\right).
 ```
 
 Now
 
 ```math
-3X^kE_r-YG_r
-=3E_r(X^k-Y)-Y(G_r-3E_r).
+3X^kE-YG
+=3E(X^k-Y)-Y(G-3E).
 ```
 
 The first term is divisible by $p^{3r+3}$, and Lemma 4 gives the same
@@ -355,31 +472,31 @@ The ternary Jacobsthal bound gives
 ```math
 X\equiv Y\equiv1\pmod9,
 \qquad
-v_3(E_r)\ge3r-1.
+v_3(E)\ge3r-1.
 ```
 
 The same calculation applies.  This time
 
 ```math
-3E_r(X^k-Y)
+3E(X^k-Y)
 ```
 
 has valuation at least $3r+2$, and Lemma 4 gives
 
 ```math
-v_3(G_r-3E_r)\ge3r+2.
+v_3(G-3E)\ge3r+2.
 ```
 
 The outer factor $3$ supplies the final power.  The discarded
-$E_r^2$ terms have valuation at least $6r$, which is no smaller than
+$E^2$ terms have valuation at least $6r$, which is no smaller than
 $3r+3$.  Hence the stated congruence also holds at $p=3$. $\square$
 
-For $k=1$, the first-level relative is the congruence attached to
-[OEIS A357509](https://oeis.org/A357509), which the live entry attributes
-to Helou and Terjanian.  Theorem 5 concerns every higher adjacent level and
-all $k$, with A357568 as the case $k=2$.
+For $k=1$, one has $A_1(n)=-a_{\mathrm{A357509}}(n)$.  Thus Theorem 6
+also strengthens the named A357509 member to $p=3$.  Theorem 5 proves
+the broader two-parameter A357509 conjecture in its stated range
+$p\ge5$, while A357568 is the case $k=2$ of Theorem 6.
 
-## 5. Verification and source boundary
+## 6. Verification and source boundary
 
 Run
 
@@ -390,8 +507,9 @@ python verification/related/verify_binomial_quotient_cancellation.py
 The checker verifies:
 
 - the A364506 Laurent factorization and cubic tower over many rows;
-- the exact valuation in Lemma 4;
-- Theorem 5 for several primes, levels, and powers $k$; and
+- the universal quotient cancellation in Lemma 4;
+- Theorem 5 over positive and negative parameters;
+- Theorem 6 for several primes, levels, and powers $k$; and
 - equality cases showing that the exponent $3r+3$ is frequently attained.
 
 These computations are regression checks, not the proof.
@@ -400,5 +518,5 @@ The external input is the classical binomial scaling congruence.  A useful
 survey source is R. Meštrović,
 [*Wolstenholme's theorem: its generalizations and extensions in the last
 hundred and fifty years*](https://arxiv.org/abs/1111.3057).  No priority
-claim is made until the full $A_k$ family and the A364506 reduction have
-been checked against the specialist literature.
+claim is made until the two parameter families and the A364506 reduction
+have been checked against the specialist literature.

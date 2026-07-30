@@ -102,7 +102,7 @@ The highest-value specialist-review targets are:
 6. the degree-five elliptic Frobenius packet; and
 7. the original A183068 proof.
 
-The active Bala campaign has now closed nine census records.  Its recent
+The active Bala campaign has now closed ten census records.  Its recent
 half-binomial work proves five named $p^{3r}$ towers:
 [A091527](https://oeis.org/A091527) and
 [A262732](https://oeis.org/A262732) by an
@@ -113,6 +113,10 @@ then [A275652](https://oeis.org/A275652) and
 and [A364173](https://oeis.org/A364173) by a related
 [factorization and carry-interval argument](related-results/A364173IntegralHalfBinomialTower.md)
 that also proves the source page's integrality conjecture.
+The [binomial-quotient cancellation theorem](related-results/BinomialQuotientCancellation.md)
+also closes the complete two-parameter conjecture on
+[A357509](https://oeis.org/A357509), rather than only its displayed
+sequence.
 
 See [RANKINGS.md](RANKINGS.md) for the complete multi-criteria assessment and
 the separate queue of reductions and computational targets.

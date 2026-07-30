@@ -247,20 +247,21 @@ A002897 A008978 A091527 A113424 A184423 A186420 A262732 A275652
 A275654 A357509 A357568 A364173 A364506 A364509
 ```
 
-Two integer problems in this route are now closed in the
+Three integer problems in this route are now closed in the
 [binomial-quotient cancellation note](BinomialQuotientCancellation.md).
 The Laurent-binomial closure theorem proves every A364506 row for
-\(p\ge5\).  A separate reduced-unit harmonic calculation proves the full
-A357568 enhanced family, including \(p=3\).  These are integer
+\(p\ge5\).  A reduced-unit harmonic calculation proves the full
+two-parameter A357509 family for \(p\ge5\) and the A357568 enhanced
+family, including \(p=3\).  These are integer
 supercongruences; defining a genuinely Gaussian block analogue remains a
 different problem.
 
 This route is closest to Kalinin's
 [rectangular Gaussian products](https://arxiv.org/abs/2504.07978), but it is
-also the easiest place to create an ill-defined analogy.  The A364173 packet
-is especially unsuitable for an immediate Gaussian claim because even the
-displayed half-integral factorial ratios have an integrality obligation
-before any prime-ideal congruence is meaningful.
+also the easiest place to create an ill-defined analogy.  The repository
+has now discharged A364173's rational integrality obligation, but a
+prime-ideal analogue would still require its own Gaussian integrality and
+normalization theorem.
 
 ## 7. Route M: modular products, partitions, and quartic characters
 
