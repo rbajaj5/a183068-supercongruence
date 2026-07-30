@@ -18,6 +18,7 @@ review.
 | See the response to Peter Bala's suggested proof routes | **[BALA_VERSION.md](BALA_VERSION.md)** | Preserved public bridge document |
 | Check what was audited and corrected | [Audit log](AUDIT.md) | Exact-text audit record |
 | Find one precise mathematical claim | [Claim-level result index](RESULT_INDEX.md) | Controlling status ledger |
+| Track all 110 Bala/OEIS records | [110-record proof campaign](related-results/Bala110ProofCampaign.md) | Record-level route, status, evidence, and next action |
 | Compare the portfolio economically | [Economist-style rankings](RANKINGS.md) | Editorial scores, not correctness claims |
 | Browse the wider program | [Related-results reading map](related-results/README.md) | Theorem, reduction, computation, and synthesis lanes |
 | Reproduce the computations | [`verification/run_all.py`](verification/run_all.py) | Exact checkers with no floating-point tolerance unless stated |
