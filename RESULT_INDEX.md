@@ -137,6 +137,23 @@ proof.
 - **Proof:** [Apéry odd moments at the prime boundary](related-results/AperyOddMomentPrimeClassification.md)
 - **Exact checker:** [`verify_apery_odd_moment_prime_classification.py`](verification/related/verify_apery_odd_moment_prime_classification.py)
 
+### FRAMING-CUBIC — six coefficient-power towers
+
+- **Claim:** For all integers $\alpha,\beta$, primes $p\geq5$, and positive
+  integers $n,r$,
+  $A_{\alpha,\beta}(np^r)\equiv
+  A_{\alpha,\beta}(np^{r-1})\pmod {p^{3r}}$, where
+  $A_{\alpha,\beta}(N)=[x^N]((1+x)^\alpha(1-x)^\beta)^N$.
+- **Exceptional odd prime:** The uniform modulus at $p=3$ is $3^{3r-1}$.
+- **Named records:** A002003, A348410, A351857, A352373, A370101, and
+  A370102.
+- **Source status:** Direct specialization of L. Felipe Müller's published
+  framing theorem; this repository supplies the parameter map and an
+  elementary Cartier proof of the specialization.
+- **Status:** Published theorem specialization; no novelty claim.
+- **Proof:** [Two-parameter coefficient-framing tower](related-results/CoefficientFramingCubicTower.md)
+- **Exact checker:** [`verify_coefficient_framing_cubic_tower.py`](verification/related/verify_coefficient_framing_cubic_tower.py)
+
 ### A288470-ODD — double-binomial tower
 
 - **Claim:** For every odd prime $p$ and positive integers $m,r$,
