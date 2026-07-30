@@ -65,7 +65,7 @@ that a file was added.
 | General theorem engines | [Arithmetic Frobenius packets](related-results/ArithmeticFrobeniusPacketFramework.md), [Landau depth](related-results/LandauDepthSupercongruenceSynthesis.md), [q-calculus](related-results/QCalculusCyclotomicSupercongruences.md), [binomial-power Frobenius](related-results/BinomialPowerFrobeniusTheorem.md), [Euler products](related-results/EulerProductGaussianTower.md) | Local-to-global assembly plus reusable carry, transfer, Frobenius, and cyclotomic mechanisms |
 | Gaussian and Eisenstein local arithmetic | [Inert-prime scaling](related-results/GaussianLucasPrimePowerTheorem.md), [ramified \(1+i\) theorem](related-results/GaussianLucasRamifiedTwoTheorem.md), [lattice-walk transfer congruences](related-results/LatticeWalkFrobeniusCongruences.md), [planar-noise Walsh congruences](related-results/BlackNoiseWalshCongruences.md), [canonical products](related-results/GaussianLucasCanonicalProducts.md) | Split/inert/ramified prime separation, exact local valuations, and finite transfer- or Walsh-polynomial congruences for planar models |
 | Dyadic structure | [Dyadic policy](DYADIC_POLICY.md), [Euler-product defect](related-results/DyadicHypercubeDefect.md), [Roe-inspired packet](ROE_2ADIC.md), [finite abelian counts](related-results/GQ2FiniteAbelianCounts.md), [dihedral counts](related-results/GQ2DihedralCounts.md), [quaternion counts](related-results/GQ2QuaternionCounts.md), [maximal-cyclic counts](related-results/GQ2MaximalCyclicCounts.md), [extraspecial obstruction](related-results/GQ2ExtraspecialObstruction.md) | Explicit binary normalization, parity, finite-shadow tests, uniform lift fibers, commutator and central-square corrections, first-level boundaries, and generator-rank obstructions |
-| Finite-field and Frobenius packets | [Weighted-lift collisions](related-results/WeightedLiftCollisionSynthesis.md), [degree-five elliptic packet](related-results/JacobianDegreeFiveEllipticFrobenius.md), [hyperdeterminant Fourier packet](related-results/HyperdeterminantFourierSupercongruence.md), [hyperdeterminant entropy profile](related-results/HyperdeterminantEntropyProfile.md) | Exact zeta factors, corrected adjacent towers, finite-field Fourier structure, and arithmetic entropy laws |
+| Finite-field and Frobenius packets | [Primitive collision-orbit bridge](related-results/JacobianCollisionEulerOrbitBridge.md), [weighted-lift collisions](related-results/WeightedLiftCollisionSynthesis.md), [degree-five elliptic packet](related-results/JacobianDegreeFiveEllipticFrobenius.md), [hyperdeterminant Fourier packet](related-results/HyperdeterminantFourierSupercongruence.md), [hyperdeterminant entropy profile](related-results/HyperdeterminantEntropyProfile.md) | Exact Dold/Gauss orbit criteria, zeta factors, corrected adjacent towers, finite-field Fourier structure, and arithmetic entropy laws |
 | Measurement and certification | [Dyadic joint spectrum](related-results/DyadicHypercubeJointSpectrum.md), [affine-spectrum hashing](related-results/AffineSpectrumHashing.md), [exact matroid hashing law](related-results/MatroidHashingLaw.md) | Exact collision probabilities and efficient finite-spectrum measurement design |
 | Boundary results and corrections | [Zhang four-matrix counterexample](related-results/ZhangFourMatrixCounterexample.md), [rational-framing counterexample](related-results/RationalFramingCounterexample.md), [Gaussian reciprocal-power correction](related-results/GaussianWolstenholmeCitationNetwork.md#3-the-exact-obstruction-to-the-higher-power-conjecture), [Dwork boundaries](related-results/FrobeniusQuotientConstantTerms.md) | Exact counterexamples, minimal obstructions, and precise separation between a failed auxiliary route and its parent problem |
 
@@ -99,10 +99,11 @@ The highest-value specialist-review targets are:
 3. inert Gaussian adjacent prime-power scaling;
 4. the new [first two A365029 levels](related-results/A365029FirstTwoLevels.md);
 5. the all-degree weighted-lift collision theorem;
-6. the degree-five elliptic Frobenius packet; and
-7. the original A183068 proof.
+6. the primitive collision-orbit interpretation and sharp obstruction;
+7. the degree-five elliptic Frobenius packet; and
+8. the original A183068 proof.
 
-The active Bala campaign has now proved 26 census records in this repository
+The active Bala campaign has now proved 29 census records in this repository
 and matched 12 more to published sources. Its recent
 half-binomial work proves five named $p^{3r}$ towers:
 [A091527](https://oeis.org/A091527) and

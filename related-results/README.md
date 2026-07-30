@@ -43,6 +43,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 1B-F | [Arithmetic Frobenius packet framework](ArithmeticFrobeniusPacketFramework.md) | Unifies the five census routes through number fields, prime ideals, local Frobenius transitions, finite-field orbits, valuation budgets, and local-to-global assembly | Complete elementary framework and 158,755 exact checks; routing is not a proof of all 110 conjectures |
 | 1B-GE | [Exact Bala Gaussian-twist pilot](BalaGaussianTwistPilot.md) | Tests three finite-sum routes and supplies exact counterexamples to blindly preserving the untwisted cubic exponent | 195 exact checks; computational triage |
 | 1C | [All-degree weighted-lift collision theorem](WeightedLiftCollisionSynthesis.md) | Turns collision counting into one second divided-difference curve in every degree; gives a genus ladder and a universal corrected tower | Complete theorem with cross-degree checks; priority preliminary |
+| 1C-O | [Primitive collision-orbit bridge](JacobianCollisionEulerOrbitBridge.md) | Identifies Bala's multiplicative index tower with the Dold/Gauss primitive-orbit filtration, proves \(p^{2r}\)-packet divisibility for realizations of the Apéry and fourth-order Franel sequences, and gives a sharp obstruction for the degree-three collision scheme | Complete elementary synthesis and obstruction with 4,192 exact checks; classical inputs, new repository interpretation, no priority claim |
 | 1D | [Finite-field counts for the Fable Jacobian counterexample](JacobianCounterexampleFiniteFieldCounts.md) | Uses the same adjacent-extension viewpoint to organize cubic fibers, collisions, and Frobenius counts of the new counterexample | Complete elementary theorem with exact checks; priority preliminary |
 | 1E | [Degree-four Jacobian Frobenius obstruction](JacobianDegreeFourFrobeniusObstruction.md) | Shows how quadratic Artin factors obstruct raw adjacency and how two-step or corrected towers recover exact congruences | Complete elementary theorem with exact checks; priority preliminary |
 | 1F | [Degree-five elliptic Frobenius packet](JacobianDegreeFiveEllipticFrobenius.md) | Shows the next transition: a tangent cubic contributes a non-CM elliptic trace, and removing the full Frobenius packet leaves an exact \(2r-2\) tower | Complete theorem with direct finite-field and tower checks; priority preliminary |
@@ -131,6 +132,7 @@ The individual correspondence is:
 | Fable Jacobian-counterexample counts | `verification/related/verify_jacobian_counterexample_counts.py` |
 | Degree-four Jacobian collisions | `verification/related/verify_jacobian_degree_four.py` |
 | Degree-five Jacobian collisions | `verification/related/verify_jacobian_degree_five.py` |
+| Primitive collision-orbit bridge | `verification/related/verify_jacobian_euler_orbit_bridge.py` |
 | Hyperdeterminant Fourier packet | `verification/related/verify_hyperdeterminant_fourier.py` |
 | Hyperdeterminant entropy profile | `verification/related/verify_hyperdeterminant_entropy.py` |
 | Zhang four-matrix counterexample | `verification/related/verify_zhang_four_matrix_counterexample.py` |

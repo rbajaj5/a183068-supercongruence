@@ -40,7 +40,7 @@ allocation, the portfolio currently has four tiers:
 | Tier | Results | Recommended use of effort |
 | --- | --- | --- |
 | **A: specialist review now** | ZHANG-4, FRAMING-COUNTEREX, GWL-TWO, GWL-SCALE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
-| **B: broad theorem engines** | FROB-PACKET, LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER | Reuse on named conjectures and consolidate families |
+| **B: broad theorem engines** | FROB-PACKET, JC-ORBIT, LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER | Reuse on named conjectures and consolidate families |
 | **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, BLACK-WALSH, HASH-MATROID, FQ-CT, WALK-FROB, GQ2-ABCOUNT, GQ2-DIHEDRAL, GQ2-QUATERNION, GQ2-MAXCYCLIC, GQ2-EXTRASPECIAL | Improve experiments, certification, source consolidation, and proof organization |
 | **D: retained open targets** | C11, CAT-ODD, BALA-TOWERS, APERY-DEFECT, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
 
@@ -87,6 +87,7 @@ without increasing a supercongruence exponent.
 | 18 | [ETA-3: cubic extension at \(p=3\)](related-results/EtaPrime3CubicExtension.md) | **6** | 1 | 6 | 5 | 6 | 5 | Complete unchecked draft addressing an exceptional prime in a published theorem. |
 | 19 | [GWL-POWER: obstruction and corrected theorem](related-results/GaussianWolstenholmeCitationNetwork.md#3-the-exact-obstruction-to-the-higher-power-conjecture) | **6** | 1 | 7 | 5 | 6 | 5 | Complete unchecked correction and infinite failure mechanism for a printed conjecture. |
 | 20 | [FQ-CT: first Frobenius quotient](related-results/FrobeniusQuotientConstantTerms.md) | **5** | 2 | 3 | 8 | 9 | 3 | Complete elementary theorem and boundary analysis; no novelty claim. |
+| 20 | [JC-ORBIT: primitive collision-orbit criterion](related-results/JacobianCollisionEulerOrbitBridge.md) | **5** | 2 | 3 | 9 | 9 | 2 | Complete Dold/Gauss synthesis: a \(p^{hr}\) tower is exactly \(p^{(h-1)r}\)-divisibility of primitive orbit multiplicities; the degree-three Jacobian collision scheme is proved sharp only at the ordinary Gauss level. |
 | 15 | [FRAMING-CUBIC: six coefficient-power towers](related-results/CoefficientFramingCubicTower.md) | **6** | 1 | 6 | 10 | 8 | 3 | Complete elementary Cartier proof closing six named OEIS records, with 5,473 exact checks; a counterexample prevents reliance on the previously cited framing theorem, so specialist review and priority work remain. |
 | 16 | [FRAMING-COUNTEREX: rational-framing boundary](related-results/RationalFramingCounterexample.md) | **6** | 1 | 7 | 5 | 9 | 2 | Exact rational counterexample to both principal congruences of a cited framing theorem as printed; it corrects provenance without affecting the independent six-record proof. |
 | 20 | [COEFF-POWER-GAUSS: integral roots and universal baseline](related-results/CoefficientPowerGaussBaseline.md) | **5** | 1 | 3 | 9 | 9 | 2 | Complete elementary theorem proving three coefficient-root integrality claims, an exact Lagrange bridge, and the sharp universal all-prime \(p^r\) tower; the two named cubic refinements remain open. |
@@ -150,7 +151,9 @@ FROB-PACKET \(\rightarrow\) LD-2/LD-3
 \(\rightarrow\) QC-SQ/QC-CUBIC line, the relative-invariant line
 FF-DET \(\rightarrow\) FF-PFAFF \(\rightarrow\) FF-HYPERDET, and the
 collision-zeta ladder
-JC-WL \(\rightarrow\) \{JC-FF, JC4-FF, JC5-FF\}.
+JC-WL \(\rightarrow\) \{JC-FF, JC4-FF, JC5-FF\}, together with the
+orthogonal JC-ORBIT dictionary that converts multiplicative index towers
+into primitive closed-collision divisibility.
 The degree-five rung is the first to replace finite quadratic monodromy by a
 non-CM elliptic Frobenius packet. The q-calculus
 line is especially broad: Landau depth predicts cyclotomic multiplicity,
