@@ -33,42 +33,42 @@ n b_n=\sum_{e\mid n}\mu(e)a_{n/e}.
 \tag{2}
 ```
 
-The numbers \(a_n\) are the ghost components and \(b_d\) are the Euler
-exponents. In dynamics, \(a_n\) can count fixed points of the \(n\)-th
-iterate and \(b_d\) counts primitive orbits of length \(d\). For a scheme
-over a finite field, \(a_n\) can count points over the degree-\(n\)
-extension and \(b_d\) counts closed points of degree \(d\).
+The numbers $a_n$ are the ghost components and $b_d$ are the Euler
+exponents. In dynamics, $a_n$ can count fixed points of the $n$-th
+iterate and $b_d$ counts primitive orbits of length $d$. For a scheme
+over a finite field, $a_n$ can count points over the degree-$n$
+extension and $b_d$ counts closed points of degree $d$.
 
 This is the precise sense in which a supercongruence can be read as a
 statement about arithmetic dynamics.
 
 ## 2. Exact higher-Dold criterion
 
-Fix an integer \(h\geq1\).
+Fix an integer $h\geq1$.
 
 ### Theorem 1
 
-For an integer sequence \((a_n)_{n\geq1}\), the following are equivalent.
+For an integer sequence $(a_n)_{n\geq1}$, the following are equivalent.
 
-1. For every prime \(p\), every \(r\geq1\), and every \(m\geq1\),
+1. For every prime $p$, every $r\geq1$, and every $m\geq1$,
 
 ```math
 a_{mp^r}\equiv a_{mp^{r-1}}\pmod {p^{hr}}.
 \tag{3}
 ```
 
-2. The Euler exponents in (1) are integers and, whenever \(p\nmid m\),
+2. The Euler exponents in (1) are integers and, whenever $p\nmid m$,
 
 ```math
 b_{mp^r}\equiv0\pmod {p^{(h-1)r}}.
 \tag{4}
 ```
 
-It is enough in (3) to use \(m\) coprime to \(p\).
+It is enough in (3) to use $m$ coprime to $p$.
 
 ### Proof
 
-Assume first that the \(b_d\) are integers. If \(p\nmid m\), equation (2)
+Assume first that the $b_d$ are integers. If $p\nmid m$, equation (2)
 gives the exact identity
 
 ```math
@@ -78,12 +78,12 @@ p^r\sum_{d\mid m}d\,b_{dp^r}.
 \tag{5}
 ```
 
-Thus (4) implies (3). If the original \(m\) contains \(p^s\), apply the
-coprime case at level \(r+s\); the resulting modulus \(p^{h(r+s)}\) is at
-least the required \(p^{hr}\).
+Thus (4) implies (3). If the original $m$ contains $p^s$, apply the
+coprime case at level $r+s$; the resulting modulus $p^{h(r+s)}$ is at
+least the required $p^{hr}$.
 
 Conversely, suppose (3) holds. Ordinary Gauss congruences follow because
-\(h\geq1\). For \(n=mp^r\), with \(p\nmid m\), Mobius inversion gives
+$h\geq1$. For $n=mp^r$, with $p\nmid m$, Mobius inversion gives
 
 ```math
 n b_n
@@ -93,10 +93,10 @@ n b_n
 \tag{6}
 ```
 
-The right side is divisible by \(p^r\). Applying this at every prime-power
-divisor of \(n\) proves \(b_n\in\mathbb Z\).
+The right side is divisible by $p^r$. Applying this at every prime-power
+divisor of $n$ proves $b_n\in\mathbb Z$.
 
-Now divide (5) by \(p^r\). Congruence (3) says that
+Now divide (5) by $p^r$. Congruence (3) says that
 
 ```math
 \sum_{d\mid m}d\,b_{dp^r}
@@ -104,18 +104,18 @@ Now divide (5) by \(p^r\). Congruence (3) says that
 \tag{7}
 ```
 
-Mobius inversion on the divisor lattice of \(m\) shows that
-\(m b_{mp^r}\) has the same divisibility. Since \(p\nmid m\), this is
-equivalent to (4). \(\square\)
+Mobius inversion on the divisor lattice of $m$ shows that
+$m b_{mp^r}$ has the same divisibility. Since $p\nmid m$, this is
+equivalent to (4). $\square$
 
-For \(h=1\), Theorem 1 is the classical Dold/Gauss criterion. The extra
+For $h=1$, Theorem 1 is the classical Dold/Gauss criterion. The extra
 content of a quadratic or cubic supercongruence is now transparent:
 
 | Adjacent tower | Primitive-orbit divisibility |
 | --- | --- |
-| modulo \(p^r\) | \(b_{mp^r}\in\mathbb Z\) |
-| modulo \(p^{2r}\) | \(p^r\mid b_{mp^r}\) |
-| modulo \(p^{3r}\) | \(p^{2r}\mid b_{mp^r}\) |
+| modulo $p^r$ | $b_{mp^r}\in\mathbb Z$ |
+| modulo $p^{2r}$ | $p^r\mid b_{mp^r}$ |
+| modulo $p^{3r}$ | $p^{2r}\mid b_{mp^r}$ |
 
 ## 3. Collision schemes of polynomial maps
 
@@ -125,7 +125,7 @@ Let
 F:\mathbb A^d\longrightarrow\mathbb A^d
 ```
 
-be a polynomial map over \(\mathbb F_q\). Its off-diagonal collision scheme
+be a polynomial map over $\mathbb F_q$. Its off-diagonal collision scheme
 is
 
 ```math
@@ -154,8 +154,8 @@ Z_{\mathcal C_F}(T)
 \tag{10}
 ```
 
-Hence the exponent \(b_d\) in (1) is exactly the number of closed collision
-points of degree \(d\). Theorem 1 gives the following concrete criterion.
+Hence the exponent $b_d$ in (1) is exactly the number of closed collision
+points of degree $d$. Theorem 1 gives the following concrete criterion.
 
 ### Corollary 2
 
@@ -166,10 +166,10 @@ c_F(mp^r)\equiv c_F(mp^{r-1})\pmod {p^r}
 \tag{11}
 ```
 
-for every index prime \(p\), including \(p=\mathrm{char}\,\mathbb F_q\).
-It satisfies the stronger modulus \(p^{hr}\) exactly when the number of
-primitive closed collision points of degree \(mp^r\) is divisible by
-\(p^{(h-1)r}\), for \(p\nmid m\).
+for every index prime $p$, including $p=\mathrm{char}\,\mathbb F_q$.
+It satisfies the stronger modulus $p^{hr}$ exactly when the number of
+primitive closed collision points of degree $mp^r$ is divisible by
+$p^{(h-1)r}$, for $p\nmid m$.
 
 Thus a cubic Bala-style tower for collision counts is not a formal
 consequence of the Keller condition. It demands two extra powers per
@@ -179,7 +179,7 @@ prime-power level in the primitive collision orbits.
 
 For the degree-three map studied in
 [the finite-field collision note](JacobianCounterexampleFiniteFieldCounts.md),
-the off-diagonal collision count over an odd prime-power field \(Q\) is
+the off-diagonal collision count over an odd prime-power field $Q$ is
 
 ```math
 \mathcal V(Q)
@@ -191,7 +191,7 @@ Q^2(Q-1),&\mathrm{char}\,\mathbb F_Q=3.
 \tag{12}
 ```
 
-Fix an odd prime \(q\ne3\), use \(\mathbb F_q\) as the base field, and set
+Fix an odd prime $q\ne3$, use $\mathbb F_q$ as the base field, and set
 
 ```math
 c(n)=\mathcal V(q^n)
@@ -201,7 +201,7 @@ c(n)=\mathcal V(q^n)
 
 ### Theorem 3
 
-At the index prime \(p=q\),
+At the index prime $p=q$,
 
 ```math
 v_q\bigl(c(q)-c(1)\bigr)=1.
@@ -214,7 +214,7 @@ supercongruence.
 
 ### Proof
 
-Factoring one \(q\) gives
+Factoring one $q$ gives
 
 ```math
 \begin{aligned}
@@ -227,11 +227,11 @@ c(q)-c(1)
 \tag{15}
 ```
 
-The parenthesized factor is congruent to \(-2\) modulo \(q\), and is
-therefore a \(q\)-adic unit. \(\square\)
+The parenthesized factor is congruent to $-2$ modulo $q$, and is
+therefore a $q$-adic unit. $\square$
 
-In characteristic \(3\), the corresponding first difference has valuation
-exactly \(2\), still short of a cubic modulus.
+In characteristic $3$, the corresponding first difference has valuation
+exactly $2$, still short of a cubic modulus.
 
 This obstruction matters conceptually: a nontrivial collision scheme
 automatically supplies a Gauss sequence, but the Keller condition does not
@@ -243,17 +243,17 @@ supercongruences.
 Theorem 1 supplies a second interpretation for every **linear** tower in the
 census.
 
-- The proposed A183068 modulus \(p^{2r}\) says that its formal primitive
-  orbit multiplicities at lengths \(mp^r\) carry at least \(r\) extra
-  powers of \(p\).
+- The proposed A183068 modulus $p^{2r}$ says that its formal primitive
+  orbit multiplicities at lengths $mp^r$ carry at least $r$ extra
+  powers of $p$.
 - The cubic coefficient, Apéry, Franel, and factorial-ratio towers say that
-  the corresponding multiplicities carry at least \(2r\) powers.
+  the corresponding multiplicities carry at least $2r$ powers.
 - Geng-Rui Zhang proved that several of the relevant classical families,
   including Apéry and Franel numbers, are realizable periodic-point
-  sequences. For those families the \(b_d\) are not merely formal integers:
+  sequences. For those families the $b_d$ are not merely formal integers:
   they are nonnegative primitive-orbit counts.
 - The nonlinear Frobenius laws in the product route, such as
-  \(a(np^r)\equiv a(np^{r-1})^p\), are not instances of Theorem 1. They
+  $a(np^r)\equiv a(np^{r-1})^p$, are not instances of Theorem 1. They
   require the multiplicative/Witt side of the repository's Frobenius-packet
   framework.
 - The derived-defect records acquire an orbit interpretation only after the
@@ -267,7 +267,7 @@ Their conjectural cubic towers would prove strong divisibility of their
 formal Euler exponents, but positivity of all those exponents is a separate
 problem.
 
-The exact checker finds positive integral exponents through \(n=49\) for
+The exact checker finds positive integral exponents through $n=49$ for
 A333093. That is evidence, not a proof of realizability.
 
 ### Corollary 4: actual primitive-orbit multiplicities
@@ -290,9 +290,9 @@ F_4(n)=\sum_{k=0}^n\binom nk^4
 ```
 
 Zhang proved that both sequences are realizable: there are self-maps whose
-numbers of fixed points of the \(n\)-th iterates are \(A(n)\) and \(F_4(n)\).
-Write \(O_A(d)\) and \(O_{F_4}(d)\) for the corresponding numbers of
-primitive orbits of length \(d\). The published cubic supercongruences for
+numbers of fixed points of the $n$-th iterates are $A(n)$ and $F_4(n)$.
+Write $O_A(d)$ and $O_{F_4}(d)$ for the corresponding numbers of
+primitive orbits of length $d$. The published cubic supercongruences for
 these Apéry--Franel families, together with Theorem 1, give
 
 ```math
@@ -302,13 +302,13 @@ p^{2r}\mid O_{F_4}(mp^r)
 \tag{18}
 ```
 
-for every prime \(p\geq5\), \(r\geq1\), and \(p\nmid m\).
+for every prime $p\geq5$, $r\geq1$, and $p\nmid m$.
 
 The conclusion is independent of the chosen realizations because the
 primitive-orbit counts are uniquely recovered by Möbius inversion. Thus two
 established facts from different literatures combine to give a concrete
-new interpretation: at every \(p\)-power stratum, the primitive cycles occur
-in packets divisible by \(p^{2r}\).
+new interpretation: at every $p$-power stratum, the primitive cycles occur
+in packets divisible by $p^{2r}$.
 
 Both sequences occur in the 110-record search corpus. This corollary does
 not close a live Bala conjecture attached to either record; it identifies
@@ -318,13 +318,13 @@ what the already-established cubic towers mean dynamically.
 
 The distinction below prevents a recurrent indexing error.
 
-1. Existing Jacobian notes often fix the characteristic \(p\) and compare
-   \(\#X(\mathbb F_{p^r})\) with \(\#X(\mathbb F_{p^{r-1}})\). This changes
-   the extension degree additively from \(r-1\) to \(r\).
+1. Existing Jacobian notes often fix the characteristic $p$ and compare
+   $\#X(\mathbb F_{p^r})$ with $\#X(\mathbb F_{p^{r-1}})$. This changes
+   the extension degree additively from $r-1$ to $r$.
 2. A Bala tower applied to a point-count sequence compares
-   \(\#X(\mathbb F_{q^{mp^r}})\) with
-   \(\#X(\mathbb F_{q^{mp^{r-1}}})\). This multiplies the extension degree
-   by \(p\).
+   $\#X(\mathbb F_{q^{mp^r}})$ with
+   $\#X(\mathbb F_{q^{mp^{r-1}}})$. This multiplies the extension degree
+   by $p$.
 
 Only the second comparison is the Dold/Gauss ghost-component operation in
 Theorem 1. Results on one axis cannot be transferred silently to the other.
