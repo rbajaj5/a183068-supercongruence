@@ -372,6 +372,34 @@ Exact enumeration gives:
 | 5 | `W1=501212928, W3=377104896, W5=151252224, W7=38476800, W9=5370112, W11=317952, W13=6912` |
 | 6 | `W1=1869439264128, W3=1473803873408, W5=722690237952, W7=256856418816, W9=63332709632, W11=10667093760, W13=1171385856, W15=82137600, W17=3330432, W19=59520` |
 
+The exact side-six spectrum gives
+
+$$
+  \frac{W_1(Y_6)}{2^{42}}
+  =0.4250612765\ldots,
+  \qquad
+  \frac{\mathcal N_{Y_6}(1/2)}{2^{42}}
+  =0.2600392981\ldots.
+  \tag{19}
+$$
+
+A seeded Monte Carlo experiment evaluates the exact renormalization circuit
+on 200,000 colorings at each larger side length. Parentheses below contain
+two estimated standard errors:
+
+| side length | cells | normalized first chaos | stability at correlation 1/2 |
+| --- | ---: | ---: | ---: |
+| 8 | 36 | `0.364095 (0.004783)` | `0.225620 (0.004269)` |
+| 10 | 55 | `0.324826 (0.004086)` | `0.203060 (0.003386)` |
+| 12 | 78 | `0.301345 (0.004328)` | `0.185910 (0.004377)` |
+| 16 | 136 | `0.262262 (0.004976)` | `0.165860 (0.004480)` |
+| 20 | 210 | `0.232544 (0.003155)` | `0.151380 (0.004665)` |
+
+The observed decrease is consistent with low-level Fourier mass moving to
+higher chaos as the board grows. Five Monte Carlo points do not prove
+noise sensitivity or blackness, and they supply no additional
+$\varpi$-adic divisibility.
+
 The standard game of Hex is recovered from Y by fixing appropriate
 boundary cells. That reduction proves the usual existence and uniqueness
 of the Hex winner. The arithmetic corollary above is stated for the
@@ -386,7 +414,7 @@ color-reversal contrast
 
 $$
   g_H(x)=f_H(x)-f_H(-x).
-  \tag{19}
+  \tag{20}
 $$
 
 Then $g_H(-x)=-g_H(x)$, so (9)--(12) apply. A vertical or rotated crossing
@@ -394,14 +422,14 @@ contrast $g_V$ may be included in one Gaussian-valued observable
 
 $$
   g(x)=g_H(x)+i\,g_V(x).
-  \tag{20}
+  \tag{21}
 $$
 
 This is the clean role for Gaussian integers: they package two planar
 channels while their prime ideals provide split, inert, and ramified
 valuations.
 
-For the real observable (19), exact enumeration gives:
+For the real observable (20), exact enumeration gives:
 
 | triangular patch | nonzero $W_j(g_H)$ |
 | --- | --- |
@@ -424,13 +452,13 @@ Its antisymmetrization
 
 $$
   g(x)=F(x)-F(-x)
-  \tag{21}
+  \tag{22}
 $$
 
 is complement-odd and therefore satisfies Corollary 3. Identifying a
 space-time site $(u,t)$ with $u+it$ supplies a convenient Gaussian
 coordinate system, and a pair of real observables can again be combined as
-in (20).
+in (21).
 
 This gives an exact congruence for every finite arrow-field approximation.
 It does not survive passage to the Brownian web automatically. A scaling
@@ -451,7 +479,7 @@ $$
   \mathcal N_g(\varpi^r)
   {}-
   \varpi\mathcal N_g(\varpi^{r-1})
-  \tag{22}
+  \tag{23}
 $$
 
 has a parallel but different effect: it deletes the first chaos exactly and
@@ -478,6 +506,12 @@ The exhaustive $2^{21}$-coloring side-six transform is opt-in:
 
 ```text
 python verification/related/verify_black_noise_chaos_filter.py --extended
+```
+
+The seeded larger-board simulation is:
+
+```text
+python verification/related/verify_black_noise_chaos_filter.py --scaling
 ```
 
 The checker performs:

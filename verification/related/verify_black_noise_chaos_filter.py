@@ -13,6 +13,7 @@ No floating-point arithmetic is used.
 from __future__ import annotations
 
 from collections import deque
+import math
 import random
 import sys
 
@@ -410,6 +411,85 @@ def check_y_game_side_six() -> int:
     return checks
 
 
+def simulate_y_scaling() -> None:
+    """Estimate low-chaos mass for larger Y boards with a fixed seed."""
+
+    try:
+        import numpy as np
+    except ImportError as error:
+        raise RuntimeError(
+            "the --scaling Y-game run requires NumPy"
+        ) from error
+
+    def reductions(side: int) -> dict[int, object]:
+        tables: dict[int, object] = {}
+        for level in range(2, side + 1):
+            large = {
+                cell: index
+                for index, cell in enumerate(y_cells(level))
+            }
+            tables[level] = np.array(
+                [
+                    (
+                        large[a + 1, b, c],
+                        large[a, b + 1, c],
+                        large[a, b, c + 1],
+                    )
+                    for a, b, c in y_cells(level - 1)
+                ],
+                dtype=np.int32,
+            )
+        return tables
+
+    def batched_winners(bits: object, side: int, tables: dict[int, object]):
+        state = bits
+        for level in range(side, 1, -1):
+            state = state[:, tables[level]].sum(axis=2) >= 2
+        return np.where(state[:, 0], 1, -1).astype(np.int8)
+
+    print("side,cells,first-chaos,two-SE,stability-half,two-SE")
+    for side in (8, 10, 12, 16, 20):
+        rng = np.random.default_rng(20260730 + side)
+        dimension = side * (side + 1) // 2
+        tables = reductions(side)
+        first_chaos_samples = []
+        stability_samples = []
+        repetitions = 20
+        batch_size = 10_000
+        for _ in range(repetitions):
+            bits = rng.integers(
+                0, 2, size=(batch_size, dimension), dtype=np.int8
+            )
+            winner = batched_winners(bits, side, tables)
+            signs = 2 * bits - 1
+            sums = (signs * winner[:, None]).sum(axis=0, dtype=np.int64)
+            unbiased_first_chaos = (
+                (sums.astype(float) ** 2 - batch_size)
+                / (batch_size * (batch_size - 1))
+            ).sum()
+            first_chaos_samples.append(float(unbiased_first_chaos))
+
+            flips = rng.random((batch_size, dimension)) < 0.25
+            correlated = np.bitwise_xor(bits, flips)
+            second_winner = batched_winners(correlated, side, tables)
+            stability_samples.append(
+                float((winner.astype(np.int16) * second_winner).mean())
+            )
+
+        first_mean = float(np.mean(first_chaos_samples))
+        first_two_se = 2 * float(
+            np.std(first_chaos_samples, ddof=1) / math.sqrt(repetitions)
+        )
+        stability_mean = float(np.mean(stability_samples))
+        stability_two_se = 2 * float(
+            np.std(stability_samples, ddof=1) / math.sqrt(repetitions)
+        )
+        print(
+            f"{side},{dimension},{first_mean:.6f},{first_two_se:.6f},"
+            f"{stability_mean:.6f},{stability_two_se:.6f}"
+        )
+
+
 def check_lacunary_polynomials() -> int:
     rng = random.Random(20260729)
     checks = 0
@@ -502,6 +582,8 @@ def main() -> None:
     if "--extended" in sys.argv[1:]:
         side_six = check_y_game_side_six()
         print(f"extended side-six Y-game checks: {side_six}")
+    if "--scaling" in sys.argv[1:]:
+        simulate_y_scaling()
 
 
 if __name__ == "__main__":
