@@ -108,6 +108,24 @@ proof.
 - **Proof:** [Binomial-quotient cancellation](related-results/BinomialQuotientCancellation.md)
 - **Exact checker:** [`verify_binomial_quotient_cancellation.py`](verification/related/verify_binomial_quotient_cancellation.py)
 
+### A288470-ODD — double-binomial tower
+
+- **Claim:** For every odd prime $p$ and positive integers $m,r$,
+
+  ```math
+  a(mp^r)\equiv a(mp^{r-1})\pmod {p^{2r}},
+  \qquad
+  a(N)=\sum_{k=0}^{N}\binom Nk\binom{2N}{2k}.
+  ```
+
+- **Source status:** Named OEIS conjecture for $p\ge5$.
+- **Strengthening:** The proof includes $p=3$.
+- **Boundary:** The analogous binary assertion fails at $m=1,r=2$:
+  $a(4)-a(2)=632$ has 2-adic valuation $3<4$.
+- **Status:** Complete proof candidate; priority search pending.
+- **Proof:** [A288470 odd-prime tower](related-results/A288470OddPrimeTower.md)
+- **Exact checker:** [`verify_a288470_odd_prime_tower.py`](verification/related/verify_a288470_odd_prime_tower.py)
+
 ### BALA-TOWERS — remaining higher-level Bala tower queue
 
 - **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) and the
