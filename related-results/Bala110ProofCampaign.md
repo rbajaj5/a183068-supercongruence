@@ -28,15 +28,16 @@ every record:
 | C: coefficient/constant term | 37 | 0 | 6 | 3 | 0 | 28 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 |
 | M: modular or infinite product | 14 | 0 | 0 | 0 | 0 | 14 |
-| D: derived or inherited | 5 | 0 | 0 | 0 | 0 | 5 |
-| **Total** | **110** | **10** | **12** | **6** | **3** | **79** |
+| D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 |
+| **Total** | **110** | **10** | **12** | **11** | **3** | **74** |
 
 The ten `proved-here` records are A091527, A141057, A262732, A275652,
 A275654, A288470, A357509, A357568, A364173, and A364506. The
 twelve `published-source` records are A002426, A082758, A103882, A168597,
 A176335, A184423, A186420, A234839, A363864, A363867, A363871, and
-A364509. The six partial records are A008978, A113424, A228960, A333592,
-A350383, and A380290. A002897, A005259, and A005260 are retained as
+A364509. The eleven partial records are A008978, A113424, A228960,
+A333592, A350383, A352655, A357506, A357567, A357956, A357959, and
+A380290. A002897, A005259, and A005260 are retained as
 search-corpus records but
 classified `no-explicit-open`: their live matches concern unrelated Bala
 material or a claim now marked proved, not a live Bala supercongruence
@@ -87,6 +88,11 @@ The campaign does not use A-number order. It uses expected proof yield.
    survives the product balance.
 5. **D route:** identify the parent sequence and prove that the claimed
    congruence is inherited before treating it as an independent problem.
+   This route is now fully triaged.  The
+   [Apéry defect packet](AperyRankOneDefectPacket.md) proves that its five
+   records are equivalent to only three linear defect relations, and that
+   the two nonlinear companion conjectures introduce no new arithmetic
+   direction.  The three defect relations themselves remain open.
 
 ## Promotion rule
 

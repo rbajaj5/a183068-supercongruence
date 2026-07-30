@@ -285,6 +285,30 @@ proof.
 - **Proof:** [Integral coefficient roots and the universal Gauss baseline](related-results/CoefficientPowerGaussBaseline.md)
 - **Exact checker:** [`verify_coefficient_power_gauss_baseline.py`](verification/related/verify_coefficient_power_gauss_baseline.py)
 
+### APERY-DEFECT — five derived records, three defect relations
+
+- **Claim:** The enhanced congruences on A352655, A357506, A357567,
+  A357956, and A357959, including both nonlinear companion claims, reduce
+  exactly to
+
+  ```math
+  \alpha_r+\beta_r\equiv0,\qquad
+  5\gamma_r-14\alpha_r\equiv0,\qquad
+  5\delta_r-2\beta_r\equiv0
+  \pmod {p^{L_r}},
+  ```
+
+  where the four symbols are the adjacent defects of A005258, A005259,
+  and their shifted sequences, and \(L_1=5\), \(L_r=3r+3\) for \(r\ge2\).
+- **Strengthening:** For \(p\ge7\), the four-coordinate defect vector is
+  one-dimensional modulo \(p^{L_r}\).  A polynomial closure lemma explains
+  both nonlinear exponent choices by their gradients.
+- **Boundary:** The isolated \(p=3\) claim on A357506 is verified exactly.
+- **Status:** Complete algebraic reduction; the three displayed defect
+  congruences remain open.
+- **Proof:** [The Apéry enhanced-congruence packet](related-results/AperyRankOneDefectPacket.md)
+- **Exact checker:** [`verify_apery_rank_one_defect.py`](verification/related/verify_apery_rank_one_defect.py)
+
 ### BALA-TOWERS — remaining higher-level Bala tower queue
 
 - **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) and the

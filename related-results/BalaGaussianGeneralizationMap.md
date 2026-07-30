@@ -312,6 +312,14 @@ compatible.  These entries should remain behind their source sequences in
 the queue; otherwise a derived formula can hide the actual local
 obstruction.
 
+The [Apéry defect packet](AperyRankOneDefectPacket.md) now performs this
+reduction exactly.  All five records, including both nonlinear companions,
+collapse to three linear congruences among the adjacent defects of A005258,
+A005259, and their shifted sequences.  For \(p\ge7\) the defect vector is
+one-dimensional modulo the enhanced power.  The three defining defect
+relations remain open, so the records are classified `partial`, not
+`proved-here`; no route-D record remains unclassified.
+
 ## 9. Priority queue after Gaussian routing
 
 | Rank | Target | Route | Immediate deliverable | Main risk |
@@ -322,7 +330,7 @@ obstruction.
 | 4 | A183068 and the repository's Landau-depth family | T | Package the already-proved general Frobenius-twist corollary family | Mostly a reusable corollary, not a new local mechanism |
 | 5 | A008793 and A049505 | M | Identify a quartic-character or CM decomposition | No canonical Gaussian object may exist |
 | 6 | A364506, A364509, A008978, A002897, A113424 | F | Define and prove integrality of the Gaussian block analogue | The integer coefficient roots are settled, but Gaussian denominator control is a separate theorem |
-| 7 | Derived entries | D | Trace every claim back to compatible source theorems | Derived operations may not commute with Frobenius |
+| 7 | A352655, A357506, A357567, A357956, A357959 | D | Prove the three linear Apéry defect relations isolated by the packet theorem | Cubic baselines alone do not supply the enhanced three-power gain |
 
 A228960 and A350383 have left this open queue: one coefficientwise theorem
 proves both \(p^{2r}\) towers for \(p\ge5\) and supplies their split/inert
