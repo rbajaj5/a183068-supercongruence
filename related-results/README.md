@@ -25,6 +25,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 1A | [q-calculus and cyclotomic supercongruences](QCalculusCyclotomicSupercongruences.md) | Turns Landau depth into exact root-of-unity multiplicity; gives a square q-lift of A183068 and an explicit corrected cubic theorem for depth-three families | Complete deductions from Clark and Straub; exact polynomial checks; priority preliminary |
 | 1B | [Peter Bala's OEIS queue](BalaOeisSupercongruenceQueue.md) | Proves the A365029 boundary family and first two adjacent levels, plus the A375178 prime-level odd-power family; closes A333593 via Coster and Jacobsthal--Kazandzidis | Three complete elementary proof packets, published-theorem reductions, and exact checks; priority preliminary |
 | 1B-A | [First two A365029 levels](A365029FirstTwoLevels.md) | Proves the \(p^3\) and \(p^6\) adjacent congruences by shifted scaling plus one- and two-digit harmonic cancellation | Complete unchecked proof; 67,310 exact checks |
+| 1B-Q | [Binomial-quotient cancellation](BinomialQuotientCancellation.md) | Proves the complete A357568 enhanced tower for every odd prime and every power parameter, and closes every A364506 row by a Laurent-binomial reduction | Complete proof candidate; 530 exact checks; priority search preliminary |
 | 1B-L | [Supercongruence literature and Bala--OEIS census](SupercongruenceLiteratureCensus.md) | Maps a reproducible 110-record OEIS search to the published theorem families and consolidates the genuinely live targets before more proof work is spent | Literature map with explicit source and priority boundaries |
 | 1B-G | [Gaussian generalization map for the Bala queue](BalaGaussianGeneralizationMap.md) | Routes all 110 census records through five Gaussian proof architectures and separates formal coefficient changes from Frobenius twists and prime-ideal theorems | Exhaustive research map; no novelty claim |
 | 1B-F | [Arithmetic Frobenius packet framework](ArithmeticFrobeniusPacketFramework.md) | Unifies the five census routes through number fields, prime ideals, local Frobenius transitions, finite-field orbits, valuation budgets, and local-to-global assembly | Complete elementary framework and 158,755 exact checks; routing is not a proof of all 110 conjectures |
@@ -107,6 +108,7 @@ The individual correspondence is:
 | Landau depth | `verification/related/verify_landau_supercongruence.py` |
 | Peter Bala's OEIS queue | `verification/related/verify_bala_oeis_supercongruences.py` |
 | First two A365029 levels | `verification/related/verify_a365029_first_two_levels.py` |
+| Binomial-quotient cancellation | `verification/related/verify_binomial_quotient_cancellation.py` |
 | q-calculus and cyclotomic lifts | `verification/related/verify_q_calculus_supercongruence.py` |
 | All-degree weighted-lift collisions | `verification/related/verify_weighted_lift_collision_synthesis.py` |
 | Fable Jacobian-counterexample counts | `verification/related/verify_jacobian_counterexample_counts.py` |

@@ -241,6 +241,14 @@ A002897 A008978 A091527 A113424 A184423 A186420 A262732 A275652
 A275654 A357509 A357568 A364173 A364506 A364509
 ```
 
+Two integer problems in this route are now closed in the
+[binomial-quotient cancellation note](BinomialQuotientCancellation.md).
+The Laurent-binomial closure theorem proves every A364506 row for
+\(p\ge5\).  A separate reduced-unit harmonic calculation proves the full
+A357568 enhanced family, including \(p=3\).  These are integer
+supercongruences; defining a genuinely Gaussian block analogue remains a
+different problem.
+
 This route is closest to Kalinin's
 [rectangular Gaussian products](https://arxiv.org/abs/2504.07978), but it is
 also the easiest place to create an ill-defined analogy.  The A364173 packet
