@@ -24,21 +24,21 @@ every record:
 
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 2 | 3 | 1 | 2 | 32 |
+| T: finite-sum transfer | 40 | 3 | 3 | 2 | 2 | 30 |
 | C: coefficient/constant term | 37 | 0 | 6 | 3 | 0 | 28 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 |
-| **Total** | **110** | **19** | **12** | **16** | **3** | **60** |
+| **Total** | **110** | **20** | **12** | **17** | **3** | **58** |
 
-The nineteen `proved-here` records are A008485, A008705, A008793, A049505,
+The twenty `proved-here` records are A008485, A008705, A008793, A049505,
 A091527, A141057, A255672, A262732, A270913, A270919, A270922, A270924,
-A275652, A275654, A288470, A357509, A357568, A364173, and A364506. The
+A275652, A275654, A288470, A357509, A357510, A357568, A364173, and A364506. The
 twelve `published-source` records are A002426, A082758, A103882, A168597,
 A176335, A184423, A186420, A234839, A363864, A363867, A363871, and
-A364509. The sixteen partial records are A008978, A023871, A023873,
+A364509. The seventeen partial records are A008978, A023871, A023873,
 A113424, A206622, A228960, A229452, A283271, A333592, A350383, A352655,
-A357506, A357567, A357956, A357959, and A380290. A002897, A005259, and
+A357506, A357512, A357567, A357956, A357959, and A380290. A002897, A005259, and
 A005260 are retained as
 search-corpus records but
 classified `no-explicit-open`: their live matches concern unrelated Bala
@@ -67,7 +67,11 @@ The campaign does not use A-number order. It uses expected proof yield.
 
 1. **T route:** look for a termwise discard-and-rescale proof. A288470 is
    the model: two carries close the integer tower and automatically produce
-   a Gaussian Frobenius twist.
+   a Gaussian Frobenius twist. The
+   [Apéry odd-moment theorem](AperyOddMomentPrimeClassification.md)
+   is the prime-boundary model: one local product expansion proves A357510
+   and exactly classifies the exceptional primes for every higher odd
+   moment, including the complete prime slice of A357512.
 2. **F route:** rewrite the term as a multinomial or an integral Laurent
    product. A364506 is one model.  The odd-unit block theorem is the second:
    it closes A091527 and A262732 simultaneously by splitting a half-integral
