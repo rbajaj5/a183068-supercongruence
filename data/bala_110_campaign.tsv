@@ -90,20 +90,20 @@ A357568	F	proved-here	BinomialQuotientCancellation.md	independent review and pri
 A364173	F	proved-here	related-results/A364173IntegralHalfBinomialTower.md	integrality and complete p^(3r) tower for p >= 5
 A364506	F	proved-here	BinomialQuotientCancellation.md	independent review and priority audit
 A364509	F	published-source	Mestrovic and Jacobsthal reduction cited by OEIS	verify exact parameter match in bibliography
-A008485	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A008705	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A008793	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A023871	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A023873	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A049505	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A206622	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A229452	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A255672	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A270913	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A270919	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A270922	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A270924	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
-A283271	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A008485	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the universal prime-coefficient lemma
+A008705	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review of the prime and twice-prime coefficient calculations
+A008793	M	queued	live OEIS p^(4r) MacMahon-product claim extracted	derive the normalized p-adic logarithm of the MacMahon product
+A023871	M	partial	related-results/ModularProductPrimeCoefficientPacket.md	prove the extra power from p^(2r) to the conjectural p^(3r)
+A023873	M	partial	related-results/ModularProductPrimeCoefficientPacket.md	prove the extra power from p^(2r) to the conjectural p^(3r)
+A049505	M	queued	three live OEIS prime-power congruences extracted	normalize the symmetric-plane-partition factorial product p-adically
+A206622	M	partial	related-results/ModularProductPrimeCoefficientPacket.md	prove the extra power from p^(2r) to the conjectural p^(3r)
+A229452	M	queued	live OEIS coefficient-power p^(3r) family extracted	establish a Dwork or coefficient-root transfer theorem for the exponential seed
+A255672	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the Euler-product specialization
+A270913	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the universal prime-coefficient lemma
+A270919	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the universal prime-coefficient lemma
+A270922	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the Euler-product specialization
+A270924	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the Euler-product specialization
+A283271	M	partial	related-results/ModularProductPrimeCoefficientPacket.md	prove the extra power from p^(2r) to the conjectural p^(3r)
 A352655	D	partial	related-results/AperyRankOneDefectPacket.md	exact reduction to R1; prove the first Apéry defect relation
 A357506	D	partial	related-results/AperyRankOneDefectPacket.md	product tower follows from R1 and the p=3 boundary is checked; prove R1
 A357567	D	partial	related-results/AperyRankOneDefectPacket.md	linear and nonlinear claims reduce to R2; prove the second Apéry defect relation

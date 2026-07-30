@@ -291,6 +291,14 @@ logarithm of MacMahon's product.  A Gaussian refinement would require a
 quartic or CM factorization of that logarithm; merely replacing integers by
 Gaussian integers does not define one.
 
+The [modular-product prime-coefficient packet](ModularProductPrimeCoefficientPacket.md)
+now completes the route's first pass. Seven records are proved here:
+A008485, A008705, A255672, A270913, A270919, A270922, and A270924. Four
+more records, A023871, A023873, A206622, and A283271, inherit a proved
+\(p^{2r}\) baseline while retaining their conjectural \(p^{3r}\) gain.
+Only A008793, A049505, and A229452 remain without a proof or proved
+baseline.
+
 Finite-field “Gaussian hypergeometric” functions can be relevant here
 through Gauss sums and quartic characters.  The word *Gaussian* in that
 literature does not itself mean arithmetic in \(\mathbb Z[i]\).  McCarthy's
@@ -328,7 +336,7 @@ relations remain open, so the records are classified `partial`, not
 | 2 | A380290 cubic remainder | C | Explain the extra untwisted power beyond the proved coefficientwise quadratic tower | The Gaussian twist has exact quadratic witnesses, so the gain is a special cancellation |
 | 3 | Nearby depth-three finite sums beyond the closed pilot | T | Compute whether the scaling quotient remains deep after weighting | Twisting can remove cancellation used by the untwisted proof |
 | 4 | A183068 and the repository's Landau-depth family | T | Package the already-proved general Frobenius-twist corollary family | Mostly a reusable corollary, not a new local mechanism |
-| 5 | A008793 and A049505 | M | Identify a quartic-character or CM decomposition | No canonical Gaussian object may exist |
+| 5 | A008793, A049505, and A229452 | M | Prove the remaining product normalizations before seeking a quartic-character or CM decomposition | No canonical Gaussian object may exist |
 | 6 | A364506, A364509, A008978, A002897, A113424 | F | Define and prove integrality of the Gaussian block analogue | The integer coefficient roots are settled, but Gaussian denominator control is a separate theorem |
 | 7 | A352655, A357506, A357567, A357956, A357959 | D | Prove the three linear Apéry defect relations isolated by the packet theorem | Cubic baselines alone do not supply the enhanced three-power gain |
 
