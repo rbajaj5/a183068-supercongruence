@@ -166,7 +166,7 @@ c_F(mp^r)\equiv c_F(mp^{r-1})\pmod {p^r}
 \tag{11}
 ```
 
-for every index prime \(p\), including \(p=\operatorname{char}\mathbb F_q\).
+for every index prime \(p\), including \(p=\mathrm{char}\,\mathbb F_q\).
 It satisfies the stronger modulus \(p^{hr}\) exactly when the number of
 primitive closed collision points of degree \(mp^r\) is divisible by
 \(p^{(h-1)r}\), for \(p\nmid m\).
@@ -185,8 +185,8 @@ the off-diagonal collision count over an odd prime-power field \(Q\) is
 \mathcal V(Q)
 =
 \begin{cases}
-(Q-1)(Q^2+2),&\operatorname{char}\mathbb F_Q\ne3,\\
-Q^2(Q-1),&\operatorname{char}\mathbb F_Q=3.
+(Q-1)(Q^2+2),&\mathrm{char}\,\mathbb F_Q\ne3,\\
+Q^2(Q-1),&\mathrm{char}\,\mathbb F_Q=3.
 \end{cases}
 \tag{12}
 ```
