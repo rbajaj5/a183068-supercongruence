@@ -29,8 +29,8 @@ A244973	T	queued	none	extract exact conjecture; test termwise discard and transf
 A260667	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A288470	T	proved-here	A288470OddPrimeTower.md	independent review and priority audit
 A333592	T	partial	QuadraticGaussianQueueTheorem.md	prove or refute the stronger untwisted cubic tower
-A357510	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A357512	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A357510	T	proved-here	related-results/AperyOddMomentPrimeClassification.md	independent review and priority audit of the prime-boundary expansion
+A357512	T	partial	related-results/AperyOddMomentPrimeClassification.md	prime slice and exact exceptional-prime classification proved; prove the remaining composite n congruence
 A361889	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A361892	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A362676	T	queued	none	extract exact conjecture; test termwise discard and transfer

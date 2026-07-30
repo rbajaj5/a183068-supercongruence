@@ -120,6 +120,23 @@ proof.
 - **Proof:** [Binomial-quotient cancellation](related-results/BinomialQuotientCancellation.md)
 - **Exact checker:** [`verify_binomial_quotient_cancellation.py`](verification/related/verify_binomial_quotient_cancellation.py)
 
+### APERY-ODD-MOMENT — A357510 and the A357512 prime boundary
+
+- **Claim 1:** For every prime $p\ge5$,
+  $U_1(p-1)\equiv0\pmod {p^4}$, where
+  $U_q(n)=\sum_k k^q\binom nk^2\binom{n+k}k^2$.
+- **Claim 2:** For every odd prime $p$ and $m\ge2$,
+  $U_{2m+1}(p-1)/p^3\equiv
+  \mathbf 1_{p-1\mid2m-2}(5-2m)/2\pmod p$.
+  Hence the valuation is exactly three precisely when
+  $p-1\mid2m-2$ and $p\nmid2m-5$.
+- **Source status:** Claim 1 is the named A357510 conjecture. Claim 2
+  proves the prime slice of A357512 and corrects its proposed
+  exceptional-prime table; the composite-$n$ statement remains open.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Apéry odd moments at the prime boundary](related-results/AperyOddMomentPrimeClassification.md)
+- **Exact checker:** [`verify_apery_odd_moment_prime_classification.py`](verification/related/verify_apery_odd_moment_prime_classification.py)
+
 ### A288470-ODD — double-binomial tower
 
 - **Claim:** For every odd prime $p$ and positive integers $m,r$,

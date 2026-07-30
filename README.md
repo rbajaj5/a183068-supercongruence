@@ -117,6 +117,12 @@ The [binomial-quotient cancellation theorem](related-results/BinomialQuotientCan
 also closes the complete two-parameter conjecture on
 [A357509](https://oeis.org/A357509), rather than only its displayed
 sequence.
+The [Apéry odd-moment theorem](related-results/AperyOddMomentPrimeClassification.md)
+then proves the prime conjecture on A357510 and gives an exact
+exceptional-prime formula for every higher positive odd moment. In
+particular, it proves the prime slice of A357512 and exhibits two missing
+exceptions in one proposed family member, while leaving the record's
+composite-\(n\) claim open.
 The [coefficient-root theorem](related-results/CoefficientPowerGaussBaseline.md)
 then finishes the factorial route's source audit: it proves the displayed
 root series on A002897, A008978, and A113424 integral and establishes their
