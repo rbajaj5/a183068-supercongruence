@@ -1,10 +1,9 @@
 # The representation and Frobenius packet behind A183068
 
-**Status:** exact reformulations, a complete Hasse--Witt divisibility
-calculation, and an archimedean asymptotic consequence. The matrix ranks in
-the small-prime table are finite computations, not an all-prime theorem.
-Nothing here replaces the elementary proof in [`PROOF.md`](../PROOF.md), and
-no new supercongruence exponent is claimed.
+**Status:** exact reformulations, a complete Hasse--Witt divisibility and
+rank theorem, and an archimedean asymptotic consequence. Nothing here
+replaces the elementary proof in [`PROOF.md`](../PROOF.md), and no new
+supercongruence exponent is claimed.
 
 This note applies the symmetry-adapted viewpoint used in the companion
 [GOE determinant-factor project](https://github.com/rbajaj5/goe-determinant-factor-density)
@@ -320,13 +319,69 @@ is integral and satisfies
 \qquad\text{(23)}
 ```
 
+Its rank is exactly
+
+```math
+\boxed{\quad
+\mathrm{rank}_{\mathbb F_p}(\widehat H_p)=
+\begin{cases}
+1,&p=2,\\
+2,&p\text{ odd}.
+\end{cases}
+\quad}
+\qquad\text{(24)}
+```
+
+### Proof of the rank statement
+
+Index the three rows and columns of \(H_p(G)\) by
+\(u,v\in\{-1,0,1\}\). Expanding the last factor of \(G^{p-1}\), then taking
+the \(x\)- and \(z\)-constant terms, gives
+
+```math
+(H_p(G))_{u,v}
+=
+\sum_{k=0}^{p-1}
+\binom{p-1}{k}^{\!2}
+\binom{2k}{k}
+\binom{2(p-1+k)}{pv-u+2k}.
+\qquad\text{(25)}
+```
+
+As usual, a binomial coefficient is zero when its lower index is outside
+its natural range. Let \(p\) be odd and put \(m=(p-1)/2\). Modulo \(p\),
+\(\binom{2k}{k}=0\) for \(k>m\). Formula (25) then gives
+
+```math
+(H_p(G))_{-1,-1}=(-1)^m,
+\qquad
+(H_p(G))_{0,0}=1.
+\qquad\text{(26)}
+```
+
+For the first equality, only \(k=m\) survives. For the second, the \(k=0\)
+term is \(1\), while Lucas' theorem kills every \(1\le k\le m\). The same
+digit comparison shows
+
+```math
+(H_p(G))_{1,-1}=
+(H_p(G))_{1,0}=
+(H_p(G))_{1,1}=0.
+\qquad\text{(27)}
+```
+
+Thus the upper-left two-by-two minor has nonzero determinant and the last
+row is zero: the rank is exactly \(2\). At \(p=2\), direct extraction from
+\(G\) gives rank \(1\). Equation (23) transfers both ranks to
+\(\widehat H_p\). \(\square\)
+
 In particular, the usual invertible-Hasse--Witt or ordinary unit-root route
 cannot start from this displayed constant-term representation. The relevant
 information begins one divided \(p\)-adic layer lower. This explains why the
 successful proof uses a valuation budget rather than an ordinary scalar
 unit-root argument.
 
-The first exact divided packets are:
+The first divided packets illustrating the theorem are:
 
 | \(p\) | rows of \(\widehat H_p\bmod p\) | rank |
 | ---: | --- | ---: |
@@ -335,8 +390,7 @@ The first exact divided packets are:
 | \(5\) | `[[4,0,1], [0,4,4], [0,0,0]]` | 2 |
 | \(7\) | `[[1,4,3], [0,6,6], [0,0,0]]` | 2 |
 
-The rank drop at \(p=2\) is exact in this table. An all-odd-prime rank theorem
-would require a separate proof and is not asserted here.
+The rank drop at \(p=2\) is therefore the exact all-prime boundary.
 
 ## 5. What Stiefel--Whitney classes do and do not add
 
@@ -355,7 +409,7 @@ w(W_{\mathbb R})
 \equiv
 1+x^2
 \pmod2.
-\qquad\text{(24)}
+\qquad\text{(28)}
 ```
 
 Thus the first surviving parity class of this factor is the degree-four
@@ -375,7 +429,7 @@ lattice:
 ```math
 a(n)=
 \langle\delta_0,M_P^n\delta_0\rangle.
-\qquad\text{(25)}
+\qquad\text{(29)}
 ```
 
 The displayed \(P\) is not reciprocal: its support is not centrally

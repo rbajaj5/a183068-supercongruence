@@ -98,6 +98,33 @@ def divided_packet(
     return packet, divided
 
 
+def binomial_or_zero(top: int, bottom: int) -> int:
+    if bottom < 0 or bottom > top:
+        return 0
+    return comb(top, bottom)
+
+
+def factor_packet_formula(prime: int) -> list[list[int]]:
+    """Coefficient formula (25), reduced modulo prime."""
+    indices = (-1, 0, 1)
+    return [
+        [
+            sum(
+                comb(prime - 1, k) ** 2
+                * comb(2 * k, k)
+                * binomial_or_zero(
+                    2 * (prime - 1 + k),
+                    prime * v - u + 2 * k,
+                )
+                for k in range(prime)
+            )
+            % prime
+            for v in indices
+        ]
+        for u in indices
+    ]
+
+
 def check_character_and_walk() -> None:
     polynomial = a183068_polynomial()
     assert len(polynomial) == 99
@@ -184,6 +211,11 @@ def check_small_prime_packets() -> None:
     }
     for prime, target in expected.items():
         packet, divided = divided_packet(factor, prime)
+        factor_packet = factor_packet_formula(prime)
+        assert divided == [
+            [(-entry) % prime for entry in row]
+            for row in factor_packet
+        ]
         assert divided == target
         assert all(
             entry % prime == 0
@@ -191,6 +223,14 @@ def check_small_prime_packets() -> None:
             for entry in row
         )
         assert rank_mod(divided, prime) == (1 if prime == 2 else 2)
+
+    for prime in (3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43):
+        packet = factor_packet_formula(prime)
+        half = (prime - 1) // 2
+        assert packet[0][0] == (-1) ** half % prime
+        assert packet[1][1] == 1
+        assert packet[2] == [0, 0, 0]
+        assert rank_mod(packet, prime) == 2
 
 
 def main() -> None:
@@ -201,7 +241,7 @@ def main() -> None:
     print("  character dimension: 544; Laurent weights: 99")
     print("  exact drift and anisotropic covariance: verified")
     print("  ordinary Hasse--Witt packet: zero mod p for all tested primes")
-    print("  divided packet ranks: p=2 gives 1; p=3,5,7 give 2")
+    print("  divided packet rank formula: p=2 gives 1; every odd p gives 2")
 
 
 if __name__ == "__main__":

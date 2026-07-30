@@ -456,10 +456,12 @@ proof.
   three-variable packet modulo \(p\). The same weight model recovers the
   recorded growth constant \(196+80\sqrt6\) and the OEIS local-limit
   asymptotic from a four-dimensional tilted walk.
-- **Boundary:** The ranks \(1,2,2,2\) at \(p=2,3,5,7\) are exact finite
-  calculations; no all-odd-prime rank theorem or stronger supercongruence is
-  asserted. Stiefel--Whitney classes label the mod-\(2\) parity layer but do
-  not prove its integral valuation.
+- **Rank theorem:** The divided packet has rank exactly \(1\) at \(p=2\)
+  and exactly \(2\) at every odd prime. The proof is a one-variable
+  coefficient extraction followed by Lucas' theorem.
+- **Boundary:** No stronger supercongruence is asserted. Stiefel--Whitney
+  classes label the mod-\(2\) parity layer but do not prove its integral
+  valuation.
 - **Status:** Complete structural theorem and standard local-limit
   consequence; no novelty claim for the representation dictionary.
 - **Proof:** [Representation and Frobenius packet](related-results/A183068RepresentationFrobeniusPacket.md)
