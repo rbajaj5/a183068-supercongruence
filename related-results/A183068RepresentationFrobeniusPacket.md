@@ -152,7 +152,7 @@ support spans the full lattice and the origin is interior to its Newton
 polytope, \(\log P\) is strictly convex. Its unique zero-drift point is
 
 ```math
-(w_*,x_*,y_*,z_*)=
+(w_{\star},x_{\star},y_{\star},z_{\star})=
 \left(1,\,2+\sqrt6,\,\sqrt{\frac23},\,1\right).
 \qquad\text{(10)}
 ```
@@ -160,11 +160,12 @@ polytope, \(\log P\) is strictly convex. Its unique zero-drift point is
 At this point
 
 ```math
-P(w_*,x_*,y_*,z_*)=196+80\sqrt6.
+P(w_{\star},x_{\star},y_{\star},z_{\star})=196+80\sqrt6.
 \qquad\text{(11)}
 ```
 
-Indeed, logarithmic differentiation first gives \(w_*=z_*=1\).
+Indeed, logarithmic differentiation first gives
+\(w_{\star}=z_{\star}=1\).
 The remaining two equations reduce to
 
 ```math
@@ -179,7 +180,7 @@ differentiation at that point gives the covariance below:
 The covariance of the exponentially tilted zero-drift walk has determinant
 
 ```math
-\det\Sigma_*=-\frac{88}{3}+12\sqrt6.
+\det\Sigma_{\star}=-\frac{88}{3}+12\sqrt6.
 \qquad\text{(12)}
 ```
 
@@ -327,12 +328,12 @@ unit-root argument.
 
 The first exact divided packets are:
 
-| \(p\) | \(\widehat H_p\bmod p\) | rank |
+| \(p\) | rows of \(\widehat H_p\bmod p\) | rank |
 | ---: | --- | ---: |
-| \(2\) | \(\left(\begin{smallmatrix}0&0&0\\0&1&1\\0&0&0\end{smallmatrix}\right)\) | 1 |
-| \(3\) | \(\left(\begin{smallmatrix}1&1&0\\0&2&2\\0&0&0\end{smallmatrix}\right)\) | 2 |
-| \(5\) | \(\left(\begin{smallmatrix}4&0&1\\0&4&4\\0&0&0\end{smallmatrix}\right)\) | 2 |
-| \(7\) | \(\left(\begin{smallmatrix}1&4&3\\0&6&6\\0&0&0\end{smallmatrix}\right)\) | 2 |
+| \(2\) | `[[0,0,0], [0,1,1], [0,0,0]]` | 1 |
+| \(3\) | `[[1,1,0], [0,2,2], [0,0,0]]` | 2 |
+| \(5\) | `[[4,0,1], [0,4,4], [0,0,0]]` | 2 |
+| \(7\) | `[[1,4,3], [0,6,6], [0,0,0]]` | 2 |
 
 The rank drop at \(p=2\) is exact in this table. An all-odd-prime rank theorem
 would require a separate proof and is not asserted here.
