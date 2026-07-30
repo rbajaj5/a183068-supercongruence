@@ -1,0 +1,111 @@
+oeis	route	status	evidence	next_action
+A001850	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A002003	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A002895	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A003161	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A003162	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A005258	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A005259	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied
+A005260	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied
+A079489	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A082758	T	published-source	Pan--Sun theorem cited by live OEIS entry	verify exact parameter match in bibliography
+A103882	T	published-source	Straub Example 3.4 gives the recorded Apéry-number congruence	verify exact edition and theorem numbering in bibliography
+A112028	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A112029	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A124435	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A132303	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A141057	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A143583	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A183069	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A183204	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A198060	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A198256	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A198258	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A208675	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A212334	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A219562	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A234839	T	published-source	Osburn--Sahu--Straub Example 3.3 cited by OEIS	verify exact parameter match in bibliography
+A244973	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A260667	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A288470	T	proved-here	A288470OddPrimeTower.md	independent review and priority audit
+A333592	T	partial	QuadraticGaussianQueueTheorem.md	prove or refute the stronger untwisted cubic tower
+A357510	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A357512	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A361889	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A361892	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A362676	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A363985	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A370101	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A370102	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A376458	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A376466	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A002426	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed p^(2r) claim	verify exact parameter match in bibliography
+A005725	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A006318	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A036917	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A060941	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A108625	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A108628	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A143007	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A156554	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A168597	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed congruence	verify exact parameter match in bibliography
+A176335	C	published-source	Coster Theorem 4 cited by live OEIS entry	verify exact parameter match in bibliography
+A177316	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A228960	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
+A245926	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A246437	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A263843	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A281267	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A331562	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A333090	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A333091	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A333092	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A333093	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A333095	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A333096	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A333097	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A348410	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A350383	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
+A351857	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A351858	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A352373	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A362722	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A362733	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A363864	C	published-source	Straub Theorem 1.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
+A363867	C	published-source	Straub Theorem 3.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
+A363871	C	published-source	Straub Theorem 3.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
+A364303	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A380290	C	partial	EulerProductGaussianTower.md	prove or refute the special untwisted cubic gain
+A002897	F	queued	none	extract exact conjecture; factor term and compute Landau depth
+A008978	F	queued	none	extract exact conjecture; factor term and compute Landau depth
+A091527	F	queued	none	extract exact conjecture; factor term and compute Landau depth
+A113424	F	queued	none	extract exact conjecture; factor term and compute Landau depth
+A184423	F	published-source	Mestrovic equation (39) is cited on the live OEIS record	verify exact factorial specialization in bibliography
+A186420	F	published-source	Mestrovic equation (39) is cited on the live OEIS record	verify exact factorial specialization in bibliography
+A262732	F	queued	none	extract exact conjecture; factor term and compute Landau depth
+A275652	F	queued	none	extract exact conjecture; factor term and compute Landau depth
+A275654	F	queued	none	extract exact conjecture; factor term and compute Landau depth
+A357509	F	queued	none	extract exact conjecture; factor term and compute Landau depth
+A357568	F	proved-here	BinomialQuotientCancellation.md	independent review and priority audit
+A364173	F	queued	none	extract exact conjecture; prove integrality before congruence
+A364506	F	proved-here	BinomialQuotientCancellation.md	independent review and priority audit
+A364509	F	published-source	Mestrovic and Jacobsthal reduction cited by OEIS	verify exact parameter match in bibliography
+A008485	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A008705	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A008793	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A023871	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A023873	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A049505	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A206622	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A229452	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A255672	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A270913	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A270919	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A270922	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A270924	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A283271	M	queued	none	extract exact conjecture; expand the p-adic logarithm of the product
+A352655	D	queued	none	extract exact conjecture; identify the parent sequence and inherited defect
+A357506	D	queued	none	extract exact conjecture; identify the parent sequence and inherited defect
+A357567	D	queued	none	extract exact conjecture; identify the parent sequence and inherited defect
+A357956	D	queued	none	extract exact conjecture; identify the parent sequence and inherited defect
+A357959	D	queued	none	extract exact conjecture; identify the parent sequence and inherited defect
