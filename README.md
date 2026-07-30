@@ -129,15 +129,19 @@ Those three congruences remain open.
 The [modular-product packet](related-results/ModularProductPrimeCoefficientPacket.md)
 proves seven further named records: four by a universal prime-coefficient
 formula and three by specialization of the colored Euler-product theorem.
-It also supplies quadratic baselines for four proposed cubic towers, leaving
-only A008793 as a route-M record without a proof or proved baseline. The
+It also supplies quadratic baselines for four proposed cubic towers. The
+route now has no untouched record. The
 [A229452 coefficient-root theorem](related-results/A229452CoefficientRootBaseline.md)
 proves that record's all-\(m\) integrality conjecture and all-prime
 \(p^r\) towers for both source parameter families while leaving the proposed
 cubic gains open. The
 [A049505 paired-product theorem](related-results/A049505SymmetricPlanePartitionCongruences.md)
 proves all three displayed symmetric-plane-partition congruences from one
-stronger prime-power evaluation.
+stronger prime-power evaluation. The
+[A008793 cube-plane-partition theorem](related-results/A008793CubePlanePartitionTower.md)
+proves its full nonlinear all-prime \(p^{4r}\) tower by exact product
+splitting and reduced-residue reciprocal blocks, including the separate
+binary argument.
 
 See [RANKINGS.md](RANKINGS.md) for the complete multi-criteria assessment and
 the separate queue of reductions and computational targets.

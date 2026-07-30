@@ -92,7 +92,7 @@ A364506	F	proved-here	BinomialQuotientCancellation.md	independent review and pri
 A364509	F	published-source	Mestrovic and Jacobsthal reduction cited by OEIS	verify exact parameter match in bibliography
 A008485	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the universal prime-coefficient lemma
 A008705	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review of the prime and twice-prime coefficient calculations
-A008793	M	queued	live OEIS p^(4r) MacMahon-product claim extracted	derive the normalized p-adic logarithm of the MacMahon product
+A008793	M	proved-here	related-results/A008793CubePlanePartitionTower.md	independent review and priority audit of the all-prime paired-product proof
 A023871	M	partial	related-results/ModularProductPrimeCoefficientPacket.md	prove the extra power from p^(2r) to the conjectural p^(3r)
 A023873	M	partial	related-results/ModularProductPrimeCoefficientPacket.md	prove the extra power from p^(2r) to the conjectural p^(3r)
 A049505	M	proved-here	related-results/A049505SymmetricPlanePartitionCongruences.md	independent review and priority audit of the paired-product proof
