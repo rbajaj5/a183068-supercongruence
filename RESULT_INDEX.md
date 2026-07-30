@@ -927,6 +927,31 @@ proof.
 - **Exact checker:** [`verify_hyperdeterminant_fourier.py`](verification/related/verify_hyperdeterminant_fourier.py)
 - **Entropy checker:** [`verify_hyperdeterminant_entropy.py`](verification/related/verify_hyperdeterminant_entropy.py)
 
+### JC-ORBIT - primitive collision-orbit criterion
+
+- **Claim:** If
+  \[
+  Z_a(T)=\exp\left(\sum_{n\geq1}a_nT^n/n\right)
+        =\prod_{d\geq1}(1-T^d)^{-b_d},
+  \]
+  then the tower
+  \(a_{mp^r}\equiv a_{mp^{r-1}}\pmod {p^{hr}}\) for every prime and
+  level is equivalent to integrality of the Euler exponents together with
+  \(p^{(h-1)r}\mid b_{mp^r}\) whenever \(p\nmid m\). For a finite-field
+  collision scheme, \(b_d\) counts primitive closed collision points of
+  degree \(d\). In particular, the realizable Apéry and fourth-order Franel
+  sequences have primitive-orbit multiplicities divisible by \(p^{2r}\) at
+  lengths \(mp^r\), for \(p\ge5\) and \(p\nmid m\). The degree-three
+  Jacobian collision scheme is sharp at the ordinary Gauss level:
+  \(v_q(c(q)-c(1))=1\) in every odd characteristic \(q\ne3\), so neither
+  a quadratic nor a cubic Bala-style tower follows from the Keller
+  condition.
+- **Status:** Complete elementary Dold/Gauss synthesis and exact obstruction.
+  The dictionary is classical; its application and the two-axis separation
+  are new to this repository, with no literature-priority claim.
+- **Proof:** [Primitive collision orbits and the Bala supercongruence exponents](related-results/JacobianCollisionEulerOrbitBridge.md)
+- **Exact checker:** [`verify_jacobian_euler_orbit_bridge.py`](verification/related/verify_jacobian_euler_orbit_bridge.py)
+
 ### JC-WL - all-degree weighted-lift collision theorem
 
 - **Claim:** If a normalized weighted-lift Keller map has generic fiber
