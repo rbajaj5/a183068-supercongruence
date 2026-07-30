@@ -501,7 +501,7 @@ proof.
 - **Proof:** [Lattice-walk Frobenius congruences](related-results/LatticeWalkFrobeniusCongruences.md)
 - **Exact checker:** [`verify_lattice_walk_frobenius.py`](verification/related/verify_lattice_walk_frobenius.py)
 
-### BLACK-WALSH -- planar-noise Walsh congruence
+### BLACK-WALSH -- planar-noise and Y-game Walsh congruence
 
 - **Claim:** If a Gaussian-integer-valued observable on a finite Boolean
   cube changes sign under global bit complementation, its integral
@@ -518,16 +518,20 @@ proof.
   The result follows from a general valuation theorem for polynomials whose
   support lies in one residue class. The eventual valuation slope recovers
   the first Walsh-chaos level surviving the linear subtraction.
-- **Application:** Signed crossing contrasts on finite triangular-lattice
-  patches and antisymmetrized observables of finite coalescing-walk arrow
-  fields satisfy the theorem.
+- **Application:** The signed winner of the triangular game of Y is a
+  total complement-odd observable. The classical majority-triangle
+  reduction preserves the winner exactly, so every finite side length
+  satisfies the Gaussian-prime congruence. Signed crossing contrasts on
+  finite triangular-lattice patches and antisymmetrized observables of
+  finite coalescing-walk arrow fields also satisfy the theorem.
 - **Boundary:** This finite arithmetic identity neither proves blackness nor
   follows from blackness. It supplies no new statement about the continuum
   Brownian web or an SLE scaling limit.
 - **Source status:** Structural follow-on. Blackness of critical planar
   percolation and the Brownian web is published; priority of this elementary
   lacunary-polynomial congruence is provisional.
-- **Status:** Complete unchecked elementary theorem with exact checks.
+- **Status:** Complete unchecked elementary arithmetic theorem with exact
+  checks; the Hex/Y topological input is classical.
 - **Proof:** [Walsh-chaos congruences for planar noise](related-results/BlackNoiseWalshCongruences.md)
 - **Exact checker:** [`verify_black_noise_chaos_filter.py`](verification/related/verify_black_noise_chaos_filter.py)
 
