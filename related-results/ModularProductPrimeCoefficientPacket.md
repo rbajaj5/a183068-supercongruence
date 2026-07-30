@@ -1,8 +1,8 @@
 # A prime-coefficient packet for modular products
 
 **Status:** complete elementary proof candidate for seven named OEIS records;
-quadratic baselines for four further records; two route-M records remain
-without a proved baseline
+quadratic baselines for four further records; only A008793 remains without
+a proved route-M baseline
 
 ## 1. The source claims
 
@@ -17,7 +17,7 @@ live OEIS pages on July 29, 2026.
 | [A008793](https://oeis.org/A008793) | $a(np^r)\equiv a(np^{r-1})^p\pmod {p^{4r}}$ | still open |
 | [A023871](https://oeis.org/A023871) | the derived coefficient sequence has a $p^{3r}$ tower for $p\ge7$ | $p^{2r}$ baseline proved |
 | [A023873](https://oeis.org/A023873) | every integral-power derived sequence has a $p^{3r}$ tower for $p\ge7$ | $p^{2r}$ baseline proved |
-| [A049505](https://oeis.org/A049505) | three prime-power congruences for symmetric plane partitions | still open |
+| [A049505](https://oeis.org/A049505) | three prime-power congruences for symmetric plane partitions | proved in a follow-on |
 | [A206622](https://oeis.org/A206622) | every integral-power derived sequence has a $p^{3r}$ tower for $p\ge5$ | $p^{2r}$ baseline proved |
 | [A229452](https://oeis.org/A229452) | a coefficient-power $p^{3r}$ tower and a parameterized extension | integrality and $p^r$ baseline proved in a follow-on |
 | [A255672](https://oeis.org/A255672) | $a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}$, $p\ge3$ | proved by Theorem 4 |
@@ -239,16 +239,18 @@ witnesses.
 This packet does not prove:
 
 1. the nonlinear $p^{4r}$ MacMahon-product tower on A008793;
-2. the three symmetric-plane-partition congruences on A049505; or
-3. the coefficient-power $p^{3r}$ gain on A229452.
+2. the coefficient-power $p^{3r}$ gain on A229452.
 
 The [A229452 coefficient-root follow-on](A229452CoefficientRootBaseline.md)
 now proves the all-$m$ integrality conjecture, gives an exact Lagrange bridge,
 and establishes all-prime $p^r$ towers for both source parameter families.
-Its cubic gains remain open. Thus A008793 and A049505 are the only route-M records without
-either a complete proof or a proved baseline. Their factorial-product
-normalizations are not instances of (1). Merely calling these products
-modular does not supply the missing powers.
+Its cubic gains remain open. The
+[A049505 paired-product follow-on](A049505SymmetricPlanePartitionCongruences.md)
+proves all three source congruences through one stronger prime-power
+evaluation. Thus A008793 is the only route-M record without either a
+complete proof or a proved baseline. Its hyperfactorial normalization is
+not an instance of (1). Merely calling the product modular does not supply
+the missing powers.
 
 ## 7. Provenance and verification
 

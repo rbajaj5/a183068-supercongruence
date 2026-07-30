@@ -572,9 +572,10 @@ proof.
   \(a(2p)\equiv p-1\pmod {p^2}\) for A008705. Specializing EULER-PRODUCT
   closes the full \(p^{2r}\) towers on A255672, A270922, and A270924.
 - **Status:** Complete elementary proof candidate for seven named records,
-  with four additional quadratic baselines. A008793 and A049505 remain
-  without a proved route-M baseline; A229452 has the separate partial result
-  below. No literature-priority claim is made.
+  with four additional quadratic baselines. A008793 remains without a
+  proved route-M baseline; A229452 has the separate partial result and
+  A049505 the complete follow-on below. No literature-priority claim is
+  made.
 - **Proof:** [Modular-product prime-coefficient packet](related-results/ModularProductPrimeCoefficientPacket.md)
 - **Exact checker:** [`verify_modular_product_prime_packet.py`](verification/related/verify_modular_product_prime_packet.py)
 
@@ -600,6 +601,27 @@ proof.
   families. The proposed \(p^{3r}\) towers for \(p\ge5\) remain open.
 - **Proof:** [A229452 coefficient-root baseline](related-results/A229452CoefficientRootBaseline.md)
 - **Exact checker:** [`verify_a229452_coefficient_root.py`](verification/related/verify_a229452_coefficient_root.py)
+
+### A049505-SPP — symmetric-plane-partition product
+
+- **Claim:** If
+  \[
+  a(N)=\prod_{1\le i\le j\le N}\frac{N+i+j-1}{i+j-1},
+  \]
+  then every odd prime \(p\) and every \(r\ge1\) satisfy
+  \[
+  a(p^r)\equiv2^{(p^r+1)/2}\pmod {p^3}.
+  \]
+  This stronger evaluation implies all three congruences displayed on
+  A049505, including the \(p=2\) boundary of the third conjecture.
+- **Mechanism:** Pair the factor indexed by \(s=i+j-1\) with the factor
+  indexed by \(2p^r-s\). The pair is exactly
+  \(1+3p^{2r}/(s(2p^r-s))\). Only the final \(p\)-adic shell survives
+  modulo \(p^3\), and its weighted reciprocal-square sum vanishes.
+- **Status:** Complete elementary proof of three named OEIS conjectures.
+  No literature-priority claim is made.
+- **Proof:** [The three A049505 congruences](related-results/A049505SymmetricPlanePartitionCongruences.md)
+- **Exact checker:** [`verify_a049505_symmetric_plane_partitions.py`](verification/related/verify_a049505_symmetric_plane_partitions.py)
 
 ### DYADIC-Q — binary Euler-product tower and hypercube defect
 

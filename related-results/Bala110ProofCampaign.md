@@ -27,13 +27,13 @@ every record:
 | T: finite-sum transfer | 40 | 2 | 3 | 1 | 2 | 32 |
 | C: coefficient/constant term | 37 | 0 | 6 | 3 | 0 | 28 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 |
-| M: modular or infinite product | 14 | 7 | 0 | 5 | 0 | 2 |
+| M: modular or infinite product | 14 | 8 | 0 | 5 | 0 | 1 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 |
-| **Total** | **110** | **17** | **12** | **16** | **3** | **62** |
+| **Total** | **110** | **18** | **12** | **16** | **3** | **61** |
 
-The seventeen `proved-here` records are A008485, A008705, A091527, A141057,
-A255672, A262732, A270913, A270919, A270922, A270924, A275652, A275654,
-A288470, A357509, A357568, A364173, and A364506. The
+The eighteen `proved-here` records are A008485, A008705, A049505, A091527,
+A141057, A255672, A262732, A270913, A270919, A270922, A270924, A275652,
+A275654, A288470, A357509, A357568, A364173, and A364506. The
 twelve `published-source` records are A002426, A082758, A103882, A168597,
 A176335, A184423, A186420, A234839, A363864, A363867, A363871, and
 A364509. The sixteen partial records are A008978, A023871, A023873,
@@ -96,8 +96,12 @@ The campaign does not use A-number order. It uses expected proof yield.
    towers.  The
    [A229452 coefficient-root theorem](A229452CoefficientRootBaseline.md)
    also proves that record's all-\(m\) integrality conjecture, an
-   exact Lagrange bridge, and an all-prime \(p^r\) baseline. Only A008793
-   and A049505 remain without a proof or proved baseline.
+   exact Lagrange bridge, and an all-prime \(p^r\) baseline. The
+   [A049505 paired-product theorem](A049505SymmetricPlanePartitionCongruences.md)
+   proves all three symmetric-plane-partition congruences through the
+   stronger evaluation
+   $a(p^r)\equiv2^{(p^r+1)/2}\pmod {p^3}$ for every odd prime and $r\ge1$.
+   Only A008793 remains without a proof or proved baseline.
 5. **D route:** identify the parent sequence and prove that the claimed
    congruence is inherited before treating it as an independent problem.
    This route is now fully triaged.  The
