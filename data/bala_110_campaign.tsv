@@ -2,8 +2,8 @@ oeis	route	status	evidence	next_action
 A001850	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A002003	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A002895	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A003161	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A003162	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A003161	T	partial	related-results/CatalanBallotPrimeLevelTheorem.md	extend the proved n=r=1 cubic congruence to arbitrary n and higher levels
+A003162	T	partial	related-results/CatalanBallotPrimeLevelTheorem.md	extend the proved n=r=1 cubic congruence to arbitrary n and higher levels
 A005258	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A005259	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied
 A005260	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied
@@ -16,7 +16,7 @@ A124435	T	queued	none	extract exact conjecture; test termwise discard and transf
 A132303	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A141057	T	proved-here	MultinomialPowerFrobeniusTowers.md	independent review and priority audit
 A143583	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A183069	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A183069	T	partial	related-results/CatalanBallotPrimeLevelTheorem.md	lift the proved all-odd-exponent prime block through arbitrary n and p-adic levels
 A183204	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A198060	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A198256	T	queued	none	extract exact conjecture; test termwise discard and transfer
@@ -31,8 +31,8 @@ A288470	T	proved-here	A288470OddPrimeTower.md	independent review and priority au
 A333592	T	partial	QuadraticGaussianQueueTheorem.md	prove or refute the stronger untwisted cubic tower
 A357510	T	proved-here	related-results/AperyOddMomentPrimeClassification.md	independent review and priority audit of the prime-boundary expansion
 A357512	T	partial	related-results/AperyOddMomentPrimeClassification.md	prime slice and exact exceptional-prime classification proved; prove the remaining composite n congruence
-A361889	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A361892	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A361889	T	partial	related-results/CatalanBallotPrimeLevelTheorem.md	lift the proved all-odd-exponent prime block through arbitrary n and p-adic levels
+A361892	T	partial	related-results/CatalanBallotPrimeLevelTheorem.md	lift the proved all-odd-exponent prime block through arbitrary n and p-adic levels
 A362676	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A363985	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A370101	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
