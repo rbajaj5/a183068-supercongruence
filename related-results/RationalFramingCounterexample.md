@@ -58,7 +58,7 @@ Theorem 1.1.
 Theorem 1.2 asserts, for a periodic sequence of period $N$, a lower bound on
 
 $$
-\sum_{1\leq k<n,\;p\nmid k}\frac{a_{n-k}a_k}{k^2}.
+\sum_{k=1,\;p\nmid k}^{n-1}\frac{a_{n-k}a_k}{k^2}.
 $$
 
 Take $N=4$, $p=n=5$. Since $5\nmid4$, the asserted exponent is one. But
