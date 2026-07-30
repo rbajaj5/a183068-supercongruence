@@ -419,6 +419,38 @@ proof.
   priority certificate.
 - **Map:** [Gaussian generalization map](related-results/BalaGaussianGeneralizationMap.md)
 
+### FROB-PACKET — arithmetic Frobenius packet framework
+
+- **Claim:** Prime-ideal assembly, fiberwise Frobenius aggregation, and
+  packet closure reduce the 110-record Bala census to explicit local
+  certificates.  If carry vanishing has depth $d$, transfer has depth
+  $\kappa$, and the local loss is $\varepsilon$, the automatic exponent
+  is
+  \[
+  \min(d,\kappa)r-\delta(d,\kappa,\varepsilon),
+  \]
+  where
+  \[
+  \delta=
+  \begin{cases}
+  \max(0,d+\varepsilon-\kappa),&d\le\kappa,\\
+  \varepsilon,&d>\kappa.
+  \end{cases}
+  \]
+  For finite-type $X/\mathbb F_q$, Frobenius-orbit decomposition also gives
+  \[
+  \#X(\mathbb F_{q^{n\ell^r}})
+  \equiv
+  \#X(\mathbb F_{q^{n\ell^{r-1}}})
+  \pmod{\ell^{r+v_\ell(n)}}.
+  \]
+  At split Gaussian primes, the local divisor of a rectangular product is
+  exactly the count of lattice points on its lifted null lines.
+- **Status:** Complete elementary framework and routing synthesis; not a
+  claim that all 110 conjectures are proved.
+- **Proof:** [Arithmetic Frobenius packets](related-results/ArithmeticFrobeniusPacketFramework.md)
+- **Exact checker:** [`verify_arithmetic_frobenius_packet_framework.py`](verification/related/verify_arithmetic_frobenius_packet_framework.py)
+
 ### GBQ-PILOT — exact Gaussian-twist boundary experiment
 
 - **Claim:** In 195 exact adjacent-scale tests, A005260 retains exponent

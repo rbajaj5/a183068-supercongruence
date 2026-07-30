@@ -27,6 +27,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 1B-A | [First two A365029 levels](A365029FirstTwoLevels.md) | Proves the \(p^3\) and \(p^6\) adjacent congruences by shifted scaling plus one- and two-digit harmonic cancellation | Complete unchecked proof; 67,310 exact checks |
 | 1B-L | [Supercongruence literature and Bala--OEIS census](SupercongruenceLiteratureCensus.md) | Maps a reproducible 110-record OEIS search to the published theorem families and consolidates the genuinely live targets before more proof work is spent | Literature map with explicit source and priority boundaries |
 | 1B-G | [Gaussian generalization map for the Bala queue](BalaGaussianGeneralizationMap.md) | Routes all 110 census records through five Gaussian proof architectures and separates formal coefficient changes from Frobenius twists and prime-ideal theorems | Exhaustive research map; no novelty claim |
+| 1B-F | [Arithmetic Frobenius packet framework](ArithmeticFrobeniusPacketFramework.md) | Unifies the five census routes through number fields, prime ideals, local Frobenius transitions, finite-field orbits, valuation budgets, and local-to-global assembly | Complete elementary framework and 158,755 exact checks; routing is not a proof of all 110 conjectures |
 | 1B-GE | [Exact Bala Gaussian-twist pilot](BalaGaussianTwistPilot.md) | Tests three finite-sum routes and supplies exact counterexamples to blindly preserving the untwisted cubic exponent | 195 exact checks; computational triage |
 | 1C | [All-degree weighted-lift collision theorem](WeightedLiftCollisionSynthesis.md) | Turns collision counting into one second divided-difference curve in every degree; gives a genus ladder and a universal corrected tower | Complete theorem with cross-degree checks; priority preliminary |
 | 1D | [Finite-field counts for the Fable Jacobian counterexample](JacobianCounterexampleFiniteFieldCounts.md) | Uses the same adjacent-extension viewpoint to organize cubic fibers, collisions, and Frobenius counts of the new counterexample | Complete elementary theorem with exact checks; priority preliminary |
@@ -102,6 +103,7 @@ The individual correspondence is:
 
 | Note | Checker |
 | --- | --- |
+| Arithmetic Frobenius packets | `verification/related/verify_arithmetic_frobenius_packet_framework.py` |
 | Landau depth | `verification/related/verify_landau_supercongruence.py` |
 | Peter Bala's OEIS queue | `verification/related/verify_bala_oeis_supercongruences.py` |
 | First two A365029 levels | `verification/related/verify_a365029_first_two_levels.py` |

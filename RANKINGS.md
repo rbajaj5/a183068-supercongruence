@@ -40,7 +40,7 @@ allocation, the portfolio currently has four tiers:
 | Tier | Results | Recommended use of effort |
 | --- | --- | --- |
 | **A: specialist review now** | ZHANG-4, GWL-TWO, GWL-SCALE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
-| **B: broad theorem engines** | LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER | Reuse on named conjectures and consolidate families |
+| **B: broad theorem engines** | FROB-PACKET, LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER | Reuse on named conjectures and consolidate families |
 | **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, BLACK-WALSH, HASH-MATROID, FQ-CT, WALK-FROB, GQ2-ABCOUNT, GQ2-DIHEDRAL, GQ2-QUATERNION, GQ2-MAXCYCLIC, GQ2-EXTRASPECIAL | Improve experiments, certification, and proof organization |
 | **D: retained open targets** | C11, CAT-ODD, BALA-TOWERS, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
 
@@ -67,6 +67,7 @@ without increasing a supercongruence exponent.
 | 12 | [LD-3: depth-three family](related-results/LandauDepthSupercongruenceSynthesis.md) | **7** | 1 | 5 | 8 | 7 | 4 | Complete proof candidate for an all-prime \(p^{3r}\) subfamily. |
 | 13 | [GWL-LUCAS: rectangular Gaussian Lucas congruence](GAUSSIAN_LUCAS.md) | **7** | 2 | 7 | 7 | 6 | 5 | Complete unchecked draft for inert primes; exact \(p=3\) boundary included. |
 | 14 | [QC-SQ: square-cyclotomic Landau lift](related-results/QCalculusCyclotomicSupercongruences.md#3-a-universal-square-cyclotomic-q-congruence) | **6** | 1 | 4 | 9 | 9 | 3 | Complete deduction from Clark's q-Babbage theorem; exact polynomial checks pass and the A183068 q-lift is explicit. |
+| 14 | [FROB-PACKET: arithmetic Frobenius packet framework](related-results/ArithmeticFrobeniusPacketFramework.md) | **6** | 2 | 3 | 10 | 9 | 2 | Complete local-to-global, aggregation, closure, finite-field orbit, and arbitrary-depth budget framework routing all 110 Bala records; broad infrastructure rather than a claim that the census is solved. |
 | 15 | [A183068: all-prime supercongruence](PROOF.md) | **6** | 1 | 6 | 6 | 8 | 3 | Machine-audited proof draft of a named all-prime conjecture; specialist review pending. |
 | 15 | [CYCLOTOMIC-PAIR: A228960/A350383 polynomial towers](related-results/CyclotomicCoefficientPairTheorem.md) | **6** | 1 | 5 | 6 | 9 | 2 | Complete elementary proof candidate for two named OEIS conjectures, strengthened coefficientwise and at Gaussian twists; broader cyclotomic principle and priority remain open. |
 | 15 | [BALA-ODD: A375178 prime-level odd-power family](related-results/BalaOeisSupercongruenceQueue.md#3-the-full-prime-level-odd-power-theorem-for-a375178) | **6** | 1 | 6 | 8 | 7 | 3 | Complete elementary proof of an infinite named OEIS conjecture family; 56 exact checks pass, with priority and independent review pending. |
@@ -128,7 +129,8 @@ stated target. Maturity records the work presently in the repository.
 ## Portfolio reading
 
 The strongest current theorem-generating assets are now the linked
-LD-2/LD-3 \(\rightarrow\) QC-SQ/QC-CUBIC line, the relative-invariant line
+FROB-PACKET \(\rightarrow\) LD-2/LD-3
+\(\rightarrow\) QC-SQ/QC-CUBIC line, the relative-invariant line
 FF-DET \(\rightarrow\) FF-PFAFF \(\rightarrow\) FF-HYPERDET, and the
 collision-zeta ladder
 JC-WL \(\rightarrow\) \{JC-FF, JC4-FF, JC5-FF\}.
