@@ -145,6 +145,12 @@ A219562 A234839 A244973 A260667 A288470 A333592 A357510 A357512
 A361889 A361892 A362676 A363985 A370101 A370102 A376458 A376466
 ```
 
+The termwise hypotheses are now proved for A288470 in the
+[odd-prime double-binomial theorem](A288470OddPrimeTower.md). Consequently
+its $i^k$-weighted sum satisfies the exact Frobenius-twist congruence modulo
+$p^{2r}$ for every odd prime: split primes preserve the twist, while inert
+primes conjugate it.
+
 ### First exact pilot
 
 The [pilot report](BalaGaussianTwistPilot.md) tests three representative
