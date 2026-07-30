@@ -83,8 +83,8 @@ A113424	F	queued	none	extract exact conjecture; factor term and compute Landau d
 A184423	F	published-source	Mestrovic equation (39) is cited on the live OEIS record	verify exact factorial specialization in bibliography
 A186420	F	published-source	Mestrovic equation (39) is cited on the live OEIS record	verify exact factorial specialization in bibliography
 A262732	F	proved-here	OddUnitBlockFrobeniusTowers.md	independent review and priority search for the full coefficient family
-A275652	F	queued	none	extract exact conjecture; factor term and compute Landau depth
-A275654	F	queued	none	extract exact conjecture; factor term and compute Landau depth
+A275652	F	proved-here	related-results/DixonLegendreHalfBinomialTowers.md	complete p^(3r) tower for p >= 5; instance a=3 of the Dixon--Legendre family theorem
+A275654	F	proved-here	related-results/DixonLegendreHalfBinomialTowers.md	complete p^(3r) tower for p >= 5; instance a=5 of the Dixon--Legendre family theorem
 A357509	F	queued	none	extract exact conjecture; factor term and compute Landau depth
 A357568	F	proved-here	BinomialQuotientCancellation.md	independent review and priority audit
 A364173	F	queued	none	extract exact conjecture; prove integrality before congruence

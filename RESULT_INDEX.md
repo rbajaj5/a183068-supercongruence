@@ -181,6 +181,35 @@ proof.
 - **Proof:** [Odd-unit block Frobenius towers](related-results/OddUnitBlockFrobeniusTowers.md)
 - **Exact checker:** [`verify_odd_unit_block_towers.py`](verification/related/verify_odd_unit_block_towers.py)
 
+### DIXON-LEGENDRE — A275652 and A275654 towers
+
+- **Claim:** For every integer $a\ge3$, prime $p\ge5$, and positive
+  integers $n,r$, the integral sequence
+
+  ```math
+  D_a(N)
+  =
+  \sum_{k=0}^{N}
+  \binom{(a-1)N-k-1}{N-k}\binom{aN}{k}^{2}
+  ```
+
+  satisfies
+
+  ```math
+  D_a(np^r)\equiv D_a(np^{r-1})\pmod {p^{3r}}.
+  ```
+
+- **Source status:** The cases $a=3$ and $a=5$ are the named open
+  conjectures on A275652 and A275654.
+- **Mechanism:** Dixon's terminating ${}_3F_2(1)$ evaluation, two
+  classical binomial transfers, and a new half-binomial unit-block
+  transfer.
+- **Boundary:** Both named sequences fail at $p=2$ and $p=3$ already
+  when $n=r=1$.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Dixon--Legendre half-binomial towers](related-results/DixonLegendreHalfBinomialTowers.md)
+- **Exact checker:** [`verify_dixon_legendre_towers.py`](verification/related/verify_dixon_legendre_towers.py)
+
 ### BALA-TOWERS — remaining higher-level Bala tower queue
 
 - **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) and the
