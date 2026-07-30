@@ -15,23 +15,11 @@ The Bala census and the finite-field Jacobian-collision program both produce
 integer sequences indexed by positive integers. Their first common layer is
 not a particular factorial sum. It is the Euler product
 
-```math
-Z_a(T)
-=
-\exp\left(\sum_{n\geq1}a_n\frac{T^n}{n}\right)
-=
-\prod_{d\geq1}(1-T^d)^{-b_d}.
-\tag{1}
-```
+**(1)** $\displaystyle Z_a(T) = \exp\left(\sum_{n\geq1}a_n\frac{T^n}{n}\right) = \prod_{d\geq1}(1-T^d)^{-b_d}.$
 
 Logarithmic differentiation gives
 
-```math
-a_n=\sum_{d\mid n}d\,b_d,
-\qquad
-n b_n=\sum_{e\mid n}\mu(e)a_{n/e}.
-\tag{2}
-```
+**(2)** $\displaystyle a_n=\sum_{d\mid n}d\,b_d, \qquad n b_n=\sum_{e\mid n}\mu(e)a_{n/e}.$
 
 The numbers $a_n$ are the ghost components and $b_d$ are the Euler
 exponents. In dynamics, $a_n$ can count fixed points of the $n$-th
@@ -52,17 +40,11 @@ For an integer sequence $(a_n)_{n\geq1}$, the following are equivalent.
 
 1. For every prime $p$, every $r\geq1$, and every $m\geq1$,
 
-```math
-a_{mp^r}\equiv a_{mp^{r-1}}\pmod {p^{hr}}.
-\tag{3}
-```
+**(3)** $\displaystyle a_{mp^r}\equiv a_{mp^{r-1}}\pmod {p^{hr}}.$
 
 2. The Euler exponents in (1) are integers and, whenever $p\nmid m$,
 
-```math
-b_{mp^r}\equiv0\pmod {p^{(h-1)r}}.
-\tag{4}
-```
+**(4)** $\displaystyle b_{mp^r}\equiv0\pmod {p^{(h-1)r}}.$
 
 It is enough in (3) to use $m$ coprime to $p$.
 
@@ -71,12 +53,7 @@ It is enough in (3) to use $m$ coprime to $p$.
 Assume first that the $b_d$ are integers. If $p\nmid m$, equation (2)
 gives the exact identity
 
-```math
-a_{mp^r}-a_{mp^{r-1}}
-=
-p^r\sum_{d\mid m}d\,b_{dp^r}.
-\tag{5}
-```
+**(5)** $\displaystyle a_{mp^r}-a_{mp^{r-1}} = p^r\sum_{d\mid m}d\,b_{dp^r}.$
 
 Thus (4) implies (3). If the original $m$ contains $p^s$, apply the
 coprime case at level $r+s$; the resulting modulus $p^{h(r+s)}$ is at
@@ -85,24 +62,14 @@ least the required $p^{hr}$.
 Conversely, suppose (3) holds. Ordinary Gauss congruences follow because
 $h\geq1$. For $n=mp^r$, with $p\nmid m$, Mobius inversion gives
 
-```math
-n b_n
-=
-\sum_{e\mid m}\mu(e)
-\left(a_{mp^r/e}-a_{mp^{r-1}/e}\right).
-\tag{6}
-```
+**(6)** $\displaystyle n b_n = \sum_{e\mid m}\mu(e) \left(a_{mp^r/e}-a_{mp^{r-1}/e}\right).$
 
 The right side is divisible by $p^r$. Applying this at every prime-power
 divisor of $n$ proves $b_n\in\mathbb Z$.
 
 Now divide (5) by $p^r$. Congruence (3) says that
 
-```math
-\sum_{d\mid m}d\,b_{dp^r}
-\equiv0\pmod {p^{(h-1)r}}.
-\tag{7}
-```
+**(7)** $\displaystyle \sum_{d\mid m}d\,b_{dp^r} \equiv0\pmod {p^{(h-1)r}}.$
 
 Mobius inversion on the divisor lattice of $m$ shows that
 $m b_{mp^r}$ has the same divisibility. Since $p\nmid m$, this is
@@ -121,38 +88,20 @@ content of a quadratic or cubic supercongruence is now transparent:
 
 Let
 
-```math
-F:\mathbb A^d\longrightarrow\mathbb A^d
-```
+$\displaystyle F:\mathbb A^d\longrightarrow\mathbb A^d$
 
 be a polynomial map over $\mathbb F_q$. Its off-diagonal collision scheme
 is
 
-```math
-\mathcal C_F
-=
-\{(x,y):F(x)=F(y),\ x\ne y\}.
-\tag{8}
-```
+**(8)** $\displaystyle \mathcal C_F = \{(x,y):F(x)=F(y),\ x\ne y\}.$
 
 Put
 
-```math
-c_F(n)=\#\mathcal C_F(\mathbb F_{q^n}).
-\tag{9}
-```
+**(9)** $\displaystyle c_F(n)=\left|\mathcal C_F(\mathbb F_{q^n})\right|.$
 
 The Hasse--Weil Euler product is
 
-```math
-Z_{\mathcal C_F}(T)
-=
-\exp\left(\sum_{n\geq1}c_F(n)\frac{T^n}{n}\right)
-=
-\prod_{x\in|\mathcal C_F|}
-(1-T^{\deg x})^{-1}.
-\tag{10}
-```
+**(10)** $\displaystyle Z_{\mathcal C_F}(T) = \exp\left(\sum_{n\geq1}c_F(n)\frac{T^n}{n}\right) = \prod_{x\in|\mathcal C_F|} (1-T^{\deg x})^{-1}.$
 
 Hence the exponent $b_d$ in (1) is exactly the number of closed collision
 points of degree $d$. Theorem 1 gives the following concrete criterion.
@@ -161,10 +110,7 @@ points of degree $d$. Theorem 1 gives the following concrete criterion.
 
 Every finite-field collision sequence satisfies
 
-```math
-c_F(mp^r)\equiv c_F(mp^{r-1})\pmod {p^r}
-\tag{11}
-```
+**(11)** $\displaystyle c_F(mp^r)\equiv c_F(mp^{r-1})\pmod {p^r}$
 
 for every index prime $p$, including $p=\mathrm{char}\,\mathbb F_q$.
 It satisfies the stronger modulus $p^{hr}$ exactly when the number of
@@ -181,32 +127,17 @@ For the degree-three map studied in
 [the finite-field collision note](JacobianCounterexampleFiniteFieldCounts.md),
 the off-diagonal collision count over an odd prime-power field $Q$ is
 
-```math
-\mathcal V(Q)
-=
-\begin{cases}
-(Q-1)(Q^2+2),&\mathrm{char}\,\mathbb F_Q\ne3,\\
-Q^2(Q-1),&\mathrm{char}\,\mathbb F_Q=3.
-\end{cases}
-\tag{12}
-```
+**(12)** $\displaystyle \mathcal V(Q) = \begin{cases} (Q-1)(Q^2+2),&\mathrm{char}\,\mathbb F_Q\ne3,\\ Q^2(Q-1),&\mathrm{char}\,\mathbb F_Q=3. \end{cases}$
 
 Fix an odd prime $q\ne3$, use $\mathbb F_q$ as the base field, and set
 
-```math
-c(n)=\mathcal V(q^n)
-=q^{3n}-q^{2n}+2q^n-2.
-\tag{13}
-```
+**(13)** $\displaystyle c(n)=\mathcal V(q^n) =q^{3n}-q^{2n}+2q^n-2.$
 
 ### Theorem 3
 
 At the index prime $p=q$,
 
-```math
-v_q\bigl(c(q)-c(1)\bigr)=1.
-\tag{14}
-```
+**(14)** $\displaystyle v_q\bigl(c(q)-c(1)\bigr)=1.$
 
 Consequently the collision sequence has the ordinary Gauss congruence at
 this level, but it has neither a quadratic nor a cubic Bala-style
@@ -216,16 +147,7 @@ supercongruence.
 
 Factoring one $q$ gives
 
-```math
-\begin{aligned}
-c(q)-c(1)
-=q\bigl(
-&q^{3q-1}-q^{2q-1}+2q^{q-1}\\
-&-q^2+q-2
-\bigr).
-\end{aligned}
-\tag{15}
-```
+**(15)** $\displaystyle \begin{aligned} c(q)-c(1) =q\bigl( &q^{3q-1}-q^{2q-1}+2q^{q-1}\\ &-q^2+q-2 \bigr). \end{aligned}$
 
 The parenthesized factor is congruent to $-2$ modulo $q$, and is
 therefore a $q$-adic unit. $\square$
@@ -274,20 +196,11 @@ A333093. That is evidence, not a proof of realizability.
 
 Let
 
-```math
-A(n)=\sum_{k=0}^n
-\binom nk^2\binom{n+k}{k}^2
-\qquad\text{(A005259)}
-\tag{16}
-```
+**(16)** $\displaystyle A(n)=\sum_{k=0}^n \binom nk^2\binom{n+k}{k}^2 \qquad\text{(A005259)}$
 
 and
 
-```math
-F_4(n)=\sum_{k=0}^n\binom nk^4
-\qquad\text{(A005260)}.
-\tag{17}
-```
+**(17)** $\displaystyle F_4(n)=\sum_{k=0}^n\binom nk^4 \qquad\text{(A005260)}.$
 
 Zhang proved that both sequences are realizable: there are self-maps whose
 numbers of fixed points of the $n$-th iterates are $A(n)$ and $F_4(n)$.
@@ -295,12 +208,7 @@ Write $O_A(d)$ and $O_{F_4}(d)$ for the corresponding numbers of
 primitive orbits of length $d$. The published cubic supercongruences for
 these Apéry--Franel families, together with Theorem 1, give
 
-```math
-p^{2r}\mid O_A(mp^r),
-\qquad
-p^{2r}\mid O_{F_4}(mp^r)
-\tag{18}
-```
+**(18)** $\displaystyle p^{2r}\mid O_A(mp^r), \qquad p^{2r}\mid O_{F_4}(mp^r)$
 
 for every prime $p\geq5$, $r\geq1$, and $p\nmid m$.
 
@@ -319,11 +227,12 @@ what the already-established cubic towers mean dynamically.
 The distinction below prevents a recurrent indexing error.
 
 1. Existing Jacobian notes often fix the characteristic $p$ and compare
-   $\#X(\mathbb F_{p^r})$ with $\#X(\mathbb F_{p^{r-1}})$. This changes
+   $\left|X(\mathbb F_{p^r})\right|$ with
+   $\left|X(\mathbb F_{p^{r-1}})\right|$. This changes
    the extension degree additively from $r-1$ to $r$.
 2. A Bala tower applied to a point-count sequence compares
-   $\#X(\mathbb F_{q^{mp^r}})$ with
-   $\#X(\mathbb F_{q^{mp^{r-1}}})$. This multiplies the extension degree
+   $\left|X(\mathbb F_{q^{mp^r}})\right|$ with
+   $\left|X(\mathbb F_{q^{mp^{r-1}}})\right|$. This multiplies the extension degree
    by $p$.
 
 Only the second comparison is the Dold/Gauss ghost-component operation in
