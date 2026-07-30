@@ -1,6 +1,6 @@
 oeis	route	status	evidence	next_action
 A001850	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A002003	T	published-source	related-results/CoefficientFramingCubicTower.md; Muller Theorem 1.1	source-facing cross-reference and independent review of parameter match
+A002003	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A002895	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A003161	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A003162	T	queued	none	extract exact conjecture; test termwise discard and transfer
@@ -35,8 +35,8 @@ A361889	T	queued	none	extract exact conjecture; test termwise discard and transf
 A361892	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A362676	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A363985	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A370101	T	published-source	related-results/CoefficientFramingCubicTower.md; Muller Theorem 1.1	source-facing cross-reference and independent review of parameter match
-A370102	T	published-source	related-results/CoefficientFramingCubicTower.md; Muller Theorem 1.1	source-facing cross-reference and independent review of parameter match
+A370101	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
+A370102	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A376458	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A376466	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A002426	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed p^(2r) claim	verify exact parameter match in bibliography
@@ -64,11 +64,11 @@ A333093	C	queued	none	extract exact conjecture; identify coefficient or Cartier 
 A333095	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
 A333096	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
 A333097	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A348410	C	published-source	related-results/CoefficientFramingCubicTower.md; Muller Theorem 1.1	source-facing cross-reference and independent review of parameter match
+A348410	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A350383	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
-A351857	C	published-source	related-results/CoefficientFramingCubicTower.md; Muller Theorem 1.1	source-facing cross-reference and independent review of parameter match
+A351857	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A351858	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A352373	C	published-source	related-results/CoefficientFramingCubicTower.md; Muller Theorem 1.1	source-facing cross-reference and independent review of parameter match
+A352373	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A362722	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
 A362733	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
 A363864	C	published-source	Straub Theorem 1.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
