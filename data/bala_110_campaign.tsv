@@ -95,7 +95,7 @@ A008705	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	in
 A008793	M	queued	live OEIS p^(4r) MacMahon-product claim extracted	derive the normalized p-adic logarithm of the MacMahon product
 A023871	M	partial	related-results/ModularProductPrimeCoefficientPacket.md	prove the extra power from p^(2r) to the conjectural p^(3r)
 A023873	M	partial	related-results/ModularProductPrimeCoefficientPacket.md	prove the extra power from p^(2r) to the conjectural p^(3r)
-A049505	M	queued	three live OEIS prime-power congruences extracted	normalize the symmetric-plane-partition factorial product p-adically
+A049505	M	proved-here	related-results/A049505SymmetricPlanePartitionCongruences.md	independent review and priority audit of the paired-product proof
 A206622	M	partial	related-results/ModularProductPrimeCoefficientPacket.md	prove the extra power from p^(2r) to the conjectural p^(3r)
 A229452	M	partial	related-results/A229452CoefficientRootBaseline.md	all-m integrality and the all-prime p^r towers for both source families are proved; prove the conjectural p^(3r) gain
 A255672	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the Euler-product specialization
