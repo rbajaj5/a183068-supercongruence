@@ -87,6 +87,27 @@ proof.
 - **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#4-the-a333593-tower-is-a-coster-corollary)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
 
+### BALA-BINOMIAL — A357568 and A364506
+
+- **Claim 1:** For every odd prime \(p\), every \(r\ge2\), and every
+  \(k\ge1\), the full family on A357568 satisfies
+  \[
+  9\binom{2p^r}{p^r}^{k}
+  -k2^k\binom{3p^r}{p^r}
+  \equiv
+  9\binom{2p^{r-1}}{p^{r-1}}^{k}
+  -k2^k\binom{3p^{r-1}}{p^{r-1}}
+  \pmod {p^{3r+3}}.
+  \]
+- **Claim 2:** Every row of A364506 satisfies its conjectured
+  \(p^{3r}\) tower for \(p\ge5\).
+- **Source status:** Two named OEIS conjectures. The first proof uses a
+  reduced-unit quotient cancellation; the second is a reduction to the
+  classical binomial scaling theorem.
+- **Status:** Complete proof candidate; priority search preliminary.
+- **Proof:** [Binomial-quotient cancellation](related-results/BinomialQuotientCancellation.md)
+- **Exact checker:** [`verify_binomial_quotient_cancellation.py`](verification/related/verify_binomial_quotient_cancellation.py)
+
 ### BALA-TOWERS — remaining higher-level Bala tower queue
 
 - **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) and the

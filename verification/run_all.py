@@ -14,6 +14,7 @@ SCRIPTS = (
     "verification/related/verify_catalan_ballot_supercongruences.py",
     "verification/related/verify_bala_oeis_supercongruences.py",
     "verification/related/verify_a365029_first_two_levels.py",
+    "verification/related/verify_binomial_quotient_cancellation.py",
     "verification/related/verify_q_calculus_supercongruence.py",
     "verification/related/verify_weighted_lift_collision_synthesis.py",
     "verification/related/verify_dwork_period_supercongruence.py",
