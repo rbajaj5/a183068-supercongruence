@@ -327,6 +327,34 @@ trace and zeta-function packets in the repository.  Stronger exponents
 require additional cancellation or geometry; the orbit argument alone
 supplies exactly the displayed divisibility.
 
+### 6.1 Support before multiplicity
+
+The orbit law has a useful order-theoretic refinement.  If
+\(S\subseteq T\) are Frobenius-stable, locally finite supports, let \(b_d\)
+be the number of length-\(d\) Frobenius orbits in \(T\setminus S\).  Their
+relative support ghost is
+
+```math
+a_n=\#(T\setminus S)^{F^n}=\sum_{d\mid n}d\,b_d.
+```
+
+Thus every support inclusion produces a nonnegative Dold sequence and the
+ordinary Gauss tower.  A stronger exponent \(h\) is not a formal consequence
+of inclusion: it is equivalent to
+
+```math
+\ell^{(h-1)r}\mid b_{m\ell^r}
+\qquad(\ell\nmid m).
+```
+
+The
+[crystalline-locus support bridge](CrystallineLocusSupportFrobeniusBridge.md)
+applies this distinction to the inclusion classification of Kansal, Levin,
+and Savitt.  Their exceptional Barsotti--Tate/Steinberg pair also proves a
+sharp limitation: equal semisimple supports give the zero ghost even though
+the corresponding stack geometry and inclusion direction differ.  Support,
+multiplicity, and stack structure are therefore three distinct layers.
+
 ## 7. Gaussian integers as the first complete local model
 
 Take $K=\mathbb Q(i)$.
