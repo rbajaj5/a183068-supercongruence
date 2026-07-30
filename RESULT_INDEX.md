@@ -126,6 +126,31 @@ proof.
 - **Proof:** [A288470 odd-prime tower](related-results/A288470OddPrimeTower.md)
 - **Exact checker:** [`verify_a288470_odd_prime_tower.py`](verification/related/verify_a288470_odd_prime_tower.py)
 
+### A141057-MULTI — multinomial-power Frobenius tower
+
+- **Claim:** For every $d\ge2$, $q\ge3$, prime $p\ge5$, and
+  positive integers $n,r$, the multivariate polynomial
+  \[
+  \mathcal P_{d,q,N}(\mathbf X)=
+  \sum_{b_1+\cdots+b_d=N}
+  \binom{N}{b_1,\ldots,b_d}^{q}\mathbf X^{\mathbf b}
+  \]
+  satisfies
+  \[
+  \mathcal P_{d,q,np^r}(\mathbf X)
+  \equiv
+  \mathcal P_{d,q,np^{r-1}}(\mathbf X^p)
+  \pmod {p^{3r}}.
+  \]
+  The theorem also holds at $p=3$ when $3\mid q$, and at $p=2$
+  when $4\mid q$.
+- **Source status:** Named open problem at $d=q=3$, strengthened.
+- **Boundary:** The A141057 specialization extends to $p=3$, while its
+  binary analogue fails at $n=1,r=2$.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Multinomial-power Frobenius towers](related-results/MultinomialPowerFrobeniusTowers.md)
+- **Exact checker:** [`verify_multinomial_power_towers.py`](verification/related/verify_multinomial_power_towers.py)
+
 ### BALA-TOWERS — remaining higher-level Bala tower queue
 
 - **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) and the

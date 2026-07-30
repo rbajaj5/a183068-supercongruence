@@ -1,6 +1,6 @@
 # The 110-record Bala proof campaign
 
-**Snapshot date:** July 28, 2026
+**Snapshot date:** July 29, 2026
 
 **Status:** complete record-level ledger; proof work remains in progress
 
@@ -24,14 +24,14 @@ every record:
 
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 1 | 3 | 1 | 2 | 33 |
+| T: finite-sum transfer | 40 | 2 | 3 | 1 | 2 | 32 |
 | C: coefficient/constant term | 37 | 0 | 6 | 3 | 0 | 28 |
 | F: factorial/block product | 14 | 2 | 3 | 0 | 0 | 9 |
 | M: modular or infinite product | 14 | 0 | 0 | 0 | 0 | 14 |
 | D: derived or inherited | 5 | 0 | 0 | 0 | 0 | 5 |
-| **Total** | **110** | **3** | **12** | **4** | **2** | **89** |
+| **Total** | **110** | **4** | **12** | **4** | **2** | **88** |
 
-The three `proved-here` records are A288470, A357568, and A364506. The
+The four `proved-here` records are A141057, A288470, A357568, and A364506. The
 twelve `published-source` records are A002426, A082758, A103882, A168597,
 A176335, A184423, A186420, A234839, A363864, A363867, A363871, and
 A364509. The four partial records are A228960, A333592, A350383, and

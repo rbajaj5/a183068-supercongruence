@@ -14,7 +14,7 @@ A112028	T	queued	none	extract exact conjecture; test termwise discard and transf
 A112029	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A124435	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A132303	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A141057	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A141057	T	proved-here	MultinomialPowerFrobeniusTowers.md	independent review and priority audit
 A143583	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A183069	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A183204	T	queued	none	extract exact conjecture; test termwise discard and transfer
