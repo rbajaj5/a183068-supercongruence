@@ -446,6 +446,25 @@ proof.
 - **Proof:** [Frobenius-quotient identity](related-results/FrobeniusQuotientConstantTerms.md)
 - **Exact boundary checker:** [`verify_dwork_boundaries.py`](verification/related/verify_dwork_boundaries.py)
 
+### A183068-FROB — torus representation and divided Frobenius packet
+
+- **Claim:** The A183068 term \(a(n)\) is the multiplicity of the trivial
+  character in \(V_P^{\otimes n}\) for an explicit \(544\)-dimensional torus
+  representation. Its three-point Hasse--Witt matrix is divisible by \(p\)
+  for every prime because it factors through
+  \(\binom{2p-2}{p-1}\). The divided packet is congruent to the negative
+  three-variable packet modulo \(p\). The same weight model recovers the
+  recorded growth constant \(196+80\sqrt6\) and the OEIS local-limit
+  asymptotic from a four-dimensional tilted walk.
+- **Boundary:** The ranks \(1,2,2,2\) at \(p=2,3,5,7\) are exact finite
+  calculations; no all-odd-prime rank theorem or stronger supercongruence is
+  asserted. Stiefel--Whitney classes label the mod-\(2\) parity layer but do
+  not prove its integral valuation.
+- **Status:** Complete structural theorem and standard local-limit
+  consequence; no novelty claim for the representation dictionary.
+- **Proof:** [Representation and Frobenius packet](related-results/A183068RepresentationFrobeniusPacket.md)
+- **Exact checker:** [`verify_a183068_representation_packet.py`](verification/related/verify_a183068_representation_packet.py)
+
 ### AA-TOWER — p-adic compactness of supercongruence towers
 
 - **Claim:** A uniform adjacent-scale valuation tending to infinity gives a
