@@ -672,6 +672,28 @@ proof.
 - **Proof:** [A229452 coefficient-root baseline](related-results/A229452CoefficientRootBaseline.md)
 - **Exact checker:** [`verify_a229452_coefficient_root.py`](verification/related/verify_a229452_coefficient_root.py)
 
+### SYMBOX-4 — symmetric-box plane-partition tower
+
+- **Claim:** For every fixed integer \(c\geq1\), let \(B_c(N)\) count
+  plane partitions in an \(N\times N\times cN\) box. Every prime \(p\)
+  and all \(n,r\geq1\) satisfy
+  \[
+  B_c(np^r)\equiv B_c(np^{r-1})^p\pmod {p^{4r}}.
+  \]
+- **Named consequences:** The specialization \(c=1\) is A008793,
+  \(c=2\) proves Conjecture 3 on A352656, and \(c=3\) proves Conjecture 2
+  on A352657.
+- **Mechanism:** Complementary factors split off the preceding level
+  exactly. A reciprocal-interval involution supplies the full odd-prime
+  depth, including the exceptional factor at \(p=3\). At \(p=2\), even
+  \(c\) has three bonus powers in the local variable, while odd \(c\) is
+  completed by box complementation and a hyperfactorial valuation-doubling
+  identity.
+- **Status:** Complete elementary proof candidate for the full symmetric
+  family. Independent review and literature-priority work remain.
+- **Proof:** [Symmetric-box plane partitions](related-results/SymmetricBoxPlanePartitionTower.md)
+- **Exact checker:** [`verify_symmetric_box_plane_partitions.py`](verification/related/verify_symmetric_box_plane_partitions.py)
+
 ### A008793-CUBE — nonlinear cube-plane-partition tower
 
 - **Claim:** For the number \(A(N)\) of plane partitions in an

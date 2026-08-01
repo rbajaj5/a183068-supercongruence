@@ -61,7 +61,7 @@ that a file was added.
 
 | Lane | Flagship results | What the lane contributes |
 | --- | --- | --- |
-| Core and named OEIS problems | [A183068](PROOF.md), [Bala queue](related-results/BalaOeisSupercongruenceQueue.md), [binomial-quotient closures](related-results/BinomialQuotientCancellation.md), [coefficient-framing family](related-results/CoefficientFramingCubicTower.md), [Straub prime-five packet](related-results/StraubPrimeFiveCoefficientPacket.md), [A288470 odd-prime tower](related-results/A288470OddPrimeTower.md), [A141057 multinomial-power tower](related-results/MultinomialPowerFrobeniusTowers.md), [A091527/A262732 odd-unit block towers](related-results/OddUnitBlockFrobeniusTowers.md), [A275652/A275654 Dixon--Legendre towers](related-results/DixonLegendreHalfBinomialTowers.md), [A364173 integrality and tower](related-results/A364173IntegralHalfBinomialTower.md), [literature census](related-results/SupercongruenceLiteratureCensus.md) | Named conjectures, published baselines, new family closures, and a reproducible target queue |
+| Core and named OEIS problems | [A183068](PROOF.md), [Bala queue](related-results/BalaOeisSupercongruenceQueue.md), [symmetric-box plane partitions](related-results/SymmetricBoxPlanePartitionTower.md), [binomial-quotient closures](related-results/BinomialQuotientCancellation.md), [coefficient-framing family](related-results/CoefficientFramingCubicTower.md), [Straub prime-five packet](related-results/StraubPrimeFiveCoefficientPacket.md), [A288470 odd-prime tower](related-results/A288470OddPrimeTower.md), [A141057 multinomial-power tower](related-results/MultinomialPowerFrobeniusTowers.md), [A091527/A262732 odd-unit block towers](related-results/OddUnitBlockFrobeniusTowers.md), [A275652/A275654 Dixon--Legendre towers](related-results/DixonLegendreHalfBinomialTowers.md), [A364173 integrality and tower](related-results/A364173IntegralHalfBinomialTower.md), [literature census](related-results/SupercongruenceLiteratureCensus.md) | Named conjectures, published baselines, new family closures, and a reproducible target queue |
 | General theorem engines | [Arithmetic Frobenius packets](related-results/ArithmeticFrobeniusPacketFramework.md), [Landau depth](related-results/LandauDepthSupercongruenceSynthesis.md), [q-calculus](related-results/QCalculusCyclotomicSupercongruences.md), [binomial-power Frobenius](related-results/BinomialPowerFrobeniusTheorem.md), [Euler products](related-results/EulerProductGaussianTower.md) | Local-to-global assembly plus reusable carry, transfer, Frobenius, and cyclotomic mechanisms |
 | Gaussian and Eisenstein local arithmetic | [Inert-prime scaling](related-results/GaussianLucasPrimePowerTheorem.md), [ramified \(1+i\) theorem](related-results/GaussianLucasRamifiedTwoTheorem.md), [lattice-walk transfer congruences](related-results/LatticeWalkFrobeniusCongruences.md), [planar-noise and Y-game Walsh congruences](related-results/BlackNoiseWalshCongruences.md), [canonical products](related-results/GaussianLucasCanonicalProducts.md) | Split/inert/ramified prime separation, exact local valuations, and finite transfer- or Walsh-polynomial congruences for planar models |
 | Dyadic structure | [Dyadic policy](DYADIC_POLICY.md), [Euler-product defect](related-results/DyadicHypercubeDefect.md), [Roe-inspired packet](ROE_2ADIC.md), [finite abelian counts](related-results/GQ2FiniteAbelianCounts.md), [dihedral counts](related-results/GQ2DihedralCounts.md), [quaternion counts](related-results/GQ2QuaternionCounts.md), [maximal-cyclic counts](related-results/GQ2MaximalCyclicCounts.md), [extraspecial obstruction](related-results/GQ2ExtraspecialObstruction.md) | Explicit binary normalization, parity, finite-shadow tests, uniform lift fibers, commutator and central-square corrections, first-level boundaries, and generator-rank obstructions |
@@ -94,14 +94,15 @@ never upgrades a proof status.
 
 The highest-value specialist-review targets are:
 
-1. the [dimension-minimal counterexample to Zhang's four-matrix conjecture](related-results/ZhangFourMatrixCounterexample.md);
-2. the exact ramified Gaussian valuation at \(1+i\);
-3. inert Gaussian adjacent prime-power scaling;
-4. the new [first two A365029 levels](related-results/A365029FirstTwoLevels.md);
-5. the all-degree weighted-lift collision theorem;
-6. the primitive collision-orbit interpretation and sharp obstruction;
-7. the degree-five elliptic Frobenius packet; and
-8. the original A183068 proof.
+1. the new [symmetric-box plane-partition tower](related-results/SymmetricBoxPlanePartitionTower.md), which proves A352656 and A352657 and subsumes A008793;
+2. the [dimension-minimal counterexample to Zhang's four-matrix conjecture](related-results/ZhangFourMatrixCounterexample.md);
+3. the exact ramified Gaussian valuation at \(1+i\);
+4. inert Gaussian adjacent prime-power scaling;
+5. the new [first two A365029 levels](related-results/A365029FirstTwoLevels.md);
+6. the all-degree weighted-lift collision theorem;
+7. the primitive collision-orbit interpretation and sharp obstruction;
+8. the degree-five elliptic Frobenius packet; and
+9. the original A183068 proof.
 
 The active Bala campaign has now proved 29 census records in this repository
 and matched 12 more to published sources. Its recent
@@ -150,6 +151,13 @@ stronger prime-power evaluation. The
 proves its full nonlinear all-prime \(p^{4r}\) tower by exact product
 splitting and reduced-residue reciprocal blocks, including the separate
 binary argument.
+The [symmetric-box theorem](related-results/SymmetricBoxPlanePartitionTower.md)
+now shows that this is one member of an infinite family: for every fixed
+\(c\geq1\), plane partitions in an \(N\times N\times cN\) box satisfy the
+same all-prime nonlinear \(p^{4r}\) tower. Its \(c=2\) and \(c=3\)
+specializations prove the named A352656 and A352657 conjectures, while a
+refined reciprocal-interval pairing absorbs the exceptional prime \(3\)
+uniformly.
 The [coefficient-framing theorem](related-results/CoefficientFramingCubicTower.md)
 then closes six more source records at once: A002003, A348410, A351857,
 A352373, A370101, and A370102 follow from one self-contained elementary

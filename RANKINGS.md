@@ -39,7 +39,7 @@ allocation, the portfolio currently has four tiers:
 
 | Tier | Results | Recommended use of effort |
 | --- | --- | --- |
-| **A: specialist review now** | ZHANG-4, FRAMING-COUNTEREX, GWL-TWO, GWL-SCALE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
+| **A: specialist review now** | SYMBOX-4, ZHANG-4, FRAMING-COUNTEREX, GWL-TWO, GWL-SCALE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
 | **B: broad theorem engines** | FROB-PACKET, JC-ORBIT, LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER | Reuse on named conjectures and consolidate families |
 | **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, BLACK-WALSH, HASH-MATROID, FQ-CT, WALK-FROB, GQ2-ABCOUNT, GQ2-DIHEDRAL, GQ2-QUATERNION, GQ2-MAXCYCLIC, GQ2-EXTRASPECIAL | Improve experiments, certification, source consolidation, and proof organization |
 | **D: retained open targets** | C11, CAT-ODD, BALA-TOWERS, APERY-DEFECT, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
@@ -61,6 +61,7 @@ without increasing a supercongruence exponent.
 | 7 | [JC-FF: finite-field arithmetic of the Fable counterexample](related-results/JacobianCounterexampleFiniteFieldCounts.md) | **7** | 2 | 8 | 7 | 8 | 3 | Complete elementary fiber-distribution, collision-zeta, and adjacent-valuation theorem with exact extension-field checks; priority provisional. |
 | 8 | [QC-CUBIC: corrected cubic q-supercongruence](related-results/QCalculusCyclotomicSupercongruences.md#4-the-second-q-jet-and-a-corrected-cubic-theorem) | **7** | 1 | 5 | 9 | 8 | 4 | Complete deduction from Straub's q-Ljunggren theorem with exact polynomial checks; full priority search pending. |
 | 9 | [EULER-PRODUCT: colored product Frobenius tower](related-results/EulerProductGaussianTower.md) | **7** | 1 | 6 | 10 | 9 | 2 | Complete coefficientwise \(p^{2r}\) theorem for arbitrary integral multicolored Euler products with degree weight \(m^d\), \(d\ge1\); proves Bala's full quadratic product packet and Gaussian twists, while leaving the special A380290 cubic gain open. |
+| 9 | [SYMBOX-4: symmetric-box plane-partition tower](related-results/SymmetricBoxPlanePartitionTower.md) | **8** | 1 | 6 | 9 | 8 | 3 | Complete elementary proof candidate for every \(N\times N\times cN\) box, simultaneously proving A352656 and A352657 and subsuming A008793; 1,074 exact checks pass, with priority and independent review pending. |
 | 9 | [A008793-CUBE: cube-plane-partition tower](related-results/A008793CubePlanePartitionTower.md) | **7** | 1 | 6 | 7 | 9 | 2 | Complete elementary proof candidate for a named nonlinear all-prime \(p^{4r}\) conjecture; exact product splitting and reduced-residue blocks include the sharp binary boundary, with 455 exact checks. |
 | 9 | [LD-2: Landau-depth family](related-results/LandauDepthSupercongruenceSynthesis.md) | **7** | 1 | 5 | 9 | 7 | 4 | Complete proof candidate giving an infinite all-prime family; independent review pending. |
 | 10 | [GL-CANON: canonical-product synthesis](related-results/GaussianLucasCanonicalProducts.md) | **7** | 3 | 6 | 9 | 7 | 5 | Proved structural lemma and synthesis; the split-prime program remains conjectural. |
