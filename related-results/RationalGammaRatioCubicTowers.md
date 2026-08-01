@@ -117,22 +117,22 @@ F(N)=\prod_{\alpha\in\mathbb Q_{>0}}
 \tag{6}
 ```
 
-Assume:
+Assume the following two conditions.
 
-1. the slopes balance,
+**Slope balance:**
 
-   ```math
-   \sum_\alpha \alpha E(\alpha)=0;
-   \tag{7}
-   ```
+```math
+\sum_\alpha \alpha E(\alpha)=0.
+\tag{7}
+```
 
-2. in every nonzero class $\rho\in\mathbb Q/\mathbb Z$, the multiplicities
-   balance,
+**Residue-class balance:** for every nonzero class
+$\rho\in\mathbb Q/\mathbb Z$,
 
-   ```math
-   \sum_{\alpha\equiv\rho\pmod{\mathbb Z}}E(\alpha)=0.
-   \tag{8}
-   ```
+```math
+\sum_{\alpha\equiv\rho\pmod{\mathbb Z}}E(\alpha)=0.
+\tag{8}
+```
 
 Let $Q$ be a common denominator of the slopes in (6).
 
