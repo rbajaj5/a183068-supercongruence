@@ -16,9 +16,10 @@ review.
 | --- | --- | --- |
 | Understand the original theorem | [Friendly proof](PROOF.md) | Machine-audited draft; specialist review pending |
 | See the response to Peter Bala's suggested proof routes | **[BALA_VERSION.md](BALA_VERSION.md)** | Preserved public bridge document |
+| Review the compact manuscript | **[ArXiv review draft](paper/README.md)** ([PDF](output/pdf/supercongruence-portfolio.pdf)) | Working draft for external review; not submitted or peer reviewed |
 | Check what was audited and corrected | [Audit log](AUDIT.md) | Exact-text audit record |
 | Find one precise mathematical claim | [Claim-level result index](RESULT_INDEX.md) | Controlling status ledger |
-| Track all 110 Bala/OEIS records | [110-record proof campaign](related-results/Bala110ProofCampaign.md) | Record-level route, status, evidence, and next action |
+| Track all 110 Bala/OEIS records | [110-record proof campaign](related-results/Bala110ProofCampaign.md) and [July 31 update](related-results/BalaJuly31ResearchUpdate.md) | Record-level route, status, evidence, and next action |
 | Compare the portfolio economically | [Economist-style rankings](RANKINGS.md) | Editorial scores, not correctness claims |
 | Browse the wider program | [Related-results reading map](related-results/README.md) | Theorem, reduction, computation, and synthesis lanes |
 | Reproduce the computations | [`verification/run_all.py`](verification/run_all.py) | Exact checkers with no floating-point tolerance unless stated |
@@ -61,7 +62,7 @@ that a file was added.
 
 | Lane | Flagship results | What the lane contributes |
 | --- | --- | --- |
-| Core and named OEIS problems | [A183068](PROOF.md), [Bala queue](related-results/BalaOeisSupercongruenceQueue.md), [binomial-quotient closures](related-results/BinomialQuotientCancellation.md), [coefficient-framing family](related-results/CoefficientFramingCubicTower.md), [Straub prime-five packet](related-results/StraubPrimeFiveCoefficientPacket.md), [A288470 odd-prime tower](related-results/A288470OddPrimeTower.md), [A141057 multinomial-power tower](related-results/MultinomialPowerFrobeniusTowers.md), [A091527/A262732 odd-unit block towers](related-results/OddUnitBlockFrobeniusTowers.md), [A275652/A275654 Dixon--Legendre towers](related-results/DixonLegendreHalfBinomialTowers.md), [A364173 integrality and tower](related-results/A364173IntegralHalfBinomialTower.md), [literature census](related-results/SupercongruenceLiteratureCensus.md) | Named conjectures, published baselines, new family closures, and a reproducible target queue |
+| Core and named OEIS problems | [A183068](PROOF.md), [Bala queue](related-results/BalaOeisSupercongruenceQueue.md), [July 31 Bala update](related-results/BalaJuly31ResearchUpdate.md), [symmetric-box plane partitions](related-results/SymmetricBoxPlanePartitionTower.md), [balanced factorial ratios](related-results/BalancedFactorialRatioCubicTowers.md), [rational gamma-ratio towers](related-results/RationalGammaRatioCubicTowers.md), [binomial-quotient closures](related-results/BinomialQuotientCancellation.md), [coefficient-framing family](related-results/CoefficientFramingCubicTower.md), [Straub prime-five packet](related-results/StraubPrimeFiveCoefficientPacket.md), [A288470 odd-prime tower](related-results/A288470OddPrimeTower.md), [A141057 multinomial-power tower](related-results/MultinomialPowerFrobeniusTowers.md), [A091527/A262732 odd-unit block towers](related-results/OddUnitBlockFrobeniusTowers.md), [A275652/A275654 Dixon--Legendre towers](related-results/DixonLegendreHalfBinomialTowers.md), [A364173 integrality and tower](related-results/A364173IntegralHalfBinomialTower.md), [literature census](related-results/SupercongruenceLiteratureCensus.md) | Named conjectures, published baselines, new family closures, and a reproducible target queue |
 | General theorem engines | [Arithmetic Frobenius packets](related-results/ArithmeticFrobeniusPacketFramework.md), [Landau depth](related-results/LandauDepthSupercongruenceSynthesis.md), [q-calculus](related-results/QCalculusCyclotomicSupercongruences.md), [binomial-power Frobenius](related-results/BinomialPowerFrobeniusTheorem.md), [Euler products](related-results/EulerProductGaussianTower.md) | Local-to-global assembly plus reusable carry, transfer, Frobenius, and cyclotomic mechanisms |
 | Gaussian and Eisenstein local arithmetic | [Inert-prime scaling](related-results/GaussianLucasPrimePowerTheorem.md), [ramified \(1+i\) theorem](related-results/GaussianLucasRamifiedTwoTheorem.md), [lattice-walk transfer congruences](related-results/LatticeWalkFrobeniusCongruences.md), [planar-noise and Y-game Walsh congruences](related-results/BlackNoiseWalshCongruences.md), [canonical products](related-results/GaussianLucasCanonicalProducts.md) | Split/inert/ramified prime separation, exact local valuations, and finite transfer- or Walsh-polynomial congruences for planar models |
 | Dyadic structure | [Dyadic policy](DYADIC_POLICY.md), [Euler-product defect](related-results/DyadicHypercubeDefect.md), [Roe-inspired packet](ROE_2ADIC.md), [finite abelian counts](related-results/GQ2FiniteAbelianCounts.md), [dihedral counts](related-results/GQ2DihedralCounts.md), [quaternion counts](related-results/GQ2QuaternionCounts.md), [maximal-cyclic counts](related-results/GQ2MaximalCyclicCounts.md), [extraspecial obstruction](related-results/GQ2ExtraspecialObstruction.md) | Explicit binary normalization, parity, finite-shadow tests, uniform lift fibers, commutator and central-square corrections, first-level boundaries, and generator-rank obstructions |
@@ -94,14 +95,15 @@ never upgrades a proof status.
 
 The highest-value specialist-review targets are:
 
-1. the [dimension-minimal counterexample to Zhang's four-matrix conjecture](related-results/ZhangFourMatrixCounterexample.md);
-2. the exact ramified Gaussian valuation at \(1+i\);
-3. inert Gaussian adjacent prime-power scaling;
-4. the new [first two A365029 levels](related-results/A365029FirstTwoLevels.md);
-5. the all-degree weighted-lift collision theorem;
-6. the primitive collision-orbit interpretation and sharp obstruction;
-7. the degree-five elliptic Frobenius packet; and
-8. the original A183068 proof.
+1. the new [symmetric-box plane-partition tower](related-results/SymmetricBoxPlanePartitionTower.md), which proves A352656 and A352657 and subsumes A008793;
+2. the [dimension-minimal counterexample to Zhang's four-matrix conjecture](related-results/ZhangFourMatrixCounterexample.md);
+3. the exact ramified Gaussian valuation at \(1+i\);
+4. inert Gaussian adjacent prime-power scaling;
+5. the new [first two A365029 levels](related-results/A365029FirstTwoLevels.md);
+6. the all-degree weighted-lift collision theorem;
+7. the primitive collision-orbit interpretation and sharp obstruction;
+8. the degree-five elliptic Frobenius packet; and
+9. the original A183068 proof.
 
 The active Bala campaign has now proved 29 census records in this repository
 and matched 12 more to published sources. Its recent
@@ -114,7 +116,12 @@ then [A275652](https://oeis.org/A275652) and
 [Dixon--Legendre half-binomial argument](related-results/DixonLegendreHalfBinomialTowers.md),
 and [A364173](https://oeis.org/A364173) by a related
 [factorization and carry-interval argument](related-results/A364173IntegralHalfBinomialTower.md)
-that also proves the source page's integrality conjecture.
+that also proves the source page's integrality conjecture.  The subsequent
+[rational gamma-ratio theorem](related-results/RationalGammaRatioCubicTowers.md)
+works at every fixed denominator and closes the A364175 tower using David
+Radcliffe's July 2026 integrality proof; the same theorem reduces the rest
+of A364172--A364184 to global integrality and proves the all-row A365025
+conjecture together with every stable row of A364513.
 The [binomial-quotient cancellation theorem](related-results/BinomialQuotientCancellation.md)
 also closes the complete two-parameter conjecture on
 [A357509](https://oeis.org/A357509), rather than only its displayed
@@ -150,6 +157,13 @@ stronger prime-power evaluation. The
 proves its full nonlinear all-prime \(p^{4r}\) tower by exact product
 splitting and reduced-residue reciprocal blocks, including the separate
 binary argument.
+The [symmetric-box theorem](related-results/SymmetricBoxPlanePartitionTower.md)
+now shows that this is one member of an infinite family: for every fixed
+\(c\geq1\), plane partitions in an \(N\times N\times cN\) box satisfy the
+same all-prime nonlinear \(p^{4r}\) tower. Its \(c=2\) and \(c=3\)
+specializations prove the named A352656 and A352657 conjectures, while a
+refined reciprocal-interval pairing absorbs the exceptional prime \(3\)
+uniformly.
 The [coefficient-framing theorem](related-results/CoefficientFramingCubicTower.md)
 then closes six more source records at once: A002003, A348410, A351857,
 A352373, A370101, and A370102 follow from one self-contained elementary
@@ -200,6 +214,8 @@ The integrity checker also protects the published
 | [`DYADIC_POLICY.md`](DYADIC_POLICY.md) | Required checklist for all-prime and ramified claims |
 | [`ROE_2ADIC.md`](ROE_2ADIC.md) | Public Roe--Turturean-inspired dyadic packet |
 | [`ROE_TURTUREAN_NOTE.md`](ROE_TURTUREAN_NOTE.md) | Short source-facing statement of the finite abelian \(2\)-target result |
+| [`paper/`](paper/README.md) | Compact review manuscript and submission checklist |
+| [`output/pdf/`](output/pdf/) | Rendered review copies of repository manuscripts |
 
 ## Public research policy
 

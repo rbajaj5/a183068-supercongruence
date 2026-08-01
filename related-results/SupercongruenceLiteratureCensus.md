@@ -1,6 +1,6 @@
 # Supercongruence literature and the Bala--OEIS census
 
-**Census date:** July 28, 2026
+**Census date:** July 31, 2026
 **Status:** literature map and research triage, not a priority certificate
 
 This note maps Peter Bala's OEIS supercongruence corpus to the principal
@@ -112,6 +112,9 @@ The following examples show why the routing pass is necessary.
 | [A091527](https://oeis.org/A091527) and [A262732](https://oeis.org/A262732) | The repository proves both $p^{3r}$ towers at once by an odd-unit block theorem for the entire family $4^N\binom{(mN-1)/2}{N}$. The claimed prime range $p\ge5$ is sharp for both named cases at $p=3$. |
 | [A275652](https://oeis.org/A275652) and [A275654](https://oeis.org/A275654) | Dixon's terminating ${}_3F_2(1)$ evaluation places both sequences in one Legendre-coefficient family. A half-binomial unit-block lemma then proves both $p^{3r}$ towers for $p\ge5$ and every integer family parameter $a\ge3$. |
 | [A364173](https://oeis.org/A364173) | The repository proves both open assertions on the record: a carry-interval floor lemma establishes global integrality, and a factorization into three ordinary and three half-binomial terms proves the full $p^{3r}$ tower for $p\ge5$. |
+| [A364175](https://oeis.org/A364175) and the surrounding fractional-factorial packet | Radcliffe's July 2026 note proves A364175 integral.  The repository's denominator-$q$ rational-binomial transfer proves its full $p^{3r}$ tower and shows that every other residue-balanced record in A364172--A364184 already has the conjectured cubic transfer in $\mathbb Q_p$; their remaining obstruction is global integrality. |
+| [A365025](https://oeis.org/A365025), [A365026](https://oeis.org/A365026), and [A365027](https://oeis.org/A365027) | The finite binomial sum proves every row integral, and the rational gamma-ratio theorem proves the conjectured $p^{3r}$ tower uniformly in the row parameter. |
+| [A364304](https://oeis.org/A364304) and [A364515](https://oeis.org/A364515)--[A364517](https://oeis.org/A364517) | A364304 is the $a=7$ Dixon--Legendre row already covered by the family theorem.  The other three are homogeneous rows $4,6,7$ of A364513 and follow from the residue-balanced rational gamma theorem. |
 | [A002897](https://oeis.org/A002897), [A008978](https://oeis.org/A008978), and [A113424](https://oeis.org/A113424) | A normalized Gauss criterion and Lagrange inversion prove all three displayed coefficient-root series integral. A cyclic-orbit theorem supplies the universal all-prime \(p^r\) variable-power tower. A002897 has no remaining explicit live Bala conjecture; the stronger A008978/A113424 \(p^{3r}\) refinements remain open. |
 | [A352655](https://oeis.org/A352655), [A357506](https://oeis.org/A357506), [A357567](https://oeis.org/A357567), [A357956](https://oeis.org/A357956), and [A357959](https://oeis.org/A357959) | The repository proves an exact reduction of all five records and both nonlinear companions to three linear adjacent-defect relations for the two Apéry sequences.  For \(p\ge7\) the enhanced defect vector has one residual direction.  The three relations remain open. |
 | [A183068](https://oeis.org/A183068) | This repository contains a proposed all-prime proof and exact checks.  It remains a proof candidate pending conventional specialist review. |
@@ -130,7 +133,7 @@ than separate papers.
 | 3 | [A364118](https://oeis.org/A364118) and its companion Apéry combinations | These ask for \(p^5\) at the first level and \(p^{3r+3}\) later, beyond the ordinary Apéry tower | Linearized recurrence, modular parametrization, or a refined Coster expansion |
 | 4 | [A008793](https://oeis.org/A008793), plane partitions in a cube | Its nonlinear congruence \(a(np^r)\equiv a(np^{r-1})^p\pmod {p^{4r}}\) has independent enumerative content and does not resemble a routine Coster corollary | \(p\)-adic logarithm of MacMahon's product |
 | 5 | [A331562](https://oeis.org/A331562), all row sequences | Rows \(2,3,4\) are known; a uniform row theorem would replace infinitely many entries with one statement | Transfer matrix or rational-diagonal representation |
-| 6 | [A364173](https://oeis.org/A364173)--[A364185](https://oeis.org/A364185) | The entries mix parity-dependent factorial ratios, and some still state integrality only conjecturally | Landau step functions first, supercongruences second |
+| 6 | [A364172](https://oeis.org/A364172)--[A364184](https://oeis.org/A364184) | The cubic transfer is now uniform; most entries still state global integrality only conjecturally | Landau floor inequalities for the remaining integrality assertions |
 | 7 | [A380290](https://oeis.org/A380290), cubic remainder | The quadratic tower and its coefficientwise Gaussian refinement are now proved, but the special untwisted \(d=2\) cancellation conjecturally raises \(p^{2r}\) to \(p^{3r}\) for \(p\ge7\) | Prove the extra untwisted convolution cancellation; a generic Gaussian twist has exact quadratic witnesses |
 | 8 | [A333592](https://oeis.org/A333592) | The coefficientwise quadratic tower is proved in this repository, but its stronger untwisted cubic conjecture remains open | Exact comparison with Coster's \(w_{A,B,\epsilon}\) families |
 

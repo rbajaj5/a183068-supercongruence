@@ -279,7 +279,9 @@ proof.
   ```
 
 - **Source status:** The cases $a=3$ and $a=5$ are the named open
-  conjectures on A275652 and A275654.
+  conjectures on A275652 and A275654.  The same coefficient family is row
+  $a$ of A364303, so the theorem proves every row $a\ge3$ and in particular
+  A364304 (row $7$).
 - **Mechanism:** Dixon's terminating ${}_3F_2(1)$ evaluation, two
   classical binomial transfers, and a new half-binomial unit-block
   transfer.
@@ -319,6 +321,40 @@ proof.
 - **Status:** Complete unchecked elementary proof; priority preliminary.
 - **Proof:** [A364173 integrality and half-binomial tower](related-results/A364173IntegralHalfBinomialTower.md)
 - **Exact checker:** [`verify_a364173_integral_tower.py`](verification/related/verify_a364173_integral_tower.py)
+
+### RATGAMMA-3 — rational gamma-ratio cubic towers
+
+- **Claim:** Let
+
+  ```math
+  F(N)=\prod_{\alpha\in\mathbb Q_{>0}}
+  \Gamma(\alpha N+1)^{E(\alpha)}
+  ```
+
+  have balanced slopes.  If the multiplicities also balance in every
+  nonzero residue class modulo $\mathbb Z$, then at every prime $p\ge5$
+  away from the fixed slope denominators,
+
+  ```math
+  \frac{F(np^r)}{F(np^{r-1})}\equiv1\pmod {p^{3r}}.
+  ```
+
+  If the lower-level value is $p$-integral, this is the corresponding
+  adjacent congruence for the values themselves.
+- **Named application:** Radcliffe proved A364175 integral in July 2026;
+  the theorem therefore proves its full conjectured $p^{3r}$ tower.  The
+  same transfer applies to every residue-balanced gamma quotient in
+  A364172--A364184, reducing the remaining records to global integrality.
+  It also proves every row conjecture on A365025 (including A365026 and
+  A365027) and every row $s\ge3$ of A364513 (including A364515--A364517).
+- **Mechanism:** An exact denominator-$q$ rational-binomial product, complete
+  reduced-residue harmonic blocks, and the classical balanced integer
+  factorial-ratio closure.
+- **Boundary:** Primes dividing a fixed slope denominator are excluded;
+  global integrality is not inferred from $p$-adic stability.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Rational gamma-ratio cubic towers](related-results/RationalGammaRatioCubicTowers.md)
+- **Exact checker:** [`verify_rational_gamma_ratio_towers.py`](verification/related/verify_rational_gamma_ratio_towers.py)
 
 ### COEFF-POWER-GAUSS — integral coefficient roots and universal baseline
 
@@ -671,6 +707,51 @@ proof.
   families. The proposed \(p^{3r}\) towers for \(p\ge5\) remain open.
 - **Proof:** [A229452 coefficient-root baseline](related-results/A229452CoefficientRootBaseline.md)
 - **Exact checker:** [`verify_a229452_coefficient_root.py`](verification/related/verify_a229452_coefficient_root.py)
+
+### SYMBOX-4 — symmetric-box plane-partition tower
+
+- **Claim:** For every fixed integer \(c\geq1\), let \(B_c(N)\) count
+  plane partitions in an \(N\times N\times cN\) box. Every prime \(p\)
+  and all \(n,r\geq1\) satisfy
+  \[
+  B_c(np^r)\equiv B_c(np^{r-1})^p\pmod {p^{4r}}.
+  \]
+- **Named consequences:** The specialization \(c=1\) is A008793,
+  \(c=2\) proves Conjecture 3 on A352656, and \(c=3\) proves Conjecture 2
+  on A352657.
+- **Mechanism:** Complementary factors split off the preceding level
+  exactly. A reciprocal-interval involution supplies the full odd-prime
+  depth, including the exceptional factor at \(p=3\). At \(p=2\), even
+  \(c\) has three bonus powers in the local variable, while odd \(c\) is
+  completed by box complementation and a hyperfactorial valuation-doubling
+  identity.
+- **Status:** Complete elementary proof candidate for the full symmetric
+  family. Independent review and literature-priority work remain.
+- **Proof:** [Symmetric-box plane partitions](related-results/SymmetricBoxPlanePartitionTower.md)
+- **Exact checker:** [`verify_symmetric_box_plane_partitions.py`](verification/related/verify_symmetric_box_plane_partitions.py)
+
+### FACTRATIO-3 - balanced factorial-ratio cubic tower
+
+- **Claim:** Every balanced factorial ratio
+  \[
+  F(N)=\prod_m((mN)!)^{c_m},\qquad \sum_m m c_m=0,
+  \]
+  whose values are $p$-integral satisfies
+  \[
+  F(np^r)\equiv F(np^{r-1})\pmod {p^{3r}}
+  \]
+  for every prime $p\geq5$ and all $n,r\geq1$.
+- **Named consequence:** The integral sporadic factorial ratio A061164
+  satisfies the full ordinary cubic tower. This anticipates a pending OEIS
+  direction mentioned by Peter Bala; the approved page did not yet display
+  the conjecture when checked on July 31, 2026.
+- **Mechanism:** A telescoping identity writes every balanced factorial
+  ratio as a Laurent product of \(\binom{jN}{N}\). Classical
+  Ljunggren--Jacobsthal scaling then applies factor by factor.
+- **Status:** Complete deduction from a classical theorem. The mechanism is
+  broad but not claimed as new; no assertion is made for $p=2,3$.
+- **Proof:** [Balanced factorial-ratio cubic towers](related-results/BalancedFactorialRatioCubicTowers.md)
+- **Exact checker:** [`verify_balanced_factorial_ratio_towers.py`](verification/related/verify_balanced_factorial_ratio_towers.py)
 
 ### A008793-CUBE — nonlinear cube-plane-partition tower
 

@@ -69,6 +69,13 @@ a=5&1&2.
 \tag{4}
 ```
 
+There is also an array-level consequence that was not isolated in the first
+version of this note.  For every fixed row parameter $a\geq3$, row $a$ of
+[OEIS A364303](https://oeis.org/A364303) is exactly $D_a(N)$ by its
+coefficient definition (2).  Theorem 1 therefore proves the conjectured
+cubic tower for every such row.  In particular it closes
+[A364304](https://oeis.org/A364304), which is row $7$.
+
 ## 2. Dixon evaluation
 
 Reverse the summation in (1), writing $j=N-k$.  After taking out
