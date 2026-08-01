@@ -279,7 +279,9 @@ proof.
   ```
 
 - **Source status:** The cases $a=3$ and $a=5$ are the named open
-  conjectures on A275652 and A275654.
+  conjectures on A275652 and A275654.  The same coefficient family is row
+  $a$ of A364303, so the theorem proves every row $a\ge3$ and in particular
+  A364304 (row $7$).
 - **Mechanism:** Dixon's terminating ${}_3F_2(1)$ evaluation, two
   classical binomial transfers, and a new half-binomial unit-block
   transfer.
@@ -319,6 +321,40 @@ proof.
 - **Status:** Complete unchecked elementary proof; priority preliminary.
 - **Proof:** [A364173 integrality and half-binomial tower](related-results/A364173IntegralHalfBinomialTower.md)
 - **Exact checker:** [`verify_a364173_integral_tower.py`](verification/related/verify_a364173_integral_tower.py)
+
+### RATGAMMA-3 — rational gamma-ratio cubic towers
+
+- **Claim:** Let
+
+  ```math
+  F(N)=\prod_{\alpha\in\mathbb Q_{>0}}
+  \Gamma(\alpha N+1)^{E(\alpha)}
+  ```
+
+  have balanced slopes.  If the multiplicities also balance in every
+  nonzero residue class modulo $\mathbb Z$, then at every prime $p\ge5$
+  away from the fixed slope denominators,
+
+  ```math
+  \frac{F(np^r)}{F(np^{r-1})}\equiv1\pmod {p^{3r}}.
+  ```
+
+  If the lower-level value is $p$-integral, this is the corresponding
+  adjacent congruence for the values themselves.
+- **Named application:** Radcliffe proved A364175 integral in July 2026;
+  the theorem therefore proves its full conjectured $p^{3r}$ tower.  The
+  same transfer applies to every residue-balanced gamma quotient in
+  A364172--A364184, reducing the remaining records to global integrality.
+  It also proves every row conjecture on A365025 (including A365026 and
+  A365027) and every row $s\ge3$ of A364513 (including A364515--A364517).
+- **Mechanism:** An exact denominator-$q$ rational-binomial product, complete
+  reduced-residue harmonic blocks, and the classical balanced integer
+  factorial-ratio closure.
+- **Boundary:** Primes dividing a fixed slope denominator are excluded;
+  global integrality is not inferred from $p$-adic stability.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Rational gamma-ratio cubic towers](related-results/RationalGammaRatioCubicTowers.md)
+- **Exact checker:** [`verify_rational_gamma_ratio_towers.py`](verification/related/verify_rational_gamma_ratio_towers.py)
 
 ### COEFF-POWER-GAUSS — integral coefficient roots and universal baseline
 

@@ -14,7 +14,7 @@ checks pass.
 | Superfactorial analogues | A008793, A352656, A352657 | **Proved in one parameter family:** every $N\times N\times cN$ plane-partition number satisfies the proposed all-prime $p^{4r}$ Frobenius tower |
 | Enhanced combinations of Apéry numbers | A352655, A357506, A357567, A357956, A357959 and two nonlinear companions | **Exact reduction:** all claims collapse to three linear adjacent-defect congruences; those three congruences remain open |
 | Paired ordinary/shifted towers | A363984, A376459--A376466 | **Open:** the source statements are captured; no published theorem has yet been matched to all hypotheses |
-| Recent factorial-ratio direction | A061164, with Peter's complete A-number list still pending | **A061164 cubic tower proved:** it is an immediate balanced-factorial consequence of classical binomial scaling; integrality and normalization remain the first obligations for the pending fractional-factorial records |
+| Recent factorial-ratio direction | A061164 and the public A364172--A364184 packet, with Peter's exact new list still pending | **Two uniform transfers proved:** A061164 follows from balanced integer factorials; residue-balanced rational gamma ratios inherit the same cubic tower. This fully closes A364175 using Radcliffe's July 2026 integrality proof and reduces the remaining fractional records to integrality |
 
 ## 1. Superfactorial family: closed uniformly
 
@@ -83,19 +83,35 @@ F(N)=\prod_m((mN)!)^{c_m},
 ```
 
 satisfies the full $p^{3r}$ adjacent tower for $p\geq5$.  This proves the
-ordinary cubic tower for A061164.  For Peter's newer fractional-factorial
-entries, the remaining source work is to obtain the exact A-number list and
-audit each integrality/normalization statement.
+ordinary cubic tower for A061164.
+
+The new [rational gamma-ratio theorem](RationalGammaRatioCubicTowers.md)
+extends that transfer to fractional slopes.  If the slopes balance and each
+nonzero residue class modulo $\mathbb Z$ has net multiplicity zero, the
+adjacent quotient is $1$ modulo $p^{3r}$ for every $p\geq5$ away from the
+fixed denominator.  Every record in the public A364172--A364184
+fractional-factorial packet satisfies those hypotheses.
+
+This has one immediate named payoff: David Radcliffe proved A364175 integral
+on July 19, 2026, and the rational-gamma theorem now proves its still-open
+full cubic tower.  A364173 was already closed in this repository.  On the
+remaining records, the congruence component is proved in $\mathbb Q_p$ and
+global integrality is the only unresolved assertion.
+
+The same transfer proves the full all-row conjecture on A365025, including
+A365026 and A365027, and every stable row $s\ge3$ of A364513, including the
+named sequences A364515--A364517.  Row $1$ of A364513 (A364514) has an
+affine odd-index formula and remains outside the homogeneous theorem.
 
 ## Next review package
 
 The economical package to send after one week is:
 
 1. the symmetric-box theorem and checker;
-2. the balanced factorial-ratio theorem and A061164 corollary;
+2. the balanced and rational factorial-ratio theorems, including A061164
+   and the newly closed A364175 tower;
 3. the three exact unresolved Apéry defects; and
-4. a request for Peter's complete list of the new fractional-factorial
-   A-numbers.
+4. a comparison with Peter's complete list of newly submitted A-numbers.
 
 This distinguishes completed mathematics from the live queue and gives
 Peter and Paul Hanna specific statements to inspect.

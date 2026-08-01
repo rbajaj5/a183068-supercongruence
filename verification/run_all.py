@@ -32,6 +32,7 @@ SCRIPTS = (
     "verification/related/verify_a008793_cube_plane_partitions.py",
     "verification/related/verify_symmetric_box_plane_partitions.py",
     "verification/related/verify_balanced_factorial_ratio_towers.py",
+    "verification/related/verify_rational_gamma_ratio_towers.py",
     "verification/related/verify_apery_rank_one_defect.py",
     "verification/related/verify_q_calculus_supercongruence.py",
     "verification/related/verify_weighted_lift_collision_synthesis.py",

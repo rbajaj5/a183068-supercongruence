@@ -128,17 +128,15 @@ public.
 ## 3. What this does and does not settle
 
 The theorem applies uniformly to every **balanced integral factorial
-ratio**.  For a proposed sequence involving fractional factorials, two
-checks still come first:
+ratio**.  Fractional factorials are now covered by the companion
+[rational gamma-ratio theorem](RationalGammaRatioCubicTowers.md).  When the
+nonintegral slopes balance separately in every nonzero class modulo
+$\mathbb Z$, their adjacent transfer is again cubic at primes away from the
+fixed denominators.  Global integrality remains a separate obligation.
 
-1. convert the expression, with its parity or residue-class conventions,
-   into an exact balanced integer-factorial ratio; and
-2. prove the resulting values are $p$-integral.
-
-Once those checks succeed without an additional exponential normalization,
-the odd-prime cubic tower follows automatically from this note.  An extra
-factor $C^N$, a floor in a factorial argument, or a residue-class-dependent
-normalization is not harmless and must be audited separately.
+An extra factor $C^N$, a floor in a factorial argument, or a failure of the
+residue-balance condition is not harmless and must still be audited
+separately.
 
 No assertion is made here for $p=2$ or $p=3$.  Those primes require the
 separate denominator and sign analysis described in the repository's
