@@ -16,6 +16,7 @@ review.
 | --- | --- | --- |
 | Understand the original theorem | [Friendly proof](PROOF.md) | Machine-audited draft; specialist review pending |
 | See the response to Peter Bala's suggested proof routes | **[BALA_VERSION.md](BALA_VERSION.md)** | Preserved public bridge document |
+| Review the compact manuscript | **[ArXiv review draft](paper/README.md)** ([PDF](output/pdf/supercongruence-portfolio.pdf)) | Working draft for external review; not submitted or peer reviewed |
 | Check what was audited and corrected | [Audit log](AUDIT.md) | Exact-text audit record |
 | Find one precise mathematical claim | [Claim-level result index](RESULT_INDEX.md) | Controlling status ledger |
 | Track all 110 Bala/OEIS records | [110-record proof campaign](related-results/Bala110ProofCampaign.md) and [July 31 update](related-results/BalaJuly31ResearchUpdate.md) | Record-level route, status, evidence, and next action |
@@ -213,6 +214,8 @@ The integrity checker also protects the published
 | [`DYADIC_POLICY.md`](DYADIC_POLICY.md) | Required checklist for all-prime and ramified claims |
 | [`ROE_2ADIC.md`](ROE_2ADIC.md) | Public Roe--Turturean-inspired dyadic packet |
 | [`ROE_TURTUREAN_NOTE.md`](ROE_TURTUREAN_NOTE.md) | Short source-facing statement of the finite abelian \(2\)-target result |
+| [`paper/`](paper/README.md) | Compact review manuscript and submission checklist |
+| [`output/pdf/`](output/pdf/) | Rendered review copies of repository manuscripts |
 
 ## Public research policy
 

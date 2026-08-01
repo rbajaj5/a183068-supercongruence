@@ -1,0 +1,682 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\vp}{v_p}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\CT}{\operatorname{CT}}
+\newcommand{\OEIS}[1]{\href{https://oeis.org/#1}{#1}}
+
+\title{Elementary Transfer Principles for Supercongruence Towers\\
+\large A compact portfolio draft for external review}
+\author{Ravi Andrew Bajaj \and Alexander Burns}
+\date{August 1, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{\small
+Working draft.  The arguments are complete proof candidates with exact
+transcription checks, but the manuscript has not been peer reviewed or
+submitted.  The purpose of this version is focused mathematical review,
+especially by Peter Bala, Paul D. Hanna, and specialists in $p$-adic
+supercongruences.}}
+\end{center}
+
+\begin{abstract}
+We collect four elementary mechanisms for adjacent prime-power
+supercongruences.  First, a carry-and-transfer argument proves the
+all-prime congruence conjectured for \OEIS{A183068}.  Second, complete
+unit blocks prove a cubic transfer theorem for balanced products of gamma
+values at rational slopes.  This theorem settles the congruence part of a
+packet of fractional-factorial conjectures and, together with known or
+finite-sum integrality, proves the full towers for \OEIS{A364175}, every
+row of \OEIS{A365025}, and every homogeneous row of \OEIS{A364513}.
+Third, the same unit-block method gives uniform half-integral binomial
+families containing \OEIS{A091527}, \OEIS{A262732}, \OEIS{A275652}, and
+\OEIS{A275654}.  Fourth, a complementary-factor decomposition of
+MacMahon's product proves a nonlinear $p^{4r}$ Frobenius tower for plane
+partitions in every $N\times N\times cN$ box, including \OEIS{A008793},
+\OEIS{A352656}, and \OEIS{A352657}.  We separate theorem, integrality,
+finite verification, and literature-priority status throughout.  A final
+section packages the towers as arithmetic state sums and explains the
+precise, limited analogy with spin-foam coarse graining.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction and status boundary}
+
+An adjacent prime-power supercongruence compares the values of an integer
+sequence at two successive points of a $p$-adic tower.  The typical form is
+\[
+ a(np^r)\equiv a(np^{r-1})\pmod {p^{\lambda r}},
+\]
+while product sequences can obey the nonlinear variant
+\[
+ a(np^r)\equiv a(np^{r-1})^p\pmod {p^{\lambda r}}.
+\]
+The main theme here is that many apparently unrelated OEIS conjectures are
+controlled by one of two local operations:
+\begin{enumerate}
+\item discard summands whose base-$p$ carries already supply the modulus,
+      and rescale the remaining summands; or
+\item split a product into its $p$-divisible factors and complete blocks of
+      $p$-adic units, then annihilate the first two reciprocal moments.
+\end{enumerate}
+
+The source conjectures were formulated by Peter Bala on records created by
+several OEIS contributors.  In particular, Paul D. Hanna created
+\OEIS{A183068}, and Bala supplied its factorial-sum formula and
+supercongruence conjecture.  The present manuscript attributes the source
+statements but does not assign authorship to their originators without
+their consent.
+
+There are three separate questions for every claimed application.
+\begin{enumerate}
+\item Is the displayed value an integer (or at least $p$-integral)?
+\item Does the adjacent quotient have the asserted $p$-adic precision?
+\item Is the result new in the literature?
+\end{enumerate}
+The proofs below address the first two only where stated.  Negative searches
+are not treated as priority certificates.
+
+\section{Unit blocks and classical binomial transfer}
+
+We write $v_p(x)$ for the normalized $p$-adic valuation of a nonzero
+rational number.  A congruence between rational numbers is interpreted in
+$\Q_p$.
+
+\begin{lemma}[complete unit block]\label{lem:unit}
+Let $p\geq5$, let $P=p^e$ with $e\geq1$, and let $I$ be any union of
+complete intervals of length $P$.  Summing only over integers prime to $p$,
+\[
+ \sum_{j\in I,\,p\nmid j}\frac1j\equiv0\pmod {P^2},
+ \qquad
+ \sum_{j\in I,\,p\nmid j}\frac1{j^2}\equiv0\pmod P.
+\]
+\end{lemma}
+
+\begin{proof}
+For a single reduced residue block, multiplication by a unit $c$ with
+$c^2\not\equiv1\pmod p$ permutes the units.  Hence the reciprocal-square
+sum is congruent to $c^{-2}$ times itself and is zero modulo $P$.
+Pairing $u$ and $P-u$ gives
+\[
+ \frac1u+\frac1{P-u}\equiv-\frac P{u^2}\pmod {P^2},
+\]
+so the reciprocal sum vanishes modulo $P^2$.  Translation by $tP$ preserves
+the two precisions because
+\[
+ (tP+u)^{-1}\equiv u^{-1}-tPu^{-2}\pmod {P^2},\qquad
+ (tP+u)^{-2}\equiv u^{-2}\pmod P.
+\]
+Adding blocks proves the result.
+\end{proof}
+
+We also use the classical Ljunggren--Jacobsthal--Kazandzidis congruence in
+the following adjacent form: if $p\geq5$, $N=pM$, and $e=v_p(N)$, then
+\begin{equation}\label{eq:LJK}
+ \frac{\binom{aN}{bN}}{\binom{aM}{bM}}
+ \equiv1\pmod {p^{3e}}
+\end{equation}
+whenever the binomial coefficients are defined.  Refined versions and the
+small-prime losses are discussed in \cite{Kazandzidis,StraubLjunggren,Zudilin}.
+
+\section{Balanced rational gamma ratios}
+
+\subsection{A rational-binomial transfer}
+
+For positive integers $a,b,q$ with $a>bq$, define
+\[
+ G_{a,b,q}(N)=\binom{aN/q}{bN}
+ =\frac{\Gamma(aN/q+1)}{\Gamma(bN+1)\Gamma((a-bq)N/q+1)}.
+\]
+
+\begin{theorem}[rational-binomial transfer]\label{thm:rbin}
+Let $p\geq5$, $p\nmid q$, and $N=pM$.  If $e=v_p(N)$, then
+\[
+ \frac{G_{a,b,q}(N)}{G_{a,b,q}(M)}\equiv1\pmod {p^{3e}}.
+\]
+\end{theorem}
+
+\begin{proof}
+The finite product
+\[
+ G_{a,b,q}(N)=\frac1{q^{bN}(bN)!}
+ \prod_{j=0}^{bN-1}(aN-qj)
+\]
+has a numerator factor divisible by $p$ exactly when $p\mid j$.  Cancelling
+those factors and the corresponding denominator factors against the level
+$M$ product gives the exact identity
+\[
+ \frac{G_{a,b,q}(N)}{G_{a,b,q}(M)}
+ =\prod_{\substack{1\leq j<bN\\p\nmid j}}
+ \left(1-\frac{aN}{qj}\right).
+\]
+The sign disappears because $b(N-M)=bM(p-1)$ is even.  Put $P=p^e$.
+The index interval is a union of complete $P$-blocks.  Lemma
+\ref{lem:unit} shows that the linear and quadratic elementary-symmetric
+terms are divisible by $P^3$.  Every term of degree at least three contains
+$N^3$, while all denominators are $p$-adic units.  Thus the product is
+$1$ modulo $P^3$.
+\end{proof}
+
+\subsection{The residue-balanced theorem}
+
+Let $E:\Q_{>0}\to\Z$ have finite support and put
+\[
+ F(N)=\prod_{\alpha\in\Q_{>0}}\Gamma(\alpha N+1)^{E(\alpha)}.
+\]
+Assume
+\begin{equation}\label{eq:slope}
+ \sum_\alpha \alpha E(\alpha)=0
+\end{equation}
+and, for every nonzero class $\rho\in\Q/\Z$,
+\begin{equation}\label{eq:residue}
+ \sum_{\alpha\equiv\rho\pmod\Z}E(\alpha)=0.
+\end{equation}
+Let $Q$ be a common denominator of the slopes.
+
+\begin{theorem}[residue-balanced gamma transfer]\label{thm:gamma}
+For $p\geq5$, $p\nmid Q$, and $n,r\geq1$,
+\[
+ \frac{F(np^r)}{F(np^{r-1})}\equiv1\pmod {p^{3r}}.
+\]
+If $F(np^{r-1})$ is $p$-integral, then
+\[
+ F(np^r)\equiv F(np^{r-1})\pmod {p^{3r}}.
+\]
+\end{theorem}
+
+\begin{proof}
+Condition \eqref{eq:residue} pairs every numerator gamma factor of
+nonintegral slope with a denominator factor in the same residue class.
+For $\alpha>\beta$ and $d=\alpha-\beta\in\Z_{>0}$,
+\[
+ \frac{\Gamma(\alpha N+1)}{\Gamma(\beta N+1)}
+ =\binom{\alpha N}{dN}\Gamma(dN+1).
+\]
+Use the inverse identity if $\alpha<\beta$.  Repeating this operation leaves
+rational binomials governed by Theorem \ref{thm:rbin} and a balanced
+integer-slope factorial ratio.  A balanced integer-slope ratio factors as a
+Laurent product of $\binom{jN}{N}$, so \eqref{eq:LJK} applies to every
+factor.  Products and inverses preserve the congruence.  Multiplication by
+the lower $p$-integral value proves the final assertion.
+\end{proof}
+
+\subsection{Applications}
+
+The sequence \OEIS{A364175} is
+\[
+ A(N)=\frac{(6N)!(2N/3)!}{(3N)!(2N)!(5N/3)!}
+ =\binom{6N}{3N}\binom{3N}{N}\binom{5N/3}{N}^{-1}.
+\]
+David Radcliffe proved its integrality \cite{Radcliffe}.  Theorem
+\ref{thm:gamma} therefore gives the following complete tower.
+
+\begin{corollary}\label{cor:a364175}
+For every prime $p\geq5$ and $n,r\geq1$,
+\[
+ A(np^r)\equiv A(np^{r-1})\pmod {p^{3r}}.
+\]
+\end{corollary}
+
+For a fixed $s\geq0$, define
+\[
+ U_s(N)=
+ \frac{\Gamma(N/2+1)\Gamma((2s+1)N+1)\Gamma((2s+1/2)N+1)}
+ {\Gamma(N+1)\Gamma(sN+1)^2\Gamma((s+1/2)N+1)^2}.
+\]
+The OEIS identity
+\[
+ U_s(N)=\sum_{j=0}^{sN}\binom{(2s+1)N}{sN-j}^2
+                   \binom{N+j-1}{j}
+\]
+proves integrality.  The residue class $1/2+\Z$ has two numerator and two
+denominator factors, so Theorem \ref{thm:gamma} proves the conjectured
+cubic tower for every row of \OEIS{A365025}, including \OEIS{A365026} and
+\OEIS{A365027}.
+
+For $s\geq3$, the row family on \OEIS{A364513} has the gamma form
+\[
+ V_s(N)=\frac{s-2}{s}
+ \frac{\Gamma((s+2)N+1)\Gamma(sN/2+1)^2}
+ {\Gamma((s+2)N/2+1)\Gamma(sN+1)
+  \Gamma((s-2)N/2+1)\Gamma(N+1)^2}
+\]
+and the integral finite sum
+\[
+ V_s(N)=\sum_{j=0}^N\binom{sN-1}{N-j}^2
+                     \binom{(s-2)N+j-2}{j}.
+\]
+The constant $(s-2)/s$ cancels from adjacent quotients.  Theorem
+\ref{thm:gamma} proves the tower for every fixed $s\geq3$, including
+\OEIS{A364515}, \OEIS{A364516}, and \OEIS{A364517}.  Row $1$ is not
+homogeneous and is not claimed here.
+
+The same residue test applies to the displayed gamma quotients on
+\OEIS{A364172}--\OEIS{A364184}.  It proves their cubic transfer in $\Q_p$;
+an integer congruence still requires global integrality.  This logical
+separation is essential.
+
+\section{The all-prime A183068 theorem}
+
+Define
+\[
+ a(N)=\sum_{k=0}^N F(N,k),\qquad
+ F(N,k)=\frac{(2N+2k)!}{k!^4(N-k)!^2}.
+\]
+The summand is the six-part multinomial coefficient
+\[
+ F(N,k)=\binom{2N+2k}{k,k,k,k,N-k,N-k}.
+\]
+
+\begin{lemma}[carry depth]\label{lem:carry}
+Suppose $p^t\mid N$ and $s=v_p(k)<t$.  Then
+\[
+ v_p(F(N,k))\geq2(t-s).
+\]
+For $p=2$ the lower bound improves to $2(t-s)+1$.
+\end{lemma}
+
+\begin{proof}
+At level $q=p^i$, write $N=qM$ and $k=qa+u$ with $0<u<q$.  Legendre's
+formula gives the level contribution
+\[
+ \left\lfloor\frac{2N+2k}{q}\right\rfloor
+ -4\left\lfloor\frac{k}{q}\right\rfloor
+ -2\left\lfloor\frac{N-k}{q}\right\rfloor
+ =2+\left\lfloor\frac{2u}{q}\right\rfloor\geq2.
+\]
+There are $t-s$ active levels.  If $p=2$, then at $i=s+1$ one has
+$u=2^s$, and this level contributes $3$.
+\end{proof}
+
+We use the multinomial form of the prime-power
+Ljunggren--Jacobsthal--Kazandzidis estimate.  If every positive component
+$b_i$ is divisible by $p^s$, then
+\begin{equation}\label{eq:multiscale}
+ \frac{\binom{p\sum b_i}{pb_1,\ldots,pb_m}}
+      {\binom{\sum b_i}{b_1,\ldots,b_m}}
+ \equiv1\pmod {p^{3(s+1)-\epsilon_p}},
+\end{equation}
+where $\epsilon_2=2$, $\epsilon_3=1$, and $\epsilon_p=0$ for $p\geq5$.
+The possible binary sign is harmless here: for $s\geq1$ its exceptional
+parity condition cannot occur, while at $s=0$ the modulus is $2$.
+
+\begin{lemma}[summand transfer]\label{lem:summand}
+Let $N'=np^{r-1}$ and $0\leq\ell\leq N'$.  Then
+\[
+ F(pN',p\ell)\equiv F(N',\ell)\pmod {p^{2r}}.
+\]
+\end{lemma}
+
+\begin{proof}
+Apply \eqref{eq:multiscale} to
+\[
+ \ell,\ell,\ell,\ell,N'-\ell,N'-\ell.
+\]
+Let $s$ be the smallest valuation among positive components.  If
+$s<r-1$, Lemma \ref{lem:carry} contributes $2(r-1-s)$ powers (one more at
+$p=2$), while \eqref{eq:multiscale} contributes
+$3(s+1)-\epsilon_p$.  Their sum is at least $2r$.  If $s\geq r-1$,
+the scaling estimate alone suffices except possibly for $p=2,r=1$.
+In that case some positive component $b$ is repeated, so the multinomial
+contains the even factor $\binom{2b}{b}$.  This supplies the missing binary
+power.
+\end{proof}
+
+\begin{theorem}[A183068]\label{thm:a183068}
+For every prime $p$ and all $n,r\geq1$,
+\[
+ a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}.
+\]
+\end{theorem}
+
+\begin{proof}
+Set $N=np^r$.  If $p\nmid k$, Lemma \ref{lem:carry} gives
+$F(N,k)\equiv0\pmod {p^{2r}}$.  The indices divisible by $p$ are
+$k=p\ell$, and Lemma \ref{lem:summand} replaces their summands by
+$F(N/p,\ell)$.  Summing gives exactly $a(N/p)$ modulo $p^{2r}$.
+\end{proof}
+
+\section{Half-integral coefficient families}
+
+For $m\geq2$, define
+\[
+ A_m(N)=[x^N]\left(\frac{(1+x)^m}{(1-x)^{m-2}}\right)^N.
+\]
+Residue extraction gives
+\begin{equation}\label{eq:oddunitform}
+ A_m(N)=4^N\binom{(mN-1)/2}{N}
+ =\frac{2^N}{N!}\prod_{j=0}^{N-1}(mN-(2j+1)).
+\end{equation}
+
+\begin{theorem}[odd-unit block family]\label{thm:oddblock}
+For $m\geq2$, $p\geq5$, and $n,r\geq1$,
+\[
+ A_m(np^r)\equiv A_m(np^{r-1})\pmod {p^{3r}}.
+\]
+\end{theorem}
+
+\begin{proof}
+Let $N=np^r$ and $M=N/p$.  In \eqref{eq:oddunitform}, the factors indexed
+by odd multiples of $p$ reproduce the level $M$ product.  The remaining
+quotient factors as
+\[
+ \frac{\binom{2N}{N}}{\binom{2M}{M}}
+ \prod_{\substack{1\leq t<2N\\t\ {m odd},\ p\nmid t}}
+ \left(1-\frac{mN}{t}\right).
+\]
+The first factor is $1$ modulo $p^{3r}$ by \eqref{eq:LJK}.  The odd
+indices form complete unit blocks modulo $p^{v_p(N)}$; their first two
+reciprocal moments vanish to the precisions of Lemma \ref{lem:unit}.
+Expanding the finite product proves the same cubic precision for the second
+factor.  Integrality follows from the coefficient definition.
+\end{proof}
+
+The cases $m=3$ and $m=5$ prove the conjectures on \OEIS{A091527} and
+\OEIS{A262732}.  Both fail at $p=3$, so the prime restriction is sharp for
+these named cases.
+
+For $a\geq3$, set
+\[
+ D_a(N)=\sum_{k=0}^N
+ \binom{(a-1)N-k-1}{N-k}\binom{aN}{k}^2.
+\]
+Dixon's terminating ${}_3F_2(1)$ evaluation yields
+\[
+ D_a(N)=\binom{aN}{2N}
+ \binom{(a+2)N/2}{N}\binom{2N}{N}
+ \binom{aN/2}{N}^{-1}.
+\]
+Theorem \ref{thm:rbin} with $q=2$, together with \eqref{eq:LJK}, proves
+\[
+ D_a(np^r)\equiv D_a(np^{r-1})\pmod {p^{3r}}
+ \qquad(p\geq5).
+\]
+The cases $a=3,5$ are \OEIS{A275652} and \OEIS{A275654}; row $a=7$ is
+\OEIS{A364304}.  The finite sum supplies integrality.
+
+\section{Symmetric-box plane partitions}
+
+For $c,N\geq1$, let
+\[
+ B_c(N)=\prod_{i,j=1}^N\frac{cN+i+j-1}{i+j-1}.
+\]
+MacMahon's formula identifies this with the number of plane partitions in
+an $N\times N\times cN$ box.
+
+\begin{theorem}[symmetric-box Frobenius tower]\label{thm:box}
+For every prime $p$ and all $c,n,r\geq1$,
+\[
+ B_c(np^r)\equiv B_c(np^{r-1})^p\pmod {p^{4r}}.
+\]
+\end{theorem}
+
+\begin{proof}
+Pair the multiplicity-$s$ and multiplicity-$(2N-s)$ factors in MacMahon's
+product to obtain
+\[
+ B_c(N)=(c+1)^N\prod_{s=1}^{N-1}
+ \left(1+\frac{c(c+2)N^2}{s(2N-s)}\right)^s.
+\]
+After replacing $N$ by $pN$, the factors with $p\mid s$ reproduce the
+$p$-th power of the level $N$ product.  The residual unit product is
+\[
+ U_{p,c}(N)=\prod_{\substack{1\leq s<pN\\p\nmid s}}
+ \left(1+\frac{c(c+2)p^2N^2}{s(2pN-s)}\right)^s.
+\]
+For odd $p$, the logarithmic linear term is a multiple of the reciprocal
+sum over the units in the interval $(np^r,2np^r)$.  Pairing $t$ with
+$3np^r-t$ shows that this reciprocal sum vanishes modulo $p^{2r}$.
+The linear term therefore has valuation at least $4r$, and every higher
+logarithmic term has at least the same valuation.
+
+For $p=2$, complementary odd residues give the required reciprocal-block
+bound.  If $c$ is even, $c(c+2)$ supplies three bonus powers.  If $c$ is
+odd, the residual product is initially two powers short, but $B_c(N)$ is
+even: for odd $N$, box complementation is fixed-point-free, and Legendre's
+formula gives $v_2(B_c(2N))=2v_2(B_c(N))$.  Thus the square
+$B_c(N)^2$ supplies the two missing powers.
+\end{proof}
+
+The cases $c=1,2,3$ prove the named conjectures on \OEIS{A008793},
+\OEIS{A352656}, and \OEIS{A352657}.
+
+\section{A spin-foam-inspired state-sum interpretation}
+
+Spin-foam models assign local labels to the faces and edges of a
+two-complex, multiply local amplitudes, and sum over compatible labelings
+\cite{BaezSpinFoam,PerezSpinFoam}.  Their renormalization problem compares
+amplitudes on fine and coarse discretizations \cite{Steinhaus}.  The
+supercongruence towers above admit a precise arithmetic analogue of this
+\emph{state-sum and coarse-graining architecture}, although they are not
+models of quantum gravity.
+
+For \OEIS{A183068}, a state at scale $N$ is a six-color occupancy vector
+\[
+ (k,k,k,k,N-k,N-k)
+\]
+with local multiplicity $F(N,k)$.  The partition function is
+$a(N)=\sum_kF(N,k)$.  The coarse-graining map at the prime $p$ sends the
+surviving state $k=p\ell$ to $\ell$.  States not lying in the image acquire
+at least $2r$ powers of $p$ from carries, while the amplitude of a surviving
+state agrees with its coarse amplitude modulo $p^{2r}$.  Thus Theorem
+\ref{thm:a183068} is a local-to-global invariance statement for an
+arithmetic partition function.
+
+The product models have the same shape with no external summation.  A
+microscopic label is an individual numerator or denominator factor.  The
+$p$-divisible labels reproduce the coarser product exactly, and the unit
+labels form complete fibers over $(\Z/p^e\Z)^\times$.  Lemma
+\ref{lem:unit} says that the first two moments of every fiber vanish to the
+needed $p$-adic precision.  In this language the passage
+\[
+ N\longmapsto pN
+\]
+is an arithmetic subdivision, and a congruence such as
+\[
+ Z(pN)\equiv Z(N)\pmod {p^{\lambda r}}
+\]
+or $Z(pN)\equiv Z(N)^p$ is a finite-precision renormalization fixed-point
+law.  The exponent $\lambda r$ measures the depth to which fine-scale
+fluctuations are invisible in the coarse observable.
+
+This viewpoint suggests a reusable definition.  An \emph{arithmetic foam}
+is a finite labeled cell system with amplitudes in $\Z_p$, together with a
+surjective coarse-graining map whose nontrivial fibers have controlled
+$p$-adic moments.  A state-sum supercongruence follows when
+\begin{enumerate}
+\item amplitudes outside the coarse image vanish to the target depth;
+\item amplitudes inside the image transfer to their coarse counterparts;
+      and
+\item these estimates are stable under summation or multiplication.
+\end{enumerate}
+The carry lemma and the unit-block lemma are two concrete realizations of
+the same three axioms.
+
+The analogy stops there.  No gauge group, representation labels,
+intertwiner spaces, Pachner-move invariance, semiclassical limit, or
+continuum theory has been constructed.  Consequently these arithmetic
+foams should be read as a physics-inspired organizational device, not as a
+claim that the OEIS sequences are spin-foam quantum-gravity amplitudes.
+The useful research question is narrower: whether known spin-foam and
+tensor-network coarse-graining identities suggest new finite-fiber moment
+cancellations, and whether those cancellations can then be proved purely
+arithmetically.
+
+\section{Compact portfolio ledger}
+
+Table \ref{tab:ledger} records the named OEIS consequences presently
+packaged as complete proofs or explicit deductions in the public
+repository.  It is a review index, not a claim that every line uses the
+same proof.  The four engines proved in this manuscript cover the rows
+marked ``this paper.''  The remaining rows have self-contained companion
+notes and exact checkers in the repository and should be audited separately
+before being incorporated into a final arXiv submission.
+
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.24\textwidth}
+                  >{\raggedright\arraybackslash}p{0.29\textwidth}
+                  >{\raggedright\arraybackslash}p{0.37\textwidth}}
+\caption{Named supercongruence consequences in the review portfolio.}
+\label{tab:ledger}\\
+\toprule
+OEIS records & Mechanism & Review status \\
+\midrule
+\endfirsthead
+\toprule
+OEIS records & Mechanism & Review status \\
+\midrule
+\endhead
+\OEIS{A183068} & multinomial carries and scaling & Theorem \ref{thm:a183068}; all primes \\
+\OEIS{A008793}, \OEIS{A352656}, \OEIS{A352657} & symmetric-box product & Theorem \ref{thm:box}; all primes \\
+\OEIS{A364175}, \OEIS{A365025}--\OEIS{A365027},
+\OEIS{A364515}--\OEIS{A364517} & residue-balanced rational gamma ratios & Theorem \ref{thm:gamma}; $p\geq5$ \\
+\OEIS{A091527}, \OEIS{A262732} & odd unit blocks & Theorem \ref{thm:oddblock}; $p\geq5$ \\
+\OEIS{A275652}, \OEIS{A275654}, \OEIS{A364304} & Dixon and half-binomial transfer & Section 5; $p\geq5$ \\
+\OEIS{A061164}, \OEIS{A364506} & balanced factorial or binomial Laurent products & complete deductions from \eqref{eq:LJK} \\
+\OEIS{A288470}, \OEIS{A141057} & termwise carry/Frobenius families & complete companion proofs; external review pending \\
+\OEIS{A357509}, \OEIS{A357568} & binomial-quotient cancellation & complete companion proofs; external review pending \\
+\OEIS{A002003}, \OEIS{A348410}, \OEIS{A351857},
+\OEIS{A352373}, \OEIS{A370101}, \OEIS{A370102} & coefficient framing/Cartier transfer & complete companion proofs; external review pending \\
+\OEIS{A008485}, \OEIS{A008705}, \OEIS{A270913}, \OEIS{A270919} & modular-product prime coefficients & complete companion proofs; external review pending \\
+\OEIS{A255672}, \OEIS{A270922}, \OEIS{A270924} & colored Euler-product transfer & complete companion proofs; external review pending \\
+\OEIS{A108625}, \OEIS{A143007}, \OEIS{A177316} & multivariate Ap\'ery transfer at the boundary prime & complete companion proofs; external review pending \\
+\OEIS{A049505} & paired symmetric-plane-partition products & complete companion proof; external review pending \\
+\OEIS{A357510} & odd Ap\'ery moment at primes & complete companion proof; composite extensions remain separate \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+The repository also contains reductions and computational targets.  They
+are intentionally absent from Table \ref{tab:ledger}; in particular, the
+enhanced Ap\'ery defect relations, paired ordinary/shifted towers, and the
+remaining global integrality problems are not declared solved.
+
+\section{Verification and review questions}
+
+The exact checkers use integer or rational arithmetic and are intended to
+catch transcription errors, not to replace proofs.  The main commands are
+\begin{verbatim}
+python verification/verify_a183068.py
+python verification/related/verify_rational_gamma_ratio_towers.py
+python verification/related/verify_symmetric_box_plane_partitions.py
+python verification/related/verify_dixon_legendre_towers.py
+python verification/check_repository_integrity.py
+\end{verbatim}
+The rational-gamma checker performs 8,666 exact checks; the A183068,
+symmetric-box, Dixon--Legendre, and repository-integrity suites are also
+registered by the public repository runner.
+
+For an efficient independent review, the highest-risk obligations are:
+\begin{enumerate}
+\item verify the exact cancellation identity in Theorem \ref{thm:rbin};
+\item verify that residue-class balance is sufficient for the pairing in
+      Theorem \ref{thm:gamma}, including negative multiplicities;
+\item audit the small-prime exponent and sign in
+      \eqref{eq:multiscale}, especially $p=2,r=1$;
+\item audit the binary parity repair in Theorem \ref{thm:box}; and
+\item check each OEIS formula and the literature-priority boundary
+      independently of the proofs.
+\end{enumerate}
+
+\section*{Acknowledgments}
+
+We thank Peter Bala for formulating the OEIS conjectures and for identifying
+the superfactorial, Ap\'ery-combination, paired-tower, and
+fractional-factorial directions.  We thank Paul D. Hanna for creating
+\OEIS{A183068} and for encouraging review of the proposed proof.  We thank
+David Radcliffe for making his integrality proof for \OEIS{A364175}
+publicly available.  This research used large language models for
+conjecture routing, symbolic exploration, proof criticism, and code
+generation.  Every promoted claim is accompanied by a written proof and
+exact reproducibility checks; machine assistance is not described as peer
+review.
+
+\begin{thebibliography}{99}
+
+\bibitem{Bober}
+J. W. Bober,
+\emph{Factorial ratios, hypergeometric series, and a family of step
+functions}, J. London Math. Soc. 79 (2009), 422--444;
+\href{https://arxiv.org/abs/0709.1977}{arXiv:0709.1977}.
+
+\bibitem{BaezSpinFoam}
+J. C. Baez,
+\emph{Spin foam models},
+Class. Quantum Grav. 15 (1998), 1827--1858;
+\href{https://arxiv.org/abs/gr-qc/9709052}{arXiv:gr-qc/9709052}.
+
+\bibitem{Kazandzidis}
+G. S. Kazandzidis,
+\emph{Congruences on the binomial coefficients},
+Bull. Soc. Math. Gr\`ece, N.S. 9 (1968), 1--12.
+
+\bibitem{OSS}
+R. Osburn, B. Sahu, and A. Straub,
+\emph{Supercongruences for sporadic sequences},
+Proc. Edinburgh Math. Soc. 59 (2016), 503--518;
+\href{https://arxiv.org/abs/1312.2195}{arXiv:1312.2195}.
+
+\bibitem{Radcliffe}
+D. Radcliffe,
+\emph{Integrality of a ratio of fractional factorials},
+note linked from \OEIS{A364175}, July 2026;
+\href{https://oeis.org/A364175/a364175.pdf}{OEIS PDF}.
+
+\bibitem{PerezSpinFoam}
+A. Perez,
+\emph{The new spin foam models and quantum gravity},
+Papers Phys. 4 (2012), 040004;
+\href{https://arxiv.org/abs/1205.0911}{arXiv:1205.0911}.
+
+\bibitem{Soundararajan}
+K. Soundararajan,
+\emph{Integral factorial ratios: irreducible examples with height larger
+than 1}, Philos. Trans. Roy. Soc. A 378 (2020), 20180444;
+\href{https://arxiv.org/abs/1906.06413}{arXiv:1906.06413}.
+
+\bibitem{StraubLjunggren}
+A. Straub,
+\emph{A $q$-analog of Ljunggren's binomial congruence},
+S\'em. Lothar. Combin. 64 (2011), Article B64c;
+\href{https://arxiv.org/abs/1103.3258}{arXiv:1103.3258}.
+
+\bibitem{StraubMulti}
+A. Straub,
+\emph{Multivariate Ap\'ery numbers and supercongruences of rational
+functions}, Algebra Number Theory 8 (2014), 1985--2008;
+\href{https://arxiv.org/abs/1401.0854}{arXiv:1401.0854}.
+
+\bibitem{Steinhaus}
+S. Steinhaus,
+\emph{Coarse graining spin foam quantum gravity -- a review},
+Front. Phys. 8 (2020), 295;
+\href{https://arxiv.org/abs/2007.01315}{arXiv:2007.01315}.
+
+\bibitem{Zudilin}
+W. Zudilin,
+\emph{Congruences for $q$-binomial coefficients},
+Ann. Comb. 23 (2019), 1123--1135;
+\href{https://arxiv.org/abs/1901.07843}{arXiv:1901.07843}.
+
+\end{thebibliography}
+
+\end{document}
