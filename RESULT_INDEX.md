@@ -694,6 +694,29 @@ proof.
 - **Proof:** [Symmetric-box plane partitions](related-results/SymmetricBoxPlanePartitionTower.md)
 - **Exact checker:** [`verify_symmetric_box_plane_partitions.py`](verification/related/verify_symmetric_box_plane_partitions.py)
 
+### FACTRATIO-3 - balanced factorial-ratio cubic tower
+
+- **Claim:** Every balanced factorial ratio
+  \[
+  F(N)=\prod_m((mN)!)^{c_m},\qquad \sum_m m c_m=0,
+  \]
+  whose values are $p$-integral satisfies
+  \[
+  F(np^r)\equiv F(np^{r-1})\pmod {p^{3r}}
+  \]
+  for every prime $p\geq5$ and all $n,r\geq1$.
+- **Named consequence:** The integral sporadic factorial ratio A061164
+  satisfies the full ordinary cubic tower. This anticipates a pending OEIS
+  direction mentioned by Peter Bala; the approved page did not yet display
+  the conjecture when checked on July 31, 2026.
+- **Mechanism:** A telescoping identity writes every balanced factorial
+  ratio as a Laurent product of \(\binom{jN}{N}\). Classical
+  Ljunggren--Jacobsthal scaling then applies factor by factor.
+- **Status:** Complete deduction from a classical theorem. The mechanism is
+  broad but not claimed as new; no assertion is made for $p=2,3$.
+- **Proof:** [Balanced factorial-ratio cubic towers](related-results/BalancedFactorialRatioCubicTowers.md)
+- **Exact checker:** [`verify_balanced_factorial_ratio_towers.py`](verification/related/verify_balanced_factorial_ratio_towers.py)
+
 ### A008793-CUBE — nonlinear cube-plane-partition tower
 
 - **Claim:** For the number \(A(N)\) of plane partitions in an

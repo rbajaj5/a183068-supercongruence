@@ -40,7 +40,7 @@ allocation, the portfolio currently has four tiers:
 | Tier | Results | Recommended use of effort |
 | --- | --- | --- |
 | **A: specialist review now** | SYMBOX-4, ZHANG-4, FRAMING-COUNTEREX, GWL-TWO, GWL-SCALE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
-| **B: broad theorem engines** | FROB-PACKET, JC-ORBIT, LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER | Reuse on named conjectures and consolidate families |
+| **B: broad theorem engines** | FROB-PACKET, JC-ORBIT, LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER, FACTRATIO-3 | Reuse on named conjectures and consolidate families |
 | **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, BLACK-WALSH, HASH-MATROID, FQ-CT, WALK-FROB, GQ2-ABCOUNT, GQ2-DIHEDRAL, GQ2-QUATERNION, GQ2-MAXCYCLIC, GQ2-EXTRASPECIAL | Improve experiments, certification, source consolidation, and proof organization |
 | **D: retained open targets** | C11, CAT-ODD, BALA-TOWERS, APERY-DEFECT, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
 
@@ -103,6 +103,7 @@ without increasing a supercongruence exponent.
 | 23 | [GPS: Gaussian power sums](related-results/GaussianPowerSumConjectures.md) | **5** | 1 | 6 | 4 | 6 | 5 | Complete unchecked proofs of two formulas plus exact counterexamples to two broader claims. |
 | 23 | [A333-COSTER: complete A333593 tower](related-results/BalaOeisSupercongruenceQueue.md#4-the-a333593-tower-is-a-coster-corollary) | **5** | 1 | 2 | 6 | 9 | 1 | Named OEIS tower closed by an exact reduction to Coster and Jacobsthal--Kazandzidis; likely a previously implicit corollary rather than a new mechanism. |
 | 23 | [A364506-LAURENT: complete row tower](related-results/BinomialQuotientCancellation.md#2-application-to-a364506) | **5** | 1 | 3 | 8 | 9 | 2 | Every row of a named OEIS array is closed by one integral Laurent-binomial theorem; mathematically useful breadth, but the mechanism is a clean reduction to classical scaling. |
+| 23 | [FACTRATIO-3: balanced factorial-ratio cubic tower](related-results/BalancedFactorialRatioCubicTowers.md) | **5** | 1 | 2 | 9 | 9 | 1 | Complete classical deduction for every balanced integral factorial ratio, with A061164 as a named consequence; broad and useful, but probably implicit in Jacobsthal scaling rather than a priority result. |
 | 24 | [DWORK-BOUNDARY: failure of the proposed shortcut](related-results/FrobeniusQuotientConstantTerms.md#3-what-the-standard-dwork-theorem-does-not-supply-automatically) | **4** | 1 | 5 | 5 | 9 | 2 | Complete exact counterexamples delimiting the constant-term approach. |
 | 25 | [GFT: Gaussian Frobenius twists](related-results/GaussianFrobeniusTwists.md) | **4** | 3 | 4 | 7 | 8 | 3 | Complete elementary deduction; literature priority unchecked. |
 | 25 | [WALK-FROB: finite lattice-walk Frobenius congruences](related-results/LatticeWalkFrobeniusCongruences.md) | **4** | 3 | 2 | 8 | 9 | 2 | Complete trace/Euler-product proof with Gaussian and Eisenstein local tables and ramified uniformizer bounds; unramified theorem is standard infrastructure, and no SAW-to-SLE arithmetic implication is claimed. |
