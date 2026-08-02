@@ -29,6 +29,17 @@ Q(a,b;c,d)
 \qquad\text{(1)}
 ```
 
+Equation (1) fixes a specific element of $\mathbb Q(i)$; it is not an
+associate class, so no unit choice enters the ratio below. Reindexing the two
+coordinates gives the exact consistency relation
+
+```math
+Q(b,a;d,c)=\overline{Q(a,b;c,d)}.
+```
+
+Thus conjugation preserves every valuation statement and the leading residue
+after reduction modulo $\varpi$.
+
 ## 1. The theorem
 
 For $A\ge C\ge1$, $B\ge D\ge1$, and $r\ge2$, put
@@ -295,7 +306,11 @@ For $r\ge2$ and $Z\in\mathbb Z[i]$,
 ### Proof
 
 Every quotient $2^rZ/\xi$ has valuation at least $2r-1$, so the
-$\varpi$-adic logarithm converges. It gives
+$\varpi$-adic logarithm converges. More precisely, $r\ge2$ puts every factor
+in $1+\varpi^3\mathcal O$. Over $\mathbb Q_2(i)$ the exponential requires
+valuation greater than $2$, so logarithm and exponential are inverse on this
+depth-three neighborhood. The nontrivial fourth roots of unity do not enter:
+$v(i-1)=v(-i-1)=1$ and $v(-1-1)=2$. It gives
 
 ```math
 \log\frac{H_r(Z)}{H_r(0)}
@@ -779,6 +794,9 @@ Q(2^{r-1}A,2^{r-1}B;2^{r-1}C,2^{r-1}D)
 
 ## 7. Exact checks and review boundary
 
+The active review obligations and the 2026-08-16 checkpoint are maintained in
+the [GWL-TWO audit packet](GWLTwoAuditPacket.md).
+
 The companion exact-arithmetic script verifies the full exact formula (3a)
 on all admissible rectangles with $A,B\le6$, at both $r=2$ and $r=3$:
 810 checks with no mismatch. At each scale, 72 of 405 ratios attain the
@@ -789,6 +807,7 @@ Run:
 
 ```text
 python verification/related/experiment_gaussian_lucas_scaling.py
+python verification/related/verify_gaussian_lucas_ramified_audit.py
 ```
 
 The main independent-review targets are:

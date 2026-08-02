@@ -13,7 +13,9 @@ proof note.
 Each entry records:
 
 - the exact quantified claim;
-- proof status;
+- immutable claim-entry date;
+- author-completeness status;
+- independent-audit status;
 - source status;
 - the \(p=2\) or ramified-prime burden, when relevant;
 - the proof note;
@@ -26,8 +28,8 @@ Each entry records:
 observation
     -> exact computation
     -> conjecture or reduction
-    -> complete unchecked draft
-    -> audited draft
+    -> apparently gapless candidate / unaudited
+    -> apparently gapless candidate / machine-assisted audit
     -> conventional specialist review
     -> submitted or published result
 ```
@@ -50,10 +52,11 @@ and search range recorded. The checker must be reproducible.
 The original target has been proved equivalent to, or implied by, a smaller
 explicit unresolved statement. Failed proof routes remain recorded.
 
-### Complete unchecked draft
+### Apparently gapless candidate / unaudited
 
 All logical steps are written. Exact checkers test transcription and boundary
-cases. Literature priority and independent mathematical review remain open.
+cases. This replaces the legacy phrase "complete unchecked draft."
+Literature priority and independent mathematical review remain open.
 
 ### Audited draft
 
@@ -106,6 +109,15 @@ Checkers should:
 - be registered in [`verification/run_all.py`](verification/run_all.py) when
   they are part of the maintained portfolio.
 
+A maintained checker also records near-miss statement mutations and a nested
+or extended range. Its evidence line must answer: **what nearby false claim
+would this checker have rejected?** A checker with no mutation result is a
+consistency aid, not promotion evidence.
+
+The three-way calibration, retirement clock, mutation standard, and named
+literature corpus are specified in
+[`VALIDATION_PROTOCOL.md`](VALIDATION_PROTOCOL.md).
+
 The repository-level integrity check validates local Markdown links, balanced
 code/math fences, and the immutability of `BALA_VERSION.md`.
 
@@ -135,6 +147,10 @@ arguments belong in dedicated notes.
 
 These are resource-allocation estimates. They never override the controlling
 status in [`RESULT_INDEX.md`](RESULT_INDEX.md).
+
+Newly generated items remain in [`intake/`](intake/README.md) until admitted.
+An unaudited claim retires from the active queue 30 days after its original
+entry date; later edits do not reset the clock.
 
 ## 8. Protected correspondence bridge
 

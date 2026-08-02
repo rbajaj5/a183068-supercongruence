@@ -23,6 +23,7 @@ review.
 | Compare the portfolio economically | [Economist-style rankings](RANKINGS.md) | Editorial scores, not correctness claims |
 | Browse the wider program | [Related-results reading map](related-results/README.md) | Theorem, reduction, computation, and synthesis lanes |
 | Reproduce the computations | [`verification/run_all.py`](verification/run_all.py) | Exact checkers with no floating-point tolerance unless stated |
+| Understand validation and retirement | [Validation protocol](VALIDATION_PROTOCOL.md) | Three-way calibration, two-axis status, mutation evidence, and claim retirement |
 
 The repository workflow and promotion rules are documented in
 [RESEARCH_WORKFLOW.md](RESEARCH_WORKFLOW.md).
@@ -81,7 +82,7 @@ The exact label in [RESULT_INDEX.md](RESULT_INDEX.md) controls. In brief:
 | --- | --- |
 | **Published theorem** | A cited external source proves the statement used here |
 | **Audited draft** | A complete argument received a separate machine-assisted exact-text audit; not peer reviewed |
-| **Complete unchecked draft** | A complete written proof and checks are present; independent review and priority work remain |
+| **Apparently gapless / unaudited** | The author believes the written proof is complete; no independent audit has certified that belief |
 | **Deduction** | An explicit consequence of a broader theorem or proof candidate |
 | **Reduction** | A target has been reduced to a smaller unresolved statement |
 | **Computational** | Exact finite evidence or a certificate is present, but no general proof is claimed |
@@ -93,7 +94,14 @@ never upgrades a proof status.
 
 ## Current review queue
 
-The highest-value specialist-review targets are:
+The active gate is **GWL-TWO**, the
+[ramified Gaussian theorem](related-results/GWLTwoAuditPacket.md), with an
+audit checkpoint of **2026-08-16**. Until it closes, fails, or is demoted, new
+families go to [`intake/`](intake/README.md) rather than the primary ledger or
+rankings.
+
+The remaining specialist-review targets, currently held behind that gate,
+are:
 
 1. the new [symmetric-box plane-partition tower](related-results/SymmetricBoxPlanePartitionTower.md), which proves A352656 and A352657 and subsumes A008793;
 2. the [dimension-minimal counterexample to Zhang's four-matrix conjecture](related-results/ZhangFourMatrixCounterexample.md);
@@ -216,6 +224,8 @@ The integrity checker also protects the published
 | [`ROE_TURTUREAN_NOTE.md`](ROE_TURTUREAN_NOTE.md) | Short source-facing statement of the finite abelian \(2\)-target result |
 | [`paper/`](paper/README.md) | Compact review manuscript and submission checklist |
 | [`output/pdf/`](output/pdf/) | Rendered review copies of repository manuscripts |
+| [`VALIDATION_PROTOCOL.md`](VALIDATION_PROTOCOL.md) | Calibration, retirement, mutation, and literature-audit rules |
+| [`intake/`](intake/README.md) | Unindexed generated material awaiting admission |
 
 ## Public research policy
 
