@@ -50,6 +50,7 @@ SCRIPTS = (
     "verification/related/verify_eta_prime3.py",
     "verification/related/verify_cooper_level11.py",
     "verification/related/verify_dwork_boundaries.py",
+    "verification/related/verify_a183068_representation_packet.py",
     "verification/related/verify_gaussian_twists.py",
     "verification/related/verify_bala_gaussian_twist_pilot.py",
     "verification/related/verify_binomial_power_frobenius.py",
