@@ -1,4 +1,4 @@
-# Maximin residue-orbit experiment for the paired Apéry towers
+# Maximin residue-block experiment for the paired Apéry towers
 
 **Status:** exact computational reduction target; not a proof
 
@@ -33,7 +33,7 @@ j&F_j(N,k)\\ \hline
 
 Put $a_j(N)=\sum_{k=0}^N F_j(N,k)$.
 
-## 2. The orbit-transfer target
+## 2. The residue-block transfer target
 
 Let $p\geq5$ be prime and write $N=np^r$, with $p\nmid n$. (The general
 case follows by absorbing $v_p(n)$ into $r$.) Define
@@ -46,7 +46,7 @@ S_{j,s}(N)=
 The exact data support the following single certificate for all eight
 unshifted towers:
 
-> **Orbit-transfer conjecture.** For $459\leq j\leq466$, $p\geq5$, and
+> **Residue-block transfer conjecture.** For $459\leq j\leq466$, $p\geq5$, and
 > $n,r\geq1$ with $p\nmid n$,
 >
 > ```math
@@ -95,10 +95,10 @@ where $\mathcal P$ ranges over proof-compatible residue partitions. The
 data reject singleton and, usually, two-element partitions; complete unit
 residue aggregation is the first partition that reaches the cubic target.
 
-There is a limited analogy with paradoxical-decomposition proofs: both begin
-with a group action, split into orbits, and reassemble.  Nothing paradoxical
-occurs here.  All sets are finite, no choice principle is used, and the gain
-comes from congruential cancellation over the finite unit group.
+No group action on the summands has been proved. Accordingly, these blocks
+should not yet be called orbits. A projective or finite-group action could
+eventually explain the cancellation, but at present that is a proof-search
+proposal rather than part of the result.
 
 ## 4. Boundary of the Gaussian synthesis
 
@@ -140,7 +140,7 @@ Python integers; no floating-point approximation occurs.
 Run:
 
 ```text
-python verification/related/verify_bala_paired_orbit_transfer.py
+python verification/related/verify_bala_paired_residue_block.py
 ```
 
 The experiment identifies the missing lemma.  It is not evidence that the

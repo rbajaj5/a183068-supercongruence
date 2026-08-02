@@ -1,4 +1,4 @@
-"""Exact orbit-transfer tests for OEIS A376459--A376466.
+"""Exact residue-block transfer tests for OEIS A376459--A376466.
 
 These computations isolate a proof target; they are not a proof.
 """
@@ -110,7 +110,7 @@ def gaussian_adjacent_valuation(
     )
 
 
-def orbit_transfer_checks() -> int:
+def residue_block_transfer_checks() -> int:
     checks = 0
     for sequence in SEQUENCES:
         for prime, r, n in test_grid():
@@ -198,17 +198,17 @@ def gaussian_boundary_checks() -> int:
 
 
 def main() -> None:
-    orbit_checks = orbit_transfer_checks()
+    block_checks = residue_block_transfer_checks()
     partition_checks = partition_depth_checks()
     gaussian_checks = gaussian_boundary_checks()
-    total = orbit_checks + partition_checks + gaussian_checks
+    total = block_checks + partition_checks + gaussian_checks
 
-    assert orbit_checks == 496
+    assert block_checks == 496
     assert partition_checks == 32
     assert gaussian_checks == 32
     assert total == 560
 
-    print(f"Orbit and transfer checks: {orbit_checks}")
+    print(f"Residue-block transfer checks: {block_checks}")
     print(f"Partition-depth checks: {partition_checks}")
     print(f"Gaussian-boundary checks: {gaussian_checks}")
     print(f"Total: {total} exact checks passed.")
