@@ -13,7 +13,7 @@ checks pass.
 | --- | --- | --- |
 | Superfactorial analogues | A008793, A352656, A352657 | **Proved in one parameter family:** every $N\times N\times cN$ plane-partition number satisfies the proposed all-prime $p^{4r}$ Frobenius tower |
 | Enhanced combinations of Apéry numbers | A352655, A357506, A357567, A357956, A357959 and two nonlinear companions | **Exact reduction:** all claims collapse to three linear adjacent-defect congruences; those three congruences remain open |
-| Paired ordinary/shifted towers | A363984, A376459--A376466 | **Open:** the source statements are captured; no published theorem has yet been matched to all hypotheses |
+| Paired ordinary/shifted towers | A363984, A376459--A376466 | **Open, with a new exact reduction target:** for A376459--A376466 the unshifted half is reduced experimentally to one cubic residue-block transfer lemma; the shifted half remains separate |
 | Recent factorial-ratio direction | A061164 and the public A364172--A364184 packet, with Peter's exact new list still pending | **Two uniform transfers proved:** A061164 follows from balanced integer factorials; residue-balanced rational gamma ratios inherit the same cubic tower. This fully closes A364175 using Radcliffe's July 2026 integrality proof and reduces the remaining fractional records to integrality |
 
 ## 1. Superfactorial family: closed uniformly
@@ -71,6 +71,16 @@ In particular, A376460 received a four-variable constant-term formula in
 May 2026.  Direct comparison of its MacMahon matrix with Straub's block
 denominators does **not** give an immediate parameter match.  The formula is
 useful structure, but citing Straub at this point would leave a gap.
+
+The [maximin residue-block experiment](BalaPairedResidueBlockExperiment.md)
+now isolates one more precise target for A376459--A376466.  At each adjacent
+level, the complete unit stratum vanishes modulo (p^{3r}), and every
+positive-valuation stratum transfers to the preceding level with the same
+modulus throughout 560 exact checks.  Individual summands and two-term
+pairings usually fall short. Proving that residue-block transfer statement would
+close the eight **unshifted** towers simultaneously.  It does not prove the
+shifted towers, and the corresponding Gaussian twists empirically retain
+only the underlying termwise exponent (r) or (2r).
 
 ## 4. Recent factorial ratios: the congruence step is automatic
 

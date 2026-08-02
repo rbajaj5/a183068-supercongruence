@@ -424,6 +424,22 @@ proof.
 - **Queue:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
 
+### BALA-BLOCK — residue-block target for eight paired Apéry towers
+
+- **Claim tested:** For each summand family A376459--A376466, the complete
+  unit stratum is divisible by \(p^{3r}\), while every positive-valuation
+  stratum transfers to the preceding \(p\)-adic level modulo \(p^{3r}\).
+  This one certificate would prove all eight unshifted cubic towers.
+- **Maximin boundary:** Individual terms have only depth \(r\) or \(2r\),
+  and two-term pairing closes only A376459. Complete residue-block
+  aggregation is the first tested partition reaching the cubic target.
+- **Gaussian boundary:** Fourth-root-of-unity weighting destroys the final
+  cancellation; exact twist valuations are only \(r\) or \(2r\).
+- **Status:** Exact computational reduction target with 560 checks; not a
+  proof, and the eight shifted towers remain open.
+- **Report:** [Maximin residue-block experiment](related-results/BalaPairedResidueBlockExperiment.md)
+- **Exact checker:** [`verify_bala_paired_residue_block.py`](verification/related/verify_bala_paired_residue_block.py)
+
 ## Direct generalizations
 
 ### LD-2 — Landau-depth family
