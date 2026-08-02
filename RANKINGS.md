@@ -42,7 +42,7 @@ allocation, the portfolio currently has four tiers:
 | **A: specialist review now** | SYMBOX-4, ZHANG-4, FRAMING-COUNTEREX, GWL-TWO, GWL-SCALE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
 | **B: broad theorem engines** | FROB-PACKET, JC-ORBIT, LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER, FACTRATIO-3, RATGAMMA-3 | Reuse on named conjectures and consolidate families |
 | **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, BLACK-WALSH, HASH-MATROID, FQ-CT, WALK-FROB, GQ2-ABCOUNT, GQ2-DIHEDRAL, GQ2-QUATERNION, GQ2-MAXCYCLIC, GQ2-EXTRASPECIAL | Improve experiments, certification, source consolidation, and proof organization |
-| **D: retained open targets** | C11, CAT-ODD, BALA-TOWERS, APERY-DEFECT, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
+| **D: retained open targets** | C11, CAT-ODD, BALA-TOWERS, BALA-ORBIT, APERY-DEFECT, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
 
 Tier A has the highest estimated mathematical payoff. Tier C is deliberately
 kept separate: these results can make the portfolio faster and more coherent
@@ -144,6 +144,7 @@ stated target. Maturity records the work presently in the repository.
 | 2 | [BALA-TOWERS: higher A365029 and A375178 towers](related-results/BalaOeisSupercongruenceQueue.md#5-exact-status-of-the-remaining-first-queue) | **7** | 1 | 6 | 8 | 6 | 4 | Two named OEIS prime-power targets: A365029 is now proved through \(r=2\) and reduced above it to iterating a two-digit block lemma; Coster supplies the cubic baseline beneath A375178. |
 | 3 | [s18-2: binary supercongruence reduction](related-results/S18TwoAdicReduction.md) | **7** | 1 | 7 | 6 | 3 | 8 | Substantial reduction to one sharpened scaling lemma; target not proved. |
 | 3 | [APERY-DEFECT: five-record enhanced packet](related-results/AperyRankOneDefectPacket.md) | **7** | 1 | 5 | 8 | 6 | 6 | Exact reduction of five named OEIS records and two nonlinear companions to three linear Apéry defect congruences; strong consolidation, but the core arithmetic remains open. |
+| 3 | [BALA-ORBIT: eight paired Apéry towers](related-results/BalaPairedOrbitTransferExperiment.md) | **7** | 1 | 4 | 8 | 3 | 7 | One exact residue-orbit transfer target would close the unshifted half of eight named \(p^{3r}\) conjectures; 560 checks pass, but no proof or shifted-tower reduction is claimed. |
 | 5 | [GBQ-MAP: Gaussian routing of the Bala census](related-results/BalaGaussianGeneralizationMap.md) | **4** | 1 | 1 | 10 | 9 | 3 | Exhaustive routing of 110 records into five proof architectures; high portfolio breadth, but not a theorem or novelty certificate. |
 | 6 | [GL-MAP: Gaussian literature and structural map](related-results/GaussianLucasLiteraturePuzzle.md) | **3** | 1 | 1 | 7 | 8 | Literature synthesis, not a theorem or novelty certificate. |
 | 7 | [G-BOUNDARY: classical Gaussian obstructions](related-results/GaussianCitationNetworkBoundaryReport.md) | **3** | 1 | 4 | 4 | 6 | 5 | Rigorous reductions and bounded searches, not solutions of the classical problems. |
