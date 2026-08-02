@@ -23,6 +23,7 @@ review.
 | Compare the portfolio economically | [Economist-style rankings](RANKINGS.md) | Editorial scores, not correctness claims |
 | Browse the wider program | [Related-results reading map](related-results/README.md) | Theorem, reduction, computation, and synthesis lanes |
 | Reproduce the computations | [`verification/run_all.py`](verification/run_all.py) | Exact checkers with no floating-point tolerance unless stated |
+| Inspect local valuation slack | [A183068 defect-energy landscape](related-results/A183068DefectEnergyLandscape.md) | Exact finite experiment; visualization aid, not a proof |
 
 The repository workflow and promotion rules are documented in
 [RESEARCH_WORKFLOW.md](RESEARCH_WORKFLOW.md).
