@@ -125,7 +125,24 @@ The approved OEIS page viewed on July 31, 2026 did not yet display that
 pending conjecture, so this note does not attribute wording that is not yet
 public.
 
-## 3. What this does and does not settle
+## 3. Bober's 52 sporadic ratios
+
+The 52 integral factorial ratios A295431--A295482 in Bober's
+classification are all balanced.  The closure theorem therefore gives,
+simultaneously for every one of them,
+
+```math
+F(np^r)\equiv F(np^{r-1})\pmod {p^{3r}}
+\qquad(p\geq5).
+```
+
+The record [OEIS A295431](https://oeis.org/A295431) cites Zudilin for the
+prime-step case and records Bala's conjecture for the full tower.  The
+all-level deduction, the complete 52-entry data audit, and the newer
+fractional-index queue are recorded in the
+[Bober sporadic packet](BoberSporadicFactorialRatioPacket.md).
+
+## 4. What this does and does not settle
 
 The theorem applies uniformly to every **balanced integral factorial
 ratio**.  Fractional factorials are now covered by the companion
@@ -142,7 +159,7 @@ No assertion is made here for $p=2$ or $p=3$.  Those primes require the
 separate denominator and sign analysis described in the repository's
 [dyadic policy](../DYADIC_POLICY.md).
 
-## 4. Verification
+## 5. Verification
 
 Run
 
