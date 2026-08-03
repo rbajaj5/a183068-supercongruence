@@ -75,6 +75,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 4J | [Exact hashing of affine Fourier spectra](AffineSpectrumHashing.md) | Converts affine Walsh-support dimension into an exact random-hash success probability and a \(\log_2(s)\)-scale sufficient measurement budget | Complete specialization of the classical binary full-rank formula with exact checks |
 | 4K | [Exact matroid law for linear hashing](MatroidHashingLaw.md) | Extends the affine formula to every finite Fourier support through the characteristic polynomial of its difference matroid | Complete application of the classical Crapo--Rota Critical Theorem; [priority audit](HypercubeHashingPriorityAudit.md) |
 | 4A | [Chowla--Dwork--Evans split-prime defect](ChowlaDworkEvansSplitDefect.md) | Rewrites their published modulo-\(p^2\) lift as an exact normalized defect and exceptional-prime criterion | Published theorem plus exact corollary; no novelty claim |
+| 4L | [Pell--Lucas Frobenius towers and the abc/IUT boundary](PellLucasFrobeniusTower.md) | Gives the real-quadratic split/inert signed tower and proves why radical-only abc data cannot supply an unbounded local exponent | Complete classical specialization with 2,450 exact checks; IUT/abc retained only as a conditional global sidecar |
 | 5 | [Cubic $(\eta)$ congruence at $p=3$](EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to fill a small-prime gap in a published theorem | Complete unchecked draft |
 | 6 | [Gaussian Wolstenholme citation network](GaussianWolstenholmeCitationNetwork.md) | Replaces scaling by translation-invariant Gaussian residue blocks | Three major candidate results with exact certificates; independent review required |
 | 7 | [Gaussian canonical-product synthesis](GaussianLucasCanonicalProducts.md) | Extracts the dominant logarithmic-moment mechanism, proves that the normalized ramified block is a bijective disk isometry, and extends it to a first-moment-dominance chamber | Proved local theorem plus open research program |
@@ -131,6 +132,7 @@ The individual correspondence is:
 | Landau depth | `verification/related/verify_landau_supercongruence.py` |
 | Peter Bala's OEIS queue | `verification/related/verify_bala_oeis_supercongruences.py` |
 | Bober sporadic factorial-ratio packet | `verification/related/verify_bober_sporadic_packet.py` |
+| Pell--Lucas Frobenius towers | `verification/related/verify_pell_lucas_frobenius.py` |
 | First two A365029 levels | `verification/related/verify_a365029_first_two_levels.py` |
 | Binomial-quotient cancellation | `verification/related/verify_binomial_quotient_cancellation.py` |
 | Apéry odd-moment prime classification | `verification/related/verify_apery_odd_moment_prime_classification.py` |

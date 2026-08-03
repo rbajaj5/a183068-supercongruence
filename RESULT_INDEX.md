@@ -1559,6 +1559,31 @@ proof.
 - **Report:** [Gaussian boundary report](related-results/GaussianCitationNetworkBoundaryReport.md)
 - **Exact checker:** [`verify_gaussian_erdos_moser.py`](verification/related/verify_gaussian_erdos_moser.py)
 
+### PELL-FROB - signed Pell--Lucas Frobenius tower
+
+- **Claim:** If
+  \(\varepsilon=x_1+y_1\sqrt D\) has norm one and
+  \(\varepsilon^m=x_m+y_m\sqrt D\), then every odd prime
+  \(p\nmid D\) satisfies
+
+  ```math
+  x_{np^r}\equiv x_{np^{r-1}},\qquad
+  y_{np^r}\equiv\left(\frac Dp\right)y_{np^{r-1}}
+  \pmod {p^{r+v_p(n)}}.
+  ```
+
+- **Refinement:** The modulus gains
+  \(t_p(\varepsilon)-1\) powers, where
+  \(t_p(\varepsilon)\) is the coefficientwise $p$-adic depth of
+  \(\varepsilon^p\varepsilon^{-(D/p)}-1\) in the quadratic order.
+- **Boundary:** This is a classical Lucas-sequence specialization.  The
+  accompanying abc/IUT audit proves that radical data cannot distinguish
+  the local multiplicities required for an unbounded supercongruence
+  exponent; abc remains relevant only to separate global exceptional-value
+  equations.
+- **Proof:** [Pell--Lucas Frobenius towers and the abc/IUT boundary](related-results/PellLucasFrobeniusTower.md)
+- **Exact checker:** [`verify_pell_lucas_frobenius.py`](verification/related/verify_pell_lucas_frobenius.py)
+
 ## Search discipline
 
 Before opening a new research branch:
