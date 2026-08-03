@@ -1,6 +1,6 @@
 # Research update on Peter Bala's July 31 directions
 
-**Status date:** July 31, 2026
+**Status date:** August 3, 2026
 
 This page is a shareable status ledger for the three groups Peter Bala
 identified by email.  A row marked **proved** has a written argument in this
@@ -15,6 +15,7 @@ checks pass.
 | Enhanced combinations of Apéry numbers | A352655, A357506, A357567, A357956, A357959 and two nonlinear companions | **Exact reduction:** all claims collapse to three linear adjacent-defect congruences; those three congruences remain open |
 | Paired ordinary/shifted towers | A363984, A376459--A376466 | **Open:** the source statements are captured; no published theorem has yet been matched to all hypotheses |
 | Recent factorial-ratio direction | A061164 and the public A364172--A364184 packet, with Peter's exact new list still pending | **Two uniform transfers proved:** A061164 follows from balanced integer factorials; residue-balanced rational gamma ratios inherit the same cubic tower. This fully closes A364175 using Radcliffe's July 2026 integrality proof and reduces the remaining fractional records to integrality |
+| Bober sporadic follow-up | A295431--A295482 and 12 newly commented records | **Ordinary packet closed for $p\ge5$:** all 52 inherit the full $p^{3r}$ tower. The 15 currently visible fractional-index variants pass the rational-gamma admission test; their congruence component is proved conditionally and integrality remains open |
 
 ## 1. Superfactorial family: closed uniformly
 
@@ -103,6 +104,24 @@ A365026 and A365027, and every stable row $s\ge3$ of A364513, including the
 named sequences A364515--A364517.  Row $1$ of A364513 (A364514) has an
 affine odd-index formula and remains outside the homogeneous theorem.
 
+## 5. August 3 addendum: Bober's sporadic packet
+
+Peter's follow-up identifies the 52 Bober ratios and 12 records with new
+fractional-index comments.  The
+[Bober packet](BoberSporadicFactorialRatioPacket.md) gives the exact
+disposition:
+
+- every ordinary ratio A295431--A295482 satisfies the full $p^{3r}$ tower
+  for $p\ge5$ by the balanced-factorial theorem;
+- all 15 fractional formulas currently visible on OEIS pass the
+  residue-balance test and therefore satisfy the conditional rational
+  $p$-adic tower; and
+- their global integrality claims remain open, despite exact integrality
+  through the first 31 values.
+
+The A295464 email report is retained as pending because its new comment was
+not yet visible on the approved OEIS page when this addendum was prepared.
+
 ## Next review package
 
 The economical package to send after one week is:
@@ -111,7 +130,7 @@ The economical package to send after one week is:
 2. the balanced and rational factorial-ratio theorems, including A061164
    and the newly closed A364175 tower;
 3. the three exact unresolved Apéry defects; and
-4. a comparison with Peter's complete list of newly submitted A-numbers.
+4. the Bober 52 corollary and the exact fractional-integrality queue.
 
 This distinguishes completed mathematics from the live queue and gives
 Peter and Paul Hanna specific statements to inspect.

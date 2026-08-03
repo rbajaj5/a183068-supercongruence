@@ -347,6 +347,8 @@ proof.
   A364172--A364184, reducing the remaining records to global integrality.
   It also proves every row conjecture on A365025 (including A365026 and
   A365027) and every row $s\ge3$ of A364513 (including A364515--A364517).
+  The same theorem supplies the conditional congruence component for all
+  15 currently visible fractional-index variants in Bala's Bober packet.
 - **Mechanism:** An exact denominator-$q$ rational-binomial product, complete
   reduced-residue harmonic blocks, and the classical balanced integer
   factorial-ratio closure.
@@ -741,10 +743,8 @@ proof.
   F(np^r)\equiv F(np^{r-1})\pmod {p^{3r}}
   \]
   for every prime $p\geq5$ and all $n,r\geq1$.
-- **Named consequence:** The integral sporadic factorial ratio A061164
-  satisfies the full ordinary cubic tower. This anticipates a pending OEIS
-  direction mentioned by Peter Bala; the approved page did not yet display
-  the conjecture when checked on July 31, 2026.
+- **Named consequences:** The integral sporadic factorial ratio A061164 and
+  all 52 Bober ratios A295431--A295482 satisfy the full ordinary cubic tower.
 - **Mechanism:** A telescoping identity writes every balanced factorial
   ratio as a Laurent product of \(\binom{jN}{N}\). Classical
   Ljunggren--Jacobsthal scaling then applies factor by factor.
@@ -752,6 +752,38 @@ proof.
   broad but not claimed as new; no assertion is made for $p=2,3$.
 - **Proof:** [Balanced factorial-ratio cubic towers](related-results/BalancedFactorialRatioCubicTowers.md)
 - **Exact checker:** [`verify_balanced_factorial_ratio_towers.py`](verification/related/verify_balanced_factorial_ratio_towers.py)
+
+### BOBER-52 - all 52 sporadic factorial-ratio towers
+
+- **Claim:** Every one of Bober's 52 sporadic integral factorial ratios
+  A295431--A295482 satisfies
+
+  ```math
+  A(np^r)\equiv A(np^{r-1})\pmod {p^{3r}}
+  ```
+
+  for every prime $p\ge5$ and positive $n,r$.
+- **Mechanism:** Each source ratio is balanced and integral, so FACTRATIO-3
+  applies uniformly.  The 52-entry certificate checks the coefficient data,
+  balance, Laurent-binomial factorization, and exact adjacent samples.
+- **Status:** Complete classical deduction.  Priority is provisional and no
+  assertion is made for $p=2,3$.
+- **Proof:** [Bober sporadic factorial-ratio packet](related-results/BoberSporadicFactorialRatioPacket.md)
+- **Exact checker:** [`verify_bober_sporadic_packet.py`](verification/related/verify_bober_sporadic_packet.py)
+
+### BOBER-FRAC - fractional Bober integrality queue
+
+- **Claim:** The 15 fractional-index variants currently visible on the 12
+  records identified by Bala satisfy the residue-balanced rational
+  $p^{3r}$ quotient tower for $p\ge5$.
+- **Boundary:** The sequence congruence follows whenever the values are
+  $p$-integral.  Bala's stronger global integrality claims remain open;
+  exact integrality through $N=30$ is evidence only.  The A295464 source
+  formula was not yet visible and is not inferred.
+- **Status:** Complete conditional congruence deduction; named integrality
+  queue open.
+- **Proof and queue:** [Bober sporadic factorial-ratio packet](related-results/BoberSporadicFactorialRatioPacket.md)
+- **Exact checker:** [`verify_bober_sporadic_packet.py`](verification/related/verify_bober_sporadic_packet.py)
 
 ### A008793-CUBE — nonlinear cube-plane-partition tower
 

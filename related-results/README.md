@@ -40,6 +40,7 @@ keeping proof maturity and cost remaining separate from estimated impact.
 | 1B-FR | [Balanced factorial-ratio cubic towers](BalancedFactorialRatioCubicTowers.md) | Converts every balanced integral factorial ratio to a Laurent binomial product and proves the A061164 cubic tower | Complete classical deduction; exact checks; no claim for \(p=2,3\) |
 | 1B-J31 | [Bala July 31 research update](BalaJuly31ResearchUpdate.md) | Separates the newly closed symmetric-box and A061164 directions from the two live Apéry queues | Status ledger with links to controlling proofs |
 | 1B-AP | [Apéry enhanced-congruence packet](AperyRankOneDefectPacket.md) | Collapses A352655, A357506, A357567, A357956, A357959 and two nonlinear companions to three linear Apéry defect relations | Complete exact reduction; 260 checks; core defect packet open |
+| 1B-B52 | [Bober sporadic factorial-ratio packet](BoberSporadicFactorialRatioPacket.md) | Applies the balanced and rational-gamma engines to all 52 Bober ratios and Bala's 15 visible fractional-index variants | Ordinary 52-record tower proved for $p\ge5$; fractional congruence component proved conditionally; integrality open |
 | 1B-S | [110-record proof-campaign ledger](Bala110ProofCampaign.md) | Gives every census record a route, conservative status, evidence pointer, and next proof operation | Complete machine-readable ledger; 29 proved here, 12 source-closed, 17 partial, 3 with no explicit open target, and 49 queued |
 | 1B-L | [Supercongruence literature and Bala--OEIS census](SupercongruenceLiteratureCensus.md) | Maps a reproducible 110-record OEIS search to the published theorem families and consolidates the genuinely live targets before more proof work is spent | Literature map with explicit source and priority boundaries |
 | 1B-G | [Gaussian generalization map for the Bala queue](BalaGaussianGeneralizationMap.md) | Routes all 110 census records through five Gaussian proof architectures and separates formal coefficient changes from Frobenius twists and prime-ideal theorems | Exhaustive research map; no novelty claim |
@@ -129,6 +130,7 @@ The individual correspondence is:
 | Arithmetic Frobenius packets | `verification/related/verify_arithmetic_frobenius_packet_framework.py` |
 | Landau depth | `verification/related/verify_landau_supercongruence.py` |
 | Peter Bala's OEIS queue | `verification/related/verify_bala_oeis_supercongruences.py` |
+| Bober sporadic factorial-ratio packet | `verification/related/verify_bober_sporadic_packet.py` |
 | First two A365029 levels | `verification/related/verify_a365029_first_two_levels.py` |
 | Binomial-quotient cancellation | `verification/related/verify_binomial_quotient_cancellation.py` |
 | Apéry odd-moment prime classification | `verification/related/verify_apery_odd_moment_prime_classification.py` |

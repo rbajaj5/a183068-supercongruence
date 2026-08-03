@@ -342,7 +342,20 @@ This is stronger than checking each residue class of $N$ separately.  It
 shows that no new odd-prime supercongruence mechanism is needed anywhere
 in this packet: the only new arithmetic is integrality.
 
-## 6. Scope and priority boundary
+## 6. The Bober fractional-index packet
+
+Peter Bala's August 2026 follow-up identifies fractional-index variants of
+12 Bober records.  The 15 formulas currently visible in approved OEIS
+comments all satisfy slope balance and residue-class balance.  Theorem 2
+therefore proves their adjacent $p^{3r}$ quotient congruence for every
+$p\geq5$.  Their conjectured global integrality remains a separate open
+problem.
+
+The exact records, admissible denominators, source boundary, and 1,149-check
+certificate are in the
+[Bober sporadic factorial-ratio packet](BoberSporadicFactorialRatioPacket.md).
+
+## 7. Scope and priority boundary
 
 The theorem does not cover primes dividing the fixed denominator $Q$.
 For the named packet this excludes $2$ and/or $3$, exactly outside the
@@ -355,7 +368,7 @@ searches for A364175, its exact gamma quotient, and rational-binomial
 adjacent scaling did not locate the denominator-$q$ formulation above.
 That is evidence for review routing, not a priority certificate.
 
-## 7. References
+## 8. References
 
 - [OEIS A364175](https://oeis.org/A364175), including the integrality
   update and the stated cubic-tower conjecture.
@@ -372,7 +385,7 @@ That is evidence for review routing, not a priority certificate.
   [OEIS A364513](https://oeis.org/A364513), for the two row-family
   formulas and their stated conjectures.
 
-## 8. Verification
+## 9. Verification
 
 Run
 
