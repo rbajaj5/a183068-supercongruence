@@ -80,6 +80,7 @@ SCRIPTS = (
     "verification/related/verify_dyadic_dehn_twist_conjugacy.py",
     "verification/related/verify_higher_degree_box_polynomial.py",
     "verification/related/verify_gaussian_erdos_moser.py",
+    "verification/related/verify_pell_lucas_frobenius.py",
 )
 
 
