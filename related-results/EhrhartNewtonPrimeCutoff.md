@@ -1,9 +1,9 @@
 # An Ehrhart cutoff for Newton-polytope rank primes
 
-**Status:** exact elementary deduction conditional on the sharp Ehrhart-volume
-theorem announced in Chapter 8 of OpenAI's August 2026 collection.  The
-implication below is proved here; the source theorem has not received an
-independent specialist audit recorded by this repository.
+**Status:** exact elementary deduction from the sharp Ehrhart-volume theorem
+in Chapter 8 of OpenAI's August 2026 collection. The source theorem is accepted
+here as an external result with a public Lean certificate; the implication
+below is proved in this repository.
 
 ## 1. Source input
 
@@ -27,7 +27,7 @@ constant-term and Frobenius calculations.
 
 ### Theorem
 
-Assume the source theorem.  Let $K$ satisfy its hypotheses and let
+Let $K$ satisfy the source theorem's hypotheses and let
 $m_0,\ldots,m_d\in K\cap\mathbb Z^d$.  Put
 
 ```math
@@ -143,8 +143,9 @@ The conclusion is deliberately limited:
 
 The exact checker verifies the centered-simplex sharpness family, the interior
 lattice-point calculation through dimension six, and the displayed cutoff
-table.  These checks validate the arithmetic transcription; they do not prove
-the source volume theorem.
+table. These checks validate the arithmetic deduction. The source theorem is
+certified separately by `EhrhartVolumeInequality.lean` in OpenAI's public
+`ten-proofs` repository.
 
 ## Reference
 
