@@ -509,6 +509,24 @@ proof.
 - **Proof:** [Frobenius-quotient identity, Section 3](related-results/FrobeniusQuotientConstantTerms.md#3-what-the-standard-dwork-theorem-does-not-supply-automatically)
 - **Exact checker:** [`verify_dwork_boundaries.py`](verification/related/verify_dwork_boundaries.py)
 
+### EHRHART-CUTOFF -- Newton-polytope rank primes
+
+- **Claim:** Conditional on the sharp Ehrhart-volume theorem announced in
+  OpenAI's August 2026 collection, every full-dimensional lattice simplex in a
+  centered $d$-body with unique interior lattice point has determinant at most
+  $(d+1)^d$. Consequently, reduction modulo a prime
+  $p>(d+1)^d$ preserves full-dimensional affine independence of its lattice
+  points, including after passage to a number-field prime ideal of residue
+  characteristic $p$.
+- **Status:** Exact elementary implication and sharpness family. The source
+  volume theorem is an external formalized claim without an independent
+  specialist audit recorded here, so the deduction is conditional and cannot
+  upgrade another claim's proof status.
+- **Boundary:** This bounds exceptional rank primes, not a supercongruence
+  exponent. The A183068 Newton polytope fails the unique-interior hypothesis.
+- **Proof:** [Ehrhart--Newton prime cutoff](related-results/EhrhartNewtonPrimeCutoff.md)
+- **Exact checker:** [`verify_ehrhart_newton_prime_cutoff.py`](verification/related/verify_ehrhart_newton_prime_cutoff.py)
+
 ### GFT — Gaussian Frobenius twists
 
 - **Claim:** Termwise supercongruences lift to roots-of-unity weights; the
