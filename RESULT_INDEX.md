@@ -583,10 +583,15 @@ proof.
   $a_N=e_0^{\mathsf T}M_V^Ne_0$ and
   $\sum a_Nz^N=e_0^{\mathsf T}(I-zM_V)^{-1}e_0$; its spectrum is the set of
   character values and its spectral radius is $\dim V$.
+- **Defect consequence:** For an odd prime and a finite $p$-integral atomic
+  spectrum with integer atoms, the residue of
+  $(a_{np^r}-a_{np^{r-1}})/p^r$ modulo $p$ is independent of $r\ge2$ and is
+  an explicit weighted Fermat-quotient sum. A nonzero residue proves the
+  exponent $r$ is sharp at every higher level.
 - **Sharp boundary:** The standard representation of $SU(2)$ has
   $a_1=0,a_2=1$, so the binary congruence fails exactly where Haar projection
   is not fixed by $\psi^2$.
-- **Status:** Complete structural deduction from classical Haar,
+- **Status:** Complete structural deduction from classical Haar, Gelfand,
   Peter--Weyl, Adams-operation, and spectral results; no priority claim.
 - **Proof:** [Adams--Haar representation-ring Gauss towers](related-results/AdamsHaarRepresentationGaussTowers.md)
 - **Exact checker:** [`verify_adams_haar_gauss_towers.py`](verification/related/verify_adams_haar_gauss_towers.py)
