@@ -143,6 +143,78 @@ def check_s3_spectral_packet() -> int:
     return checks
 
 
+def fraction_mod(value: Fraction, p: int) -> int:
+    assert value.denominator % p
+    return value.numerator * pow(value.denominator, -1, p) % p
+
+
+def fermat_quotient(unit: int, p: int) -> int:
+    assert unit % p
+    return (unit ** (p - 1) - 1) // p
+
+
+def atomic_moment(atoms: tuple[int, ...], weights: tuple[Fraction, ...], n: int) -> Fraction:
+    return sum((weight * atom**n for atom, weight in zip(atoms, weights)), Fraction())
+
+
+def check_atomic_spectral_defect() -> int:
+    atoms = (-3, 0, 1, 2, 5)
+    weights = (
+        Fraction(1, 2),
+        Fraction(-3, 4),
+        Fraction(5, 2),
+        Fraction(7, 4),
+        Fraction(-1, 2),
+    )
+    checks = 0
+    for p in (3, 5, 7):
+        for n in range(1, 6):
+            expected = sum(
+                (
+                    weight * atom**n * fermat_quotient(atom**n, p)
+                    for atom, weight in zip(atoms, weights)
+                    if atom % p
+                ),
+                Fraction(),
+            )
+            for r in range(2, 5):
+                upper = atomic_moment(atoms, weights, n * p**r)
+                lower = atomic_moment(atoms, weights, n * p ** (r - 1))
+                defect = (upper - lower) / p**r
+                assert fraction_mod(defect, p) == fraction_mod(expected, p)
+                checks += 1
+
+    # S_3 with V = 1 + Std has atoms 3, 1, 0 and class weights 1/6, 3/6, 2/6.
+    s3_atoms = (3, 1, 0)
+    s3_weights = (Fraction(1, 6), Fraction(3, 6), Fraction(2, 6))
+    for p in (5, 7, 11):
+        for n in range(1, 6):
+            expected = Fraction(3**n * fermat_quotient(3**n, p), 6)
+            for r in range(2, 4):
+                upper = atomic_moment(s3_atoms, s3_weights, n * p**r)
+                lower = atomic_moment(s3_atoms, s3_weights, n * p ** (r - 1))
+                assert fraction_mod((upper - lower) / p**r, p) == fraction_mod(expected, p)
+                checks += 1
+
+    # The p=5, n=1 residue is 3 and forces exact valuation r at every level.
+    assert fraction_mod(Fraction(3 * fermat_quotient(3, 5), 6), 5) == 3
+    checks += 1
+    for r in range(2, 6):
+        upper = atomic_moment(s3_atoms, s3_weights, 5**r)
+        lower = atomic_moment(s3_atoms, s3_weights, 5 ** (r - 1))
+        difference = upper - lower
+        assert difference.denominator == 1
+        value = abs(difference.numerator)
+        valuation = 0
+        while value % 5 == 0:
+            valuation += 1
+            value //= 5
+        assert valuation == r
+        checks += 1
+
+    return checks
+
+
 def su2_standard_invariants(tensor_power: int) -> int:
     if tensor_power % 2:
         return 0
@@ -162,6 +234,7 @@ def main() -> None:
     checks += check_scalar_amplification()
     checks += check_torus_constant_terms()
     checks += check_s3_spectral_packet()
+    checks += check_atomic_spectral_defect()
     checks += check_nonabelian_boundary()
     print(f"Adams--Haar checks passed: {checks}")
 
