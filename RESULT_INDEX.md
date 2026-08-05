@@ -568,6 +568,29 @@ proof.
 - **Proof:** [Group-ring Gauss congruences and the nonsofic torsion boundary](related-results/NonSoficGroupRingGaussBoundary.md)
 - **Exact checker:** [`verify_group_ring_gauss_boundary.py`](verification/related/verify_group_ring_gauss_boundary.py)
 
+### ADAMS-HAAR -- representation-ring Gauss towers
+
+- **Claim:** Let $A$ be a commutative $\mathbb Z$-algebra with a Frobenius
+  lift $\psi_p(y)\equiv y^p\pmod {pA}$ and a linear functional
+  $\tau:A\to\mathbb Z$ satisfying $\tau\psi_p=\tau$. Then
+  $\tau(x^{np^r})\equiv\tau(x^{np^{r-1}})\pmod {p^r}$ for every $x,n,r$.
+- **Representation consequence:** For a compact group $K$, the theorem
+  applies to $A=R(K)$, $\tau(W)=\dim W^K$, and the $p$-th Adams operation
+  whenever Haar projection is Adams-invariant. Hence
+  $a_N=\dim(V^{\otimes N})^K$ has the ordinary Gauss tower for every prime
+  on a torus and for every $p\nmid|K|$ when $K$ is finite.
+- **Spectral consequence:** For finite $K$, the fusion matrix gives
+  $a_N=e_0^{\mathsf T}M_V^Ne_0$ and
+  $\sum a_Nz^N=e_0^{\mathsf T}(I-zM_V)^{-1}e_0$; its spectrum is the set of
+  character values and its spectral radius is $\dim V$.
+- **Sharp boundary:** The standard representation of $SU(2)$ has
+  $a_1=0,a_2=1$, so the binary congruence fails exactly where Haar projection
+  is not fixed by $\psi^2$.
+- **Status:** Complete structural deduction from classical Haar,
+  Peter--Weyl, Adams-operation, and spectral results; no priority claim.
+- **Proof:** [Adams--Haar representation-ring Gauss towers](related-results/AdamsHaarRepresentationGaussTowers.md)
+- **Exact checker:** [`verify_adams_haar_gauss_towers.py`](verification/related/verify_adams_haar_gauss_towers.py)
+
 ### EHRHART-CUTOFF -- Newton-polytope rank primes
 
 - **Claim:** By the sharp Ehrhart-volume theorem in OpenAI's August 2026
