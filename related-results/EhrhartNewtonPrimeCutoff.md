@@ -150,4 +150,3 @@ the source volume theorem.
 
 - OpenAI, [*Ten Advances in Mathematics and Theoretical Computer Science*](https://cdn.openai.com/pdf/ten-proofs-oai.pdf),
   Chapter 8, "The Sharp Inequality in Ehrhart's Volume Conjecture," 2026.
-
