@@ -19,8 +19,13 @@ keeping proof maturity and cost remaining separate from estimated impact.
 The [sofic finite-approximation boundary note](SoficFiniteApproximationBoundary.md)
 records one adjacent methodological analogy without treating it as a
 supercongruence theorem: sofic groups classically exist, while the August 2026
-nonsofic construction is listed only as an external formalized claim awaiting
-independent specialist review.
+nonsofic construction is quarantined as a disputed external claim.
+
+The [Ehrhart--Newton prime cutoff](EhrhartNewtonPrimeCutoff.md) is the first
+arithmetic deduction extracted from the remaining August 2026 collection.  It
+turns the claimed sharp volume theorem into a finite exceptional-prime bound
+for full-dimensional exponent-rank degeneration; it is conditional on that
+external theorem and does not claim a stronger supercongruence exponent.
 
 ## Recommended reading order
 

@@ -1,6 +1,7 @@
 # Sofic finite approximation: a boundary note
 
-**Status:** literature and provenance note; no supercongruence is claimed.
+**Status:** literature and provenance note; disputed external claim quarantined;
+no supercongruence is claimed.
 
 This note records a useful distinction that is easy to lose in discussion:
 
@@ -62,13 +63,17 @@ groups are therefore routine examples.
 OpenAI's August 1 announcement states that it constructed a nonsofic group and
 released both a manuscript and a Lean certificate.  The associated public
 repository contains `NonSoficGroup.lean` and states a final existence theorem
-for a finitely presented nonsofic group.
+for a finitely presented nonsofic group.  The announcement also says that
+OpenAI takes responsibility for the correctness of the results after humans
+helped prepare the manuscripts and the model formalized the arguments.
 
 That establishes three provenance facts:
 
 - the document is an authentic public claim, not merely a fabricated
   screenshot;
 - a substantial formal artifact accompanies it; and
+- the organization making the claim expressly accepts responsibility for its
+  correctness; and
 - the claim is recent enough that surveys and preprints written before the
   announcement still describing the problem as open are not refutations.
 
@@ -78,14 +83,17 @@ library, and axioms; mathematical review must also check that these definitions
 and reductions match the standard theorem.  No argument in this repository
 depends on the announced nonsofic example.
 
-The appropriate current label here is therefore:
+The repository does not accept the announcement as an available mathematical
+input.  Its current label here is therefore:
 
-> **External formalized claim; independent specialist review not recorded in
-> this repository.**
+> **Disputed external formalized claim; quarantined pending a concrete
+> independent specialist audit.**
 
-Calling the claim "fake" would require a concrete defect, retraction, or
-counter-audit.  None is supplied by an older source that merely says the
-problem was open when that source was written.
+An older source that merely says the problem was open when it was written is
+not itself a counter-audit.  Conversely, an artifact that formalizes a
+black-boxed auxiliary assertion does not repair a false auxiliary assertion.
+The exact dependency and any reported falsification must therefore be checked
+before this status changes in either direction.
 
 ## 4. The genuine connection to the supercongruence program
 
@@ -107,8 +115,8 @@ uniform passage.
 ## 5. Repository policy
 
 - Known sofic examples may be cited as exact finite-model anchors.
-- The August 2026 nonsofic construction remains in the literature/provenance
-  lane until an independent specialist audit is recorded.
+- The August 2026 nonsofic construction is quarantined in the
+  literature/provenance lane and is treated as unavailable input.
 - It is excluded from `RANKINGS.md`, because this repository neither proves
   the result nor obtains a supercongruence from it.
 - It must not be used to upgrade the status of any claim in `RESULT_INDEX.md`.
