@@ -16,6 +16,12 @@ The complete Economist-style scorecard is
 the finite-field determinant, Pfaffian, and hyperdeterminant branch, while
 keeping proof maturity and cost remaining separate from estimated impact.
 
+The [sofic finite-approximation boundary note](SoficFiniteApproximationBoundary.md)
+records one adjacent methodological analogy without treating it as a
+supercongruence theorem: sofic groups classically exist, while the August 2026
+nonsofic construction is listed only as an external formalized claim awaiting
+independent specialist review.
+
 ## Recommended reading order
 
 | Order | Note | Connection to A183068 | Status |
