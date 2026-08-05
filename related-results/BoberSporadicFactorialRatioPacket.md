@@ -3,9 +3,10 @@
 **Status date:** August 3, 2026
 
 **Status:** the ordinary 52-sequence cubic tower is a complete deduction
-from the repository's balanced-factorial theorem.  The fractional-index
-packet has a complete conditional congruence theorem and exact evidence, but
-its global integrality assertions remain open.
+from the repository's balanced-factorial theorem. The fractional-index
+packet has a complete conditional congruence theorem; A295456 at index $N/2$
+(OEIS A364176) now has a complete affine-Landau integrality proof and hence an
+unconditional tower. The other 14 visible integrality assertions remain open.
 
 This note records Peter Bala's August 2026 follow-up about the 52 sporadic
 integral factorial ratios cross-referenced from
@@ -138,7 +139,7 @@ integrality.
 
 | OEIS record | Fractional indices in the approved OEIS comment | Residue-balance test | Current status |
 | --- | --- | --- | --- |
-| [A295456](https://oeis.org/A295456) | $N/2$, $N/3$ | Passes for $q=2,3$ | Integrality conjectural; (8) proved |
+| [A295456](https://oeis.org/A295456) | $N/2$, $N/3$ | Passes for $q=2,3$ | $N/2$ (A364176) integral and its tower proved; $N/3$ integrality open; (8) proved for both |
 | [A295458](https://oeis.org/A295458) | $N/2$, $N/3$ | Passes for $q=2,3$ | Integrality conjectural; (8) proved |
 | [A295460](https://oeis.org/A295460) | $N/2$, $N/4$ | Passes for $q=2,4$ | Integrality conjectural; (8) proved |
 | [A295464](https://oeis.org/A295464) | Bala reports a recent comment; its formula was not yet visible on the approved page | Pending exact source text | No fractional claim entered yet |
@@ -151,9 +152,11 @@ integrality.
 | [A295479](https://oeis.org/A295479) | $N/2$ | Passes for $q=2$ | Integrality conjectural; (8) proved |
 | [A295481](https://oeis.org/A295481) | $N/2$ | Passes for $q=2$ | Integrality conjectural; (8) proved |
 
-There are 15 approved fractional-index sequences in this table.  Exact
-arithmetic finds integral values for each through $N=30$, but this finite
-evidence is not an integrality proof.
+There are 15 approved fractional-index sequences in this table. The
+[A364176 affine-Landau theorem](A364176AffineLandauTower.md) proves one of
+their integrality claims for every index. Exact arithmetic finds integral
+values for the other 14 through $N=30$, but this finite evidence is not an
+integrality proof.
 
 ## 3. A compact CSP admission filter
 
@@ -178,8 +181,10 @@ or integrality.
 For this packet the filter gives a sharp division of labor:
 
 - **ordinary 52 ratios:** balance plus known integrality, hence (3);
-- **15 visible fractional variants:** balance and residue balance, hence
-  (8), while integrality remains open;
+- **A295456 at $N/2$:** balance, residue balance, and the affine-Landau
+  floor lemma, hence global integrality and (9);
+- **the other 14 visible fractional variants:** balance and residue balance,
+  hence (8), while integrality remains open;
 - **A295464 pending edit:** wait for the exact approved formula before
   assigning it a theorem status.
 
@@ -208,6 +213,14 @@ verifies balance and Laurent-binomial factorization, and tests exact
 adjacent cubic congruences.  It separately checks the residue constraints,
 the first 31 exact values, and two adjacent levels for all 15 approved
 fractional-index variants.
+
+The separate command
+
+```text
+python verification/related/verify_a364176_affine_landau.py
+```
+
+checks the completed A364176 floor reduction, integrality, and tower.
 
 The [QRCert blueprint](https://github.com/rbajaj5/qrcert) suggests a clean
 future certification split: encode each coefficient pair canonically, let a

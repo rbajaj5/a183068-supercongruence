@@ -322,6 +322,37 @@ proof.
 - **Proof:** [A364173 integrality and half-binomial tower](related-results/A364173IntegralHalfBinomialTower.md)
 - **Exact checker:** [`verify_a364173_integral_tower.py`](verification/related/verify_a364173_integral_tower.py)
 
+### A364176-INTEGRAL - affine-Landau integrality and cubic tower
+
+- **Claim:** The gamma quotient
+
+  ```math
+  B(N)=
+  \frac{
+  \Gamma(15N+1)\Gamma(5N/2+1)\Gamma(2N+1)}
+  {\Gamma(15N/2+1)\Gamma(6N+1)\Gamma(5N+1)\Gamma(N+1)}
+  ```
+
+  is an integer for every $N\ge0$. For every prime $p\ge5$ and positive
+  integers $n,r$,
+
+  ```math
+  B(np^r)\equiv B(np^{r-1})\pmod {p^{3r}}.
+  ```
+
+- **Source status:** This is A364176, equivalently A295456 at the half-index;
+  both integrality and the tower are explicit conjectures on the OEIS record.
+- **Mechanism:** Even indices reduce to Bober's integral A295456. At odd
+  indices, the half-gamma identity produces an affine factorial ratio whose
+  Legendre defect is periodic and reduces to five floor-function cases, each
+  equal to zero or one. The rational gamma-ratio theorem then supplies the
+  full adjacent tower.
+- **Boundary:** No claim is made for $p=2,3$; literature priority and
+  independent review remain pending.
+- **Status:** Complete elementary proof candidate.
+- **Proof:** [A364176 affine-Landau integrality and tower](related-results/A364176AffineLandauTower.md)
+- **Exact checker:** [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py)
+
 ### RATGAMMA-3 — rational gamma-ratio cubic towers
 
 - **Claim:** Let
@@ -342,13 +373,15 @@ proof.
   If the lower-level value is $p$-integral, this is the corresponding
   adjacent congruence for the values themselves.
 - **Named application:** Radcliffe proved A364175 integral in July 2026;
-  the theorem therefore proves its full conjectured $p^{3r}$ tower.  The
-  same transfer applies to every residue-balanced gamma quotient in
-  A364172--A364184, reducing the remaining records to global integrality.
+  the theorem therefore proves its full conjectured $p^{3r}$ tower. The
+  affine-Landau lemma proves A364176 integral, so this theorem also closes
+  its tower. The same transfer applies to every residue-balanced gamma
+  quotient in A364172--A364184, reducing the other records to global integrality.
   It also proves every row conjecture on A365025 (including A365026 and
   A365027) and every row $s\ge3$ of A364513 (including A364515--A364517).
-  The same theorem supplies the conditional congruence component for all
-  15 currently visible fractional-index variants in Bala's Bober packet.
+  The same theorem supplies the quotient congruence component for all 15
+  currently visible fractional-index variants in Bala's Bober packet; the
+  A364176 member is now unconditional.
 - **Mechanism:** An exact denominator-$q$ rational-binomial product, complete
   reduced-residue harmonic blocks, and the classical balanced integer
   factorial-ratio closure.
@@ -511,17 +544,16 @@ proof.
 
 ### EHRHART-CUTOFF -- Newton-polytope rank primes
 
-- **Claim:** Conditional on the sharp Ehrhart-volume theorem announced in
-  OpenAI's August 2026 collection, every full-dimensional lattice simplex in a
+- **Claim:** By the sharp Ehrhart-volume theorem in OpenAI's August 2026
+  collection, every full-dimensional lattice simplex in a
   centered $d$-body with unique interior lattice point has determinant at most
   $(d+1)^d$. Consequently, reduction modulo a prime
   $p>(d+1)^d$ preserves full-dimensional affine independence of its lattice
   points, including after passage to a number-field prime ideal of residue
   characteristic $p$.
-- **Status:** Exact elementary implication and sharpness family. The source
-  volume theorem is an external formalized claim without an independent
-  specialist audit recorded here, so the deduction is conditional and cannot
-  upgrade another claim's proof status.
+- **Status:** Complete elementary deduction and sharpness family from an
+  accepted external theorem with a public Lean certificate. This repository
+  proves the determinant corollary, not the source volume theorem.
 - **Boundary:** This bounds exceptional rank primes, not a supercongruence
   exponent. The A183068 Newton polytope fails the unique-interior hypothesis.
 - **Proof:** [Ehrhart--Newton prime cutoff](related-results/EhrhartNewtonPrimeCutoff.md)
@@ -795,13 +827,16 @@ proof.
   records identified by Bala satisfy the residue-balanced rational
   $p^{3r}$ quotient tower for $p\ge5$.
 - **Boundary:** The sequence congruence follows whenever the values are
-  $p$-integral.  Bala's stronger global integrality claims remain open;
-  exact integrality through $N=30$ is evidence only.  The A295464 source
-  formula was not yet visible and is not inferred.
-- **Status:** Complete conditional congruence deduction; named integrality
-  queue open.
+  $p$-integral. The A295456 half-index case A364176 now has a complete
+  affine-Landau integrality proof and an unconditional tower. The other 14
+  global integrality claims remain open; exact integrality through $N=30$ is
+  evidence only. The A295464 source formula was not yet visible and is not
+  inferred.
+- **Status:** Complete conditional congruence deduction for the packet; one
+  fractional case closed completely and 14 named integrality targets open.
 - **Proof and queue:** [Bober sporadic factorial-ratio packet](related-results/BoberSporadicFactorialRatioPacket.md)
-- **Exact checker:** [`verify_bober_sporadic_packet.py`](verification/related/verify_bober_sporadic_packet.py)
+- **Exact checkers:** [`verify_bober_sporadic_packet.py`](verification/related/verify_bober_sporadic_packet.py),
+  [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py)
 
 ### A008793-CUBE — nonlinear cube-plane-partition tower
 

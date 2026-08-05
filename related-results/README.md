@@ -18,14 +18,20 @@ keeping proof maturity and cost remaining separate from estimated impact.
 
 The [sofic finite-approximation boundary note](SoficFiniteApproximationBoundary.md)
 records one adjacent methodological analogy without treating it as a
-supercongruence theorem: sofic groups classically exist, while the August 2026
-nonsofic construction is quarantined as a disputed external claim.
+supercongruence theorem. It accepts the August 2026 construction as an
+external Lean-certified theorem and extracts only a proof-search analogy from
+its expander-component matching argument.
 
-The [Ehrhart--Newton prime cutoff](EhrhartNewtonPrimeCutoff.md) is the first
-arithmetic deduction extracted from the remaining August 2026 collection.  It
-turns the claimed sharp volume theorem into a finite exceptional-prime bound
-for full-dimensional exponent-rank degeneration; it is conditional on that
-external theorem and does not claim a stronger supercongruence exponent.
+The [ten-advances transfer ledger](OpenAITenAdvancesTransferLedger.md) routes
+all ten results through the repository's proof, experiment, and audit lanes.
+It records one direct arithmetic transfer, one reusable conservation lemma,
+and explicit non-transfer boundaries for the remaining results.
+
+The [Ehrhart--Newton prime cutoff](EhrhartNewtonPrimeCutoff.md) is the direct
+arithmetic deduction extracted from the collection. It turns the accepted
+sharp volume theorem into a finite exceptional-prime bound for
+full-dimensional exponent-rank degeneration; it does not claim a stronger
+supercongruence exponent.
 
 ## Recommended reading order
 
@@ -42,6 +48,7 @@ external theorem and does not claim a stronger supercongruence exponent.
 | 1B-U | [Odd-unit block towers](OddUnitBlockFrobeniusTowers.md) | Splits half-integral factorial products into a central-binomial transfer and odd unit blocks, proving A091527 and A262732 together | Complete elementary proof candidate; 806 exact checks; small-prime failures explicit |
 | 1B-X | [Dixon--Legendre half-binomial towers](DixonLegendreHalfBinomialTowers.md) | Uses Dixon's evaluation and a complete half-binomial unit block to prove A275652, A275654, every stable row of A364303, and A364304 in one parameter family | Complete elementary proof candidate; 961 exact checks; small-prime failures explicit |
 | 1B-I | [A364173 integrality and half-binomial tower](A364173IntegralHalfBinomialTower.md) | Resolves the record's separate integrality conjecture by a carry-interval floor lemma, then proves its full $p^{3r}$ tower using ordinary and half-binomial transfers | Complete elementary proof candidate; 487,211 exact checks; small-prime failures explicit |
+| 1B-I2 | [A364176 affine-Landau integrality and tower](A364176AffineLandauTower.md) | Resolves A295456 at half-index by a five-case affine floor lemma, then invokes the rational gamma-ratio transfer | Complete elementary proof candidate; 501,908 exact checks; priority pending |
 | 1B-RG | [Rational gamma-ratio cubic towers](RationalGammaRatioCubicTowers.md) | Extends the unit-block transfer to every fixed denominator; closes A364175, every row of A365025, and the stable A364513 rows while reducing A364172--A364184 to integrality | Complete elementary proof candidate; 8,666 exact checks; priority search preliminary |
 | 1B-R | [Integral coefficient roots and Gauss baseline](CoefficientPowerGaussBaseline.md) | Resolves the integrality of the A002897/A008978/A113424 coefficient roots, proves the exact Lagrange bridge, and supplies the universal all-prime \(p^r\) variable-power tower | Complete elementary baseline; 1,819 exact checks; two cubic refinements remain open |
 | 1B-O | [Apéry odd moments at the prime boundary](AperyOddMomentPrimeClassification.md) | Expands one Apéry summand modulo \(p^4\), proves A357510, and classifies every exceptional prime in the A357512 odd-moment family | Complete elementary prime theorem; 3,468 exact checks; composite A357512 claim remains open |
@@ -51,7 +58,8 @@ external theorem and does not claim a stronger supercongruence exponent.
 | 1B-FR | [Balanced factorial-ratio cubic towers](BalancedFactorialRatioCubicTowers.md) | Converts every balanced integral factorial ratio to a Laurent binomial product and proves the A061164 cubic tower | Complete classical deduction; exact checks; no claim for \(p=2,3\) |
 | 1B-J31 | [Bala July 31 research update](BalaJuly31ResearchUpdate.md) | Separates the newly closed symmetric-box and A061164 directions from the two live Apéry queues | Status ledger with links to controlling proofs |
 | 1B-AP | [Apéry enhanced-congruence packet](AperyRankOneDefectPacket.md) | Collapses A352655, A357506, A357567, A357956, A357959 and two nonlinear companions to three linear Apéry defect relations | Complete exact reduction; 260 checks; core defect packet open |
-| 1B-B52 | [Bober sporadic factorial-ratio packet](BoberSporadicFactorialRatioPacket.md) | Applies the balanced and rational-gamma engines to all 52 Bober ratios and Bala's 15 visible fractional-index variants | Ordinary 52-record tower proved for $p\ge5$; fractional congruence component proved conditionally; integrality open |
+| 1B-B52 | [Bober sporadic factorial-ratio packet](BoberSporadicFactorialRatioPacket.md) | Applies the balanced and rational-gamma engines to all 52 Bober ratios and Bala's 15 visible fractional-index variants | Ordinary 52-record tower proved for $p\ge5$; A364176 completely closed; 14 fractional integrality targets remain |
+| 1B-BR | [Draft reply to Bala and Hanna](BalaBoberAugustReply.md) | Gives a short elementary account of the 52 ordinary towers and the newly completed A364176 case | Correspondence draft; no additional theorem claim |
 | 1B-S | [110-record proof-campaign ledger](Bala110ProofCampaign.md) | Gives every census record a route, conservative status, evidence pointer, and next proof operation | Complete machine-readable ledger; 29 proved here, 12 source-closed, 17 partial, 3 with no explicit open target, and 49 queued |
 | 1B-L | [Supercongruence literature and Bala--OEIS census](SupercongruenceLiteratureCensus.md) | Maps a reproducible 110-record OEIS search to the published theorem families and consolidates the genuinely live targets before more proof work is spent | Literature map with explicit source and priority boundaries |
 | 1B-G | [Gaussian generalization map for the Bala queue](BalaGaussianGeneralizationMap.md) | Routes all 110 census records through five Gaussian proof architectures and separates formal coefficient changes from Frobenius twists and prime-ideal theorems | Exhaustive research map; no novelty claim |
@@ -142,6 +150,7 @@ The individual correspondence is:
 | Landau depth | `verification/related/verify_landau_supercongruence.py` |
 | Peter Bala's OEIS queue | `verification/related/verify_bala_oeis_supercongruences.py` |
 | Bober sporadic factorial-ratio packet | `verification/related/verify_bober_sporadic_packet.py` |
+| A364176 affine-Landau theorem | `verification/related/verify_a364176_affine_landau.py` |
 | First two A365029 levels | `verification/related/verify_a365029_first_two_levels.py` |
 | Binomial-quotient cancellation | `verification/related/verify_binomial_quotient_cancellation.py` |
 | Apéry odd-moment prime classification | `verification/related/verify_apery_odd_moment_prime_classification.py` |

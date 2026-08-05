@@ -1,7 +1,8 @@
 # Sofic finite approximation: a boundary note
 
-**Status:** literature and provenance note; disputed external claim quarantined;
-no supercongruence is claimed.
+**Status:** literature and provenance note; the August 2026 nonsofic-group
+theorem is accepted here as an external, Lean-certified result. No
+supercongruence is claimed.
 
 This note records a useful distinction that is easy to lose in discussion:
 
@@ -9,8 +10,8 @@ This note records a useful distinction that is easy to lose in discussion:
 2. Until August 2026, the open question was whether **every** countable group
    is sofic, equivalently whether a nonsofic group exists.
 3. OpenAI announced a construction of a nonsofic group on August 1, 2026 and
-   released a Lean artifact.  This repository records that as a new external
-   claim under review, not as a theorem proved here and not as a premise of any
+   released a Lean artifact. This repository accepts the result as an external
+   theorem, not as a theorem reproved here and not as a premise of any
    supercongruence proof.
 
 The word *sofic* therefore must not be used as shorthand for *nonsofic*, and a
@@ -67,35 +68,79 @@ for a finitely presented nonsofic group.  The announcement also says that
 OpenAI takes responsibility for the correctness of the results after humans
 helped prepare the manuscripts and the model formalized the arguments.
 
-That establishes three provenance facts:
+That establishes four provenance facts:
 
 - the document is an authentic public claim, not merely a fabricated
   screenshot;
 - a substantial formal artifact accompanies it; and
 - the organization making the claim expressly accepts responsibility for its
-  correctness; and
+  correctness;
 - the claim is recent enough that surveys and preprints written before the
   announcement still describing the problem as open are not refutations.
 
-It does **not** by itself establish specialist consensus.  A kernel-checked
-formalization verifies a statement relative to its definitions, imported
-library, and axioms; mathematical review must also check that these definitions
-and reductions match the standard theorem.  No argument in this repository
-depends on the announced nonsofic example.
+The public certificate states the theorem
 
-The repository does not accept the announcement as an available mathematical
-input.  Its current label here is therefore:
+```math
+\exists G,\quad G\text{ is finitely presented and }G\text{ is not sofic}.
+```
 
-> **Disputed external formalized claim; quarantined pending a concrete
-> independent specialist audit.**
+The corresponding Lean declaration is
+`SoficGroups.SourceTopLevelCompressionFinal.exists_finitelyPresented_nonsofic_group`.
+The published audit records zero `sorry` declarations and only Lean's standard
+`propext`, `Classical.choice`, and `Quot.sound` axioms. This is strong enough
+for the repository to use the theorem as an external mathematical input.
+Nothing in the supercongruence proofs depends on it.
+
+Its current label here is therefore:
+
+> **Accepted external theorem with a public Lean certificate; logically
+> independent of the arithmetic results in this repository.**
 
 An older source that merely says the problem was open when it was written is
-not itself a counter-audit.  Conversely, an artifact that formalizes a
-black-boxed auxiliary assertion does not repair a false auxiliary assertion.
-The exact dependency and any reported falsification must therefore be checked
-before this status changes in either direction.
+not a counter-audit. The status change here rests on the released theorem, its
+named Lean endpoint, its recorded axiom audit, and the subsequent expert
+explanation of the proof mechanism.
 
-## 4. The genuine connection to the supercongruence program
+## 4. The new mechanism: matching expander components
+
+The accepted MathOverflow explanation by Andreas Thom isolates the real new
+step. Earlier results provide two ingredients:
+
+1. a sofic approximation of a property-$(T)$ group can be changed on a
+   vanishing fraction of edges into a disjoint union of uniform expanders;
+2. if the relevant property-$(T)$ generator graph is one expander, an
+   asymptotically commuting group must be LEF.
+
+The obstruction was that the first result gives many components, possibly of
+different sizes, while the second needs one controlled component. The new
+construction compares an original component $C$ with its images under
+permutations representing the extra generators. If $m$ is a vertex-weighted
+median component size, define
+
+```math
+f(z)=\frac{|C(z)|}{|C(z)|+m}.
+```
+
+Conjugation gives an almost one-sided inequality
+$f(\tau_i z)\ge f(z)-o(1)$. Because $\tau_i$ is a permutation, the total
+change of $f$ is exactly zero; hence small total decrease forces small total
+increase. Expansion and a coarea estimate then concentrate $f$ near its
+median $1/2$. Thus almost all relevant components have comparable sizes.
+A transported component occupying more than half of an original component
+cannot collide with another transported component, giving an asymptotically
+injective matching. Restricting to a matched component recovers the
+single-expander setting and forces a chosen non-LEF subgroup to be LEF, a
+contradiction.
+
+This is more specific than a generic appeal to concentration of measure or
+Arzelà--Ascoli: permutation conservation upgrades one-sided control to
+two-sided $L^1$ control, and expansion turns that control into component
+matching.
+
+The exact finite identity underlying that upgrade is recorded as Lemma 1 in
+the [ten-advances transfer ledger](OpenAITenAdvancesTransferLedger.md).
+
+## 5. The genuine connection to the supercongruence program
 
 The connection is methodological, not deductive.
 
@@ -112,11 +157,18 @@ design: test a finite multiplication table or a finite congruence level, record
 the error metric, and never infer a global theorem without the required
 uniform passage.
 
-## 5. Repository policy
+The more precise transferable lesson is the **conservation upgrade**. In the
+nonsofic proof, a permutation makes the signed global defect vanish, so a
+one-sided local estimate becomes a two-sided estimate. In a congruence proof,
+the analogous useful move is to identify an exact block product, residue sum,
+or involution whose signed defect vanishes before estimating valuations. This
+is a search heuristic, not a deduction from group theory.
+
+## 6. Repository policy
 
 - Known sofic examples may be cited as exact finite-model anchors.
-- The August 2026 nonsofic construction is quarantined in the
-  literature/provenance lane and is treated as unavailable input.
+- The August 2026 nonsofic construction may be cited as an external theorem,
+  with its exact Lean declaration and provenance attached.
 - It is excluded from `RANKINGS.md`, because this repository neither proves
   the result nor obtains a supercongruence from it.
 - It must not be used to upgrade the status of any claim in `RESULT_INDEX.md`.
@@ -131,3 +183,6 @@ uniform passage.
   August 1, 2026.
 - OpenAI, [`ten-proofs`](https://github.com/openai/ten-proofs), accompanying
   Lean certificates, including `NonSoficGroup.lean`.
+- A. Thom, [answer to *What are the key new ideas in the proof of
+  nonsoficity of groups in OpenAI's construction?*](https://mathoverflow.net/a/513885),
+  MathOverflow, August 2026.

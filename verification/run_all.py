@@ -25,6 +25,7 @@ SCRIPTS = (
     "verification/related/verify_odd_unit_block_towers.py",
     "verification/related/verify_dixon_legendre_towers.py",
     "verification/related/verify_a364173_integral_tower.py",
+    "verification/related/verify_a364176_affine_landau.py",
     "verification/related/verify_coefficient_power_gauss_baseline.py",
     "verification/related/verify_modular_product_prime_packet.py",
     "verification/related/verify_a229452_coefficient_root.py",
