@@ -101,6 +101,30 @@ not a counter-audit. The status change here rests on the released theorem, its
 named Lean endpoint, its recorded axiom audit, and the subsequent expert
 explanation of the proof mechanism.
 
+### Three groups that should not be conflated
+
+The construction uses three groups with different jobs:
+
+1. The commuting subgroup $J\cong V$ is Thompson's group $V$. Its role is to
+   provide the contradiction: it is finitely presented, infinite, simple, and
+   not LEF. The argument does **not** conclude merely from this that $V$ is
+   nonsofic.
+2. The elementary group
+   $G=\operatorname{EL}_9(L_{\mathbb F_2}(1,2))$ is the explicit finitely
+   generated group shown nonsofic by the expander-component argument. The
+   construction does not need to prove that this particular $G$ is finitely
+   presented.
+3. A separate finite-table group $H_F$ is obtained by imposing the finitely
+   many multiplication relations from a forbidden finite test $F\subset G$.
+   It maps onto $G$, so it is infinite, and any sofic approximation of $H_F$
+   would induce the forbidden finite model. Consequently $H_F$ is finitely
+   presented and nonsofic.
+
+This last finite-table passage is why the released theorem really does imply
+the existence of a finitely presented nonsofic group. The fact that $V$, rather
+than $G$, is the finitely presented group appearing inside the LEF
+contradiction does not invalidate that separate conclusion.
+
 ## 4. The new mechanism: matching expander components
 
 The accepted MathOverflow explanation by Andreas Thom isolates the real new
@@ -136,6 +160,13 @@ This is more specific than a generic appeal to concentration of measure or
 Arzelà--Ascoli: permutation conservation upgrades one-sided control to
 two-sided $L^1$ control, and expansion turns that control into component
 matching.
+
+Thom's useful verdict is therefore precise: the proof does not invent a new
+source of expansion or a general new stability theorem. Its reusable novelty
+is an **expander-component matching principle**. Median normalization,
+permutation conservation, and ambient expansion make two earlier results fit
+together in a setting where a disjoint union of unequal expanders had blocked
+the single-expander theorem.
 
 The exact finite identity underlying that upgrade is recorded as Lemma 1 in
 the [ten-advances transfer ledger](OpenAITenAdvancesTransferLedger.md).
