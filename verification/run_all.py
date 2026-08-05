@@ -53,6 +53,7 @@ SCRIPTS = (
     "verification/related/verify_cooper_level11.py",
     "verification/related/verify_dwork_boundaries.py",
     "verification/related/verify_ehrhart_newton_prime_cutoff.py",
+    "verification/related/verify_group_ring_gauss_boundary.py",
     "verification/related/verify_gaussian_twists.py",
     "verification/related/verify_bala_gaussian_twist_pilot.py",
     "verification/related/verify_binomial_power_frobenius.py",

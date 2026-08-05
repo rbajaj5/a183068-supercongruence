@@ -47,7 +47,7 @@ The manifest's main declarations are:
 | --- | --- | --- | --- |
 | High-dimensional sphere packing | `SpherePacking.lean` | Fourier-positive dual certificates suggest how to separate a proposed congruence witness from the search that found it. No $p$-adic exponent follows. | Certificate architecture |
 | Binary and spherical codes | `MetricCodes.lean` | Supplies a model for ranking finite fingerprints by distance and rate; relevant to Walsh/hypercube checkers, not to proof of an arithmetic tower. | Experimental design |
-| Nonsofic groups | `NonSoficGroup.lean` | The median-normalized expander argument yields an exact conservation upgrade from one-sided permutation control to $L^1$ control. | Reusable proof-search lemma |
+| Nonsofic groups | `NonSoficGroup.lean` | The median-normalized expander argument yields an exact conservation upgrade. The explicit group's prime-order torsion also gives a sharp group-ring Gauss-congruence boundary. | Arithmetic theorem and obstruction |
 | Connes rigidity counterexample | `ConnesRigidity.lean` | Warns that equality of a powerful completed invariant need not identify the original object. In the arithmetic ledger, matching zeta factors or defect profiles must not be promoted to equality without injectivity. | Invariant boundary |
 | Permanent circuit lower bounds | `Permanent.lean` | Motivates recording expression size and denominator growth separately from correctness. A short factorial-ratio identity can be mathematically decisive even when naive expansion is enormous. | Complexity accounting |
 | Quantum parallel repetition | `QuantumParallelRepetition.lean` | Provides the correct model for audit amplification: independent or theorem-controlled repetitions can reduce soundness error exponentially; correlated LLM reviews cannot be multiplied as if independent. | Review protocol |
@@ -56,8 +56,7 @@ The manifest's main declarations are:
 | Multicolor Ramsey lower bound | `MulticolorTriangleRamsey.lean` | Reinforces the repository's untrusted-search/trusted-checker pattern: a large combinatorial witness should be reduced to a small exact predicate. | Certificate architecture |
 | Compactness and degeneracy counterexamples | `CompactnessAndDegeneracy.lean` | Supplies a concrete warning that every bounded or finite-looking regime need not assemble into the expected global theorem. Uniformity is an obligation, not an inference from many finite checks. | Local-to-global boundary |
 
-Only the Ehrhart row currently changes an arithmetic theorem statement. The
-nonsofic row contributes a precise lemma used to improve proof search. The
+The Ehrhart and nonsofic rows now produce direct arithmetic statements. The
 other eight rows improve certification, ranking, or logical hygiene.
 
 ## 3. Conservation upgrade extracted from the nonsofic proof
@@ -112,6 +111,20 @@ This can recover a missing factor that termwise absolute-value estimates
 discard. It is a heuristic until the relevant arithmetic conservation law is
 written explicitly.
 
+The separate [group-ring Gauss theorem](NonSoficGroupRingGaussBoundary.md)
+extracts a second, fully arithmetic consequence. For
+$a_N=[1]x^N$, the tower
+
+```math
+a_{np^r}\equiv a_{np^{r-1}}\pmod {p^r}
+```
+
+holds for every finitely supported $x\in\mathbb Z[G]$ exactly when $G$ has no
+element of order $p$. The explicit nonsofic group contains a copy of
+Thompson's $V$ and hence prime-order torsion for every $p$, producing sharp
+first-level counterexamples. Thus torsion, not soficity, controls this
+particular congruence mechanism.
+
 ## 4. Direct arithmetic transfer from the Ehrhart theorem
 
 The accepted sharp Ehrhart theorem states that a $d$-dimensional convex body
@@ -152,8 +165,8 @@ this repository did not prove them. Their effects are instead:
 
 - `EHRHART-CUTOFF` moves from conditional to a completed deduction from an
   accepted external theorem;
-- the nonsofic boundary note moves from quarantine to accepted provenance and
-  gains Lemma 1 as its transferable mechanism;
+- the nonsofic boundary note moves from quarantine to accepted provenance,
+  gains Lemma 1, and supplies the group-ring Gauss torsion theorem;
 - checker-heavy results must state whether repeated tests are deterministic,
   independently randomized, or correlated reviews;
 - invariant matches and finite-range success cannot by themselves raise proof

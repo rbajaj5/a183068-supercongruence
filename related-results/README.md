@@ -24,8 +24,11 @@ its expander-component matching argument.
 
 The [ten-advances transfer ledger](OpenAITenAdvancesTransferLedger.md) routes
 all ten results through the repository's proof, experiment, and audit lanes.
-It records one direct arithmetic transfer, one reusable conservation lemma,
-and explicit non-transfer boundaries for the remaining results.
+It records two direct arithmetic transfers, one reusable conservation lemma,
+and explicit non-transfer boundaries for the remaining results. The
+[group-ring Gauss boundary](NonSoficGroupRingGaussBoundary.md) proves that
+prime-order torsion, rather than soficity, exactly controls the universal
+coefficient-return congruence.
 
 The [Ehrhart--Newton prime cutoff](EhrhartNewtonPrimeCutoff.md) is the direct
 arithmetic deduction extracted from the collection. It turns the accepted
@@ -77,6 +80,7 @@ supercongruence exponent.
 | 3 | [p-adic Arzelà--Ascoli framework](PadicArzelaAscoliSupercongruenceTowers.md) | Proves the vertical limit supplied by A183068, uses the Banach contraction $x\mapsto px$ to rule out a global continuous interpolation, and proves uniform quadratic contraction of every normalized defect at zero | Complete elementary framework and obstruction; unit-shell estimate open |
 | 4 | [Gaussian Frobenius twists](GaussianFrobeniusTwists.md) | Shows that discard-and-rescale proofs lift to roots-of-unity weights; specializes A183068 to a Gaussian split/inert congruence | Complete elementary deduction; priority unchecked |
 | 4J | [Finite lattice-walk Frobenius congruences](LatticeWalkFrobeniusCongruences.md) | Gives the exact trace-sequence bridge from finite transfer matrices to Gaussian and Eisenstein split/inert/ramified congruences; separates finite-width SAW models from the conjectural SLE limit | Complete elementary theorem and 174 exact checks; unramified part is standard, ramified priority not established |
+| 4J-G | [Group-ring Gauss torsion boundary](NonSoficGroupRingGaussBoundary.md) | Characterizes universal coefficient-return Gauss towers by absence of order-$p$ torsion and applies the obstruction to the explicit nonsofic group | Complete elementary theorem and 130 exact checks; ordinary depth $r$, priority unclaimed |
 | 4J-N | [Walsh-chaos congruences for planar noise and Y](BlackNoiseWalshCongruences.md) | Turns color reversal into a \(3r-2\) Gaussian-prime congruence; the classical Y-game majority reduction supplies an exact multiscale Boolean observable alongside finite percolation and coalescing-walk models | Complete elementary arithmetic theorem with exhaustive Y checks through side length 5; priority provisional |
 | 4B | [Binomial-power polynomial Frobenius theorem](BinomialPowerFrobeniusTheorem.md) | Proves the coefficientwise \(X\mapsto X^p\) tower for every exponent \(m\ge3\), including the multiplicity bonus \(v_p(m)\) and all Gaussian local cases | Complete elementary deduction; priority not established |
 | 4C | [Quadratic A005259/A333592-family polynomial towers](QuadraticGaussianQueueTheorem.md) | Closes the two remaining Gaussian-pilot targets at coefficientwise exponent \(2r\) and covers every positive parameter pair in the broader A333592 family | Complete classical-scaling corollary; not the stronger A333592 cubic conjecture |
@@ -151,6 +155,7 @@ The individual correspondence is:
 | Peter Bala's OEIS queue | `verification/related/verify_bala_oeis_supercongruences.py` |
 | Bober sporadic factorial-ratio packet | `verification/related/verify_bober_sporadic_packet.py` |
 | A364176 affine-Landau theorem | `verification/related/verify_a364176_affine_landau.py` |
+| Group-ring Gauss torsion boundary | `verification/related/verify_group_ring_gauss_boundary.py` |
 | First two A365029 levels | `verification/related/verify_a365029_first_two_levels.py` |
 | Binomial-quotient cancellation | `verification/related/verify_binomial_quotient_cancellation.py` |
 | Apéry odd-moment prime classification | `verification/related/verify_apery_odd_moment_prime_classification.py` |
