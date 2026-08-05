@@ -139,6 +139,9 @@ matching.
 
 The exact finite identity underlying that upgrade is recorded as Lemma 1 in
 the [ten-advances transfer ledger](OpenAITenAdvancesTransferLedger.md).
+The [group-ring Gauss boundary](NonSoficGroupRingGaussBoundary.md) gives the
+direct arithmetic follow-on: prime-order torsion exactly characterizes when
+all coefficient-return sequences satisfy the ordinary Gauss tower.
 
 ## 5. The genuine connection to the supercongruence program
 

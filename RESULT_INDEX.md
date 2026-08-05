@@ -542,6 +542,32 @@ proof.
 - **Proof:** [Frobenius-quotient identity, Section 3](related-results/FrobeniusQuotientConstantTerms.md#3-what-the-standard-dwork-theorem-does-not-supply-automatically)
 - **Exact checker:** [`verify_dwork_boundaries.py`](verification/related/verify_dwork_boundaries.py)
 
+### GROUPRING-GAUSS -- exact prime-torsion boundary
+
+- **Claim:** For a group $G$, a prime $p$, and every finitely supported
+  $x\in\mathbb Z[G]$, put $a_N=[1]x^N$. The congruences
+
+  ```math
+  a_{np^r}\equiv a_{np^{r-1}}\pmod {p^r}
+  ```
+
+  hold for all positive $n,r$ and all $x$ if and only if $G$ has no element
+  of order $p$.
+- **Mechanism:** Signed colored words are partitioned by primitive cyclic
+  period. In the absence of $p$-torsion, adjacent levels pair exactly except
+  for orbits whose sizes already contain $p^r$. An element of order $p$ gives
+  the sharp counterexample $x=t$, with $a_p-a_1=1$.
+- **Nonsofic consequence:** OpenAI's explicit nonsofic group contains a copy
+  of Thompson's $V$, hence elements of every prime order and corresponding
+  first-level failures at every prime. This shows that torsion, not soficity,
+  is the exact obstruction for this group-ring construction.
+- **Boundary:** This is the ordinary Gauss depth $r$, not a quadratic or cubic
+  supercongruence. The nonsofic source theorem is accepted externally; the
+  group-ring theorem is proved here.
+- **Status:** Complete elementary theorem; priority unclaimed.
+- **Proof:** [Group-ring Gauss congruences and the nonsofic torsion boundary](related-results/NonSoficGroupRingGaussBoundary.md)
+- **Exact checker:** [`verify_group_ring_gauss_boundary.py`](verification/related/verify_group_ring_gauss_boundary.py)
+
 ### EHRHART-CUTOFF -- Newton-polytope rank primes
 
 - **Claim:** By the sharp Ehrhart-volume theorem in OpenAI's August 2026
@@ -550,11 +576,13 @@ proof.
   $(d+1)^d$. Consequently, reduction modulo a prime
   $p>(d+1)^d$ preserves full-dimensional affine independence of its lattice
   points, including after passage to a number-field prime ideal of residue
-  characteristic $p$.
+  characteristic $p$. For every full-rank finite support in the body, the
+  entire affine matroid is preserved.
 - **Status:** Complete elementary deduction and sharpness family from an
   accepted external theorem with a public Lean certificate. This repository
   proves the determinant corollary, not the source volume theorem.
-- **Boundary:** This bounds exceptional rank primes, not a supercongruence
+- **Boundary:** This bounds exceptional rank primes and preserves dependence
+  patterns, not a supercongruence
   exponent. The A183068 Newton polytope fails the unique-interior hypothesis.
 - **Proof:** [Ehrhart--Newton prime cutoff](related-results/EhrhartNewtonPrimeCutoff.md)
 - **Exact checker:** [`verify_ehrhart_newton_prime_cutoff.py`](verification/related/verify_ehrhart_newton_prime_cutoff.py)

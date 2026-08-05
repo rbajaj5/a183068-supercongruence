@@ -82,6 +82,34 @@ zero is zero after reduction.  This proves the result.
 The same conclusion holds after reduction modulo any prime ideal of a number
 field whose residue characteristic exceeds $(d+1)^d$.
 
+### Corollary (the full affine matroid is preserved)
+
+Let $A\subset K\cap\mathbb Z^d$ be finite and suppose that $A$ affinely spans
+$\mathbb Q^d$. For every prime $p>(d+1)^d$, a subset $I\subseteq A$ is
+affinely independent over $\mathbb Q$ if and only if its reduction is affinely
+independent over $\mathbb F_p$.
+
+Indeed, an independent $I$ extends inside $A$ to an affine basis
+$m_0,\ldots,m_d$. Its nonzero determinant remains nonzero modulo $p$ by the
+theorem, so the reduction of $I$ remains independent. Conversely, a dependent
+$I$ has a primitive integral affine relation
+
+```math
+\sum_{m\in I}u_m m=0,
+\qquad
+\sum_{m\in I}u_m=0,
+\qquad
+\gcd(u_m:m\in I)=1.
+```
+
+At least one coefficient remains nonzero modulo every prime, so the relation
+remains nontrivial after reduction.
+
+Thus the entire affine matroid of an eligible full-rank Newton support is
+unchanged above the cutoff. This is stronger than preserving one chosen
+simplex: every face-, circuit-, and basis calculation depending only on the
+affine-dependence pattern survives simultaneously.
+
 ## 3. Sharpness of the uniform number
 
 Let
@@ -126,26 +154,28 @@ now has a finite exceptional-prime search:
 p\le(d+1)^d.
 ```
 
-Above that cutoff, reduction cannot manufacture a new full-dimensional affine
-dependence in the exponent configuration.  This is useful when a congruence
-proof first separates a generic-rank case from finitely many singular primes.
+Above that cutoff, reduction preserves the entire affine matroid of a
+full-rank exponent support. This is useful when a congruence proof separates a
+generic face or circuit pattern from finitely many singular primes.
 
 The conclusion is deliberately limited:
 
 - it controls rank degeneration, not a $p$-adic error exponent;
 - it does not prove a Dwork congruence by itself;
-- it does not control lower-dimensional minors from the volume estimate alone;
-  and
+- it does not bound each lower-dimensional minor numerically, although the
+  extension-to-a-basis argument preserves their independence pattern when the
+  support has full affine rank; and
 - it does not apply to the displayed A183068 Laurent polynomial, whose Newton
   polytope has three interior lattice points rather than one.
 
 ## 5. Verification boundary
 
 The exact checker verifies the centered-simplex sharpness family, the interior
-lattice-point calculation through dimension six, and the displayed cutoff
-table. These checks validate the arithmetic deduction. The source theorem is
-certified separately by `EhrhartVolumeInequality.lean` in OpenAI's public
-`ten-proofs` repository.
+lattice-point calculation through dimension six, the displayed cutoff table,
+and affine-matroid preservation on exhaustive and seeded finite samples. These
+checks validate the arithmetic deduction. The source theorem is certified
+separately by `EhrhartVolumeInequality.lean` in OpenAI's public `ten-proofs`
+repository.
 
 ## Reference
 
