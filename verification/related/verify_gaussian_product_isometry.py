@@ -209,6 +209,32 @@ def coordinate_boundary_weights(
     return weights, perturbation
 
 
+def critical_shell_weights(r: int, mask: int) -> list[GaussianRational]:
+    weights: list[GaussianRational] = []
+    for index, xi in enumerate(mixed_block(r)):
+        bit = (mask >> index) & 1
+        pi_power = gpow(
+            (Fraction(1), Fraction(1)),
+            4 * r - 3 + vpi(xi),
+        )
+        perturbation = (
+            Fraction(bit) * pi_power[0],
+            Fraction(bit) * pi_power[1],
+        )
+        weights.append(
+            gadd((Fraction(1), Fraction(0)), perturbation)
+        )
+    return weights
+
+
+def congruent_mod_pi(
+    left: GaussianRational,
+    right: GaussianRational,
+) -> bool:
+    difference = gsub(left, right)
+    return difference == (Fraction(0), Fraction(0)) or vpi(difference) >= 1
+
+
 def main() -> None:
     points: list[GaussianRational] = [
         (Fraction(a), Fraction(b))
@@ -220,6 +246,7 @@ def main() -> None:
     neighborhood_checks = 0
     anisotropic_checks = 0
     boundary_checks = 0
+    critical_shell_checks = 0
     for r in (2, 3):
         coefficient = first_log_coefficient(r)
         assert vpi(coefficient) == 6 * r - 3
@@ -306,6 +333,42 @@ def main() -> None:
             assert boundary_coefficient == (Fraction(0), Fraction(0))
             boundary_checks += 1
 
+        if r == 2:
+            critical_masks = list(range(1 << len(block)))
+        else:
+            critical_masks = [0, (1 << len(block)) - 1]
+            critical_masks.extend(1 << index for index in range(len(block)))
+            critical_masks.extend(
+                (1 << left) | (1 << right)
+                for left, right in combinations(range(len(block)), 2)
+            )
+
+        normalization = gpow(
+            (Fraction(1), Fraction(1)),
+            6 * r - 3,
+        )
+        for mask in critical_masks:
+            weights = critical_shell_weights(r, mask)
+            boundary_coefficient = weighted_first_log_coefficient(r, weights)
+            normalized_coefficient = gdiv(
+                boundary_coefficient, normalization
+            )
+            parity = mask.bit_count() % 2
+            expected_residue = (
+                Fraction((1 + parity) % 2),
+                Fraction(0),
+            )
+            assert congruent_mod_pi(
+                normalized_coefficient, expected_residue
+            )
+            if parity == 0:
+                assert vpi(boundary_coefficient) == 6 * r - 3
+            else:
+                assert boundary_coefficient == (
+                    Fraction(0), Fraction(0)
+                ) or vpi(boundary_coefficient) >= 6 * r - 2
+            critical_shell_checks += 1
+
     print(
         "Gaussian product isometry: "
         f"{pair_checks} exact pair checks across r=2,3 passed"
@@ -321,6 +384,10 @@ def main() -> None:
     print(
         "Gaussian coordinate radii: "
         f"{boundary_checks} sharp boundary checks passed"
+    )
+    print(
+        "Gaussian critical-shell parity: "
+        f"{critical_shell_checks} exact residue checks passed"
     )
 
 
