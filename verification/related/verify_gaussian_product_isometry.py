@@ -164,21 +164,75 @@ def neighborhood_weights(r: int, pattern: int) -> list[GaussianRational]:
     return weights
 
 
-def sharp_boundary_weights(
+def anisotropic_weights(r: int, pattern: int) -> list[GaussianRational]:
+    weights: list[GaussianRational] = []
+    for a_fraction, b_fraction in mixed_block(r):
+        xi = (a_fraction, b_fraction)
+        a = int(a_fraction)
+        b = int(b_fraction)
+        pi_power = gpow(
+            (Fraction(1), Fraction(1)),
+            4 * r - 2 + vpi(xi),
+        )
+        if pattern == 0:
+            perturbation = (
+                Fraction((a + 2 * b) % 5 - 2),
+                Fraction((2 * a - b) % 5 - 2),
+            )
+        else:
+            perturbation = (
+                Fraction(1 if (a + b) % 2 == 0 else -1),
+                Fraction(1 if a % 2 else 0),
+            )
+        weights.append(
+            gadd(
+                (Fraction(1), Fraction(0)),
+                gmul(pi_power, perturbation),
+            )
+        )
+    return weights
+
+
+def coordinate_boundary_weights(
     r: int,
+    index: int,
 ) -> tuple[list[GaussianRational], GaussianRational]:
-    weights = [
-        (Fraction(1), Fraction(0)) for _ in mixed_block(r)
-    ]
-    xi = mixed_block(r)[0]
-    assert xi == (Fraction(1), Fraction(1))
+    block = mixed_block(r)
+    weights = [(Fraction(1), Fraction(0)) for _ in block]
+    xi = block[index]
     coefficient = first_log_coefficient(r)
     numerator = gmul(coefficient, xi)
     scale = Fraction(2**r)
     perturbation = (-numerator[0] / scale, -numerator[1] / scale)
-    assert vpi(perturbation) == 4 * r - 2
-    weights[0] = gadd(weights[0], perturbation)
+    assert vpi(perturbation) == 4 * r - 3 + vpi(xi)
+    weights[index] = gadd(weights[index], perturbation)
     return weights, perturbation
+
+
+def critical_shell_weights(r: int, mask: int) -> list[GaussianRational]:
+    weights: list[GaussianRational] = []
+    for index, xi in enumerate(mixed_block(r)):
+        bit = (mask >> index) & 1
+        pi_power = gpow(
+            (Fraction(1), Fraction(1)),
+            4 * r - 3 + vpi(xi),
+        )
+        perturbation = (
+            Fraction(bit) * pi_power[0],
+            Fraction(bit) * pi_power[1],
+        )
+        weights.append(
+            gadd((Fraction(1), Fraction(0)), perturbation)
+        )
+    return weights
+
+
+def congruent_mod_pi(
+    left: GaussianRational,
+    right: GaussianRational,
+) -> bool:
+    difference = gsub(left, right)
+    return difference == (Fraction(0), Fraction(0)) or vpi(difference) >= 1
 
 
 def main() -> None:
@@ -190,6 +244,9 @@ def main() -> None:
 
     pair_checks = 0
     neighborhood_checks = 0
+    anisotropic_checks = 0
+    boundary_checks = 0
+    critical_shell_checks = 0
     for r in (2, 3):
         coefficient = first_log_coefficient(r)
         assert vpi(coefficient) == 6 * r - 3
@@ -238,11 +295,79 @@ def main() -> None:
                 assert vpi(normalized_difference) == vpi(source_difference)
                 neighborhood_checks += 1
 
-        boundary_weights, _ = sharp_boundary_weights(r)
-        boundary_coefficient = weighted_first_log_coefficient(
-            r, boundary_weights
+        for pattern in (0, 1):
+            weights = anisotropic_weights(r, pattern)
+            weighted_coefficient = weighted_first_log_coefficient(r, weights)
+            assert vpi(weighted_coefficient) == 6 * r - 3
+            assert vpi(gsub(weighted_coefficient, coefficient)) >= 6 * r - 2
+
+            weighted_values = {
+                point: weighted_product(r, point, weights) for point in points
+            }
+            for left, right in combinations(points, 2):
+                source_difference = gsub(left, right)
+                image_difference = gsub(
+                    weighted_values[left], weighted_values[right]
+                )
+                assert vpi(image_difference) == 6 * r - 3 + vpi(
+                    source_difference
+                )
+                normalized_difference = gdiv(
+                    image_difference, weighted_coefficient
+                )
+                assert vpi(normalized_difference) == vpi(source_difference)
+                anisotropic_checks += 1
+
+        block = mixed_block(r)
+        odd_odd_index = next(
+            index for index, xi in enumerate(block) if vpi(xi) == 1
         )
-        assert boundary_coefficient == (Fraction(0), Fraction(0))
+        unit_index = next(
+            index for index, xi in enumerate(block) if vpi(xi) == 0
+        )
+        for index in (odd_odd_index, unit_index):
+            boundary_weights, _ = coordinate_boundary_weights(r, index)
+            boundary_coefficient = weighted_first_log_coefficient(
+                r, boundary_weights
+            )
+            assert boundary_coefficient == (Fraction(0), Fraction(0))
+            boundary_checks += 1
+
+        if r == 2:
+            critical_masks = list(range(1 << len(block)))
+        else:
+            critical_masks = [0, (1 << len(block)) - 1]
+            critical_masks.extend(1 << index for index in range(len(block)))
+            critical_masks.extend(
+                (1 << left) | (1 << right)
+                for left, right in combinations(range(len(block)), 2)
+            )
+
+        normalization = gpow(
+            (Fraction(1), Fraction(1)),
+            6 * r - 3,
+        )
+        for mask in critical_masks:
+            weights = critical_shell_weights(r, mask)
+            boundary_coefficient = weighted_first_log_coefficient(r, weights)
+            normalized_coefficient = gdiv(
+                boundary_coefficient, normalization
+            )
+            parity = mask.bit_count() % 2
+            expected_residue = (
+                Fraction((1 + parity) % 2),
+                Fraction(0),
+            )
+            assert congruent_mod_pi(
+                normalized_coefficient, expected_residue
+            )
+            if parity == 0:
+                assert vpi(boundary_coefficient) == 6 * r - 3
+            else:
+                assert boundary_coefficient == (
+                    Fraction(0), Fraction(0)
+                ) or vpi(boundary_coefficient) >= 6 * r - 2
+            critical_shell_checks += 1
 
     print(
         "Gaussian product isometry: "
@@ -252,7 +377,18 @@ def main() -> None:
         "Gaussian parameter neighborhood: "
         f"{neighborhood_checks} exact pair checks across r=2,3 passed"
     )
-    print("Gaussian parameter radius: 2 sharp boundary checks passed")
+    print(
+        "Gaussian anisotropic chamber: "
+        f"{anisotropic_checks} exact pair checks across r=2,3 passed"
+    )
+    print(
+        "Gaussian coordinate radii: "
+        f"{boundary_checks} sharp boundary checks passed"
+    )
+    print(
+        "Gaussian critical-shell parity: "
+        f"{critical_shell_checks} exact residue checks passed"
+    )
 
 
 if __name__ == "__main__":

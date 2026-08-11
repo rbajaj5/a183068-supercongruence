@@ -589,11 +589,201 @@ b_1(\mathbf a)
 Thus replacing \(4r-1\) by \(4r-2\) would include a parameter vector for
 which first-moment dominance fails completely.
 
+### The sharp anisotropic polydisc
+
+The uniform ball (34) hides one further piece of Gaussian geometry. Every
+\(\xi\in U_r\) has
+
+\[
+e_\xi:=v_\varpi(\xi)\in\{0,1\}.
+\]
+
+The mixed-parity points have \(e_\xi=0\), whereas the odd--odd points have
+\(e_\xi=1\). Because division by \(\xi\) loses precisely \(e_\xi\) powers of
+\(\varpi\), the two types of coordinates have different optimal radii.
+
+#### Theorem (sharp coordinatewise chamber)
+
+Fix \(r\ge2\). If
+
+\[
+a_\xi\in
+1+\varpi^{\,4r-2+e_\xi}\mathcal O
+\qquad(\xi\in U_r),
+\tag{43}
+\]
+
+then
+
+\[
+v_\varpi(b_1(\mathbf a))=6r-3,
+\qquad
+v_\varpi(b_k(\mathbf a))\ge6r-2\quad(k\ge2),
+\qquad
+\frac{b_1(\mathbf a)}{c_r}\in1+\varpi\mathcal O.
+\tag{44}
+\]
+
+Consequently the normalized weighted product (37) is again a bijective
+analytic isometry of \(\mathcal O\). The exponent
+\(4r-2+e_\xi\) is optimal in every individual coordinate while all other
+coordinates are held fixed at \(1\).
+
+#### Proof
+
+Put \(\delta_\xi=a_\xi-1\). The contribution of coordinate \(\xi\) to the
+first-moment perturbation has valuation at least
+
+\[
+v_\varpi\left(\frac{2^r\delta_\xi}{\xi}\right)
+\ge 2r+(4r-2+e_\xi)-e_\xi
+=6r-2.
+\tag{45}
+\]
+
+Hence \(b_1(\mathbf a)-c_r\in\varpi^{6r-2}\mathcal O\), which proves the
+first and third assertions of (44).
+
+For \(k\ge2\), the same factorization used in (39) gives
+
+\[
+v_\varpi\left(
+\frac{2^{rk}}{k}\,(a_\xi^k-1)\xi^{-k}
+\right)
+\ge
+2rk-2v_2(k)+4r-2-(k-1)e_\xi
+\tag{46}
+\]
+
+for each \(\xi\)-summand of \(b_k(\mathbf a)-c_{r,k}\); the omitted sign is
+a unit. If \(e_\xi=0\), its excess over \(6r-2\) is
+\(2r(k-1)-2v_2(k)\). If \(e_\xi=1\), the excess is
+
+\[
+(2r-1)(k-1)-2v_2(k)\ge0,
+\tag{47}
+\]
+
+because \(r\ge2\) and \(v_2(k)\le k-1\). Thus every term in the perturbation
+has valuation at least \(6r-2\); combining this with the unweighted estimate
+for \(c_{r,k}\) proves the second assertion of (44). The isometry follows
+from first-moment dominance exactly as before.
+
+For optimality, choose any one \(\xi_0\in U_r\), keep every other weight
+equal to \(1\), and set
+
+\[
+a_{\xi_0}=1-\frac{c_r\xi_0}{2^r}.
+\]
+
+Then
+
+\[
+v_\varpi(a_{\xi_0}-1)=4r-3+e_{\xi_0},
+\qquad
+b_1(\mathbf a)=0.
+\tag{48}
+\]
+
+This perturbation lies exactly one valuation level outside the radius in
+(43). It therefore proves coordinatewise optimality both for a mixed-parity
+unit coordinate, where the safe exponent is \(4r-2\), and for an odd--odd
+coordinate, where it is \(4r-1\). The earlier uniform-radius witness is the
+odd--odd instance \(\xi_0=1+i\). \(\square\)
+
+### The critical-shell parity law
+
+The immediately larger polydisc admits a complete first-order
+classification, not merely counterexamples. Write
+
+\[
+a_\xi=1+\varpi^{4r-3+e_\xi}u_\xi,
+\qquad u_\xi\in\mathcal O.
+\tag{49}
+\]
+
+Let \(\overline{u}_\xi\) denote reduction modulo \(\varpi\), viewed in the
+residue field \(\mathcal O/\varpi\mathcal O\cong\mathbf F_2\).
+
+#### Theorem (boundary hyperplane)
+
+For every parameter vector in (49),
+
+\[
+\frac{b_1(\mathbf a)}{\varpi^{6r-3}}
+\equiv
+1+\sum_{\xi\in U_r}\overline{u}_\xi
+\pmod{\varpi},
+\tag{50}
+\]
+
+and
+
+\[
+v_\varpi(b_k(\mathbf a))\ge6r-2
+\qquad(k\ge2).
+\tag{51}
+\]
+
+Consequently
+
+\[
+v_\varpi(b_1(\mathbf a))=6r-3
+\quad\Longleftrightarrow\quad
+\sum_{\xi\in U_r}\overline{u}_\xi=0
+\quad\text{in }\mathbf F_2.
+\tag{52}
+\]
+
+On this parity-zero half of the critical shell, the normalized weighted
+product is still a bijective analytic isometry. On the parity-one half,
+the first coefficient has valuation at least \(6r-2\), so the derivative
+vanishes after normalization at the original \(\varpi^{6r-3}\) scale.
+
+#### Proof
+
+Since \(\varpi^2=2i\), the quotient \(2^r/\varpi^{2r}=(-i)^r\) is a unit.
+After substituting (49) into the first logarithmic coefficient and dividing
+by \(\varpi^{6r-3}\), one obtains
+
+\[
+\frac{c_r}{\varpi^{6r-3}}
++
+\frac{2^r}{\varpi^{2r}}
+\sum_{\xi\in U_r}
+u_\xi\frac{\varpi^{e_\xi}}{\xi}.
+\]
+
+Every displayed factor outside \(u_\xi\) is a unit. The residue field is
+\(\mathbf F_2\), whose only nonzero element is \(1\); the normalized
+unweighted coefficient is also a unit. Reduction therefore gives (50).
+
+For a higher coefficient, the \(\xi\)-summand of
+\(b_k(\mathbf a)-c_{r,k}\) has valuation at least
+
+\[
+2rk-2v_2(k)+4r-3-(k-1)e_\xi.
+\]
+
+Its excess over \(6r-2\) is
+\(2r(k-1)-2v_2(k)-1\) when \(e_\xi=0\), and
+\((2r-1)(k-1)-2v_2(k)-1\) when \(e_\xi=1\). Both are nonnegative for
+\(r\ge2\) and \(k\ge2\); the unique tight elementary case is
+\((r,k,e_\xi)=(2,2,1)\). Combining the perturbation bound with (28) proves
+(51). Formula (52) and the isometry conclusion now follow immediately.
+\(\square\)
+
+Thus the safe polydisc (43) is the largest coordinate box contained wholly
+in the chamber, while its first enlargement is cut into two equal residue
+classes by one affine hyperplane. The one-coordinate cancellation witnesses
+from (48) lie on the parity-one side.
+
 The exact checker
 [`verify_gaussian_product_isometry.py`](../verification/related/verify_gaussian_product_isometry.py)
-tests (22), (25), and the neighborhood theorem on 1,800 pairs at scales
-\(r=2,3\), and checks the two sharp boundary witnesses, using exact arithmetic
-in \(\mathbb Q(i)\).
+tests (22), (25), the uniform neighborhood, and the anisotropic chamber on
+3,000 pairs at scales \(r=2,3\). It also checks four sharp coordinate
+witnesses, one of each residue type at each scale, and 5,274 critical-shell
+residue patterns, using exact arithmetic in \(\mathbb Q(i)\).
 
 ## 7. Relation with Blaschke products
 
@@ -631,7 +821,7 @@ R_{\mathfrak p,r}-1
 c_{\mathfrak p,r}\,
 CD\bigl(A-C+i(B-D)\bigr)
 +\text{one valuation level deeper},
-\tag{43}
+\tag{53}
 ```
 
 where \(c_{\mathfrak p,r}\) is the first reciprocal moment of the relevant
@@ -655,5 +845,5 @@ The claims still requiring specialist attention are:
 1. the full ramified reciprocal-moment estimates used to verify (17);
 2. priority for the exact ramified and disk-isometry theorems;
 3. the correct normalization at split primes; and
-4. whether the local formulation (34) is already implicit in a general
+4. whether the sharp local formulation (43) is already implicit in a general
    theorem on factorial products over local fields.
