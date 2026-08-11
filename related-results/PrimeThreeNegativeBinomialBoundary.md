@@ -153,17 +153,17 @@ together with the coefficient $2ab=-ab$ in characteristic $3$; their
 product is $+abHZ$. Substitution of (10)--(11) into (8) proves (5).
 $\square$
 
-## 3. The maximal slope-residue subclass
+## 3. The maximal parameter-residue subclass
 
 ### Corollary 2
 
-If
+For all positive $a,b,c,n$ satisfying
 
 ```math
-3\mid ab(a+b),
+3\mid nab(a+b),
 ```
 
-then for every $c,n\geq1$,
+one has
 
 ```math
 \boxed{
@@ -247,13 +247,14 @@ does not already vanish, $a=n$, and the powers of $x$ are $1$ modulo $3$
 while the powers of $y$ are $0$ modulo $3$. This proves (12). $\square$
 
 The condition is maximal among conditions depending only on the residue
-class of the slope pair $(a,b)$ modulo $3$. It includes seven of the nine
-pairs in $\mathbb F_3^2$; the two omitted pairs are $(1,1)$ and $(2,2)$,
-and both fail already for $c=n=1$, as shown next.
+class of $(a,b,n)$ modulo $3$ and intended to hold uniformly in $c$. It
+includes $23$ of the $27$ triples in $\mathbb F_3^3$. The four omitted
+triples have $a=b\ne0$ and $n\ne0$; every one has a sharp counterexample,
+as shown next.
 
 ## 4. The universal theorem cannot include $p=3$
 
-For the first omitted slope class, take $a=b=c=n=1$. Then
+For $(a,b,n)=(1,1,1)$, take $c=1$. Then
 
 ```math
 U_{1,1;1}(1)=2,
@@ -271,7 +272,7 @@ U_{1,1;1}(3)-U_{1,1;1}(1)=144=3^2\cdot16.
 Thus the exponent $2$ is exact. The restriction $p\geq5$ in the universal
 cubic prefix theorem is sharp.
 
-The other omitted slope class fails just as sharply:
+The other three omitted residue triples fail just as sharply:
 
 ```math
 U_{2,2;1}(1)=5,
@@ -282,8 +283,27 @@ U_{2,2;1}(3)=3614,
 \qquad\text{(15)}
 ```
 
-Consequently no further slope residue class can be added to Corollary 2
-while retaining a theorem uniform in $c$ and $n$.
+```math
+U_{1,1;1}(6)-U_{1,1;1}(2)
+=296438-14
+=296424
+=3^2\cdot32936,
+\qquad\text{(16)}
+```
+
+and
+
+```math
+U_{2,2;2}(6)-U_{2,2;2}(2)
+=2485268015414-1742
+=2485268013672
+=3^2\cdot276140890408.
+\qquad\text{(17)}
+```
+
+These examples represent $(2,2,1)$, $(1,1,2)$, and $(2,2,2)$,
+respectively. Consequently no further parameter residue class can be
+added to Corollary 2 while retaining a theorem uniform in $c$.
 
 ## 5. The next all-level lemma
 
@@ -302,13 +322,13 @@ D_r(a,b,c;n)\equiv27D_{r-1}(a,b,c;n)
 \pmod {3^{3r+1}}
 \qquad(r\geq2).
 }
-\qquad\text{(16)}
+\qquad\text{(18)}
 ```
 
-The extra power in (16) is sharp: for $(a,b,c,n,r)=(1,1,1,1,2)$ the
-difference has valuation exactly $7$. If (16) is proved, Corollary 2
+The extra power in (18) is sharp: for $(a,b,c,n,r)=(1,1,1,1,2)$ the
+difference has valuation exactly $7$. If (18) is proved, Corollary 2
 immediately propagates to every level and supplies the complete $p=3$
-tower for Bala's $u$. Equation (16) remains a conjecture, not a theorem of
+tower for Bala's $u$. Equation (18) remains a conjecture, not a theorem of
 this note.
 
 ## 6. Verification
@@ -320,8 +340,8 @@ python verification/related/verify_prime_three_negative_binomial_boundary.py
 ```
 
 The checker verifies the exact residue formula, the maximal
-$3\mid ab(a+b)$ corollary, sharp counterexamples in both excluded slope
-classes, the sharp second-level renormalization witness, and extended
-exact and modular grids for (16). These computations certify
+$3\mid nab(a+b)$ corollary, sharp counterexamples in all four excluded
+parameter residue classes, the sharp second-level renormalization witness,
+and extended exact and modular grids for (18). These computations certify
 the formulas and boundaries but do not prove the conjectural all-level
 renormalization.

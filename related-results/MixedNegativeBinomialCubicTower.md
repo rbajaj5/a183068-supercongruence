@@ -316,8 +316,8 @@ Q_{p,r}(n)=
 Theorem 1 proves that this is $p$-integral for $p\geq5$. The separate
 [prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
 computes the exact first defect modulo $3$, proves the maximal
-slope-residue criterion $3\mid ab(a+b)$ for the first cubic level, and
-gives sharp counterexamples in both omitted slope classes. Exact computations
+parameter-residue criterion $3\mid nab(a+b)$ for the first cubic level,
+and gives sharp counterexamples in all four omitted triples. Exact computations
 suggest the stronger stabilization
 
 ```math
