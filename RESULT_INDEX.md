@@ -260,7 +260,11 @@ proof.
   \pmod p.
   \]
   Thus Bala's first-residue stabilization is reduced to one
-  Frobenius-fixed moment identity, which remains open.
+  Frobenius-fixed moment identity. More concretely, it is enough to express
+  the kernel discrepancy as one Hamiltonian tangent divergence along the
+  level sets of $G$.  The unimodular coordinate $y=t/x$ converts that
+  certificate to an explicit triangular transport recurrence; only its
+  resonant coefficient classes remain open.
 - **Status:** Complete first-layer proof candidate; 1,474 exact arithmetic
   checks support the remaining moment identity; no priority claim.
 - **Proof:** [Bala August first-defect kernel](related-results/BalaAugustFirstDefectKernel.md)
