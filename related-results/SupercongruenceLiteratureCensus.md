@@ -175,9 +175,15 @@ generalized-binomial products and their alternating twists by factor count,
 and closes A333592's cubic specialization by an exact reduction to Coster's
 shifted theorem. The larger algebraic-kernel family surrounding A333473
 remains open. The same packet gives an exact Bernoulli correction showing
-that a proposed negative-binomial $p^5$ strengthening is false; its corrected
-ordinary cubic tower remains open above the prime boundary, although a
-quadratic tower now follows unconditionally from the mixed-binomial theorem.
+that a proposed negative-binomial $p^5$ strengthening is false. The separate
+[prefix-Cartier theorem](MixedNegativeBinomialCubicTower.md) proves the
+corrected ordinary cubic tower for every $p\geq5$ and, more generally, the
+full positive-parameter A333592 family. Its normalized-defect refinement and
+the all-level exceptional prime $p=3$ remain open. The
+[prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
+computes the exact first ternary defect, proves the first cubic level for
+Bala's sum, and shows by a valuation-two example that no universal $p=3$
+extension is possible.
 
 ## 6. Core bibliography
 

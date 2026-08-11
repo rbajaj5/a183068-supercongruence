@@ -348,15 +348,21 @@ u(np^k)\equiv u(np^{k-1})\pmod {p^{3k}}.
 \qquad\text{(24)}
 ```
 
-The checker finds no failure in its stated finite grid, but (24) is retained
-as a conjecture: Theorem 3 proves only its prime-level case.
+Theorem 3 proves the prime-level case. The separate
+[prefix-Cartier theorem](MixedNegativeBinomialCubicTower.md) now proves
+(24) at every level for every prime $p\geq5$. The
+[prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
+proves the first $p=3$ level for Bala's sum and gives an exact criterion for
+the general family; propagation through all $3$-power levels remains open.
 
 ## 7. What remains open
 
 - The named A333473 quadratic tower is proved in the
   [August mixed-binomial follow-on](BalaAugustMixedBinomialFollowOn.md).
   Its larger two-parameter algebraic-kernel family remains open.
-- The ordinary cubic tower (24) remains open beyond the prime boundary.
+- The ordinary cubic tower (24) is proved for $p\geq5$ and at the first
+  $p=3$ level; all-level ternary propagation and the stronger normalized
+  defect stabilization remain open.
 - Bala's product and twist proposal is classified by the follow-on: two
   generalized-binomial factors give a quadratic tower, while three or more
   give a cubic tower. The companions containing upper arguments depending

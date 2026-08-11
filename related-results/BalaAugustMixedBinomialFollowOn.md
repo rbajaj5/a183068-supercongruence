@@ -1,8 +1,8 @@
 # The August mixed-binomial follow-on
 
 **Status:** complete elementary mixed-binomial theorem; A333473 and A333592
-corollaries; two exact counterexamples; the cubic mixed negative-binomial
-case remains open.
+corollaries; two exact counterexamples; the mixed negative-binomial cubic
+tower is proved separately for every prime $p\geq5$.
 
 **Source boundary:** Peter Bala proposed the product, twist, and
 negative-parameter families in correspondence on August 11, 2026. The proof
@@ -16,10 +16,10 @@ No literature-priority claim is made for the present assembly.
 | A119258 denominator primes | Closed: the arbitrary integral coefficient slope removes the exclusion |
 | Chebyshev primes dividing the coefficient slope | Closed by the same theorem |
 | A333473 | Its named quadratic tower holds for every odd prime; the larger algebraic-kernel family remains open |
-| Mixed negative-binomial sum | Quadratic tower proved; prime-level cubic term proved in the first packet; all-level cubic tower still open |
+| Mixed negative-binomial sum | Cubic tower proved for every $p\geq5$ by the prefix-Cartier theorem; the normalized-defect stabilization remains conjectural |
 | Products and twists | Cubic for three or more generalized-binomial factors; quadratic for two |
 | Index-dependent negative substitutions | Two families fail cubically at $p=5$; two companion families remain computational candidates |
-| A333592 | Cubic tower closed by Coster's shifted theorem plus one endpoint |
+| A333592 | Named cubic tower closed by Coster; the full positive-parameter family is also covered by the prefix-Cartier theorem |
 
 The main structural point is that the number of independent binomial
 factors supplies the discard exponent. The scaled stratum is then controlled
@@ -242,16 +242,59 @@ u(np^r)\equiv u(np^{r-1})\pmod {p^{2r}}
 for every odd prime. The Bernoulli calculation in the
 [first packet](BalaAugustCoefficientPacket.md#6-the-negative-binomial-strengthening-is-false)
 proves the stronger $p^3$ congruence at the prime boundary and computes its
-leading term. Exact tests now find
+leading term. The separate
+[prefix-Cartier theorem](MixedNegativeBinomialCubicTower.md) proves
 
 ```math
 u(np^r)\equiv u(np^{r-1})\pmod {p^{3r}}
 ```
 
-for $p\in\{3,5,7,11,13\}$, $1\leq n\leq4$, and every tested level with
-$np^r\leq700$. This is evidence only. The missing theorem is precisely one
-extra power per level after evaluating the two-factor polynomial at $X=1$;
-it cannot come from coefficientwise divisibility.
+for every $p\geq5$ and $n,r\geq1$. It proves the extra power only after
+prefix summation: the coefficientwise two-factor theorem itself remains
+quadratic. The [prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
+proves the first cubic level for Bala's sum and computes the exact obstruction
+for the full family. Its all-level $p=3$ propagation remains conjectural.
+
+### 4.1 A stabilized first-defect conjecture
+
+The cubic evidence has a stronger structure. Put
+
+```math
+D_{p,r}(n)=u(np^r)-u(np^{r-1}).
+```
+
+For $p\geq5$, the prefix-Cartier theorem makes the quotient
+
+```math
+Q_{p,r}(n)=\frac{D_{p,r}(n)}{p^{3r}}.
+\qquad\text{(10a)}
+```
+
+integral. Exact data support, for $r\geq2$, the further conjecture
+
+```math
+\boxed{
+Q_{p,r}(n)\equiv Q_{p,r-1}(n)
+\pmod {p^{\,2r-2-\delta_p}},
+}
+\qquad
+\delta_p=
+\begin{cases}
+1,&p=5,\\
+0,&p\ne5.
+\end{cases}
+\qquad\text{(10b)}
+```
+
+In particular, the leading residue $Q_{p,r}(n)\bmod p$ appears independent
+of $r$. The cubic integrality boundary is now proved for $p\geq5$; only this
+stronger stabilization and the all-level prime $p=3$ propagation remain open.
+
+The modular checker computes each summand by tracking its $p$-adic exponent
+and unit separately. It verifies the cubic divisibility and (10b) for
+$p\in\{3,5,7,11,13\}$, $1\leq n\leq6$, and every level $r\leq4$ with
+$np^r\leq100{,}000$. The stabilization remains evidence, not a proof. The
+exceptional $p=5$ loss is attained in the grid.
 
 ## 5. Bala's product and twist proposal
 
@@ -281,7 +324,7 @@ uniform quadratic tower. Special two-factor sums may be stronger after a
 Vandermonde collapse or a sum-level cancellation, but that is extra
 structure rather than a consequence of sign replacement.
 
-## 6. A Coster closure for A333592
+## 6. Two closures for A333592
 
 The sequence [A333592](https://oeis.org/A333592) is
 
@@ -322,7 +365,15 @@ A(np^r)\equiv A(np^{r-1})\pmod {p^{3r}}.
 ```
 
 This is a reduction to a published theorem, not a new supercongruence
-mechanism.
+mechanism. Independently, the
+[prefix-Cartier theorem](MixedNegativeBinomialCubicTower.md) applies to
+
+```math
+\sum_{k=0}^{AN}\binom{BN+k-1}{k}^2
+```
+
+for every pair of positive integers $A,B$, proving the cubic tower for the
+entire positive-parameter family surrounding A333592.
 
 ## 7. Index-dependent companions: two failures and two survivors
 
@@ -390,8 +441,11 @@ Run
 python verification/related/verify_bala_august_mixed_binomial_follow_on.py
 ```
 
-The checker performs 3,186 exact checks. It tests the coefficientwise mixed
+The checker performs 3,390 exact checks. It tests the coefficientwise mixed
 theorem, the A333473 identification and tower, the formerly excluded
-A119258 and Chebyshev primes, the extended cubic evidence for $u$, the
-A333473 algebraic-family normalization and evidence, the A333592
-decomposition, both counterexamples, and the surviving companion grid.
+A119258 and Chebyshev primes, an extended cubic grid for $u$, the
+A333473 algebraic-family normalization and evidence, the stabilized
+negative-binomial defect grid, the A333592 decomposition, both
+counterexamples, and the surviving companion grid.
+
+The separate prefix-Cartier theorem has its own 1,640-check certificate.

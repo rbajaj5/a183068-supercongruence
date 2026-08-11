@@ -50,9 +50,9 @@ and
 coefficientwise in \(\mathbb Z[X]\), for every \(u,v\ge1\).
 
 The theorem proves the two remaining quadratic observations in the
-[Bala Gaussian-twist pilot](BalaGaussianTwistPilot.md).  It does not prove
-the stronger untwisted \(p^{3r}\) conjecture recorded on the
-[A333592 OEIS entry](https://oeis.org/A333592).
+[Bala Gaussian-twist pilot](BalaGaussianTwistPilot.md). The stronger
+untwisted cubic tower for the full positive-parameter family is proved by
+the separate [negative-binomial prefix theorem](MixedNegativeBinomialCubicTower.md).
 
 ## 2. A common coefficient lemma
 

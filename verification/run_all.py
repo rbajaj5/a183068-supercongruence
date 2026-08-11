@@ -18,6 +18,8 @@ SCRIPTS = (
     "verification/related/verify_coefficient_framing_cubic_tower.py",
     "verification/related/verify_bala_august_coefficient_packet.py",
     "verification/related/verify_bala_august_mixed_binomial_follow_on.py",
+    "verification/related/verify_mixed_negative_binomial_cubic_tower.py",
+    "verification/related/verify_prime_three_negative_binomial_boundary.py",
     "verification/related/verify_rational_framing_counterexample.py",
     "verification/related/verify_straub_prime5_packet.py",
     "verification/related/verify_a365029_first_two_levels.py",

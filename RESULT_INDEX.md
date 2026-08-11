@@ -198,15 +198,65 @@ proof.
   tower follows for every odd prime.
 - **Additional closure:** A333592's untwisted cubic tower is an exact
   corollary of Coster's shifted $B=2$ theorem plus adjacent scaling of its
-  endpoint.
+  endpoint. A separate prefix-Cartier theorem proves the whole positive
+  A333592 parameter family cubically.
 - **Boundary:** The larger algebraic-kernel family surrounding A333473 and
-  the ordinary cubic tower for the two-factor negative-binomial sum remain
-  open. Two index-dependent negative substitutions already fail cubically
-  at $p=5$; two sign-opposite companions survive the recorded finite grid.
+  the normalized-defect refinement remain open. The ordinary cubic tower
+  for the two-factor negative-binomial sum is proved for $p\geq5$. Its
+  normalized cubic defects conjecturally stabilize modulo
+  $p^{2r-2-\delta_p}$, with $\delta_5=1$ and $\delta_p=0$ otherwise. Two
+  index-dependent negative substitutions already fail cubically at $p=5$;
+  two sign-opposite companions survive the recorded finite grid.
 - **Status:** Complete unchecked elementary proof and classical reduction;
-  3,186 exact checks pass; no priority claim.
+  3,390 exact checks pass; no priority claim.
 - **Proof:** [August mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md)
 - **Exact checker:** [`verify_bala_august_mixed_binomial_follow_on.py`](verification/related/verify_bala_august_mixed_binomial_follow_on.py)
+
+### NEG-PREFIX-CUBIC - cubic towers for negative-binomial prefixes
+
+- **Claim:** For positive integers $a,b,c$, every prime $p\geq5$, and all
+  $n,r\geq1$,
+  \[
+  \sum_{k=0}^{cnp^r}\binom{-anp^r}{k}\binom{-bnp^r}{k}
+  \equiv
+  \sum_{k=0}^{cnp^{r-1}}\binom{-anp^{r-1}}{k}
+  \binom{-bnp^{r-1}}{k}\pmod {p^{3r}}.
+  \]
+- **Consequences:** This proves Bala's $u(N)$ cubic tower and the cubic
+  tower for every positive-parameter member
+  $\sum_{k=0}^{AN}\binom{BN+k-1}{k}^2$ surrounding A333592.
+- **Mechanism:** A two-variable constant term encodes the moving prefix.
+  Cartier descent kills the linear logarithmic term, while a complete-unit
+  reciprocal-square identity turns the quadratic term into an Euler
+  derivative and supplies the missing power of $p$ after integration by
+  parts.
+- **Boundary:** The proof requires $p\geq5$. The $p=3$ case and the stronger
+  normalized-defect stabilization remain open at all levels; NEG-PREFIX-3
+  gives the exact first-level ternary obstruction.
+- **Status:** Complete unchecked elementary proof candidate; 1,640 exact
+  checks pass; independent review and literature priority remain open.
+- **Proof:** [Mixed negative-binomial cubic tower](related-results/MixedNegativeBinomialCubicTower.md)
+- **Exact checker:** [`verify_mixed_negative_binomial_cubic_tower.py`](verification/related/verify_mixed_negative_binomial_cubic_tower.py)
+
+### NEG-PREFIX-3 - exact prime-three prefix obstruction
+
+- **Claim:** For $U_{a,b;c}$ as above, the normalized first defect
+  $(U_{a,b;c}(3n)-U_{a,b;c}(n))/9$ has an explicit constant-term residue
+  modulo $3$, obtained from the quadratic and cubic reduced-logarithm
+  Cartier images.
+- **Cubic subclass:** If $3\mid a+b$, then
+  $U_{a,b;c}(3n)\equiv U_{a,b;c}(n)\pmod {27}$ for every $c,n\geq1$.
+  This includes Bala's $u=U_{1,2;1}$.
+- **Sharp boundary:** $U_{1,1;1}(3)-U_{1,1;1}(1)=144$ has exact
+  $3$-adic valuation $2$, so the universal cubic theorem cannot include
+  $p=3$.
+- **Next target:** Exact data support
+  $D_r\equiv27D_{r-1}\pmod {3^{3r+1}}$ for all parameters; this is sharp
+  at $(a,b,c,n,r)=(1,1,1,1,2)$ but remains conjectural.
+- **Status:** Complete elementary first-level theorem and counterexample;
+  20,933 exact checks pass; all-level renormalization remains open.
+- **Proof:** [Prime-three negative-binomial boundary](related-results/PrimeThreeNegativeBinomialBoundary.md)
+- **Exact checker:** [`verify_prime_three_negative_binomial_boundary.py`](verification/related/verify_prime_three_negative_binomial_boundary.py)
 
 ### NEG-BINOM-DEFECT - Bernoulli obstruction to the proposed exponent bonus
 
@@ -217,10 +267,10 @@ proof.
 - **Exact correction:** The suggested congruence modulo $p^5$ is false:
   $v_7(u(7)-u(1))=3$. The suggested higher-level modulus also fails, since
   $v_7(u(49)-u(7))=6<9$.
-- **Remaining target:** The ordinary $p^{3r}$ adjacent tower passes the stated
-  finite grid but is not proved beyond the prime boundary. The
-  MIXED-BINOMIAL theorem proves its unconditional $p^{2r}$ baseline for
-  every odd prime.
+- **Remaining target:** NEG-PREFIX-CUBIC proves the ordinary $p^{3r}$
+  adjacent tower for every $p\geq5$, while NEG-PREFIX-3 proves Bala's first
+  ternary level. The stronger normalized-defect stabilization and all-level
+  $p=3$ propagation remain open.
 - **Source status:** Correction of an AI-generated strengthening relayed in
   Bala's correspondence; no claim that the corrected prime formula was an
   OEIS conjecture.
@@ -795,7 +845,8 @@ proof.
   specializations.
 - **Status:** Complete elementary deduction from classical scaling. The named
   A333592 untwisted cubic specialization is separately closed by the
-  Coster reduction in MIXED-BINOMIAL.
+  Coster reduction in MIXED-BINOMIAL, and NEG-PREFIX-CUBIC proves the full
+  positive-parameter family cubically.
 - **Proof:** [Quadratic queue theorem](related-results/QuadraticGaussianQueueTheorem.md)
 - **Exact checker:** [`verify_quadratic_gaussian_queue.py`](verification/related/verify_quadratic_gaussian_queue.py)
 

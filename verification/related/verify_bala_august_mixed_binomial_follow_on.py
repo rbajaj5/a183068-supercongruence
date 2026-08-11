@@ -23,6 +23,14 @@ def valuation(value: int, prime: int) -> int:
     return exponent
 
 
+def valuation_and_unit(value: int, prime: int) -> tuple[int, int]:
+    exponent = 0
+    while value % prime == 0:
+        value //= prime
+        exponent += 1
+    return exponent, value
+
+
 def integer_binomial(top: int, bottom: int) -> int:
     if bottom < 0:
         return 0
@@ -286,6 +294,63 @@ def check_negative_binomial_status() -> int:
     return checks
 
 
+def negative_binomial_sum_mod(n: int, prime: int, precision: int) -> int:
+    """Compute u(n) modulo prime^precision without constructing huge terms."""
+    modulus = prime**precision
+    unit = 1
+    exponent = 0
+    total = 1
+    for k in range(1, n + 1):
+        first_exponent, first_unit = valuation_and_unit(n + k - 1, prime)
+        second_exponent, second_unit = valuation_and_unit(2 * n + k - 1, prime)
+        lower_exponent, lower_unit = valuation_and_unit(k, prime)
+        exponent += first_exponent + second_exponent - 2 * lower_exponent
+        assert exponent >= 0
+        unit *= first_unit * second_unit
+        unit *= pow(lower_unit, -2, modulus)
+        unit %= modulus
+        if exponent < precision:
+            total += unit * prime**exponent
+            total %= modulus
+    return total
+
+
+def check_negative_binomial_defect_stability() -> int:
+    checks = 0
+    defect_precision = 6
+    for prime in (3, 5, 7, 11, 13):
+        loss = int(prime == 5)
+        for n in range(1, 7):
+            normalized: dict[int, int] = {}
+            for level in range(1, 5):
+                large_n = n * prime**level
+                if large_n > 100_000:
+                    continue
+                precision = 3 * level + defect_precision
+                modulus = prime**precision
+                difference = (
+                    negative_binomial_sum_mod(large_n, prime, precision)
+                    - negative_binomial_sum_mod(
+                        large_n // prime, prime, precision
+                    )
+                ) % modulus
+                cubic_modulus = prime ** (3 * level)
+                assert difference % cubic_modulus == 0
+                normalized[level] = (
+                    difference // cubic_modulus
+                ) % prime**defect_precision
+                checks += 1
+            for level in range(2, 5):
+                if level not in normalized:
+                    continue
+                stability_exponent = 2 * level - 2 - loss
+                assert (
+                    normalized[level] - normalized[level - 1]
+                ) % prime**stability_exponent == 0
+                checks += 1
+    return checks
+
+
 def check_a333592_coster_reduction() -> int:
     expected = (1, 2, 14, 146, 1742, 22252, 296438, 4063866)
     checks = 0
@@ -348,6 +413,7 @@ def main() -> None:
         "A333473 algebraic family": check_a333473_algebraic_family(),
         "closed slope boundaries": check_closed_denominator_boundaries(),
         "negative-binomial cubic evidence": check_negative_binomial_status(),
+        "negative-binomial defect stability": check_negative_binomial_defect_stability(),
         "A333592 Coster reduction": check_a333592_coster_reduction(),
         "index-dependent companions": check_index_dependent_companions(),
     }
