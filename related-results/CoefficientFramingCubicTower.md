@@ -261,6 +261,41 @@ because $G(x^p)^M$ has lowest exponent $-N$ and $L_p(x)^j$ has lowest
 exponent $j$. Thus the whole difference has valuation at least $3r$ for
 $p\geq5$ and at least $3r-1$ for $p=3$, as claimed.
 
+### 4.4 Rational parameters away from their denominators
+
+The preceding proof uses the hypothesis $\alpha,\beta\in\mathbb Z$ only to
+ensure that the coefficients of $G(x)^M$ are $p$-integral. The same is true
+whenever $\alpha,\beta\in\mathbb Z_p$: generalized binomial coefficients
+$\binom{\alpha M}{j}$ and $\binom{\beta M}{j}$ then belong to
+$\mathbb Z_p$. Every other step, including the reduced logarithm, the
+Cartier estimate, and the integration by parts, is unchanged.
+
+Consequently, let $\alpha,\beta\in\mathbb Q$, let $Q$ be a common
+denominator, and define in the formal rational power-series ring
+
+```math
+C_{\alpha,\beta}(N)
+=[x^N](1+x)^{\alpha N}(1-x)^{\beta N}.
+\tag{18}
+```
+
+For every prime $p\geq5$ with $p\nmid Q$ and all $n,r\geq1$,
+
+```math
+\boxed{
+C_{\alpha,\beta}(np^r)
+\equiv C_{\alpha,\beta}(np^{r-1})
+\pmod {p^{3r}}.
+}
+\tag{19}
+```
+
+The congruence is interpreted in $\mathbb Q_p$. In the applications below,
+$n$ is restricted to a fixed arithmetic progression on which
+$\alpha n$ and $\beta n$ are integers, so both coefficients in (19) are
+ordinary integers. This denominator restriction is genuine proof data: no
+claim is made here at primes dividing $Q$.
+
 ## 5. Verification
 
 Run

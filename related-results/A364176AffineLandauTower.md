@@ -129,7 +129,23 @@ The identities
 \quad 12m+6=6(2m+1)
 ```
 
-reduce (5) to
+give the five floor terms separately as
+
+```math
+\begin{aligned}
+\left\lfloor\frac{15m+7}{d}\right\rfloor
+ &=3q+\left\lfloor\frac{3s+1}{d}\right\rfloor,\\
+\left\lfloor\frac{5m+2}{d}\right\rfloor&=q,\\
+\left\lfloor\frac{4m+2}{d}\right\rfloor&=\lfloor2y\rfloor,\\
+\left\lfloor\frac{12m+6}{d}\right\rfloor&=\lfloor6y\rfloor,\\
+\left\lfloor\frac{2m+1}{d}\right\rfloor&=\lfloor y\rfloor.
+\end{aligned}
+```
+
+Thus the first positive term and the first negative term amalgamate to
+$3q-q=2q$. This is the only change in the apparent sign count: (5) has two
+positive and three negative floors, while the reduced expression has the
+constant term $2q$, two positive floors, and two negative floors. We obtain
 
 ```math
 \Phi_d(m)=E_q(\alpha),
@@ -254,6 +270,12 @@ proof.
 - N. Bourbaki, *Théories spectrales*, Chapters III--V, Springer, 2023,
   Peter--Weyl theorem in Chapter V.
 
+Peter Bala reported on August 11, 2026 that he had read the proof, checked the
+breakpoints in the five-row interval table independently, and found the
+argument correct. His question about the apparent change from two positive
+and three negative floor terms to the displayed $E_q$ formula prompted the
+explicit $3q-q=2q$ line now included above. This is useful external checking,
+but it is not labeled specialist peer review.
+
 No result is asserted here for $p=2$ or $p=3$. No literature-priority claim is
-made until an independent search and review of the affine floor lemma are
-complete.
+made until an independent priority search and specialist review are complete.

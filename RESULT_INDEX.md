@@ -156,6 +156,47 @@ proof.
 - **Proof:** [Two-parameter coefficient-framing tower](related-results/CoefficientFramingCubicTower.md)
 - **Exact checker:** [`verify_coefficient_framing_cubic_tower.py`](verification/related/verify_coefficient_framing_cubic_tower.py)
 
+### BALA-RAYS - A119258 rays and Chebyshev coefficient towers
+
+- **Claim 1:** For rational $a,b$ with common denominator $Q$, the
+  coefficient $C_{a,b}(N)=[x^N](1+x)^{aN}(1-x)^{bN}$ satisfies the full
+  $p^{3r}$ adjacent tower for every $p\geq5$ with $p\nmid Q$.
+- **Claim 2:** If $T(N,K)$ is A119258, $A>B\geq1$, and
+  $p\nmid B/\gcd(A,B)$, then
+  $T(Anp^r,Bnp^r)\equiv T(Anp^{r-1},Bnp^{r-1})\pmod {p^{3r}}$.
+- **Claim 3:** For $A_{r,s}(n)=[x^{rn}]T_n((1+x)/(1-x))^s$, one has
+  $A_{r,s}(np^k)\equiv A_{r,s}(np^{k-1})\pmod {p^{3k}}$ whenever
+  $p\geq5$ and $p\nmid r$.
+- **Named records:** A119259, A333562, A333564, A333565, and A103885.
+- **Boundary:** Primes dividing the fixed rational parameter denominator are
+  not covered and remain separate local problems. A333473 is not an instance
+  of either family and remains open at its proposed quadratic exponent.
+- **Source status:** Peter Bala supplied the two family directions in August
+  2026 correspondence. The rational extension and reductions are proved in
+  the repository; literature priority is pending.
+- **Status:** Complete unchecked proof candidate; exact checks pass.
+- **Proof:** [Bala's August coefficient packet](related-results/BalaAugustCoefficientPacket.md)
+- **Exact checker:** [`verify_bala_august_coefficient_packet.py`](verification/related/verify_bala_august_coefficient_packet.py)
+
+### NEG-BINOM-DEFECT - Bernoulli obstruction to the proposed exponent bonus
+
+- **Claim:** For
+  $u(n)=\sum_{k=0}^n\binom{-n}{k}\binom{-2n}{k}$ and every prime
+  $p\geq5$,
+  $u(p)\equiv3+2p^3B_{p-3}\pmod {p^4}$.
+- **Exact correction:** The suggested congruence modulo $p^5$ is false:
+  $v_7(u(7)-u(1))=3$. The suggested higher-level modulus also fails, since
+  $v_7(u(49)-u(7))=6<9$.
+- **Remaining target:** The ordinary $p^{3r}$ adjacent tower passes the stated
+  finite grid but is not proved beyond the prime boundary.
+- **Source status:** Correction of an AI-generated strengthening relayed in
+  Bala's correspondence; no claim that the corrected prime formula was an
+  OEIS conjecture.
+- **Status:** Complete prime-level proof and exact counterexamples; all-level
+  corrected tower open.
+- **Proof:** [Bala's August coefficient packet, Section 6](related-results/BalaAugustCoefficientPacket.md#6-the-negative-binomial-strengthening-is-false)
+- **Exact checker:** [`verify_bala_august_coefficient_packet.py`](verification/related/verify_bala_august_coefficient_packet.py)
+
 ### FRAMING-COUNTEREX — rational-framing boundary
 
 - **Claim:** The rational 2-sequence
@@ -347,8 +388,11 @@ proof.
   Legendre defect is periodic and reduces to five floor-function cases, each
   equal to zero or one. The rational gamma-ratio theorem then supplies the
   full adjacent tower.
-- **Boundary:** No claim is made for $p=2,3$; literature priority and
-  independent review remain pending.
+- **External check:** Peter Bala reported an independent check of the
+  five-row breakpoint table and found the proof correct; the amalgamation
+  $3q-q=2q$ is now written explicitly in response to his question.
+- **Boundary:** No claim is made for $p=2,3$; specialist review and literature
+  priority remain pending.
 - **Status:** Complete elementary proof candidate.
 - **Proof:** [A364176 affine-Landau integrality and tower](related-results/A364176AffineLandauTower.md)
 - **Exact checker:** [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py)

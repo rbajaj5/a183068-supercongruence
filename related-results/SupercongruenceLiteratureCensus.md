@@ -160,6 +160,21 @@ The searches did locate three important boundary updates:
    \(\binom{n+k}{k}^q\)-type tower must be checked against Theorem 4 before a
    novelty claim is made.
 
+### August 11 correspondence supplement
+
+Bala subsequently identified A119259, A333473, A333562, A333564, A333565,
+and A103885, together with the full rays A119258(An,Bn) and a Chebyshev
+coefficient family. These records are a supplement to the frozen 110-record
+census rather than a silent change to its denominator.
+
+The [August coefficient packet](BalaAugustCoefficientPacket.md) proves the
+A119258 rays away from their fixed denominator primes, proves the Chebyshev
+family under the analogous condition, and closes A119259, A333562, A333564,
+A333565, and A103885. A333473 remains a live quadratic target. The same
+packet gives an exact Bernoulli correction showing that a proposed
+negative-binomial $p^5$ strengthening is false; the corrected ordinary cubic
+tower remains open above the prime boundary.
+
 ## 6. Core bibliography
 
 ### Scaling and generalized Apéry congruences
