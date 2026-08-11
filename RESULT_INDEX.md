@@ -158,25 +158,55 @@ proof.
 
 ### BALA-RAYS - A119258 rays and Chebyshev coefficient towers
 
-- **Claim 1:** For rational $a,b$ with common denominator $Q$, the
-  coefficient $C_{a,b}(N)=[x^N](1+x)^{aN}(1-x)^{bN}$ satisfies the full
-  $p^{3r}$ adjacent tower for every $p\geq5$ with $p\nmid Q$.
-- **Claim 2:** If $T(N,K)$ is A119258, $A>B\geq1$, and
-  $p\nmid B/\gcd(A,B)$, then
+- **Claim 1:** For integers $a,b$ and $c\geq0$, the coefficient
+  $C_{a,b;c}(N)=[x^{cN}](1+x)^{aN}(1-x)^{bN}$ satisfies the full
+  $p^{3r}$ adjacent tower for every $p\geq5$; at $p=3$ the uniform modulus
+  is $3^{3r-1}$.
+- **Claim 2:** If $T(N,K)$ is A119258 and $A>B\geq1$, then
   $T(Anp^r,Bnp^r)\equiv T(Anp^{r-1},Bnp^{r-1})\pmod {p^{3r}}$.
 - **Claim 3:** For $A_{r,s}(n)=[x^{rn}]T_n((1+x)/(1-x))^s$, one has
-  $A_{r,s}(np^k)\equiv A_{r,s}(np^{k-1})\pmod {p^{3k}}$ whenever
-  $p\geq5$ and $p\nmid r$.
+  $A_{r,s}(np^k)\equiv A_{r,s}(np^{k-1})\pmod {p^{3k}}$ for every
+  $p\geq5$, with no condition on $r$.
 - **Named records:** A119259, A333562, A333564, A333565, and A103885.
-- **Boundary:** Primes dividing the fixed rational parameter denominator are
-  not covered and remain separate local problems. A333473 is not an instance
-  of either family and remains open at its proposed quadratic exponent.
+- **Boundary:** There are no fixed-denominator exclusions. A333473 is not an
+  instance of either family, but its proposed quadratic exponent is proved by
+  the separate mixed-binomial theorem below.
 - **Source status:** Peter Bala supplied the two family directions in August
-  2026 correspondence. The rational extension and reductions are proved in
+  2026 correspondence. The integral-slope extension and reductions are proved in
   the repository; literature priority is pending.
 - **Status:** Complete unchecked proof candidate; exact checks pass.
 - **Proof:** [Bala's August coefficient packet](related-results/BalaAugustCoefficientPacket.md)
 - **Exact checker:** [`verify_bala_august_coefficient_packet.py`](verification/related/verify_bala_august_coefficient_packet.py)
+
+### MIXED-BINOMIAL - signed-slope polynomial Frobenius theorem
+
+- **Claim:** For fixed nonzero integers $a_j$, positive integers $b_j,c$,
+  and
+  \[
+  P_N(X)=\sum_{k=0}^{cN}
+  \left(\prod_{j=1}^d\binom{a_jN}{b_jk}\right)X^k,
+  \]
+  every odd prime $p$ with $p\nmid b_j$ for all $j$ satisfies
+  \[
+  P_{np^r}(X)\equiv P_{np^{r-1}}(X^p)
+  \pmod {p^{\min\{dr,\,3r-\epsilon_p\}}},
+  \]
+  coefficientwise, where $\epsilon_3=1$ and $\epsilon_p=0$ for $p\ge5$.
+- **Consequences:** Two factors give a quadratic tower; three or more give
+  a cubic tower for $p\ge5$. Evaluation at $X=1$ and $X=-1$ classifies
+  Bala's fixed product and twist proposals. The named A333473 quadratic
+  tower follows for every odd prime.
+- **Additional closure:** A333592's untwisted cubic tower is an exact
+  corollary of Coster's shifted $B=2$ theorem plus adjacent scaling of its
+  endpoint.
+- **Boundary:** The larger algebraic-kernel family surrounding A333473 and
+  the ordinary cubic tower for the two-factor negative-binomial sum remain
+  open. Two index-dependent negative substitutions already fail cubically
+  at $p=5$; two sign-opposite companions survive the recorded finite grid.
+- **Status:** Complete unchecked elementary proof and classical reduction;
+  3,186 exact checks pass; no priority claim.
+- **Proof:** [August mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md)
+- **Exact checker:** [`verify_bala_august_mixed_binomial_follow_on.py`](verification/related/verify_bala_august_mixed_binomial_follow_on.py)
 
 ### NEG-BINOM-DEFECT - Bernoulli obstruction to the proposed exponent bonus
 
@@ -188,7 +218,9 @@ proof.
   $v_7(u(7)-u(1))=3$. The suggested higher-level modulus also fails, since
   $v_7(u(49)-u(7))=6<9$.
 - **Remaining target:** The ordinary $p^{3r}$ adjacent tower passes the stated
-  finite grid but is not proved beyond the prime boundary.
+  finite grid but is not proved beyond the prime boundary. The
+  MIXED-BINOMIAL theorem proves its unconditional $p^{2r}$ baseline for
+  every odd prime.
 - **Source status:** Correction of an AI-generated strengthening relayed in
   Bala's correspondence; no claim that the corrected prime formula was an
   OEIS conjecture.
@@ -761,8 +793,9 @@ proof.
   for every prime \(p\), with \(u,v\ge1\) in the second family.
   Evaluation at \(X=i\) gives the split, inert, and ramified Gaussian
   specializations.
-- **Status:** Complete elementary deduction from classical scaling.  This
-  does not prove A333592's stronger untwisted cubic conjecture.
+- **Status:** Complete elementary deduction from classical scaling. The named
+  A333592 untwisted cubic specialization is separately closed by the
+  Coster reduction in MIXED-BINOMIAL.
 - **Proof:** [Quadratic queue theorem](related-results/QuadraticGaussianQueueTheorem.md)
 - **Exact checker:** [`verify_quadratic_gaussian_queue.py`](verification/related/verify_quadratic_gaussian_queue.py)
 
