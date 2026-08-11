@@ -56,6 +56,7 @@ supercongruence exponent.
 | 1B-R | [Integral coefficient roots and Gauss baseline](CoefficientPowerGaussBaseline.md) | Resolves the integrality of the A002897/A008978/A113424 coefficient roots, proves the exact Lagrange bridge, and supplies the universal all-prime \(p^r\) variable-power tower | Complete elementary baseline; 1,819 exact checks; two cubic refinements remain open |
 | 1B-O | [Apéry odd moments at the prime boundary](AperyOddMomentPrimeClassification.md) | Expands one Apéry summand modulo \(p^4\), proves A357510, and classifies every exceptional prime in the A357512 odd-moment family | Complete elementary prime theorem; 3,468 exact checks; composite A357512 claim remains open |
 | 1B-CF | [Two-parameter coefficient-framing tower](CoefficientFramingCubicTower.md) | Proves six Bala/OEIS records, including the full A352373 parameter family, by one elementary Cartier argument | Complete elementary proof candidate; 5,473 exact checks; independent review pending |
+| 1B-AUG | [A119258 rays, Chebyshev towers, and negative-binomial defect](BalaAugustCoefficientPacket.md) | Extends coefficient framing to rational parameters, proves all A119258 rays and Bala's Chebyshev family away from fixed denominator primes, closes five named records, and computes the Bernoulli obstruction to a proposed stronger congruence | Complete proof candidate; 934 exact checks; A333473 and the corrected all-level negative-binomial tower remain open |
 | 1B-CX | [Counterexample to the rational-framing theorem as printed](RationalFramingCounterexample.md) | Gives a global period-four rational 2-sequence for which both the weighted-harmonic lemma and the claimed cubic framing congruence fail at \(p=5\) | Complete exact counterexample; 3,620 checks; author notification appropriate |
 | 1B-S5 | [Straub prime-five coefficient packet](StraubPrimeFiveCoefficientPacket.md) | Extends the published multivariate Apéry theorem across its omitted \(p=5\) boundary and closes A108625, A143007, and A177316 | Complete boundary proof candidate; 750 exact checks; independent review pending |
 | 1B-FR | [Balanced factorial-ratio cubic towers](BalancedFactorialRatioCubicTowers.md) | Converts every balanced integral factorial ratio to a Laurent binomial product and proves the A061164 cubic tower | Complete classical deduction; exact checks; no claim for \(p=2,3\) |
@@ -155,6 +156,7 @@ The individual correspondence is:
 | Peter Bala's OEIS queue | `verification/related/verify_bala_oeis_supercongruences.py` |
 | Bober sporadic factorial-ratio packet | `verification/related/verify_bober_sporadic_packet.py` |
 | A364176 affine-Landau theorem | `verification/related/verify_a364176_affine_landau.py` |
+| Bala August coefficient packet | `verification/related/verify_bala_august_coefficient_packet.py` |
 | Group-ring Gauss torsion boundary | `verification/related/verify_group_ring_gauss_boundary.py` |
 | First two A365029 levels | `verification/related/verify_a365029_first_two_levels.py` |
 | Binomial-quotient cancellation | `verification/related/verify_binomial_quotient_cancellation.py` |
