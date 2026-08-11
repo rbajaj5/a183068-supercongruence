@@ -57,10 +57,10 @@ def check_cubic_subclass() -> int:
     checks = 0
     for a in range(1, 16):
         for b in range(1, 16):
-            if (a + b) % 3:
-                continue
             for cutoff in range(1, 9):
                 for n in range(1, 16):
+                    if (n * a * b * (a + b)) % 3:
+                        continue
                     assert residue_formula(a, b, cutoff, n) == 0
                     assert defect(a, b, cutoff, n, 1) % 27 == 0
                     checks += 1
@@ -72,10 +72,22 @@ def check_sharp_boundary() -> int:
     assert prefix_sum(1, 1, 1, 3) == 146
     assert valuation(144, 3) == 2
 
+    assert prefix_sum(2, 2, 1, 1) == 5
+    assert prefix_sum(2, 2, 1, 3) == 3614
+    assert valuation(3614 - 5, 3) == 2
+
+    assert prefix_sum(1, 1, 1, 2) == 14
+    assert prefix_sum(1, 1, 1, 6) == 296438
+    assert valuation(296438 - 14, 3) == 2
+
+    assert prefix_sum(2, 2, 2, 2) == 1742
+    assert prefix_sum(2, 2, 2, 6) == 2485268015414
+    assert valuation(2485268015414 - 1742, 3) == 2
+
     first = defect(1, 1, 1, 1, 1)
     second = defect(1, 1, 1, 1, 2)
     assert valuation(second - 27 * first, 3) == 7
-    return 5
+    return 14
 
 
 def check_exact_renormalization_grid() -> int:
