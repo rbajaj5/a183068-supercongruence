@@ -307,7 +307,7 @@ Summing the interior terms and using (20) gives
 ```math
 \sum_{k=1}^{p-1}\binom{-p}{k}\binom{-2p}{k}
 \equiv
-\frac{22}{3}p^3B_{p-3}pmod {p^4}.
+\frac{22}{3}p^3B_{p-3}\pmod {p^4}.
 \qquad\text{(21)}
 ```
 
@@ -325,7 +325,7 @@ Expanding the two products with (20) gives
 \equiv1-\frac23p^3B_{p-3},
 \qquad
 \binom{3p-1}{p}
-\equiv2-4p^3B_{p-3}pmod {p^4}.
+\equiv2-4p^3B_{p-3}\pmod {p^4}.
 ```
 
 Their product is $2-(16/3)p^3B_{p-3}$ modulo $p^4$.  Adding the $k=0$
