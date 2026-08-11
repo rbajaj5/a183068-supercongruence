@@ -253,6 +253,53 @@ $np^r\leq700$. This is evidence only. The missing theorem is precisely one
 extra power per level after evaluating the two-factor polynomial at $X=1$;
 it cannot come from coefficientwise divisibility.
 
+### 4.1 A stabilized first-defect conjecture
+
+The cubic evidence has a stronger structure. Put
+
+```math
+D_{p,r}(n)=u(np^r)-u(np^{r-1}).
+```
+
+Whenever $p^{3r}\mid D_{p,r}(n)$, define
+
+```math
+Q_{p,r}(n)=\frac{D_{p,r}(n)}{p^{3r}}.
+\qquad\text{(10a)}
+```
+
+The exact data support the simultaneous conjectures
+
+```math
+D_{p,r}(n)\equiv0\pmod {p^{3r}}
+```
+
+and, for $r\geq2$,
+
+```math
+\boxed{
+Q_{p,r}(n)\equiv Q_{p,r-1}(n)
+\pmod {p^{\,2r-2-\delta_p}},
+}
+\qquad
+\delta_p=
+\begin{cases}
+1,&p=5,\\
+0,&p\ne5.
+\end{cases}
+\qquad\text{(10b)}
+```
+
+In particular, the leading residue $Q_{p,r}(n)\bmod p$ is independent of
+$r$. Thus the missing cubic theorem appears to be the integrality boundary
+of a substantially more rigid $p$-adic defect tower.
+
+The modular checker computes each summand by tracking its $p$-adic exponent
+and unit separately. It verifies (10a)--(10b) for
+$p\in\{3,5,7,11,13\}$, $1\leq n\leq6$, and every level $r\leq4$ with
+$np^r\leq100{,}000$. This remains evidence, not a proof. The exceptional
+$p=5$ loss is attained in the grid.
+
 ## 5. Bala's product and twist proposal
 
 Take $b_j=1$ in Theorem 1. For any nonzero integers
@@ -390,8 +437,9 @@ Run
 python verification/related/verify_bala_august_mixed_binomial_follow_on.py
 ```
 
-The checker performs 3,186 exact checks. It tests the coefficientwise mixed
+The checker performs 3,390 exact checks. It tests the coefficientwise mixed
 theorem, the A333473 identification and tower, the formerly excluded
 A119258 and Chebyshev primes, the extended cubic evidence for $u$, the
-A333473 algebraic-family normalization and evidence, the A333592
-decomposition, both counterexamples, and the surviving companion grid.
+A333473 algebraic-family normalization and evidence, the stabilized
+negative-binomial defect grid, the A333592 decomposition, both
+counterexamples, and the surviving companion grid.

@@ -201,10 +201,12 @@ proof.
   endpoint.
 - **Boundary:** The larger algebraic-kernel family surrounding A333473 and
   the ordinary cubic tower for the two-factor negative-binomial sum remain
-  open. Two index-dependent negative substitutions already fail cubically
-  at $p=5$; two sign-opposite companions survive the recorded finite grid.
+  open. The normalized cubic defects conjecturally stabilize modulo
+  $p^{2r-2-\delta_p}$, with $\delta_5=1$ and $\delta_p=0$ otherwise. Two
+  index-dependent negative substitutions already fail cubically at $p=5$;
+  two sign-opposite companions survive the recorded finite grid.
 - **Status:** Complete unchecked elementary proof and classical reduction;
-  3,186 exact checks pass; no priority claim.
+  3,390 exact checks pass; no priority claim.
 - **Proof:** [August mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md)
 - **Exact checker:** [`verify_bala_august_mixed_binomial_follow_on.py`](verification/related/verify_bala_august_mixed_binomial_follow_on.py)
 
