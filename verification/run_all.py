@@ -20,6 +20,7 @@ SCRIPTS = (
     "verification/related/verify_bala_august_mixed_binomial_follow_on.py",
     "verification/related/verify_mixed_negative_binomial_cubic_tower.py",
     "verification/related/verify_bala_august_first_defect.py",
+    "verification/related/verify_bala_august_kernel_frobenius.py",
     "verification/related/verify_prime_three_negative_binomial_boundary.py",
     "verification/related/verify_rational_framing_counterexample.py",
     "verification/related/verify_straub_prime5_packet.py",

@@ -417,6 +417,65 @@ show that the right side has the required cancellation on those resonant
 classes.  This is the rational-prime analogue of isolating the critical
 shell in the Gaussian calculation.
 
+### 5.2 A stronger coefficientwise Frobenius target
+
+Exact coefficient calculations indicate that the transport equation is
+more rigid than Lemma 3 requires.  Work in the coordinates (19), and write
+
+```math
+\frac1p\mathcal C_p(HL_p^2)=D_xP+D_yQ.
+\tag{23}
+```
+
+Choose $P,Q$ canonically, monomial by monomial: assign the coefficient at
+$(m,n)$ to $D_xP$ when $m\ne0$ and
+$v_p(m)\leq v_p(n)$, and otherwise assign it to $D_yQ$.  In these
+coordinates the kernel (5) becomes
+
+```math
+\mathscr B_{p;a,b,c}
+=\frac16\mathcal C_p(HL_p^3)
+-\frac12\left(PD_x\log G+QD_y\log G\right).
+\tag{24}
+```
+
+The observed identity is the coefficientwise strengthening
+
+```math
+\boxed{
+\mathcal C_p\mathscr B_{p;a,b,c}
+\equiv\mathscr B_{p;a,b,c}\pmod p.
+}
+\tag{25}
+```
+
+If (25) holds, Corollary 4 follows with $J=0$, and hence the first
+normalized defect stabilizes for the full positive-slope prefix family.
+
+The quadratic part of (25) reduces to the lifted reciprocal-square bound
+
+```math
+v_p\!\left(
+[x^{p^2m}y^{p^2n}]HL_p^2
+-p[x^{pm}y^{pn}]HL_p^2
+\right)
+\geq3+\min\{v_p(m),v_p(n)\}.
+\tag{26}
+```
+
+Bound (26) makes both canonical primitives $P,Q$ Cartier-fixed modulo
+$p$.  The remaining cubic statement is the transgression identity obtained
+by applying Cartier to (24).  Thus a proof of (25) can be organized as two
+unit-block calculations: the lifted reciprocal-square congruence (26) and
+its reciprocal-cube transgression.  This is exactly where the Frobenius
+lift, rather than generic compactness or recurrence machinery, carries the
+problem.
+
+The checker finds no failure of (25) in 1,384 exact coefficient tests for
+$p=5,7,11$, including coefficients beyond the first resonant diagonal and
+cases $p\mid c$.  This is evidence, not yet a proof of the two lifted
+reciprocal-sum identities.
+
 ## 6. Bala's specialization and computation
 
 For $(a,b,c)=(1,2,1)$, exact arithmetic currently gives
@@ -454,9 +513,12 @@ Run
 
 ```text
 python verification/related/verify_bala_august_first_defect.py
+python verification/related/verify_bala_august_kernel_frobenius.py
 ```
 
-for the standalone 1,474-check exact regression certificate.
+The first command runs 1,474 normalized-defect checks.  The second runs
+1,384 exact coefficient checks of (25), its canonical primitives, and the
+lifted square bound (26).
 
 ## 7. Literature boundary and next obligation
 
