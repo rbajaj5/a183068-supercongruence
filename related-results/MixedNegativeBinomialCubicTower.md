@@ -313,7 +313,11 @@ Q_{p,r}(n)=
 \frac{u(np^r)-u(np^{r-1})}{p^{3r}}.
 ```
 
-Theorem 1 proves that this is $p$-integral for $p\geq5$. Exact computations
+Theorem 1 proves that this is $p$-integral for $p\geq5$. The separate
+[prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
+computes the exact first defect modulo $3$, proves the first cubic level
+when $3\mid a+b$, and gives a sharp counterexample to a universal $p=3$
+extension. Exact computations
 suggest the stronger stabilization
 
 ```math
@@ -325,7 +329,8 @@ Q_{p,r}(n)\equiv Q_{p,r-1}(n)
 ```
 
 This remains conjectural. It is the natural next refinement of the proved
-cubic tower.
+cubic tower. At $p=3$, the analogous observed law is the separate
+renormalization conjecture recorded in the boundary note.
 
 ## 7. Literature boundary
 

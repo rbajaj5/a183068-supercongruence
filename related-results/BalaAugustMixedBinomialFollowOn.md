@@ -251,8 +251,9 @@ u(np^r)\equiv u(np^{r-1})\pmod {p^{3r}}
 
 for every $p\geq5$ and $n,r\geq1$. It proves the extra power only after
 prefix summation: the coefficientwise two-factor theorem itself remains
-quadratic. The prime $p=3$ is not covered by that proof, although it passes
-the recorded exact grid.
+quadratic. The [prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
+proves the first cubic level for Bala's sum and computes the exact obstruction
+for the full family. Its all-level $p=3$ propagation remains conjectural.
 
 ### 4.1 A stabilized first-defect conjecture
 
@@ -287,7 +288,7 @@ Q_{p,r}(n)\equiv Q_{p,r-1}(n)
 
 In particular, the leading residue $Q_{p,r}(n)\bmod p$ appears independent
 of $r$. The cubic integrality boundary is now proved for $p\geq5$; only this
-stronger stabilization and the exceptional prime $p=3$ remain open.
+stronger stabilization and the all-level prime $p=3$ propagation remain open.
 
 The modular checker computes each summand by tracking its $p$-adic exponent
 and unit separately. It verifies the cubic divisibility and (10b) for

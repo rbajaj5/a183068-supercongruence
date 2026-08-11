@@ -179,7 +179,11 @@ that a proposed negative-binomial $p^5$ strengthening is false. The separate
 [prefix-Cartier theorem](MixedNegativeBinomialCubicTower.md) proves the
 corrected ordinary cubic tower for every $p\geq5$ and, more generally, the
 full positive-parameter A333592 family. Its normalized-defect refinement and
-the exceptional prime $p=3$ remain open.
+the all-level exceptional prime $p=3$ remain open. The
+[prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
+computes the exact first ternary defect, proves the first cubic level for
+Bala's sum, and shows by a valuation-two example that no universal $p=3$
+extension is possible.
 
 ## 6. Core bibliography
 
