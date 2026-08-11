@@ -22,6 +22,12 @@ review. Close scores should be read as the same tier. Proof status remains
 controlling: a high-value conjectural target is not thereby promoted to a
 theorem.
 
+**Active gate (2026-08-02):** GWL-TWO is the only family currently admitted
+for active promotion, with a checkpoint on 2026-08-16. New generated families
+remain in [`intake/`](intake/README.md) and do not enter this ranking until the
+gate closes, fails, or is demoted. See
+[`VALIDATION_PROTOCOL.md`](VALIDATION_PROTOCOL.md).
+
 ## Dyadic maturity rule
 
 The repository's [dyadic audit policy](DYADIC_POLICY.md) is part of the
@@ -39,7 +45,8 @@ allocation, the portfolio currently has four tiers:
 
 | Tier | Results | Recommended use of effort |
 | --- | --- | --- |
-| **A: specialist review now** | SYMBOX-4, ZHANG-4, FRAMING-COUNTEREX, GWL-TWO, GWL-SCALE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
+| **A: active specialist review** | GWL-TWO | Close, repair, or demote by 2026-08-16 |
+| **A2: held review queue** | SYMBOX-4, ZHANG-4, FRAMING-COUNTEREX, GWL-SCALE, JC-WL, JC5-FF, A183068 | Retain without active promotion while GWL-TWO is gated |
 | **B: broad theorem engines** | FROB-PACKET, JC-ORBIT, LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER, FACTRATIO-3, RATGAMMA-3 | Reuse on named conjectures and consolidate families |
 | **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, BLACK-WALSH, HASH-MATROID, FQ-CT, WALK-FROB, GROUPRING-GAUSS, ADAMS-HAAR, EHRHART-CUTOFF, GQ2-ABCOUNT, GQ2-DIHEDRAL, GQ2-QUATERNION, GQ2-MAXCYCLIC, GQ2-EXTRASPECIAL | Improve experiments, certification, source consolidation, and proof organization |
 | **D: retained open targets** | C11, CAT-ODD, BALA-TOWERS, BOBER-FRAC, APERY-DEFECT, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
@@ -52,7 +59,7 @@ without increasing a supercongruence exponent.
 
 | Rank | ID and result | Math-community value | Deployment value | Novelty confidence | Breadth | Maturity | Cost remaining | Mathematical status |
 | ---: | --- | :---: | :---: | :---: | :---: | :---: | :---: | --- |
-| 1 | [GWL-TWO: ramified Gaussian prime theorem](related-results/GaussianLucasRamifiedTwoTheorem.md) | **8** | 2 | 8 | 8 | 7 | 5 | Complete proof candidate with machine-assisted audits and exact checks; specialist review and priority search pending. |
+| 1 | [GWL-TWO: ramified Gaussian prime theorem](related-results/GWLTwoAuditPacket.md) | **8** | 2 | 8 | 8 | 7 | 5 | Apparently gapless candidate with machine-assisted audits; specialist review and named-corpus priority audit pending; checkpoint 2026-08-16. |
 | 2 | [GWL-SCALE: Gaussian prime-power scaling](related-results/GaussianLucasPrimePowerTheorem.md) | **8** | 2 | 8 | 8 | 6 | 6 | Complete proof candidate with exact checks; independent review and priority search pending. |
 | 3 | [JC-WL: all-degree weighted-lift collision theorem](related-results/WeightedLiftCollisionSynthesis.md) | **8** | 3 | 8 | 10 | 8 | 4 | Complete all-degree collision, genus-ladder, zeta-factor, and corrected-tower theorem with exact checks through generic degree seven; priority provisional. |
 | 4 | [JC5-FF: degree-five elliptic Frobenius packet](related-results/JacobianDegreeFiveEllipticFrobenius.md) | **8** | 3 | 8 | 9 | 8 | 4 | Complete collision-count, non-CM elliptic-factor, local-zeta, and corrected-tower theorem with direct extension-field checks; priority provisional. |

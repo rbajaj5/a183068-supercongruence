@@ -8,8 +8,12 @@ Status labels are deliberately conservative:
 
 - **Audited draft:** received a separate machine-assisted referee-style audit;
   not peer reviewed.
-- **Complete unchecked draft:** a complete written argument and exact checks
-  are present; independent mathematical and priority review remain.
+- **Author-completeness:** either **open gap**, **apparently gapless
+  candidate**, or **externally closed**.
+- **Audit status:** either **unaudited**, **machine-assisted exact-text
+  audit**, **specialist reviewed**, or **published**.
+- The legacy label **Complete unchecked draft** means **apparently gapless
+  candidate / unaudited** and is being migrated to the two-axis form.
 - **Deduction:** an elementary consequence of a broader proved or proposed
   statement; priority remains unchecked.
 - **Reduction:** meaningful progress, not a proof of the target statement.
@@ -30,6 +34,11 @@ explicit \(p=2\) normalization, sign analysis, boundary-level check, and
 cancellation argument where applicable. An unresolved binary step keeps the
 entry at **Reduction** or **Computational**, regardless of the odd-prime
 proof.
+
+New entries require an immutable claim-entry date. Unaudited entries retire
+from the active queue after 30 days under
+[`VALIDATION_PROTOCOL.md`](VALIDATION_PROTOCOL.md). New generated families
+remain in [`intake/`](intake/README.md) while the GWL-TWO gate is active.
 
 ## Core result
 
@@ -1383,18 +1392,24 @@ proof.
 
 ### GWL-TWO — ramified prime theorem
 
+- **Entry date:** 2026-07-26 (first theorem commit `6784eb5`).
 - **Claim:** At $\varpi=1+i$ and $r\ge2$, every nontrivial adjacent ratio has
   exact valuation
   $6r-3+v_\varpi(CD(A-C+i(B-D)))$. The unnormalized difference has
   valuation at least $6r-4$.
 - **Dyadic status:** Separate ramified proof candidate, normalized by
   \(v_\varpi(\varpi)=1\) and \(v_\varpi(2)=2\).
-- **Status:** Complete proof candidate with independent machine-assisted
-  audits and exact checks, including excess valuation $53$; conventional
-  review and a priority search required.
+- **Author-completeness:** Apparently gapless candidate.
+- **Audit status:** Machine-assisted exact-text audits; conventional
+  specialist review absent.
+- **Audit checkpoint:** 2026-08-16; demote from the active queue if the audit
+  has not closed.
+- **Priority:** Named-corpus review incomplete; no novelty claim.
+- **Audit packet:** [GWL-TWO audit packet](related-results/GWLTwoAuditPacket.md)
 - **Proof:** [Ramified-prime theorem](related-results/GaussianLucasRamifiedTwoTheorem.md)
 - **Report:** [Ramified-prime experiment](related-results/GaussianLucasRamifiedTwoExperiment.md)
 - **Exact experiment:** [`experiment_gaussian_lucas_scaling.py`](verification/related/experiment_gaussian_lucas_scaling.py)
+- **Adversarial checker:** [`verify_gaussian_lucas_ramified_audit.py`](verification/related/verify_gaussian_lucas_ramified_audit.py)
 
 ### GL-CANON — local canonical-product synthesis
 

@@ -67,6 +67,7 @@ SCRIPTS = (
     "verification/related/verify_chowla_dwork_evans_defect.py",
     "verification/related/verify_gaussian_power_sums.py",
     "verification/related/verify_gaussian_wolstenholme.py",
+    "verification/related/verify_gaussian_lucas_ramified_audit.py",
     "verification/related/verify_gaussian_product_isometry.py",
     "verification/related/experiment_gaussian_product_dynamics.py",
     "verification/related/verify_gq2_orientation_lifts.py",
