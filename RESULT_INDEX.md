@@ -1511,6 +1511,22 @@ proof.
 - **Proof:** [Gaussian Lucas canonical products, Section 6](related-results/GaussianLucasCanonicalProducts.md#6-the-mixed-block-product-is-an-exact-disk-isometry)
 - **Exact checker:** [`verify_gaussian_product_isometry.py`](verification/related/verify_gaussian_product_isometry.py)
 
+### GL-AFFINE — ramified Gaussian affine-depth filtration
+
+- **Claim:** The mixed-block reciprocal square satisfies the improved bound
+  \(v_{1+i}(S_{r,2})\ge4r-2\), raising every higher logarithmic coefficient
+  to valuation at least \(8r-4\). On the critical weighted shell, the first
+  coefficient is exactly \((1+i)^{6r-3}\Lambda_r\) for an explicit affine
+  functional \(\Lambda_r\). Every nonzero stratum
+  \(v_{1+i}(\Lambda_r)=t\le2r-2\) is a bijective analytic isometry chamber
+  with similarity exponent \(6r-3+t\).
+- **Status:** Complete deduction from the four-coset recurrence and the
+  dominant-moment lemma; 2,400 exact depth-stratified pair checks and 224
+  higher-coefficient checks are present. Conventional review and priority
+  remain pending.
+- **Proof:** [Gaussian critical-shell filtration](related-results/GaussianCriticalShellFiltration.md)
+- **Exact checker:** [`verify_gaussian_critical_shell.py`](verification/related/verify_gaussian_critical_shell.py)
+
 ### GL-DYN — translated-product return filtration
 
 - **Claim:** For every unit \(u\), the translated isometry

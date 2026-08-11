@@ -105,6 +105,7 @@ supercongruence exponent.
 | 5 | [Cubic $(\eta)$ congruence at $p=3$](EtaPrime3CubicExtension.md) | Uses the same valuation-versus-scaling budget to fill a small-prime gap in a published theorem | Complete unchecked draft |
 | 6 | [Gaussian Wolstenholme citation network](GaussianWolstenholmeCitationNetwork.md) | Replaces scaling by translation-invariant Gaussian residue blocks | Three major candidate results with exact certificates; independent review required |
 | 7 | [Gaussian canonical-product synthesis](GaussianLucasCanonicalProducts.md) | Extracts the dominant logarithmic-moment mechanism, proves that the normalized ramified block is a bijective disk isometry, and exhibits the sharp anisotropic polydisc together with its critical-shell parity hyperplane | Proved local theorem plus open research program; 3,000 pair checks, four sharp witnesses, and 5,274 boundary-residue checks |
+| 7A | [Gaussian critical-shell filtration](GaussianCriticalShellFiltration.md) | Improves the reciprocal-square valuation, raises the full logarithmic tail to \(8r-4\), and proves that every affine-defect depth through \(2r-2\) is an exact isometry chamber | Complete local theorem; 2,400 pair checks and 224 higher-coefficient checks; priority unchecked |
 | 8 | [Gaussian product dynamics](GaussianProductDynamicsConjectures.md) | Proves the exact return valuation and finite-quotient cycle profile for every unit translation; asks whether the map is actually conjugate to addition | Complete deduction from the ramified moment estimates; conjugacy open |
 | 9 | [Gaussian Lucas literature puzzle](GaussianLucasLiteraturePuzzle.md) | Connects the product theorem to Dwork/Frobenius theory, generalized factorials, and compatible $p$-adic dynamics | Literature map; bridges ranked by strength |
 | 10 | [Gaussian power-sum conjectures](GaussianPowerSumConjectures.md) | Uses fourth-root and affine-orbit cancellation in the same residue-stratification spirit | Two formula proofs and exact counterexamples; independent review required |
@@ -198,6 +199,7 @@ The individual correspondence is:
 | Gaussian power sums | `verification/related/verify_gaussian_power_sums.py` |
 | Gaussian Wolstenholme network | `verification/related/verify_gaussian_wolstenholme.py` |
 | Gaussian product isometry | `verification/related/verify_gaussian_product_isometry.py` |
+| Gaussian critical-shell filtration | `verification/related/verify_gaussian_critical_shell.py` |
 | Gaussian product dynamics | `verification/related/experiment_gaussian_product_dynamics.py` (run separately; includes deeper finite-quotient tests) |
 | Higher-degree box polynomials | `verification/related/verify_higher_degree_box_polynomial.py` |
 | Roe--Turturean finite abelian \(2\)-target counts | `verification/related/verify_gq2_finite_abelian_counts.py` |

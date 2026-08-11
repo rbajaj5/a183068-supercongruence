@@ -496,7 +496,7 @@ then
 \[
 v_\varpi(b_1(\mathbf a))=6r-3,
 \qquad
-v_\varpi(b_k(\mathbf a))\ge6r-2
+v_\varpi(b_k(\mathbf a))\ge8r-4
 \quad(k\ge2).
 \tag{35}
 \]
@@ -534,30 +534,31 @@ v_\varpi\bigl(b_1(\mathbf a)-c_r\bigr)
 Together with \(v_\varpi(c_r)=6r-3\), this proves the first assertion in
 (35) and (36).
 
-For \(k\ge2\), the factorization
-\(a_\xi^k-1=(a_\xi-1)(1+a_\xi+\cdots+a_\xi^{k-1})\) gives
-\(v_\varpi(a_\xi^k-1)\ge q\). Hence
+For \(k\ge2\), the binomial estimate (15) of the
+[affine-depth note](GaussianCriticalShellFiltration.md#3-the-exact-affine-defect)
+gives \(v_\varpi(a_\xi^k-1)\ge q+2v_2(k)\). Hence
 
 \[
 v_\varpi\bigl(b_k(\mathbf a)-c_{r,k}\bigr)
 \ge
-2rk-2v_2(k)+q-k.
+2rk+q-k
+\ge8r-3.
 \tag{39}
 \]
 
-The right side is at least \(6r-2\), because
+The last inequality follows from
 
 \[
-(2r-1)(k-1)\ge2v_2(k)
-\qquad(r\ge2,\ k\ge2).
+(2rk+q-k)-(8r-3)
+=(2r-1)(k-2)\ge0.
 \tag{40}
 \]
 
-Indeed \(v_2(k)\le k-1\) and \(2r-1\ge3\). The unweighted estimate
-\(v_\varpi(c_{r,k})\ge6r-2\) from (28) now proves the second assertion in
-(35). Thus every parameter vector in (34) is first-moment dominant, and
-the preceding difference-logarithm and contraction argument proves (37).
-\(\square\)
+The reciprocal-square improvement gives
+\(v_\varpi(c_{r,k})\ge8r-4\) for every \(k\ge2\), so (39) proves the second
+assertion in (35). Thus every parameter vector in (34) is first-moment
+dominant, and the preceding difference-logarithm and contraction argument
+proves (37). \(\square\)
 
 The radius in (34) is sharp for a uniform coordinatewise ball. To see this,
 keep every weight equal to \(1\) except at \(\xi_0=1+i\), and put
@@ -618,7 +619,7 @@ then
 \[
 v_\varpi(b_1(\mathbf a))=6r-3,
 \qquad
-v_\varpi(b_k(\mathbf a))\ge6r-2\quad(k\ge2),
+v_\varpi(b_k(\mathbf a))\ge8r-4\quad(k\ge2),
 \qquad
 \frac{b_1(\mathbf a)}{c_r}\in1+\varpi\mathcal O.
 \tag{44}
@@ -644,30 +645,30 @@ v_\varpi\left(\frac{2^r\delta_\xi}{\xi}\right)
 Hence \(b_1(\mathbf a)-c_r\in\varpi^{6r-2}\mathcal O\), which proves the
 first and third assertions of (44).
 
-For \(k\ge2\), the same factorization used in (39) gives
+For \(k\ge2\), the same binomial estimate used in (39) gives
 
 \[
 v_\varpi\left(
 \frac{2^{rk}}{k}\,(a_\xi^k-1)\xi^{-k}
 \right)
 \ge
-2rk-2v_2(k)+4r-2-(k-1)e_\xi
+2rk+4r-2-(k-1)e_\xi
 \tag{46}
 \]
 
 for each \(\xi\)-summand of \(b_k(\mathbf a)-c_{r,k}\); the omitted sign is
-a unit. If \(e_\xi=0\), its excess over \(6r-2\) is
-\(2r(k-1)-2v_2(k)\). If \(e_\xi=1\), the excess is
+a unit. Its excess over \(8r-3\) is positive when \(e_\xi=0\). When
+\(e_\xi=1\), the excess is
 
 \[
-(2r-1)(k-1)-2v_2(k)\ge0,
+(2r-1)(k-2)\ge0,
 \tag{47}
 \]
 
-because \(r\ge2\) and \(v_2(k)\le k-1\). Thus every term in the perturbation
-has valuation at least \(6r-2\); combining this with the unweighted estimate
-for \(c_{r,k}\) proves the second assertion of (44). The isometry follows
-from first-moment dominance exactly as before.
+because \(r\ge2\). Thus every term in the perturbation has valuation at
+least \(8r-3\); combining this with the unweighted \(8r-4\) tail proves the
+second assertion of (44). The isometry follows from first-moment dominance
+exactly as before.
 
 For optimality, choose any one \(\xi_0\in U_r\), keep every other weight
 equal to \(1\), and set
@@ -720,7 +721,7 @@ For every parameter vector in (49),
 and
 
 \[
-v_\varpi(b_k(\mathbf a))\ge6r-2
+v_\varpi(b_k(\mathbf a))\ge8r-4
 \qquad(k\ge2).
 \tag{51}
 \]
@@ -758,25 +759,46 @@ Every displayed factor outside \(u_\xi\) is a unit. The residue field is
 \(\mathbf F_2\), whose only nonzero element is \(1\); the normalized
 unweighted coefficient is also a unit. Reduction therefore gives (50).
 
-For a higher coefficient, the \(\xi\)-summand of
-\(b_k(\mathbf a)-c_{r,k}\) has valuation at least
+The
+[reciprocal-square improvement](GaussianCriticalShellFiltration.md#2-the-reciprocal-square-improvement)
+strengthens the unweighted estimate (28) to
 
 \[
-2rk-2v_2(k)+4r-3-(k-1)e_\xi.
+v_\varpi(c_{r,k})\ge8r-4
+\qquad(k\ge2).
 \]
 
-Its excess over \(6r-2\) is
-\(2r(k-1)-2v_2(k)-1\) when \(e_\xi=0\), and
-\((2r-1)(k-1)-2v_2(k)-1\) when \(e_\xi=1\). Both are nonnegative for
-\(r\ge2\) and \(k\ge2\); the unique tight elementary case is
-\((r,k,e_\xi)=(2,2,1)\). Combining the perturbation bound with (28) proves
-(51). Formula (52) and the isometry conclusion now follow immediately.
+Moreover, for \(v_\varpi(\delta)\ge5\), the binomial expansion gives
+\(v_\varpi((1+\delta)^k-1)\ge
+v_\varpi(\delta)+2v_2(k)\). Applied to (49), this puts each
+\(\xi\)-summand of \(b_k(\mathbf a)-c_{r,k}\) at valuation at least
+\(2rk+4r-3-(k-1)e_\xi\), which is at least \(8r-4\). This proves (51).
+Formula (52) and the isometry conclusion now follow immediately.
 \(\square\)
 
 Thus the safe polydisc (43) is the largest coordinate box contained wholly
 in the chamber, while its first enlargement is cut into two equal residue
 classes by one affine hyperplane. The one-coordinate cancellation witnesses
 from (48) lie on the parity-one side.
+
+The parity law is only the first residue of an exact affine filtration.
+Define
+
+\[
+\Lambda_r(\mathbf u)
+=
+\frac{c_r}{\varpi^{6r-3}}
++(-i)^r\sum_{\xi\in U_r}
+u_\xi\frac{\varpi^{e_\xi}}{\xi}.
+\]
+
+Then \(b_1(\mathbf a)=\varpi^{6r-3}\Lambda_r(\mathbf u)\) exactly. The
+[affine-depth theorem](GaussianCriticalShellFiltration.md#4-certified-isometry-layers)
+proves that every nonzero depth
+\(t=v_\varpi(\Lambda_r(\mathbf u))\le2r-2\) is itself an isometry chamber,
+with similarity exponent \(6r-3+t\). Thus the parity-one side contains
+several further certified layers rather than being an undifferentiated
+failure set.
 
 The exact checker
 [`verify_gaussian_product_isometry.py`](../verification/related/verify_gaussian_product_isometry.py)

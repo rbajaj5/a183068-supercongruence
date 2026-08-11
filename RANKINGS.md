@@ -39,7 +39,7 @@ allocation, the portfolio currently has four tiers:
 
 | Tier | Results | Recommended use of effort |
 | --- | --- | --- |
-| **A: specialist review now** | SYMBOX-4, ZHANG-4, FRAMING-COUNTEREX, GWL-TWO, GWL-SCALE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
+| **A: specialist review now** | SYMBOX-4, ZHANG-4, FRAMING-COUNTEREX, GWL-TWO, GWL-SCALE, GL-AFFINE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
 | **B: broad theorem engines** | FROB-PACKET, JC-ORBIT, LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER, FACTRATIO-3, RATGAMMA-3, NEG-PREFIX-CUBIC | Reuse on named conjectures and consolidate families |
 | **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, BLACK-WALSH, HASH-MATROID, FQ-CT, WALK-FROB, GROUPRING-GAUSS, ADAMS-HAAR, EHRHART-CUTOFF, NEG-PREFIX-3, GQ2-ABCOUNT, GQ2-DIHEDRAL, GQ2-QUATERNION, GQ2-MAXCYCLIC, GQ2-EXTRASPECIAL | Improve experiments, certification, source consolidation, and proof organization |
 | **D: retained open targets** | C11, CAT-ODD, BALA-TOWERS, BOBER-FRAC, APERY-DEFECT, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
@@ -66,6 +66,7 @@ without increasing a supercongruence exponent.
 | 9 | [LD-2: Landau-depth family](related-results/LandauDepthSupercongruenceSynthesis.md) | **7** | 1 | 5 | 9 | 7 | 4 | Complete proof candidate giving an infinite all-prime family; independent review pending. |
 | 10 | [GL-CANON: canonical-product synthesis](related-results/GaussianLucasCanonicalProducts.md) | **7** | 3 | 6 | 9 | 7 | 5 | Proved structural lemma and synthesis; the split-prime program remains conjectural. |
 | 11 | [GL-ISO: ramified Gaussian disk isometry](related-results/GaussianLucasCanonicalProducts.md#6-the-mixed-block-product-is-an-exact-disk-isometry) | **7** | 4 | 7 | 8 | 8 | 4 | Complete deduction plus a sharp anisotropic weighted isometry polydisc and an exact critical-shell parity hyperplane; 3,000 pair checks, four sharp witnesses, and 5,274 boundary-residue checks pass. |
+| 11 | [GL-AFFINE: ramified Gaussian affine-depth filtration](related-results/GaussianCriticalShellFiltration.md) | **7** | 4 | 7 | 8 | 8 | 4 | Complete reciprocal-square improvement and exact affine-depth theorem; all certified depths through \(2r-2\) are isometry chambers, with 2,400 pair checks and 224 higher-coefficient checks. |
 | 12 | [LD-3: depth-three family](related-results/LandauDepthSupercongruenceSynthesis.md) | **7** | 1 | 5 | 8 | 7 | 4 | Complete proof candidate for an all-prime \(p^{3r}\) subfamily. |
 | 13 | [GWL-LUCAS: rectangular Gaussian Lucas congruence](GAUSSIAN_LUCAS.md) | **7** | 2 | 7 | 7 | 6 | 5 | Complete unchecked draft for inert primes; exact \(p=3\) boundary included. |
 | 14 | [QC-SQ: square-cyclotomic Landau lift](related-results/QCalculusCyclotomicSupercongruences.md#3-a-universal-square-cyclotomic-q-congruence) | **6** | 1 | 4 | 9 | 9 | 3 | Complete deduction from Clark's q-Babbage theorem; exact polynomial checks pass and the A183068 q-lift is explicit. |
