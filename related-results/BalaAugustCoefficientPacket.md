@@ -16,12 +16,8 @@ This packet produces three different outcomes.
 1. Every ray $T(An,Bn)$ of the triangle A119258 has a cubic adjacent-scale
    tower at primes away from one fixed denominator.
 2. Every coefficient family
-
-   ```math
-   [x^{rn}]T_n\!\left(\frac{1+x}{1-x}\right)^s
-   ```
-
-   has the same cubic tower for $p\geq5$ with $p\nmid r$.
+   $[x^{rn}]T_n\!\left((1+x)/(1-x)\right)^s$ has the same cubic tower for
+   $p\geq5$ with $p\nmid r$.
 3. The proposed stronger negative-binomial congruence is false.  Its first
    nonzero term is controlled by $B_{p-3}$ and normally occurs at exactly
    $p^3$.
@@ -37,7 +33,7 @@ For $a,b\in\mathbb Q$ put
 
 ```math
 C_{a,b}(N)=[z^N](1+z)^{aN}(1-z)^{bN}.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 Let $Q$ be a common denominator of $a$ and $b$.  The rational-parameter
@@ -47,7 +43,7 @@ gives, for $p\geq5$ and $p\nmid Q$,
 
 ```math
 C_{a,b}(np^r)\equiv C_{a,b}(np^{r-1})\pmod {p^{3r}}.
-\tag{2}
+\qquad\text{(2)}
 ```
 
 For clarity, the proof does not divide an integer theorem by $Q$.  In the
@@ -63,7 +59,7 @@ $0\leq K\leq N$ its row-polynomial description is
 
 ```math
 T(N,K)=[x^K]\frac{(1+2x)^N}{1+x}.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 The coefficient change $x=z/(1-z)$ gives the exact residue identity
@@ -71,7 +67,7 @@ The coefficient change $x=z/(1-z)$ gives the exact residue identity
 ```math
 [x^K]f(x)
 =[z^K](1-z)^{K-1}f\!\left(\frac z{1-z}\right).
-\tag{4}
+\qquad\text{(4)}
 ```
 
 Applying (4) to (3), and then putting $N=An$, $K=Bn$, yields
@@ -79,14 +75,14 @@ Applying (4) to (3), and then putting $N=An$, $K=Bn$, yields
 ```math
 T(An,Bn)
 =[z^{Bn}](1+z)^{An}(1-z)^{-(A-B)n}.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 Set $M=Bn$.  Formula (5) is
 
 ```math
 T(An,Bn)=C_{A/B,-(A-B)/B}(M).
-\tag{6}
+\qquad\text{(6)}
 ```
 
 ### Theorem 1 (A119258 ray theorem)
@@ -105,7 +101,7 @@ T(Anp^r,Bnp^r)
 \equiv T(Anp^{r-1},Bnp^{r-1})
 \pmod {p^{3r}}.
 }
-\tag{7}
+\qquad\text{(7)}
 ```
 
 Indeed, $q$ is a common denominator after reducing the two rational
@@ -117,7 +113,7 @@ For $c\geq1$, define
 
 ```math
 S_c(n)=\sum_{j=0}^{cn}2^j\binom{n+j-1}{j}.
-\tag{8}
+\qquad\text{(8)}
 ```
 
 Since
@@ -132,14 +128,14 @@ the change $x=z/(1+z)$ gives
 S_c(n)
 =[z^{cn}](1+z)^{(c+1)n}(1-z)^{-n}
 =T((c+1)n,cn).
-\tag{9}
+\qquad\text{(9)}
 ```
 
 Therefore
 
 ```math
 S_c(np^r)\equiv S_c(np^{r-1})\pmod {p^{3r}}
-\tag{10}
+\qquad\text{(10)}
 ```
 
 for every $p\geq5$ with $p\nmid c$.  The cases $c=1$ and $c=3$ are
@@ -153,12 +149,12 @@ For $n\geq1$, the OEIS identities
 
 ```math
 \begin{aligned}
-\operatorname{A333564}(n)
- &=\frac{\operatorname{A119259}(n)-(-1)^n}{2},\\
-\operatorname{A333565}(n)
- &=2\operatorname{A119259}(n)-(-1)^n
+\mathrm{A333564}(n)
+ &=\frac{\mathrm{A119259}(n)-(-1)^n}{2},\\
+\mathrm{A333565}(n)
+ &=2\mathrm{A119259}(n)-(-1)^n
 \end{aligned}
-\tag{11}
+\qquad\text{(11)}
 ```
 
 show that [A333564](https://oeis.org/A333564) and
@@ -169,10 +165,10 @@ sequences satisfy their conjectured $p^{3r}$ tower for every $p\geq5$.
 The page [A103885](https://oeis.org/A103885) gives, for $n\geq1$,
 
 ```math
-\operatorname{A103885}(n)
+\mathrm{A103885}(n)
 =\frac12[x^n]\left(\frac{1+x}{1-x}\right)^{2n}
 =\frac12 C_{2,-2}(n).
-\tag{12}
+\qquad\text{(12)}
 ```
 
 The integer-parameter case of (2) proves its full cubic tower for every
@@ -186,7 +182,7 @@ Let
 R(x)=\frac{1+x}{1-x},
 \qquad
 A_{r,s}(n)=[x^{rn}]T_n(R(x))^s,
-\tag{13}
+\qquad\text{(13)}
 ```
 
 where $r,s\geq1$ and $T_n$ is the Chebyshev polynomial of the first kind.
@@ -195,7 +191,7 @@ Put $x=t^2$.  The elementary identity
 ```math
 T_n(R(t^2))
 =\frac12\left(R(t)^n+R(t)^{-n}\right)
-\tag{14}
+\qquad\text{(14)}
 ```
 
 follows either from $T_n((w+w^{-1})/2)=(w^n+w^{-n})/2$ or directly from the
@@ -205,14 +201,14 @@ Chebyshev recurrence.  Raising (14) to the $s$-th power gives
 A_{r,s}(n)
 =2^{-s}\sum_{j=0}^s\binom sj
 [t^{2rn}]R(t)^{(2j-s)n}.
-\tag{15}
+\qquad\text{(15)}
 ```
 
 With $N=2rn$, each summand in (15) is
 
 ```math
 C_{(2j-s)/(2r),-(2j-s)/(2r)}(N).
-\tag{16}
+\qquad\text{(16)}
 ```
 
 ### Theorem 2 (Chebyshev coefficient tower)
@@ -225,7 +221,7 @@ A_{r,s}(np^k)
 \equiv A_{r,s}(np^{k-1})
 \pmod {p^{3k}}.
 }
-\tag{17}
+\qquad\text{(17)}
 ```
 
 All denominators in (16) divide $2r$, so (2) applies when $p\geq5$ and
@@ -239,7 +235,7 @@ Consider Bala's proposed example
 
 ```math
 u(n)=\sum_{k=0}^n\binom{-n}{k}\binom{-2n}{k}.
-\tag{18}
+\qquad\text{(18)}
 ```
 
 The first terms are
@@ -259,7 +255,7 @@ For every prime $p\geq5$,
 \boxed{
 u(p)\equiv3+2p^3B_{p-3}\pmod {p^4},
 }
-\tag{19}
+\qquad\text{(19)}
 ```
 
 where $B_m$ is the $m$-th Bernoulli number, interpreted $p$-adically.
@@ -269,7 +265,7 @@ where $B_m$ is the $m$-th Bernoulli number, interpreted $p$-adically.
 Write $H_m^{(a)}=\sum_{k=1}^m k^{-a}$ and
 
 ```math
-H(1,2)=\sum_{1\leq j<k\leq p-1}\frac1{jk^2}.
+H(1,2)=\sum_{1\leq j\lt k\leq p-1}\frac{1}{j k^2}.
 ```
 
 The standard finite harmonic congruences are
@@ -281,7 +277,7 @@ H_{p-1}^{(2)}&\equiv \frac{2p}{3}B_{p-3}\pmod {p^2},\\
 H_{p-1}^{(3)}&\equiv0\pmod p,\\
 H(1,2)&\equiv B_{p-3}\pmod p.
 \end{aligned}
-\tag{20}
+\qquad\text{(20)}
 ```
 
 They follow by replacing inverse powers by their Fermat power residues and
@@ -312,7 +308,7 @@ Summing the interior terms and using (20) gives
 \sum_{k=1}^{p-1}\binom{-p}{k}\binom{-2p}{k}
 \equiv
 \frac{22}{3}p^3B_{p-3}pmod {p^4}.
-\tag{21}
+\qquad\text{(21)}
 ```
 
 The endpoint is
@@ -341,7 +337,7 @@ At the smallest prime in Bala's proposed range,
 u(7)-u(1)
 =162602580
 =2^2\cdot3\cdot5\cdot7^3\cdot7901.
-\tag{22}
+\qquad\text{(22)}
 ```
 
 Thus the valuation is exactly $3$, not at least $5$.  The proposed
@@ -349,14 +345,14 @@ $p^{3k+3}$ higher-level tower also fails: exact arithmetic gives
 
 ```math
 v_7\bigl(u(49)-u(7)\bigr)=6<9.
-\tag{23}
+\qquad\text{(23)}
 ```
 
 The corrected experimental target is the ordinary cubic tower
 
 ```math
 u(np^k)\equiv u(np^{k-1})\pmod {p^{3k}}.
-\tag{24}
+\qquad\text{(24)}
 ```
 
 The checker finds no failure in its stated finite grid, but (24) is retained
