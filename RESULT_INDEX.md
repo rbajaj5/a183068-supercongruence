@@ -1497,12 +1497,13 @@ proof.
   \(v_{1+i}(F_r(Z)-F_r(W))=6r-3+v_{1+i}(Z-W)\). After division by its
   first logarithmic coefficient, it is a bijective analytic isometry of
   \(\mathbb Z_2[i]\). The same conclusion holds throughout the explicit
-  full-dimensional parameter ball
-  \(a_\xi\in1+(1+i)^{4r-1}\mathbb Z_2[i]\), which lies inside the
-  first-moment-dominance chamber. The exponent \(4r-1\) is optimal for a
-  uniform coordinatewise ball.
+  full-dimensional anisotropic polydisc
+  \(a_\xi\in1+(1+i)^{4r-2+v_{1+i}(\xi)}\mathbb Z_2[i]\), which lies inside
+  the first-moment-dominance chamber. Each coordinate radius is optimal;
+  mixed-parity unit residues admit exponent \(4r-2\), while odd--odd
+  residues require exponent \(4r-1\).
 - **Status:** Complete deduction from the ramified reciprocal-moment theorem;
-  1,800 exact pair checks and two sharp-radius checks are present, while
+  3,000 exact pair checks and four sharp-radius checks are present, while
   conventional review and priority remain pending.
 - **Proof:** [Gaussian Lucas canonical products, Section 6](related-results/GaussianLucasCanonicalProducts.md#6-the-mixed-block-product-is-an-exact-disk-isometry)
 - **Exact checker:** [`verify_gaussian_product_isometry.py`](verification/related/verify_gaussian_product_isometry.py)
