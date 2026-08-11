@@ -336,6 +336,87 @@ Thus the next proof obligation is finite and local: construct one tangent
 certificate (18).  Such a certificate is stronger than the moment
 identity (15), but it proves all bases and all levels simultaneously.
 
+### 5.1 Unimodular transport normal form
+
+The certificate equation becomes especially concrete after the monomial
+change of variables
+
+```math
+y=t/x,
+\qquad t=xy.
+\tag{19}
+```
+
+The induced map on exponent lattices is unimodular.  Hence an exponent is
+divisible by $p$ before the change exactly when it is divisible by $p$
+after the change, so the Cartier operator remains the ordinary
+two-variable Cartier operator.  In the new coordinates,
+
+```math
+H=\frac1{1-xy},
+\qquad
+G=\frac{x^{-c}y^{-c}}{(1-x)^a(1-y)^b},
+\qquad
+L_p=aV_p(x)+bV_p(y).
+\tag{20}
+```
+
+Write $D_x=x\partial_x$ and $D_y=y\partial_y$.  The old Euler operators
+become
+
+```math
+E_x=D_x-D_y,
+\qquad E_t=D_y.
+```
+
+Consequently,
+
+```math
+E_t\log G=-c+\frac{by}{1-y},
+\qquad
+(E_x+E_t)\log G=-c+\frac{ax}{1-x}.
+```
+
+The cross-derivative terms in (16) cancel, leaving the transport normal
+form
+
+```math
+\boxed{
+\mathcal T_G(J)=
+\left(-c+\frac{by}{1-y}\right)D_xJ
+-\left(-c+\frac{ax}{1-x}\right)D_yJ.
+}
+\tag{21}
+```
+
+Thus (18) is a first-order coefficient recursion, not an unspecified
+cohomological existence problem.  If
+
+```math
+J=\sum_{m,n}j_{m,n}x^my^n,
+\qquad
+R=\mathcal C_p\mathscr B_{p;a,b,c}-\mathscr B_{p;a,b,c}
+=\sum_{m,n}r_{m,n}x^my^n,
+```
+
+then (21) is equivalent coefficientwise to
+
+```math
+r_{m,n}
+=c(n-m)j_{m,n}
++bm\sum_{q\geq1}j_{m,n-q}
+-an\sum_{q\geq1}j_{m-q,n}.
+\tag{22}
+```
+
+On any cone where the Laurent expansion is bounded below, (22) is
+triangular in total degree.  Away from the resonant classes
+$c(n-m)\equiv0\pmod p$, it determines $j_{m,n}$ uniquely from earlier
+coefficients.  The remaining proof obligation is therefore explicit:
+show that the right side has the required cancellation on those resonant
+classes.  This is the rational-prime analogue of isolating the critical
+shell in the Gaussian calculation.
+
 ## 6. Bala's specialization and computation
 
 For $(a,b,c)=(1,2,1)$, exact arithmetic currently gives
