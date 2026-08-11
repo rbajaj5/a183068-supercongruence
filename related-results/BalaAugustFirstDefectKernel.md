@@ -273,7 +273,70 @@ deeper tail, and (7) stratifies the sharp and exceptional parameter
 values.  The analogy supplies a proof organization; it does not identify
 Gaussian and rational primes.
 
-## 5. Bala's specialization and computation
+## 5. A one-series tangent certificate
+
+Identity (15) still quantifies over every $m$.  It has a stronger local
+sufficient condition involving only one formal Laurent series.
+
+For any $p$-integral Laurent series $J$, define its $G$-tangent divergence
+
+```math
+\mathcal T_G(J)=
+E_x\!\left((E_t\log G)J\right)
+-E_t\!\left((E_x\log G)J\right).
+\tag{16}
+```
+
+### Lemma 3
+
+For every $m\geq0$,
+
+```math
+\operatorname{CT}\mathcal T_G(J)G^m=0.
+\tag{17}
+```
+
+### Proof
+
+Formal integration by parts gives
+
+```math
+\operatorname{CT}
+E_x\!\left((E_t\log G)J\right)G^m
+=-m\operatorname{CT}
+(E_t\log G)J(E_x\log G)G^m,
+```
+
+whereas
+
+```math
+-\operatorname{CT}
+E_t\!\left((E_x\log G)J\right)G^m
+=m\operatorname{CT}
+(E_x\log G)J(E_t\log G)G^m.
+```
+
+The two terms cancel. $\square$
+
+### Corollary 4
+
+The family-level first-residue stabilization follows if one constructs a
+$p$-integral $J_{p;a,b,c}$ satisfying
+
+```math
+\boxed{
+\mathcal C_p\mathscr B_{p;a,b,c}
+-\mathscr B_{p;a,b,c}
+\equiv \mathcal T_G(J_{p;a,b,c})\pmod p.
+}
+\tag{18}
+```
+
+Thus the next proof obligation is finite and local: construct one tangent
+certificate (18).  Such a certificate is stronger than the moment
+identity (15), but it proves all bases and all levels simultaneously.
+
+## 6. Bala's specialization and computation
 
 For $(a,b,c)=(1,2,1)$, exact arithmetic currently gives
 
@@ -314,10 +377,22 @@ python verification/related/verify_bala_august_first_defect.py
 
 for the standalone 1,474-check exact regression certificate.
 
-## 6. Research boundary
+## 7. Literature boundary and next obligation
 
 This note closes the expansion and tail bookkeeping for the first defect.
-The unresolved mathematical statement is now (15), or an equivalent
-constant-term identity.  The stronger experimental modulus recorded in
-the August follow-on requires further defect kernels beyond (5), so it is
-not claimed here.
+The unresolved mathematical statement is now (15); the concrete stronger
+certificate is (18).  The higher experimental modulus recorded in the
+August follow-on requires further defect kernels beyond (5), so it is not
+claimed here.
+
+The formal-derivative language is compatible with Beukers and Vlasenko's
+[Dwork crystals III](https://doi.org/10.1093/imrn/rnad101), where higher
+formal-derivative modules and Cartier-stable quotients organize
+supercongruence mechanisms.  The pure constant-term congruences of Mellit
+and Vlasenko
+[apply to powers of a Laurent polynomial](https://arxiv.org/abs/1306.5811).
+Neither result proves (18) verbatim: the fixed prefix factor $H(t)$ is part
+of the arithmetic here, and no Hasse--Witt or excellent-Frobenius
+hypothesis has been verified for this family.  They identify the right
+cohomological language; Lemma 3 isolates the elementary certificate still
+needed in this particular problem.
