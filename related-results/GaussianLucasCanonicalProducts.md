@@ -475,9 +475,124 @@ to classify parameters where the first moment cancels or a later moment
 reaches the same valuation. Such loci are natural candidates for exceptional
 or strengthened supercongruences.
 
+### A certified neighborhood of the unweighted block
+
+The abstract dominance condition contains an explicit full-dimensional
+neighborhood. This makes the word "region" above effective rather than merely
+set-theoretic.
+
+#### Theorem
+
+Fix \(r\ge2\). If
+
+\[
+a_\xi\in1+\varpi^{4r-1}\mathcal O
+\qquad(\xi\in U_r),
+\tag{34}
+\]
+
+then
+
+\[
+v_\varpi(b_1(\mathbf a))=6r-3,
+\qquad
+v_\varpi(b_k(\mathbf a))\ge6r-2
+\quad(k\ge2).
+\tag{35}
+\]
+
+Moreover,
+
+\[
+\frac{b_1(\mathbf a)}{c_r}
+\in1+\varpi\mathcal O,
+\tag{36}
+\]
+
+and therefore
+
+\[
+Z\longmapsto
+\frac{F_{r,\mathbf a}(Z)-1}{b_1(\mathbf a)}
+\tag{37}
+\]
+
+is a bijective analytic isometry of \(\mathcal O\).
+
+#### Proof
+
+Write \(a_\xi=1+\delta_\xi\) and \(q=4r-1\). Since every
+\(\xi\in U_r\) has \(v_\varpi(\xi)\le1\),
+
+\[
+v_\varpi\bigl(b_1(\mathbf a)-c_r\bigr)
+\ge2r+q-1
+=6r-2.
+\tag{38}
+\]
+
+Together with \(v_\varpi(c_r)=6r-3\), this proves the first assertion in
+(35) and (36).
+
+For \(k\ge2\), the factorization
+\(a_\xi^k-1=(a_\xi-1)(1+a_\xi+\cdots+a_\xi^{k-1})\) gives
+\(v_\varpi(a_\xi^k-1)\ge q\). Hence
+
+\[
+v_\varpi\bigl(b_k(\mathbf a)-c_{r,k}\bigr)
+\ge
+2rk-2v_2(k)+q-k.
+\tag{39}
+\]
+
+The right side is at least \(6r-2\), because
+
+\[
+(2r-1)(k-1)\ge2v_2(k)
+\qquad(r\ge2,\ k\ge2).
+\tag{40}
+\]
+
+Indeed \(v_2(k)\le k-1\) and \(2r-1\ge3\). The unweighted estimate
+\(v_\varpi(c_{r,k})\ge6r-2\) from (28) now proves the second assertion in
+(35). Thus every parameter vector in (34) is first-moment dominant, and
+the preceding difference-logarithm and contraction argument proves (37).
+\(\square\)
+
+The radius in (34) is sharp for a uniform coordinatewise ball. To see this,
+keep every weight equal to \(1\) except at \(\xi_0=1+i\), and put
+
+\[
+a_{\xi_0}
+=1-\frac{c_r\xi_0}{2^r}.
+\tag{41}
+\]
+
+The perturbation has exact valuation
+
+\[
+v_\varpi\left(\frac{c_r\xi_0}{2^r}\right)
+=(6r-3)+1-2r
+=4r-2.
+\]
+
+Thus this vector belongs to the larger coordinatewise ball with exponent
+\(4r-2\). But its first logarithmic coefficient is
+
+\[
+b_1(\mathbf a)
+=c_r-\frac{2^r}{\xi_0}\frac{c_r\xi_0}{2^r}
+=0.
+\tag{42}
+\]
+
+Thus replacing \(4r-1\) by \(4r-2\) would include a parameter vector for
+which first-moment dominance fails completely.
+
 The exact checker
 [`verify_gaussian_product_isometry.py`](../verification/related/verify_gaussian_product_isometry.py)
-tests (22) and (25) on 600 pairs at scales \(r=2,3\), using exact arithmetic
+tests (22), (25), and the neighborhood theorem on 1,800 pairs at scales
+\(r=2,3\), and checks the two sharp boundary witnesses, using exact arithmetic
 in \(\mathbb Q(i)\).
 
 ## 7. Relation with Blaschke products
@@ -516,7 +631,7 @@ R_{\mathfrak p,r}-1
 c_{\mathfrak p,r}\,
 CD\bigl(A-C+i(B-D)\bigr)
 +\text{one valuation level deeper},
-\tag{34}
+\tag{43}
 ```
 
 where \(c_{\mathfrak p,r}\) is the first reciprocal moment of the relevant
