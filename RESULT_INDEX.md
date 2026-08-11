@@ -244,17 +244,16 @@ proof.
   $(U_{a,b;c}(3n)-U_{a,b;c}(n))/9$ has an explicit constant-term residue
   modulo $3$, obtained from the quadratic and cubic reduced-logarithm
   Cartier images.
-- **Cubic subclass:** If $3\mid a+b$, then
+- **Cubic subclass:** If $3\mid ab(a+b)$, then
   $U_{a,b;c}(3n)\equiv U_{a,b;c}(n)\pmod {27}$ for every $c,n\geq1$.
-  This includes Bala's $u=U_{1,2;1}$.
-- **Sharp boundary:** $U_{1,1;1}(3)-U_{1,1;1}(1)=144$ has exact
-  $3$-adic valuation $2$, so the universal cubic theorem cannot include
-  $p=3$.
+  This includes Bala's $u=U_{1,2;1}$ and is maximal among conditions on
+  $(a,b)\bmod3$: the two excluded slope classes $(1,1)$ and $(2,2)$ both
+  have exact valuation $2$ at $c=n=1$.
 - **Next target:** Exact data support
   $D_r\equiv27D_{r-1}\pmod {3^{3r+1}}$ for all parameters; this is sharp
   at $(a,b,c,n,r)=(1,1,1,1,2)$ but remains conjectural.
 - **Status:** Complete elementary first-level theorem and counterexample;
-  20,933 exact checks pass; all-level renormalization remains open.
+  32,936 exact checks pass; all-level renormalization remains open.
 - **Proof:** [Prime-three negative-binomial boundary](related-results/PrimeThreeNegativeBinomialBoundary.md)
 - **Exact checker:** [`verify_prime_three_negative_binomial_boundary.py`](verification/related/verify_prime_three_negative_binomial_boundary.py)
 

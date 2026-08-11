@@ -153,11 +153,17 @@ together with the coefficient $2ab=-ab$ in characteristic $3$; their
 product is $+abHZ$. Substitution of (10)--(11) into (8) proves (5).
 $\square$
 
-## 3. A proved cubic subclass containing Bala's sum
+## 3. The maximal slope-residue subclass
 
 ### Corollary 2
 
-If $3\mid a+b$, then for every $c,n\geq1$,
+If
+
+```math
+3\mid ab(a+b),
+```
+
+then for every $c,n\geq1$,
 
 ```math
 \boxed{
@@ -172,8 +178,10 @@ $u(3n)\equiv u(n)\pmod {27}$ for every $n$.
 ### Proof
 
 If $3\mid n$, the factor $n^2$ in (5) proves the result. Assume that $n$
-is a unit modulo $3$. If $a\equiv b\equiv0$, the right side is again zero.
-Otherwise write $b=-a$ in $\mathbb F_3$ and set
+is a unit modulo $3$.
+
+First suppose $3\mid a+b$. If $a\equiv b\equiv0$, the right side is
+zero. Otherwise write $b=-a$ in $\mathbb F_3$ and set
 
 ```math
 P=\frac{x}{1-x},
@@ -214,11 +222,38 @@ a^2\operatorname{CT}R\left(W+W^2\right)
 
 because $n^2=1$ in $\mathbb F_3$. Finally
 $\operatorname{CT}E_xR=na\operatorname{CT}RW=0$, and $na$ is a unit.
-This proves (12). $\square$
+This handles the factor $a+b$.
+
+Now suppose $a=0$ in $\mathbb F_3$. The bracket in (5) reduces to
+
+```math
+b(b+n)Y.
+```
+
+There is nothing to prove if $b=0$ or $b=-n$. In the remaining case
+$b=n$, so $bn=1$ in $\mathbb F_3$. In $RY$, with $R=HG^n$, the two
+relevant factors can be grouped as
+
+```math
+(1-x)^{-an}
+\quad\text{and}\quad
+y(1-y)^{-(bn+2)}.
+```
+
+The first is a power series in $x^3$, while the second has only powers
+$y^{1+3j}$. Since $y=t/x$, no monomial can have $x$-exponent zero.
+Hence $\operatorname{CT}RY=0$. The case $b=0$ is symmetric: if its scalar
+does not already vanish, $a=n$, and the powers of $x$ are $1$ modulo $3$
+while the powers of $y$ are $0$ modulo $3$. This proves (12). $\square$
+
+The condition is maximal among conditions depending only on the residue
+class of the slope pair $(a,b)$ modulo $3$. It includes seven of the nine
+pairs in $\mathbb F_3^2$; the two omitted pairs are $(1,1)$ and $(2,2)$,
+and both fail already for $c=n=1$, as shown next.
 
 ## 4. The universal theorem cannot include $p=3$
 
-Take $a=b=c=n=1$. Then
+For the first omitted slope class, take $a=b=c=n=1$. Then
 
 ```math
 U_{1,1;1}(1)=2,
@@ -235,6 +270,20 @@ U_{1,1;1}(3)-U_{1,1;1}(1)=144=3^2\cdot16.
 
 Thus the exponent $2$ is exact. The restriction $p\geq5$ in the universal
 cubic prefix theorem is sharp.
+
+The other omitted slope class fails just as sharply:
+
+```math
+U_{2,2;1}(1)=5,
+\qquad
+U_{2,2;1}(3)=3614,
+\qquad
+3614-5=3609=3^2\cdot401.
+\qquad\text{(15)}
+```
+
+Consequently no further slope residue class can be added to Corollary 2
+while retaining a theorem uniform in $c$ and $n$.
 
 ## 5. The next all-level lemma
 
@@ -253,13 +302,13 @@ D_r(a,b,c;n)\equiv27D_{r-1}(a,b,c;n)
 \pmod {3^{3r+1}}
 \qquad(r\geq2).
 }
-\qquad\text{(15)}
+\qquad\text{(16)}
 ```
 
-The extra power in (15) is sharp: for $(a,b,c,n,r)=(1,1,1,1,2)$ the
-difference has valuation exactly $7$. If (15) is proved, Corollary 2
+The extra power in (16) is sharp: for $(a,b,c,n,r)=(1,1,1,1,2)$ the
+difference has valuation exactly $7$. If (16) is proved, Corollary 2
 immediately propagates to every level and supplies the complete $p=3$
-tower for Bala's $u$. Equation (15) remains a conjecture, not a theorem of
+tower for Bala's $u$. Equation (16) remains a conjecture, not a theorem of
 this note.
 
 ## 6. Verification
@@ -270,8 +319,9 @@ Run
 python verification/related/verify_prime_three_negative_binomial_boundary.py
 ```
 
-The checker verifies the exact residue formula, the $3\mid a+b$ corollary,
-the sharp counterexample, the sharp second-level renormalization witness,
-and extended exact and modular grids for (15). These computations certify
+The checker verifies the exact residue formula, the maximal
+$3\mid ab(a+b)$ corollary, sharp counterexamples in both excluded slope
+classes, the sharp second-level renormalization witness, and extended
+exact and modular grids for (16). These computations certify
 the formulas and boundaries but do not prove the conjectural all-level
 renormalization.
