@@ -135,7 +135,6 @@ than separate papers.
 | 5 | [A331562](https://oeis.org/A331562), all row sequences | Rows \(2,3,4\) are known; a uniform row theorem would replace infinitely many entries with one statement | Transfer matrix or rational-diagonal representation |
 | 6 | [A364172](https://oeis.org/A364172)--[A364184](https://oeis.org/A364184) | The cubic transfer is now uniform; most entries still state global integrality only conjecturally | Landau floor inequalities for the remaining integrality assertions |
 | 7 | [A380290](https://oeis.org/A380290), cubic remainder | The quadratic tower and its coefficientwise Gaussian refinement are now proved, but the special untwisted \(d=2\) cancellation conjecturally raises \(p^{2r}\) to \(p^{3r}\) for \(p\ge7\) | Prove the extra untwisted convolution cancellation; a generic Gaussian twist has exact quadratic witnesses |
-| 8 | [A333592](https://oeis.org/A333592) | The coefficientwise quadratic tower is proved in this repository, but its stronger untwisted cubic conjecture remains open | Exact comparison with Coster's \(w_{A,B,\epsilon}\) families |
 
 The first three targets are closest to the current repository machinery.  The
 plane-partition target is less likely to be quick, but a successful result
@@ -167,13 +166,18 @@ and A103885, together with the full rays A119258(An,Bn) and a Chebyshev
 coefficient family. These records are a supplement to the frozen 110-record
 census rather than a silent change to its denominator.
 
-The [August coefficient packet](BalaAugustCoefficientPacket.md) proves the
-A119258 rays away from their fixed denominator primes, proves the Chebyshev
-family under the analogous condition, and closes A119259, A333562, A333564,
-A333565, and A103885. A333473 remains a live quadratic target. The same
-packet gives an exact Bernoulli correction showing that a proposed
-negative-binomial $p^5$ strengthening is false; the corrected ordinary cubic
-tower remains open above the prime boundary.
+The [August coefficient packet](BalaAugustCoefficientPacket.md) proves every
+A119258 ray and the full Chebyshev family without fixed-denominator
+exclusions, and closes A119259, A333562, A333564, A333565, and A103885. The
+[mixed-binomial follow-on](BalaAugustMixedBinomialFollowOn.md) proves the
+named A333473 quadratic tower for every odd prime, classifies all fixed
+generalized-binomial products and their alternating twists by factor count,
+and closes A333592's cubic specialization by an exact reduction to Coster's
+shifted theorem. The larger algebraic-kernel family surrounding A333473
+remains open. The same packet gives an exact Bernoulli correction showing
+that a proposed negative-binomial $p^5$ strengthening is false; its corrected
+ordinary cubic tower remains open above the prime boundary, although a
+quadratic tower now follows unconditionally from the mixed-binomial theorem.
 
 ## 6. Core bibliography
 

@@ -225,10 +225,7 @@ def check_ray_towers() -> int:
     checks = 0
     for a in range(2, 7):
         for b in range(1, a):
-            denominator = b // gcd(a, b)
             for prime in PRIMES:
-                if denominator % prime == 0:
-                    continue
                 for n in range(1, 4):
                     for level in (1, 2):
                         large = triangle_term(a * n * prime**level, b * n * prime**level)

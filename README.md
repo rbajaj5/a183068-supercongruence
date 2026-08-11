@@ -21,7 +21,7 @@ review.
 | Find one precise mathematical claim | [Claim-level result index](RESULT_INDEX.md) | Controlling status ledger |
 | Track all 110 Bala/OEIS records | [110-record proof campaign](related-results/Bala110ProofCampaign.md) and [July 31 update](related-results/BalaJuly31ResearchUpdate.md) | Record-level route, status, evidence, and next action |
 | Review Bala's Bober follow-up | [Bober sporadic packet](related-results/BoberSporadicFactorialRatioPacket.md), [A364176 affine-Landau theorem](related-results/A364176AffineLandauTower.md) | All 52 ordinary towers proved for $p\ge5$; A295456 at $N/2$ is closed completely; 14 visible fractional variants remain at integrality |
-| Review Bala's August coefficient follow-up | [A119258 rays and Chebyshev packet](related-results/BalaAugustCoefficientPacket.md) | Two infinite cubic families and five named records proved away from explicit denominator primes; proposed negative-binomial exponent bonus refuted and replaced by an exact Bernoulli defect |
+| Review Bala's August coefficient follow-up | [A119258 rays and Chebyshev packet](related-results/BalaAugustCoefficientPacket.md) and [mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md) | Two infinite cubic families now have no denominator-prime exclusions; A333473 and the fixed product/twist class are closed; the proposed negative-binomial bonus is replaced by an exact defect and a proved quadratic baseline |
 | Compare the portfolio economically | [Economist-style rankings](RANKINGS.md) | Editorial scores, not correctness claims |
 | Browse the wider program | [Related-results reading map](related-results/README.md) | Theorem, reduction, computation, and synthesis lanes |
 | Reproduce the computations | [`verification/run_all.py`](verification/run_all.py) | Exact checkers with no floating-point tolerance unless stated |
@@ -188,14 +188,17 @@ these records do not hold as printed. The six records are therefore counted
 as proved here, not as published-source closures.
 The subsequent
 [August coefficient packet](related-results/BalaAugustCoefficientPacket.md)
-extracts the part of the same proof that remains valid for rational
-parameters away from their denominator primes. It proves every ray
-$A119258(An,Bn)$ under the explicit local condition, proves Bala's full
-Chebyshev coefficient family for $p\nmid r$, and closes A119259, A333562,
-A333564, A333565, and A103885. It also rejects an AI-generated
-negative-binomial exponent bonus: the exact leading defect is
-$2p^3B_{p-3}$ modulo $p^4$, so the proposed $p^5$ congruence already fails
-at $p=7$.
+extends the elementary proof to arbitrary integral coefficient slopes. It
+proves every ray $A119258(An,Bn)$ and Bala's full Chebyshev coefficient
+family for every $p\ge5$, with no fixed-denominator exclusions, and closes
+A119259, A333562, A333564, A333565, and A103885. The
+[mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md)
+then proves A333473's quadratic tower for every odd prime and classifies
+fixed products and alternating twists by their number of generalized
+binomial factors. It also rejects an AI-generated negative-binomial exponent
+bonus: the exact leading defect is $2p^3B_{p-3}$ modulo $p^4$, so the
+proposed $p^5$ congruence already fails at $p=7$; the corrected sum has an
+unconditional quadratic tower, while its ordinary cubic lift remains open.
 
 See [RANKINGS.md](RANKINGS.md) for the complete multi-criteria assessment and
 the separate queue of reductions and computational targets.

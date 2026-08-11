@@ -296,6 +296,51 @@ $\alpha n$ and $\beta n$ are integers, so both coefficients in (19) are
 ordinary integers. This denominator restriction is genuine proof data: no
 claim is made here at primes dividing $Q$.
 
+### 4.5 Arbitrary integral coefficient slopes
+
+There is a stronger integral formulation that avoids those denominator
+restrictions. For integers $\alpha,\beta$, an integer $c\geq0$, and
+$N\geq1$, put
+
+```math
+A_{\alpha,\beta;c}(N)
+=[x^{cN}](1+x)^{\alpha N}(1-x)^{\beta N}.
+```
+
+Then, for every prime $p\geq5$ and all $n,r\geq1$,
+
+```math
+\boxed{
+A_{\alpha,\beta;c}(np^r)
+\equiv A_{\alpha,\beta;c}(np^{r-1})
+\pmod {p^{3r}}.
+}
+```
+
+At $p=3$ the same proof gives modulus $3^{3r-1}$.
+
+Indeed, replace $G(x)=\phi(x)/x$ in Sections 4.1--4.3 by
+
+```math
+G_c(x)=\frac{(1+x)^\alpha(1-x)^\beta}{x^c}.
+```
+
+The monomial cancels between $G_c(x)^p$ and $G_c(x^p)$, so the exact
+reduced-logarithm identity, the vanishing linear term, and the quadratic
+Cartier estimate are unchanged. In the integration-by-parts step the only
+change is
+
+```math
+\frac{xG_c'(x)}{G_c(x)}
+=\frac{\alpha x}{1+x}-\frac{\beta x}{1-x}-c,
+```
+
+which again has integral coefficients. Finally,
+$[x^{cN}]\phi(x)^N=\operatorname{CT}(G_c(x)^N)$, so the same
+constant-term argument proves the displayed congruence. A coefficient slope
+is therefore part of the integral data; it need not be converted into a
+denominator in the exponents.
+
 ## 5. Verification
 
 Run
@@ -310,10 +355,11 @@ The exact checker performs:
 - 50 reduced-harmonic checks;
 - 2,940 quadratic Cartier checks;
 - 2,430 tower checks across a parameter grid;
+- 288 arbitrary integral coefficient-slope checks;
 - 18 named level-three checks; and
 - 5 sharp boundary checks.
 
-All 5,473 checks pass. These computations test transcription and boundaries;
+All 5,761 checks pass. These computations test transcription and boundaries;
 the proof and the published theorem, not the finite grid, establish the
 general result.
 

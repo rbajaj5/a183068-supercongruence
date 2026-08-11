@@ -1,4 +1,4 @@
-# Bala's August coefficient packet: rational rays, Chebyshev towers, and a Bernoulli obstruction
+# Bala's August coefficient packet: integral rays, Chebyshev towers, and a Bernoulli obstruction
 
 **Status:** complete proof candidate for the two parameter families and the
 prime-level defect formula; exact checks pass; independent review and
@@ -6,7 +6,7 @@ literature-priority work pending.
 
 **Source boundary:** Peter Bala suggested the families in correspondence on
 August 11, 2026.  The OEIS pages record the named conjectures cited below.
-The rational-parameter framing argument and the Bernoulli correction are
+The integral-slope framing argument and the Bernoulli correction are
 proved here; finite verification is supporting evidence, not the proof.
 
 ## 1. Results at a glance
@@ -14,43 +14,44 @@ proved here; finite verification is supporting evidence, not the proof.
 This packet produces three different outcomes.
 
 1. Every ray $T(An,Bn)$ of the triangle A119258 has a cubic adjacent-scale
-   tower at primes away from one fixed denominator.
+   tower at every prime $p\geq5$.
 2. Every coefficient family
    $[x^{rn}]T_n\!\left((1+x)/(1-x)\right)^s$ has the same cubic tower for
-   $p\geq5$ with $p\nmid r$.
+   every $p\geq5$.
 3. The proposed stronger negative-binomial congruence is false.  Its first
    nonzero term is controlled by $B_{p-3}$ and normally occurs at exactly
    $p^3$.
 
 The first theorem closes the displayed odd-prime conjectures on A119259 and
 A333562.  Fixed linear identities then close A333564 and A333565.  The
-Chebyshev theorem includes A103885.  A333473 remains a separate quadratic
-coefficient problem; nothing below silently promotes it.
+Chebyshev theorem includes A103885.  The separate A333473 quadratic
+coefficient problem is closed in the
+[mixed-binomial follow-on](BalaAugustMixedBinomialFollowOn.md); it is not an
+instance of the coefficient-framing theorem below.
 
-## 2. Rational coefficient framing
+## 2. Integral coefficient slopes
 
-For $a,b\in\mathbb Q$ put
+For integers $a,b$ and $c\geq0$, put
 
 ```math
-C_{a,b}(N)=[z^N](1+z)^{aN}(1-z)^{bN}.
+C_{a,b;c}(N)=[z^{cN}](1+z)^{aN}(1-z)^{bN}.
 \qquad\text{(1)}
 ```
 
-Let $Q$ be a common denominator of $a$ and $b$.  The rational-parameter
-extension of the repository's
-[coefficient-framing theorem](CoefficientFramingCubicTower.md#44-rational-parameters-away-from-their-denominators)
-gives, for $p\geq5$ and $p\nmid Q$,
+The arbitrary-slope extension of the repository's
+[coefficient-framing theorem](CoefficientFramingCubicTower.md#45-arbitrary-integral-coefficient-slopes)
+gives, for every $p\geq5$,
 
 ```math
-C_{a,b}(np^r)\equiv C_{a,b}(np^{r-1})\pmod {p^{3r}}.
+C_{a,b;c}(np^r)\equiv C_{a,b;c}(np^{r-1})\pmod {p^{3r}}.
 \qquad\text{(2)}
 ```
 
-For clarity, the proof does not divide an integer theorem by $Q$.  In the
-local ring $\mathbb Z_p$, both $a$ and $b$ are integral.  Hence every
-generalized binomial coefficient occurring in (1) is $p$-integral.  The
-reduced-logarithm identity, quadratic Cartier estimate, and integration by
-parts in the original proof then apply word for word.
+The proof uses $G(z)=(1+z)^a(1-z)^b/z^c$. The monomial cancels from
+$G(z)^p/G(z^p)$, so the reduced logarithm and quadratic Cartier estimate
+are unchanged. Integration by parts only adds the integral constant $-c$
+to $zG'(z)/G(z)$. This is why the coefficient slope causes no exceptional
+prime.
 
 ## 3. All rays of A119258
 
@@ -78,22 +79,16 @@ T(An,Bn)
 \qquad\text{(5)}
 ```
 
-Set $M=Bn$.  Formula (5) is
+Formula (5) is directly
 
 ```math
-T(An,Bn)=C_{A/B,-(A-B)/B}(M).
+T(An,Bn)=C_{A,-(A-B);B}(n).
 \qquad\text{(6)}
 ```
 
 ### Theorem 1 (A119258 ray theorem)
 
-Let $A>B\geq1$, put
-
-```math
-q=\frac{B}{\gcd(A,B)},
-```
-
-and let $p\geq5$ be prime with $p\nmid q$.  For all $n,r\geq1$,
+Let $A>B\geq1$ and let $p\geq5$ be prime. For all $n,r\geq1$,
 
 ```math
 \boxed{
@@ -104,8 +99,7 @@ T(Anp^r,Bnp^r)
 \qquad\text{(7)}
 ```
 
-Indeed, $q$ is a common denominator after reducing the two rational
-parameters in (6), and (7) is (2) with base index $Bn$.
+This is (2) with the integral parameters and slope in (6).
 
 ### The truncated negative-binomial ray
 
@@ -138,7 +132,7 @@ S_c(np^r)\equiv S_c(np^{r-1})\pmod {p^{3r}}
 \qquad\text{(10)}
 ```
 
-for every $p\geq5$ with $p\nmid c$.  The cases $c=1$ and $c=3$ are
+for every $p\geq5$. The cases $c=1$ and $c=3$ are
 [A119259](https://oeis.org/A119259) and
 [A333562](https://oeis.org/A333562), respectively, so their displayed cubic
 towers are unconditional for every $p\geq5$.
@@ -204,16 +198,16 @@ A_{r,s}(n)
 \qquad\text{(15)}
 ```
 
-With $N=2rn$, each summand in (15) is
+Each summand in (15) is
 
 ```math
-C_{(2j-s)/(2r),-(2j-s)/(2r)}(N).
+C_{2j-s,-(2j-s);2r}(n).
 \qquad\text{(16)}
 ```
 
 ### Theorem 2 (Chebyshev coefficient tower)
 
-For every $r,s,n,k\geq1$ and every prime $p\geq5$ with $p\nmid r$,
+For every $r,s,n,k\geq1$ and every prime $p\geq5$,
 
 ```math
 \boxed{
@@ -224,10 +218,9 @@ A_{r,s}(np^k)
 \qquad\text{(17)}
 ```
 
-All denominators in (16) divide $2r$, so (2) applies when $p\geq5$ and
-$p\nmid r$.  The factor $2^{-s}$ is a $p$-adic unit, and summing proves
-(17).  The source case $r=s=1$ is A103885.  The primes dividing $r$ remain a
-separate boundary; (17) does not hide them inside the notation.
+The integral-slope theorem applies to every summand in (16). The factor
+$2^{-s}$ is a $p$-adic unit, and summing proves (17). The source case
+$r=s=1$ is A103885.
 
 ## 6. The negative-binomial strengthening is false
 
@@ -360,15 +353,15 @@ as a conjecture: Theorem 3 proves only its prime-level case.
 
 ## 7. What remains open
 
-- [A333473](https://oeis.org/A333473) asks for a quadratic tower attached to
-  an algebraic Schröder kernel.  It is not a rational-binomial ray and is not
-  proved by Theorems 1 or 2.
-- The primes dividing $B/\gcd(A,B)$ in Theorem 1 and the primes dividing $r$
-  in Theorem 2 need separate local arguments.
+- The named A333473 quadratic tower is proved in the
+  [August mixed-binomial follow-on](BalaAugustMixedBinomialFollowOn.md).
+  Its larger two-parameter algebraic-kernel family remains open.
 - The ordinary cubic tower (24) remains open beyond the prime boundary.
-- Bala's broader negative-parameter substitutions and twisted products must
-  be normalized individually; (22) shows that sign replacement alone does
-  not create a uniform exponent bonus.
+- Bala's product and twist proposal is classified by the follow-on: two
+  generalized-binomial factors give a quadratic tower, while three or more
+  give a cubic tower. The companions containing upper arguments depending
+  on the summation index still require individual normalization, and some
+  already have exact counterexamples.
 
 ## 8. Literature boundary
 

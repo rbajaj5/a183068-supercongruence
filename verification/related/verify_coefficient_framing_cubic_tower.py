@@ -27,6 +27,17 @@ def coefficient(alpha: int, beta: int, n: int) -> int:
     )
 
 
+def coefficient_at_slope(alpha: int, beta: int, slope: int, n: int) -> int:
+    """[x^(slope*n)] (1+x)^(alpha*n) (1-x)^(beta*n)."""
+    degree = slope * n
+    return sum(
+        generalized_binomial(alpha * n, k)
+        * (-1) ** (degree - k)
+        * generalized_binomial(beta * n, degree - k)
+        for k in range(degree + 1)
+    )
+
+
 def valuation(value: int, prime: int) -> int:
     if value == 0:
         return 10**9
@@ -155,6 +166,35 @@ def check_cubic_tower() -> int:
     return checks
 
 
+def check_integral_coefficient_slopes() -> int:
+    checks = 0
+    parameter_pairs = (
+        (-3, -2),
+        (-2, 1),
+        (-1, -4),
+        (1, -2),
+        (2, 3),
+        (4, -1),
+    )
+    for prime in (3, 5, 7):
+        loss = int(prime == 3)
+        for alpha, beta in parameter_pairs:
+            for slope in range(4):
+                for n in (1, 2):
+                    for level in (1, 2):
+                        upper = coefficient_at_slope(
+                            alpha, beta, slope, n * prime**level
+                        )
+                        lower = coefficient_at_slope(
+                            alpha, beta, slope, n * prime ** (level - 1)
+                        )
+                        assert valuation(upper - lower, prime) >= (
+                            3 * level - loss
+                        )
+                        checks += 1
+    return checks
+
+
 def check_named_towers_at_level_three() -> int:
     checks = 0
     named = (
@@ -199,6 +239,7 @@ def main() -> None:
         "reduced harmonic lemma": check_harmonic_lemma(),
         "quadratic Cartier lemma": check_quadratic_cartier_lemma(),
         "cubic tower grid": check_cubic_tower(),
+        "integral coefficient slopes": check_integral_coefficient_slopes(),
         "named level-three checks": check_named_towers_at_level_three(),
         "sharp boundaries": check_sharp_boundaries(),
     }

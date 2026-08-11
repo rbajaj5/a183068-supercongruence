@@ -125,7 +125,7 @@ The valuation is instead exactly two.
 
 The [two-parameter coefficient theorem](CoefficientFramingCubicTower.md)
 remains valid: its elementary proof uses the special two-letter logarithm
-coming from $(1+x)^\alpha(1-x)^\beta$, and 5,473 exact checks cover its
+coming from $(1+x)^\alpha(1-x)^\beta$, and 5,761 exact checks cover its
 stated boundaries. What changes is provenance. The six OEIS records proved
 there cannot be marked `published-source` on the strength of the 2021
 framing theorem as printed. They are classified `proved-here` until a valid
