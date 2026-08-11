@@ -149,10 +149,10 @@ For $n\geq1$, the OEIS identities
 
 ```math
 \begin{aligned}
-\operatorname{A333564}(n)
- &=\frac{\operatorname{A119259}(n)-(-1)^n}{2},\\
-\operatorname{A333565}(n)
- &=2\operatorname{A119259}(n)-(-1)^n
+\mathrm{A333564}(n)
+ &=\frac{\mathrm{A119259}(n)-(-1)^n}{2},\\
+\mathrm{A333565}(n)
+ &=2\mathrm{A119259}(n)-(-1)^n
 \end{aligned}
 \qquad\text{(11)}
 ```
@@ -165,7 +165,7 @@ sequences satisfy their conjectured $p^{3r}$ tower for every $p\geq5$.
 The page [A103885](https://oeis.org/A103885) gives, for $n\geq1$,
 
 ```math
-\operatorname{A103885}(n)
+\mathrm{A103885}(n)
 =\frac12[x^n]\left(\frac{1+x}{1-x}\right)^{2n}
 =\frac12 C_{2,-2}(n).
 \qquad\text{(12)}
@@ -265,7 +265,7 @@ where $B_m$ is the $m$-th Bernoulli number, interpreted $p$-adically.
 Write $H_m^{(a)}=\sum_{k=1}^m k^{-a}$ and
 
 ```math
-H(1,2)=\sum_{1\leq j<k\leq p-1}\frac1{jk^2}.
+H(1,2)=\sum_{1\leq j\lt k\leq p-1}\frac{1}{j k^2}.
 ```
 
 The standard finite harmonic congruences are
