@@ -238,6 +238,34 @@ proof.
 - **Proof:** [Mixed negative-binomial cubic tower](related-results/MixedNegativeBinomialCubicTower.md)
 - **Exact checker:** [`verify_mixed_negative_binomial_cubic_tower.py`](verification/related/verify_mixed_negative_binomial_cubic_tower.py)
 
+### NEG-FIRST-KERNEL - normalized negative-binomial defect
+
+- **Claim:** For every positive-slope prefix $U_{a,b;c}$, prime $p\geq5$,
+  and $n,r\geq1$, the normalized defect has the explicit first residue
+  \[
+  \frac{U_{a,b;c}(np^r)-U_{a,b;c}(np^{r-1})}{p^{3r}}
+  \equiv n^3\operatorname{CT}\mathscr B_{p;a,b,c}G^{np^{r-1}}
+  \pmod p,
+  \]
+  where $\mathscr B_{p;a,b,c}$ is a single $p$-integral Cartier kernel.
+- **Consequences:** The ordinary cubic exponent is sharp exactly when this
+  moment is nonzero. A vanishing moment gives at least one extra power of
+  $p$. All logarithmic terms of degree at least four lie uniformly below
+  this first-defect shell.
+- **Stabilization reduction:** The difference between normalized defects at
+  adjacent levels equals
+  \[
+  n^3\operatorname{CT}
+  (\mathcal C_p\mathscr B_{p;a,b,c}-\mathscr B_{p;a,b,c})G^{np^{r-2}}
+  \pmod p.
+  \]
+  Thus Bala's first-residue stabilization is reduced to one
+  Frobenius-fixed moment identity, which remains open.
+- **Status:** Complete first-layer proof candidate; 1,474 exact arithmetic
+  checks support the remaining moment identity; no priority claim.
+- **Proof:** [Bala August first-defect kernel](related-results/BalaAugustFirstDefectKernel.md)
+- **Exact checker:** [`verify_bala_august_first_defect.py`](verification/related/verify_bala_august_first_defect.py)
+
 ### NEG-PREFIX-3 - exact prime-three prefix obstruction
 
 - **Claim:** For $U_{a,b;c}$ as above, the normalized first defect
