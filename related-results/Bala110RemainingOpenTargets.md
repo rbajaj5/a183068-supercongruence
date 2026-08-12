@@ -1,4 +1,4 @@
-# The 5 remaining open targets in the Bala 110-record census
+# The 2 remaining open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -42,17 +42,20 @@ proves A124435. The
 [A244973 Frobenius reduction](A244973QuadraticFrobeniusReduction.md)
 then isolates Sun's remaining conjecture as one exact linear--quadratic
 Cartier cancellation and moves that record to `partial`. This file now lists
-the 5 records that remain fully open. The
+the 2 records that remain fully open. The
 [A331562 rational-diagonal reduction](A331562UniformRationalDiagonal.md)
 also replaces the row-by-row search by one determinant-ratio family and one
 uniform continuant Frobenius estimate. The
 [A079489 Lagrange-kernel reduction](A079489LagrangeKernelReduction.md)
 places both its direct and reverted coefficient families in one normalized
-signed-binomial kernel.
+signed-binomial kernel. The
+[exponential-coefficient reduction](ExponentialCoefficientCartierReduction.md)
+does the same for A060941, A362722, and A362733 through one exact Cartier
+defect.
 
 ## 1. Finite-sum transfer targets
 
-### Coefficient and reversion family (reduced)
+### Recently reduced coefficient and reversion family
 
 Let `A(x)` be the algebraic series on
 [A079489](https://oeis.org/A079489), and let
@@ -82,7 +85,7 @@ Both use rows of A108625 in their summands. The paired claims must be proved
 from the displayed sums; analogy with the Apéry sequences is evidence, not
 inheritance.
 
-## 2. Coefficient and constant-term targets
+## 2. Recently reduced coefficient and constant-term targets
 
 ### Duchon algebraic-series packet
 
@@ -121,7 +124,7 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 5 records are explicit `open-target` entries;
+- 2 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.

@@ -2162,6 +2162,27 @@ proof.
 - **Report:** [A079489 Lagrange-kernel reduction](related-results/A079489LagrangeKernelReduction.md)
 - **Exact checker:** [`verify_a079489_lagrange_kernel.py`](verification/related/verify_a079489_lagrange_kernel.py)
 
+### EXP-CARTIER — exponential-coefficient Cartier defect
+
+- **Claim:** For an arbitrary rational source sequence `b`, the adjacent
+  difference of
+
+  ```math
+  T_{b;c,s}(N)=[x^{sN}]\exp\!\left(cN\sum_{m\geq1}\frac{b_m}{m}x^m\right)
+  ```
+
+  is exactly one coefficient of the Cartier defect
+  `C_p(exp(cN(pL_b(x)-L_b(x^p))))-1`.
+- **Applications:** This single identity specializes exactly to A060941,
+  A362722, and A362733, including the iterated A060941 construction. It
+  also exposes the genuine A060941 boundary failure at `p=5`.
+- **Status:** Exact reduction, not a proof of the three conjectured towers.
+  The remaining obligations are explicit quadratic or cubic estimates on
+  the Cartier-defect coefficient. Rational intermediate Euler iterates are
+  retained rather than silently assumed integral.
+- **Report:** [Exponential-coefficient Cartier reduction](related-results/ExponentialCoefficientCartierReduction.md)
+- **Exact checker:** [`verify_exponential_coefficient_cartier.py`](verification/related/verify_exponential_coefficient_cartier.py)
+
 ### FRANEL-CT — integer-parameter Franel-companion kernels
 
 - **Claim:** For `a` in `{1,2}` and every integer `m`, the two Bala

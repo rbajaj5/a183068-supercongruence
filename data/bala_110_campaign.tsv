@@ -43,7 +43,7 @@ A002426	C	published-source	Pan--Sun theorem is cited on the live OEIS record for
 A005725	C	proved-here	related-results/QuadrinomialCoefficientOddPrimeTower.md	independent review and priority audit of both source-page conjectures
 A006318	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as a generating-function anchor
 A036917	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as an Apery-like source anchor
-A060941	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the algebraic coefficient family and test closure under the exponential iteration
+A060941	C	partial	related-results/ExponentialCoefficientCartierReduction.md	prove the cubic bound (10) and its propagation under iteration; p=5 fails exactly
 A108625	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the p=5 boundary and Straub parameter match
 A108628	C	partial	related-results/Bala110LiveSourceBoundary.md	Straub closes the ordinary tower for p>5; prove the p=5 shifted boundary and the separate half-index vanishing packet
 A143007	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the p=5 boundary and Straub parameter match
@@ -69,8 +69,8 @@ A350383	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved 
 A351857	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A351858	C	partial	related-results/A351858CyclotomicFamilyBoundary.md	all-k and all-parameter families refuted; prove or refute the surviving named k=2 cubic tower
 A352373	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A362722	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the quadratic tower and the extra pure-prime power
-A362733	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the cubic exponential-coefficient tower, including p=3
+A362722	C	partial	related-results/ExponentialCoefficientCartierReduction.md	prove the quadratic Cartier-defect estimates (10), including the pure-prime bonus
+A362733	C	partial	related-results/ExponentialCoefficientCartierReduction.md	prove the cubic Cartier-defect estimate (10), including p=3
 A363864	C	published-source	Straub Theorem 1.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
 A363867	C	published-source	Straub Theorem 3.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
 A363871	C	published-source	Straub Theorem 3.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
