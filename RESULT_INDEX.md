@@ -474,6 +474,38 @@ proof.
 - **Proof:** [A132303 trinomial-cube tower](related-results/A132303TrinomialCubeTower.md)
 - **Exact checker:** [`verify_a132303_trinomial_cube.py`](verification/related/verify_a132303_trinomial_cube.py)
 
+### A156554-LEGENDRE — integral-parameter Legendre coefficient tower
+
+- **Claim:** For integers $A,B$, positive integers $c,s,n,r$, and every
+  prime $p\ge5$, put
+
+  ```math
+  C_{A,B;c,s}(N)=
+  [x^{cN}](1+x)^{AN}(1-x)^{BN}
+  P_{sN}\left(\frac{1+x}{1-x}\right).
+  ```
+
+  Then
+
+  ```math
+  C_{A,B;c,s}(np^r)
+  \equiv C_{A,B;c,s}(np^{r-1})
+  \pmod {p^{3r}}.
+  ```
+
+- **Source status:** Full integral-parameter conjecture on A156554; the
+  named sequence is $(A,B;c,s)=(0,0;1,2)$.
+- **Mechanism:** The Legendre binomial identity gives a two-variable
+  constant term. Its reduced Frobenius logarithm lies on three primitive,
+  pairwise-unimodular rays. Mixed quadratic terms have zero Cartier image;
+  the same-ray terms reduce to the reciprocal-square lemma and formal
+  integration by parts supplies the third valuation block.
+- **Boundary:** The proof is for $p\ge5$ exactly as conjectured. No claim is
+  made at $p=2,3$.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [A156554 Legendre coefficient tower](related-results/A156554LegendreCoefficientTower.md)
+- **Exact checker:** [`verify_a156554_legendre_tower.py`](verification/related/verify_a156554_legendre_tower.py)
+
 ### ODD-UNIT-BLOCK — A091527 and A262732 towers
 
 - **Claim:** For every integer $m\ge2$, prime $p\ge5$, and positive

@@ -1,4 +1,4 @@
-# The 25 remaining open targets in the Bala 110-record census
+# The 24 remaining open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -13,13 +13,13 @@ it. The new status `open-target` means:
   and
 - the next operation is mathematical proof, not database extraction.
 
-The 26 records consolidate to substantially fewer proof families. Repeated
+The original 26 records consolidate to substantially fewer proof families. Repeated
 entries are retained because the campaign denominator is a record count, but
 the proposed proof units below are family-sized.
 
-The original extraction produced 26 open targets.  The
-[A132303 trinomial-cube theorem](A132303TrinomialCubeTower.md) has since
-closed one of them; this file now lists the 25 that remain.
+The [A132303 trinomial-cube theorem](A132303TrinomialCubeTower.md) and the
+[A156554 Legendre coefficient theorem](A156554LegendreCoefficientTower.md)
+have since closed two of them; this file now lists the 24 that remain.
 
 ## 1. Finite-sum transfer targets
 
@@ -124,20 +124,6 @@ F\longmapsto
 iteratively and asks that the resulting coefficient sequences retain the
 same tower. Closure under this nonlinear operation is a separate theorem.
 
-### Legendre coefficient family
-
-- [A156554](https://oeis.org/A156554) asks, most generally, for the cubic
-  tower of
-
-  ```math
-  [x^{rn}](1+x)^{An}(1-x)^{Bn}
-  P_{sn}\left(\frac{1+x}{1-x}\right)
-  ```
-
-  for integral `A,B`, positive `r,s`, and `p >= 5`. This is the natural
-  multivariate extension of the repository's coefficient-framing theorem,
-  but the Legendre factor adds a genuine Cartier variable.
-
 ### Algebraic quadratic towers
 
 - [A245926](https://oeis.org/A245926) first needs its conjectural Laurent
@@ -214,11 +200,11 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 25 records are explicit `open-target` entries;
+- 24 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
 
-This does **not** assert that all 26 targets are true. Their next legitimate
+This does **not** assert that all 24 targets are true. Their next legitimate
 status change requires a proof, an exact published-source reduction, or a
 counterexample.

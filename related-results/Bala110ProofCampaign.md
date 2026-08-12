@@ -25,14 +25,14 @@ every record:
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | T: finite-sum transfer | 40 | 9 | 8 | 9 | 4 | 10 | 0 |
-| C: coefficient/constant term | 37 | 10 | 6 | 4 | 2 | 15 | 0 |
+| C: coefficient/constant term | 37 | 11 | 6 | 4 | 2 | 14 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **36** | **17** | **25** | **7** | **25** | **0** |
+| **Total** | **110** | **37** | **17** | **25** | **7** | **24** | **0** |
 
-The thirty-six `proved-here` records are A002003, A005725, A008485, A008705,
-A008793, A049505, A091527, A108625, A132303, A141057, A143007, A177316, A246437,
+The thirty-seven `proved-here` records are A002003, A005725, A008485, A008705,
+A008793, A049505, A091527, A108625, A132303, A141057, A143007, A156554, A177316, A246437,
 A255672, A260667, A262732, A270913, A270919, A270922, A270924, A275652,
 A275654, A281267, A288470, A333592,
 A348410, A351857, A352373, A357509, A357510, A357568, A364173,
@@ -49,7 +49,7 @@ A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
 classified `no-explicit-open`: the live pages contain no Bala
 supercongruence conjecture that remains to be proved.
-The remaining twenty-five records are `open-target`; their exact claims,
+The remaining twenty-four records are `open-target`; their exact claims,
 prime ranges, normalizations, and family consolidations are recorded in the
 [remaining-open-target map](Bala110RemainingOpenTargets.md).
 
@@ -154,6 +154,16 @@ Its reduced cyclotomic Frobenius logarithm has no support on the
 higher exponential term carries `p^(2r)`.  This proves the conjectured sharp
 quadratic tower and leaves 25 `open-target` records.
 
+The next proof unit closes the full A156554 Legendre coefficient family.
+The standard binomial formula for
+`P_(sN)((1+x)/(1-x))` introduces one auxiliary constant-term variable.
+Its reduced Frobenius logarithm is supported on three primitive, pairwise
+unimodular rays.  Mixed quadratic products therefore miss the
+`p`-sublattice, while each same-ray square is controlled by the existing
+reciprocal-square Cartier lemma.  Formal integration by parts supplies the
+third power of `p`.  This proves the family for arbitrary integral framing
+parameters and leaves 24 `open-target` records.
+
 ## Proof order
 
 The campaign does not use A-number order. It uses expected proof yield.
@@ -186,6 +196,8 @@ The campaign does not use A-number order. It uses expected proof yield.
    [coefficient-framing theorem](CoefficientFramingCubicTower.md) proves six
    records by one elementary Cartier argument. In particular, it proves the
    general two-parameter conjecture on A352373. A
+   [two-variable Legendre extension](A156554LegendreCoefficientTower.md)
+   uses three pairwise-unimodular rays to prove the full A156554 family. A
    [small exact counterexample](RationalFramingCounterexample.md) shows why
    Müller's broader framing theorem cannot be used as the source closure
    without repair. The

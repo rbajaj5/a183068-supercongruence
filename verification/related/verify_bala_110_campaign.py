@@ -12,11 +12,11 @@ LEDGER = ROOT / "data" / "bala_110_campaign.tsv"
 
 EXPECTED_ROUTES = {"T": 40, "C": 37, "F": 14, "M": 14, "D": 5}
 EXPECTED_STATUSES = {
-    "proved-here": 36,
+    "proved-here": 37,
     "published-source": 17,
     "partial": 25,
     "no-explicit-open": 7,
-    "open-target": 25,
+    "open-target": 24,
     "queued": 0,
 }
 
