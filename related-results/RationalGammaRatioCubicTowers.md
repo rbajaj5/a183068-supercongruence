@@ -351,12 +351,14 @@ Peter Bala's August 2026 follow-up identifies fractional-index variants of
 12 Bober records.  The 15 formulas currently visible in approved OEIS
 comments all satisfy slope balance and residue-class balance. Theorem 2
 therefore proves their adjacent $p^{3r}$ quotient congruence for every
-$p\geq5$. The A295456 variant at $N/2$ is A364176, whose integrality is now
-proved in the dedicated affine-Landau note; the other 14 conjectured global
-integrality statements remain separate open problems.
+$p\geq5$. The later
+[uniform half-index theorem](BoberHalfIndexIntegralityTowers.md) proves all
+eleven $N/2$ variants integral, so their towers are unconditional. The four
+remaining global integrality targets are A295456 and A295458 at $N/3$, and
+A295460 and A295477 at $N/4$.
 
-The exact records, admissible denominators, source boundary, and 1,149-check
-certificate are in the
+The exact records, admissible denominators, source boundary, and exact
+certificates are in the
 [Bober sporadic factorial-ratio packet](BoberSporadicFactorialRatioPacket.md).
 
 ## 7. Scope and priority boundary

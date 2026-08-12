@@ -43,6 +43,7 @@ SCRIPTS = (
     "verification/related/verify_balanced_factorial_ratio_towers.py",
     "verification/related/verify_rational_gamma_ratio_towers.py",
     "verification/related/verify_bober_sporadic_packet.py",
+    "verification/related/verify_bober_half_index.py",
     "verification/related/verify_apery_rank_one_defect.py",
     "verification/related/verify_q_calculus_supercongruence.py",
     "verification/related/verify_weighted_lift_collision_synthesis.py",

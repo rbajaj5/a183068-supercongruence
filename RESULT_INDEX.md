@@ -578,6 +578,30 @@ proof.
 - **Proof:** [A364176 affine-Landau integrality and tower](related-results/A364176AffineLandauTower.md)
 - **Exact checker:** [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py)
 
+### BOBER-HALF - all eleven half-index integrality conjectures and towers
+
+- **Claim:** For each of A295456, A295458, A295460, A295465, A295468,
+  A295470, A295471, A295475, A295477, A295479, and A295481, the
+  gamma-interpolated sequence $B(N)=A(N/2)$ is integral for every $N\ge0$.
+  For every prime $p\ge5$ and positive integers $n,r$,
+
+  ```math
+  B(np^r)\equiv B(np^{r-1})\pmod {p^{3r}}.
+  ```
+
+- **Source status:** Eleven named integrality conjectures in approved OEIS
+  comments; their cubic towers are the corresponding Bala packet targets.
+- **Mechanism:** At odd indices, Legendre defects for odd primes transfer
+  exactly to the original Bober Landau function. At the prime two, all
+  eleven ratios reduce to either
+  $s_2(3N)+s_2(5N)-s_2(15N)\ge0$ or $s_2(N)\ge0$. The rational
+  gamma-ratio theorem then supplies the tower.
+- **Boundary:** No cubic-tower claim is made for $p=2,3$; specialist review
+  and literature priority remain pending.
+- **Status:** Complete unchecked elementary proof candidate.
+- **Proof:** [All eleven Bober half-index variants](related-results/BoberHalfIndexIntegralityTowers.md)
+- **Exact checker:** [`verify_bober_half_index.py`](verification/related/verify_bober_half_index.py)
+
 ### RATGAMMA-3 — rational gamma-ratio cubic towers
 
 - **Claim:** Let
@@ -606,7 +630,7 @@ proof.
   A365027) and every row $s\ge3$ of A364513 (including A364515--A364517).
   The same theorem supplies the quotient congruence component for all 15
   currently visible fractional-index variants in Bala's Bober packet; the
-  A364176 member is now unconditional.
+  eleven half-index members are now unconditional by BOBER-HALF.
 - **Mechanism:** An exact denominator-$q$ rational-binomial product, complete
   reduced-residue harmonic blocks, and the classical balanced integer
   factorial-ratio closure.
@@ -1110,16 +1134,18 @@ proof.
   records identified by Bala satisfy the residue-balanced rational
   $p^{3r}$ quotient tower for $p\ge5$.
 - **Boundary:** The sequence congruence follows whenever the values are
-  $p$-integral. The A295456 half-index case A364176 now has a complete
-  affine-Landau integrality proof and an unconditional tower. The other 14
-  global integrality claims remain open; exact integrality through $N=30$ is
-  evidence only. The A295464 source formula was not yet visible and is not
+  $p$-integral. BOBER-HALF proves all eleven $N/2$ variants integral and
+  makes their towers unconditional. Four global integrality claims remain:
+  A295456 and A295458 at $N/3$, and A295460 and A295477 at $N/4$.
+  A295464 has no approved public fractional-index formula and none is
   inferred.
-- **Status:** Complete conditional congruence deduction for the packet; one
-  fractional case closed completely and 14 named integrality targets open.
+- **Status:** Complete conditional congruence deduction for the packet;
+  eleven fractional cases closed completely and four named integrality
+  targets open.
 - **Proof and queue:** [Bober sporadic factorial-ratio packet](related-results/BoberSporadicFactorialRatioPacket.md)
 - **Exact checkers:** [`verify_bober_sporadic_packet.py`](verification/related/verify_bober_sporadic_packet.py),
-  [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py)
+  [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py),
+  [`verify_bober_half_index.py`](verification/related/verify_bober_half_index.py)
 
 ### A008793-CUBE — nonlinear cube-plane-partition tower
 

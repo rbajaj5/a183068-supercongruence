@@ -198,6 +198,19 @@ $v_\ell(R(m))\ge0$ for every prime $\ell$, so $R(m)\in\mathbb Z$. Equation
 (4) proves integrality at odd indices; (3) proves it at even indices. This
 completes the integrality part of Theorem 1.
 
+The later [uniform Bober half-index theorem](BoberHalfIndexIntegralityTowers.md)
+gives a shorter independent proof for this record. At odd index $N=2m+1$,
+its odd-prime defects transfer to the original Bober Landau function, while
+the dyadic valuation reduces to
+
+```math
+s_2(3N)+s_2(5N)-s_2(15N)\ge0.
+```
+
+The affine floor argument above is retained because it proves the stronger
+termwise assertion $\Phi_d(m)\in\{0,1\}$ at every modulus, not just the
+nonnegativity of the total prime valuations.
+
 ## 5. The cubic tower
 
 Regard (1) as the residue-balanced rational gamma ratio with positive slopes

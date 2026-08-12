@@ -1,12 +1,13 @@
 # The Bober sporadic factorial-ratio packet
 
-**Status date:** August 3, 2026
+**Status date:** August 12, 2026
 
 **Status:** the ordinary 52-sequence cubic tower is a complete deduction
 from the repository's balanced-factorial theorem. The fractional-index
-packet has a complete conditional congruence theorem; A295456 at index $N/2$
-(OEIS A364176) now has a complete affine-Landau integrality proof and hence an
-unconditional tower. The other 14 visible integrality assertions remain open.
+packet has a complete conditional congruence theorem. A single parity-transfer
+and binary-digit argument now proves all eleven variants at index $N/2$ and
+hence makes their towers unconditional. Four approved integrality claims - two
+at $N/3$ and two at $N/4$ - remain open.
 
 This note records Peter Bala's August 2026 follow-up about the 52 sporadic
 integral factorial ratios cross-referenced from
@@ -139,24 +140,23 @@ integrality.
 
 | OEIS record | Fractional indices in the approved OEIS comment | Residue-balance test | Current status |
 | --- | --- | --- | --- |
-| [A295456](https://oeis.org/A295456) | $N/2$, $N/3$ | Passes for $q=2,3$ | $N/2$ (A364176) integral and its tower proved; $N/3$ integrality open; (8) proved for both |
-| [A295458](https://oeis.org/A295458) | $N/2$, $N/3$ | Passes for $q=2,3$ | Integrality conjectural; (8) proved |
-| [A295460](https://oeis.org/A295460) | $N/2$, $N/4$ | Passes for $q=2,4$ | Integrality conjectural; (8) proved |
-| [A295464](https://oeis.org/A295464) | Bala reports a recent comment; its formula was not yet visible on the approved page | Pending exact source text | No fractional claim entered yet |
-| [A295465](https://oeis.org/A295465) | $N/2$ | Passes for $q=2$ | Integrality conjectural; (8) proved |
-| [A295468](https://oeis.org/A295468) | $N/2$ | Passes for $q=2$ | Integrality conjectural; (8) proved |
-| [A295470](https://oeis.org/A295470) | $N/2$ | Passes for $q=2$ | Integrality conjectural; (8) proved |
-| [A295471](https://oeis.org/A295471) | $N/2$ | Passes for $q=2$ | Integrality conjectural; (8) proved |
-| [A295475](https://oeis.org/A295475) | $N/2$ | Passes for $q=2$ | Integrality conjectural; (8) proved |
-| [A295477](https://oeis.org/A295477) | $N/2$, $N/4$ | Passes for $q=2,4$ | Integrality conjectural; (8) proved |
-| [A295479](https://oeis.org/A295479) | $N/2$ | Passes for $q=2$ | Integrality conjectural; (8) proved |
-| [A295481](https://oeis.org/A295481) | $N/2$ | Passes for $q=2$ | Integrality conjectural; (8) proved |
+| [A295456](https://oeis.org/A295456) | $N/2$, $N/3$ | Passes for $q=2,3$ | $N/2$ integral and tower proved; $N/3$ integrality open; (8) proved for both |
+| [A295458](https://oeis.org/A295458) | $N/2$, $N/3$ | Passes for $q=2,3$ | $N/2$ integral and tower proved; $N/3$ integrality open; (8) proved for both |
+| [A295460](https://oeis.org/A295460) | $N/2$, $N/4$ | Passes for $q=2,4$ | $N/2$ integral and tower proved; $N/4$ integrality open; (8) proved for both |
+| [A295464](https://oeis.org/A295464) | No approved fractional-index comment visible on August 12 | Not applicable | No fractional claim entered |
+| [A295465](https://oeis.org/A295465) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
+| [A295468](https://oeis.org/A295468) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
+| [A295470](https://oeis.org/A295470) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
+| [A295471](https://oeis.org/A295471) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
+| [A295475](https://oeis.org/A295475) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
+| [A295477](https://oeis.org/A295477) | $N/2$, $N/4$ | Passes for $q=2,4$ | $N/2$ integral and tower proved; $N/4$ integrality open; (8) proved for both |
+| [A295479](https://oeis.org/A295479) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
+| [A295481](https://oeis.org/A295481) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
 
 There are 15 approved fractional-index sequences in this table. The
-[A364176 affine-Landau theorem](A364176AffineLandauTower.md) proves one of
-their integrality claims for every index. Exact arithmetic finds integral
-values for the other 14 through $N=30$, but this finite evidence is not an
-integrality proof.
+[Bober half-index theorem](BoberHalfIndexIntegralityTowers.md) proves all
+eleven $N/2$ integrality claims and their cubic towers. Four claims remain:
+A295456 and A295458 at $N/3$, and A295460 and A295477 at $N/4$.
 
 ## 3. A compact CSP admission filter
 
@@ -181,12 +181,13 @@ or integrality.
 For this packet the filter gives a sharp division of labor:
 
 - **ordinary 52 ratios:** balance plus known integrality, hence (3);
-- **A295456 at $N/2$:** balance, residue balance, and the affine-Landau
-  floor lemma, hence global integrality and (9);
-- **the other 14 visible fractional variants:** balance and residue balance,
-  hence (8), while integrality remains open;
-- **A295464 pending edit:** wait for the exact approved formula before
-  assigning it a theorem status.
+- **all eleven $N/2$ variants:** parity transfer to the original Landau
+  function plus an exact binary digit-sum certificate, hence global
+  integrality and (9);
+- **the four $N/3$ and $N/4$ variants:** balance and residue balance, hence
+  (8), while integrality remains open;
+- **A295464:** no approved public fractional-index formula is presently
+  assigned a theorem status.
 
 ## 4. Small-prime and priority boundaries
 
@@ -221,6 +222,16 @@ python verification/related/verify_a364176_affine_landau.py
 ```
 
 checks the completed A364176 floor reduction, integrality, and tower.
+
+The uniform half-index command
+
+```text
+python verification/related/verify_bober_half_index.py
+```
+
+reconstructs the eleven odd-index factorial ratios, verifies the Landau
+transfer and binary digit identities, checks exact integrality, and tests the
+resulting towers.
 
 The [QRCert blueprint](https://github.com/rbajaj5/qrcert) suggests a clean
 future certification split: encode each coefficient pair canonically, let a
