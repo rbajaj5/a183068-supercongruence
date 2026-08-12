@@ -78,6 +78,37 @@ The live pages ask for more:
 The published `p^(3r)` statement is therefore evidence for `partial`, not
 for `published-source`: the extra three powers remain a genuine target.
 
+### A108628: shifted multivariate Apéry coefficient
+
+With the page's original offset, [A108628](https://oeis.org/A108628) is
+
+```math
+a(n)=B(n+1,n,n+1),
+```
+
+where \(B(n_1,n_2,n_3)\) is the multivariate coefficient in Straub's
+equation (24). With offset one, the claimed tower concerns
+\(B(N,N-1,N)\). More directly, the OEIS identity below expresses it through
+the ordinary and shifted diagonal Apéry sequences. Straub's theorem and
+his shifted corollary give cubic towers for both when \(p>5\); division by
+the \(p\)-adic unit \(5\) then proves the offset-one A108628 tower in that
+range.
+
+The live OEIS statement is nevertheless broader: it includes \(p=5\) and
+four separate half-index vanishing congruences. The repository's
+[prime-five extension](StraubPrimeFiveCoefficientPacket.md) proves the
+unshifted vector theorem at \(p=5\), but passing through the displayed
+identity
+
+```math
+a(n)=\frac{2B(n+1)-B(n)}5
+```
+
+loses one factor of \(5\), so that note does not automatically prove the
+shifted A108628 boundary. Accordingly A108628 is `partial`: its ordinary
+\(p>5\) tower is source-closed, while the \(p=5\) shifted boundary and the
+half-index packet remain explicit proof obligations.
+
 ## 3. Search-corpus records with no live open target
 
 The following records remain useful anchors for formulas and
@@ -98,10 +129,12 @@ settled.
 
 ## 4. Ledger effect
 
-This audit removes nine false starts from the `queued` column:
+This audit and its follow-up remove ten false starts from the open-work
+columns:
 
 - three move to `published-source`;
 - two move to `partial`; and
-- four move to `no-explicit-open`.
+- four move to `no-explicit-open`; and
+- A108628 moves from `open-target` to `partial`.
 
 No finite experiment is used for any promotion.

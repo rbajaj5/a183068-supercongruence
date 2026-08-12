@@ -45,7 +45,7 @@ A006318	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEI
 A036917	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as an Apery-like source anchor
 A060941	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the algebraic coefficient family and test closure under the exponential iteration
 A108625	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the p=5 boundary and Straub parameter match
-A108628	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the cubic tower, then treat the half-index vanishing claims separately
+A108628	C	partial	related-results/Bala110LiveSourceBoundary.md	Straub closes the ordinary tower for p>5; prove the p=5 shifted boundary and the separate half-index vanishing packet
 A143007	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the p=5 boundary and Straub parameter match
 A156554	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the full Legendre coefficient family for arbitrary integral framing
 A168597	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed congruence	verify exact parameter match in bibliography

@@ -1,4 +1,4 @@
-# The 30 extracted open targets in the Bala 110-record census
+# The 29 extracted open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -13,7 +13,7 @@ it. The new status `open-target` means:
   and
 - the next operation is mathematical proof, not database extraction.
 
-The 30 records consolidate to substantially fewer proof families. Repeated
+The 29 records consolidate to substantially fewer proof families. Repeated
 entries are retained because the campaign denominator is a record count, but
 the proposed proof units below are family-sized.
 
@@ -145,11 +145,8 @@ F\longmapsto
 iteratively and asks that the resulting coefficient sequences retain the
 same tower. Closure under this nonlinear operation is a separate theorem.
 
-### Crystal-ball and Legendre families
+### Legendre coefficient family
 
-- [A108628](https://oeis.org/A108628), with offset 1, asks for a cubic tower
-  for `p >= 5` and several additional half-index vanishing congruences.
-  Those vanishing statements should not be bundled into the tower proof.
 - [A156554](https://oeis.org/A156554) asks, most generally, for the cubic
   tower of
 
@@ -238,11 +235,11 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 30 records are explicit `open-target` entries;
+- 29 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
 
-This does **not** assert that all 30 targets are true. Their next legitimate
+This does **not** assert that all 29 targets are true. Their next legitimate
 status change requires a proof, an exact published-source reduction, or a
 counterexample.
