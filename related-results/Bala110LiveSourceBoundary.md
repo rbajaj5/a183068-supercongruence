@@ -124,7 +124,7 @@ published-source match, not a new finite-sum proof. The three coefficient
 representations separately labelled conjectural on the OEIS page do not
 alter the status of the supercongruence itself.
 
-### A212334: ordinary tower closed, enhanced defect open
+### A212334: ordinary tower and enhanced prime boundary closed
 
 For [A212334](https://oeis.org/A212334), the live identity
 
@@ -144,8 +144,14 @@ a(p^r)\equiv a(p^{r-1})\pmod {p^{3r+3}}
 \quad(r\ge2).
 ```
 
-Those enhanced pure-prime congruences do not follow from the cubic
-baseline, so A212334 is `partial` rather than `published-source`.
+The separate
+[enhanced-prime note](A212334EnhancedPrimeCongruence.md) proves the first
+congruence for every `p>=5` by an elementary product expansion and complete
+reciprocal sums.  It also shows that, for `p>=7`, the higher congruence is
+an exact consequence of the three relations in the
+[Apery defect packet](AperyRankOneDefectPacket.md).  The `p=5` higher tower
+needs one additional boundary power, so A212334 remains `partial` rather
+than `published-source`.
 
 ## 3. Search-corpus records with no live open target
 

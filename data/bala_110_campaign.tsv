@@ -22,7 +22,7 @@ A198060	T	proved-here	related-results/MeanderAdjacentBinomialTowers.md	independe
 A198256	T	proved-here	related-results/MeanderAdjacentBinomialTowers.md	independent review of the quartic identity and cubic tower
 A198258	T	proved-here	related-results/MeanderAdjacentBinomialTowers.md	independent review of the ternary multiplicity bonus
 A208675	T	published-source	Straub equation (24) and multivariate cubic theorem, arXiv:1401.0854	verify the exact shifted parameter match in the bibliography
-A212334	T	partial	related-results/Bala110LiveSourceBoundary.md	prove the enhanced p^5 and p^(3r+3) pure-prime refinement
+A212334	T	partial	related-results/A212334EnhancedPrimeCongruence.md	prime-level p^5 theorem proved; for p>=7 the higher tower follows from R1-R3, while p=5 needs one extra boundary power
 A219562	T	partial	Coster Theorem 4 gives the p^(3r) baseline; OEIS asks for p^5 and p^(3r+3)	prove the extra shifted-index gain
 A234839	T	published-source	Osburn--Sahu--Straub Example 3.3 cited by OEIS	verify exact parameter match in bibliography
 A244973	T	partial	related-results/A244973QuadraticFrobeniusReduction.md	prove the explicit combined linear-quadratic Cartier estimate (11)

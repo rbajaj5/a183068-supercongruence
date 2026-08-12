@@ -152,9 +152,12 @@ root series on A002897, A008978, and A113424 integral and establishes their
 universal \(p^r\) variable-power baseline, while leaving the two genuinely
 stronger \(p^{3r}\) conjectures explicitly open.
 The [Apéry defect packet](related-results/AperyRankOneDefectPacket.md)
-also finishes the derived route's source audit: five records and two
-nonlinear companions collapse to three linear adjacent-defect congruences.
-Those three congruences remain open.
+also finishes the derived route's source audit: six records and two
+nonlinear companions collapse to three linear adjacent-defect congruences,
+apart from one explicit higher `p=5` boundary.  The
+[A212334 prime-boundary theorem](related-results/A212334EnhancedPrimeCongruence.md)
+independently proves that record's conjectured `p^5` congruence for every
+prime `p>=5`.  The three common higher-defect relations remain open.
 The [modular-product packet](related-results/ModularProductPrimeCoefficientPacket.md)
 proves seven further named records: four by a universal prime-coefficient
 formula and three by specialization of the colored Euler-product theorem.

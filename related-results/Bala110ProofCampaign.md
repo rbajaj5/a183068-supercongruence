@@ -141,9 +141,12 @@ Two further live-page checks remove the word-count sums from the wholly open
 queue. A208675 is exactly Straub's coefficient `B(n,n-1,n-1)`, so its stated
 cubic tower is `published-source`. A212334 is a `1/12`-weighted combination
 of the ordinary and shifted A005259 sequences; because `12` is a unit for
-every `p >= 5`, its ordinary cubic tower is source-closed. Its stronger
-`p^5` and `p^(3r+3)` pure-prime congruences remain open, so the record is
-`partial`. This leaves 27 `open-target` records.
+every `p >= 5`, its ordinary cubic tower is source-closed.  The later
+[enhanced-prime theorem](A212334EnhancedPrimeCongruence.md) proves its
+`p^5` assertion for every `p>=5` and shows that, for `p>=7`, its higher
+defect is a consequence of the same three Apéry relations governing the
+derived route.  The higher `p=5` boundary remains open, so the record is
+still `partial`. This leaves 27 `open-target` records.
 
 The next proof unit closes the isolated A260667 prime boundary. Expanding
 its inner binomial kernel at `x=p-1` reduces the claimed cubic congruence to
@@ -330,7 +333,10 @@ The campaign does not use A-number order. It uses expected proof yield.
    begins with a local product expansion proving A357510 and classifying
    the exceptional primes for every higher odd moment.  Its separate
    telescoping certificate proves the full A357512 composite divisibility
-   theorem for every integer coprime to 6.
+   theorem for every integer coprime to 6.  The A212334 enhanced-prime
+   theorem is another local-product instance: it closes the named `p^5`
+   boundary and routes the higher levels into the common Apéry defect
+   packet.
 2. **F route:** rewrite the term as a multinomial or an integral Laurent
    product. A364506 is one model.  The odd-unit block theorem is the second:
    it closes A091527 and A262732 simultaneously by splitting a half-integral
@@ -396,8 +402,9 @@ The campaign does not use A-number order. It uses expected proof yield.
 5. **D route:** identify the parent sequence and prove that the claimed
    congruence is inherited before treating it as an independent problem.
    This route is now fully triaged.  The
-   [Apéry defect packet](AperyRankOneDefectPacket.md) proves that its five
-   records are equivalent to only three linear defect relations, and that
+   [Apéry defect packet](AperyRankOneDefectPacket.md) proves that its six
+   records reduce to only three linear defect relations away from the
+   higher A212334 boundary at `p=5`, and that
    the two nonlinear companion conjectures introduce no new arithmetic
    direction.  The three defect relations themselves remain open.
 

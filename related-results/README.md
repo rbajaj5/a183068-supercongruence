@@ -69,7 +69,8 @@ supercongruence exponent.
 | 1B-A108 | [A108628 half-index boundary](A108628HalfIndexBoundary.md) | Proves the first half-index vanishing conjecture and the exact exceptional valuation of its Dixon comparison term | Complete first-boundary proof; 1,797 exact checks; one aggregate master comparison would close all three higher claims |
 | 1B-FR | [Balanced factorial-ratio cubic towers](BalancedFactorialRatioCubicTowers.md) | Converts every balanced integral factorial ratio to a Laurent binomial product and proves the A061164 cubic tower | Complete classical deduction; exact checks; no claim for \(p=2,3\) |
 | 1B-J31 | [Bala July 31 research update](BalaJuly31ResearchUpdate.md) | Separates the newly closed symmetric-box and A061164 directions from the two live Apéry queues | Status ledger with links to controlling proofs |
-| 1B-AP | [Apéry enhanced-congruence packet](AperyRankOneDefectPacket.md) | Collapses A352655, A357506, A357567, A357956, A357959 and two nonlinear companions to three linear Apéry defect relations | Complete exact reduction; 260 checks; core defect packet open |
+| 1B-AP | [Apéry enhanced-congruence packet](AperyRankOneDefectPacket.md) | Collapses A212334, A352655, A357506, A357567, A357956, A357959 and two nonlinear companions to three linear Apéry defect relations away from one higher `p=5` boundary | Complete exact reduction; core defect packet open |
+| 1B-A212 | [A212334 enhanced prime congruence](A212334EnhancedPrimeCongruence.md) | Expands each prime-level summand through order five and identifies the higher defect with the common Apéry packet | Complete elementary `p^5` theorem for every `p>=5`; 1,252 exact checks; higher tower remains open |
 | 1B-B52 | [Bober sporadic factorial-ratio packet](BoberSporadicFactorialRatioPacket.md) | Applies the balanced and rational-gamma engines to all 52 Bober ratios and Bala's 15 visible fractional-index variants | Ordinary 52-record tower proved for $p\ge5$; A364176 completely closed; 14 fractional integrality targets remain |
 | 1B-BR | [Draft reply to Bala and Hanna](BalaBoberAugustReply.md) | Gives a short elementary account of the 52 ordinary towers and the newly completed A364176 case | Correspondence draft; no additional theorem claim |
 | 1B-S | [110-record proof-campaign ledger](Bala110ProofCampaign.md) | Gives every census record a route, conservative status, evidence pointer, and next proof operation | Complete machine-readable ledger; 42 proved here, 20 source-closed, 41 partial, 7 with no explicit open target, no wholly untreated records, and none queued |
@@ -184,6 +185,7 @@ The individual correspondence is:
 | A079489 Lagrange-kernel reduction | `verification/related/verify_a079489_lagrange_kernel.py` |
 | Exponential-coefficient Cartier reduction | `verification/related/verify_exponential_coefficient_cartier.py` |
 | A376 Apéry-companion reduction | `verification/related/verify_a376_apery_companions.py` |
+| A212334 enhanced prime congruence | `verification/related/verify_a212334_enhanced_prime.py` |
 | Bober sporadic factorial-ratio packet | `verification/related/verify_bober_sporadic_packet.py` |
 | A364176 affine-Landau theorem | `verification/related/verify_a364176_affine_landau.py` |
 | Bala August coefficient packet | `verification/related/verify_bala_august_coefficient_packet.py` |

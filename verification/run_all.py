@@ -21,6 +21,7 @@ SCRIPTS = (
     "verification/related/verify_a079489_lagrange_kernel.py",
     "verification/related/verify_exponential_coefficient_cartier.py",
     "verification/related/verify_a376_apery_companions.py",
+    "verification/related/verify_a212334_enhanced_prime.py",
     "verification/related/verify_quadrinomial_coefficient_tower.py",
     "verification/related/verify_mixed_step_coefficient_tower.py",
     "verification/related/verify_a260667_prime_boundary.py",
