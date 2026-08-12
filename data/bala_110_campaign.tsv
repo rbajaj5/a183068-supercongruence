@@ -30,7 +30,7 @@ A260667	T	proved-here	related-results/A260667PrimeBoundary.md	audit literature p
 A288470	T	proved-here	A288470OddPrimeTower.md	independent review and priority audit
 A333592	T	proved-here	related-results/MixedNegativeBinomialCubicTower.md	independent review and source-facing cross-reference for the full positive-parameter cubic family
 A357510	T	proved-here	related-results/AperyOddMomentPrimeClassification.md	independent review and priority audit of the prime-boundary expansion
-A357512	T	partial	related-results/AperyOddMomentPrimeClassification.md	prime slice and exact exceptional-prime classification proved; prove the remaining composite n congruence
+A357512	T	proved-here	related-results/AperyOddMomentPrimeClassification.md	full composite n congruence proved by an exact telescoping certificate; prime slice and exceptional-prime classification also proved; independent review
 A361889	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	integrality and sharp exact checks recorded; prove the unified odd ballot-power tower
 A361892	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	integrality and sharp exact checks recorded; prove the unified odd ballot-power tower
 A362676	T	partial	related-results/FranelCompanionConstantTermReduction.md	exactly reduces to the m=-1 member of one two-kernel family; prove its cubic Cartier contraction

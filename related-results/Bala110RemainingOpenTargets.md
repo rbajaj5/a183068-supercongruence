@@ -52,7 +52,10 @@ places both its direct and reverted coefficient families in one normalized
 signed-binomial kernel. The
 [exponential-coefficient reduction](ExponentialCoefficientCartierReduction.md)
 does the same for A060941, A362722, and A362733 through one exact Cartier
-defect. Finally, the
+defect. The
+[A357512 composite theorem](AperyOddMomentPrimeClassification.md) then
+closes that record's remaining all-$n$ divisibility assertion with an exact
+telescoping certificate. Finally, the
 [A376 companion reduction](A376AperyCompanionReduction.md) proves the
 A376458 prime-level `p^5` assertion, refutes A376466's shifted tower, and
 places both surviving ordinary towers in one exact pairing framework. No
