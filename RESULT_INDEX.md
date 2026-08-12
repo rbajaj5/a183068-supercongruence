@@ -207,7 +207,8 @@ proof.
   normalized cubic defects conjecturally stabilize modulo
   $p^{2r-2-\delta_p}$, with $\delta_5=1$ and $\delta_p=0$ otherwise. Two
   index-dependent negative substitutions already fail cubically at $p=5$;
-  two sign-opposite companions survive the recorded finite grid.
+  the two sign-opposite companions have a proved $p^3$ prime boundary for
+  every $p\ge5$, while their higher levels remain open.
 - **Status:** Complete unchecked elementary proof and classical reduction;
   3,390 exact checks pass; no priority claim.
 - **Proof:** [August mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md)
@@ -234,6 +235,28 @@ proof.
   coefficient checks pass; no priority claim.
 - **Proof:** [Full A333473 algebraic-family tower](related-results/A333473AlgebraicFamilyTower.md)
 - **Exact checker:** [`verify_a333473_algebraic_family_tower.py`](verification/related/verify_a333473_algebraic_family_tower.py)
+
+### INDEX-COMPANION-P1 - prime boundary for the substitution companions
+
+- **Claim:** For every $p\ge5$ and positive $n,c$, both
+  \[
+  \sum_{k=0}^{N}\binom{-N}{k}\binom Nk\binom{2k}{N}\binom{N+k}{k}
+  \]
+  and
+  \[
+  \sum_{k=0}^{cN}\binom{-N}{k}^2\binom{2k}{N}\binom{N+k}{k}
+  \]
+  take congruent values at $N=np$ and $N=n$ modulo $p^3$.
+- **Mechanism:** Scaled indices transfer by ordinary adjacent binomial
+  scaling. For $k=pq+s$, division by $p^2$ leaves a two-state Lucas weight
+  times $s^{-2}$; both half-residue inverse-square sums vanish modulo $p$.
+- **Boundary:** Generic unit-index summands have valuation exactly two, so
+  this is an aggregate theorem. At $p=3$ valuation two is attained. The
+  $p^{3r}$ lift for $r>1$ remains open.
+- **Status:** Complete unchecked elementary prime theorem; 12,978 exact
+  checks; no priority claim.
+- **Proof:** [Index-dependent companion prime boundary](related-results/IndexDependentCompanionPrimeBoundary.md)
+- **Exact checker:** [`verify_index_dependent_companion_boundary.py`](verification/related/verify_index_dependent_companion_boundary.py)
 
 ### NEG-PREFIX-CUBIC - cubic towers for negative-binomial prefixes
 
