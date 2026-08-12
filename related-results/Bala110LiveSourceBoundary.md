@@ -90,24 +90,24 @@ where \(B(n_1,n_2,n_3)\) is the multivariate coefficient in Straub's
 equation (24). With offset one, the claimed tower concerns
 \(B(N,N-1,N)\). More directly, the OEIS identity below expresses it through
 the ordinary and shifted diagonal Apéry sequences. Straub's theorem and
-his shifted corollary give cubic towers for both when \(p>5\); division by
-the \(p\)-adic unit \(5\) then proves the offset-one A108628 tower in that
-range.
+his shifted corollary give cubic towers for both when \(p\geq5\); division
+by the \(p\)-adic unit \(5\) proves the offset-one A108628 tower only when
+`p>5`.
 
-The live OEIS statement is nevertheless broader: it includes \(p=5\) and
-four separate half-index vanishing congruences. The repository's
-[prime-five extension](StraubPrimeFiveCoefficientPacket.md) proves the
-unshifted vector theorem at \(p=5\), but passing through the displayed
+The live OEIS statement also includes four separate half-index vanishing
+congruences. The repository's corrected
+[prime-five source audit](StraubPrimeFiveCoefficientPacket.md) records that
+Straub's theorem already includes `p=5`, but passing through the displayed
 identity
 
 ```math
 a(n)=\frac{2B(n+1)-B(n)}5
 ```
 
-loses one factor of \(5\), so that note does not automatically prove the
-shifted A108628 boundary. Accordingly A108628 is `partial`: its ordinary
-\(p>5\) tower is source-closed, while the \(p=5\) shifted boundary and the
-half-index packet remain explicit proof obligations.
+loses one factor of \(5\), so the source theorem does not automatically
+prove this affine shifted boundary. Accordingly A108628 is `partial`: its
+ordinary `p>5` tower is source-closed, while the `p=5` shifted boundary and
+the half-index packet remain explicit proof obligations.
 
 ### A208675: a shifted multivariate Apery coefficient
 

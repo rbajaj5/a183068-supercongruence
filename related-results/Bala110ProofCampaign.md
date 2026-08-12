@@ -25,20 +25,20 @@ every record:
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | T: finite-sum transfer | 40 | 13 | 8 | 15 | 4 | 0 | 0 |
-| C: coefficient/constant term | 37 | 12 | 6 | 17 | 2 | 0 | 0 |
+| C: coefficient/constant term | 37 | 9 | 9 | 17 | 2 | 0 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **42** | **17** | **44** | **7** | **0** | **0** |
+| **Total** | **110** | **39** | **20** | **44** | **7** | **0** | **0** |
 
-The forty-two `proved-here` records are A002003, A005725, A008485, A008705,
-A008793, A049505, A091527, A108625, A124435, A132303, A141057, A143007, A156554, A177316, A198060, A198256, A198258, A245926, A246437,
+The thirty-nine `proved-here` records are A002003, A005725, A008485, A008705,
+A008793, A049505, A091527, A124435, A132303, A141057, A156554, A198060, A198256, A198258, A245926, A246437,
 A255672, A260667, A262732, A270913, A270919, A270922, A270924, A275652,
 A275654, A281267, A288470, A333592,
 A348410, A351857, A352373, A357509, A357510, A357568, A364173,
-A364303, A364506, A370101, and A370102. The seventeen
+A364303, A364506, A370101, and A370102. The twenty
 `published-source` records are A002426, A002895, A005258, A082758, A103882,
-A112029, A168597, A176335, A183204, A184423, A186420, A208675, A234839,
+A108625, A112029, A143007, A168597, A176335, A177316, A183204, A184423, A186420, A208675, A234839,
 A363864, A363867, A363871, and A364509.
 The forty-four partial records are A003161, A003162, A008978, A023871,
 A023873, A060941, A079489, A108628, A112028, A113424, A183069, A206622, A212334, A219562,
@@ -128,7 +128,7 @@ Frobenius twist is trivial at \(Z=1\), so the theorem proves the exact
 `open-target` records.
 
 The next source reconciliation identifies the offset-one A108628 tower as
-Straub's shifted multivariate Apéry coefficient theorem for \(p>5\).
+a consequence of Straub's ordinary and shifted Apéry towers for `p>5`.
 Because the live page also includes \(p=5\) and four half-index vanishing
 claims, the record moves to `partial`, not `published-source`. This leaves
 29 `open-target` records and records the two residual obligations
@@ -321,9 +321,10 @@ The campaign does not use A-number order. It uses expected proof yield.
    [small exact counterexample](RationalFramingCounterexample.md) shows why
    Müller's broader framing theorem cannot be used as the source closure
    without repair. The
-   [Straub prime-five packet](StraubPrimeFiveCoefficientPacket.md) supplies
-   the omitted boundary prime in Straub's multivariate Apéry theorem and
-   closes A108625, A143007, and A177316 after exact coefficient matching.
+   [Straub prime-five audit](StraubPrimeFiveCoefficientPacket.md) records
+   that Straub's printed theorem already includes `p=5` and source-closes
+   A108625, A143007, and A177316 after exact coefficient matching. An
+   earlier repository snapshot incorrectly called this an extension.
 4. **M route:** take a p-adic logarithm and isolate the first moment that
    survives the product balance.  The
    [prime-coefficient packet](ModularProductPrimeCoefficientPacket.md)

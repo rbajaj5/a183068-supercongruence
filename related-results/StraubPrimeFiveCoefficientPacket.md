@@ -1,11 +1,12 @@
-# The missing prime \(5\) in Straub's multivariate Apéry theorem
+# Straub's prime-five multivariate Apéry boundary
 
-**Status:** complete proof candidate; independent review pending
+**Status:** published-source reconciliation with an independent boundary audit
 
-**Source boundary:** Straub's published theorem proves the multivariate cubic
-tower for primes \(p>5\). The OEIS records below state \(p\geq5\). This note
-supplies the omitted prime \(p=5\); it does not claim a new proof of the
-published \(p>5\) theorem.
+**Correction:** Straub's published Theorem 3.2(b) already states the
+multivariate cubic tower for primes \(p\geq5\). An earlier version of this
+repository incorrectly described the source as `p>5` and presented the
+boundary check below as an extension. It is instead an independent audit of
+the theorem's included endpoint and an exact match to three OEIS records.
 
 ## 1. The source theorem and its boundary
 
@@ -28,16 +29,14 @@ A_{\lambda,\varepsilon}(p^{r-1}\boldsymbol n)
 \tag{1}
 ```
 
-for primes \(p>5\) and integers \(r\geq1\).
+for primes \(p\geq5\) and integers \(r\geq1\).
 
-**Prime-five extension.** Under the same hypotheses, (1) also holds for
-\(p=5\). Consequently Straub's theorem, with this boundary argument added,
-holds for every prime \(p\geq5\).
+Thus no prime-five extension is needed. The next section verifies directly
+that the two local inputs in the printed proof have no loss at its endpoint.
 
-## 2. Why the published proof extends
+## 2. Why the published endpoint is sound
 
-There are two places in the proof of the cubic theorem where the hypothesis
-\(p>5\) is invoked.
+There are two local estimates worth checking explicitly at `p=5`.
 
 ### 2.1 The binomial scaling estimate
 
@@ -62,7 +61,7 @@ q=3+v_5\bigl(ab(a-b)\bigr),
 
 which is exactly the no-loss estimate used in Straub's equations
 (39)--(41). Every binomial or multinomial quotient in that part of the proof
-therefore has the same modulus at \(p=5\) as it has for \(p>5\).
+therefore has the modulus required by the printed `p>=5` theorem.
 
 ### 2.2 The reciprocal-square block
 
@@ -100,12 +99,14 @@ Therefore
 for both signs.
 
 Straub's remaining proof of Theorem 3.2(b) uses the prime restriction only
-through the no-loss Jacobsthal estimate and (2). Replacing the two cited
-inputs by the prime-five versions above proves the extension.
+through the no-loss Jacobsthal estimate and (2). The calculation above
+therefore independently confirms the published endpoint; it does not add a
+new prime to the theorem.
 
 ## 3. Three OEIS consequences
 
-The extension closes three records in the 110-record campaign.
+Straub's theorem, after the following exact parameter matches, source-closes
+three records in the 110-record campaign.
 
 ### 3.1 A108625
 
@@ -240,8 +241,9 @@ performs 750 integer-arithmetic checks:
 - 160 randomized exact checks of the full signed multivariate coefficient
   theorem across five partition shapes and two adjacent levels.
 
-These computations test transcription and boundary behavior. The proof is
-the two local lemmas in Section 2 plus Straub's published argument.
+These computations test transcription and boundary behavior. The
+controlling theorem is Straub's published result; Section 2 is a redundant
+endpoint audit, not a claim of priority.
 
 No claim is made here about \(p=2\) or \(p=3\), and no claim is made that all
 statements on any of the three OEIS pages have been settled.

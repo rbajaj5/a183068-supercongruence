@@ -44,13 +44,13 @@ A005725	C	proved-here	related-results/QuadrinomialCoefficientOddPrimeTower.md	in
 A006318	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as a generating-function anchor
 A036917	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as an Apery-like source anchor
 A060941	C	partial	related-results/ExponentialCoefficientCartierReduction.md	prove the cubic bound (10) and its propagation under iteration; p=5 fails exactly
-A108625	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the p=5 boundary and Straub parameter match
+A108625	C	published-source	related-results/StraubPrimeFiveCoefficientPacket.md	Straub Theorem 3.2(b) already includes p=5; retain the exact parameter and endpoint audit
 A108628	C	partial	related-results/Bala110LiveSourceBoundary.md	Straub closes the ordinary tower for p>5; prove the p=5 shifted boundary and the separate half-index vanishing packet
-A143007	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the p=5 boundary and Straub parameter match
+A143007	C	published-source	related-results/StraubPrimeFiveCoefficientPacket.md	Straub Theorem 3.2(b) already includes p=5; retain the exact parameter and endpoint audit
 A156554	C	proved-here	related-results/A156554LegendreCoefficientTower.md	independent review and literature-priority audit of the full integral-parameter family
 A168597	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed congruence	verify exact parameter match in bibliography
 A176335	C	published-source	Coster Theorem 4 cited by live OEIS entry	verify exact parameter match in bibliography
-A177316	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the bilateral coefficient and telescoping identity
+A177316	C	published-source	related-results/StraubPrimeFiveCoefficientPacket.md	Straub Theorem 3.2(b) plus the proved bilateral coefficient and telescoping identity
 A228960	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
 A245926	C	proved-here	related-results/A245926AlgebraicCoefficientTower.md	independent proof review and literature-priority audit
 A246437	C	proved-here	related-results/MixedStepCoefficientQuadraticTower.md	independent review and priority audit of the mixed-step family theorem
