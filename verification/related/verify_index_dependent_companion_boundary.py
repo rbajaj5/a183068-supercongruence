@@ -107,19 +107,59 @@ def check_unit_block_formulas() -> int:
 
 def check_scaled_transfer() -> int:
     checks = 0
-    for prime in (5, 7, 11, 13):
-        modulus = prime**3
-        for n in range(1, 11):
-            for q in range(0, 3 * n + 1):
-                assert (
-                    cutoff_term(prime * n, prime * q) - cutoff_term(n, q)
-                ) % modulus == 0
-                checks += 1
-                if q <= n:
+    grids = {
+        5: ((1, 2, 3), (1, 2, 3)),
+        7: ((1, 2), (1, 2, 3)),
+        11: ((1, 2), (1, 2)),
+        13: ((1, 2), (1, 2)),
+    }
+    for prime, (multipliers, levels) in grids.items():
+        for level in levels:
+            high_scale = prime**level
+            low_scale = high_scale // prime
+            modulus = prime ** (3 * level)
+            for n in multipliers:
+                high_n = n * high_scale
+                low_n = n * low_scale
+                for q in range(0, 3 * low_n + 1):
                     assert (
-                        finite_term(prime * n, prime * q) - finite_term(n, q)
+                        cutoff_term(high_n, prime * q)
+                        - cutoff_term(low_n, q)
                     ) % modulus == 0
                     checks += 1
+                    if q <= low_n:
+                        assert (
+                            finite_term(high_n, prime * q)
+                            - finite_term(low_n, q)
+                        ) % modulus == 0
+                        checks += 1
+    return checks
+
+
+def check_quadratic_substitution() -> int:
+    """Check the coefficient identities (14)--(16) independently."""
+
+    checks = 0
+    for n in range(1, 41):
+        finite_coefficient = sum(
+            integer_binomial(-n, k)
+            * integer_binomial(n, k)
+            * integer_binomial(n + k, k)
+            * integer_binomial(2 * k, n)
+            for k in range(n + 1)
+        )
+        assert finite_coefficient == finite_sum(n)
+        checks += 1
+
+        for cutoff in (1, 2, 3, 4):
+            cutoff_coefficient = sum(
+                integer_binomial(-n, k) ** 2
+                * integer_binomial(n + k, k)
+                * integer_binomial(2 * k, n)
+                for k in range(cutoff * n + 1)
+            )
+            assert cutoff_coefficient == cutoff_sum(n, cutoff)
+            checks += 1
     return checks
 
 
@@ -142,7 +182,8 @@ def main() -> None:
     results = {
         "half-residue identities": check_half_residues(),
         "unit-block formulas": check_unit_block_formulas(),
-        "scaled transfer": check_scaled_transfer(),
+        "all-level scaled transfer": check_scaled_transfer(),
+        "quadratic-substitution identities": check_quadratic_substitution(),
         "prime-boundary towers": check_prime_boundary(),
     }
     for name, count in results.items():

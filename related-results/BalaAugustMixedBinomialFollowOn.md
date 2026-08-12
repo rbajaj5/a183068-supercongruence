@@ -18,7 +18,7 @@ No literature-priority claim is made for the present assembly.
 | A333473 | Its named quadratic tower and the full positive algebraic-kernel family hold for every odd prime |
 | Mixed negative-binomial sum | Cubic tower proved for every odd prime; first normalized-defect residue proved stable for $p\geq5$, with only the stronger growing-modulus refinement open |
 | Products and twists | Cubic for three or more generalized-binomial factors; quadratic for two |
-| Index-dependent negative substitutions | Two families fail cubically at $p=5$; the two sign-opposite companions are proved cubically at the full prime boundary, with their higher levels still open |
+| Index-dependent negative substitutions | Two families fail cubically at $p=5$; the two sign-opposite companions are proved cubically at the full prime boundary, and every scaled shell transfers modulo $p^{3r}$; only the aggregate unit-shell lift remains open |
 | A333592 | Named cubic tower closed by Coster; the full positive-parameter family is also covered by the prefix-Cartier theorem |
 
 The main structural point is that the number of independent binomial
@@ -423,12 +423,15 @@ v_5\bigl(W_2(5)-W_2(1)\bigr)=2.
 ```
 
 The analogous companions with the last factor
-$\binom{N+k}{k}$ have a proved prime boundary.  The
+$\binom{N+k}{k}$ have a proved prime boundary and a proved all-level
+scaled-stratum transfer.  The
 [companion boundary theorem](IndexDependentCompanionPrimeBoundary.md) shows,
 for every $p\ge5$, that both sums at $np$ agree with their values at $n$
 modulo $p^3$.  Its half-residue inverse-square cancellation is genuinely
-sum-level: generic discarded summands have valuation only two.  The full
-$p^{3r}$ towers for $r>1$ remain open.
+sum-level: generic discarded summands have valuation only two.  It also
+shows that every $p$-divisible index transfers termwise modulo $p^{3r}$ at
+all levels and rewrites both sequences through one quadratic substitution.
+The full towers now reduce to the aggregate unit-shell identity alone.
 
 ## 8. Literature boundary
 
@@ -454,8 +457,8 @@ theorem, the A333473 identification and tower, the formerly excluded
 A119258 and Chebyshev primes, an extended cubic grid for $u$, the
 A333473 algebraic-family normalization, the stabilized
 negative-binomial defect grid, the A333592 decomposition, both
-counterexamples, and the surviving companion grid.  The companion prime
-boundary has its own 12,978-check certificate.
+counterexamples, and the surviving companion grid.  The companion boundary
+and scaled-shell theorem has its own 14,004-check certificate.
 
 The algebraic-family theorem has a separate 91,260-check certificate.
 

@@ -368,9 +368,10 @@ leading normalized defect is independent of the level for every $p\geq5$.
   growing-modulus refinement remains open.
 - Bala's product and twist proposal is classified by the follow-on: two
   generalized-binomial factors give a quadratic tower, while three or more
-  give a cubic tower. The companions containing upper arguments depending
-  on the summation index still require individual normalization, and some
-  already have exact counterexamples.
+  give a cubic tower. Of the companions containing upper arguments depending
+  on the summation index, two fail by exact counterexample.  For the two
+  survivors, the prime boundary and every all-level scaled shell are proved;
+  one aggregate unit-shell identity remains.
 
 ## 8. Literature boundary
 

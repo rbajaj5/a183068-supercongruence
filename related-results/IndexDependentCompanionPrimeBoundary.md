@@ -1,7 +1,7 @@
-# Prime-boundary cubic congruences for the index-dependent companions
+# Prime boundary and scaled cubic shells for the index-dependent companions
 
-**Status:** complete elementary prime-level theorem; the all-level lift
-remains open
+**Status:** complete elementary prime-level theorem and complete all-level
+scaled-stratum theorem; the unit-shell lift remains open
 
 ## 1. The two surviving August families
 
@@ -45,39 +45,89 @@ tag{4}
 
 The missing power is an exact half-residue cancellation.
 
-## 2. The scaled stratum
+## 2. The scaled stratum at every level
 
-For $k=pq$, every factor at $(np,pq)$ is an adjacent scaling of the
-corresponding factor at $(n,q)$.  For the negative binomial, oddness of $p$
+For $k=pq$, every factor at $(pM,pq)$ is an adjacent scaling of the
+corresponding factor at $(M,q)$.  For the negative binomial, oddness of $p$
 and cancellation of the rational prefactor give
 
 ```math
-\frac{\binom{-np}{pq}}{\binom{-n}{q}}
-=\frac{\binom{p(n+q)}{pq}}{\binom{n+q}{q}}.
+\frac{\binom{-pM}{pq}}{\binom{-M}{q}}
+=\frac{\binom{p(M+q)}{pq}}{\binom{M+q}{q}}.
 tag{5}
 ```
 
 The other three quotients are attached to
 
 ```math
-\binom{np}{pq},\qquad
-\binom{2pq}{np},\qquad
-\binom{p(n+q)}{pq}.
+\binom{pM}{pq},\qquad
+\binom{2pq}{pM},\qquad
+\binom{p(M+q)}{pq}.
 ```
 
-The adjacent Jacobsthal--Kazandzidis congruence therefore gives, whenever
-the terms are nonzero,
+The four lower-scale binomials are therefore
 
 ```math
-v_{np}(pq)\equiv v_n(q)\pmod {p^3},
-\qquad
-w_{np}(pq)\equiv w_n(q)\pmod {p^3},
+\binom{-M}{q},\quad \binom Mq,\quad
+\binom{2q}{M},\quad \binom{M+q}{q}.
+```
+
+### Theorem 2 (all-level scaled transfer)
+
+Let $p\ge5$, $N=np^r$, $M=N/p$, and $q\ge0$.  Then
+
+```math
+\boxed{
+v_N(pq)\equiv v_M(q)\pmod {p^{3r}},\qquad
+w_N(pq)\equiv w_M(q)\pmod {p^{3r}}.
+}
 tag{6}
 ```
 
-where $v_N(k)$ and $w_N(k)$ denote the summands of (1) and (2).
-Zero values of $\binom{2q}{n}$ occur at both scales.  Thus the scaled
-stratum already transfers modulo $p^3$.
+Here a binomial that is zero at one scale is zero at the other, so the
+display includes the support boundary.
+
+To prove the theorem, put $s=v_p(q)$ and first suppose $s<r-1$.  The
+factors $\binom{-M}{q}$ and $\binom Mq$ each have valuation at least
+$r-1-s$.  The finite summand contains one of each; the cutoff summand
+contains two copies of the first.  Hence either lower summand has valuation
+at least
+
+```math
+2(r-1-s).
+tag{6a}
+```
+
+For each of the four adjacent quotients, the full
+Jacobsthal--Kazandzidis modulus contains the factor
+
+```math
+p^3ab(a-b).
+```
+
+For example, the quotient attached to $\binom Mq$ has valuation bound
+
+```math
+3+v_p(M)+v_p(q)+v_p(M-q)=r+2s+2.
+tag{6b}
+```
+
+The other three quotients have the same bound: their triples are
+$(M+q,q,M)$, $(M,q,M-q)$, and $(2q,M,2q-M)$, respectively, and
+$v_p(M\pm q)=v_p(2q-M)=s$.  A product of quantities congruent to one
+modulo $p^{r+2s+2}$ is again congruent to one to that precision.  Combining
+(6a) and (6b) gives
+
+```math
+2(r-1-s)+(r+2s+2)=3r.
+```
+
+If $s\ge r-1$, the same Jacobsthal modulus is already at least $3r$;
+integrality of the lower summand finishes the proof.  The case $q=0$ is
+an equality.  This proves (6).
+
+Thus the scaled stratum is not part of the remaining all-level problem.
+Only the sum of indices prime to $p$ still needs a higher lift.
 
 ## 3. The half-residue lemma
 
@@ -197,8 +247,45 @@ result.
   the $q$-dependent factors.  The first-level theorem alone does not imply
   the $p^{3r}$ tower.
 
-Thus the prime boundary is closed for every parameter, while the all-level
-companion towers remain an explicit higher-lift obligation.
+Theorem 2 now removes the entire scaled stratum from that obligation.  An
+exact coefficient representation makes the remaining carry particularly
+transparent.  Define
+
+```math
+F_N(X)=\sum_{k=0}^{N}
+\binom{-N}{k}\binom Nk\binom{N+k}{k}X^k
+tag{14}
+```
+
+and
+
+```math
+G_{c,N}(X)=\sum_{k=0}^{cN}
+\binom{-N}{k}^2\binom{N+k}{k}X^k.
+tag{15}
+```
+
+Since $[z^N](1+z)^{2k}=\binom{2k}{N}$, the two companions are exactly
+
+```math
+\boxed{
+V(N)=[z^N]F_N((1+z)^2),\qquad
+W_c(N)=[z^N]G_{c,N}((1+z)^2).
+}
+tag{16}
+```
+
+Thus the two Lucas states are simply the two halves of the coefficient
+extraction through the quadratic substitution $X=(1+z)^2$.  The
+coefficientwise mixed-binomial theorem gives two powers on unit indices;
+the remaining third power is exactly the reciprocal-square cancellation
+created by (16).  At level one it is (7).  At higher levels the remaining
+task is a carry-aware version of Straub's aggregate block lemma for the
+weights in (14)--(15).  No termwise strengthening can supply it.
+
+Thus the prime boundary and every scaled shell are closed for every
+parameter.  The all-level companion towers have been reduced to one
+explicit aggregate unit-shell identity.
 
 ## 7. Verification
 
@@ -208,13 +295,16 @@ Run
 python verification/related/verify_index_dependent_companion_boundary.py
 ```
 
-The checker verifies the half-residue identity, formulas (8)--(13), every
-complete unit block, the scaled transfer, and the two prime-boundary
-congruences over an extended exact grid.
+The checker verifies the half-residue identity, formulas (8)--(16), every
+complete unit block, the all-level scaled transfer, and the two
+prime-boundary congruences over an extended exact grid.
 
 ## 8. Source boundary
 
 Peter Bala proposed the substitution families in the August correspondence.
 The proof uses only Lucas' theorem, the classical adjacent
 Jacobsthal--Kazandzidis congruence, and the finite-field inverse-square sum.
-No priority claim is made.
+The aggregate induction targeted in (16) is modeled on Armin Straub's
+[generalized Beukers block lemma](https://arxiv.org/abs/1401.0854), but its
+published hypothesis has a one-state Cartier descent; the doubling carry in
+$\binom{2k}{N}$ prevents applying it verbatim.  No priority claim is made.
