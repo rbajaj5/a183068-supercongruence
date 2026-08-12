@@ -1,4 +1,4 @@
-# The 33 extracted open targets in the Bala 110-record census
+# The 32 extracted open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -13,7 +13,7 @@ it. The new status `open-target` means:
   and
 - the next operation is mathematical proof, not database extraction.
 
-The 33 records consolidate to substantially fewer proof families. Repeated
+The 32 records consolidate to substantially fewer proof families. Repeated
 entries are retained because the campaign denominator is a record count, but
 the proposed proof units below are family-sized.
 
@@ -124,17 +124,6 @@ from the displayed sums; analogy with the Apéry sequences is evidence, not
 inheritance.
 
 ## 2. Coefficient and constant-term targets
-
-### Quadrinomial coefficients
-
-[A005725](https://oeis.org/A005725) contains two different targets:
-
-1. its principal sequence should satisfy a quadratic tower for `p >= 3`;
-2. the separate coefficient sequence
-   `[x^n](F(x)/F(-x))^n`, with `F(x)=1+x+x^2+x^3`, should satisfy a
-   prime-level congruence modulo `p^3` for `p >= 5`.
-
-The second statement is not the first statement with a change of notation.
 
 ### Duchon algebraic-series packet
 
@@ -254,11 +243,11 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 33 records are explicit `open-target` entries;
+- 32 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
 
-This does **not** assert that all 35 targets are true. Their next legitimate
+This does **not** assert that all 32 targets are true. Their next legitimate
 status change requires a proof, an exact published-source reduction, or a
 counterexample.

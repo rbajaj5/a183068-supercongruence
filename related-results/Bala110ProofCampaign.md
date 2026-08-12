@@ -25,14 +25,14 @@ every record:
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | T: finite-sum transfer | 40 | 7 | 7 | 8 | 4 | 14 | 0 |
-| C: coefficient/constant term | 37 | 7 | 6 | 3 | 2 | 19 | 0 |
+| C: coefficient/constant term | 37 | 8 | 6 | 3 | 2 | 18 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **31** | **16** | **23** | **7** | **33** | **0** |
+| **Total** | **110** | **32** | **16** | **23** | **7** | **32** | **0** |
 
-The thirty-one `proved-here` records are A002003, A008485, A008705, A008793,
-A049505, A091527, A108625, A141057, A143007, A177316, A255672, A262732,
+The thirty-two `proved-here` records are A002003, A005725, A008485, A008705,
+A008793, A049505, A091527, A108625, A141057, A143007, A177316, A255672, A262732,
 A270913, A270919, A270922, A270924, A275652, A275654, A288470, A333592,
 A348410, A351857, A352373, A357509, A357510, A357568, A364173,
 A364303, A364506, A370101, and A370102. The sixteen
@@ -48,7 +48,7 @@ A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
 classified `no-explicit-open`: the live pages contain no Bala
 supercongruence conjecture that remains to be proved.
-The remaining thirty-three records are `open-target`; their exact claims,
+The remaining thirty-two records are `open-target`; their exact claims,
 prime ranges, normalizations, and family consolidations are recorded in the
 [remaining-open-target map](Bala110RemainingOpenTargets.md).
 
@@ -72,7 +72,7 @@ declare every comment on the corresponding OEIS page solved.
 
 ## August 12 reconciliation
 
-This refresh makes six evidence-backed promotions without treating a search
+This refresh makes evidence-backed promotions without treating a search
 hit as a proof:
 
 - A333592 moves from `partial` to `proved-here` because the later
@@ -101,6 +101,13 @@ A003161 and A003162, subsequently reduce to the single existing
 leaving 33 independent `open-target` records. Consequently no record is
 left `queued`: the remaining work is proof work rather than OEIS-page
 extraction.
+
+The first post-extraction proof unit closes both conjectures on A005725. The
+[quadrinomial proof](QuadrinomialCoefficientOddPrimeTower.md) establishes
+the full odd-prime quadratic tower by discard-and-rescale and proves the
+separate prime-level cubic coefficient congruence by an exact rational
+simplification, Wolstenholme's theorem, and alternating reciprocal-square
+cancellation. This leaves 32 `open-target` records.
 
 ## Proof order
 

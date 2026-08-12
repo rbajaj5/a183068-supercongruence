@@ -40,7 +40,7 @@ A370102	T	proved-here	related-results/CoefficientFramingCubicTower.md	independen
 A376458	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the ordinary and enhanced Apéry-companion towers
 A376466	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove both the n and n-1 cubic towers
 A002426	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed p^(2r) claim	verify exact parameter match in bibliography
-A005725	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the quadrinomial quadratic tower and the separate prime-level coefficient refinement
+A005725	C	proved-here	related-results/QuadrinomialCoefficientOddPrimeTower.md	independent review and priority audit of both source-page conjectures
 A006318	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as a generating-function anchor
 A036917	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as an Apery-like source anchor
 A060941	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the algebraic coefficient family and test closure under the exponential iteration

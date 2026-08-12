@@ -1326,6 +1326,24 @@ proof.
 - **Proof:** [Bhatt--Singh/Dwork period synthesis](related-results/BhattSinghDworkPeriodSupercongruence.md)
 - **Exact checker:** [`verify_dwork_period_supercongruence.py`](verification/related/verify_dwork_period_supercongruence.py)
 
+### QUADRINOMIAL-2 — the two A005725 congruences
+
+- **Claim:** If
+  \[
+  A(N)=[x^N](1+x+x^2+x^3)^N,
+  \]
+  then for every odd prime (p),
+  \[
+  A(np^r)\equiv A(np^{r-1})\pmod {p^{2r}}.
+  \]
+  If (F(x)=1+x+x^2+x^3) and
+  (B(N)=[x^N](F(x)/F(-x))^N), then
+  (B(p)\equiv2\pmod {p^3}) for every prime (p\ge5).
+- **Status:** Complete elementary proof candidate closing both conjectures
+  printed on A005725; priority not searched beyond the source record.
+- **Proof:** [Quadrinomial and ratio-coefficient congruences](related-results/QuadrinomialCoefficientOddPrimeTower.md)
+- **Exact checker:** [`verify_quadrinomial_coefficient_tower.py`](verification/related/verify_quadrinomial_coefficient_tower.py)
+
 ### FF-DET - finite-field determinant bias
 
 - **Claim:** The additive determinant character sum over \(n\)-by-\(n\)
