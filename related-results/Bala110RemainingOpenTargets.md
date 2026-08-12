@@ -1,11 +1,11 @@
-# The 2 remaining open targets in the Bala 110-record census
+# No wholly untreated targets remain in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
-**Status:** complete live-target map; the claims below are not declared proved
+**Status:** completion map; unresolved partial claims below are not declared proved
 
 This note finishes the record-reading stage of the 110-record campaign.
 Every former `queued` entry now has a live conjecture or family attached to
-it. The new status `open-target` means:
+it. The status `open-target` meant:
 
 - the live claim has been identified;
 - its normalization and prime range have been recorded here;
@@ -41,8 +41,7 @@ both to `partial`. The later
 proves A124435. The
 [A244973 Frobenius reduction](A244973QuadraticFrobeniusReduction.md)
 then isolates Sun's remaining conjecture as one exact linear--quadratic
-Cartier cancellation and moves that record to `partial`. This file now lists
-the 2 records that remain fully open. The
+Cartier cancellation and moves that record to `partial`. The
 [A331562 rational-diagonal reduction](A331562UniformRationalDiagonal.md)
 also replaces the row-by-row search by one determinant-ratio family and one
 uniform continuant Frobenius estimate. The
@@ -51,7 +50,11 @@ places both its direct and reverted coefficient families in one normalized
 signed-binomial kernel. The
 [exponential-coefficient reduction](ExponentialCoefficientCartierReduction.md)
 does the same for A060941, A362722, and A362733 through one exact Cartier
-defect.
+defect. Finally, the
+[A376 companion reduction](A376AperyCompanionReduction.md) proves the
+A376458 prime-level `p^5` assertion, refutes A376466's shifted tower, and
+places both surviving ordinary towers in one exact pairing framework. No
+record is now wholly untreated.
 
 ## 1. Finite-sum transfer targets
 
@@ -73,7 +76,7 @@ and common normalized kernel are now recorded in the
 [A079489 Lagrange-kernel reduction](A079489LagrangeKernelReduction.md), so
 this record is no longer counted among the fully open targets.
 
-### Paired Apéry companions
+### Paired Apéry companions (reduced and partly resolved)
 
 - [A376458](https://oeis.org/A376458) asks for an ordinary cubic tower,
   plus `p^5` at the first pure-prime level and `p^(3r+3)` later.
@@ -83,7 +86,12 @@ this record is no longer counted among the fully open targets.
 
 Both use rows of A108625 in their summands. The paired claims must be proved
 from the displayed sums; analogy with the Apéry sequences is evidence, not
-inheritance.
+inheritance. The [companion note](A376AperyCompanionReduction.md) now
+collapses A376458 to one sum and proves its `p^5` prime boundary. It also
+gives the exact counterexample
+`A376466(9)-A376466(1) == 3 (mod 5)`, so that record's all-`n` shifted
+conjecture is false. The ordinary cubic tower for each sequence and the
+higher A376458 bonus remain open.
 
 ## 2. Recently reduced coefficient and constant-term targets
 
@@ -124,7 +132,7 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 2 records are explicit `open-target` entries;
+- no record remains `open-target`;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
