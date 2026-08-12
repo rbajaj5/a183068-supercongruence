@@ -2073,6 +2073,25 @@ proof.
 
 ## Reductions and computational reports
 
+### FRANEL-CT — integer-parameter Franel-companion kernels
+
+- **Claim:** For `a` in `{1,2}` and every integer `m`, the two Bala
+  companion families are exactly
+
+  ```math
+  W_{a,m}(N)=\operatorname{CT}_{y,z}
+  \left[(1+y)^m\left(
+  \frac{(1+y)^a(1+z)^2}{y^az}-4\right)\right]^N.
+  ```
+
+  The `a=1,m=-1` specialization is A362676 up to `(-1)^N`; `a=2,m=1`
+  is the Franel sequence.
+- **Status:** Exact reduction with 1,282 checks, including 1,088 conjectural
+  tower tests and 914 sharp instances. The family-wide cubic Cartier
+  contraction is stated precisely but is not claimed proved.
+- **Report:** [Franel-companion constant-term reduction](related-results/FranelCompanionConstantTermReduction.md)
+- **Exact checker:** [`verify_franel_companion_ct_reduction.py`](verification/related/verify_franel_companion_ct_reduction.py)
+
 ### TAYLOR-7 — Catalan and Schröder Taylor-truncation packet
 
 - **Claim:** The seven records A333090--A333097 that carry live

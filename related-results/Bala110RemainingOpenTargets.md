@@ -1,4 +1,4 @@
-# The 11 remaining open targets in the Bala 110-record census
+# The 9 remaining open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -33,8 +33,10 @@ has consolidated A333090--A333097 into two exact coefficient families and
 moved those seven records to `partial`.  The
 [adjacent-binomial meander theorem](MeanderAdjacentBinomialTowers.md) then
 proved the three intended A198060 families and closed A198256 and A198258,
-including the exceptional ternary sextic case. This file now lists the 11
-records that remain fully open.
+including the exceptional ternary sextic case. The subsequent
+[Franel-companion reduction](FranelCompanionConstantTermReduction.md)
+places A362676 and A363985 in one explicit constant-term family and moves
+both to `partial`. This file now lists the 9 records that remain fully open.
 
 ## 1. Finite-sum transfer targets
 
@@ -61,37 +63,11 @@ that survives reversion; a formal similarity of the series is not enough.
   diagonal is `1/(1-x-y-z+xyz)`, but a rational diagonal alone does not
   supply the second power.
 
-### Isolated finite-sum boundaries
+### Isolated finite-sum boundary
 
 - [A244973](https://oeis.org/A244973) asks that
   `(a(pn)-a(n))/(pn)^3` be `p`-adically integral for `p > 5`. On writing
   `n=mp^(r-1)`, this is a cubic adjacent-level valuation statement.
-- [A362676](https://oeis.org/A362676) asks for a cubic tower for the finite
-  sum
-
-  ```math
-  \sum_{k=0}^{N}4^{N-k}\binom Nk\binom{N-1}{k}\binom{2k}{k}
-  ```
-
-  at `p >= 5`.
-
-### Integer-parameter Franel companions
-
-[A363985](https://oeis.org/A363985) proposes the same cubic tower for every
-integer `m` in both families
-
-```math
-u_m(N)=\sum_{k=0}^{N}(-4)^{N-k}
-\binom Nk\binom{mN+k}{k}\binom{2k}{k},
-```
-
-```math
-v_m(N)=\sum_{k=0}^{N}(-4)^{N-k}
-\binom Nk\binom{mN+2k}{2k}\binom{2k}{k}.
-```
-
-The target is family-wide for `p >= 5`, including negative `m`; it is not
-closed by checking the named specialization alone.
 
 ### Paired Apéry companions
 
@@ -151,7 +127,7 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 11 records are explicit `open-target` entries;
+- 9 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
