@@ -54,7 +54,7 @@ A177316	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	indepe
 A228960	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
 A245926	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the required Laurent representation and then the quadratic tower
 A246437	C	proved-here	related-results/MixedStepCoefficientQuadraticTower.md	independent review and priority audit of the mixed-step family theorem
-A263843	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the full reversion coefficient family, including p=3
+A263843	C	partial	related-results/A263843ReversionCoefficientReduction.md	p>=5 and 3|(c+s) proved; close the remaining p=3 unit-slope boundary
 A281267	C	proved-here	related-results/EulerProductGaussianTower.md	independent review and source-facing cross-reference for the one-color d=1 specialization
 A331562	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove one uniform row theorem extending the three known rows
 A333090	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Schroder Taylor-truncation family

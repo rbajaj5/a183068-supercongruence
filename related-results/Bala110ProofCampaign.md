@@ -25,11 +25,11 @@ every record:
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | T: finite-sum transfer | 40 | 9 | 8 | 9 | 4 | 10 | 0 |
-| C: coefficient/constant term | 37 | 11 | 6 | 5 | 2 | 13 | 0 |
+| C: coefficient/constant term | 37 | 11 | 6 | 6 | 2 | 12 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **37** | **17** | **26** | **7** | **23** | **0** |
+| **Total** | **110** | **37** | **17** | **27** | **7** | **22** | **0** |
 
 The thirty-seven `proved-here` records are A002003, A005725, A008485, A008705,
 A008793, A049505, A091527, A108625, A132303, A141057, A143007, A156554, A177316, A246437,
@@ -40,8 +40,8 @@ A364303, A364506, A370101, and A370102. The seventeen
 `published-source` records are A002426, A002895, A005258, A082758, A103882,
 A112029, A168597, A176335, A183204, A184423, A186420, A208675, A234839,
 A363864, A363867, A363871, and A364509.
-The twenty-six partial records are A003161, A003162, A008978, A023871,
-A023873, A108628, A112028, A113424, A183069, A206622, A212334, A219562, A228960, A229452,
+The twenty-seven partial records are A003161, A003162, A008978, A023871,
+A023873, A108628, A112028, A113424, A183069, A206622, A212334, A219562, A228960, A229452, A263843,
 A283271, A350383, A351858,
 A352655, A357506, A357512,
 A357567, A357956, A357959, A361889, A361892, and A380290. A001850, A002897,
@@ -49,7 +49,7 @@ A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
 classified `no-explicit-open`: the live pages contain no Bala
 supercongruence conjecture that remains to be proved.
-The remaining twenty-three records are `open-target`; their exact claims,
+The remaining twenty-two records are `open-target`; their exact claims,
 prime ranges, normalizations, and family consolidations are recorded in the
 [remaining-open-target map](Bala110RemainingOpenTargets.md).
 
@@ -171,6 +171,15 @@ every prime `p >= 5`, the proposed all-`k` family fails at both `k=p-1` and
 not touched by this ramified-step obstruction and remains open, so A351858
 moves to `partial`.  This leaves 23 `open-target` records.
 
+The next reduction treats A263843.  Lagrange--Bürmann inversion turns its
+reversion family exactly into the coefficient-framing family with parameters
+`(alpha,beta)=(3(c+s),-(c+s))`, up to the constant `s/(c+s)`.  Tracking the
+factor `c+s` inside the reduced logarithm removes every denominator-prime
+loss.  This proves the full family for `p>=5` and for `p=3` whenever
+`3|(c+s)`; the singular line `c+s=0` is an explicit parity sequence.  Only
+the ternary unit-slope boundary remains, so A263843 moves to `partial` and
+22 records remain `open-target`.
+
 ## Proof order
 
 The campaign does not use A-number order. It uses expected proof yield.
@@ -208,6 +217,9 @@ The campaign does not use A-number order. It uses expected proof yield.
    [cyclotomic-family boundary](A351858CyclotomicFamilyBoundary.md) shows
    that A351858's universal parameter claim fails whenever `k=p-1` or
    `k=p`, while preserving its named `k=2` problem as a separate target. A
+   [reversion reduction](A263843ReversionCoefficientReduction.md) sends the
+   A263843 family back to coefficient framing and isolates one ternary
+   boundary instead of leaving the entire parameter family open. A
    [small exact counterexample](RationalFramingCounterexample.md) shows why
    Müller's broader framing theorem cannot be used as the source closure
    without repair. The

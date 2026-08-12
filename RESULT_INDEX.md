@@ -539,6 +539,34 @@ proof.
 - **Proof:** [A351858 cyclotomic-family boundary](related-results/A351858CyclotomicFamilyBoundary.md)
 - **Exact checker:** [`verify_a351858_cyclotomic_boundary.py`](verification/related/verify_a351858_cyclotomic_boundary.py)
 
+### A263843-REV — reversion coefficient reduction
+
+- **Claim:** If $Y=x(1+Y)^3/(1-Y)$ and $H=Y/x$, define
+
+  ```math
+  B_{c,s}(N)=[x^{cN}]H(x)^{sN}
+  ```
+
+  for positive $c$ and integral $s$. The full conjecture asks for a cubic
+  tower at every $p\ge3$.
+- **Result:** Lagrange inversion gives, for $d=c+s\ne0$,
+
+  ```math
+  B_{c,s}(N)=\frac{s}{d}
+  [t^{cN}](1+t)^{3dN}(1-t)^{-dN}.
+  ```
+
+  Tracking $v_p(d)$ inside the reduced logarithm proves the full family for
+  every $p\ge5$, including $p\mid d$. It also proves the $p=3$ tower when
+  $3\mid d$. The line $d=0$ is the explicit parity sequence
+  $-1-3(-1)^{cN-1}$.
+- **Open boundary:** Only $p=3$ with $3\nmid(c+s)$ remains. This includes
+  the named $(c,s)=(1,1)$ ternary case; exact tests support but do not prove
+  the extra power.
+- **Status:** Complete reduction and partial family proof.
+- **Proof:** [A263843 reversion reduction](related-results/A263843ReversionCoefficientReduction.md)
+- **Exact checker:** [`verify_a263843_reversion_reduction.py`](verification/related/verify_a263843_reversion_reduction.py)
+
 ### ODD-UNIT-BLOCK — A091527 and A262732 towers
 
 - **Claim:** For every integer $m\ge2$, prime $p\ge5$, and positive

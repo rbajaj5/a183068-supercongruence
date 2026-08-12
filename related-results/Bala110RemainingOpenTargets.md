@@ -1,4 +1,4 @@
-# The 23 remaining open targets in the Bala 110-record census
+# The 22 remaining open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -22,7 +22,10 @@ The [A132303 trinomial-cube theorem](A132303TrinomialCubeTower.md) and the
 have closed two targets, while the
 [A351858 cyclotomic boundary](A351858CyclotomicFamilyBoundary.md) refutes
 that record's all-parameter claim and moves its surviving named case to the
-partial ledger. This file now lists the 23 records that remain fully open.
+partial ledger. The
+[A263843 reversion reduction](A263843ReversionCoefficientReduction.md) has
+also moved that record to `partial`. This file now lists the 22 records that
+remain fully open.
 
 ## 1. Finite-sum transfer targets
 
@@ -133,18 +136,6 @@ same tower. Closure under this nonlinear operation is a separate theorem.
   representation proved; conditional on that representation, the page asks
   for a quadratic tower at `p >= 5`.
 
-### Reversion coefficient family
-
-Let `A(x)` be the offset-zero generating series of
-[A263843](https://oeis.org/A263843). The record asks for the cubic tower of
-
-```math
-[x^{rn}]A(x)^{sn}
-```
-
-for positive `r`, integral `s`, and every `p >= 3`. This is a family claim,
-not only the named case `[x^n]A(x)^n`.
-
 ### Uniform row theorem
 
 [A331562](https://oeis.org/A331562) asks that every fixed row satisfy the
@@ -190,11 +181,11 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 23 records are explicit `open-target` entries;
+- 22 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
 
-This does **not** assert that all 23 targets are true. Their next legitimate
+This does **not** assert that all 22 targets are true. Their next legitimate
 status change requires a proof, an exact published-source reduction, or a
 counterexample.
