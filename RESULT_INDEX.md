@@ -1113,10 +1113,31 @@ proof.
   At \(X=1\) this proves the named A228960 and A350383 conjectures; at
   \(X=i\) it gives their split/inert Gaussian specializations.
 - **Status:** Complete elementary proof candidate with explicit small-prime
-  counterexamples; priority search preliminary.  The broader cyclotomic
-  rational-function conjecture remains open.
+  counterexamples; priority search preliminary. The broader scalar
+  rational-function conjecture is closed separately by CYCLOTOMIC-RATIONAL.
 - **Proof:** [Cyclotomic coefficient-pair theorem](related-results/CyclotomicCoefficientPairTheorem.md)
 - **Exact checker:** [`verify_cyclotomic_coefficient_pair.py`](verification/related/verify_cyclotomic_coefficient_pair.py)
+
+### CYCLOTOMIC-RATIONAL — general cyclotomic rational-framing tower
+
+- **Claim:** Let \(f\) be a finite quotient of cyclotomic products, \(k>0\),
+  and \(m\in\mathbb Z\). Write
+  \(f(x)/f(0)=\prod_d(1-x^d)^{c_d}\). For every odd prime \(p\) dividing
+  none of the finitely many steps with \(c_d\ne0\),
+  \[
+  [x^{knp^r}]f(x)^{mnp^r}
+  \equiv
+  [x^{knp^{r-1}}]f(x)^{mnp^{r-1}}
+  \pmod {p^{2r}}.
+  \]
+  This proves the general all-but-finitely-many-primes principle printed on
+  A228960 and A350383, including negative power parameters.
+- **Status:** Complete elementary proof candidate. The reduced Frobenius
+  logarithm has no support on the \(p\)-sublattice, so its linear
+  constant-term defect vanishes exactly; every higher exponential degree
+  supplies the quadratic valuation. Literature priority is unestablished.
+- **Proof:** [Cyclotomic rational-framing tower](related-results/CyclotomicRationalFramingTower.md)
+- **Exact checker:** [`verify_cyclotomic_rational_framing.py`](verification/related/verify_cyclotomic_rational_framing.py)
 
 ### EULER-PRODUCT — colored product Frobenius tower
 

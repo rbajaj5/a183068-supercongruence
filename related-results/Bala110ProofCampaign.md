@@ -25,25 +25,25 @@ every record:
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | T: finite-sum transfer | 40 | 14 | 8 | 14 | 4 | 0 | 0 |
-| C: coefficient/constant term | 37 | 11 | 9 | 15 | 2 | 0 | 0 |
+| C: coefficient/constant term | 37 | 13 | 9 | 13 | 2 | 0 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **42** | **20** | **41** | **7** | **0** | **0** |
+| **Total** | **110** | **44** | **20** | **39** | **7** | **0** | **0** |
 
-The forty-two `proved-here` records are A002003, A005725, A008485, A008705,
+The forty-four `proved-here` records are A002003, A005725, A008485, A008705,
 A008793, A049505, A091527, A124435, A132303, A141057, A156554, A198060, A198256, A198258, A245926, A246437,
-A255672, A260667, A262732, A263843, A270913, A270919, A270922, A270924, A275652,
+A228960, A255672, A260667, A262732, A263843, A270913, A270919, A270922, A270924, A275652,
 A275654, A281267, A288470, A333592,
-A348410, A351857, A351858, A352373, A357509, A357510, A357512, A357568, A364173,
+A348410, A350383, A351857, A351858, A352373, A357509, A357510, A357512, A357568, A364173,
 A364303, A364506, A370101, and A370102. The twenty
 `published-source` records are A002426, A002895, A005258, A082758, A103882,
 A108625, A112029, A143007, A168597, A176335, A177316, A183204, A184423, A186420, A208675, A234839,
 A363864, A363867, A363871, and A364509.
-The forty-one partial records are A003161, A003162, A008978, A023871,
+The thirty-nine partial records are A003161, A003162, A008978, A023871,
 A023873, A060941, A079489, A108628, A112028, A113424, A183069, A206622, A212334, A219562,
-A228960, A229452, A244973, A283271, A331562, A333090, A333091, A333092, A333093,
-A333095, A333096, A333097, A350383, A352655, A357506,
+A229452, A244973, A283271, A331562, A333090, A333091, A333092, A333093,
+A333095, A333096, A333097, A352655, A357506,
 A357567, A357956, A357959, A361889, A361892, A362676, A362722, A362733, A363985, A376458, A376466, and A380290.
 A001850, A002897,
 A005259, A005260, A006318, A036917, and A143583 are retained as
@@ -53,7 +53,7 @@ supercongruence conjecture that remains to be proved.
 No record remains `open-target`: every live claim now has at least a proof,
 a published-source match, a substantive exact reduction, or an exact
 counterexample. This does not mean that every conjecture is proved; the
-forty-one `partial` records retain explicit proof obligations.
+thirty-nine `partial` records retain explicit proof obligations.
 
 These labels refer only to the exact statements already matched. They do not
 declare every comment on the corresponding OEIS page solved.
@@ -321,6 +321,17 @@ and the compensating plus/minus contraction for A206622.  The four records
 remain `partial`: that single Cartier-square estimate, rather than either
 weighted moment or the full exponential tail, is now the only open
 arithmetic step.
+
+The cyclotomic rational-framing unit then closes both A228960 and A350383,
+including the general statement printed on both records. After normalizing
+the constant term, every finite quotient of cyclotomic products is
+`prod_d (1-x^d)^(c_d)`. Away from `2` and the finitely many primes dividing
+one of those steps, its reduced Frobenius logarithm has no support on the
+`p`-sublattice. The linear constant-term defect therefore vanishes exactly,
+while every exponential degree at least two has valuation at least `2r`.
+The [general theorem](CyclotomicRationalFramingTower.md) allows arbitrary
+coefficient slope `k` and every integer power parameter `m`, including
+negative powers. Both records move from `partial` to `proved-here`.
 
 ## Proof order
 

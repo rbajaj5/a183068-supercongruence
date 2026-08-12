@@ -84,6 +84,7 @@ SCRIPTS = (
     "verification/related/verify_binomial_power_frobenius.py",
     "verification/related/verify_quadratic_gaussian_queue.py",
     "verification/related/verify_cyclotomic_coefficient_pair.py",
+    "verification/related/verify_cyclotomic_rational_framing.py",
     "verification/related/verify_euler_product_gaussian_tower.py",
     "verification/related/verify_dyadic_hypercube_defect.py",
     "verification/related/verify_dyadic_hypercube_walsh.py",

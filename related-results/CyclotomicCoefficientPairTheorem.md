@@ -261,8 +261,9 @@ refinement for \(\mathcal C\) is not claimed here.
 
 The [A228960 entry](https://oeis.org/A228960) records a much broader proposed
 principle for coefficients of powers of cyclotomic rational functions.
-Theorem 1 proves the displayed A228960 and A350383 instances, not that
-general principle.
+Theorem 1 proves the displayed A228960 and A350383 instances in the stronger
+coefficientwise form.  The broader scalar principle is now proved separately
+in the [cyclotomic rational-framing theorem](CyclotomicRationalFramingTower.md).
 
 Exact formula and A-number searches located the live conjectures but no
 earlier proof of these two complete towers.  That negative search is not a

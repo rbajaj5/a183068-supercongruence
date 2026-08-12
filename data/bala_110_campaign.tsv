@@ -51,7 +51,7 @@ A156554	C	proved-here	related-results/A156554LegendreCoefficientTower.md	indepen
 A168597	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed congruence	verify exact parameter match in bibliography
 A176335	C	published-source	Coster Theorem 4 cited by live OEIS entry	verify exact parameter match in bibliography
 A177316	C	published-source	related-results/StraubPrimeFiveCoefficientPacket.md	Straub Theorem 3.2(b) plus the proved bilateral coefficient and telescoping identity
-A228960	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
+A228960	C	proved-here	related-results/CyclotomicRationalFramingTower.md	independent proof review and literature-priority audit of the general cyclotomic rational-framing theorem
 A245926	C	proved-here	related-results/A245926AlgebraicCoefficientTower.md	independent proof review and literature-priority audit
 A246437	C	proved-here	related-results/MixedStepCoefficientQuadraticTower.md	independent review and priority audit of the mixed-step family theorem
 A263843	C	proved-here	related-results/A263843ReversionCoefficientReduction.md	independent review of the ternary quadratic-cubic cancellation and Frobenius-descent lemma
@@ -65,7 +65,7 @@ A333095	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact 
 A333096	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Catalan coefficient reduction proved; prove the two displayed Cartier constant-term estimates
 A333097	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Catalan coefficient reduction proved; prove the two displayed Cartier constant-term estimates
 A348410	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A350383	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
+A350383	C	proved-here	related-results/CyclotomicRationalFramingTower.md	independent proof review and literature-priority audit of the general cyclotomic rational-framing theorem
 A351857	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A351858	C	proved-here	related-results/A351858CyclotomicFamilyBoundary.md	named k=2 cubic tower proved; broader all-k and all-parameter claims refuted; independent review
 A352373	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference

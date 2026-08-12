@@ -205,8 +205,12 @@ A333097 A348410 A350383 A351857 A351858 A352373 A362722 A362733
 A363864 A363867 A363871 A364303 A380290
 ```
 
-The first two inspections, A228960 and A350383, are now closed by the
-[cyclotomic coefficient-pair theorem](CyclotomicCoefficientPairTheorem.md).
+The first two inspections, A228960 and A350383, are now closed twice over:
+the [coefficient-pair theorem](CyclotomicCoefficientPairTheorem.md) gives a
+stronger coefficientwise and Gaussian-twist statement for the named
+polynomials, while the
+[rational-framing theorem](CyclotomicRationalFramingTower.md) proves the
+general all-but-finitely-many-primes principle printed on both records.
 Their factorizations expose finite binomial sums, and a direct
 discard-and-rescale proof is stronger and simpler than a Dwork conversion.
 
@@ -359,10 +363,11 @@ relations remain open, so the records are classified `partial`, not
 | 6 | A364506, A364509, A008978, A002897, A113424 | F | Define and prove integrality of the Gaussian block analogue | The integer coefficient roots are settled, but Gaussian denominator control is a separate theorem |
 | 7 | A352655, A357506, A357567, A357956, A357959 | D | Prove the three linear Apéry defect relations isolated by the packet theorem | Cubic baselines alone do not supply the enhanced three-power gain |
 
-A228960 and A350383 have left this open queue: one coefficientwise theorem
+A228960 and A350383 have left this open queue. One coefficientwise theorem
 proves both \(p^{2r}\) towers for \(p\ge5\) and supplies their split/inert
-Gaussian specializations.  The broader cyclotomic-rational-function
-principle recorded on A228960 remains open.
+Gaussian specializations. A separate support-separation theorem proves the
+broader cyclotomic-rational-function principle for every odd prime outside
+an explicit finite exceptional set.
 
 A380290 has partly left the queue as well: its full quadratic baseline and
 the entire associated mixed Euler-product packet are proved for odd primes.
