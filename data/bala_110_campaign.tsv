@@ -1,29 +1,29 @@
 oeis	route	status	evidence	next_action
-A001850	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A001850	T	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as a search-corpus anchor
 A002003	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A002895	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A002895	T	published-source	Osburn--Sahu Theorem 1.1, arXiv:1201.6195	verify the exact A=2, B=C=1 specialization in bibliography
 A003161	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A003162	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A005258	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A005258	T	published-source	Coster's classical Apery cubic tower	verify exact thesis theorem numbering in bibliography
 A005259	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied
 A005260	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied
 A079489	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A082758	T	published-source	Pan--Sun theorem cited by live OEIS entry	verify exact parameter match in bibliography
 A103882	T	published-source	Straub Example 3.4 gives the recorded Apéry-number congruence	verify exact edition and theorem numbering in bibliography
-A112028	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A112028	T	partial	Coster Theorem 4 gives the p^(3r) baseline; OEIS asks for p^5 and p^(3r+3)	prove the extra shifted-index gain
 A112029	T	published-source	Coster Theorem 4 is cited on the live OEIS record for the full p^(3r) tower	verify exact theorem numbering and shifted-index normalization in bibliography
 A124435	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A132303	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A141057	T	proved-here	MultinomialPowerFrobeniusTowers.md	independent review and priority audit
-A143583	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A143583	T	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record states only a Gauss p^r congruence and no Bala supercongruence conjecture
 A183069	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	integrality and sharp exact checks recorded; prove the unified odd ballot-power tower
-A183204	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A183204	T	published-source	Osburn--Sahu--Straub, arXiv:1312.2195, s_7 cubic tower	verify exact equation normalization in bibliography
 A198060	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A198256	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A198258	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A208675	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A212334	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A219562	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A219562	T	partial	Coster Theorem 4 gives the p^(3r) baseline; OEIS asks for p^5 and p^(3r+3)	prove the extra shifted-index gain
 A234839	T	published-source	Osburn--Sahu--Straub Example 3.3 cited by OEIS	verify exact parameter match in bibliography
 A244973	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A260667	T	queued	none	extract exact conjecture; test termwise discard and transfer
@@ -41,8 +41,8 @@ A376458	T	queued	none	extract exact conjecture; test termwise discard and transf
 A376466	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A002426	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed p^(2r) claim	verify exact parameter match in bibliography
 A005725	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A006318	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A036917	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A006318	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as a generating-function anchor
+A036917	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as an Apery-like source anchor
 A060941	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
 A108625	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the p=5 boundary and Straub parameter match
 A108628	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation

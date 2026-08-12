@@ -24,28 +24,29 @@ every record:
 
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 7 | 4 | 4 | 2 | 23 |
-| C: coefficient/constant term | 37 | 7 | 6 | 3 | 0 | 21 |
+| T: finite-sum transfer | 40 | 7 | 7 | 6 | 4 | 16 |
+| C: coefficient/constant term | 37 | 7 | 6 | 3 | 2 | 19 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 |
-| **Total** | **110** | **31** | **13** | **19** | **3** | **44** |
+| **Total** | **110** | **31** | **16** | **21** | **7** | **35** |
 
 The thirty-one `proved-here` records are A002003, A008485, A008705, A008793,
 A049505, A091527, A108625, A141057, A143007, A177316, A255672, A262732,
 A270913, A270919, A270922, A270924, A275652, A275654, A288470, A333592,
 A348410, A351857, A352373, A357509, A357510, A357568, A364173,
-A364303, A364506, A370101, and A370102. The thirteen
-`published-source` records are A002426, A082758, A103882, A112029, A168597,
-A176335, A184423, A186420, A234839, A363864, A363867, A363871, and A364509.
-The nineteen partial records are A008978, A023871, A023873, A113424, A183069,
-A206622, A228960, A229452, A283271, A350383, A352655, A357506, A357512,
-A357567, A357956, A357959, A361889, A361892, and A380290. A002897, A005259, and
-A005260 are retained as
+A364303, A364506, A370101, and A370102. The sixteen
+`published-source` records are A002426, A002895, A005258, A082758, A103882,
+A112029, A168597, A176335, A183204, A184423, A186420, A234839, A363864,
+A363867, A363871, and A364509.
+The twenty-one partial records are A008978, A023871, A023873, A112028,
+A113424, A183069, A206622, A219562, A228960, A229452, A283271, A350383,
+A352655, A357506, A357512,
+A357567, A357956, A357959, A361889, A361892, and A380290. A001850, A002897,
+A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
-classified `no-explicit-open`: their live matches concern unrelated Bala
-material or a claim now marked proved, not a live Bala supercongruence
-conjecture.
+classified `no-explicit-open`: the live pages contain no Bala
+supercongruence conjecture that remains to be proved.
 
 These labels refer only to the exact statements already matched. They do not
 declare every comment on the corresponding OEIS page solved.
@@ -81,10 +82,16 @@ hit as a proof:
   their exact common conjecture, checks its sharp boundary, and isolates the
   unified proof target.
 
-The remaining 44 queued rows are not asserted to be 44 open problems. A live
+The remaining 35 queued rows are not asserted to be 35 open problems. A live
 OEIS pass finds a mixture of explicit conjectures, source-closed statements,
 cross-reference-only records, and pages whose earlier wording has changed.
 They stay queued until the exact claim and source boundary are recorded.
+
+The follow-up [live-source boundary](Bala110LiveSourceBoundary.md) removes
+nine further false starts. It source-closes A002895, A005258, and A183204;
+records only the enhanced parts of A112028 and A219562 as open; and marks
+A001850, A006318, A036917, and A143583 as search anchors with no live Bala
+supercongruence target.
 
 ## Proof order
 
