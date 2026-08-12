@@ -218,6 +218,11 @@ full product packet in Bala's notes and gives a split/inert part-count twist.
 Exact equality witnesses show that this Gaussian twist is only quadratic.
 The remaining A380290 problem is therefore the special untwisted
 \(p^{3r}\) gain, not the construction of a generic quadratic period model.
+The [cubic Cartier-moment reduction](EulerProductCubicCartierMoments.md)
+now isolates that gain, and the four analogous route-M conjectures, in two
+weighted scalar coefficients.  Thus the Gaussian coefficientwise theorem
+supplies the uniform baseline, while the extra rational cubic power is an
+explicit cancellation that is lost under a generic color twist.
 
 The next economical unresolved inspection is A331562.  Its required output
 is an explicit Laurent polynomial or rational diagonal and a written match
@@ -295,7 +300,12 @@ The [modular-product prime-coefficient packet](ModularProductPrimeCoefficientPac
 now completes the route's first pass. Seven records are proved here:
 A008485, A008705, A255672, A270913, A270919, A270922, and A270924. Four
 more records, A023871, A023873, A206622, and A283271, inherit a proved
-\(p^{2r}\) baseline while retaining their conjectural \(p^{3r}\) gain.
+\(p^{2r}\) baseline while retaining their conjectural \(p^{3r}\) gain.  The
+[two-moment theorem](EulerProductCubicCartierMoments.md) now proves that
+every term of logarithmic degree at least three already has cubic depth and
+reduces all four towers to one pair of explicit Cartier-moment estimates.
+It also proves that A023871 cannot be extended to `p=5`, while exact checks
+show why A206622's plus/minus product has a different prime-five boundary.
 The [A229452 coefficient-root theorem](A229452CoefficientRootBaseline.md)
 proves its all-\(m\) integrality and an all-prime \(p^r\) baseline for both
 source parameter families.
@@ -340,7 +350,7 @@ relations remain open, so the records are classified `partial`, not
 | Rank | Target | Route | Immediate deliverable | Main risk |
 | ---: | --- | --- | --- | --- |
 | 1 | A331562 | C | Produce a uniform rational diagonal for all rows and inspect the cubic Frobenius mechanism | Known rows \(2,3,4\) may rely on representations that do not persist |
-| 2 | A380290 cubic remainder | C | Explain the extra untwisted power beyond the proved coefficientwise quadratic tower | The Gaussian twist has exact quadratic witnesses, so the gain is a special cancellation |
+| 2 | A380290 cubic remainder | C | Prove the two weighted Cartier-moment bounds isolated by the all-level reduction | The Gaussian twist has exact quadratic witnesses, so the scalar cancellation is not color-stable |
 | 3 | Nearby depth-three finite sums beyond the closed pilot | T | Compute whether the scaling quotient remains deep after weighting | Twisting can remove cancellation used by the untwisted proof |
 | 4 | A183068 and the repository's Landau-depth family | T | Package the already-proved general Frobenius-twist corollary family | Mostly a reusable corollary, not a new local mechanism |
 | 5 | A008793 Gaussian lift | M | Seek a coefficientwise or prime-ideal refinement of the now-proved rational hyperfactorial tower | No canonical Gaussian object may exist |
@@ -355,7 +365,8 @@ principle recorded on A228960 remains open.
 A380290 has partly left the queue as well: its full quadratic baseline and
 the entire associated mixed Euler-product packet are proved for odd primes.
 Only its distinguished untwisted cubic strengthening remains in the open
-column.
+column, and that strengthening is now reduced exactly to the two weighted
+moments in the cubic Cartier note.
 
 Two larger repository targets sit outside the literal 110-record query but
 belong in the working queue: A183068 itself and the recently inspected

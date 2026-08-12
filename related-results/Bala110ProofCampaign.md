@@ -306,6 +306,18 @@ integral at every prime at least five.  Hence
 `U_5(n-1) = 0 (mod n^4)` for every `gcd(n,6)=1`, and A357512 moves from
 `partial` to `proved-here`.
 
+The next route-M reduction treats A023871, A023873, A206622, and A283271
+uniformly.  Their adjacent cubic defects have an exact reduced-logarithm
+expansion, but every logarithmic degree at least three is already deep
+enough.  The new
+[Cartier-moment note](EulerProductCubicCartierMoments.md) proves that the
+entire all-level problem is equivalent to two explicit weighted
+coefficients `M1` and `M2`, with sharp valuation targets that retain
+`v_p(N)` and the framing parameter.  It also records the genuine A023871
+failure at `p=5` and the compensating plus/minus contraction for A206622.
+The four records remain `partial`: the two common moment estimates, rather
+than the full exponential tail, are now the only open arithmetic step.
+
 ## Proof order
 
 The campaign does not use A-number order. It uses expected proof yield.
@@ -376,7 +388,10 @@ The campaign does not use A-number order. It uses expected proof yield.
    [A008793 cube-product theorem](A008793CubePlanePartitionTower.md)
    proves the full all-prime $p^{4r}$ conjecture by exact product splitting,
    reduced-residue blocks, and a separate binary parity argument. No route-M
-   record remains queued.
+   record remains queued.  For the four remaining cubic product towers, the
+   [Cartier-moment reduction](EulerProductCubicCartierMoments.md) proves that
+   all logarithmic degrees at least three are harmless and isolates two
+   exact weighted moments as the complete remaining obstruction.
 5. **D route:** identify the parent sequence and prove that the claimed
    congruence is inherited before treating it as an independent problem.
    This route is now fully triaged.  The

@@ -229,10 +229,13 @@ modulus is $p^{3r}$, so these four records are classified `partial`, not
 
 The distinction is real.  The exact logarithmic ghost coordinates at
 degree weight $m^2$ have a cubic Frobenius defect, but the general
-occupation-vector transfer retains only two powers.  The unresolved step is
-an additional cancellation after setting the marking variables equal to
-one; the coefficientwise Gaussian twist already has sharp quadratic
-witnesses.
+occupation-vector transfer retains only two powers.  The follow-on
+[Cartier-moment reduction](EulerProductCubicCartierMoments.md) proves that
+every logarithmic term of degree at least three already has the target
+cubic depth and reduces all four towers to two displayed weighted moments.
+Those moments encode the additional cancellation after setting the marking
+variables equal to one; the coefficientwise Gaussian twist already has
+sharp quadratic witnesses.
 
 ## 6. The remaining route-M targets
 
@@ -265,6 +268,9 @@ The exact checker:
 4. checks the three complete quadratic towers through two adjacent levels;
 5. checks the four partial quadratic baselines; and
 6. evaluates every named sequence directly from its displayed product.
+
+The separate cubic-moment checker adds 961 exact checks of the all-level
+two-term reduction and its prime boundaries.
 
 Run:
 
