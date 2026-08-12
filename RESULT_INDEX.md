@@ -259,24 +259,19 @@ proof.
   (\mathcal C_p\mathscr B_{p;a,b,c}-\mathscr B_{p;a,b,c})G^{np^{r-2}}
   \pmod p.
   \]
-  Thus Bala's first-residue stabilization is reduced to one
-  Frobenius-fixed moment identity. More concretely, it is enough to express
-  the kernel discrepancy as one Hamiltonian tangent divergence along the
-  level sets of $G$.  The unimodular coordinate $y=t/x$ converts that
-  certificate to an explicit triangular transport recurrence. A canonical
-  divergence primitive gives the stronger experimental target
-  $\mathcal C_p\mathscr B=\mathscr B$ coefficientwise modulo $p$, reducing
-  the remaining proof to a lifted reciprocal-square congruence and its
-  reciprocal-cube transgression. The lifted-square congruence is now proved
-  by a second Frobenius block decomposition, so only the cubic transgression
-  remains open.
-- **Status:** Complete first-layer proof candidate; 3,206 exact arithmetic
-  checks support the remaining Frobenius identity; no priority claim.
+  A finite-logarithm calculation and a piecewise-linear Green kernel prove
+  the stronger coefficientwise identity
+  $\mathcal C_p\mathscr B=\mathscr B\pmod p$. Hence the first normalized
+  defect residue is independent of the level for every positive slope and
+  cutoff. The stronger growing-modulus refinement requires higher defect
+  kernels and remains separate.
+- **Status:** Complete first-residue stabilization theorem; 3,902 exact
+  arithmetic checks; no priority claim.
 - **Proof:** [Bala August first-defect kernel](related-results/BalaAugustFirstDefectKernel.md)
 - **Exact checkers:** [`verify_bala_august_first_defect.py`](verification/related/verify_bala_august_first_defect.py),
   [`verify_bala_august_kernel_frobenius.py`](verification/related/verify_bala_august_kernel_frobenius.py)
 
-### NEG-PREFIX-3 - exact prime-three prefix obstruction
+### NEG-PREFIX-3 - all-level prime-three prefix theorem
 
 - **Claim:** For $U_{a,b;c}$ as above, the normalized first defect
   $(U_{a,b;c}(3n)-U_{a,b;c}(n))/9$ has an explicit constant-term residue
@@ -288,11 +283,12 @@ proof.
   This includes Bala's $u=U_{1,2;1}$ and is maximal among residue-class
   conditions on $(a,b,n)\bmod3$ uniform in $c$: all four omitted triples
   have explicit counterexamples of exact valuation $2$.
-- **Next target:** Exact data support
-  $D_r\equiv27D_{r-1}\pmod {3^{3r+1}}$ for all parameters; this is sharp
-  at $(a,b,c,n,r)=(1,1,1,1,2)$ but remains conjectural.
-- **Status:** Complete elementary first-level theorem and counterexample;
-  34,942 exact checks pass; all-level renormalization remains open.
+- **All-level theorem:** The ternary kernel is Cartier-fixed modulo $9$ and
+  $D_r\equiv27D_{r-1}\pmod {3^{3r+1}}$ for all parameters. This is sharp at
+  $(a,b,c,n,r)=(1,1,1,1,2)$ and propagates the cubic subclass through every
+  level.
+- **Status:** Complete elementary all-level theorem and counterexample;
+  36,929 exact checks pass.
 - **Proof:** [Prime-three negative-binomial boundary](related-results/PrimeThreeNegativeBinomialBoundary.md)
 - **Exact checker:** [`verify_prime_three_negative_binomial_boundary.py`](verification/related/verify_prime_three_negative_binomial_boundary.py)
 
@@ -305,15 +301,14 @@ proof.
 - **Exact correction:** The suggested congruence modulo $p^5$ is false:
   $v_7(u(7)-u(1))=3$. The suggested higher-level modulus also fails, since
   $v_7(u(49)-u(7))=6<9$.
-- **Remaining target:** NEG-PREFIX-CUBIC proves the ordinary $p^{3r}$
-  adjacent tower for every $p\geq5$, while NEG-PREFIX-3 proves Bala's first
-  ternary level. The stronger normalized-defect stabilization and all-level
-  $p=3$ propagation remain open.
+- **Remaining target:** The ordinary adjacent tower is proved for every odd
+  prime, and the first normalized residue is stable for $p\geq5$. Only the
+  stronger growing-modulus defect refinement remains open.
 - **Source status:** Correction of an AI-generated strengthening relayed in
   Bala's correspondence; no claim that the corrected prime formula was an
   OEIS conjecture.
-- **Status:** Complete prime-level proof and exact counterexamples; all-level
-  corrected tower open.
+- **Status:** Complete prime-level correction, exact counterexamples, and
+  all-level ordinary tower.
 - **Proof:** [Bala's August coefficient packet, Section 6](related-results/BalaAugustCoefficientPacket.md#6-the-negative-binomial-strengthening-is-false)
 - **Exact checker:** [`verify_bala_august_coefficient_packet.py`](verification/related/verify_bala_august_coefficient_packet.py)
 

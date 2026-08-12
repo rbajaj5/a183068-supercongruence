@@ -316,9 +316,10 @@ Q_{p,r}(n)=
 Theorem 1 proves that this is $p$-integral for $p\geq5$. The separate
 [prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
 computes the exact first defect modulo $3$, proves the maximal
-parameter-residue criterion $3\mid nab(a+b)$ for the first cubic level,
-and gives sharp counterexamples in all four omitted triples. Exact computations
-suggest the stronger stabilization
+parameter-residue criterion $3\mid nab(a+b)$, propagates it through every
+level, and gives sharp counterexamples in all four omitted triples. The
+first-defect kernel theorem proves $Q_{p,r}(n)\equiv Q_{p,r-1}(n)\pmod p$.
+Exact computations suggest the stronger stabilization
 
 ```math
 Q_{p,r}(n)\equiv Q_{p,r-1}(n)
@@ -328,9 +329,9 @@ Q_{p,r}(n)\equiv Q_{p,r-1}(n)
 \qquad\text{(17)}
 ```
 
-This remains conjectural. It is the natural next refinement of the proved
-cubic tower. At $p=3$, the analogous observed law is the separate
-renormalization conjecture recorded in the boundary note.
+The additional powers in (17) remain conjectural. They are the natural next
+refinement of the proved cubic tower and proved first-residue stability. At
+$p=3$, the analogous renormalization is proved in the boundary note.
 
 ## 7. Literature boundary
 

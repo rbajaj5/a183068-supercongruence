@@ -20,11 +20,12 @@ is proved for every prime $p\geq5$ in
 computations also suggested that the normalized defect itself stabilizes.
 This note isolates the exact first obstruction to that stabilization.
 
-The result here is a **proved reduction**, not a proof of the full
-stabilization conjecture.  It shows that every first normalized defect is a
-single Cartier moment, gives an exact criterion for when the cubic exponent
-is sharp, and reduces the next congruence to one Frobenius-fixed kernel
-identity.
+The result here proves the first-residue stabilization conjecture.  It shows
+that every first normalized defect is a single Cartier moment, gives an exact
+criterion for when the cubic exponent is sharp, and proves that its canonical
+defect kernel is coefficientwise fixed by Cartier modulo $p$.  The last step
+is an elementary Bernoulli calculation: a diagonal Moebius difference turns
+the reciprocal-cube transgression into a piecewise-linear Green kernel.
 
 ## 1. Prefix constant term
 
@@ -419,8 +420,8 @@ shell in the Gaussian calculation.
 
 ### 5.2 A stronger coefficientwise Frobenius target
 
-Exact coefficient calculations indicate that the transport equation is
-more rigid than Lemma 3 requires.  Work in the coordinates (19), and write
+The transport equation is more rigid than Lemma 3 requires.  Work in the
+coordinates (19), and write
 
 ```math
 \frac1p\mathcal C_p(HL_p^2)=D_xP+D_yQ.
@@ -439,7 +440,7 @@ coordinates the kernel (5) becomes
 \tag{24}
 ```
 
-The observed identity is the coefficientwise strengthening
+The coefficientwise strengthening is
 
 ```math
 \boxed{
@@ -449,8 +450,8 @@ The observed identity is the coefficientwise strengthening
 \tag{25}
 ```
 
-If (25) holds, Corollary 4 follows with $J=0$, and hence the first
-normalized defect stabilizes for the full positive-slope prefix family.
+Identity (25) implies Corollary 4 with $J=0$, and hence the first normalized
+defect stabilizes for the full positive-slope prefix family.
 
 The quadratic part of (25) reduces to the lifted reciprocal-square bound
 
@@ -575,7 +576,7 @@ transgression obtained by applying Cartier to (24).  This is exactly where
 the Frobenius lift, rather than generic compactness or recurrence machinery,
 carries the problem.
 
-### 5.3 The remaining cube transgression
+### 5.3 The reciprocal-cube transgression
 
 The last identity can be written without formal derivatives.  Let
 $P_{m,n},Q_{m,n}$ denote the coefficients of the canonical primitives, and
@@ -611,15 +612,219 @@ $P_{pr,ps}\equiv P_{r,s}\pmod p$; the constant term $-cP$ cancels for the
 same reason.  Only $aU^P_{m,n}$ remains.  The $Q$ term is identical in the
 $y$ coordinate.  Multiplying the difference of (24) by $6$ gives (33).
 
-Thus the open step no longer contains $G$, $c$, a constant-term pairing,
-or an unspecified tangent primitive.  It is the single unit-shift identity
-(33) for the quadratic block potentials.  In particular, its truth is
-independent of the prefix slope $c$.
+Thus the last step no longer contains $G$, $c$, a constant-term pairing, or
+an unspecified tangent primitive.  It is the unit-shift identity (33) for
+the quadratic block potentials.  In particular, its truth is independent of
+the prefix slope $c$.
 
-The checker finds no failure of (25) or (33) in 1,732 exact coefficient tests for
-$p=5,7,11$, including coefficients beyond the first resonant diagonal and
-cases $p\mid c$.  This is evidence for the remaining reciprocal-cube
-transgression, not a proof of it.
+We now prove it.  Put $B=B_{p-3}$ and
+
+```math
+\lambda=\frac23B\pmod p.
+\tag{34}
+```
+
+For $1\leq s\leq p-1$, write
+
+```math
+H_s=\sum_{j=1}^s\frac1j\pmod p,
+\qquad H_0=0.
+```
+
+The elementary depth-two harmonic identity needed below is
+
+```math
+\sum_{s=1}^{p-1}\frac{H_{s-1}}{s^2}
+=\sum_{s=1}^{p-1}\frac{H_s}{s^2}
+=B_{p-3}\pmod p.
+\tag{35}
+```
+
+Indeed, the two sums differ by $\sum s^{-3}=0$.  For the first, replace
+$s^{-2}$ and $j^{-1}$ by $s^{p-3}$ and $j^{p-2}$ and use Faulhaber's
+formula on $\sum_{j=1}^{s-1}j^{p-2}$.  After summing over
+$s\in\mathbb F_p^\times$, every Bernoulli term vanishes except the term
+with index $p-3$; its coefficient is
+
+```math
+\frac{-1}{p-1}\binom{p-1}{p-3}=1\pmod p.
+```
+
+Define the finite logarithm
+
+```math
+W(z)=\sum_{s=1}^{p-1}\frac{z^s}{s}\in\mathbb F_p[z].
+```
+
+Coefficient periodicity gives
+
+```math
+V_p(z)=\frac{W(z)}{1-z^p}\quad\text{in }\mathbb F_p[[z]].
+\tag{36}
+```
+
+If $h_s=[z^s]W(z)^2$, then
+
+```math
+h_s=\frac{2H_{s-1}}s,
+\qquad
+h_{p-s}=-\frac{2H_s}s
+\quad(1\leq s\leq p-1).
+\tag{37}
+```
+
+The second equality follows from $H_{p-s-1}=H_s$ modulo $p$, while
+$z^{2p}W(1/z)^2=W(z)^2$ also gives $h_{p+s}=h_{p-s}$.  Equations
+(35)--(37) give
+
+```math
+\begin{aligned}
+[z^p]W^3&=-2B,& [z^{2p}]W^3&=2B,\\
+\sum_{s=1}^{p-1}\frac{h_s}{s}&=2B,&
+\sum_{s=1}^{p-1}\frac{h_{p+s}}s&=-2B.
+\end{aligned}
+\tag{38}
+```
+
+Let $E(z)=1+z+\cdots+z^{p-1}$.  Since
+$H=E(xy)/(1-x^py^p)$, applying Cartier to (36) and using (38) yields the
+finite polynomial calculation
+
+```math
+\begin{aligned}
+\mathcal C_p\!\left(E(xy)W(x)^3\right)&=2B(x^2-x),\\
+\mathcal C_p\!\left(E(xy)W(x)^2W(y)\right)&=2Bxy(1-x),\\
+\mathcal C_p\!\left(E(xy)W(x)W(y)^2\right)&=2Bxy(1-y),\\
+\mathcal C_p\!\left(E(xy)W(y)^3\right)&=2B(y^2-y).
+\end{aligned}
+\tag{39}
+```
+
+Therefore
+
+```math
+\mathcal C_p(HL_p^3)
+\equiv2BH\left(
+-a^3\frac{x}{(1-x)^2}
+-b^3\frac{y}{(1-y)^2}
++3ab(a+b)\frac{xy}{(1-x)(1-y)}
+\right)\pmod p.
+\tag{40}
+```
+
+Every coefficient of the parenthesized expression after multiplication by
+$H$, at an exponent $(pm,pn)$, is divisible by $p$: the first two terms
+give respectively $p(m-n)_+$ and $p(n-m)_+$, and the mixed term gives
+$p\min\{m,n\}$.  Hence a second Cartier application annihilates (40).
+It follows that
+
+```math
+\Delta^{(3)}_{m,n}\equiv
+\begin{cases}
+2B\bigl(a^3(m-n)-3ab(a+b)n\bigr),&m\geq n,\\
+2B\bigl(b^3(n-m)-3ab(a+b)m\bigr),&n\geq m
+\end{cases}
+\pmod p.
+\tag{41}
+```
+
+It remains to calculate the right side of (33).  Let
+
+```math
+R_{m,n}=\frac1p[x^{pm}y^{pn}]HL_p^2.
+```
+
+The standard harmonic congruences
+
+```math
+\sum_{s=1}^{p-1}\frac1s\equiv-\frac{p^2}{3}B\pmod {p^3},
+\qquad
+\sum_{s=1}^{p-1}\frac1{s^2}\equiv\frac{2p}{3}B\pmod {p^2},
+\tag{42}
+```
+
+and $\sum s^{-3}\equiv0\pmod p$ imply, by splitting the interval into
+blocks of length $p$,
+
+```math
+\frac1p[z^{pd}]V_p(z)^2\equiv-\lambda d,
+\qquad
+\frac1p\sum_{\substack{1\leq u<pM\\p\nmid u}}
+\frac1{u(pD+u)}\equiv\lambda M\pmod p.
+\tag{43}
+```
+
+For completeness, the first identity uses
+
+```math
+\sum_{\substack{1\leq u<pd\\p\nmid u}}\frac1u
+\equiv-\frac{p^2d^2}{3}B\pmod {p^3},
+```
+
+and the second follows by replacing the summand by $u^{-2}$ modulo the
+required $p^2$ precision.  Separating the two pure squares and the mixed
+term of $L_p^2$ now gives the piecewise-linear Green kernel
+
+```math
+\boxed{
+R_{m,n}\equiv\lambda\left(
+-a^2(m-n)_+-b^2(n-m)_++2ab\min\{m,n\}
+\right)\pmod p.
+}
+\tag{44}
+```
+
+In every summand defining $U^P_{m,n}$, the first index $pm-q$ is a
+$p$-adic unit and the second is divisible by $p$, so the canonical rule
+assigns that coefficient to $P$ and
+
+```math
+P_{pm-q,pn}=\frac{R_{pm-q,pn}}{pm-q}.
+```
+
+The analogous statement holds for $Q$.  There are $M(p-1)\equiv-M$
+units in each interval $1\leq u<pM$.  Substituting (44) and counting the
+units below and above the breakpoint gives, when $m\geq n$,
+
+```math
+\begin{aligned}
+U^P_{m,n}&\equiv
+-n\lambda b(b+2a)+(m-n)\lambda a^2,\\
+U^Q_{m,n}&\equiv-n\lambda a(a+2b).
+\end{aligned}
+\tag{45}
+```
+
+For $n\geq m$ the formulas are obtained by interchanging
+$(a,m,P)$ and $(b,n,Q)$.  Since $3\lambda=2B$, equation (45) gives
+
+```math
+3aU^P_{m,n}+3bU^Q_{m,n}
+\equiv
+2B\bigl(a^3(m-n)-3ab(a+b)n\bigr)
+\pmod p
+```
+
+when $m\geq n$, and the second case of (41) when $n\geq m$.  This proves
+(33), hence (25), and therefore (18) with $J=0$.
+
+### Theorem 6 (first normalized-defect stabilization)
+
+For every prime $p\geq5$ and positive integers $a,b,c,n$, the first
+normalized defect is stable through every adjacent pair of levels:
+
+```math
+\boxed{
+\frac{D_{p,r}^{a,b;c}(n)}{p^{3r}}
+\equiv
+\frac{D_{p,r-1}^{a,b;c}(n)}{p^{3r-3}}
+\pmod p
+\qquad(r\geq2).
+}
+\tag{46}
+```
+
+This follows immediately from (25) and Corollary 2.
 
 ## 6. Bala's specialization and computation
 
@@ -640,7 +845,7 @@ through the tested range.  At $n=1$ the common observed residue is
 
 agreeing with the proved prime-level Bernoulli formula in the
 [August coefficient packet](BalaAugustCoefficientPacket.md).  These
-computations support (15), but they do not replace its proof.
+computations agree with Theorem 6.
 
 The same first-residue stability has no failures in the broader exact grid
 
@@ -650,9 +855,8 @@ p\in\{5,7,11\},\quad
 1\leq c\leq3,
 ```
 
-comprising 576 parameter configurations at levels one and two.  This is
-evidence that (15) belongs to the whole positive-slope prefix family rather
-than to one isolated sequence.
+comprising 576 parameter configurations at levels one and two.  They check
+the family-level theorem well beyond Bala's original specialization.
 
 Run
 
@@ -662,16 +866,16 @@ python verification/related/verify_bala_august_kernel_frobenius.py
 ```
 
 The first command runs 1,474 normalized-defect checks.  The second runs
-1,732 exact coefficient checks of (25), its canonical primitives, the
-lifted square bound (26), and the unit-shift transgression (33).
+2,428 exact coefficient checks of (25), its canonical primitives, the
+lifted square bound (26), the Green-kernel formula (44), the closed cube
+formula (41), and the unit-shift transgression (33).
 
-## 7. Literature boundary and next obligation
+## 7. Literature boundary
 
-This note closes the expansion and tail bookkeeping for the first defect.
-The unresolved mathematical statement is now (15); the concrete stronger
-certificate is (18).  The higher experimental modulus recorded in the
-August follow-on requires further defect kernels beyond (5), so it is not
-claimed here.
+This note closes the expansion, tail bookkeeping, and first-residue
+stabilization for the first defect.  The higher experimental modulus
+recorded in the August follow-on requires further defect kernels beyond
+(5), so it is not claimed here.
 
 The formal-derivative language is compatible with Beukers and Vlasenko's
 [Dwork crystals III](https://doi.org/10.1093/imrn/rnad101), where higher
@@ -679,8 +883,8 @@ formal-derivative modules and Cartier-stable quotients organize
 supercongruence mechanisms.  The pure constant-term congruences of Mellit
 and Vlasenko
 [apply to powers of a Laurent polynomial](https://arxiv.org/abs/1306.5811).
-Neither result proves (18) verbatim: the fixed prefix factor $H(t)$ is part
-of the arithmetic here, and no Hasse--Witt or excellent-Frobenius
-hypothesis has been verified for this family.  They identify the right
-cohomological language; Lemma 3 isolates the elementary certificate still
-needed in this particular problem.
+Neither result supplies (18) verbatim: the fixed prefix factor $H(t)$ is
+part of the arithmetic here, and no Hasse--Witt or excellent-Frobenius
+hypothesis has been verified for this family.  They identify the
+cohomological language; equations (34)--(45) provide the elementary
+certificate in this particular problem.

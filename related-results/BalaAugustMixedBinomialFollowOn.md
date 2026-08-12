@@ -16,7 +16,7 @@ No literature-priority claim is made for the present assembly.
 | A119258 denominator primes | Closed: the arbitrary integral coefficient slope removes the exclusion |
 | Chebyshev primes dividing the coefficient slope | Closed by the same theorem |
 | A333473 | Its named quadratic tower holds for every odd prime; the larger algebraic-kernel family remains open |
-| Mixed negative-binomial sum | Cubic tower proved for every $p\geq5$ by the prefix-Cartier theorem; the normalized-defect stabilization remains conjectural |
+| Mixed negative-binomial sum | Cubic tower proved for every odd prime; first normalized-defect residue proved stable for $p\geq5$, with only the stronger growing-modulus refinement open |
 | Products and twists | Cubic for three or more generalized-binomial factors; quadratic for two |
 | Index-dependent negative substitutions | Two families fail cubically at $p=5$; two companion families remain computational candidates |
 | A333592 | Named cubic tower closed by Coster; the full positive-parameter family is also covered by the prefix-Cartier theorem |
@@ -253,7 +253,8 @@ for every $p\geq5$ and $n,r\geq1$. It proves the extra power only after
 prefix summation: the coefficientwise two-factor theorem itself remains
 quadratic. The [prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
 proves the first cubic level for Bala's sum and computes the exact obstruction
-for the full family. Its all-level $p=3$ propagation remains conjectural.
+for the full family. The prime-three boundary theorem proves the all-level
+$p=3$ propagation for the maximal residue subclass, including Bala's sum.
 
 ### 4.1 A stabilized first-defect conjecture
 
@@ -286,15 +287,17 @@ Q_{p,r}(n)\equiv Q_{p,r-1}(n)
 \qquad\text{(10b)}
 ```
 
-In particular, the leading residue $Q_{p,r}(n)\bmod p$ appears independent
-of $r$. The cubic integrality boundary is now proved for $p\geq5$; only this
-stronger stabilization and the all-level prime $p=3$ propagation remain open.
+In particular, the leading residue $Q_{p,r}(n)\bmod p$ is independent of
+$r$ by the first-defect theorem. The cubic integrality boundary is proved
+for every odd prime in Bala's specialization. Only the additional powers
+asserted in (10b) remain open.
 
 The modular checker computes each summand by tracking its $p$-adic exponent
 and unit separately. It verifies the cubic divisibility and (10b) for
 $p\in\{3,5,7,11,13\}$, $1\leq n\leq6$, and every level $r\leq4$ with
-$np^r\leq100{,}000$. The stabilization remains evidence, not a proof. The
-exceptional $p=5$ loss is attained in the grid.
+$np^r\leq100{,}000$. These calculations remain evidence for the additional
+powers in (10b); the residue modulo $p$ is now proved. The exceptional
+$p=5$ loss is attained in the grid.
 
 ## 5. Bala's product and twist proposal
 
