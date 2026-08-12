@@ -2,7 +2,8 @@
 
 **Status:** the A365029 boundary theorem and full \(r=1,2\) adjacent
 supercongruences are proved; all three A375178--A375180 prime-level families and the
-prime-level fifth-power claims for A112028 and A219562 are proved; and the
+prime-level fifth-power claims for A112028 and A219562 are proved; the full
+enhanced A219562 tower is proved in a separate critical-shell note; and the
 complete A333593 prime-power tower is reduced to Coster's generalized Apéry
 theorem. The enhanced higher-level towers remain exact computational targets.
 Literature priority is preliminary, and the new arguments have not been
@@ -24,7 +25,7 @@ representative targets by mechanism.
 | --- | --- | --- |
 | [A365029] | \(a(p-1)\equiv1\pmod{p^3}\), plus an all-\(n,r\) \(p^{3r}\) tower | The first congruence is proved below in the stronger two-parameter form \(p^{A+B}\); the full \(r=1,2\) adjacent congruences are also proved; only \(r\ge3\) remains |
 | [A375178] | An odd-power family satisfies \(b_m(p)\equiv1\pmod{p^{2m+3}}\), plus a stronger tower for \(r\ge2\) | The entire prime-level family is proved below; the tower remains a target |
-| [A112028], [A219562] | The cubic and quartic shifted-binomial sums satisfy a prime-level fifth power and an enhanced \(p^{3r+3}\) tower | Both prime-level fifth powers are proved below; Coster gives the \(p^{3r}\) baseline; only the extra higher-level gain remains |
+| [A112028], [A219562] | The cubic and quartic shifted-binomial sums satisfy a prime-level fifth power and an enhanced \(p^{3r+3}\) tower | Both prime-level fifth powers are proved below; the [critical-shell theorem](A219562EnhancedTower.md) closes the full A219562 tower; only A112028's extra higher-level gain remains |
 | [A375179], [A375180] | Two parallel signed odd-power families have the same proposed exponents | Proved below as the \(A=2,3\) cases of one arbitrary-dilation theorem; their enhanced higher towers remain targets |
 | [A333593] | \(a(np^r)\equiv a(np^{r-1})\pmod{p^{3r}}\) | Proved below by an exact decomposition into a Coster generalized Apéry tower and a Jacobsthal--Kazandzidis binomial tower |
 | [A364118] | An Apéry linear combination gains two or three powers beyond the underlying tower | Modular/Apéry target; not yet reduced to the termwise framework |
@@ -334,12 +335,14 @@ consequences:
   \(B_4(p)\equiv1\pmod {p^5}\) for every prime \(p\ge7\).
 
 Thus the prime-level fifth-power parts of both OEIS conjectures are closed.
-Coster's theorem supplies their ordinary \(p^{3r}\) towers. What remains is
-only the proposed enhancement
+Coster's theorem supplies their ordinary \(p^{3r}\) towers. The separate
+[critical-shell theorem](A219562EnhancedTower.md) proves the proposed
+enhancement for \(q=4\), even at the endpoint \(p=5\). What remains here is
+only the \(q=3\) enhancement
 
 ```math
-B_q(p^r)\equiv B_q(p^{r-1})\pmod {p^{3r+3}}
-\qquad(q=3,4,\ r\ge2).
+B_3(p^r)\equiv B_3(p^{r-1})\pmod {p^{3r+3}}
+\qquad(p\ge7,\ r\ge2).
 ```
 
 The lower boundary is genuine for both named exponents:
@@ -469,9 +472,9 @@ The economical order is:
    additional \(3r\) block gain must be made uniform in all three geometries.
 3. **A364183 integrality.** Resolve the even/odd factorial-ratio branches
    before discussing supercongruences.
-4. **A112028 and A219562 above the prime boundary.** Their fifth-power
-   boundaries are now proved. The remaining target is exactly the enhanced
-   \(p^{3r+3}\) tower for \(r\ge2\).
+4. **A112028 above the prime boundary.** Its fifth-power boundary is proved,
+   and A219562's analogous higher tower is now closed separately. The
+   remaining target is exactly A112028's enhanced \(p^{3r+3}\) tower.
 5. **A364118.** Use its Apéry/modular structure rather than forcing a
    termwise proof.
 

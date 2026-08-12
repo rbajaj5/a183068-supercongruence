@@ -13,6 +13,7 @@ SCRIPTS = (
     "verification/related/verify_landau_supercongruence.py",
     "verification/related/verify_catalan_ballot_supercongruences.py",
     "verification/related/verify_bala_oeis_supercongruences.py",
+    "verification/related/verify_a219562_enhanced_tower.py",
     "verification/related/verify_bala_110_campaign.py",
     "verification/related/verify_franel_companion_ct_reduction.py",
     "verification/related/verify_balanced_matrix_coefficient_tower.py",

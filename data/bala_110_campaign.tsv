@@ -23,7 +23,7 @@ A198256	T	proved-here	related-results/MeanderAdjacentBinomialTowers.md	independe
 A198258	T	proved-here	related-results/MeanderAdjacentBinomialTowers.md	independent review of the ternary multiplicity bonus
 A208675	T	published-source	Straub equation (24) and multivariate cubic theorem, arXiv:1401.0854	verify the exact shifted parameter match in the bibliography
 A212334	T	partial	related-results/A212334EnhancedPrimeCongruence.md	prime-level p^5 theorem proved; for p>=7 the higher tower follows from R1-R3, while p=5 needs one extra boundary power
-A219562	T	partial	related-results/BalaOeisSupercongruenceQueue.md proves the p^5 boundary; Coster gives p^(3r)	prove only the remaining p^(3r+3) gain for r>=2
+A219562	T	proved-here	related-results/A219562EnhancedTower.md	independent review and literature-priority audit of the critical-shell theorem
 A234839	T	published-source	Osburn--Sahu--Straub Example 3.3 cited by OEIS	verify exact parameter match in bibliography
 A244973	T	partial	related-results/A244973QuadraticFrobeniusReduction.md	prove the explicit combined linear-quadratic Cartier estimate (11)
 A260667	T	proved-here	related-results/A260667PrimeBoundary.md	audit literature priority beyond the source record

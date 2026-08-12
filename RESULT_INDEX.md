@@ -86,10 +86,22 @@ proof.
   and A219562 (\(q=4\)) for every prime \(p\ge7\).
 - **Source status:** Named open prime-level refinements; Coster supplies only
   the ordinary cubic tower used as the higher-level baseline.
-- **Status:** Complete unchecked elementary proof; the enhanced
-  \(p^{3r+3}\) statements for \(r\ge2\) remain open.
+- **Status:** Complete unchecked elementary prime-level proof. A219562's
+  enhanced higher tower is proved separately; only A112028's remains open.
 - **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#the-even-power-boundary-and-a112028--a219562)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
+
+### A219562-HIGH — complete enhanced quartic shifted-binomial tower
+
+- **Claim:** For every prime \(p\ge5\) and \(r\ge2\),
+  \(\operatorname{A219562}(p^r-1)\equiv
+  \operatorname{A219562}(p^{r-1}-1)\pmod {p^{3r+3}}\).
+- **Mechanism:** Unit/scaled shell decomposition; every noncritical stratum
+  is termwise deep enough, while the last stratum collapses to the inverse-
+  square power sum on \(\mathbb F_p^\times\).
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Enhanced A219562 tower](related-results/A219562EnhancedTower.md)
+- **Exact checker:** [`verify_a219562_enhanced_tower.py`](verification/related/verify_a219562_enhanced_tower.py)
 
 ### A333-COSTER — complete A333593 tower
 

@@ -59,7 +59,7 @@ odd-prime tower is source-closed. The repository's separate small-prime
 notes concern sharper binary and ternary boundary statements and do not
 turn this classical closure into a new claim.
 
-## 2. Published cubic baseline, enhanced refinement still open
+## 2. Published cubic baseline and the enhanced shifted refinements
 
 For
 
@@ -78,8 +78,10 @@ The live pages ask for more:
 The published `p^(3r)` statement is therefore evidence for `partial`, not
 for `published-source`. The later
 [boundary theorem](BalaOeisSupercongruenceQueue.md#the-even-power-boundary-and-a112028--a219562)
-proves both prime-level `p^5` claims. Only the extra three powers at levels
-`r>=2` remain a genuine target.
+proves both prime-level `p^5` claims. The later
+[A219562 critical-shell theorem](A219562EnhancedTower.md) also proves its
+quartic higher tower. Only A112028's extra three powers at levels `r>=2`
+remain a genuine target in this pair.
 
 ### A108628: shifted multivariate Apéry coefficient
 
