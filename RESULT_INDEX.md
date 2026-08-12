@@ -602,6 +602,33 @@ proof.
 - **Proof:** [All eleven Bober half-index variants](related-results/BoberHalfIndexIntegralityTowers.md)
 - **Exact checker:** [`verify_bober_half_index.py`](verification/related/verify_bober_half_index.py)
 
+### BOBER-FRAC-ALL - all 15 fractional Bober variants and towers
+
+- **Claim:** In addition to the eleven half-index variants in BOBER-HALF,
+  A295456 and A295458 at index $N/3$, and A295460 and A295477 at index
+  $N/4$, are integral for every $N\ge0$. Hence every one of the 15 approved
+  fractional-index formulas satisfies
+
+  ```math
+  B(np^r)\equiv B(np^{r-1})\pmod {p^{3r}}
+  ```
+
+  for every prime $p\ge5$ and positive integers $n,r$.
+- **Source status:** Fifteen named integrality conjectures in approved OEIS
+  comments, together with the corresponding Bala cubic-tower targets.
+- **Mechanism:** At every modulus coprime to the fixed denominator, a
+  generalized-factorial progression count transfers exactly to the original
+  Bober Landau function. The denominator primes reduce to four explicit
+  nonnegative factorial valuations plus positive linear terms.
+- **Boundary:** No tower claim is made for $p=2,3$. A295464 has no approved
+  public fractional-index formula and no claim is inferred for it.
+- **Status:** Complete unchecked elementary proof candidate; specialist
+  review and literature priority pending.
+- **Proofs:** [Eleven half-index variants](related-results/BoberHalfIndexIntegralityTowers.md),
+  [four denominator-three/four variants](related-results/BoberRemainingFractionalIntegralityTowers.md)
+- **Exact checkers:** [`verify_bober_half_index.py`](verification/related/verify_bober_half_index.py),
+  [`verify_bober_remaining_fractional.py`](verification/related/verify_bober_remaining_fractional.py)
+
 ### RATGAMMA-3 — rational gamma-ratio cubic towers
 
 - **Claim:** Let
@@ -629,8 +656,8 @@ proof.
   It also proves every row conjecture on A365025 (including A365026 and
   A365027) and every row $s\ge3$ of A364513 (including A364515--A364517).
   The same theorem supplies the quotient congruence component for all 15
-  currently visible fractional-index variants in Bala's Bober packet; the
-  eleven half-index members are now unconditional by BOBER-HALF.
+  currently visible fractional-index variants in Bala's Bober packet; all
+  15 are now unconditional by BOBER-FRAC-ALL.
 - **Mechanism:** An exact denominator-$q$ rational-binomial product, complete
   reduced-residue harmonic blocks, and the classical balanced integer
   factorial-ratio closure.
@@ -1128,24 +1155,22 @@ proof.
 - **Proof:** [Bober sporadic factorial-ratio packet](related-results/BoberSporadicFactorialRatioPacket.md)
 - **Exact checker:** [`verify_bober_sporadic_packet.py`](verification/related/verify_bober_sporadic_packet.py)
 
-### BOBER-FRAC - fractional Bober integrality queue
+### BOBER-FRAC-PACKET - fractional Bober packet
 
 - **Claim:** The 15 fractional-index variants currently visible on the 12
   records identified by Bala satisfy the residue-balanced rational
   $p^{3r}$ quotient tower for $p\ge5$.
-- **Boundary:** The sequence congruence follows whenever the values are
-  $p$-integral. BOBER-HALF proves all eleven $N/2$ variants integral and
-  makes their towers unconditional. Four global integrality claims remain:
-  A295456 and A295458 at $N/3$, and A295460 and A295477 at $N/4$.
-  A295464 has no approved public fractional-index formula and none is
-  inferred.
-- **Status:** Complete conditional congruence deduction for the packet;
-  eleven fractional cases closed completely and four named integrality
-  targets open.
+- **Boundary:** BOBER-HALF proves all eleven $N/2$ variants integral; the
+  denominator-transfer theorem proves A295456 and A295458 at $N/3$ and
+  A295460 and A295477 at $N/4$. A295464 has no approved public
+  fractional-index formula and none is inferred.
+- **Status:** Queue complete: all 15 approved fractional variants are
+  integral and have unconditional cubic towers for $p\ge5$.
 - **Proof and queue:** [Bober sporadic factorial-ratio packet](related-results/BoberSporadicFactorialRatioPacket.md)
 - **Exact checkers:** [`verify_bober_sporadic_packet.py`](verification/related/verify_bober_sporadic_packet.py),
   [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py),
-  [`verify_bober_half_index.py`](verification/related/verify_bober_half_index.py)
+  [`verify_bober_half_index.py`](verification/related/verify_bober_half_index.py),
+  [`verify_bober_remaining_fractional.py`](verification/related/verify_bober_remaining_fractional.py)
 
 ### A008793-CUBE — nonlinear cube-plane-partition tower
 

@@ -267,16 +267,17 @@ For every prime `p >= 5`, that theorem gives
 The integrality just proved allows multiplication by the lower value, which
 yields (3).
 
-## 5. What remains in the fractional Bober packet
+## 5. Completion of the fractional Bober packet
 
 This theorem closes every approved `N/2` integrality claim in the packet.
-The four fractional-index claims not covered here are
+The four fractional-index claims not covered by the half-index argument are
 
 - A295456 and A295458 at `N/3`;
 - A295460 and A295477 at `N/4`.
 
-Their odd-prime quotient congruences are already covered by the rational
-gamma-ratio theorem.  Their global integrality is the remaining obligation.
+Their global integrality and cubic towers are proved in the subsequent
+[denominator-transfer theorem](BoberRemainingFractionalIntegralityTowers.md).
+Thus all 15 approved fractional-index formulas in the packet are now closed.
 A295464 currently has no approved fractional-index comment on its public
 OEIS record and is therefore not assigned an unverified formula here.
 
