@@ -1,8 +1,8 @@
-# The two Cartier moments behind four cubic Euler-product towers
+# One Cartier-square obstruction behind four cubic Euler-product towers
 
 **Status:** exact all-level reduction; every logarithmic term of degree at
-least three is discharged; two explicit weighted Cartier moments remain to
-be proved
+least three is discharged; the two weighted moments reduce further to one
+coefficientwise Cartier-square estimate, which remains to be proved
 
 This note sharpens the quadratic baseline in
 [the modular-product packet](ModularProductPrimeCoefficientPacket.md) for
@@ -11,11 +11,12 @@ the conjectures attached to
 [A023873](https://oeis.org/A023873),
 [A206622](https://oeis.org/A206622), and
 [A283271](https://oeis.org/A283271).  The four conjectures are not four
-unrelated problems.  After one Frobenius factorization, all of them reduce
-to the same two coefficient estimates.
+unrelated problems.  After one Frobenius factorization, all of them first
+reduce to the same two coefficient estimates, and a second exact argument
+reduces those two estimates to one unweighted Cartier-square condition.
 
-The reduction is exact.  It is not a proof of those two estimates, and the
-four records therefore remain classified `partial`.
+The reduction is exact.  It is not a proof of the final Cartier-square
+condition, and the four records therefore remain classified `partial`.
 
 ## 1. The four products
 
@@ -232,24 +233,130 @@ v_p(M_2)\ge e+1.
 \tag{18}
 ```
 
-The full OEIS towers are therefore reduced to two weighted moments, not to
-an uncontrolled exponential expansion.
+This already reduces the full OEIS towers to two weighted moments, not to
+an uncontrolled exponential expansion.  The next theorem removes the
+linear moment and the weight from the remaining obligation.
 
-## 5. The quadratic Cartier boundary
+## 5. Collapse to one coefficientwise obstruction
+
+Put
+
+```math
+Q_p(x)=C_p(\Lambda_p(x)^2).
+```
+
+Consider the coefficientwise estimate
+
+```math
+\boxed{
+v_p([x^j]Q_p)\ge v_p(j)+1
+\quad(j\ge1).}
+\tag{19}
+```
+
+This is stronger than mere divisibility of `Q_p` by `p`, but it is
+unweighted: neither `N` nor the framing parameter `c` occurs in it.
+
+### Lemma 4 (coefficients of a large integral power)
+
+Let `H(x)` belong to `1+x Z_(p)[[x]]`, let `A` be a nonzero integer, and
+put `E=v_p(A)`.  Then, for every `m>=1`,
+
+```math
+v_p([x^m]H(x)^A)\ge
+\max\{0,E-v_p(m)\}.
+\tag{20}
+```
+
+#### Proof
+
+Write `A=p^E u` and replace `H` by `H^u`; this is still an integral unit
+series even when `u` is negative.  The elementary Frobenius congruence
+
+```math
+H(x)^{p^E}\equiv H(x^p)^{p^{E-1}}\pmod {p^E}
+```
+
+follows by raising `H(x)^p=H(x^p)+pR(x)` to the power `p^(E-1)`.
+Induction on `E` now proves (20): if `p` does not divide `m`, the comparison
+series has no `x^m` term; if `p` divides `m`, its `x^m` coefficient is the
+coefficient at `m/p` one level lower.  QED
+
+### Theorem 5 (one-obstruction criterion)
+
+Assume `d>=2`, `p>=5`, and (19).  Then both estimates (16)--(17) hold for
+every nonzero integral framing `c` and every `N>=1`.  Consequently the full
+adjacent cubic congruence (15) holds.
+
+#### Proof
+
+Write
+
+```math
+G(x)^{cN}=\sum_{m\ge0}h_mx^m,
+\qquad
+Q_p(x)=\sum_{j\ge1}q_jx^j,
+```
+
+and put `e=v_p(N)`, `q=v_p(c)`.  Then
+
+```math
+M_2=\sum_{j=1}^{N}h_{N-j}q_j.
+```
+
+If `v_p(j)=t<e`, then `v_p(N-j)=t`.  Lemma 4 and (19) give
+
+```math
+v_p(h_{N-j}q_j)\ge(e+q-t)+(t+1)\ge e+1.
+```
+
+If `t>=e`, condition (19) alone gives the same bound.  Hence the stronger
+uniform estimate
+
+```math
+v_p(M_2)\ge e+1
+\tag{21}
+```
+
+holds, and in particular implies (17).
+
+It remains to recover `M_1`.  When `e=0`, its required bound is just
+integrality.  If `e>=1`, factor (9) with `N` in place of `pN`, extract the
+coefficient of degree `N`, and use (7).  This gives the exact recursion
+
+```math
+\begin{aligned}
+M_1(p,N,c)
+={}&p^dM_1(p,N/p,c)+cN M_2(p,N/p,c)\\
+&+\sum_{k\ge2}\frac{(cN)^k}{k!}
+[x^{N/p}]G(x)^{cN/p}C_p(\Lambda_p^{k+1}).
+\end{aligned}
+\tag{22}
+```
+
+The first term has the required valuation by induction and `d>=2`.  The
+second has valuation at least `e+q+e`, by (21) one level lower.  Every tail
+term has valuation at least `k(e+q)-v_p(k!)>=2e`; here `p>=5`, `e>=1`, and
+`k>=2`.  These three bounds imply (16).  Theorem 3 now proves (15).  QED
+
+Thus the four OEIS towers no longer have two independent weighted
+obligations.  They have one common coefficientwise obligation, (19).
+
+## 6. The quadratic Cartier boundary
 
 The first necessary contraction behind (17) is
 
 ```math
 C_p(\Lambda_p^2)\in p\mathbb Z_{(p)}[[x]].
-\tag{19}
+\tag{23}
 ```
 
 Exact arithmetic exhibits the source prime ranges cleanly:
 
-- for A023871, (19) holds throughout the checked range for `p>=7` and
+- for A023871, (23) holds throughout the checked range for `p>=7` and
   fails already at `p=5`;
-- for A206622, the plus/minus combination restores (19) at `p=5`;
-- for the two degree-four products, (19) holds in the checked range already
+- for A206622, the plus/minus combination restores (23) at `p=5`;
+- for the two degree-four products, (23) holds in the checked range already
   at `p=5`, although the live OEIS statements only ask for `p>=7`.
 
 The failure for A023871 is not cosmetic.  Its adjacent differences at
@@ -258,39 +365,38 @@ cubic targets `3,6`.  Conversely, the exact checks suggest that the two
 degree-four conjectures may extend from `p>=7` to `p>=5`; `p=3` fails at
 the first level.
 
-These observations are not promoted to theorems.  Even (19) alone is not
-enough at higher levels: after dividing it by `p`, the weighted coefficient
-in (17) still has to supply `e` further powers.  This is precisely the
-horizontal scalar cancellation that the coefficientwise colored theorem
-cannot see.
+These observations are not promoted to theorems.  The stronger stratum
+estimate (19), rather than (23) alone, is what supplies all further powers
+in the weighted coefficient.  This is precisely the horizontal scalar
+cancellation that the coefficientwise colored theorem cannot see.
 
-## 6. What is now finished and what is not
+## 7. What is now finished and what is not
 
 The following obligations are closed uniformly for all four records:
 
 1. the Frobenius factorization;
 2. `p`-integrality of the reduced logarithm;
 3. exact Cartier scaling (7);
-4. every logarithmic degree `k>=3`; and
+4. every logarithmic degree `k>=3`;
 5. reduction of every adjacent level and every integral framing parameter
-   to (16)--(17).
+   to (16)--(17); and
+6. reduction of both weighted moments to the single coefficientwise
+   estimate (19).
 
-What remains is one common **Cartier-moment lemma**: prove (16)--(17) for
-the constant exponent profiles in (3), with the stated prime ranges.  A
-proof may use the Eisenstein-series descriptions
+What remains is one common **Cartier-square lemma**: prove (19) for the
+constant exponent profiles in (3), with the stated prime ranges.  A proof
+may use the Eisenstein-series descriptions
 
 ```math
 n[x^n]\log G=\pm\sigma_3(n),\quad
 \pm\sigma_5(n),\quad\text{or}\quad
-\frac{\sigma_3(2n)-\sigma_3(n)}4,
-\tag{20}
+\frac{\sigma_3(2n)-\sigma_3(n)}4.
+\tag{24}
 ```
 
-but it must control the weighted coefficient after multiplication by
-`G^(cN)`.  A congruence for the ghost coordinates alone does not supply
-that step.
+Theorem 5 shows that no further weighted estimate is then necessary.
 
-## 7. Verification and source boundary
+## 8. Verification and source boundary
 
 The exact checker
 [`verify_euler_product_cubic_cartier_moments.py`](../verification/related/verify_euler_product_cubic_cartier_moments.py)
@@ -298,11 +404,13 @@ The exact checker
 1. verifies the exact scaling (7) for all four products;
 2. verifies (14) directly against the defining Euler products;
 3. checks the two moment bounds on several `p`-adic strata;
-4. checks (19) coefficientwise through a finite but broad degree range;
-5. records the sharp A023871 failure at `p=5`; and
-6. records the degree-four `p=5` evidence and `p=3` failure.
+4. checks the large-power coefficient lemma and the recursion (22);
+5. checks the stronger estimate (19) coefficientwise on several strata;
+6. checks (23) coefficientwise through a finite but broad degree range;
+7. records the sharp A023871 failure at `p=5`; and
+8. records the degree-four `p=5` evidence and `p=3` failure.
 
 The conjectures and product definitions come from the four linked OEIS
 pages.  Searches of the cited Euler-product, Gauss-congruence, and Dwork
-literature did not locate a theorem that directly proves (16)--(17).
+literature did not locate a theorem that directly proves (19).
 That negative search is not a priority claim.

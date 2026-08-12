@@ -310,13 +310,14 @@ The next route-M reduction treats A023871, A023873, A206622, and A283271
 uniformly.  Their adjacent cubic defects have an exact reduced-logarithm
 expansion, but every logarithmic degree at least three is already deep
 enough.  The new
-[Cartier-moment note](EulerProductCubicCartierMoments.md) proves that the
-entire all-level problem is equivalent to two explicit weighted
-coefficients `M1` and `M2`, with sharp valuation targets that retain
-`v_p(N)` and the framing parameter.  It also records the genuine A023871
-failure at `p=5` and the compensating plus/minus contraction for A206622.
-The four records remain `partial`: the two common moment estimates, rather
-than the full exponential tail, are now the only open arithmetic step.
+[Cartier-square note](EulerProductCubicCartierMoments.md) first isolates two
+explicit weighted coefficients `M1` and `M2`, then proves that both follow
+from one unweighted coefficientwise stratum bound on
+`C_p(Lambda_p^2)`.  It also records the genuine A023871 failure at `p=5`
+and the compensating plus/minus contraction for A206622.  The four records
+remain `partial`: that single Cartier-square estimate, rather than either
+weighted moment or the full exponential tail, is now the only open
+arithmetic step.
 
 ## Proof order
 
@@ -389,9 +390,9 @@ The campaign does not use A-number order. It uses expected proof yield.
    proves the full all-prime $p^{4r}$ conjecture by exact product splitting,
    reduced-residue blocks, and a separate binary parity argument. No route-M
    record remains queued.  For the four remaining cubic product towers, the
-   [Cartier-moment reduction](EulerProductCubicCartierMoments.md) proves that
-   all logarithmic degrees at least three are harmless and isolates two
-   exact weighted moments as the complete remaining obstruction.
+   [Cartier-square reduction](EulerProductCubicCartierMoments.md) proves that
+   all logarithmic degrees at least three are harmless and collapses the two
+   surviving weighted moments to one exact coefficientwise obstruction.
 5. **D route:** identify the parent sequence and prove that the claimed
    congruence is inherited before treating it as an independent problem.
    This route is now fully triaged.  The

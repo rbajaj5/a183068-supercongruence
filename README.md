@@ -160,10 +160,11 @@ proves seven further named records: four by a universal prime-coefficient
 formula and three by specialization of the colored Euler-product theorem.
 It also supplies quadratic baselines for four proposed cubic towers. The
 route now has no untouched record. The follow-on
-[Cartier-moment reduction](related-results/EulerProductCubicCartierMoments.md)
-shows that those four cubic towers, together with A380290, have only two
-surviving logarithmic moments at every adjacent level; every term of
-Frobenius degree at least three is already proved to have cubic depth. The
+[Cartier-square reduction](related-results/EulerProductCubicCartierMoments.md)
+shows that those four cubic towers, together with A380290, reduce at every
+adjacent level to one coefficientwise Cartier-square estimate.  The two
+initial weighted moments and every term of Frobenius degree at least three
+are thereby removed from the final proof obligation. The
 [A229452 coefficient-root theorem](related-results/A229452CoefficientRootBaseline.md)
 proves that record's all-\(m\) integrality conjecture and all-prime
 \(p^r\) towers for both source parameter families while leaving the proposed

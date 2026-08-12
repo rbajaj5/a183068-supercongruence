@@ -392,11 +392,12 @@ C_{ps}(Z)-C_s(Z^p)
 Thus the logarithmic ghost coordinates have a literal cubic Frobenius
 defect.  Theorem 1 shows that their coefficient-power transform always
 retains two powers.  The follow-on
-[cubic Cartier-moment reduction](EulerProductCubicCartierMoments.md)
-proves that only the linear and quadratic logarithmic moments can obstruct
-the third power; all higher terms are already cubic at every level.  The
-open A380290 problem is now to prove those two scalar moment estimates,
-while the Gaussian evaluation remains sharply quadratic.
+[cubic Cartier-square reduction](EulerProductCubicCartierMoments.md)
+first isolates the linear and quadratic logarithmic moments and then
+reduces both to one coefficientwise Cartier-square stratum estimate; all
+higher terms are already cubic at every level.  That one estimate is the
+open A380290 problem, while the Gaussian evaluation remains sharply
+quadratic.
 
 ## 8. Gaussian and cyclotomic refinement
 
