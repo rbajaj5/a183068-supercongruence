@@ -102,7 +102,7 @@ The following examples show why the routing pass is necessary.
 | [A364509](https://oeis.org/A364509) | The live record marks the row-family congruence as following from the binomial congruence recorded by Meštrović.  The parameter matching should still be written explicitly before citing it as a proof. |
 | [A082758](https://oeis.org/A082758) | The live record now derives the conjectured bound from Pan--Sun's central-trinomial theorem. |
 | [A333593](https://oeis.org/A333593) | The repository gives an exact decomposition into a Coster generalized-Apéry tower and a Jacobsthal--Kazandzidis binomial tower.  This is a published-theorem reduction, not a new mechanism. |
-| [A375178](https://oeis.org/A375178), cubic baseline | Coster supplies the \(p^{3r}\) tower for every exponent \(q\ge2\).  Bala's stronger \(p^{3r+q}\) odd-power tower remains open. |
+| [A375178](https://oeis.org/A375178) | Coster supplies the $p^{3r}$ baseline for every exponent $q\ge2$. The repository now proves Bala's stronger $p^{3r+q}$ tower for every odd $q\ge3$ by a universal final-shell harmonic involution. |
 | [A365029](https://oeis.org/A365029), boundary and first two levels | The repository proves the stronger prime-boundary result \(C_{A,B}(p-1)\equiv1\pmod {p^{A+B}}\) and the \(r=1,2\) adjacent congruences for \(C_{2,1}\). The tower from \(r=3\) onward remains open. |
 | [A357509](https://oeis.org/A357509) | The repository proves the record's complete two-parameter family \(k^2(k-1)\binom{jn}{n}-j^2(j-1)\binom{kn}{n}\) modulo \(p^{3r+3}\) at \(n=p^r\), for all integers \(j,k\), primes \(p\ge5\), and \(r\ge2\). |
 | [A357568](https://oeis.org/A357568) | The repository proves the complete conjectured family \(9\binom{2n}{n}^k-k2^k\binom{3n}{n}\) modulo \(p^{3r+3}\) at \(n=p^r\), for every odd prime, \(r\ge2\), and \(k\ge1\). |
@@ -130,7 +130,7 @@ than separate papers.
 
 | Priority | Consolidated target | Why it survives the literature pass | Best first tool |
 | ---: | --- | --- | --- |
-| 1 | [A375178](https://oeis.org/A375178)--[A375180](https://oeis.org/A375180), odd-power enhanced towers | The cubic baseline is classical, while the claimed \(p^{3r+2m+1}\) gain and the three truncated-binomial geometries are not supplied by Coster | Blockwise harmonic expansion plus Jacobsthal--Kazandzidis scaling |
+| 1 | [A375179](https://oeis.org/A375179)--[A375180](https://oeis.org/A375180), signed odd-power enhanced towers | The A375178 geometry is now closed, while Coster does not supply the claimed $p^{3r+2m+1}$ gain in these two signed dilation geometries | Adapt the final-shell harmonic involution to the signed block decompositions |
 | 2 | [A365029](https://oeis.org/A365029), full \(A,B,n,r\) family | The boundary and \(C_{2,1}\) levels \(r=1,2\) are proved, but no published theorem located in the search yields the whole mixed-binomial tower | Induct the explicit two-digit reciprocal-square block cancellation through arbitrary \(p\)-adic depth |
 | 3 | [A364118](https://oeis.org/A364118) and its companion Apéry combinations | These ask for \(p^5\) at the first level and \(p^{3r+3}\) later, beyond the ordinary Apéry tower | Linearized recurrence, modular parametrization, or a refined Coster expansion |
 | 4 | [A008793](https://oeis.org/A008793), plane partitions in a cube | Its nonlinear congruence \(a(np^r)\equiv a(np^{r-1})^p\pmod {p^{4r}}\) has independent enumerative content and does not resemble a routine Coster corollary | \(p\)-adic logarithm of MacMahon's product |

@@ -5,7 +5,7 @@ supercongruences are proved; all three A375178--A375180 prime-level families and
 prime-level fifth-power claims for A112028 and A219562 are proved; their full
 enhanced towers are proved in separate critical-shell notes; and the
 complete A333593 prime-power tower is reduced to Coster's generalized Apéry
-theorem. The remaining enhanced A365029 and A375178--A375180 towers are
+theorem. The remaining enhanced A365029, A375179, and A375180 towers are
 exact computational targets.
 Literature priority is preliminary, and the new arguments have not been
 independently reviewed.
@@ -25,7 +25,7 @@ representative targets by mechanism.
 | OEIS entry | Conjectural statement | Present result |
 | --- | --- | --- |
 | [A365029] | \(a(p-1)\equiv1\pmod{p^3}\), plus an all-\(n,r\) \(p^{3r}\) tower | The first congruence is proved below in the stronger two-parameter form \(p^{A+B}\); the full \(r=1,2\) adjacent congruences are also proved; only \(r\ge3\) remains |
-| [A375178] | An odd-power family satisfies \(b_m(p)\equiv1\pmod{p^{2m+3}}\), plus a stronger tower for \(r\ge2\) | The entire prime-level family is proved below; the tower remains a target |
+| [A375178] | An odd-power family satisfies \(b_m(p)\equiv1\pmod{p^{2m+3}}\), plus a stronger tower for \(r\ge2\) | The prime boundary is proved below and the [enhanced odd-power theorem](A375178EnhancedOddPowerTower.md) proves the complete tower |
 | [A112028], [A219562] | The cubic and quartic shifted-binomial sums satisfy a prime-level fifth power and an enhanced \(p^{3r+3}\) tower | Both prime-level fifth powers are proved below; separate critical-shell theorems close the full [A112028](A112028EnhancedTower.md) and [A219562](A219562EnhancedTower.md) towers |
 | [A375179], [A375180] | Two parallel signed odd-power families have the same proposed exponents | Proved below as the \(A=2,3\) cases of one arbitrary-dilation theorem; their enhanced higher towers remain targets |
 | [A333593] | \(a(np^r)\equiv a(np^{r-1})\pmod{p^{3r}}\) | Proved below by an exact decomposition into a Coster generalized Apéry tower and a Jacobsthal--Kazandzidis binomial tower |
@@ -285,9 +285,8 @@ B_q(N)=w_{0,q,1}(N-1),
 ```
 
 so (9) is exactly the \(B\ge2\) branch of [Coster's] generalized Apéry
-theorem. Thus the open A375178-family target is not the existence of a cubic
-tower. It is the uniform gain of a further \(q=2m+1\) powers at \(n=1\) and
-\(r\ge2\):
+theorem. The uniform gain of a further \(q=2m+1\) powers at \(n=1\) and
+\(r\ge2\),
 
 ```math
 b_m(p^r)\equiv b_m(p^{r-1})
@@ -296,9 +295,10 @@ b_m(p^r)\equiv b_m(p^{r-1})
 \tag{10}
 ```
 
-The exponent in Theorem 2 is attained in the exact tested range. Reaching
-(10) still requires a refinement beyond Coster's cubic theorem: the clean
-\(k=1,\ldots,p-1\) harmonic argument above does not simply iterate.
+is now proved in the separate
+[enhanced A375178 theorem](A375178EnhancedOddPowerTower.md). Its universal
+critical-shell harmonic involution is the refinement beyond Coster's cubic
+baseline. The exponent is attained in the exact tested range.
 
 ### The even-power boundary and A112028--A219562
 
@@ -436,11 +436,12 @@ The dependency-free checker records:
 - 584 checks of Theorem 3 and its reduction: 200 exact decompositions,
   128 final tower congruences, and 256 component congruences;
 - 128 instances of the open A365029 tower; and
-- 17 higher-level instances of the open A375178 family.
+- 17 higher-level instances of the A375178 family, now covered by the
+  separate proof.
 
 Every asserted bound passes, and each displayed open-tower exponent is
-attained somewhere in the tested range. The A365029 and A375178 tower
-computations are evidence only.
+attained somewhere in the tested range. The A365029 computations remain
+evidence only; the A375178 instances are now theorem checks.
 
 The separate A365029 checker adds 67,310 exact checks. It verifies the
 complete \(r=1,2\) theorems, shifted transfer, the one- and two-digit local
@@ -463,9 +464,9 @@ The economical order is:
    congruences are proved. The remaining task is to induct the explicit
    two-digit reciprocal-square calculation through
    \(\mathbb Z/p^r\mathbb Z\).
-2. **A375178 tower.** The prime-level harmonic cancellation is now proved,
-   and Theorem 2A proves the two signed companions at prime level. The
-   additional \(3r\) block gain must be made uniform in all three geometries.
+2. **A375179--A375180 signed towers.** Theorem 2A proves both prime
+   boundaries and the A375178 tower is now closed. The remaining task is to
+   transfer the additional block gain through the two signed geometries.
 3. **A364183 integrality.** Resolve the even/odd factorial-ratio branches
    before discussing supercongruences.
 4. **A364118.** Use its Apéry/modular structure rather than forcing a

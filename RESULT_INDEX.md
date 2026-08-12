@@ -78,6 +78,17 @@ proof.
 - **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#3-the-full-prime-level-odd-power-theorem-for-a375178)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
 
+### A375178-HIGH — complete enhanced odd-power tower
+
+- **Claim:** For every odd $q=2m+1\ge3$, prime $p\ge q+4$, and $r\ge2$,
+  $B_q(p^r)\equiv B_q(p^{r-1})\pmod {p^{3r+2m+1}}$.
+- **Mechanism:** All nonfinal scaled shells are termwise deep for $q\ge5$;
+  the universal final shell vanishes by odd inverse-power sums and a double
+  harmonic involution. The cubic boundary uses the A112028 two-digit lemma.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Enhanced A375178 odd-power tower](related-results/A375178EnhancedOddPowerTower.md)
+- **Exact checker:** [`verify_a375178_enhanced_odd_tower.py`](verification/related/verify_a375178_enhanced_odd_tower.py)
+
 ### BALA-EVEN — A112028 and A219562 prime-level fifth powers
 
 - **Claim:** For even \(q\ge2\) and primes \(p\ge q+3\),
@@ -859,13 +870,14 @@ proof.
 
 ### BALA-TOWERS — remaining higher-level Bala tower queue
 
-- **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) and the
-  A375178-family \(p^{3r+2m+1}\) tower are the first two retained targets.
+- **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) and the signed
+  A375179--A375180 higher towers are the retained first-queue targets.
 - **Source status:** Named open problems.
 - **Status:** Reduction plus computation. A365029 is proved through \(r=2\)
   and reduced above it to iterating an explicit two-digit complete-block
-  calculation, with 177 higher-level block checks. Coster's theorem already
-  gives the \(p^{3r}\) baseline for the complete A375178 exponent family.
+  calculation, with 177 higher-level block checks. The complete enhanced
+  A375178 exponent family is now proved separately; the signed companions
+  require different shell geometries.
 - **Queue:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
 
