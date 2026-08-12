@@ -878,7 +878,8 @@ recorded in the August follow-on requires further defect kernels beyond
 (5), so it is not claimed here.  The separate
 [higher-defect reduction](BalaAugustHigherDefectLift.md) rewrites it as an
 exact three-level congruence, proves an exact three-shell decomposition,
-and isolates the cubic-kernel and quartic contractions still required.
+proves the quartic contraction, and isolates the cubic-kernel contraction
+still required.
 
 The formal-derivative language is compatible with Beukers and Vlasenko's
 [Dwork crystals III](https://doi.org/10.1093/imrn/rnad101), where higher

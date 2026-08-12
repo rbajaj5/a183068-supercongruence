@@ -104,6 +104,66 @@ p = 11           6         6         8          8
 where the target exponents are $7,8,8$.  A proof that estimates the three
 rows separately therefore cannot work.
 
+### 3.1 It is enough to treat $p$-adic unit values of $n$
+
+Write $n=p^tm$ with $p\nmid m$.  Directly from the definitions,
+
+```math
+D_{p,r}(n)=D_{p,r+t}(m),
+\qquad
+Q_{p,r}(n)=p^{3t}Q_{p,r+t}(m).
+\tag{6a}
+```
+
+Hence the unit case at level $r+t$ gives
+
+```math
+v_p\!\left(Q_{p,r}(n)-Q_{p,r-1}(n)\right)
+\ge 2r+5t-2-\delta_p,
+\tag{6b}
+```
+
+which is stronger than (2).  Thus no separate induction on the valuation
+of $n$ is required: the unresolved case has $p\nmid n$.
+
+### 3.2 Exact higher-Jacobsthal factorization
+
+Put
+
+```math
+J_p(A,B)=\frac{\binom{pA}{pB}}{\binom AB}.
+\tag{6c}
+```
+
+The scaled summands in (6) admit the exact factorization
+
+```math
+\boxed{
+f_{pM}(pq)=f_M(q)J_p(M+q,q)J_p(2M+q,q).
+}
+\tag{6d}
+```
+
+Indeed,
+
+```math
+f_M(q)=
+\frac{M}{M+q}\frac{2M}{2M+q}
+\binom{M+q}{q}\binom{2M+q}{q},
+```
+
+and the rational prefactor is unchanged by simultaneous multiplication
+of $M,q$ by $p$.  Formula (6d) identifies the once- and twice-scaled
+pieces of (6) with products of ordinary Jacobsthal quotients.  It is the
+precise point at which higher-order binomial approximation can enter.
+Aidagulov and Alekseyev's
+[*On p-adic approximation of sums of binomial coefficients*](https://arxiv.org/abs/1602.02632)
+gives arbitrarily high approximations for suitable fixed-lower-index
+linear combinations.  Their theorem does not directly settle (3), since
+here the lower index $q$ runs through the shell and the unit shell $A_0$
+must cancel its leading term.  Formula (6d), rather than a generic appeal
+to Jacobsthal, records the exact specialization still needed.
+
 ## 4. Exact logarithmic form
 
 Retain the notation $H,G,L_p$ and $\mathcal C_p$ from the
@@ -125,8 +185,7 @@ n^3\operatorname{CT}(\mathscr B_{p;1,2,1}G^{np^{r-1}})
 tag{8}
 ```
 
-This identifies the two remaining obligations without suppressing the
-tail:
+This initially identifies two obligations without suppressing the tail:
 
 1. the moments of the canonical cubic kernel $\mathscr B$ must contract by
    two powers under each additional Cartier level (one power is lost at
@@ -141,9 +200,125 @@ of $p$: for $j\ge5$, $r\ge2$, and $p\ge5$,
 tag{9}
 ```
 
-Thus the degree-four term is the only tail term on the numerical boundary.
-The first-residue theorem proves the reduction of (8) modulo $p$, but does
-not by itself provide the growing precision in (2).
+The next lemma closes the second obligation.
+
+### Lemma 2 (quartic coefficient lift)
+
+Work in the coordinates $y=t/x$, so that
+
+```math
+H=\frac1{1-xy},
+\qquad
+L_p=V_p(x)+2V_p(y).
+```
+
+For $p\ge5$, put $\delta_p=1$ at $p=5$ and $0$ otherwise.  Then
+
+```math
+\boxed{
+v_p\!\left([x^{pm}y^{pn}]HL_p^4\right)
+\ge 1-\delta_p+\min\{v_p(m),v_p(n)\}
+}
+\tag{9a}
+```
+
+for $(m,n)\ne(0,0)$, with $v_p(0)=+\infty$.
+
+#### Proof
+
+Let
+
+```math
+W(z)=\sum_{a=1}^{p-1}\frac{z^a}{a},
+\qquad E(z)=1+z+\cdots+z^{p-1}.
+```
+
+Modulo $p$ one has
+
+```math
+V_p(z)=\frac{W(z)}{1-z^p},
+\qquad H=\frac{E(xy)}{1-x^py^p}.
+\tag{9b}
+```
+
+For $p\ge7$, direct coefficient extraction gives the five weight-four
+finite-logarithm identities
+
+```math
+\mathcal C_p\!\left(E(xy)W(x)^iW(y)^{4-i}\right)=0
+\qquad(0\le i\le4).
+\tag{9c}
+```
+
+Here is a short verification that does not invoke an analytic logarithm.
+If $h_j(s)=[z^s]W(z)^j$, differentiate $W^j$ to obtain
+
+```math
+s h_j(s)=j\sum_{a=1}^{p-1}h_{j-1}(s-a),
+\tag{9d}
+```
+
+with $h_1(a)=a^{-1}$ on $1\le a<p$, and use
+$h_j(jp-s)=(-1)^jh_j(s)$.  Substitution in the coefficient of
+$x^{pu}y^{pv}$ on the left of (9c) reduces each of the five cases to a
+complete reciprocal sum of total weight four.  Faulhaber's formula
+annihilates every residue power sum except the possible weight-four term;
+its coefficient is $B_{p-4}=0$ because $p-4>1$ is odd.  This proves
+(9c).  At $p=5$ the condition $p-1\mid4$ is exactly the exceptional
+residue power sum, so only integrality remains.
+
+For the lift, set
+
+```math
+C_s(m,n)=[x^{p^{s+1}m}y^{p^{s+1}n}]HL_p^4.
+```
+
+Split each of the four unit denominators into its residue modulo $p$ and
+group the diagonal exponent of $H$ in blocks of length $p$.  Expanding
+$(pq+a)^{-e}$ in $pq/a$ gives
+
+```math
+v_p\!\left(C_{s+1}(m,n)-pC_s(m,n)\right)
+\ge s+2-\delta_p
+\tag{9e}
+```
+
+whenever $p\nmid(m,n)$.  Indeed, the Taylor-degree-zero block is (9c),
+and therefore gains two powers of $p$ for $p\ge7$ and one at $p=5$;
+every positive Taylor degree contains the additional factor $p^{s+1}$,
+while its complete residue power sum is divisible by $p$ unless
+$p-1\mid4$, the same exceptional case already recorded by $\delta_p$.
+This is the four-denominator analogue of the lifted reciprocal-square
+calculation in Lemma 5 of the first-defect note.
+
+Identity (9c) starts the induction, and (9e) gives
+$v_p(C_s(m,n))\ge s+1-\delta_p$.  Removing the common power of $p$ from
+the original pair $(m,n)$ proves (9a). $\square$
+
+### Corollary 3 (the quartic term is complete)
+
+Let $\mathscr A_4=\mathcal C_p(HL_p^4)/4!$.  The coefficient bound (9a)
+allows the canonical monomial-by-monomial assignment
+
+```math
+\mathscr A_4=p^{1-\delta_p}(E_xP_4+E_yQ_4)
+\tag{9f}
+```
+
+with $p$-integral Laurent series $P_4,Q_4$.  Formal integration by parts
+therefore gives
+
+```math
+v_p\!\left(\operatorname{CT}(\mathscr A_4G^{np^{r-2}})\right)
+\ge r-1-\delta_p.
+\tag{9g}
+```
+
+After multiplication by the explicit factor $p^{r-1}$ in the difference
+of the two degree-four terms in (8), this is exactly
+$2r-2-\delta_p$.  The term at the higher level has one additional power.
+Thus the quartic term satisfies (2).  Terms of degree at least five are
+covered by (9), leaving only the cubic-kernel contraction.
 
 ## 5. One exact residual Cartier operator
 
@@ -227,6 +402,62 @@ Cartier-coefficient estimates.  The quadratic and cubic pieces of
 contraction in Section 4; $\mathscr S_4$ is the boundary correction.
 Formula (15) prevents a proof from silently dropping the mixed terms
 created when $G^{pR}$ is pulled through Cartier.
+
+### 5.1 The single remaining cubic certificate
+
+Put $M=np^{r-2}$ and abbreviate
+$\mathscr B=\mathscr B_{p;1,2,1}$.  The cubic contribution at the two
+adjacent levels differs by
+
+```math
+n^3\operatorname{CT}
+\left(\mathcal C_p(\mathscr B\exp(pML_p))-\mathscr B\right)G^M.
+\tag{21}
+```
+
+Expanding the exponential separates the genuinely critical part:
+
+```math
+\begin{aligned}
+\mathcal C_p(\mathscr B\exp(pML_p))-\mathscr B
+={}&\mathcal C_p\mathscr B-\mathscr B
++pM\mathcal C_p(\mathscr B L_p)\\
+&+\sum_{h\ge2}\frac{(pM)^h}{h!}
+\mathcal C_p(\mathscr B L_p^h).
+\end{aligned}
+\tag{22}
+```
+
+For $h\ge2$ and $p\ge5$,
+
+```math
+v_p\!\left(\frac{(pM)^h}{h!}\right)
+\ge 2v_p(M)+2,
+\tag{23}
+```
+
+so the tail already exceeds the required precision.  The whole August
+conjecture is therefore equivalent, after the proved reductions above, to
+the one estimate
+
+```math
+\boxed{
+v_p\!\left(
+\operatorname{CT}
+\left(\mathcal C_p\mathscr B-\mathscr B
++pM\mathcal C_p(\mathscr B L_p)\right)G^M
+\right)
+\ge2v_p(M)+2-\delta_p.
+}
+\tag{24}
+```
+
+The coefficientwise theorem
+$\mathcal C_p\mathscr B\equiv\mathscr B\pmod p$ proves only the first
+power in (24).  Moreover, the two displayed summands should not be
+estimated separately: they are the Frobenius and connection pieces of one
+second-order tangent class.  Equation (24) is the remaining proof
+obligation, not a claimed consequence of the first-residue theorem.
 
 ## 6. Why excellent Frobenius is a guide, not a proof
 

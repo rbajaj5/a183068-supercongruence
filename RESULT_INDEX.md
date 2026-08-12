@@ -328,11 +328,12 @@ proof.
   \]
 - **Mechanism:** The left side has an exact decomposition into the unit,
   once-scaled, and twice-scaled valuation shells. None generally reaches
-  the target separately. The exact logarithmic expansion shows that only a
-  higher contraction of the cubic defect kernel and the degree-four tail
-  remain; logarithmic degrees at least five have enough explicit powers.
-- **Status:** Exact reduction and sharp computational boundary; the final
-  higher-Frobenius estimate remains open; 405 exact checks.
+  the target separately. The quartic coefficient lift turns the degree-four
+  tail into an integral Euler divergence; logarithmic degrees at least five
+  have enough explicit powers.
+- **Status:** Exact reduction and sharp computational boundary; the quartic
+  term is proved and the final cubic higher-Frobenius estimate remains open;
+  1,277 exact checks.
 - **Proof:** [Higher August defect reduction](related-results/BalaAugustHigherDefectLift.md)
 - **Exact checker:** [`verify_bala_august_higher_defect.py`](verification/related/verify_bala_august_higher_defect.py)
 
