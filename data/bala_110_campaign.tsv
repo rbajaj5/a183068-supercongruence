@@ -25,7 +25,7 @@ A208675	T	published-source	Straub equation (24) and multivariate cubic theorem, 
 A212334	T	partial	related-results/Bala110LiveSourceBoundary.md	prove the enhanced p^5 and p^(3r+3) pure-prime refinement
 A219562	T	partial	Coster Theorem 4 gives the p^(3r) baseline; OEIS asks for p^5 and p^(3r+3)	prove the extra shifted-index gain
 A234839	T	published-source	Osburn--Sahu--Straub Example 3.3 cited by OEIS	verify exact parameter match in bibliography
-A244973	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the stated p-adic integrality, equivalently its cubic adjacent tower
+A244973	T	partial	related-results/A244973QuadraticFrobeniusReduction.md	prove the explicit combined linear-quadratic Cartier estimate (11)
 A260667	T	proved-here	related-results/A260667PrimeBoundary.md	audit literature priority beyond the source record
 A288470	T	proved-here	A288470OddPrimeTower.md	independent review and priority audit
 A333592	T	proved-here	related-results/MixedNegativeBinomialCubicTower.md	independent review and source-facing cross-reference for the full positive-parameter cubic family

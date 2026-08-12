@@ -1,4 +1,4 @@
-# The 8 remaining open targets in the Bala 110-record census
+# The 7 remaining open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -38,7 +38,11 @@ including the exceptional ternary sextic case. The subsequent
 places A362676 and A363985 in one explicit constant-term family and moves
 both to `partial`. The later
 [balanced-matrix theorem](BalancedMatrixCoefficientQuadraticTower.md)
-proves A124435. This file now lists the 8 records that remain fully open.
+proves A124435. The
+[A244973 Frobenius reduction](A244973QuadraticFrobeniusReduction.md)
+then isolates Sun's remaining conjecture as one exact linear--quadratic
+Cartier cancellation and moves that record to `partial`. This file now lists
+the 7 records that remain fully open.
 
 ## 1. Finite-sum transfer targets
 
@@ -57,12 +61,6 @@ for the cubic tower for both
 
 at every `p >= 5`. The two statements require a coefficient representation
 that survives reversion; a formal similarity of the series is not enough.
-
-### Isolated finite-sum boundary
-
-- [A244973](https://oeis.org/A244973) asks that
-  `(a(pn)-a(n))/(pn)^3` be `p`-adically integral for `p > 5`. On writing
-  `n=mp^(r-1)`, this is a cubic adjacent-level valuation statement.
 
 ### Paired Apéry companions
 
@@ -122,7 +120,7 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 8 records are explicit `open-target` entries;
+- 7 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.

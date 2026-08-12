@@ -24,12 +24,12 @@ every record:
 
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 13 | 8 | 11 | 4 | 4 | 0 |
+| T: finite-sum transfer | 40 | 13 | 8 | 12 | 4 | 3 | 0 |
 | C: coefficient/constant term | 37 | 12 | 6 | 13 | 2 | 4 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **42** | **17** | **36** | **7** | **8** | **0** |
+| **Total** | **110** | **42** | **17** | **37** | **7** | **7** | **0** |
 
 The forty-two `proved-here` records are A002003, A005725, A008485, A008705,
 A008793, A049505, A091527, A108625, A124435, A132303, A141057, A143007, A156554, A177316, A198060, A198256, A198258, A245926, A246437,
@@ -50,7 +50,7 @@ A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
 classified `no-explicit-open`: the live pages contain no Bala
 supercongruence conjecture that remains to be proved.
-The remaining eight records are `open-target`; their exact claims,
+The remaining seven records are `open-target`; their exact claims,
 prime ranges, normalizations, and family consolidations are recorded in the
 [remaining-open-target map](Bala110RemainingOpenTargets.md).
 
@@ -230,6 +230,17 @@ at least two rows.  An Eisenstein `3` by `3` matrix realizes the A124435
 rational diagonal; its entrywise Frobenius is either the matrix itself or
 its transpose, and balanced coefficients are transpose-invariant.  This
 proves the exact OEIS tower and leaves eight records `open-target`.
+
+The A244973 unit then identifies Sun's exact residual conjecture. Peter
+Bala's signed-multinomial formula becomes a two-variable Laurent period and,
+after normalizing at one hexagonal vertex, a diagonal coefficient of
+`((1+u+uv)(1-v+uv))^N`. A reduced-logarithm expansion proves that every
+term of Frobenius degree at least three already has the target depth. The
+entire conjecture is therefore equivalent to one displayed cancellation
+between the linear and quadratic Frobenius terms. Exact arithmetic shows
+that these terms are individually one power short at `p=7,M=7`, while their
+sum has the required valuation. A244973 moves to `partial`, leaving seven
+records `open-target`.
 
 ## Proof order
 

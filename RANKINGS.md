@@ -42,7 +42,7 @@ allocation, the portfolio currently has four tiers:
 | **A: specialist review now** | SYMBOX-4, ZHANG-4, FRAMING-COUNTEREX, GWL-TWO, GWL-SCALE, GL-AFFINE, JC-WL, JC5-FF, A183068 | Check proofs and priority before extending the statements |
 | **B: broad theorem engines** | FROB-PACKET, JC-ORBIT, LD-2/LD-3, QC-SQ/QC-CUBIC, EULER-PRODUCT, BINOMIAL-POWER, FACTRATIO-3, RATGAMMA-3, NEG-PREFIX-CUBIC, MEANDER-ADJ | Reuse on named conjectures and consolidate families |
 | **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, BLACK-WALSH, HASH-MATROID, FQ-CT, WALK-FROB, GROUPRING-GAUSS, ADAMS-HAAR, EHRHART-CUTOFF, NEG-PREFIX-3, GQ2-ABCOUNT, GQ2-DIHEDRAL, GQ2-QUATERNION, GQ2-MAXCYCLIC, GQ2-EXTRASPECIAL | Improve experiments, certification, source consolidation, and proof organization |
-| **D: retained open targets** | C11, CAT-ODD, TAYLOR-7, BALA-TOWERS, BOBER-FRAC, APERY-DEFECT, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
+| **D: retained open targets** | C11, CAT-ODD, TAYLOR-7, BALA-TOWERS, A244973-FROB, BOBER-FRAC, APERY-DEFECT, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
 
 Tier A has the highest estimated mathematical payoff. Tier C is deliberately
 kept separate: these results can make the portfolio faster and more coherent
@@ -171,6 +171,7 @@ stated target. Maturity records the work presently in the repository.
 | 3 | [s18-2: binary supercongruence reduction](related-results/S18TwoAdicReduction.md) | **7** | 1 | 7 | 6 | 3 | 8 | Substantial reduction to one sharpened scaling lemma; target not proved. |
 | 3 | [APERY-DEFECT: five-record enhanced packet](related-results/AperyRankOneDefectPacket.md) | **7** | 1 | 5 | 8 | 6 | 6 | Exact reduction of five named OEIS records and two nonlinear companions to three linear Apéry defect congruences; strong consolidation, but the core arithmetic remains open. |
 | 3 | [FRANEL-CT: integer-parameter Franel companions](related-results/FranelCompanionConstantTermReduction.md) | **6** | 1 | 5 | 8 | 5 | 5 | A362676 and both A363985 families reduce exactly to one two-kernel constant-term statement; 1,088 tower checks include 914 sharp cases, while the cubic Cartier contraction remains open. |
+| 3 | [A244973-FROB: signed multinomial quadratic obstruction](related-results/A244973QuadraticFrobeniusReduction.md) | **6** | 1 | 5 | 8 | 5 | 5 | Sun's conjecture reduces exactly to a coupled linear--quadratic Cartier estimate; 113 checks verify the identities and show why separate term bounds cannot close it. |
 | 5 | [GBQ-MAP: Gaussian routing of the Bala census](related-results/BalaGaussianGeneralizationMap.md) | **4** | 1 | 1 | 10 | 9 | 3 | Exhaustive routing of 110 records into five proof architectures; high portfolio breadth, but not a theorem or novelty certificate. |
 | 6 | [GL-MAP: Gaussian literature and structural map](related-results/GaussianLucasLiteraturePuzzle.md) | **3** | 1 | 1 | 7 | 8 | Literature synthesis, not a theorem or novelty certificate. |
 | 7 | [G-BOUNDARY: classical Gaussian obstructions](related-results/GaussianCitationNetworkBoundaryReport.md) | **3** | 1 | 4 | 4 | 6 | 5 | Rigorous reductions and bounded searches, not solutions of the classical problems. |

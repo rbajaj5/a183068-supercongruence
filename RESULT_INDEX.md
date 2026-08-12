@@ -2101,6 +2101,24 @@ proof.
 
 ## Reductions and computational reports
 
+### A244973-FROB — signed multinomial quadratic Frobenius reduction
+
+- **Claim reduced:** For `p>5`, Sun's conjecture
+  `v_p(a(pM)-a(M)) >= 3+3v_p(M)` for A244973.
+- **Exact forms:** The sequence is both a signed square of trinomial
+  coefficients and the Laurent period
+  `CT((x+y+z)(-x^-1-y^-1+z^-1))^N`. Vertex normalization gives
+  `(-1)^N[u^Nv^N]((1+u+uv)(1-v+uv))^N`.
+- **Reduction:** All reduced-logarithm terms of degree at least three have
+  the desired valuation. The conjecture is equivalent to one explicit
+  cancellation between the linear and quadratic Frobenius terms. At
+  `p=7,M=7` both terms separately have valuation five, while their sum has
+  valuation six.
+- **Status:** Exact reduction, not a proof of the conjecture. Sun's
+  published theorem supplies `3+2v_p(M)`; `p=5` fails at the first level.
+- **Report:** [A244973 and the linear--quadratic obstruction](related-results/A244973QuadraticFrobeniusReduction.md)
+- **Exact checker:** [`verify_a244973_frobenius_reduction.py`](verification/related/verify_a244973_frobenius_reduction.py)
+
 ### FRANEL-CT — integer-parameter Franel-companion kernels
 
 - **Claim:** For `a` in `{1,2}` and every integer `m`, the two Bala
