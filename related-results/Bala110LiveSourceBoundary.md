@@ -1,12 +1,12 @@
-# Live-source boundary for nine Bala-census records
+# Live-source boundary for twelve Bala-census records
 
 **Audit date:** August 12, 2026  
 **Status:** record-level source reconciliation; no novelty claim
 
 The 110-record campaign is a search census, not a list of 110 open
 conjectures. This note records the live-OEIS and primary-source check for
-nine entries that were still labelled `queued`. It prevents three different
-objects from being conflated:
+twelve entries that were once either queued or recorded as wholly open. It
+prevents three different objects from being conflated:
 
 1. a proved supercongruence;
 2. a proved baseline followed by a stronger open refinement; and
@@ -109,6 +109,43 @@ shifted A108628 boundary. Accordingly A108628 is `partial`: its ordinary
 \(p>5\) tower is source-closed, while the \(p=5\) shifted boundary and the
 half-index packet remain explicit proof obligations.
 
+### A208675: a shifted multivariate Apery coefficient
+
+The live page identifies [A208675](https://oeis.org/A208675) exactly as
+
+```math
+a(n)=B(n,n-1,n-1)
+```
+
+in Straub's equation (24), and explicitly attributes its cubic tower for
+all primes `p >= 5` to that multivariate theorem. This is an exact
+published-source match, not a new finite-sum proof. The three coefficient
+representations separately labelled conjectural on the OEIS page do not
+alter the status of the supercongruence itself.
+
+### A212334: ordinary tower closed, enhanced defect open
+
+For [A212334](https://oeis.org/A212334), the live identity
+
+```math
+a(n)=\frac{A(n)+7A(n-1)}{12}
+```
+
+expresses the word-count sequence through the ordinary and shifted
+fourth-order Apery sequence `A=A005259`. Their published cubic towers imply
+the ordinary A212334 tower for every `p >= 5`, since `12` is a `p`-adic
+unit throughout that range. The same page asks for the strictly stronger
+
+```math
+a(p)\equiv1\pmod {p^5},
+\qquad
+a(p^r)\equiv a(p^{r-1})\pmod {p^{3r+3}}
+\quad(r\ge2).
+```
+
+Those enhanced pure-prime congruences do not follow from the cubic
+baseline, so A212334 is `partial` rather than `published-source`.
+
 ## 3. Search-corpus records with no live open target
 
 The following records remain useful anchors for formulas and
@@ -129,12 +166,11 @@ settled.
 
 ## 4. Ledger effect
 
-This audit and its follow-up remove ten false starts from the open-work
+This audit and its follow-ups remove twelve false starts from the open-work
 columns:
 
-- three move to `published-source`;
-- two move to `partial`; and
-- four move to `no-explicit-open`; and
-- A108628 moves from `open-target` to `partial`.
+- four move to `published-source`;
+- four move to `partial`; and
+- four move to `no-explicit-open`.
 
 No finite experiment is used for any promotion.

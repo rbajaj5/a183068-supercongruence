@@ -21,8 +21,8 @@ A183204	T	published-source	Osburn--Sahu--Straub, arXiv:1312.2195, s_7 cubic towe
 A198060	T	open-target	related-results/Bala110RemainingOpenTargets.md	resolve the apparent exponent typo, then prove the odd-row cubic family
 A198256	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the offset-one quartic adjacent-binomial tower
 A198258	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the offset-one sextic adjacent-binomial tower, including p=3
-A208675	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the cubic ternary-word tower
-A212334	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the ordinary cubic tower before the enhanced pure-prime refinement
+A208675	T	published-source	Straub equation (24) and multivariate cubic theorem, arXiv:1401.0854	verify the exact shifted parameter match in the bibliography
+A212334	T	partial	related-results/Bala110LiveSourceBoundary.md	prove the enhanced p^5 and p^(3r+3) pure-prime refinement
 A219562	T	partial	Coster Theorem 4 gives the p^(3r) baseline; OEIS asks for p^5 and p^(3r+3)	prove the extra shifted-index gain
 A234839	T	published-source	Osburn--Sahu--Straub Example 3.3 cited by OEIS	verify exact parameter match in bibliography
 A244973	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the stated p-adic integrality, equivalently its cubic adjacent tower

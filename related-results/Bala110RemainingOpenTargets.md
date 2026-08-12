@@ -1,4 +1,4 @@
-# The 29 extracted open targets in the Bala 110-record census
+# The 27 extracted open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -13,7 +13,7 @@ it. The new status `open-target` means:
   and
 - the next operation is mathematical proof, not database extraction.
 
-The 29 records consolidate to substantially fewer proof families. Repeated
+The 27 records consolidate to substantially fewer proof families. Repeated
 entries are retained because the campaign denominator is a record count, but
 the proposed proof units below are family-sized.
 
@@ -55,27 +55,6 @@ that survives reversion; a formal similarity of the series is not enough.
   for `p >= 5`.
 - [A198258](https://oeis.org/A198258), also with offset 1, asks for a cubic
   tower for `p >= 3`; the ternary boundary is therefore part of the claim.
-
-### Word-count sums
-
-The live formulas are
-
-```math
-W_3(N)=\sum_{k=0}^{N}
-\binom Nk\binom{N-1}{k}\binom{N+k-1}{k}
-```
-
-for [A208675](https://oeis.org/A208675), and
-
-```math
-W_4(N)=\sum_{k=0}^{N-1}
-\binom Nk\binom{N-1}{k}\binom{N+k-1}{k}^{2}
-```
-
-for [A212334](https://oeis.org/A212334). Both pages ask for the ordinary
-cubic tower at `p >= 5`. A212334 additionally asks for `p^5` at the first
-pure-prime level and `p^(3r+3)` thereafter. The ordinary tower is the first
-proof obligation; the enhanced defect is a second layer.
 
 ### Isolated finite-sum boundaries
 
@@ -235,11 +214,11 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 29 records are explicit `open-target` entries;
+- 27 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
 
-This does **not** assert that all 29 targets are true. Their next legitimate
+This does **not** assert that all 27 targets are true. Their next legitimate
 status change requires a proof, an exact published-source reduction, or a
 counterexample.
