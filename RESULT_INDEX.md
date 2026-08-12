@@ -195,13 +195,14 @@ proof.
 - **Consequences:** Two factors give a quadratic tower; three or more give
   a cubic tower for $p\ge5$. Evaluation at $X=1$ and $X=-1$ classifies
   Bala's fixed product and twist proposals. The named A333473 quadratic
-  tower follows for every odd prime.
+  tower follows for every odd prime. The separate A333473 algebraic-family
+  theorem closes every positive $(R,S)$ member surrounding the named case.
 - **Additional closure:** A333592's untwisted cubic tower is an exact
   corollary of Coster's shifted $B=2$ theorem plus adjacent scaling of its
   endpoint. A separate prefix-Cartier theorem proves the whole positive
   A333592 parameter family cubically.
-- **Boundary:** The larger algebraic-kernel family surrounding A333473 and
-  the normalized-defect refinement remain open. The ordinary cubic tower
+- **Boundary:** The growing-modulus normalized-defect refinement remains
+  open. The ordinary cubic tower
   for the two-factor negative-binomial sum is proved for $p\geq5$. Its
   normalized cubic defects conjecturally stabilize modulo
   $p^{2r-2-\delta_p}$, with $\delta_5=1$ and $\delta_p=0$ otherwise. Two
@@ -211,6 +212,28 @@ proof.
   3,390 exact checks pass; no priority claim.
 - **Proof:** [August mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md)
 - **Exact checker:** [`verify_bala_august_mixed_binomial_follow_on.py`](verification/related/verify_bala_august_mixed_binomial_follow_on.py)
+
+### A333473-ALGEBRAIC - full positive algebraic family
+
+- **Claim:** If $F=1+x+xF^2$ with $F(0)=1$, then for all positive
+  $R,S,n,r$ and every odd prime $p$,
+  \[
+  [x^{Rnp^r}]F(x)^{Snp^r}
+  \equiv [x^{Rnp^{r-1}}]F(x)^{Snp^{r-1}}
+  \pmod {p^{2r}}.
+  \]
+- **Mechanism:** Lagrange inversion produces the locally integral summand
+  \[
+  \frac{SN}{SN+2j}\binom{RN}{j}\binom{SN+2j}{RN}.
+  \]
+  Unit-index terms contain two independent $p^r$ factors. Divisible-index
+  terms transfer through a product of two adjacent Jacobsthal quotients.
+- **Boundary:** No exclusions are needed when $p$ divides $R$ or $S$.
+  No binary assertion is made.
+- **Status:** Complete unchecked elementary proof candidate; 91,260 exact
+  coefficient checks pass; no priority claim.
+- **Proof:** [Full A333473 algebraic-family tower](related-results/A333473AlgebraicFamilyTower.md)
+- **Exact checker:** [`verify_a333473_algebraic_family_tower.py`](verification/related/verify_a333473_algebraic_family_tower.py)
 
 ### NEG-PREFIX-CUBIC - cubic towers for negative-binomial prefixes
 

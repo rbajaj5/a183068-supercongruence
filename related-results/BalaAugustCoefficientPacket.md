@@ -361,7 +361,8 @@ leading normalized defect is independent of the level for every $p\geq5$.
 
 - The named A333473 quadratic tower is proved in the
   [August mixed-binomial follow-on](BalaAugustMixedBinomialFollowOn.md).
-  Its larger two-parameter algebraic-kernel family remains open.
+  Its larger positive two-parameter algebraic-kernel family is proved in
+  the [A333473 algebraic-family follow-on](A333473AlgebraicFamilyTower.md).
 - The ordinary cubic tower (24) is proved for every odd prime. The first
   normalized-defect residue is stable for $p\geq5$; only the stronger
   growing-modulus refinement remains open.

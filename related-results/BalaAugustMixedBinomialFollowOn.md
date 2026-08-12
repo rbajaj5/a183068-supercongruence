@@ -15,7 +15,7 @@ No literature-priority claim is made for the present assembly.
 | --- | --- |
 | A119258 denominator primes | Closed: the arbitrary integral coefficient slope removes the exclusion |
 | Chebyshev primes dividing the coefficient slope | Closed by the same theorem |
-| A333473 | Its named quadratic tower holds for every odd prime; the larger algebraic-kernel family remains open |
+| A333473 | Its named quadratic tower and the full positive algebraic-kernel family hold for every odd prime |
 | Mixed negative-binomial sum | Cubic tower proved for every odd prime; first normalized-defect residue proved stable for $p\geq5$, with only the stronger growing-modulus refinement open |
 | Products and twists | Cubic for three or more generalized-binomial factors; quadratic for two |
 | Index-dependent negative substitutions | Two families fail cubically at $p=5$; two companion families remain computational candidates |
@@ -206,7 +206,7 @@ for $R>0$,
 \qquad\text{(8)}
 ```
 
-Formula (8) is an exact normalization of the remaining problem, but for
+Formula (8) is an exact normalization of the larger problem, but for
 general $(R,S)$ it is not the two-factor sum (6). Since
 $t^2+2t+2=1+(1+t)^2$, expanding (8) gives the completely explicit form
 
@@ -217,11 +217,13 @@ $t^2+2t+2=1+(1+t)^2$, expanding (8) gives the completely explicit form
 \qquad\text{(8a)}
 ```
 
-The second upper argument in (8a) depends on $j$. This locates the remaining
-obstruction precisely: (8a) lies in the index-dependent lane of Section 7,
-not in Theorem 1's fixed-slope lane. The full family therefore remains open.
-The checker verifies (8a) directly and finds no quadratic-tower failure for
-$1\leq R,S\leq3$, $p\in\{5,7\}$, $n\in\{1,2\}$, and levels one and two.
+The second upper argument in (8a) depends on $j$, so Theorem 1 does not
+apply.  The separate
+[algebraic-family theorem](A333473AlgebraicFamilyTower.md) resolves this
+index-dependent lane: its Lagrange summand has a second normalization in
+which the discarded stratum contributes two powers and the scaled stratum
+is a product of two Jacobsthal quotients.  It proves the full $p^{2r}$ tower
+for every odd prime, including primes dividing $R$ or $S$.
 
 ## 4. The mixed negative-binomial tower
 
@@ -447,8 +449,10 @@ python verification/related/verify_bala_august_mixed_binomial_follow_on.py
 The checker performs 3,390 exact checks. It tests the coefficientwise mixed
 theorem, the A333473 identification and tower, the formerly excluded
 A119258 and Chebyshev primes, an extended cubic grid for $u$, the
-A333473 algebraic-family normalization and evidence, the stabilized
+A333473 algebraic-family normalization, the stabilized
 negative-binomial defect grid, the A333592 decomposition, both
 counterexamples, and the surviving companion grid.
+
+The algebraic-family theorem has a separate 91,260-check certificate.
 
 The separate prefix-Cartier theorem has its own 1,640-check certificate.

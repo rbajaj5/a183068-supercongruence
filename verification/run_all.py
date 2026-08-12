@@ -18,6 +18,7 @@ SCRIPTS = (
     "verification/related/verify_coefficient_framing_cubic_tower.py",
     "verification/related/verify_bala_august_coefficient_packet.py",
     "verification/related/verify_bala_august_mixed_binomial_follow_on.py",
+    "verification/related/verify_a333473_algebraic_family_tower.py",
     "verification/related/verify_mixed_negative_binomial_cubic_tower.py",
     "verification/related/verify_bala_august_first_defect.py",
     "verification/related/verify_bala_august_kernel_frobenius.py",
