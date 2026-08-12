@@ -16,6 +16,7 @@ SCRIPTS = (
     "verification/related/verify_a219562_enhanced_tower.py",
     "verification/related/verify_a112028_enhanced_tower.py",
     "verification/related/verify_a375178_enhanced_odd_tower.py",
+    "verification/related/verify_a375179_a375180_signed_towers.py",
     "verification/related/verify_bala_110_campaign.py",
     "verification/related/verify_franel_companion_ct_reduction.py",
     "verification/related/verify_balanced_matrix_coefficient_tower.py",

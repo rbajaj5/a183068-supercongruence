@@ -67,12 +67,14 @@ proof.
 - **Proof:** [First two A365029 levels](related-results/A365029FirstTwoLevels.md)
 - **Exact checker:** [`verify_a365029_first_two_levels.py`](verification/related/verify_a365029_first_two_levels.py)
 
-### BALA-ODD — A375178--A375180 prime-level odd-power families
+### BALA-ODD — A375178--A375180 complete odd-power families
 
 - **Claim:** For \(m\ge1\), primes \(p\ge2m+5\), and every integer
   dilation \(A\), the shifted family A375178 and the signed family
   \(S_{A,m}\) satisfy their prime-level congruences modulo
-  \(p^{2m+3}\). The cases \(A=2,3\) are A375179 and A375180.
+  \(p^{2m+3}\). The shifted and signed generalized-binomial theorems also
+  prove their higher towers modulo \(p^{3r+2m+1}\). The cases \(A=2,3\)
+  are A375179 and A375180.
 - **Source status:** Named open problem.
 - **Status:** Complete unchecked elementary proof; priority preliminary.
 - **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#3-the-full-prime-level-odd-power-theorem-for-a375178)
@@ -870,14 +872,14 @@ proof.
 
 ### BALA-TOWERS — remaining higher-level Bala tower queue
 
-- **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) and the signed
-  A375179--A375180 higher towers are the retained first-queue targets.
+- **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) is the retained
+  first-queue target.
 - **Source status:** Named open problems.
 - **Status:** Reduction plus computation. A365029 is proved through \(r=2\)
   and reduced above it to iterating an explicit two-digit complete-block
   calculation, with 177 higher-level block checks. The complete enhanced
-  A375178 exponent family is now proved separately; the signed companions
-  require different shell geometries.
+  A375178 exponent family and its signed companions are now proved
+  separately through their respective shell geometries.
 - **Queue:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
 

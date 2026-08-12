@@ -5,8 +5,8 @@ supercongruences are proved; all three A375178--A375180 prime-level families and
 prime-level fifth-power claims for A112028 and A219562 are proved; their full
 enhanced towers are proved in separate critical-shell notes; and the
 complete A333593 prime-power tower is reduced to Coster's generalized Apéry
-theorem. The remaining enhanced A365029, A375179, and A375180 towers are
-exact computational targets.
+theorem. The remaining enhanced A365029 tower is an exact computational
+target.
 Literature priority is preliminary, and the new arguments have not been
 independently reviewed.
 
@@ -27,7 +27,7 @@ representative targets by mechanism.
 | [A365029] | \(a(p-1)\equiv1\pmod{p^3}\), plus an all-\(n,r\) \(p^{3r}\) tower | The first congruence is proved below in the stronger two-parameter form \(p^{A+B}\); the full \(r=1,2\) adjacent congruences are also proved; only \(r\ge3\) remains |
 | [A375178] | An odd-power family satisfies \(b_m(p)\equiv1\pmod{p^{2m+3}}\), plus a stronger tower for \(r\ge2\) | The prime boundary is proved below and the [enhanced odd-power theorem](A375178EnhancedOddPowerTower.md) proves the complete tower |
 | [A112028], [A219562] | The cubic and quartic shifted-binomial sums satisfy a prime-level fifth power and an enhanced \(p^{3r+3}\) tower | Both prime-level fifth powers are proved below; separate critical-shell theorems close the full [A112028](A112028EnhancedTower.md) and [A219562](A219562EnhancedTower.md) towers |
-| [A375179], [A375180] | Two parallel signed odd-power families have the same proposed exponents | Proved below as the \(A=2,3\) cases of one arbitrary-dilation theorem; their enhanced higher towers remain targets |
+| [A375179], [A375180] | Two parallel signed odd-power families have the same proposed exponents | The prime boundary is proved below; the [signed generalized-binomial theorem](A375179A375180SignedOddPowerTowers.md) proves both complete higher towers |
 | [A333593] | \(a(np^r)\equiv a(np^{r-1})\pmod{p^{3r}}\) | Proved below by an exact decomposition into a Coster generalized Apéry tower and a Jacobsthal--Kazandzidis binomial tower |
 | [A364118] | An Apéry linear combination gains two or three powers beyond the underlying tower | Modular/Apéry target; not yet reduced to the termwise framework |
 | [A364183] | A parity-sensitive height-one factorial ratio is integral and satisfies a \(p^{3r}\) tower | Integrality itself is still conjectural on the OEIS entry; treat before the tower |
@@ -464,12 +464,9 @@ The economical order is:
    congruences are proved. The remaining task is to induct the explicit
    two-digit reciprocal-square calculation through
    \(\mathbb Z/p^r\mathbb Z\).
-2. **A375179--A375180 signed towers.** Theorem 2A proves both prime
-   boundaries and the A375178 tower is now closed. The remaining task is to
-   transfer the additional block gain through the two signed geometries.
-3. **A364183 integrality.** Resolve the even/odd factorial-ratio branches
+2. **A364183 integrality.** Resolve the even/odd factorial-ratio branches
    before discussing supercongruences.
-4. **A364118.** Use its Apéry/modular structure rather than forcing a
+3. **A364118.** Use its Apéry/modular structure rather than forcing a
    termwise proof.
 
 This ordering is a research-budget decision, not a ranking of Peter's

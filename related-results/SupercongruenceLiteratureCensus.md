@@ -130,7 +130,7 @@ than separate papers.
 
 | Priority | Consolidated target | Why it survives the literature pass | Best first tool |
 | ---: | --- | --- | --- |
-| 1 | [A375179](https://oeis.org/A375179)--[A375180](https://oeis.org/A375180), signed odd-power enhanced towers | The A375178 geometry is now closed, while Coster does not supply the claimed $p^{3r+2m+1}$ gain in these two signed dilation geometries | Adapt the final-shell harmonic involution to the signed block decompositions |
+| 1 | [A365029](https://oeis.org/A365029), higher tower above $r=2$ | The boundary and first two adjacent levels are proved, while the remaining induction is reduced to explicit two-digit blocks | Complete the two-digit block induction |
 | 2 | [A365029](https://oeis.org/A365029), full \(A,B,n,r\) family | The boundary and \(C_{2,1}\) levels \(r=1,2\) are proved, but no published theorem located in the search yields the whole mixed-binomial tower | Induct the explicit two-digit reciprocal-square block cancellation through arbitrary \(p\)-adic depth |
 | 3 | [A364118](https://oeis.org/A364118) and its companion Apéry combinations | These ask for \(p^5\) at the first level and \(p^{3r+3}\) later, beyond the ordinary Apéry tower | Linearized recurrence, modular parametrization, or a refined Coster expansion |
 | 4 | [A008793](https://oeis.org/A008793), plane partitions in a cube | Its nonlinear congruence \(a(np^r)\equiv a(np^{r-1})^p\pmod {p^{4r}}\) has independent enumerative content and does not resemble a routine Coster corollary | \(p\)-adic logarithm of MacMahon's product |
