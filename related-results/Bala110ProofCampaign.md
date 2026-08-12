@@ -25,14 +25,14 @@ every record:
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | T: finite-sum transfer | 40 | 9 | 8 | 9 | 4 | 10 | 0 |
-| C: coefficient/constant term | 37 | 11 | 6 | 6 | 2 | 12 | 0 |
+| C: coefficient/constant term | 37 | 12 | 6 | 6 | 2 | 11 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **37** | **17** | **27** | **7** | **22** | **0** |
+| **Total** | **110** | **38** | **17** | **27** | **7** | **21** | **0** |
 
-The thirty-seven `proved-here` records are A002003, A005725, A008485, A008705,
-A008793, A049505, A091527, A108625, A132303, A141057, A143007, A156554, A177316, A246437,
+The thirty-eight `proved-here` records are A002003, A005725, A008485, A008705,
+A008793, A049505, A091527, A108625, A132303, A141057, A143007, A156554, A177316, A245926, A246437,
 A255672, A260667, A262732, A270913, A270919, A270922, A270924, A275652,
 A275654, A281267, A288470, A333592,
 A348410, A351857, A352373, A357509, A357510, A357568, A364173,
@@ -49,7 +49,7 @@ A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
 classified `no-explicit-open`: the live pages contain no Bala
 supercongruence conjecture that remains to be proved.
-The remaining twenty-two records are `open-target`; their exact claims,
+The remaining twenty-one records are `open-target`; their exact claims,
 prime ranges, normalizations, and family consolidations are recorded in the
 [remaining-open-target map](Bala110RemainingOpenTargets.md).
 
@@ -179,6 +179,16 @@ loss.  This proves the full family for `p>=5` and for `p=3` whenever
 `3|(c+s)`; the singular line `c+s=0` is an explicit parity sequence.  Only
 the ternary unit-slope boundary remains, so A263843 moves to `partial` and
 22 records remain `open-target`.
+
+The following proof unit closes A245926.  Lagrange--Bürmann inversion and
+the substitution `u=(1+y)/(1-y)`, `v=u^2` reduce the conjectural coefficient
+representation to the quadratic equation
+`3*z*v^2+(z-1)*v+1=0`; eliminating `v` recovers exactly the algebraic
+generating function on the OEIS page.  The resulting kernel factors as
+`(1-x^3)*(1-x^2)^2/(1-x)^5`.  For `p>=5` its reduced Frobenius logarithm
+has no exponent on the `p`-sublattice, so the linear defect vanishes and
+all remaining exponential terms carry `p^(2r)`.  This proves both the
+representation and the quadratic tower, leaving 21 `open-target` records.
 
 ## Proof order
 

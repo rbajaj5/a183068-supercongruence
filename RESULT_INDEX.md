@@ -506,6 +506,35 @@ proof.
 - **Proof:** [A156554 Legendre coefficient tower](related-results/A156554LegendreCoefficientTower.md)
 - **Exact checker:** [`verify_a156554_legendre_tower.py`](verification/related/verify_a156554_legendre_tower.py)
 
+### A245926-ALG — algebraic coefficient identity and quadratic tower
+
+- **Claim:** If \(a(N)\) is A245926, then
+
+  ```math
+  a(N)=[x^N]
+  \left(\frac{(1+x+x^2)(1+x)^2}{(1-x)^2}\right)^N,
+  ```
+
+  and, for every prime \(p\ge5\),
+
+  ```math
+  a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}.
+  ```
+
+- **Representation proof:** For \(y=z\Phi(y)\), Lagrange inversion gives
+  the coefficient generating function as \(zy'/y\). The substitution
+  \(u=(1+y)/(1-y)\), \(v=u^2\) reduces the kernel equation to
+  \(3zv^2+(z-1)v+1=0\), whose discriminant is \(1-14z+z^2\); eliminating
+  \(v\) recovers exactly the algebraic generating function on A245926.
+- **Congruence proof:** The kernel factors as
+  \((1-x^3)(1-x^2)^2/(1-x)^5\). At \(p\ge5\), the reduced Frobenius
+  logarithm has no exponent divisible by \(p\), so the linear defect has
+  zero constant term and every higher exponential term contains
+  \(p^{2r}\).
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [A245926 algebraic coefficient tower](related-results/A245926AlgebraicCoefficientTower.md)
+- **Exact checker:** [`verify_a245926_algebraic_coefficient.py`](verification/related/verify_a245926_algebraic_coefficient.py)
+
 ### A351858-CYCL — exact boundary of the proposed cyclotomic family
 
 - **Claim tested:** For

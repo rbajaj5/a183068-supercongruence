@@ -52,7 +52,7 @@ A168597	C	published-source	Pan--Sun theorem is cited on the live OEIS record for
 A176335	C	published-source	Coster Theorem 4 cited by live OEIS entry	verify exact parameter match in bibliography
 A177316	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the bilateral coefficient and telescoping identity
 A228960	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
-A245926	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the required Laurent representation and then the quadratic tower
+A245926	C	proved-here	related-results/A245926AlgebraicCoefficientTower.md	independent proof review and literature-priority audit
 A246437	C	proved-here	related-results/MixedStepCoefficientQuadraticTower.md	independent review and priority audit of the mixed-step family theorem
 A263843	C	partial	related-results/A263843ReversionCoefficientReduction.md	p>=5 and 3|(c+s) proved; close the remaining p=3 unit-slope boundary
 A281267	C	proved-here	related-results/EulerProductGaussianTower.md	independent review and source-facing cross-reference for the one-color d=1 specialization

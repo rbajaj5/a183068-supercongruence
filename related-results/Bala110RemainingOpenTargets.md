@@ -1,4 +1,4 @@
-# The 22 remaining open targets in the Bala 110-record census
+# The 21 remaining open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -24,7 +24,10 @@ have closed two targets, while the
 that record's all-parameter claim and moves its surviving named case to the
 partial ledger. The
 [A263843 reversion reduction](A263843ReversionCoefficientReduction.md) has
-also moved that record to `partial`. This file now lists the 22 records that
+also moved that record to `partial`.  The
+[A245926 algebraic coefficient theorem](A245926AlgebraicCoefficientTower.md)
+proves both that record's conjectural coefficient representation and its
+quadratic tower. This file now lists the 21 records that
 remain fully open.
 
 ## 1. Finite-sum transfer targets
@@ -130,12 +133,6 @@ F\longmapsto
 iteratively and asks that the resulting coefficient sequences retain the
 same tower. Closure under this nonlinear operation is a separate theorem.
 
-### Algebraic quadratic towers
-
-- [A245926](https://oeis.org/A245926) first needs its conjectural Laurent
-  representation proved; conditional on that representation, the page asks
-  for a quadratic tower at `p >= 5`.
-
 ### Uniform row theorem
 
 [A331562](https://oeis.org/A331562) asks that every fixed row satisfy the
@@ -181,7 +178,7 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 22 records are explicit `open-target` entries;
+- 21 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
