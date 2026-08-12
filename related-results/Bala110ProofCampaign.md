@@ -24,15 +24,15 @@ every record:
 
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 12 | 8 | 11 | 4 | 5 | 0 |
+| T: finite-sum transfer | 40 | 13 | 8 | 11 | 4 | 4 | 0 |
 | C: coefficient/constant term | 37 | 12 | 6 | 13 | 2 | 4 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **41** | **17** | **36** | **7** | **9** | **0** |
+| **Total** | **110** | **42** | **17** | **36** | **7** | **8** | **0** |
 
-The forty-one `proved-here` records are A002003, A005725, A008485, A008705,
-A008793, A049505, A091527, A108625, A132303, A141057, A143007, A156554, A177316, A198060, A198256, A198258, A245926, A246437,
+The forty-two `proved-here` records are A002003, A005725, A008485, A008705,
+A008793, A049505, A091527, A108625, A124435, A132303, A141057, A143007, A156554, A177316, A198060, A198256, A198258, A245926, A246437,
 A255672, A260667, A262732, A270913, A270919, A270922, A270924, A275652,
 A275654, A281267, A288470, A333592,
 A348410, A351857, A352373, A357509, A357510, A357568, A364173,
@@ -50,7 +50,7 @@ A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
 classified `no-explicit-open`: the live pages contain no Bala
 supercongruence conjecture that remains to be proved.
-The remaining nine records are `open-target`; their exact claims,
+The remaining eight records are `open-target`; their exact claims,
 prime ranges, normalizations, and family consolidations are recorded in the
 [remaining-open-target map](Bala110RemainingOpenTargets.md).
 
@@ -222,6 +222,14 @@ Franel specialization through a different representation, but does not
 prove this full integer-parameter deformation; the missing statement is now
 one explicit cubic Cartier contraction.  Both records therefore move to
 `partial`, leaving nine records `open-target`.
+
+The balanced-matrix unit then closes A124435.  A general coefficientwise
+theorem proves a `p^(2r)` Frobenius tower for products of linear forms with
+equal row and column margins: every missed residue matrix forces carries in
+at least two rows.  An Eisenstein `3` by `3` matrix realizes the A124435
+rational diagonal; its entrywise Frobenius is either the matrix itself or
+its transpose, and balanced coefficients are transpose-invariant.  This
+proves the exact OEIS tower and leaves eight records `open-target`.
 
 ## Proof order
 

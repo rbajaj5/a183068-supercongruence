@@ -71,7 +71,8 @@ supercongruence exponent.
 | 1B-AP | [Apéry enhanced-congruence packet](AperyRankOneDefectPacket.md) | Collapses A352655, A357506, A357567, A357956, A357959 and two nonlinear companions to three linear Apéry defect relations | Complete exact reduction; 260 checks; core defect packet open |
 | 1B-B52 | [Bober sporadic factorial-ratio packet](BoberSporadicFactorialRatioPacket.md) | Applies the balanced and rational-gamma engines to all 52 Bober ratios and Bala's 15 visible fractional-index variants | Ordinary 52-record tower proved for $p\ge5$; A364176 completely closed; 14 fractional integrality targets remain |
 | 1B-BR | [Draft reply to Bala and Hanna](BalaBoberAugustReply.md) | Gives a short elementary account of the 52 ordinary towers and the newly completed A364176 case | Correspondence draft; no additional theorem claim |
-| 1B-S | [110-record proof-campaign ledger](Bala110ProofCampaign.md) | Gives every census record a route, conservative status, evidence pointer, and next proof operation | Complete machine-readable ledger; 41 proved here, 17 source-closed, 36 partial, 7 with no explicit open target, 9 open targets, and none queued |
+| 1B-S | [110-record proof-campaign ledger](Bala110ProofCampaign.md) | Gives every census record a route, conservative status, evidence pointer, and next proof operation | Complete machine-readable ledger; 42 proved here, 17 source-closed, 36 partial, 7 with no explicit open target, 8 open targets, and none queued |
+| 1B-BM | [Balanced-matrix coefficient tower](BalancedMatrixCoefficientQuadraticTower.md) | Uses a two-row carry lemma and Eisenstein Frobenius/transposition symmetry to prove A124435 | Complete elementary proof candidate; 94 exact checks; priority unestablished |
 | 1B-FC | [Franel-companion constant-term reduction](FranelCompanionConstantTermReduction.md) | Unifies A362676 and the two integer-parameter A363985 families as constant terms of one two-kernel deformation | Exact reduction; 1,282 checks including 914 sharp tower cases; one cubic Cartier contraction remains |
 | 1B-PB | [A260667 prime-boundary congruence](A260667PrimeBoundary.md) | Proves the isolated \(p^3\) boundary by a local binomial expansion and two exact weighted harmonic evaluations | Complete elementary proof candidate; 349 exact checks; priority search pending |
 | 1B-TC | [A132303 trinomial-cube tower](A132303TrinomialCubeTower.md) | Uses a cyclotomic two-variable constant term whose linear Frobenius defect vanishes off the \(p\)-sublattice | Complete elementary proof candidate; exact checks; sharp quadratic exponent observed |
@@ -170,6 +171,7 @@ The individual correspondence is:
 | Landau depth | `verification/related/verify_landau_supercongruence.py` |
 | Peter Bala's OEIS queue | `verification/related/verify_bala_oeis_supercongruences.py` |
 | Franel-companion constant-term reduction | `verification/related/verify_franel_companion_ct_reduction.py` |
+| Balanced-matrix coefficient tower | `verification/related/verify_balanced_matrix_coefficient_tower.py` |
 | Bober sporadic factorial-ratio packet | `verification/related/verify_bober_sporadic_packet.py` |
 | A364176 affine-Landau theorem | `verification/related/verify_a364176_affine_landau.py` |
 | Bala August coefficient packet | `verification/related/verify_bala_august_coefficient_packet.py` |

@@ -2071,6 +2071,34 @@ proof.
 - **Proof:** [Adjacent-binomial meander-row towers](related-results/MeanderAdjacentBinomialTowers.md)
 - **Exact checker:** [`verify_meander_adjacent_binomial_towers.py`](verification/related/verify_meander_adjacent_binomial_towers.py)
 
+### MATRIX-2 — balanced matrix coefficient tower
+
+- **Claim:** If
+
+  ```math
+  \mathcal F_N(A)=[x_1^N\cdots x_d^N]
+  \prod_i\left(\sum_j a_{ij}x_j\right)^N,
+  ```
+
+  then for every prime `p>=5`,
+
+  ```math
+  \mathcal F_{np^r}(A)
+  \equiv\mathcal F_{np^{r-1}}(A^{[p]})\pmod {p^{2r}}.
+  ```
+
+  The theorem is coefficientwise in the matrix entries.  A nondivisible
+  balanced exponent matrix forces carries in at least two rows.
+- **Application:** An explicit matrix over the sixth roots of unity has
+  determinant denominator `1-x-y-z+xyz`.  Its Frobenius twist is either
+  itself or its transpose, and transpose leaves the balanced coefficient
+  invariant.  This proves the A124435 quadratic tower.
+- **Status:** Complete elementary proof candidate with 94 exact checks;
+  priority is unestablished.  The exponent is sharp, and `p=3` fails in the
+  untwisted specialization.
+- **Proof:** [Balanced matrix coefficients and A124435](related-results/BalancedMatrixCoefficientQuadraticTower.md)
+- **Exact checker:** [`verify_balanced_matrix_coefficient_tower.py`](verification/related/verify_balanced_matrix_coefficient_tower.py)
+
 ## Reductions and computational reports
 
 ### FRANEL-CT — integer-parameter Franel-companion kernels

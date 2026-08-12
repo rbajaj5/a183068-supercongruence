@@ -1,4 +1,4 @@
-# The 9 remaining open targets in the Bala 110-record census
+# The 8 remaining open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -36,7 +36,9 @@ proved the three intended A198060 families and closed A198256 and A198258,
 including the exceptional ternary sextic case. The subsequent
 [Franel-companion reduction](FranelCompanionConstantTermReduction.md)
 places A362676 and A363985 in one explicit constant-term family and moves
-both to `partial`. This file now lists the 9 records that remain fully open.
+both to `partial`. The later
+[balanced-matrix theorem](BalancedMatrixCoefficientQuadraticTower.md)
+proves A124435. This file now lists the 8 records that remain fully open.
 
 ## 1. Finite-sum transfer targets
 
@@ -55,13 +57,6 @@ for the cubic tower for both
 
 at every `p >= 5`. The two statements require a coefficient representation
 that survives reversion; a formal similarity of the series is not enough.
-
-### Quadratic tower
-
-- [A124435](https://oeis.org/A124435) asks for
-  `a(np^r) = a(np^(r-1)) mod p^(2r)` for `p >= 5`. The live rational
-  diagonal is `1/(1-x-y-z+xyz)`, but a rational diagonal alone does not
-  supply the second power.
 
 ### Isolated finite-sum boundary
 
@@ -127,7 +122,7 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 9 records are explicit `open-target` entries;
+- 8 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.

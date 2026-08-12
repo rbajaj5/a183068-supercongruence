@@ -12,7 +12,7 @@ A082758	T	published-source	Pan--Sun theorem cited by live OEIS entry	verify exac
 A103882	T	published-source	Straub Example 3.4 gives the recorded Apéry-number congruence	verify exact edition and theorem numbering in bibliography
 A112028	T	partial	Coster Theorem 4 gives the p^(3r) baseline; OEIS asks for p^5 and p^(3r+3)	prove the extra shifted-index gain
 A112029	T	published-source	Coster Theorem 4 is cited on the live OEIS record for the full p^(3r) tower	verify exact theorem numbering and shifted-index normalization in bibliography
-A124435	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the quadratic tower from the rational diagonal
+A124435	T	proved-here	related-results/BalancedMatrixCoefficientQuadraticTower.md	independent review and literature-priority audit of the balanced-matrix theorem
 A132303	T	proved-here	related-results/A132303TrinomialCubeTower.md	independent review and literature-priority audit
 A141057	T	proved-here	MultinomialPowerFrobeniusTowers.md	independent review and priority audit
 A143583	T	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record states only a Gauss p^r congruence and no Bala supercongruence conjecture
