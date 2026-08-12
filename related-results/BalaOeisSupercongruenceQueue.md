@@ -1,9 +1,10 @@
 # Peter Bala's OEIS supercongruence queue
 
 **Status:** the A365029 boundary theorem and full \(r=1,2\) adjacent
-supercongruences are proved; the A375178 prime-level family is proved; the
+supercongruences are proved; the A375178 prime-level family and the
+prime-level fifth-power claims for A112028 and A219562 are proved; and the
 complete A333593 prime-power tower is reduced to Coster's generalized Apéry
-theorem. Two higher-level towers remain exact computational targets.
+theorem. The enhanced higher-level towers remain exact computational targets.
 Literature priority is preliminary, and the new arguments have not been
 independently reviewed.
 
@@ -23,6 +24,7 @@ representative targets by mechanism.
 | --- | --- | --- |
 | [A365029] | \(a(p-1)\equiv1\pmod{p^3}\), plus an all-\(n,r\) \(p^{3r}\) tower | The first congruence is proved below in the stronger two-parameter form \(p^{A+B}\); the full \(r=1,2\) adjacent congruences are also proved; only \(r\ge3\) remains |
 | [A375178] | An odd-power family satisfies \(b_m(p)\equiv1\pmod{p^{2m+3}}\), plus a stronger tower for \(r\ge2\) | The entire prime-level family is proved below; the tower remains a target |
+| [A112028], [A219562] | The cubic and quartic shifted-binomial sums satisfy a prime-level fifth power and an enhanced \(p^{3r+3}\) tower | Both prime-level fifth powers are proved below; Coster gives the \(p^{3r}\) baseline; only the extra higher-level gain remains |
 | [A375179], [A375180] | Two parallel signed odd-power families have the same proposed exponents | Retained as one consolidated extension of the A375178 program; neither follows formally from Theorem 2 below |
 | [A333593] | \(a(np^r)\equiv a(np^{r-1})\pmod{p^{3r}}\) | Proved below by an exact decomposition into a Coster generalized Apéry tower and a Jacobsthal--Kazandzidis binomial tower |
 | [A364118] | An Apéry linear combination gains two or three powers beyond the underlying tower | Modular/Apéry target; not yet reduced to the termwise framework |
@@ -245,6 +247,53 @@ The exponent in Theorem 2 is attained in the exact tested range. Reaching
 (10) still requires a refinement beyond Coster's cubic theorem: the clean
 \(k=1,\ldots,p-1\) harmonic argument above does not simply iterate.
 
+### The even-power boundary and A112028--A219562
+
+The same calculation has a simpler even-power branch.
+
+#### Proposition
+
+If \(q\ge2\) is even and \(p\ge q+3\) is prime, then
+
+```math
+\boxed{B_q(p)\equiv1\pmod {p^{q+1}}.}
+```
+
+Indeed, for \(1\le k<p\), equation (5) gives
+
+```math
+\binom{p+k-1}{k}^{q}
+\equiv \frac{p^q}{k^q}\pmod {p^{q+1}}.
+```
+
+Because \(0<q<p-1\), the finite-field power-sum identity gives
+
+```math
+\sum_{k=1}^{p-1}k^{-q}
+=\sum_{k=1}^{p-1}k^{p-1-q}
+\equiv0\pmod p.
+```
+
+Summing proves the proposition. There are now two immediate named
+consequences:
+
+- A112028 satisfies \(\mathrm{A112028}(N-1)=B_3(N)\). Theorem 2 with
+  \(m=1\) proves \(B_3(p)\equiv1\pmod {p^5}\) for every prime \(p\ge7\).
+- A219562 satisfies \(\mathrm{A219562}(N-1)=B_4(N)\). The proposition proves
+  \(B_4(p)\equiv1\pmod {p^5}\) for every prime \(p\ge7\).
+
+Thus the prime-level fifth-power parts of both OEIS conjectures are closed.
+Coster's theorem supplies their ordinary \(p^{3r}\) towers. What remains is
+only the proposed enhancement
+
+```math
+B_q(p^r)\equiv B_q(p^{r-1})\pmod {p^{3r+3}}
+\qquad(q=3,4,\ r\ge2).
+```
+
+The lower boundary is genuine for both named exponents:
+\(v_5(B_3(5)-1)=v_5(B_4(5)-1)=4\).
+
 ## 4. The A333593 tower is a Coster corollary
 
 Define
@@ -328,6 +377,8 @@ The dependency-free checker records:
 - 390 instances of Theorem 1, for \(1\le A\le6\), \(1\le B\le5\), and
   odd primes through \(43\);
 - 56 instances of Theorem 2, for \(1\le m\le6\) and primes through \(43\);
+- 62 even-power and named-boundary checks, for even \(2\le q\le12\) and
+  primes through \(43\), including the A219562 exponent;
 - 343 instances of Coster's cubic baseline (9), for \(2\le q\le8\);
 - 584 checks of Theorem 3 and its reduction: 200 exact decompositions,
   128 final tower congruences, and 256 component congruences;
@@ -363,7 +414,10 @@ The economical order is:
    but the additional \(3r\) block gain must be made uniform.
 3. **A364183 integrality.** Resolve the even/odd factorial-ratio branches
    before discussing supercongruences.
-4. **A364118.** Use its Apéry/modular structure rather than forcing a
+4. **A112028 and A219562 above the prime boundary.** Their fifth-power
+   boundaries are now proved. The remaining target is exactly the enhanced
+   \(p^{3r+3}\) tower for \(r\ge2\).
+5. **A364118.** Use its Apéry/modular structure rather than forcing a
    termwise proof.
 
 This ordering is a research-budget decision, not a ranking of Peter's
@@ -385,6 +439,8 @@ this queue. The operative input for Theorem 3 is instead Coster's generalized
 Apéry theorem.
 
 [A333593]: https://oeis.org/A333593
+[A112028]: https://oeis.org/A112028
+[A219562]: https://oeis.org/A219562
 [A365029]: https://oeis.org/A365029
 [A375178]: https://oeis.org/A375178
 [A375179]: https://oeis.org/A375179

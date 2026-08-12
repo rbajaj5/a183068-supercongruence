@@ -129,6 +129,29 @@ def check_a375178_prime_level_theorem() -> tuple[int, int]:
     return checks, minimum_slack
 
 
+def check_even_power_prime_level_theorem() -> tuple[int, int]:
+    """Check B_q(p)=1 mod p^(q+1) for even q and p>=q+3."""
+    checks = 0
+    minimum_slack = 10**9
+    for exponent in range(2, 13, 2):
+        target = exponent + 1
+        for prime in PRIMES:
+            if prime < exponent + 3:
+                continue
+            difference = bala_power(prime, exponent) - 1
+            slack = valuation(difference, prime) - target
+            assert slack >= 0, (exponent, prime, slack)
+            minimum_slack = min(minimum_slack, slack)
+            checks += 1
+    assert checks == 60
+    assert minimum_slack == 0
+
+    # The excluded p=5 boundary for both named fifth-power claims is sharp.
+    assert valuation(bala_power(5, 3) - 1, 5) == 4
+    assert valuation(bala_power(5, 4) - 1, 5) == 4
+    return checks + 2, minimum_slack
+
+
 def check_coster_a375178_baseline() -> tuple[int, int]:
     """Check Coster's p^(3r) tower for all exponents q >= 2."""
     checks = 0
@@ -264,6 +287,7 @@ def check_a375178_tower_evidence() -> tuple[int, int]:
 def main() -> None:
     boundary_checks, boundary_slack = check_a365029_boundary_theorem()
     prime_checks, prime_slack = check_a375178_prime_level_theorem()
+    even_checks, even_slack = check_even_power_prime_level_theorem()
     baseline_checks, baseline_slack = check_coster_a375178_baseline()
     a333_checks, a333_slack = check_a333593_coster_reduction()
     a365_checks, a365_slack = check_a365029_tower_evidence()
@@ -276,6 +300,10 @@ def main() -> None:
     print(
         "proved A375178-family prime cases: "
         f"{prime_checks} (minimum slack {prime_slack})"
+    )
+    print(
+        "proved even-power prime cases and named boundaries: "
+        f"{even_checks} (minimum slack {even_slack})"
     )
     print(
         "published Coster baseline cases: "
@@ -295,7 +323,7 @@ def main() -> None:
     )
     print(
         "all "
-        f"{boundary_checks + prime_checks + baseline_checks + a333_checks + a365_checks + odd_checks} "
+        f"{boundary_checks + prime_checks + even_checks + baseline_checks + a333_checks + a365_checks + odd_checks} "
         "Bala-queue checks passed"
     )
 

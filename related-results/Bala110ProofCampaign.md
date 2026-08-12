@@ -93,7 +93,9 @@ hit as a proof:
 
 The follow-up [live-source boundary](Bala110LiveSourceBoundary.md) removes
 nine further false starts. It source-closes A002895, A005258, and A183204;
-records only the enhanced parts of A112028 and A219562 as open; and marks
+records the enhanced parts of A112028 and A219562 as open; their prime-level
+fifth powers are now proved in the
+[Bala queue theorem](BalaOeisSupercongruenceQueue.md#the-even-power-boundary-and-a112028--a219562). It also marks
 A001850, A006318, A036917, and A143583 as search anchors with no live Bala
 supercongruence target.
 

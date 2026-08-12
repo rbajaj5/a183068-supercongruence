@@ -76,7 +76,10 @@ The live pages ask for more:
   exponents.
 
 The published `p^(3r)` statement is therefore evidence for `partial`, not
-for `published-source`: the extra three powers remain a genuine target.
+for `published-source`. The later
+[boundary theorem](BalaOeisSupercongruenceQueue.md#the-even-power-boundary-and-a112028--a219562)
+proves both prime-level `p^5` claims. Only the extra three powers at levels
+`r>=2` remain a genuine target.
 
 ### A108628: shifted multivariate Apéry coefficient
 

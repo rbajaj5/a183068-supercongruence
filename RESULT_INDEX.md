@@ -76,6 +76,19 @@ proof.
 - **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#3-the-full-prime-level-odd-power-theorem-for-a375178)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
 
+### BALA-EVEN — A112028 and A219562 prime-level fifth powers
+
+- **Claim:** For even \(q\ge2\) and primes \(p\ge q+3\),
+  \(B_q(p)\equiv1\pmod {p^{q+1}}\). Together with the odd-power theorem,
+  this proves the conjectured \(p^5\) boundaries for A112028 (\(q=3\))
+  and A219562 (\(q=4\)) for every prime \(p\ge7\).
+- **Source status:** Named open prime-level refinements; Coster supplies only
+  the ordinary cubic tower used as the higher-level baseline.
+- **Status:** Complete unchecked elementary proof; the enhanced
+  \(p^{3r+3}\) statements for \(r\ge2\) remain open.
+- **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#the-even-power-boundary-and-a112028--a219562)
+- **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
+
 ### A333-COSTER — complete A333593 tower
 
 - **Claim:** For every prime \(p\ge5\) and positive integers \(n,r\),
