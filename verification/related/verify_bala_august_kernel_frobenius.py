@@ -1,6 +1,6 @@
 """Coefficient checks for the Frobenius-fixed first-defect kernel.
 
-The conjectural coefficient identity and its proved reductions are recorded in
+The proved coefficient identity and its reductions are recorded in
 ``related-results/BalaAugustFirstDefectKernel.md``, Section 5.2.  This checker
 uses exact rational arithmetic and reduces only at the final p-adic step.
 

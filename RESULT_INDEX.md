@@ -318,6 +318,24 @@ proof.
 - **Exact checkers:** [`verify_bala_august_first_defect.py`](verification/related/verify_bala_august_first_defect.py),
   [`verify_bala_august_kernel_frobenius.py`](verification/related/verify_bala_august_kernel_frobenius.py)
 
+### NEG-HIGHER-DEFECT - exact three-level reduction
+
+- **Claim:** Bala's growing-modulus conjecture is equivalent, without any
+  division, to
+  \[
+  u(np^r)-(1+p^3)u(np^{r-1})+p^3u(np^{r-2})
+  \equiv0\pmod {p^{5r-2-\delta_p}}.
+  \]
+- **Mechanism:** The left side has an exact decomposition into the unit,
+  once-scaled, and twice-scaled valuation shells. None generally reaches
+  the target separately. The exact logarithmic expansion shows that only a
+  higher contraction of the cubic defect kernel and the degree-four tail
+  remain; logarithmic degrees at least five have enough explicit powers.
+- **Status:** Exact reduction and sharp computational boundary; the final
+  higher-Frobenius estimate remains open; 405 exact checks.
+- **Proof:** [Higher August defect reduction](related-results/BalaAugustHigherDefectLift.md)
+- **Exact checker:** [`verify_bala_august_higher_defect.py`](verification/related/verify_bala_august_higher_defect.py)
+
 ### NEG-PREFIX-3 - all-level prime-three prefix theorem
 
 - **Claim:** For $U_{a,b;c}$ as above, the normalized first defect

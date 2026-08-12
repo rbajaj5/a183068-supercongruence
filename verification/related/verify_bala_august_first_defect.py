@@ -2,8 +2,8 @@
 
 The proof is the Cartier calculation in
 ``related-results/BalaAugustFirstDefectKernel.md``.  These computations
-check the arithmetic consequences and the still-conjectural Cartier-moment
-stability; they are not a substitute for identity (15) in that note.
+check the arithmetic consequences of the proved Cartier-moment stability;
+they are not a substitute for the coefficient proof in that note.
 
 Run with:
     python verification/related/verify_bala_august_first_defect.py
@@ -89,7 +89,7 @@ def normalized_defect(n: int, prime: int, level: int) -> int:
 
 
 def check_level_stability() -> int:
-    """Evidence for the open moment identity (15), not a proof of it."""
+    """Exact regression checks for the proved level-stability theorem."""
 
     checks = 0
     for prime, max_n, max_level in (
@@ -121,7 +121,7 @@ def check_bernoulli_boundary() -> int:
 
 
 def check_family_level_stability() -> int:
-    """Broad evidence for the family-level kernel-moment identity."""
+    """Broad regression grid for the family-level kernel-moment theorem."""
 
     checks = 0
     for prime in (5, 7, 11):

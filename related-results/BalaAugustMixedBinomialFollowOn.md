@@ -292,7 +292,10 @@ Q_{p,r}(n)\equiv Q_{p,r-1}(n)
 In particular, the leading residue $Q_{p,r}(n)\bmod p$ is independent of
 $r$ by the first-defect theorem. The cubic integrality boundary is proved
 for every odd prime in Bala's specialization. Only the additional powers
-asserted in (10b) remain open.
+asserted in (10b) remain open.  The
+[higher-defect note](BalaAugustHigherDefectLift.md) gives the equivalent
+three-level modulus $p^{5r-2-\delta_p}$, an exact valuation-shell
+decomposition, and the logarithmic degree-four boundary.
 
 The modular checker computes each summand by tracking its $p$-adic exponent
 and unit separately. It verifies the cubic divisibility and (10b) for
