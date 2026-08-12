@@ -417,6 +417,210 @@ show that the right side has the required cancellation on those resonant
 classes.  This is the rational-prime analogue of isolating the critical
 shell in the Gaussian calculation.
 
+### 5.2 A stronger coefficientwise Frobenius target
+
+Exact coefficient calculations indicate that the transport equation is
+more rigid than Lemma 3 requires.  Work in the coordinates (19), and write
+
+```math
+\frac1p\mathcal C_p(HL_p^2)=D_xP+D_yQ.
+\tag{23}
+```
+
+Choose $P,Q$ canonically, monomial by monomial: assign the coefficient at
+$(m,n)$ to $D_xP$ when $m\ne0$ and
+$v_p(m)\leq v_p(n)$, and otherwise assign it to $D_yQ$.  In these
+coordinates the kernel (5) becomes
+
+```math
+\mathscr B_{p;a,b,c}
+=\frac16\mathcal C_p(HL_p^3)
+-\frac12\left(PD_x\log G+QD_y\log G\right).
+\tag{24}
+```
+
+The observed identity is the coefficientwise strengthening
+
+```math
+\boxed{
+\mathcal C_p\mathscr B_{p;a,b,c}
+\equiv\mathscr B_{p;a,b,c}\pmod p.
+}
+\tag{25}
+```
+
+If (25) holds, Corollary 4 follows with $J=0$, and hence the first
+normalized defect stabilizes for the full positive-slope prefix family.
+
+The quadratic part of (25) reduces to the lifted reciprocal-square bound
+
+```math
+v_p\!\left(
+[x^{p^2m}y^{p^2n}]HL_p^2
+-p[x^{pm}y^{pn}]HL_p^2
+\right)
+\geq3+\min\{v_p(m),v_p(n)\}.
+\tag{26}
+```
+
+This bound can in fact be proved by a second unit-block lift.
+
+### Lemma 5 (lifted reciprocal square)
+
+For every prime $p\geq5$ and $m,n\geq0$, (26) holds, with
+$v_p(0)=+\infty$.
+
+### Proof
+
+For $j\geq2$ put
+
+```math
+R_j(pL)=
+\sum_{\substack{1\leq u\leq pL\\p\nmid u}}u^{-j}.
+```
+
+First we prove
+
+```math
+R_2(p^2L)-pR_2(pL)\in p^{3+v_p(L)}\mathbb Z_p.
+\tag{27}
+```
+
+The case $L=0$ is tautological, so assume $L>0$.
+Write
+
+```math
+B(q)=\sum_{u=1}^{p-1}(pq+u)^{-2}.
+```
+
+If $\ell=v_p(L)$, grouping the $pL$ blocks as $q+jL$, with
+$0\leq q<L$ and $0\leq j<p$, gives
+
+```math
+R_2(p^2L)-pR_2(pL)
+=\sum_{q=0}^{L-1}\sum_{j=0}^{p-1}\bigl(B(q+jL)-B(q)\bigr).
+\tag{28}
+```
+
+Expand each unit denominator $p$-adically.  The term of Taylor degree $h$
+contains
+
+```math
+(pL)^h\left(\sum_{j=0}^{p-1}j^h\right)
+\left(\sum_{u=1}^{p-1}(pq+u)^{-h-2}\right).
+```
+
+For $h=1$, the first power sum contributes a factor $p$, while the last
+sum is also divisible by $p$ because it reduces to
+$\sum_{u\in\mathbb F_p^\times}u^{-3}=0$.  Its valuation is therefore at
+least $3+\ell$.  For $h\geq2$, the power sum in $j$ is divisible by $p$
+unless $p-1\mid h$.  In the latter case $h\geq p-1\geq4$.  Thus every
+remaining Taylor term also has valuation at least $3+\ell$.  The series
+converges $p$-adically, proving (27).  The same finite-field power-sum
+identity also gives
+
+```math
+R_3(pL)\in p\mathbb Z_p.
+\tag{29}
+```
+
+Now define the common two-denominator block
+
+```math
+F_p(A,B;L)=
+\sum_{\substack{1\leq u\leq pL\\p\nmid u}}
+\frac1{(pA-u)(pB-u)}.
+```
+
+Writing $h_q(A,B)=\sum_{i=0}^qA^iB^{q-i}$, geometric expansion gives
+
+```math
+F_p(A,B;L)=
+\sum_{q\geq0}p^q h_q(A,B)R_{q+2}(pL).
+\tag{30}
+```
+
+Suppose $p^s$ divides $A,B,L$.  In the difference
+$F_p(pA,pB;pL)-pF_p(A,B;L)$, the $q=0$ term is covered by (27).  The
+$q=1$ term is
+
+```math
+p^2(A+B)\bigl(R_3(p^2L)-R_3(pL)\bigr),
+```
+
+which lies in $p^{3+s}\mathbb Z_p$ by (29).  For $q\geq2$, each of the
+two terms has valuation at least
+
+```math
+q+1+qs\geq3+s.
+```
+
+Hence
+
+```math
+F_p(pA,pB;pL)-pF_p(A,B;L)\in p^{3+s}\mathbb Z_p.
+\tag{31}
+```
+
+Finally, the mixed coefficient of $HV_p(x)V_p(y)$ at $(pM,pN)$ is
+$F_p(M,N;\min\{M,N\})$.  The two pure-square boundary coefficients are
+$[z^{p|M-N|}]V_p(z)^2$, which equals
+$-F_p(0,|M-N|;|M-N|)$.  Apply (31) to these three pieces.  Since
+$p^{\min\{v_p(m),v_p(n)\}}$ divides $m,n,m-n$, their linear combination
+is exactly (26); the case $m=n=0$ is immediate. $\square$
+
+Bound (26) makes both canonical primitives $P,Q$ Cartier-fixed modulo
+$p$.  The only remaining part of (25) is therefore the reciprocal-cube
+transgression obtained by applying Cartier to (24).  This is exactly where
+the Frobenius lift, rather than generic compactness or recurrence machinery,
+carries the problem.
+
+### 5.3 The remaining cube transgression
+
+The last identity can be written without formal derivatives.  Let
+$P_{m,n},Q_{m,n}$ denote the coefficients of the canonical primitives, and
+put
+
+```math
+\begin{aligned}
+\Delta^{(3)}_{m,n}
+&=[x^{p^2m}y^{p^2n}]HL_p^3-[x^{pm}y^{pn}]HL_p^3,\\
+U^P_{m,n}
+&=\sum_{\substack{1\leq q\leq pm\\p\nmid q}}P_{pm-q,pn},\\
+U^Q_{m,n}
+&=\sum_{\substack{1\leq q\leq pn\\p\nmid q}}Q_{pm,pn-q}.
+\end{aligned}
+\tag{32}
+```
+
+Then coefficientwise Frobenius fixedness (25) is equivalent to
+
+```math
+\boxed{
+\Delta^{(3)}_{m,n}
+\equiv3aU^P_{m,n}+3bU^Q_{m,n}\pmod p
+\quad(m,n\geq0).
+}
+\tag{33}
+```
+
+Indeed, in the coefficient of $PD_x\log G$ at $(pm,pn)$, split the
+positive $x$-shifts into $q=pu$ and $p\nmid q$.  The divisible shifts
+reduce to the corresponding coefficient at $(m,n)$ because
+$P_{pr,ps}\equiv P_{r,s}\pmod p$; the constant term $-cP$ cancels for the
+same reason.  Only $aU^P_{m,n}$ remains.  The $Q$ term is identical in the
+$y$ coordinate.  Multiplying the difference of (24) by $6$ gives (33).
+
+Thus the open step no longer contains $G$, $c$, a constant-term pairing,
+or an unspecified tangent primitive.  It is the single unit-shift identity
+(33) for the quadratic block potentials.  In particular, its truth is
+independent of the prefix slope $c$.
+
+The checker finds no failure of (25) or (33) in 1,732 exact coefficient tests for
+$p=5,7,11$, including coefficients beyond the first resonant diagonal and
+cases $p\mid c$.  This is evidence for the remaining reciprocal-cube
+transgression, not a proof of it.
+
 ## 6. Bala's specialization and computation
 
 For $(a,b,c)=(1,2,1)$, exact arithmetic currently gives
@@ -454,9 +658,12 @@ Run
 
 ```text
 python verification/related/verify_bala_august_first_defect.py
+python verification/related/verify_bala_august_kernel_frobenius.py
 ```
 
-for the standalone 1,474-check exact regression certificate.
+The first command runs 1,474 normalized-defect checks.  The second runs
+1,732 exact coefficient checks of (25), its canonical primitives, the
+lifted square bound (26), and the unit-shift transgression (33).
 
 ## 7. Literature boundary and next obligation
 

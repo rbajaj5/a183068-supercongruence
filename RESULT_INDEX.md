@@ -263,12 +263,18 @@ proof.
   Frobenius-fixed moment identity. More concretely, it is enough to express
   the kernel discrepancy as one Hamiltonian tangent divergence along the
   level sets of $G$.  The unimodular coordinate $y=t/x$ converts that
-  certificate to an explicit triangular transport recurrence; only its
-  resonant coefficient classes remain open.
-- **Status:** Complete first-layer proof candidate; 1,474 exact arithmetic
-  checks support the remaining moment identity; no priority claim.
+  certificate to an explicit triangular transport recurrence. A canonical
+  divergence primitive gives the stronger experimental target
+  $\mathcal C_p\mathscr B=\mathscr B$ coefficientwise modulo $p$, reducing
+  the remaining proof to a lifted reciprocal-square congruence and its
+  reciprocal-cube transgression. The lifted-square congruence is now proved
+  by a second Frobenius block decomposition, so only the cubic transgression
+  remains open.
+- **Status:** Complete first-layer proof candidate; 3,206 exact arithmetic
+  checks support the remaining Frobenius identity; no priority claim.
 - **Proof:** [Bala August first-defect kernel](related-results/BalaAugustFirstDefectKernel.md)
-- **Exact checker:** [`verify_bala_august_first_defect.py`](verification/related/verify_bala_august_first_defect.py)
+- **Exact checkers:** [`verify_bala_august_first_defect.py`](verification/related/verify_bala_august_first_defect.py),
+  [`verify_bala_august_kernel_frobenius.py`](verification/related/verify_bala_august_kernel_frobenius.py)
 
 ### NEG-PREFIX-3 - exact prime-three prefix obstruction
 
