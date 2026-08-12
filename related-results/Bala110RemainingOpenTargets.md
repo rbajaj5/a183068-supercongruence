@@ -20,9 +20,9 @@ the proposed proof units below are family-sized.
 The [A132303 trinomial-cube theorem](A132303TrinomialCubeTower.md) and the
 [A156554 Legendre coefficient theorem](A156554LegendreCoefficientTower.md)
 have closed two targets, while the
-[A351858 cyclotomic boundary](A351858CyclotomicFamilyBoundary.md) refutes
-that record's all-parameter claim and moves its surviving named case to the
-partial ledger. The
+[A351858 theorem and cyclotomic boundary](A351858CyclotomicFamilyBoundary.md)
+refutes that record's all-parameter claim and proves its surviving named
+$k=2$ cubic tower by a six-residue Cartier estimate. The
 [A263843 reversion theorem](A263843ReversionCoefficientReduction.md) first
 moved that record to `partial` and now closes it completely, including the
 exceptional prime (3), by matching the leading quadratic and cubic

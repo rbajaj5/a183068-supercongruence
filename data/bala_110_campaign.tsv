@@ -67,7 +67,7 @@ A333097	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact 
 A348410	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A350383	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
 A351857	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A351858	C	partial	related-results/A351858CyclotomicFamilyBoundary.md	all-k and all-parameter families refuted; prove or refute the surviving named k=2 cubic tower
+A351858	C	proved-here	related-results/A351858CyclotomicFamilyBoundary.md	named k=2 cubic tower proved; broader all-k and all-parameter claims refuted; independent review
 A352373	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A362722	C	partial	related-results/ExponentialCoefficientCartierReduction.md	prove the quadratic Cartier-defect estimates (10), including the pure-prime bonus
 A362733	C	partial	related-results/ExponentialCoefficientCartierReduction.md	prove the cubic Cartier-defect estimate (10), including p=3

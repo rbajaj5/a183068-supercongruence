@@ -84,6 +84,46 @@ def primes_through(limit: int) -> list[int]:
     return answer
 
 
+def periodic_c(index: int) -> int:
+    return 1 + 4 * (index % 2 == 0) - 9 * (index % 3 == 0)
+
+
+def quadratic_coefficient_mod(total: int, prime: int, modulus: int) -> int:
+    answer = 0
+    for left in range(1, total):
+        right = total - left
+        if left % prime == 0:
+            continue
+        answer += (
+            periodic_c(left)
+            * periodic_c(right)
+            * pow(left, -1, modulus)
+            * pow(right, -1, modulus)
+        )
+    return answer % modulus
+
+
+def inverse_square_prefix(bound: int, prime: int, modulus: int) -> int:
+    return sum(
+        pow(value, -2, modulus)
+        for value in range(1, bound + 1)
+        if value % prime
+    ) % modulus
+
+
+def residue_class_sums(prime: int, exponent: int) -> list[int]:
+    modulus = prime**exponent
+    return [
+        sum(
+            pow(value, -2, modulus)
+            for value in range(1, modulus)
+            if value % prime and value % 6 == residue
+        )
+        % modulus
+        for residue in range(6)
+    ]
+
+
 def check_published_values() -> int:
     assert tuple(family(2, n) for n in range(len(PUBLISHED))) == PUBLISHED
     return len(PUBLISHED)
@@ -156,16 +196,131 @@ def check_small_witnesses() -> int:
     return 4
 
 
+def check_sixth_interval_lemma() -> int:
+    checks = 0
+    for prime in (5, 7, 11, 13, 17, 19):
+        for exponent in (1, 2, 3):
+            modulus = prime**exponent
+            one_third = inverse_square_prefix(modulus // 3, prime, modulus)
+            one_sixth = inverse_square_prefix(modulus // 6, prime, modulus)
+            assert (5 * one_third - one_sixth) % modulus == 0
+            checks += 1
+
+            classes = residue_class_sums(prime, exponent)
+            if modulus % 6 == 1:
+                a, b, d = classes[0], classes[2], classes[3]
+                assert classes == [a, a, b, d, d, b]
+            else:
+                a, b, d = classes[0], classes[1], classes[2]
+                assert classes == [a, b, d, d, b, a]
+            assert (a + 5 * d) % modulus == 0
+            assert (b - 4 * d) % modulus == 0
+            checks += 3
+    return checks
+
+
+def check_autocorrelation_table() -> int:
+    expected_positive = (
+        (0, 0, 0, 0, 0, 0),
+        (-4, -4, 5, -40, -40, 5),
+        (-19, -19, -28, 17, 17, -28),
+        (42, 42, 42, 42, 42, 42),
+        (-11, -11, -2, -47, -47, -2),
+        (-74, -74, -83, -38, -38, -83),
+    )
+    checks = 0
+    patterns = {
+        1: (-5, -5, 4, 1, 1, 4),
+        -1: (-5, 4, 1, 1, 4, -5),
+    }
+    for epsilon in (1, -1):
+        for remainder in range(6):
+            row = tuple(
+                sum(
+                    periodic_c(residue + epsilon * offset)
+                    * periodic_c(
+                        epsilon * remainder
+                        - residue
+                        - epsilon * offset
+                    )
+                    for offset in range(remainder)
+                )
+                for residue in range(6)
+            )
+            if epsilon == 1:
+                assert row == expected_positive[remainder]
+            else:
+                assert row == tuple(
+                    expected_positive[remainder][(-residue) % 6]
+                    for residue in range(6)
+                )
+            assert sum(x * y for x, y in zip(row, patterns[epsilon])) == 0
+            checks += 2
+    return checks
+
+
+def check_quadratic_cartier() -> int:
+    checks = 0
+    sharp = 0
+    for prime in (5, 7, 11, 13):
+        for exponent in (1, 2, 3):
+            required = prime**exponent
+            modulus = prime ** (exponent + 1)
+            for multiplier in range(1, 31):
+                total = required * multiplier
+                coefficient = quadratic_coefficient_mod(total, prime, modulus)
+                assert coefficient % required == 0
+                sharp += coefficient % modulus != 0
+                checks += 1
+    assert sharp > 0
+    return checks
+
+
+def check_named_towers() -> tuple[int, int]:
+    checks = 0
+    sharp = 0
+    for prime in (5, 7, 11, 13):
+        for level in (1, 2):
+            for n in range(1, 9):
+                if n * prime**level > 220:
+                    continue
+                high = family(2, n * prime**level)
+                low = family(2, n * prime ** (level - 1))
+                actual = vp(high - low, prime)
+                assert actual >= 3 * level
+                sharp += actual == 3 * level
+                checks += 1
+    assert sharp > 0
+    return checks, sharp
+
+
 def main() -> None:
     published = check_published_values()
     factorization = check_factorization()
     counterexamples = check_counterexample_families()
     small = check_small_witnesses()
-    total = published + factorization + counterexamples + small
+    intervals = check_sixth_interval_lemma()
+    autocorrelation = check_autocorrelation_table()
+    cartier = check_quadratic_cartier()
+    towers, sharp = check_named_towers()
+    total = (
+        published
+        + factorization
+        + counterexamples
+        + small
+        + intervals
+        + autocorrelation
+        + cartier
+        + towers
+    )
     print(f"published A351858 value checks: {published}")
     print(f"cyclotomic factorization checks: {factorization}")
     print(f"infinite-family coefficient/valuation checks: {counterexamples}")
     print(f"small explicit witness checks: {small}")
+    print(f"sixth-interval and residue-class checks: {intervals}")
+    print(f"autocorrelation-table checks: {autocorrelation}")
+    print(f"quadratic Cartier checks: {cartier}")
+    print(f"named cubic-tower checks: {towers} ({sharp} sharp)")
     print(f"all {total} A351858 boundary checks passed")
 
 
