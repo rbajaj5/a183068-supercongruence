@@ -1,7 +1,7 @@
 # Peter Bala's OEIS supercongruence queue
 
 **Status:** the A365029 boundary theorem and full \(r=1,2\) adjacent
-supercongruences are proved; the A375178 prime-level family and the
+supercongruences are proved; all three A375178--A375180 prime-level families and the
 prime-level fifth-power claims for A112028 and A219562 are proved; and the
 complete A333593 prime-power tower is reduced to Coster's generalized Apéry
 theorem. The enhanced higher-level towers remain exact computational targets.
@@ -25,7 +25,7 @@ representative targets by mechanism.
 | [A365029] | \(a(p-1)\equiv1\pmod{p^3}\), plus an all-\(n,r\) \(p^{3r}\) tower | The first congruence is proved below in the stronger two-parameter form \(p^{A+B}\); the full \(r=1,2\) adjacent congruences are also proved; only \(r\ge3\) remains |
 | [A375178] | An odd-power family satisfies \(b_m(p)\equiv1\pmod{p^{2m+3}}\), plus a stronger tower for \(r\ge2\) | The entire prime-level family is proved below; the tower remains a target |
 | [A112028], [A219562] | The cubic and quartic shifted-binomial sums satisfy a prime-level fifth power and an enhanced \(p^{3r+3}\) tower | Both prime-level fifth powers are proved below; Coster gives the \(p^{3r}\) baseline; only the extra higher-level gain remains |
-| [A375179], [A375180] | Two parallel signed odd-power families have the same proposed exponents | Retained as one consolidated extension of the A375178 program; neither follows formally from Theorem 2 below |
+| [A375179], [A375180] | Two parallel signed odd-power families have the same proposed exponents | Proved below as the \(A=2,3\) cases of one arbitrary-dilation theorem; their enhanced higher towers remain targets |
 | [A333593] | \(a(np^r)\equiv a(np^{r-1})\pmod{p^{3r}}\) | Proved below by an exact decomposition into a Coster generalized Apéry tower and a Jacobsthal--Kazandzidis binomial tower |
 | [A364118] | An Apéry linear combination gains two or three powers beyond the underlying tower | Modular/Apéry target; not yet reduced to the termwise framework |
 | [A364183] | A parity-sensitive height-one factorial ratio is integral and satisfies a \(p^{3r}\) tower | Integrality itself is still conjectural on the OEIS entry; treat before the tower |
@@ -208,6 +208,57 @@ Thus \(H(1,q)\equiv0\pmod p\). Equation (6), together with (7), is
 divisible by \(p^2\). Since \(q=2m+1\), this proves divisibility by
 \(p^{q+2}=p^{2m+3}\). \(\square\)
 
+### The signed arbitrary-dilation companion
+
+For an integer \(A\), define
+
+```math
+S_{A,m}(n)=
+\sum_{k=0}^{n-1}(-1)^{n+k+1}\binom{An}{k}^{2m+1}.
+\tag{8a}
+```
+
+#### Theorem 2A
+
+For every integer \(A\), every \(m\ge1\), and every prime
+\(p\ge2m+5\),
+
+```math
+\boxed{S_{A,m}(p)\equiv1\pmod {p^{2m+3}}.}
+\tag{8b}
+```
+
+In particular, \(A=2\) proves the complete prime-level family conjectured
+on A375179, and \(A=3\) proves the one conjectured on A375180.
+
+#### Proof
+
+Put \(q=2m+1\). Since \(p\) is odd, the \(k=0\) summand is one. For
+\(1\le k<p\), the exact product formula is
+
+```math
+\binom{Ap}{k}
+=(-1)^{k-1}\frac{Ap}{k}
+\prod_{j=1}^{k-1}\left(1-\frac{Ap}{j}\right).
+\tag{8c}
+```
+
+The parity of \(q\) cancels the alternating sign, and expansion modulo
+\(p^{q+2}\) gives
+
+```math
+S_{A,m}(p)-1
+\equiv
+-A^qp^q\left(H_q-qAp\,H(1,q)\right)
+\pmod {p^{q+2}}.
+\tag{8d}
+```
+
+The proof of Theorem 2 already established \(H_q\equiv0\pmod {p^2}\)
+and \(H(1,q)\equiv0\pmod p\) in precisely the range
+\(p\ge q+4=2m+5\). Both terms in parentheses therefore have valuation at
+least two. This proves (8b). \(\square\)
+
 ### The published cubic baseline
 
 There is already a complete adjacent-scale baseline for every exponent, not
@@ -377,6 +428,9 @@ The dependency-free checker records:
 - 390 instances of Theorem 1, for \(1\le A\le6\), \(1\le B\le5\), and
   odd primes through \(43\);
 - 56 instances of Theorem 2, for \(1\le m\le6\) and primes through \(43\);
+- 448 instances of Theorem 2A, for \(-2\le A\le5\), \(1\le m\le6\),
+  and primes through \(43\), plus 15 exact initial-value matches for the two
+  named positive dilations;
 - 62 even-power and named-boundary checks, for even \(2\le q\le12\) and
   primes through \(43\), including the A219562 exponent;
 - 343 instances of Coster's cubic baseline (9), for \(2\le q\le8\);
@@ -411,7 +465,8 @@ The economical order is:
    two-digit reciprocal-square calculation through
    \(\mathbb Z/p^r\mathbb Z\).
 2. **A375178 tower.** The prime-level harmonic cancellation is now proved,
-   but the additional \(3r\) block gain must be made uniform.
+   and Theorem 2A proves the two signed companions at prime level. The
+   additional \(3r\) block gain must be made uniform in all three geometries.
 3. **A364183 integrality.** Resolve the even/odd factorial-ratio branches
    before discussing supercongruences.
 4. **A112028 and A219562 above the prime boundary.** Their fifth-power

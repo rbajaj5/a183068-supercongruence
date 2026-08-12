@@ -67,10 +67,12 @@ proof.
 - **Proof:** [First two A365029 levels](related-results/A365029FirstTwoLevels.md)
 - **Exact checker:** [`verify_a365029_first_two_levels.py`](verification/related/verify_a365029_first_two_levels.py)
 
-### BALA-ODD — A375178 prime-level odd-power family
+### BALA-ODD — A375178--A375180 prime-level odd-power families
 
-- **Claim:** For \(m\ge1\) and primes \(p\ge2m+5\),
-  \(b_m(p)\equiv1\pmod {p^{2m+3}}\).
+- **Claim:** For \(m\ge1\), primes \(p\ge2m+5\), and every integer
+  dilation \(A\), the shifted family A375178 and the signed family
+  \(S_{A,m}\) satisfy their prime-level congruences modulo
+  \(p^{2m+3}\). The cases \(A=2,3\) are A375179 and A375180.
 - **Source status:** Named open problem.
 - **Status:** Complete unchecked elementary proof; priority preliminary.
 - **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#3-the-full-prime-level-odd-power-theorem-for-a375178)
