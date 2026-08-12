@@ -24,12 +24,12 @@ every record:
 
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 7 | 7 | 6 | 4 | 16 | 0 |
+| T: finite-sum transfer | 40 | 7 | 7 | 8 | 4 | 14 | 0 |
 | C: coefficient/constant term | 37 | 7 | 6 | 3 | 2 | 19 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **31** | **16** | **21** | **7** | **35** | **0** |
+| **Total** | **110** | **31** | **16** | **23** | **7** | **33** | **0** |
 
 The thirty-one `proved-here` records are A002003, A008485, A008705, A008793,
 A049505, A091527, A108625, A141057, A143007, A177316, A255672, A262732,
@@ -39,15 +39,16 @@ A364303, A364506, A370101, and A370102. The sixteen
 `published-source` records are A002426, A002895, A005258, A082758, A103882,
 A112029, A168597, A176335, A183204, A184423, A186420, A234839, A363864,
 A363867, A363871, and A364509.
-The twenty-one partial records are A008978, A023871, A023873, A112028,
-A113424, A183069, A206622, A219562, A228960, A229452, A283271, A350383,
+The twenty-three partial records are A003161, A003162, A008978, A023871,
+A023873, A112028, A113424, A183069, A206622, A219562, A228960, A229452,
+A283271, A350383,
 A352655, A357506, A357512,
 A357567, A357956, A357959, A361889, A361892, and A380290. A001850, A002897,
 A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
 classified `no-explicit-open`: the live pages contain no Bala
 supercongruence conjecture that remains to be proved.
-The remaining thirty-five records are `open-target`; their exact claims,
+The remaining thirty-three records are `open-target`; their exact claims,
 prime ranges, normalizations, and family consolidations are recorded in the
 [remaining-open-target map](Bala110RemainingOpenTargets.md).
 
@@ -94,7 +95,10 @@ A001850, A006318, A036917, and A143583 as search anchors with no live Bala
 supercongruence target.
 
 The final [open-target extraction](Bala110RemainingOpenTargets.md) reads and
-routes every one of the other 35 live statements. Consequently no record is
+routes every one of the other 35 live statements. Two of those records,
+A003161 and A003162, subsequently reduce to the single existing
+[ballot-power obstruction](CatalanBallotPowerSupercongruenceAudit.md),
+leaving 33 independent `open-target` records. Consequently no record is
 left `queued`: the remaining work is proof work rather than OEIS-page
 extraction.
 

@@ -2,8 +2,8 @@ oeis	route	status	evidence	next_action
 A001850	T	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as a search-corpus anchor
 A002003	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A002895	T	published-source	Osburn--Sahu Theorem 1.1, arXiv:1201.6195	verify the exact A=2, B=C=1 specialization in bibliography
-A003161	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common odd-center cubic tower with A003162
-A003162	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common odd-center cubic tower with A003161
+A003161	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	exactly reduces to the unresolved B_3 tower times a classical central-binomial tower
+A003162	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	odd-index subsequence is exactly the unresolved B_3 ballot-power tower
 A005258	T	published-source	Coster's classical Apery cubic tower	verify exact thesis theorem numbering in bibliography
 A005259	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied
 A005260	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied

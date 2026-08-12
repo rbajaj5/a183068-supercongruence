@@ -1,4 +1,4 @@
-# The 35 extracted open targets in the Bala 110-record census
+# The 33 extracted open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -13,23 +13,11 @@ it. The new status `open-target` means:
   and
 - the next operation is mathematical proof, not database extraction.
 
-The 35 records consolidate to substantially fewer proof families. Repeated
+The 33 records consolidate to substantially fewer proof families. Repeated
 entries are retained because the campaign denominator is a record count, but
 the proposed proof units below are family-sized.
 
 ## 1. Finite-sum transfer targets
-
-### Odd-center pair
-
-[A003161](https://oeis.org/A003161) and
-[A003162](https://oeis.org/A003162) both ask that, after setting
-`b(n)=a(2n-1)`,
-
-```math
-b(np^r)\equiv b(np^{r-1})\pmod {p^{3r}}
-```
-
-for `p >= 5`. They should be attacked as one odd-center transfer theorem.
 
 ### Coefficient and reversion family
 
@@ -266,7 +254,7 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 35 records are explicit `open-target` entries;
+- 33 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
