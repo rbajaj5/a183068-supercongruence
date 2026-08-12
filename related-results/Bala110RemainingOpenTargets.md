@@ -23,8 +23,10 @@ have closed two targets, while the
 [A351858 cyclotomic boundary](A351858CyclotomicFamilyBoundary.md) refutes
 that record's all-parameter claim and moves its surviving named case to the
 partial ledger. The
-[A263843 reversion reduction](A263843ReversionCoefficientReduction.md) has
-also moved that record to `partial`.  The
+[A263843 reversion theorem](A263843ReversionCoefficientReduction.md) first
+moved that record to `partial` and now closes it completely, including the
+exceptional prime (3), by matching the leading quadratic and cubic
+Cartier defects.  The
 [A245926 algebraic coefficient theorem](A245926AlgebraicCoefficientTower.md)
 proves both that record's conjectural coefficient representation and its
 quadratic tower. The

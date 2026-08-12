@@ -54,7 +54,7 @@ A177316	C	published-source	related-results/StraubPrimeFiveCoefficientPacket.md	S
 A228960	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
 A245926	C	proved-here	related-results/A245926AlgebraicCoefficientTower.md	independent proof review and literature-priority audit
 A246437	C	proved-here	related-results/MixedStepCoefficientQuadraticTower.md	independent review and priority audit of the mixed-step family theorem
-A263843	C	partial	related-results/A263843ReversionCoefficientReduction.md	p>=5 and 3|(c+s) proved; close the remaining p=3 unit-slope boundary
+A263843	C	proved-here	related-results/A263843ReversionCoefficientReduction.md	independent review of the ternary quadratic-cubic cancellation and Frobenius-descent lemma
 A281267	C	proved-here	related-results/EulerProductGaussianTower.md	independent review and source-facing cross-reference for the one-color d=1 specialization
 A331562	C	partial	related-results/A331562UniformRationalDiagonal.md	prove the uniform cubic coefficient estimate (12) for the continuant Frobenius numerator
 A333090	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Schroder coefficient reduction proved; close its Gaussian-prefactor Cartier estimates
