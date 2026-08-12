@@ -1344,6 +1344,22 @@ proof.
 - **Proof:** [Quadrinomial and ratio-coefficient congruences](related-results/QuadrinomialCoefficientOddPrimeTower.md)
 - **Exact checker:** [`verify_quadrinomial_coefficient_tower.py`](verification/related/verify_quadrinomial_coefficient_tower.py)
 
+### MIXED-STEP-2 — mixed positive/negative-binomial coefficient tower
+
+- **Claim:** For positive (u,v,c), put
+  \[
+  A_{u,v,c}(N)=[x^{cN}]\left(\frac{1+x^u}{1-x^v}\right)^N.
+  \]
+  If (p) is odd and (p\nmid uv), then
+  \[
+  A_{u,v,c}(np^r)\equiv A_{u,v,c}(np^{r-1})\pmod {p^{2r}}.
+  \]
+  The specialization ((u,v,c)=(3,2,1)) proves A246437.
+- **Status:** Complete elementary family theorem and named OEIS closure;
+  priority not searched beyond the source record.
+- **Proof:** [Mixed-step coefficient tower](related-results/MixedStepCoefficientQuadraticTower.md)
+- **Exact checker:** [`verify_mixed_step_coefficient_tower.py`](verification/related/verify_mixed_step_coefficient_tower.py)
+
 ### FF-DET - finite-field determinant bias
 
 - **Claim:** The additive determinant character sum over \(n\)-by-\(n\)
