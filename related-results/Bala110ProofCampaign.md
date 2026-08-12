@@ -270,11 +270,13 @@ move to `partial`, leaving only A376458 and A376466 as `open-target`.
 
 The final companion unit treats those last two records through the common
 shifted A108625 row. It collapses A376458 to a single four-binomial sum and
-proves its conjectured `p^5` prime boundary for every `p>=7`. It places
+proves both its ordinary cubic tower for every `p>=5` and its conjectured
+`p^5` prime boundary for every `p>=7`. It places
 A376466 in the same exact coefficient-pairing framework and refutes that
 record's proposed shifted tower already at `p=5,n=2,r=1`; the pure-prime
 shift also fails at `p=5,r=2`. Both records move to `partial`, so no claim in
-the 110-record census is now wholly untreated.
+the 110-record census is now wholly untreated. A376458 remains partial only
+because its higher pure-prime `p^(3r+3)` bonus is still open.
 
 ## Proof order
 

@@ -1,11 +1,11 @@
 # The two remaining A376 Apéry companions
 
 **Status:** the A376458 nested sum is collapsed to one signed
-four-binomial sum and its conjectured prime-level `p^5` congruence is
-proved for every `p>=7`; A376466 is placed in the same exact
-coefficient-pairing framework and its proposed shifted tower is refuted by
-an exact counterexample; the two ordinary cubic towers and the higher
-A376458 bonus remain open
+four-binomial sum, its full ordinary cubic tower is proved, and its
+conjectured prime-level `p^5` congruence is proved for every `p>=7`;
+A376466 is placed in the same exact coefficient-pairing framework and its
+proposed shifted tower is refuted by an exact counterexample; the ordinary
+A376466 tower and the higher A376458 bonus remain open
 
 The last two wholly untreated records in the Bala 110-record census are
 [A376458](https://oeis.org/A376458) and
@@ -300,18 +300,161 @@ valuation at least `3r` when `M=np^(r-1)`. For A376458, the remaining
 pure-prime conjecture asks for `3r+3` when `r>=2`. A376466's proposed
 all-`n` shifted companion has already been disposed of by Theorem 4.
 
-The exact checker shows that the unit shells are not termwise cubic. Any
-completion therefore needs the same kind of aggregate reciprocal-block
-cancellation as the classical Apéry proof; a product of separate
-coefficientwise estimates is insufficient.
+For A376466 the exact checker shows that the unit shell is not termwise
+cubic, so its completion needs aggregate cancellation. For A376458,
+however, the single-sum collapse exposes three copies of the same `N/j`
+divisibility. That extra structure closes the ordinary tower termwise,
+as follows.
 
-## 6. Verification and source boundary
+## 6. The ordinary A376458 tower
+
+Put
+
+```math
+f(X)=(1-X)^3(1+X).
+\tag{25}
+```
+
+The product identity (13), now used with arbitrary `N`, says that the
+`j`-th nonconstant summand in (6) is
+
+```math
+t_N(j)=\frac{N^3}{j^3}\left(1-\frac Nj\right)
+\prod_{h=1}^{j-1}f\left(\frac Nh\right).
+\tag{26}
+```
+
+We first record the elementary unit-block estimate that supplies the
+missing adjacent-level comparison.
+
+### Lemma 5 (unit-block product)
+
+Let `p>=5` be prime, let `N,k>=1`, and put `e=v_p(N)`, `q=v_p(k)`.
+Then
+
+```math
+W_{p,N}(k)=
+\prod_{\substack{1\le h<pk\\p\nmid h}}
+f\left(\frac{pN}{h}\right)
+\tag{27}
+```
+
+satisfies
+
+```math
+v_p(W_{p,N}(k)-1)\ge
+\begin{cases}
+e+2q+3,&q\le e,\\
+3e+3,&q>e.
+\end{cases}
+\tag{28}
+```
+
+#### Proof
+
+Let
+
+```math
+S_m(p,k)=\sum_{\substack{1\le h<pk\\p\nmid h}}h^{-m}.
+```
+
+If `q=v_p(k)`, decomposition into complete residue blocks modulo
+`p^(q+1)` and inversion in the unit group give
+
+```math
+v_p(S_2(p,k))\ge q+1.
+\tag{29}
+```
+
+Indeed, modulo `p^(q+1)` the inverse-square sum is a unit multiple of
+the sum of the squares of all units modulo `p^(q+1)`. The latter is the
+difference between the sum of all squares and `p^2` times the sum of
+the squares modulo `p^q`; the usual formula for a sum of squares makes
+both terms divisible by `p^(q+1)` because `p>=5`.
+
+Pairing `h` with `pk-h` and expanding the resulting geometric series
+then gives
+
+```math
+v_p(S_1(p,k))\ge 2q+2.
+\tag{30}
+```
+
+Finally, `f(X)=1-2X+2X^3-X^4`. In the expansion of (27), the total
+degree-one part is `-2pN S_1(p,k)`, and the degree-two part is
+
+```math
+2(pN)^2\bigl(S_1(p,k)^2-S_2(p,k)\bigr).
+```
+
+Their valuations are at least `e+2q+3` and `2e+q+3`, respectively.
+Every term of total degree at least three has valuation at least
+`3e+3`. Taking the minimum gives (28). QED
+
+### Theorem 6 (ordinary cubic tower)
+
+For every prime `p>=5` and all positive integers `n,r`,
+
+```math
+\boxed{
+A(np^r)\equiv A(np^{r-1})\pmod {p^{3r}}.}
+\tag{31}
+```
+
+#### Proof
+
+Set `N=np^(r-1)` and `e=v_p(N)`, so `e>=r-1`. Split (6) at level
+`pN` according to whether `p` divides the summation index.
+
+If `p` does not divide `j`, the identities
+
+```math
+\binom{pN}{j}=\frac{pN}{j}\binom{pN-1}{j-1},
+\qquad
+\binom{pN+j-1}{j}=\frac{pN}{j}\binom{pN+j-1}{j-1}
+```
+
+show directly that `v_p(t_{pN}(j))>=3(e+1)`.
+
+For `j=pk`, equation (26) gives the exact factorization
+
+```math
+t_{pN}(pk)=t_N(k)W_{p,N}(k).
+\tag{32}
+```
+
+If `q=v_p(k)<=e`, the same two displayed binomial identities give
+
+```math
+v_p(t_N(k))\ge3(e-q).
+```
+
+Combining this with the first line of (28) yields
+
+```math
+v_p(t_{pN}(pk)-t_N(k))
+\ge4e-q+3\ge3e+3.
+```
+
+If `q>e`, integrality gives `v_p(t_N(k))>=0`, and the second line of
+(28) again gives valuation at least `3e+3`. Thus every unit-index term
+vanishes and every scaled-index term matches its predecessor modulo
+`p^(3e+3)`. Summation proves the stronger adjacent-level modulus
+`p^(3e+3)`, hence (31). QED
+
+This proof is deliberately separate from the `p^5` boundary in Theorem 2.
+The ordinary tower is termwise after unit-block compression; the extra
+two powers on the pure-prime line require cancellation between strata and
+remain an explicit obligation.
+
+## 7. Verification and source boundary
 
 [`verify_a376_apery_companions.py`](../verification/related/verify_a376_apery_companions.py)
 checks (1)--(2), (5)--(10), (13), and (17)--(24), both OEIS initial
 sequences, the exact A376458 `p=5` boundary, the proved prime-level theorem
-through a broad prime range, the shifted A376466 counterexample, and sampled
-ordinary and pure-prime towers.
+through a broad prime range, Lemma 5 across every divisibility stratum in a
+finite audit box, Theorem 6 term by term, the shifted A376466 counterexample,
+and sampled A376466 and pure-prime A376458 towers.
 
 The definitions and conjectures come from the linked OEIS records. Equation
 (2) is also recorded on A108625. Generalized Vandermonde and the harmonic

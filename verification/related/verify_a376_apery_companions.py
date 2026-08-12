@@ -17,6 +17,12 @@ def valuation(value: int, prime: int) -> int:
     return out
 
 
+def rational_valuation(value: Fraction, prime: int) -> int:
+    if value == 0:
+        return 10**9
+    return valuation(value.numerator, prime) - valuation(value.denominator, prime)
+
+
 def primes_through(limit: int) -> list[int]:
     out: list[int] = []
     for candidate in range(2, limit + 1):
@@ -115,6 +121,35 @@ def product_term(prime: int, j: int) -> Fraction:
     return out
 
 
+def a376458_term(n: int, j: int) -> int:
+    return (
+        (-1) ** j
+        * comb(n, j) ** 2
+        * comb(n - 1, j)
+        * comb(n + j - 1, j)
+    )
+
+
+def unit_reciprocal_sum(prime: int, k: int, power: int) -> Fraction:
+    return sum(
+        (
+            Fraction(1, h**power)
+            for h in range(1, prime * k)
+            if h % prime
+        ),
+        Fraction(),
+    )
+
+
+def unit_block_factor(prime: int, n: int, k: int) -> Fraction:
+    out = Fraction(1)
+    for h in range(1, prime * k):
+        if h % prime:
+            x = Fraction(prime * n, h)
+            out *= (1 - x) ** 3 * (1 + x)
+    return out
+
+
 def check_crystal_rows() -> int:
     checks = 0
     for m in range(0, 13):
@@ -182,6 +217,37 @@ def check_prime_boundary() -> tuple[int, int]:
             assert product_term(prime, j) == term
             checks += 1
     return checks, sharp
+
+
+def check_ordinary_tower_lemma() -> int:
+    checks = 0
+    for prime in (5, 7, 11):
+        for k in range(1, 41):
+            q = valuation(k, prime)
+            s1 = unit_reciprocal_sum(prime, k, 1)
+            s2 = unit_reciprocal_sum(prime, k, 2)
+            assert rational_valuation(s1, prime) >= 2 * q + 2
+            assert rational_valuation(s2, prime) >= q + 1
+            checks += 2
+        for n in range(1, 16):
+            e = valuation(n, prime)
+            for k in range(1, 16):
+                q = valuation(k, prime)
+                block = unit_block_factor(prime, n, k)
+                expected = e + 2 * q + 3 if q <= e else 3 * e + 3
+                assert rational_valuation(block - 1, prime) >= expected
+                checks += 1
+                if k < n:
+                    high = a376458_term(prime * n, prime * k)
+                    low = a376458_term(n, k)
+                    assert Fraction(high, low) == block
+                    assert valuation(high - low, prime) >= 3 * e + 3
+                    checks += 2
+            for j in range(1, prime * n):
+                if j % prime:
+                    assert valuation(a376458_term(prime * n, j), prime) >= 3 * e + 3
+                    checks += 1
+    return checks
 
 
 def check_shell_split(n: int, prime: int, which: str) -> None:
@@ -262,10 +328,12 @@ def main() -> None:
     crystal = check_crystal_rows()
     identities = check_collapse_and_pairing()
     boundary, boundary_sharp = check_prime_boundary()
+    ordinary_lemma = check_ordinary_tower_lemma()
     towers, tower_sharp = check_towers()
     print(f"A108625 row-identity checks: {crystal}")
     print(f"A376 collapse/pairing checks: {identities}")
     print(f"A376458 prime-boundary checks: {boundary} ({boundary_sharp} sharp)")
+    print(f"A376458 ordinary-tower lemma checks: {ordinary_lemma}")
     print(f"A376 companion tower checks: {towers} ({tower_sharp} sharp)")
     print("A376 Apéry-companion checks passed")
 

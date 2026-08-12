@@ -37,7 +37,7 @@ A362676	T	partial	related-results/FranelCompanionConstantTermReduction.md	exactl
 A363985	T	partial	related-results/FranelCompanionConstantTermReduction.md	exact constant-term master family and 1088 tower checks recorded; prove the contraction for every integer m
 A370101	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A370102	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A376458	T	partial	related-results/A376AperyCompanionReduction.md	prime-level p^5 theorem proved; prove the ordinary cubic tower and higher 3r+3 bonus
+A376458	T	partial	related-results/A376AperyCompanionReduction.md	ordinary cubic tower and prime-level p^5 theorem proved; prove the higher pure-prime 3r+3 bonus
 A376466	T	partial	related-results/A376AperyCompanionReduction.md	shifted tower refuted; prove or refute the surviving ordinary cubic tower
 A002426	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed p^(2r) claim	verify exact parameter match in bibliography
 A005725	C	proved-here	related-results/QuadrinomialCoefficientOddPrimeTower.md	independent review and priority audit of both source-page conjectures

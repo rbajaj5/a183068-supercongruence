@@ -87,11 +87,12 @@ this record is no longer counted among the fully open targets.
 Both use rows of A108625 in their summands. The paired claims must be proved
 from the displayed sums; analogy with the Apéry sequences is evidence, not
 inheritance. The [companion note](A376AperyCompanionReduction.md) now
-collapses A376458 to one sum and proves its `p^5` prime boundary. It also
+collapses A376458 to one sum, proves its full ordinary cubic tower, and
+proves its `p^5` prime boundary. It also
 gives the exact counterexample
 `A376466(9)-A376466(1) == 3 (mod 5)`, so that record's all-`n` shifted
-conjecture is false. The ordinary cubic tower for each sequence and the
-higher A376458 bonus remain open.
+conjecture is false. The ordinary cubic tower for A376466 and the higher
+A376458 bonus remain open.
 
 ## 2. Recently reduced coefficient and constant-term targets
 
