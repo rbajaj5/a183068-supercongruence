@@ -2,75 +2,75 @@ oeis	route	status	evidence	next_action
 A001850	T	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as a search-corpus anchor
 A002003	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A002895	T	published-source	Osburn--Sahu Theorem 1.1, arXiv:1201.6195	verify the exact A=2, B=C=1 specialization in bibliography
-A003161	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A003162	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A003161	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common odd-center cubic tower with A003162
+A003162	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common odd-center cubic tower with A003161
 A005258	T	published-source	Coster's classical Apery cubic tower	verify exact thesis theorem numbering in bibliography
 A005259	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied
 A005260	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied
-A079489	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A079489	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the coefficient and reversion families by a verified Cartier representation
 A082758	T	published-source	Pan--Sun theorem cited by live OEIS entry	verify exact parameter match in bibliography
 A103882	T	published-source	Straub Example 3.4 gives the recorded Apéry-number congruence	verify exact edition and theorem numbering in bibliography
 A112028	T	partial	Coster Theorem 4 gives the p^(3r) baseline; OEIS asks for p^5 and p^(3r+3)	prove the extra shifted-index gain
 A112029	T	published-source	Coster Theorem 4 is cited on the live OEIS record for the full p^(3r) tower	verify exact theorem numbering and shifted-index normalization in bibliography
-A124435	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A132303	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A124435	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the quadratic tower from the rational diagonal
+A132303	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the quadratic trinomial-cube tower
 A141057	T	proved-here	MultinomialPowerFrobeniusTowers.md	independent review and priority audit
 A143583	T	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record states only a Gauss p^r congruence and no Bala supercongruence conjecture
 A183069	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	integrality and sharp exact checks recorded; prove the unified odd ballot-power tower
 A183204	T	published-source	Osburn--Sahu--Straub, arXiv:1312.2195, s_7 cubic tower	verify exact equation normalization in bibliography
-A198060	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A198256	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A198258	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A208675	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A212334	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A198060	T	open-target	related-results/Bala110RemainingOpenTargets.md	resolve the apparent exponent typo, then prove the odd-row cubic family
+A198256	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the offset-one quartic adjacent-binomial tower
+A198258	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the offset-one sextic adjacent-binomial tower, including p=3
+A208675	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the cubic ternary-word tower
+A212334	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the ordinary cubic tower before the enhanced pure-prime refinement
 A219562	T	partial	Coster Theorem 4 gives the p^(3r) baseline; OEIS asks for p^5 and p^(3r+3)	prove the extra shifted-index gain
 A234839	T	published-source	Osburn--Sahu--Straub Example 3.3 cited by OEIS	verify exact parameter match in bibliography
-A244973	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A260667	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A244973	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the stated p-adic integrality, equivalently its cubic adjacent tower
+A260667	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the prime-boundary congruence modulo p^3
 A288470	T	proved-here	A288470OddPrimeTower.md	independent review and priority audit
 A333592	T	proved-here	related-results/MixedNegativeBinomialCubicTower.md	independent review and source-facing cross-reference for the full positive-parameter cubic family
 A357510	T	proved-here	related-results/AperyOddMomentPrimeClassification.md	independent review and priority audit of the prime-boundary expansion
 A357512	T	partial	related-results/AperyOddMomentPrimeClassification.md	prime slice and exact exceptional-prime classification proved; prove the remaining composite n congruence
 A361889	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	integrality and sharp exact checks recorded; prove the unified odd ballot-power tower
 A361892	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	integrality and sharp exact checks recorded; prove the unified odd ballot-power tower
-A362676	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A363985	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A362676	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the Franel-companion cubic tower
+A363985	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the full integer-parameter u_m and v_m cubic families
 A370101	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A370102	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A376458	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A376466	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A376458	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the ordinary and enhanced Apéry-companion towers
+A376466	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove both the n and n-1 cubic towers
 A002426	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed p^(2r) claim	verify exact parameter match in bibliography
-A005725	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A005725	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the quadrinomial quadratic tower and the separate prime-level coefficient refinement
 A006318	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as a generating-function anchor
 A036917	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as an Apery-like source anchor
-A060941	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A060941	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the algebraic coefficient family and test closure under the exponential iteration
 A108625	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the p=5 boundary and Straub parameter match
-A108628	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A108628	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the cubic tower, then treat the half-index vanishing claims separately
 A143007	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the p=5 boundary and Straub parameter match
-A156554	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A156554	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the full Legendre coefficient family for arbitrary integral framing
 A168597	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed congruence	verify exact parameter match in bibliography
 A176335	C	published-source	Coster Theorem 4 cited by live OEIS entry	verify exact parameter match in bibliography
 A177316	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the bilateral coefficient and telescoping identity
 A228960	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
-A245926	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A246437	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A263843	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A281267	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A331562	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333090	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333091	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333092	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333093	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333095	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333096	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333097	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A245926	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the required Laurent representation and then the quadratic tower
+A246437	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the quadratic algebraic-coefficient tower
+A263843	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the full reversion coefficient family, including p=3
+A281267	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the quadratic diagonal tower, including p=3
+A331562	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove one uniform row theorem extending the three known rows
+A333090	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Schroder Taylor-truncation family
+A333091	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Schroder Taylor-truncation family
+A333092	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Schroder Taylor-truncation family
+A333093	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Catalan Taylor-truncation family
+A333095	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Catalan Taylor-truncation family
+A333096	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Catalan Taylor-truncation family
+A333097	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Catalan Taylor-truncation family
 A348410	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A350383	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
 A351857	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A351858	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A351858	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the rational-power coefficient family uniformly in k, r, and s
 A352373	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A362722	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A362733	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A362722	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the quadratic tower and the extra pure-prime power
+A362733	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the cubic exponential-coefficient tower, including p=3
 A363864	C	published-source	Straub Theorem 1.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
 A363867	C	published-source	Straub Theorem 3.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
 A363871	C	published-source	Straub Theorem 3.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography

@@ -16,7 +16,8 @@ EXPECTED_STATUSES = {
     "published-source": 16,
     "partial": 21,
     "no-explicit-open": 7,
-    "queued": 35,
+    "open-target": 35,
+    "queued": 0,
 }
 
 
@@ -33,7 +34,11 @@ def main() -> None:
         for row in rows
     )
     assert Counter(row["route"] for row in rows) == EXPECTED_ROUTES
-    assert Counter(row["status"] for row in rows) == EXPECTED_STATUSES
+    status_counts = Counter(row["status"] for row in rows)
+    assert set(status_counts) <= set(EXPECTED_STATUSES)
+    assert {
+        status: status_counts.get(status, 0) for status in EXPECTED_STATUSES
+    } == EXPECTED_STATUSES
     assert all(row["evidence"] for row in rows)
     assert all(row["next_action"] for row in rows)
 
@@ -45,6 +50,9 @@ def main() -> None:
     no_open = sorted(
         row["oeis"] for row in rows if row["status"] == "no-explicit-open"
     )
+    open_targets = sorted(
+        row["oeis"] for row in rows if row["status"] == "open-target"
+    )
 
     print("Bala 110-record campaign ledger passed")
     print(f"route counts: {EXPECTED_ROUTES}")
@@ -53,6 +61,7 @@ def main() -> None:
     print(f"published sources: {sourced}")
     print(f"partial: {partial}")
     print(f"no explicit open target: {no_open}")
+    print(f"open targets: {open_targets}")
 
 
 if __name__ == "__main__":

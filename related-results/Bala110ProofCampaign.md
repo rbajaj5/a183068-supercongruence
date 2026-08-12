@@ -22,14 +22,14 @@ every record:
 
 ## Current disposition
 
-| Route | Records | Proved here | Published source | Partial | No explicit open target | Queued |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 7 | 7 | 6 | 4 | 16 |
-| C: coefficient/constant term | 37 | 7 | 6 | 3 | 2 | 19 |
-| F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 |
-| M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 |
-| D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 |
-| **Total** | **110** | **31** | **16** | **21** | **7** | **35** |
+| Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| T: finite-sum transfer | 40 | 7 | 7 | 6 | 4 | 16 | 0 |
+| C: coefficient/constant term | 37 | 7 | 6 | 3 | 2 | 19 | 0 |
+| F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
+| M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
+| D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
+| **Total** | **110** | **31** | **16** | **21** | **7** | **35** | **0** |
 
 The thirty-one `proved-here` records are A002003, A008485, A008705, A008793,
 A049505, A091527, A108625, A141057, A143007, A177316, A255672, A262732,
@@ -47,6 +47,9 @@ A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
 classified `no-explicit-open`: the live pages contain no Bala
 supercongruence conjecture that remains to be proved.
+The remaining thirty-five records are `open-target`; their exact claims,
+prime ranges, normalizations, and family consolidations are recorded in the
+[remaining-open-target map](Bala110RemainingOpenTargets.md).
 
 These labels refer only to the exact statements already matched. They do not
 declare every comment on the corresponding OEIS page solved.
@@ -61,6 +64,8 @@ declare every comment on the corresponding OEIS page solved.
   subfamily, but a stronger statement on the record remains.
 - `no-explicit-open`: the reproducible text search found the record, but a
   live open supercongruence attributable to Bala was not located.
+- `open-target`: the live statement has been extracted and routed, but no
+  complete proof, source closure, or counterexample is yet recorded.
 - `queued`: the record is routed, but its exact conjecture still needs to be
   extracted and matched against the route theorem before proof work begins.
 
@@ -82,16 +87,16 @@ hit as a proof:
   their exact common conjecture, checks its sharp boundary, and isolates the
   unified proof target.
 
-The remaining 35 queued rows are not asserted to be 35 open problems. A live
-OEIS pass finds a mixture of explicit conjectures, source-closed statements,
-cross-reference-only records, and pages whose earlier wording has changed.
-They stay queued until the exact claim and source boundary are recorded.
-
 The follow-up [live-source boundary](Bala110LiveSourceBoundary.md) removes
 nine further false starts. It source-closes A002895, A005258, and A183204;
 records only the enhanced parts of A112028 and A219562 as open; and marks
 A001850, A006318, A036917, and A143583 as search anchors with no live Bala
 supercongruence target.
+
+The final [open-target extraction](Bala110RemainingOpenTargets.md) reads and
+routes every one of the other 35 live statements. Consequently no record is
+left `queued`: the remaining work is proof work rather than OEIS-page
+extraction.
 
 ## Proof order
 
