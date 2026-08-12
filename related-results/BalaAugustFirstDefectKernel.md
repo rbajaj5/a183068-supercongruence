@@ -463,18 +463,122 @@ v_p\!\left(
 \tag{26}
 ```
 
+This bound can in fact be proved by a second unit-block lift.
+
+### Lemma 5 (lifted reciprocal square)
+
+For every prime $p\geq5$ and $m,n\geq0$, (26) holds, with
+$v_p(0)=+\infty$.
+
+### Proof
+
+For $j\geq2$ put
+
+```math
+R_j(pL)=
+\sum_{\substack{1\leq u\leq pL\\p\nmid u}}u^{-j}.
+```
+
+First we prove
+
+```math
+R_2(p^2L)-pR_2(pL)\in p^{3+v_p(L)}\mathbb Z_p.
+\tag{27}
+```
+
+The case $L=0$ is tautological, so assume $L>0$.
+Write
+
+```math
+B(q)=\sum_{u=1}^{p-1}(pq+u)^{-2}.
+```
+
+If $\ell=v_p(L)$, grouping the $pL$ blocks as $q+jL$, with
+$0\leq q<L$ and $0\leq j<p$, gives
+
+```math
+R_2(p^2L)-pR_2(pL)
+=\sum_{q=0}^{L-1}\sum_{j=0}^{p-1}\bigl(B(q+jL)-B(q)\bigr).
+\tag{28}
+```
+
+Expand each unit denominator $p$-adically.  The term of Taylor degree $h$
+contains
+
+```math
+(pL)^h\left(\sum_{j=0}^{p-1}j^h\right)
+\left(\sum_{u=1}^{p-1}(pq+u)^{-h-2}\right).
+```
+
+For $h=1$, the first power sum contributes a factor $p$, while the last
+sum is also divisible by $p$ because it reduces to
+$\sum_{u\in\mathbb F_p^\times}u^{-3}=0$.  Its valuation is therefore at
+least $3+\ell$.  For $h\geq2$, the power sum in $j$ is divisible by $p$
+unless $p-1\mid h$.  In the latter case $h\geq p-1\geq4$.  Thus every
+remaining Taylor term also has valuation at least $3+\ell$.  The series
+converges $p$-adically, proving (27).  The same finite-field power-sum
+identity also gives
+
+```math
+R_3(pL)\in p\mathbb Z_p.
+\tag{29}
+```
+
+Now define the common two-denominator block
+
+```math
+F_p(A,B;L)=
+\sum_{\substack{1\leq u\leq pL\\p\nmid u}}
+\frac1{(pA-u)(pB-u)}.
+```
+
+Writing $h_q(A,B)=\sum_{i=0}^qA^iB^{q-i}$, geometric expansion gives
+
+```math
+F_p(A,B;L)=
+\sum_{q\geq0}p^q h_q(A,B)R_{q+2}(pL).
+\tag{30}
+```
+
+Suppose $p^s$ divides $A,B,L$.  In the difference
+$F_p(pA,pB;pL)-pF_p(A,B;L)$, the $q=0$ term is covered by (27).  The
+$q=1$ term is
+
+```math
+p^2(A+B)\bigl(R_3(p^2L)-R_3(pL)\bigr),
+```
+
+which lies in $p^{3+s}\mathbb Z_p$ by (29).  For $q\geq2$, each of the
+two terms has valuation at least
+
+```math
+q+1+qs\geq3+s.
+```
+
+Hence
+
+```math
+F_p(pA,pB;pL)-pF_p(A,B;L)\in p^{3+s}\mathbb Z_p.
+\tag{31}
+```
+
+Finally, the mixed coefficient of $HV_p(x)V_p(y)$ at $(pM,pN)$ is
+$F_p(M,N;\min\{M,N\})$.  The two pure-square boundary coefficients are
+$[z^{p|M-N|}]V_p(z)^2$, which equals
+$-F_p(0,|M-N|;|M-N|)$.  Apply (31) to these three pieces.  Since
+$p^{\min\{v_p(m),v_p(n)\}}$ divides $m,n,m-n$, their linear combination
+is exactly (26); the case $m=n=0$ is immediate. $\square$
+
 Bound (26) makes both canonical primitives $P,Q$ Cartier-fixed modulo
-$p$.  The remaining cubic statement is the transgression identity obtained
-by applying Cartier to (24).  Thus a proof of (25) can be organized as two
-unit-block calculations: the lifted reciprocal-square congruence (26) and
-its reciprocal-cube transgression.  This is exactly where the Frobenius
-lift, rather than generic compactness or recurrence machinery, carries the
-problem.
+$p$.  The only remaining part of (25) is therefore the reciprocal-cube
+transgression obtained by applying Cartier to (24).  This is exactly where
+the Frobenius lift, rather than generic compactness or recurrence machinery,
+carries the problem.
 
 The checker finds no failure of (25) in 1,384 exact coefficient tests for
 $p=5,7,11$, including coefficients beyond the first resonant diagonal and
-cases $p\mid c$.  This is evidence, not yet a proof of the two lifted
-reciprocal-sum identities.
+cases $p\mid c$.  This is evidence for the remaining reciprocal-cube
+transgression, not a proof of it.
 
 ## 6. Bala's specialization and computation
 

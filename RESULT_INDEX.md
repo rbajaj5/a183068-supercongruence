@@ -267,7 +267,9 @@ proof.
   divergence primitive gives the stronger experimental target
   $\mathcal C_p\mathscr B=\mathscr B$ coefficientwise modulo $p$, reducing
   the remaining proof to a lifted reciprocal-square congruence and its
-  reciprocal-cube transgression.
+  reciprocal-cube transgression. The lifted-square congruence is now proved
+  by a second Frobenius block decomposition, so only the cubic transgression
+  remains open.
 - **Status:** Complete first-layer proof candidate; 2,858 exact arithmetic
   checks support the remaining Frobenius identity; no priority claim.
 - **Proof:** [Bala August first-defect kernel](related-results/BalaAugustFirstDefectKernel.md)
