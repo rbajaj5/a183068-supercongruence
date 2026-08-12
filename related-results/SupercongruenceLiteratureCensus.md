@@ -178,8 +178,8 @@ shifted theorem. The separate
 positive $(R,S)$ family surrounding A333473 coefficientwise modulo
 $p^{2r}$ for every odd prime.  The
 [index-dependent companion theorem](IndexDependentCompanionPrimeBoundary.md)
-also closes the $p^3$ prime boundary for both surviving substitution
-families; their higher levels remain open. The same packet gives an exact Bernoulli correction showing
+closes the full $p^{3r}$ towers for both surviving substitution families at
+every $p\ge5$ by a parity-doubling Cartier block. The same packet gives an exact Bernoulli correction showing
 that a proposed negative-binomial $p^5$ strengthening is false. The separate
 [prefix-Cartier theorem](MixedNegativeBinomialCubicTower.md) proves the
 corrected ordinary cubic tower for every $p\geq5$ and, more generally, the

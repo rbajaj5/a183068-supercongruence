@@ -1,7 +1,6 @@
-# Prime boundary and scaled cubic shells for the index-dependent companions
+# Full cubic towers for the index-dependent companions
 
-**Status:** complete elementary prime-level theorem and complete all-level
-scaled-stratum theorem; the unit-shell lift remains open
+**Status:** complete proof for every prime $p\ge5$ and every level
 
 ## 1. The two surviving August families
 
@@ -27,23 +26,25 @@ $\binom{2k}{N}$ and $\binom{N+k}{k}$ depend on the index in their upper
 arguments.  Also, a unit-index summand generally has valuation only two,
 so a termwise cubic proof is impossible.
 
-### Theorem 1
+### Theorem 1 (full companion towers)
 
-For every prime $p\ge5$ and positive integers $n,c$,
+For every prime $p\ge5$ and positive integers $n,c,r$,
 
 ```math
-\boxed{V(np)\equiv V(n)\pmod {p^3}}
+\boxed{V(np^r)\equiv V(np^{r-1})\pmod {p^{3r}}}
 tag{3}
 ```
 
 and
 
 ```math
-\boxed{W_c(np)\equiv W_c(n)\pmod {p^3}.}
+\boxed{W_c(np^r)\equiv W_c(np^{r-1})\pmod {p^{3r}}.}
 tag{4}
 ```
 
-The missing power is an exact half-residue cancellation.
+The missing power is an aggregate reciprocal-square cancellation.  At the
+first level it is the half-residue identity in Section 3.  At every level it
+is supplied by the parity-doubling block lemma in Section 6.
 
 ## 2. The scaled stratum at every level
 
@@ -126,8 +127,8 @@ If $s\ge r-1$, the same Jacobsthal modulus is already at least $3r$;
 integrality of the lower summand finishes the proof.  The case $q=0$ is
 an equality.  This proves (6).
 
-Thus the scaled stratum is not part of the remaining all-level problem.
-Only the sum of indices prime to $p$ still needs a higher lift.
+Thus the scaled stratum transfers at full cubic precision.  It remains to
+prove that the sum of indices prime to $p$ vanishes to the same precision.
 
 ## 3. The half-residue lemma
 
@@ -204,7 +205,7 @@ tag{11}
 which vanishes by (7).  The range $0\le k\le cnp$ contains the complete
 unit blocks $0\le q<cn$; the endpoint $k=cnp$ belongs to the scaled
 stratum.  Hence all discarded terms in $W_c(np)$ sum to zero modulo $p^3$.
-Together with (6), this proves (4).
+Together with (6), this proves the case $r=1$ of (4).
 
 ## 5. Unit blocks for the finite family
 
@@ -231,30 +232,210 @@ tag{13}
 ```
 
 It also vanishes by (7).  Here $0\le q<n$, exactly the complete unit blocks
-inside $0\le k\le np$.  Combining this with (6) proves (3). $\square$
+inside $0\le k\le np$.  Combining this with (6) proves the case $r=1$ of
+(3).
 
-## 6. Boundary and next rung
+## 6. The parity-doubling block lemma
 
-The argument explains both the success and the limitation of the current
-result.
+We use the following aggregate induction of Beukers and Straub.  Suppose
+$a_j\in\mathbb Z_p$ has
 
-- A generic unit summand has valuation two, so the cubic gain is genuinely
-  aggregate.
-- At $p=3$, the half-residue sum in (7) is nonzero.  Exact examples attain
-  valuation two, so Theorem 1 cannot be extended uniformly to $p=3$.
-- For $r>1$, one needs a lifted version of (7) compatible with the two
-  Lucas carry states in (10), together with the higher-precision change of
-  the $q$-dependent factors.  The first-level theorem alone does not imply
-  the $p^{3r}$ tower.
+```math
+\sum_{\lfloor j/p^s\rfloor=L}a_j\equiv0\pmod {p^s}
+\qquad(0\le s\le r),
+tag{17}
+```
 
-Theorem 2 now removes the entire scaled stratum from that obligation.  An
-exact coefficient representation makes the remaining carry particularly
-transparent.  Define
+and a kernel $C$ has the Cartier descent
+
+```math
+C(p^t m;j)\equiv C(p^{t-1}m;\lfloor j/p\rfloor)
+\pmod {p^t}.
+tag{18}
+```
+
+Then
+
+```math
+\sum_{\lfloor j/p^r\rfloor=L}a_jC(p^r m;j)
+\equiv0\pmod {p^r}.
+tag{19}
+```
+
+For completeness, the induction groups a $p^r$-block into $p$-blocks,
+uses (18), and writes
+
+```math
+b_q={1\over p}\sum_{\lfloor j/p\rfloor=q}a_j.
+```
+
+Condition (17) for $a$ becomes the same condition, one level lower, for
+$b$.  This proves (19) by induction on $r$.
+
+### Lemma 3 (parity-doubling reciprocal blocks)
+
+Let $p\ge5$, let $P=p^s$ divide $N$, and let $L\ge0$.  Then
+
+```math
+\boxed{
+\sum_{\substack{LP\le k<(L+1)P\\p\nmid k}}
+{1\over k^2}\binom{2k}{N}\equiv0\pmod P.
+}
+tag{20}
+```
+
+To prove this, define on the integer index $j$
+
+```math
+a_j=
+\begin{cases}
+4/j^2,&j\text{ even and }p\nmid j,\\
+0,&\text{otherwise}.
+\end{cases}
+tag{21}
+```
+
+This sequence satisfies (17) at every level.  Indeed, put $P=p^s$ and
+write $j=LP+u$, $0\le u<P$.  Because $P$ is odd, the parity condition on
+$u$ is even when $L$ is even and odd when $L$ is odd.  In the even case,
+$u=2v$ reduces the block sum modulo $P$ to
+
+```math
+H_s=\sum_{\substack{1\le v\le(P-1)/2\\p\nmid v}}v^{-2}.
+tag{22}
+```
+
+In the odd case, $u\mapsto P-u$ gives the same sum.  The full reduced
+residue sum is twice $H_s$ and vanishes modulo $P$: inversion permutes the
+units modulo $P$, while
+
+```math
+\sum_{\substack{1\le v<P\\p\nmid v}}v^2
+=\sum_{v=1}^{P-1}v^2-p^2\sum_{v=1}^{P/p-1}v^2
+\equiv0\pmod P.
+tag{23}
+```
+
+Since $2$ is a unit, $H_s\equiv0\pmod P$.
+
+Now take $C(N;j)=\binom jN$.  Straub's shifted-binomial congruence gives
+
+```math
+\binom{j}{p^t m}\equiv
+\binom{\lfloor j/p\rfloor}{p^{t-1}m}\pmod {p^t},
+tag{24}
+```
+
+so (19) applies.  Finally, $j=2k$ maps the $k$-block in (20) onto the even
+indices in the two consecutive $j$-blocks numbered $2L$ and $2L+1$, and
+$4/j^2=1/k^2$.  Adding those two instances of (19) proves (20).
+
+This is the promised resolution of the two Lucas carry states: doubling
+does not remove the carry, but turns it into two ordinary Cartier blocks.
+
+## 7. Shifted kernels and the unit shell
+
+For $j\ge0$ define
+
+```math
+D_W(N;j)=\binom{N+j}{j}^3
+tag{25}
+```
+
+and
+
+```math
+D_V(N;j)=(-1)^{j+1}
+\binom{-N-1}{j}^2\binom{N-1}{j}.
+tag{26}
+```
+
+Straub's two shifted-binomial congruences imply, for either kernel,
+
+```math
+D_\star(p^t m;j)\equiv
+D_\star(p^{t-1}m;\lfloor j/p\rfloor)\pmod {p^t}.
+tag{27}
+```
+
+For $D_W$ this is the descent of
+$\binom{p^tm+j}{p^tm}^3$.  For $D_V$, the two negative-upper factors
+remove the sign introduced by their descent, while the remaining sign and
+$\binom{p^tm-1}{j}$ are exactly Straub's signed shifted factor.
+
+If $p\nmid k$, then
+$\lfloor(k-1)/p\rfloor=\lfloor k/p\rfloor$.  Applying (27) twice gives
+
+```math
+D_\star(N;k-1)\equiv D_\star(N;k)\pmod {p^r}
+\qquad(N=np^r).
+tag{28}
+```
+
+The elementary identity
+
+```math
+\binom{N+k}{k}=(-1)^k\left(1+{k\over N}\right)\binom{-N}{k}
+tag{29}
+```
+
+now splits each unit summand into a termwise cubic part and one aggregate
+part.  Explicitly,
+
+```math
+w_N(k)=(-1)^k\binom{-N}{k}^3\binom{2k}{N}
++{N^2\over k^2}D_W(N;k-1)\binom{2k}{N}
+tag{30}
+```
+
+and
+
+```math
+v_N(k)=(-1)^k\binom{-N}{k}^2\binom Nk\binom{2k}{N}
++{N^2\over k^2}D_V(N;k-1)\binom{2k}{N}.
+tag{31}
+```
+
+When $p\nmid k$, each of the first three generalized binomial factors in
+the first term is divisible by $p^r$.  Thus the first term in either line
+is zero modulo $p^{3r}$.
+
+In the second term, replace $D_\star(N;k-1)$ by $D_\star(N;k)$ using
+(28); multiplication by $N^2$ promotes the error to $p^{3r}$.  Lemma 3
+says that
+
+```math
+a_k={1\over k^2}\binom{2k}{N}\quad(p\nmid k),
+\qquad a_k=0\quad(p\mid k)
+tag{32}
+```
+
+has vanishing block sums modulo $p^s$ for every $s\le r$.  Apply the
+aggregate induction (19) a second time, now with $C=D_V$ or $D_W$.
+Every complete unit block of length $p^r$ therefore vanishes modulo $p^r$
+after division by $N^2$.  The ranges $0\le k\le N$ and
+$0\le k\le cN$ consist of complete such blocks plus a $p$-divisible
+endpoint.  Hence
+
+```math
+\sum_{\substack{0\le k\le N\\p\nmid k}}v_N(k)\equiv0\pmod {p^{3r}},
+\qquad
+\sum_{\substack{0\le k\le cN\\p\nmid k}}w_N(k)\equiv0\pmod {p^{3r}}.
+tag{33}
+```
+
+Combining (33) with the all-level scaled transfer (6) proves Theorem 1.
+$\square$
+
+## 8. Quadratic coefficient form
+
+The exact coefficient representation that first exposed the carry remains
+useful.  Define
 
 ```math
 F_N(X)=\sum_{k=0}^{N}
 \binom{-N}{k}\binom Nk\binom{N+k}{k}X^k
-tag{14}
+tag{34}
 ```
 
 and
@@ -262,7 +443,7 @@ and
 ```math
 G_{c,N}(X)=\sum_{k=0}^{cN}
 \binom{-N}{k}^2\binom{N+k}{k}X^k.
-tag{15}
+tag{35}
 ```
 
 Since $[z^N](1+z)^{2k}=\binom{2k}{N}$, the two companions are exactly
@@ -272,22 +453,19 @@ Since $[z^N](1+z)^{2k}=\binom{2k}{N}$, the two companions are exactly
 V(N)=[z^N]F_N((1+z)^2),\qquad
 W_c(N)=[z^N]G_{c,N}((1+z)^2).
 }
-tag{16}
+tag{36}
 ```
 
-Thus the two Lucas states are simply the two halves of the coefficient
-extraction through the quadratic substitution $X=(1+z)^2$.  The
-coefficientwise mixed-binomial theorem gives two powers on unit indices;
-the remaining third power is exactly the reciprocal-square cancellation
-created by (16).  At level one it is (7).  At higher levels the remaining
-task is a carry-aware version of Straub's aggregate block lemma for the
-weights in (14)--(15).  No termwise strengthening can supply it.
+Thus the two Lucas states are the two halves of the coefficient extraction
+through $X=(1+z)^2$.  Lemma 3 is the all-level arithmetic version of that
+decomposition.  A generic unit summand still has valuation only $2r$, so
+the cubic gain cannot be made termwise.
 
-Thus the prime boundary and every scaled shell are closed for every
-parameter.  The all-level companion towers have been reduced to one
-explicit aggregate unit-shell identity.
+At $p=3$, the first-level half-residue sum in (7) is nonzero, and exact
+examples attain valuation two.  The restriction $p\ge5$ is therefore
+sharp for a uniform theorem of this form.
 
-## 7. Verification
+## 9. Verification
 
 Run
 
@@ -295,16 +473,19 @@ Run
 python verification/related/verify_index_dependent_companion_boundary.py
 ```
 
-The checker verifies the half-residue identity, formulas (8)--(16), every
-complete unit block, the all-level scaled transfer, and the two
-prime-boundary congruences over an extended exact grid.
+The checker verifies the half-residue identity, formulas (8)--(13) and
+(29)--(36), the
+parity-doubling block lemma, both shifted-kernel descents, every complete
+unit shell, the all-level scaled transfer, and the full towers over an
+extended exact grid.
 
-## 8. Source boundary
+## 10. Source boundary
 
 Peter Bala proposed the substitution families in the August correspondence.
-The proof uses only Lucas' theorem, the classical adjacent
-Jacobsthal--Kazandzidis congruence, and the finite-field inverse-square sum.
-The aggregate induction targeted in (16) is modeled on Armin Straub's
-[generalized Beukers block lemma](https://arxiv.org/abs/1401.0854), but its
-published hypothesis has a one-state Cartier descent; the doubling carry in
-$\binom{2k}{N}$ prevents applying it verbatim.  No priority claim is made.
+The proof uses Lucas' theorem, the classical adjacent
+Jacobsthal--Kazandzidis congruence, and Lemmas 5.1--5.3 of Armin Straub's
+[*Multivariate Apéry numbers and supercongruences of rational
+functions*](https://arxiv.org/abs/1401.0854).  The new step is Lemma 3:
+the substitution $j=2k$ resolves the doubling carry into two
+parity-filtered blocks that meet Straub's published one-state hypothesis.
+No priority claim is made.

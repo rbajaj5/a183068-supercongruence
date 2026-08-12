@@ -370,8 +370,8 @@ leading normalized defect is independent of the level for every $p\geq5$.
   generalized-binomial factors give a quadratic tower, while three or more
   give a cubic tower. Of the companions containing upper arguments depending
   on the summation index, two fail by exact counterexample.  For the two
-  survivors, the prime boundary and every all-level scaled shell are proved;
-  one aggregate unit-shell identity remains.
+  survivors, the full $p^{3r}$ towers are proved for every $p\ge5$ by the
+  parity-doubling block lemma and shifted-kernel descent.
 
 ## 8. Literature boundary
 
