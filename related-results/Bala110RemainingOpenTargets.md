@@ -1,4 +1,4 @@
-# The 31 extracted open targets in the Bala 110-record census
+# The 30 extracted open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -13,7 +13,7 @@ it. The new status `open-target` means:
   and
 - the next operation is mathematical proof, not database extraction.
 
-The 31 records consolidate to substantially fewer proof families. Repeated
+The 30 records consolidate to substantially fewer proof families. Repeated
 entries are retained because the campaign denominator is a record count, but
 the proposed proof units below are family-sized.
 
@@ -162,14 +162,11 @@ same tower. Closure under this nonlinear operation is a separate theorem.
   multivariate extension of the repository's coefficient-framing theorem,
   but the Legendre factor adds a genuine Cartier variable.
 
-### Algebraic and diagonal quadratic towers
+### Algebraic quadratic towers
 
 - [A245926](https://oeis.org/A245926) first needs its conjectural Laurent
   representation proved; conditional on that representation, the page asks
   for a quadratic tower at `p >= 5`.
-- [A281267](https://oeis.org/A281267) asks for a quadratic tower at
-  `p >= 3`, so its ternary boundary cannot be inherited from a theorem
-  stated only for `p >= 5`.
 
 ### Reversion coefficient family
 
@@ -241,11 +238,11 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 31 records are explicit `open-target` entries;
+- 30 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
 
-This does **not** assert that all 31 targets are true. Their next legitimate
+This does **not** assert that all 30 targets are true. Their next legitimate
 status change requires a proof, an exact published-source reduction, or a
 counterexample.

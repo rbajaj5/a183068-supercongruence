@@ -988,11 +988,13 @@ proof.
   \mathcal E_{np^r}(\mathbf Z)\equiv
   \mathcal E_{np^{r-1}}(\mathbf Z^p)\pmod {p^{2r}}.
   \]
-  This proves the quadratic product families in Bala's A380290/A380291
-  notes, including all integral mixed powers, and gives the split/inert
-  Gaussian specialization at \(Z=i\).
-- **Status:** Complete elementary proof candidate.  For A380290 this is a
-  quadratic baseline, not the stronger conjectured untwisted cubic tower.
+  This proves A281267 by the specialization \(d=1\), \(h_m=1\), \(Z=1\),
+  proves the quadratic product families in Bala's A380290/A380291 notes,
+  including all integral mixed powers, and gives the split/inert Gaussian
+  specialization at \(Z=i\).
+- **Status:** Complete elementary proof candidate closing A281267. For
+  A380290 this is a quadratic baseline, not the stronger conjectured
+  untwisted cubic tower.
   The coefficientwise and Gaussian exponents are sharp; \(d=0\) and \(p=2\)
   have explicit counterexamples.
 - **Proof:** [Colored Euler-product theorem](related-results/EulerProductGaussianTower.md)
@@ -1332,13 +1334,13 @@ proof.
   \[
   A(N)=[x^N](1+x+x^2+x^3)^N,
   \]
-  then for every odd prime (p),
+  then for every odd prime \(p\),
   \[
   A(np^r)\equiv A(np^{r-1})\pmod {p^{2r}}.
   \]
-  If (F(x)=1+x+x^2+x^3) and
-  (B(N)=[x^N](F(x)/F(-x))^N), then
-  (B(p)\equiv2\pmod {p^3}) for every prime (p\ge5).
+  If \(F(x)=1+x+x^2+x^3\) and
+  \(B(N)=[x^N](F(x)/F(-x))^N\), then
+  \(B(p)\equiv2\pmod {p^3}\) for every prime \(p\ge5\).
 - **Status:** Complete elementary proof candidate closing both conjectures
   printed on A005725; priority not searched beyond the source record.
 - **Proof:** [Quadrinomial and ratio-coefficient congruences](related-results/QuadrinomialCoefficientOddPrimeTower.md)
@@ -1346,15 +1348,15 @@ proof.
 
 ### MIXED-STEP-2 — mixed positive/negative-binomial coefficient tower
 
-- **Claim:** For positive (u,v,c), put
+- **Claim:** For positive \(u,v,c\), put
   \[
   A_{u,v,c}(N)=[x^{cN}]\left(\frac{1+x^u}{1-x^v}\right)^N.
   \]
-  If (p) is odd and (p\nmid uv), then
+  If \(p\) is odd and \(p\nmid uv\), then
   \[
   A_{u,v,c}(np^r)\equiv A_{u,v,c}(np^{r-1})\pmod {p^{2r}}.
   \]
-  The specialization ((u,v,c)=(3,2,1)) proves A246437.
+  The specialization \((u,v,c)=(3,2,1)\) proves A246437.
 - **Status:** Complete elementary family theorem and named OEIS closure;
   priority not searched beyond the source record.
 - **Proof:** [Mixed-step coefficient tower](related-results/MixedStepCoefficientQuadraticTower.md)

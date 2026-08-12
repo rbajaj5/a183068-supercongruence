@@ -281,7 +281,33 @@ one factor at a time.  Every preceding quotient is a \(p\)-adic unit, and
 occupation vector transfers to its lower-level counterpart modulo
 \(p^{2r}\).  Together with Section 3, this proves Theorem 1.
 
-## 5. Bala's product families
+## 5. The A281267 specialization
+
+[OEIS A281267](https://oeis.org/A281267) is the scalar sequence
+
+```math
+a(N)=[x^N]\prod_{m\ge1}(1-x^m)^{Nm}.
+```
+
+It is exactly the one-color specialization of Theorem 1 with
+
+```math
+d=1,\qquad h_{1,m}=1,\qquad Z_1=1.
+```
+
+Since \(1^p=1\), the Frobenius twist disappears. Hence, for every odd
+prime \(p\) and all \(n,r\ge1\),
+
+```math
+a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}.
+```
+
+This proves the conjecture displayed on the OEIS page, including its
+boundary prime \(p=3\). No new estimate is needed: the apparent diagonal
+coefficient problem is already one member of the universal Euler-product
+family.
+
+## 6. Bala's product families
 
 Peter Bala's
 [notes on A380290 and A380291](https://oeis.org/A380290/a380290.pdf)
@@ -334,7 +360,7 @@ a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}
 
 while the published \(p^{3r}\) conjecture for \(p\ge7\) remains open.
 
-## 6. The exact logarithmic Frobenius identity at \(d=2\)
+## 7. The exact logarithmic Frobenius identity at \(d=2\)
 
 The special cubic A380290 target already appears in the logarithm of its
 product.  Put
@@ -369,7 +395,7 @@ retains two powers.  The open A380290 problem is to explain why evaluation
 at \(Z=1\) retains the third power at every level, while the Gaussian
 evaluation does not.
 
-## 7. Gaussian and cyclotomic refinement
+## 8. Gaussian and cyclotomic refinement
 
 For the one-color reciprocal product, define
 
@@ -416,7 +442,7 @@ Equation (30) is a split/inert Frobenius specialization over
 \(\pi\mid p\), and it makes no claim about the spatial distribution of
 Gaussian primes.
 
-## 8. Boundaries and provenance
+## 9. Boundaries and provenance
 
 The degree condition is substantive.  If \(d=0\), take one color with
 \(h_m=-2\) for every \(m\).  At \(p=3,n=r=1\), the coefficient of \(Z\)
@@ -437,17 +463,19 @@ application to Bala's full product packet.  Formula searches located the
 live conjectures and general literature on Gauss congruences, but that
 negative search is not a priority certificate.
 
-## 9. Exact checks
+## 10. Exact checks
 
 The checker:
 
 1. reproduces the published initial values of A380290;
-2. verifies (2) coefficientwise for positive, negative, omitted, and
+2. reproduces the first fifteen A281267 terms and checks 34 instances of
+   its adjacent \(p^{2r}\) tower, including \(p=3\);
+3. verifies (2) coefficientwise for positive, negative, omitted, and
    two-color exponent patterns at \(p=3,5,7\);
-3. verifies the exact logarithmic identity (27);
-4. verifies the split/inert Gaussian specialization;
-5. records exact \(p^{2r}\) equality witnesses; and
-6. confirms the \(d=0\) and \(p=2\) boundary counterexamples.
+4. verifies the exact logarithmic identity (27);
+5. verifies the split/inert Gaussian specialization;
+6. records exact \(p^{2r}\) equality witnesses; and
+7. confirms the \(d=0\) and \(p=2\) boundary counterexamples.
 
 Run:
 

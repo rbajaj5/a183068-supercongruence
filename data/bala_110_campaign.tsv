@@ -55,7 +55,7 @@ A228960	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved 
 A245926	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the required Laurent representation and then the quadratic tower
 A246437	C	proved-here	related-results/MixedStepCoefficientQuadraticTower.md	independent review and priority audit of the mixed-step family theorem
 A263843	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the full reversion coefficient family, including p=3
-A281267	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the quadratic diagonal tower, including p=3
+A281267	C	proved-here	related-results/EulerProductGaussianTower.md	independent review and source-facing cross-reference for the one-color d=1 specialization
 A331562	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove one uniform row theorem extending the three known rows
 A333090	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Schroder Taylor-truncation family
 A333091	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Schroder Taylor-truncation family
