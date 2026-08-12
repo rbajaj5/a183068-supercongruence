@@ -45,6 +45,30 @@ def shifted_row(m: int, k: int) -> int:
     )
 
 
+def integer_binomial(n: int, k: int) -> int:
+    """Straub's integer binomial coefficient, including negative indices."""
+
+    if k >= 0:
+        if n >= 0:
+            return comb(n, k) if k <= n else 0
+        return (-1) ** k * comb(k - n - 1, k)
+    if n >= 0 or k > n:
+        return 0
+    return integer_binomial(n, n - k)
+
+
+def straub_b(n1: int, n2: int, n3: int) -> int:
+    """Straub's B(n1,n2,n3) on the finite supports used here."""
+
+    radius = abs(n1) + abs(n2) + abs(n3) + 2
+    return sum(
+        integer_binomial(n1, j)
+        * integer_binomial(n1 + n2 - j, n1)
+        * integer_binomial(n3, j)
+        for j in range(-radius, radius + 1)
+    )
+
+
 def a376458_original(n: int) -> int:
     if n == 0:
         return 1
@@ -105,6 +129,10 @@ def a376466_pairing(n: int) -> int:
         comb(n - 1, j) * comb(n + j - 1, j) * q_coefficient(n, j)
         for j in range(n)
     )
+
+
+def a376466_outer(n: int, k: int) -> int:
+    return (-1) ** (n + k) * comb(n, k) * comb(n + k, k) ** 2
 
 
 def harmonic_mod(power: int, prime: int, modulus: int) -> int:
@@ -260,6 +288,31 @@ def check_ordinary_tower_lemma() -> int:
     return checks
 
 
+def check_negative_row_reduction() -> int:
+    checks = 0
+    for n in range(1, 18):
+        for k in range(18):
+            assert shifted_row(n - 1, k) == straub_b(-n, k, -n)
+            checks += 1
+
+    for prime in (5, 7, 11):
+        for n in range(1, 19):
+            e = valuation(n, prime)
+            for k in range(n + 1):
+                high_row = shifted_row(prime * n - 1, prime * k)
+                low_row = shifted_row(n - 1, k)
+                q = valuation(k, prime) if k else 10**9
+                row_depth = 3 * (min(e, q) + 1)
+                assert (high_row - low_row) % prime**row_depth == 0
+                checks += 1
+
+    witness = a376466_outer(5, 1) * shifted_row(4, 1)
+    assert valuation(witness, 5) == 1
+    assert valuation(a376466_pairing(5) - a376466_pairing(1), 5) == 3
+    checks += 2
+    return checks
+
+
 def check_shell_split(n: int, prime: int, which: str) -> None:
     high_n = prime * n
     if which == "458":
@@ -339,11 +392,13 @@ def main() -> None:
     identities = check_collapse_and_pairing()
     boundary, boundary_sharp = check_prime_boundary()
     ordinary_lemma = check_ordinary_tower_lemma()
+    negative_row = check_negative_row_reduction()
     towers, tower_sharp = check_towers()
     print(f"A108625 row-identity checks: {crystal}")
     print(f"A376 collapse/pairing checks: {identities}")
     print(f"A376458 prime-boundary checks: {boundary} ({boundary_sharp} sharp)")
     print(f"A376458 ordinary-tower lemma checks: {ordinary_lemma}")
+    print(f"A376466 negative-row reduction checks: {negative_row}")
     print(f"A376 companion tower checks: {towers} ({tower_sharp} sharp)")
     print("A376 Apéry-companion checks passed")
 

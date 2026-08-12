@@ -127,12 +127,15 @@ Frobenius twist is trivial at \(Z=1\), so the theorem proves the exact
 \(p^{2r}\) tower for every odd prime, including \(p=3\). This leaves 30
 `open-target` records.
 
-The next source reconciliation identifies the offset-one A108628 tower as
-a consequence of Straub's ordinary and shifted Apéry towers for `p>5`.
-Because the live page also includes \(p=5\) and four half-index vanishing
-claims, the record moves to `partial`, not `published-source`. This leaves
-29 `open-target` records and records the two residual obligations
-explicitly.
+The next source reconciliation identifies the offset-one A108628 tower
+directly as `B(N,N-1,N)`. Straub's theorem therefore proves it for every
+`p>=5`, including five. The separate
+[half-index note](A108628HalfIndexBoundary.md) proves the first of the four
+affine half-index congruences by a terminating Dixon identity and proves the
+exact valuation of the comparison term at every prime-power level. The
+other three higher-power claims now follow from one explicit aggregate
+master comparison, which remains open; hence the record remains `partial`
+and 29 records remain `open-target` at this point in the chronology.
 
 Two further live-page checks remove the word-count sums from the wholly open
 queue. A208675 is exactly Straub's coefficient `B(n,n-1,n-1)`, so its stated
@@ -292,6 +295,8 @@ record's proposed shifted tower already at `p=5,n=2,r=1`; the pure-prime
 shift also fails at `p=5,r=2`. Both records move to `partial`, so no claim in
 the 110-record census is now wholly untreated. A376458 remains partial only
 because its higher pure-prime `p^(3r+3)` bonus is still open.
+A376466's divisible shifted row is now a homogeneous negative-coordinate
+Straub coefficient; its surviving obstruction is the aggregate unit shell.
 
 The later odd-moment completion closes the composite part of A357512.  An
 elementary factorization removes two powers of the shifted modulus
@@ -347,8 +352,11 @@ The campaign does not use A-number order. It uses expected proof yield.
    without repair. The
    [Straub prime-five audit](StraubPrimeFiveCoefficientPacket.md) records
    that Straub's printed theorem already includes `p=5` and source-closes
-   A108625, A143007, and A177316 after exact coefficient matching. An
-   earlier repository snapshot incorrectly called this an extension.
+   A108625, A143007, and A177316 after exact coefficient matching, and
+   source-closes the ordinary A108628 tower through its direct
+   `B(N,N-1,N)` coordinates. The companion half-index note proves the first
+   affine boundary. An earlier repository snapshot incorrectly called the
+   prime-five audit an extension.
 4. **M route:** take a p-adic logarithm and isolate the first moment that
    survives the product balance.  The
    [prime-coefficient packet](ModularProductPrimeCoefficientPacket.md)

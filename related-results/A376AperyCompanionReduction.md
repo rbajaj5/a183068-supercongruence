@@ -3,16 +3,18 @@
 **Status:** the A376458 nested sum is collapsed to one signed
 four-binomial sum, its full ordinary cubic tower is proved, and its
 conjectured prime-level `p^5` congruence is proved for every `p>=7`;
-A376466 is placed in the same exact coefficient-pairing framework and its
+A376466 has a homogeneous negative-coordinate row identity, while its
 proposed shifted tower is refuted by an exact counterexample; the ordinary
 A376466 tower and the higher A376458 bonus remain open
 
-The last two wholly untreated records in the Bala 110-record census are
+The last two records treated in this packet are
 [A376458](https://oeis.org/A376458) and
 [A376466](https://oeis.org/A376466). Both are transforms of the crystal-ball
 triangle [A108625](https://oeis.org/A108625), but the occurrence of `N-1`
-means that Straub's homogeneous multivariate theorem cannot simply be cited:
-the parameter vector does not scale by `p`.
+initially hides the homogeneous coordinates needed for Straub's theorem.
+For A376466, the identity in Section 7 restores homogeneous coordinates for
+the shifted row, but a separate aggregate unit-shell cancellation is still
+needed for the outer sum.
 
 This note gives a common exact representation and closes the strongest
 first-level assertion on A376458.
@@ -367,11 +369,14 @@ For either `V_N=R_N` or `V_N=Q_N(1+X)`, write `v_N(j)=[X^j]V_N` and
 \tag{24}
 ```
 
-The first line is the scaled shell; the second is the unit shell. The
-ordinary cubic conjectures are precisely the assertion that their sum has
-valuation at least `3r` when `M=np^(r-1)`. For A376458, the remaining
-pure-prime conjecture asks for `3r+3` when `r>=2`. A376466's proposed
-all-`n` shifted companion has already been disposed of by Theorem 4.
+The first line is the scaled shell; the second is the unit shell. For
+A376458, Section 6 handles these shells using the product formula (26).
+For A376466, Section 7 exposes the shifted row as a homogeneous
+negative-coordinate coefficient but also records why that observation does
+not by itself close the unit shell. The remaining pure-prime A376458
+conjecture asks for `3r+3` when `r>=2`.
+A376466's proposed all-`n` shifted companion has already been disposed of by
+Theorem 4.
 
 For A376466 the exact checker shows that the unit shell is not termwise
 cubic, so its completion needs aggregate cancellation. For A376458,
@@ -520,14 +525,107 @@ The ordinary tower is termwise after unit-block compression; the extra
 two powers on the pure-prime line require cancellation between strata and
 remain an explicit obligation.
 
-## 7. Verification and source boundary
+## 7. The ordinary A376466 tower
+
+The apparent affine shift in `H_N` is itself a homogeneous multivariate
+Apéry coefficient after negative-coordinate continuation. Let
+
+```math
+\mathcal B(r,s,t)=
+\sum_{j\in\mathbb Z}
+\binom rj\binom{r+s-j}{r}\binom tj,
+\tag{33}
+```
+
+with integer binomial coefficients interpreted as in Straub.
+
+### Lemma 7 (negative-coordinate row identity)
+
+For all `N>=1` and `K>=0`,
+
+```math
+\boxed{T(N-1,K)=\mathcal B(-N,K,-N).}
+\tag{34}
+```
+
+#### Proof
+
+In (33), with `(r,s,t)=(-N,K,-N)`, the only nonzero indices are
+`0<=j<=K`. The negation identity for binomial coefficients gives
+
+```math
+\mathcal B(-N,K,-N)
+=\sum_{j=0}^K(-1)^{K-j}
+\binom{N+j-1}{j}^2\binom{N-1}{K-j}.
+\tag{35}
+```
+
+Consequently its ordinary generating function in `K` is
+
+```math
+(1-x)^{N-1}\sum_{j\ge0}\binom{N+j-1}{j}^2x^j
+=\frac{1}{(1-x)^N}
+ \sum_{j=0}^{N-1}\binom{N-1}{j}^2x^j.
+\tag{36}
+```
+
+The equality is Euler's elementary transformation of the displayed
+binomial series. On the other hand, (2) and
+`sum_{K>=j} binom(K,j)x^K=x^j/(1-x)^(j+1)` show that
+
+```math
+\sum_{K\ge0}T(N-1,K)x^K
+=\frac{1}{1-x}\sum_{j=0}^{N-1}
+ \binom{N-1}{j}\binom{N+j-1}{j}
+ \left(\frac{x}{1-x}\right)^j.
+\tag{37}
+```
+
+The finite form of the same Euler transformation turns (37) into the
+right-hand side of (36). Coefficients of `x^K` therefore agree. QED
+
+Lemma 7 does prove the exact scaled-row estimate. If `p>=5`,
+`e=v_p(N)`, `q=v_p(K)`, and `s=min(e,q)`, Straub's theorem applied to
+`p^(-s)(-N,K,-N)` gives
+
+```math
+T(pN-1,pK)\equiv T(N-1,K)
+\pmod {p^{3(s+1)}}.
+\tag{38}
+```
+
+This completely controls the shifted row on divisible indices. It does not
+make the outer unit shell termwise cubic. In fact, with
+
+```math
+c_N(k)=(-1)^{N+k}\binom Nk\binom{N+k}{k}^2,
+\tag{39}
+```
+
+the first unit-index witness is
+
+```math
+v_5\bigl(c_5(1)T(4,1)\bigr)=1,
+\qquad
+v_5\bigl(B(5)-B(1)\bigr)=3.
+\tag{40}
+```
+
+Thus two additional powers arise only after summing the unit shell. The
+ordinary A376466 conjecture has now been reduced more sharply: its divisible
+shell is governed by the proved homogeneous estimate (38), and its only
+remaining obstruction is an aggregate unit-shell cancellation.
+
+## 8. Verification and source boundary
 
 [`verify_a376_apery_companions.py`](../verification/related/verify_a376_apery_companions.py)
-checks (1)--(2), (5)--(10), (13), and (17)--(24), both OEIS initial
-sequences, the exact A376458 `p=5` boundary, the proved prime-level theorem
-through a broad prime range, Lemma 5 across every divisibility stratum in a
-finite audit box, Theorem 6 term by term, the shifted A376466 counterexample,
-and sampled A376466 and pure-prime A376458 towers.
+checks (1)--(2), (5)--(10), (13), (17)--(24), and (34)--(40), both OEIS
+initial sequences, the exact A376458 `p=5` boundary, the proved prime-level
+theorem through a broad prime range, Lemma 5 across every divisibility
+stratum in a finite audit box, Theorem 6 term by term, the negative-row
+identity and its homogeneous scaled-row estimate, the sharp unit-shell
+witness, the shifted A376466 counterexample, and sampled ordinary A376466
+and pure-prime A376458 towers.
 
 The definitions and conjectures come from the linked OEIS records. Equation
 (2) is also recorded on A108625. Generalized Vandermonde and the harmonic

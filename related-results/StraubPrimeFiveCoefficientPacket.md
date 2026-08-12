@@ -103,10 +103,11 @@ through the no-loss Jacobsthal estimate and (2). The calculation above
 therefore independently confirms the published endpoint; it does not add a
 new prime to the theorem.
 
-## 3. Three OEIS consequences
+## 3. Four OEIS consequences
 
 Straub's theorem, after the following exact parameter matches, source-closes
-three records in the 110-record campaign.
+three complete records and the ordinary tower on a fourth record in the
+110-record campaign.
 
 ### 3.1 A108625
 
@@ -228,16 +229,53 @@ a(np^r)\equiv a(np^{r-1})\pmod {p^{3r}}
 
 for every \(p\geq5\).
 
+### 3.4 The offset-one A108628 tower
+
+With its original offset zero, [A108628](https://oeis.org/A108628) is
+
+```math
+a(n)=B(n+1,n,n+1).
+\tag{7}
+```
+
+When the same list is indexed from one, its `N`-th term is therefore
+
+```math
+\widehat a(N)=a(N-1)=B(N,N-1,N).
+\tag{8}
+```
+
+The apparent shift causes no loss under the tower: for fixed `N`, the
+entire vector `(N,N-1,N)` scales homogeneously. Applying (1) directly gives
+
+```math
+\boxed{
+\widehat a(np^r)\equiv\widehat a(np^{r-1})
+\pmod {p^{3r}}}
+\tag{9}
+```
+
+for every prime `p>=5` and positive `n,r`, including `p=5`. An earlier
+source-boundary note instead passed through
+`a(n)=(2*A005258(n+1)-A005258(n))/5` and therefore appeared to lose a
+factor at five. Equation (8) is the direct parameter match and removes
+that artificial loss.
+
+The four half-index vanishing conjectures on A108628 are different affine
+coefficient problems and are not consequences of (9). The companion
+[half-index note](A108628HalfIndexBoundary.md) proves the first one; the
+three higher-power statements remain open.
+
 ## 4. Verification and non-claims
 
 The exact checker
 [`verify_straub_prime5_packet.py`](../verification/related/verify_straub_prime5_packet.py)
-performs 750 integer-arithmetic checks:
+performs exact integer-arithmetic checks of:
 
-- 182 checks of the three parameter identifications;
+- the four parameter identifications, including (7)--(8);
 - 230 checks of the telescoping identity (4);
 - 10 checks of the two signed reciprocal-square blocks through \(5^5\); and
-- 168 checks of the three prime-five towers at the first two levels; and
+- the four prime-five towers at the first two levels; and
 - 160 randomized exact checks of the full signed multivariate coefficient
   theorem across five partition shapes and two adjacent levels.
 
@@ -245,5 +283,5 @@ These computations test transcription and boundary behavior. The
 controlling theorem is Straub's published result; Section 2 is a redundant
 endpoint audit, not a claim of priority.
 
-No claim is made here about \(p=2\) or \(p=3\), and no claim is made that all
-statements on any of the three OEIS pages have been settled.
+No claim is made here about \(p=2\) or \(p=3\), and the three higher-power
+half-index claims on A108628 are explicitly not settled.

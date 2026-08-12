@@ -45,7 +45,7 @@ A006318	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEI
 A036917	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as an Apery-like source anchor
 A060941	C	partial	related-results/ExponentialCoefficientCartierReduction.md	prove the cubic bound (10) and its propagation under iteration; p=5 fails exactly
 A108625	C	published-source	related-results/StraubPrimeFiveCoefficientPacket.md	Straub Theorem 3.2(b) already includes p=5; retain the exact parameter and endpoint audit
-A108628	C	partial	related-results/Bala110LiveSourceBoundary.md	Straub closes the ordinary tower for p>5; prove the p=5 shifted boundary and the separate half-index vanishing packet
+A108628	C	partial	related-results/A108628HalfIndexBoundary.md	ordinary tower source-closed for p>=5; first half-index and exact Dixon-term valuation proved; prove the one aggregate master comparison that implies all three higher claims
 A143007	C	published-source	related-results/StraubPrimeFiveCoefficientPacket.md	Straub Theorem 3.2(b) already includes p=5; retain the exact parameter and endpoint audit
 A156554	C	proved-here	related-results/A156554LegendreCoefficientTower.md	independent review and literature-priority audit of the full integral-parameter family
 A168597	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed congruence	verify exact parameter match in bibliography
