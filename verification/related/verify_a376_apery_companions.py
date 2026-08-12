@@ -79,6 +79,13 @@ def q_coefficient(n: int, j: int) -> int:
     )
 
 
+def q_coefficient_finite_difference(n: int, j: int) -> int:
+    return comb(n, j) * sum(
+        (-1) ** ell * comb(n - j, ell) * comb(2 * n - ell, n) ** 2
+        for ell in range(n - j + 1)
+    )
+
+
 def a376466_original(n: int) -> int:
     if n == 0:
         return 1
@@ -184,6 +191,9 @@ def check_collapse_and_pairing() -> int:
     for n in range(1, 13):
         assert a376466_original(n) == a376466_pairing(n)
         checks += 1
+        for j in range(n + 1):
+            assert q_coefficient(n, j) == q_coefficient_finite_difference(n, j)
+            checks += 1
     for n, expected in enumerate(expected_466):
         assert a376466_pairing(n) == expected
         checks += 1

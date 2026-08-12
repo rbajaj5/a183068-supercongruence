@@ -219,6 +219,45 @@ U_N(j)=[X^j]Q_N(1+X)
 \tag{18}
 ```
 
+These coefficients have a sign-free bivariate representation.
+
+### Lemma 3 (finite-difference form)
+
+For `0<=j<=N`,
+
+```math
+\boxed{
+U_N(j)=\binom Nj[x^Ny^N]
+(1+x)^{N+j}(1+y)^{N+j}(x+y+xy)^{N-j}.}
+\tag{18a}
+```
+
+#### Proof
+
+Put `k=N-l` in (18) and use
+
+```math
+\binom Nl\binom{N-l}{j}
+=\binom Nj\binom{N-j}{l}.
+```
+
+This gives
+
+```math
+U_N(j)=\binom Nj\sum_{l=0}^{N-j}(-1)^l
+\binom{N-j}{l}\binom{2N-l}{N}^2.
+```
+
+Write each squared binomial as the coefficient of `x^Ny^N` in
+`(1+x)^(2N-l)(1+y)^(2N-l)` and perform the binomial sum over `l`.
+The factor in parentheses becomes
+
+```math
+\left(1-\frac1{(1+x)(1+y)}\right)^{N-j},
+```
+
+which proves (18a). QED
+
 The OEIS definition of A376466 and (2) immediately give the following.
 
 ### Theorem 3 (common pairing)
@@ -245,6 +284,40 @@ B(N)=\langle H_N,Q_N(1+X)\rangle.
 
 This is an exact structural relation, not a proof that their defects are
 equal.
+
+Lemma 3 also turns (19) into one constant term of adjacent powers. Define
+
+```math
+L=\frac{(1+x)(1+y)(x+y+xy)}{xy},
+\qquad
+R=\frac{(1+x)(1+y)}{x+y+xy},
+```
+
+and the Laurent polynomials
+
+```math
+P=(1+w)\left(1+z^{-1}+z^{-1}w^{-1}\right),
+```
+
+```math
+Q=L(1+Rz)
+=\frac{(1+x)(1+y)}{xy}
+\left(x+y+xy+z(1+x)(1+y)\right).
+```
+
+Then (18a), followed by coefficient pairing first in `z` and then in `w`,
+gives
+
+```math
+\boxed{
+B(N)=\operatorname{CT}_{x,y,z,w}Q^N P^{N-1}.}
+\tag{20a}
+```
+
+Unlike a diagonal `CT((PQ)^N)`, (20a) retains one adjacent exponent. It
+therefore identifies the surviving ordinary A376466 problem as a shifted
+Cartier problem; it does not put the sequence directly under the
+homogeneous multivariate theorem.
 
 ### Theorem 4 (the proposed shifted A376466 tower is false)
 
