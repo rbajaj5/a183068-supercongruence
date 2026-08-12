@@ -1,4 +1,4 @@
-# The 21 remaining open targets in the Bala 110-record census
+# The 11 remaining open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -27,8 +27,14 @@ partial ledger. The
 also moved that record to `partial`.  The
 [A245926 algebraic coefficient theorem](A245926AlgebraicCoefficientTower.md)
 proves both that record's conjectural coefficient representation and its
-quadratic tower. This file now lists the 21 records that
-remain fully open.
+quadratic tower. The
+[Taylor-truncation reduction](TaylorTruncationCoefficientReduction.md)
+has consolidated A333090--A333097 into two exact coefficient families and
+moved those seven records to `partial`.  The
+[adjacent-binomial meander theorem](MeanderAdjacentBinomialTowers.md) then
+proved the three intended A198060 families and closed A198256 and A198258,
+including the exceptional ternary sextic case. This file now lists the 11
+records that remain fully open.
 
 ## 1. Finite-sum transfer targets
 
@@ -54,18 +60,6 @@ that survives reversion; a formal similarity of the series is not enough.
   `a(np^r) = a(np^(r-1)) mod p^(2r)` for `p >= 5`. The live rational
   diagonal is `1/(1-x-y-z+xyz)`, but a rational diagonal alone does not
   supply the second power.
-
-### Adjacent-binomial row families
-
-- [A198060](https://oeis.org/A198060) states Gauss congruences for every
-  row, a separate even-row congruence at `p^r-1`, and a cubic odd-row
-  tower. The live odd-row formula contains `n*p*(r-1)` where the surrounding
-  pattern indicates that `n*p^(r-1)` may have been intended. That ambiguity
-  must be resolved before proof.
-- [A198256](https://oeis.org/A198256), with offset 1, asks for a cubic tower
-  for `p >= 5`.
-- [A198258](https://oeis.org/A198258), also with offset 1, asks for a cubic
-  tower for `p >= 3`; the ternary boundary is therefore part of the claim.
 
 ### Isolated finite-sum boundaries
 
@@ -140,27 +134,6 @@ cubic tower for `p >= 5`. Rows 2, 3, and 4 are cited as known examples.
 The remaining target is one uniform row theorem, not a sequence of isolated
 row computations.
 
-### Taylor-truncation packets
-
-[A333090](https://oeis.org/A333090),
-[A333091](https://oeis.org/A333091), and
-[A333092](https://oeis.org/A333092) are the cases `m=1,2,3` of the family
-
-```math
-T_n\bigl(S(x)^{mn}\bigr)\big|_{x=1},
-```
-
-where `S(x)` is the large-Schroder generating series and `T_n` truncates at
-degree `n`. The conjecture is a cubic tower for every integral `m` and
-`p >= 5`.
-
-[A333093](https://oeis.org/A333093),
-[A333095](https://oeis.org/A333095),
-[A333096](https://oeis.org/A333096), and
-[A333097](https://oeis.org/A333097) state the parallel family with the
-Catalan generating series. These seven records therefore represent two
-parameterized proof targets.
-
 ### Exponential coefficient pair
 
 - [A362722](https://oeis.org/A362722) asks for modulus `p^(2r)` at general
@@ -178,11 +151,11 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 21 records are explicit `open-target` entries;
+- 11 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
 
-This does **not** assert that all 22 targets are true. Their next legitimate
+This does **not** assert that all remaining targets are true. Their next legitimate
 status change requires a proof, an exact published-source reduction, or a
 counterexample.

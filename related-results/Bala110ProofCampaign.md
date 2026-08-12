@@ -24,15 +24,15 @@ every record:
 
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 9 | 8 | 9 | 4 | 10 | 0 |
-| C: coefficient/constant term | 37 | 12 | 6 | 6 | 2 | 11 | 0 |
+| T: finite-sum transfer | 40 | 12 | 8 | 9 | 4 | 7 | 0 |
+| C: coefficient/constant term | 37 | 12 | 6 | 13 | 2 | 4 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **38** | **17** | **27** | **7** | **21** | **0** |
+| **Total** | **110** | **41** | **17** | **34** | **7** | **11** | **0** |
 
-The thirty-eight `proved-here` records are A002003, A005725, A008485, A008705,
-A008793, A049505, A091527, A108625, A132303, A141057, A143007, A156554, A177316, A245926, A246437,
+The forty-one `proved-here` records are A002003, A005725, A008485, A008705,
+A008793, A049505, A091527, A108625, A132303, A141057, A143007, A156554, A177316, A198060, A198256, A198258, A245926, A246437,
 A255672, A260667, A262732, A270913, A270919, A270922, A270924, A275652,
 A275654, A281267, A288470, A333592,
 A348410, A351857, A352373, A357509, A357510, A357568, A364173,
@@ -40,16 +40,17 @@ A364303, A364506, A370101, and A370102. The seventeen
 `published-source` records are A002426, A002895, A005258, A082758, A103882,
 A112029, A168597, A176335, A183204, A184423, A186420, A208675, A234839,
 A363864, A363867, A363871, and A364509.
-The twenty-seven partial records are A003161, A003162, A008978, A023871,
-A023873, A108628, A112028, A113424, A183069, A206622, A212334, A219562, A228960, A229452, A263843,
-A283271, A350383, A351858,
+The thirty-four partial records are A003161, A003162, A008978, A023871,
+A023873, A108628, A112028, A113424, A183069, A206622, A212334, A219562,
+A228960, A229452, A263843, A283271, A333090, A333091, A333092, A333093,
+A333095, A333096, A333097, A350383, A351858,
 A352655, A357506, A357512,
 A357567, A357956, A357959, A361889, A361892, and A380290. A001850, A002897,
 A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
 classified `no-explicit-open`: the live pages contain no Bala
 supercongruence conjecture that remains to be proved.
-The remaining twenty-one records are `open-target`; their exact claims,
+The remaining eleven records are `open-target`; their exact claims,
 prime ranges, normalizations, and family consolidations are recorded in the
 [remaining-open-target map](Bala110RemainingOpenTargets.md).
 
@@ -189,6 +190,28 @@ generating function on the OEIS page.  The resulting kernel factors as
 has no exponent on the `p`-sublattice, so the linear defect vanishes and
 all remaining exponential terms carry `p^(2r)`.  This proves both the
 representation and the quadratic tower, leaving 21 `open-target` records.
+
+The next reduction consolidates the seven Catalan and large-Schröder
+Taylor-truncation records. Residue substitution turns every integral power
+parameter into one of two explicit rational-prefactor coefficient families.
+For Catalan, the prefactor has the exact Cartier fixed-point
+`C_p(Q)=Q` for `p>=5`; for Schröder, the prefactor denominator splits over
+the Gaussian integers. The new note states the two remaining Catalan
+constant-term estimates exactly and verifies them on a finite grid. Because
+those estimates are not yet proved, all seven records move to `partial`,
+leaving 14 `open-target` records.
+
+The adjacent-binomial unit closes three more records at once.  Writing the
+row index as `d-1`, reflection turns every offset row into a symmetric
+homogeneous polynomial in two adjacent binomial coefficients.  For even
+`d` it has a double factor `L+R`; its residual value on `L=-R` is `d/4`.
+Jacobsthal scaling closes the divisible shells and reciprocal-square blocks
+close the unit shell.  This proves the intended three A198060 conjectures,
+the A198256 quartic identity and cubic tower, and the A198258 cubic tower.
+The factor `d/4` supplies exactly the missing ternary power when `3|d`,
+explaining why A198258 includes `p=3` while A198256 does not.  The printed
+`n*p*(r-1)-1` in A198060 still needs the evident editorial correction to
+`n*p^(r-1)-1`.  Eleven records remain `open-target`.
 
 ## Proof order
 

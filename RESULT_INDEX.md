@@ -2045,7 +2045,46 @@ proof.
 - **Proof:** [Exact \(2\times2\) counterexample](related-results/ZhangFourMatrixCounterexample.md)
 - **Exact checker:** [`verify_zhang_four_matrix_counterexample.py`](verification/related/verify_zhang_four_matrix_counterexample.py)
 
+### MEANDER-ADJ — adjacent-binomial meander-row towers
+
+- **Claim:** If `M_d(N)` is the offset meander-row sum, then every row has
+  an odd-prime `p^r` Gauss tower. Odd `d` satisfies
+
+  ```math
+  M_d(p^r)\equiv2^{p^r-1}\pmod {p^2},
+  ```
+
+  while even `d` satisfies the full `p^(3r)` tower for `p>=5`, and also at
+  `p=3` whenever `3|d`.
+- **Applications:** Proves the three intended conjectures on A198060 after
+  correcting its evident adjacent-level exponent typo, proves the formerly
+  conjectural quartic identity and tower on A198256, and proves A198258
+  including `p=3`.
+- **Mechanism:** Reflection symmetrizes adjacent binomial coefficients.  The
+  even-degree polynomial has a double Pascal factor and residual value
+  `d/4`; Jacobsthal scaling handles divisible shells and reciprocal-square
+  Cartier blocks handle units.
+- **Boundary:** `M_4(3)-M_4(1)=45` has 3-adic valuation two, so the absence
+  of `p=3` from A198256 is sharp.
+- **Status:** Complete elementary proof candidate with 1,304 exact checks;
+  independent review and the source-page typo correction remain.
+- **Proof:** [Adjacent-binomial meander-row towers](related-results/MeanderAdjacentBinomialTowers.md)
+- **Exact checker:** [`verify_meander_adjacent_binomial_towers.py`](verification/related/verify_meander_adjacent_binomial_towers.py)
+
 ## Reductions and computational reports
+
+### TAYLOR-7 — Catalan and Schröder Taylor-truncation packet
+
+- **Claim:** The seven records A333090--A333097 that carry live
+  Taylor-truncation conjectures are exactly two integral-parameter
+  coefficient families. The Catalan prefactor has an exact Cartier
+  fixed-point at every prime at least five; the Schröder prefactor has a
+  quadratic Gaussian denominator.
+- **Status:** Exact reduction with 2,210 exact checks. Two displayed
+  constant-term estimates would close the Catalan cubic tower; neither
+  those estimates nor the Schröder analogue is claimed proved.
+- **Report:** [Taylor-truncation coefficient reduction](related-results/TaylorTruncationCoefficientReduction.md)
+- **Exact checker:** [`verify_taylor_truncation_reduction.py`](verification/related/verify_taylor_truncation_reduction.py)
 
 ### CAT-ODD — Catalan ballot-power supercongruences
 

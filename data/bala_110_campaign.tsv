@@ -18,9 +18,9 @@ A141057	T	proved-here	MultinomialPowerFrobeniusTowers.md	independent review and 
 A143583	T	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record states only a Gauss p^r congruence and no Bala supercongruence conjecture
 A183069	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	integrality and sharp exact checks recorded; prove the unified odd ballot-power tower
 A183204	T	published-source	Osburn--Sahu--Straub, arXiv:1312.2195, s_7 cubic tower	verify exact equation normalization in bibliography
-A198060	T	open-target	related-results/Bala110RemainingOpenTargets.md	resolve the apparent exponent typo, then prove the odd-row cubic family
-A198256	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the offset-one quartic adjacent-binomial tower
-A198258	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the offset-one sextic adjacent-binomial tower, including p=3
+A198060	T	proved-here	related-results/MeanderAdjacentBinomialTowers.md	independent review; ask OEIS editor to correct n*p*(r-1)-1 to n*p^(r-1)-1
+A198256	T	proved-here	related-results/MeanderAdjacentBinomialTowers.md	independent review of the quartic identity and cubic tower
+A198258	T	proved-here	related-results/MeanderAdjacentBinomialTowers.md	independent review of the ternary multiplicity bonus
 A208675	T	published-source	Straub equation (24) and multivariate cubic theorem, arXiv:1401.0854	verify the exact shifted parameter match in the bibliography
 A212334	T	partial	related-results/Bala110LiveSourceBoundary.md	prove the enhanced p^5 and p^(3r+3) pure-prime refinement
 A219562	T	partial	Coster Theorem 4 gives the p^(3r) baseline; OEIS asks for p^5 and p^(3r+3)	prove the extra shifted-index gain
@@ -57,13 +57,13 @@ A246437	C	proved-here	related-results/MixedStepCoefficientQuadraticTower.md	inde
 A263843	C	partial	related-results/A263843ReversionCoefficientReduction.md	p>=5 and 3|(c+s) proved; close the remaining p=3 unit-slope boundary
 A281267	C	proved-here	related-results/EulerProductGaussianTower.md	independent review and source-facing cross-reference for the one-color d=1 specialization
 A331562	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove one uniform row theorem extending the three known rows
-A333090	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Schroder Taylor-truncation family
-A333091	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Schroder Taylor-truncation family
-A333092	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Schroder Taylor-truncation family
-A333093	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Catalan Taylor-truncation family
-A333095	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Catalan Taylor-truncation family
-A333096	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Catalan Taylor-truncation family
-A333097	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the common Catalan Taylor-truncation family
+A333090	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Schroder coefficient reduction proved; close its Gaussian-prefactor Cartier estimates
+A333091	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Schroder coefficient reduction proved; close its Gaussian-prefactor Cartier estimates
+A333092	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Schroder coefficient reduction proved; close its Gaussian-prefactor Cartier estimates
+A333093	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Catalan coefficient reduction proved; prove the two displayed Cartier constant-term estimates
+A333095	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Catalan coefficient reduction proved; prove the two displayed Cartier constant-term estimates
+A333096	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Catalan coefficient reduction proved; prove the two displayed Cartier constant-term estimates
+A333097	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Catalan coefficient reduction proved; prove the two displayed Cartier constant-term estimates
 A348410	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A350383	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
 A351857	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
