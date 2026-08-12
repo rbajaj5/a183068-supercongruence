@@ -575,7 +575,48 @@ transgression obtained by applying Cartier to (24).  This is exactly where
 the Frobenius lift, rather than generic compactness or recurrence machinery,
 carries the problem.
 
-The checker finds no failure of (25) in 1,384 exact coefficient tests for
+### 5.3 The remaining cube transgression
+
+The last identity can be written without formal derivatives.  Let
+$P_{m,n},Q_{m,n}$ denote the coefficients of the canonical primitives, and
+put
+
+```math
+\begin{aligned}
+\Delta^{(3)}_{m,n}
+&=[x^{p^2m}y^{p^2n}]HL_p^3-[x^{pm}y^{pn}]HL_p^3,\\
+U^P_{m,n}
+&=\sum_{\substack{1\leq q\leq pm\\p\nmid q}}P_{pm-q,pn},\\
+U^Q_{m,n}
+&=\sum_{\substack{1\leq q\leq pn\\p\nmid q}}Q_{pm,pn-q}.
+\end{aligned}
+\tag{32}
+```
+
+Then coefficientwise Frobenius fixedness (25) is equivalent to
+
+```math
+\boxed{
+\Delta^{(3)}_{m,n}
+\equiv3aU^P_{m,n}+3bU^Q_{m,n}\pmod p
+\quad(m,n\geq0).
+}
+\tag{33}
+```
+
+Indeed, in the coefficient of $PD_x\log G$ at $(pm,pn)$, split the
+positive $x$-shifts into $q=pu$ and $p\nmid q$.  The divisible shifts
+reduce to the corresponding coefficient at $(m,n)$ because
+$P_{pr,ps}\equiv P_{r,s}\pmod p$; the constant term $-cP$ cancels for the
+same reason.  Only $aU^P_{m,n}$ remains.  The $Q$ term is identical in the
+$y$ coordinate.  Multiplying the difference of (24) by $6$ gives (33).
+
+Thus the open step no longer contains $G$, $c$, a constant-term pairing,
+or an unspecified tangent primitive.  It is the single unit-shift identity
+(33) for the quadratic block potentials.  In particular, its truth is
+independent of the prefix slope $c$.
+
+The checker finds no failure of (25) or (33) in 1,732 exact coefficient tests for
 $p=5,7,11$, including coefficients beyond the first resonant diagonal and
 cases $p\mid c$.  This is evidence for the remaining reciprocal-cube
 transgression, not a proof of it.
@@ -621,8 +662,8 @@ python verification/related/verify_bala_august_kernel_frobenius.py
 ```
 
 The first command runs 1,474 normalized-defect checks.  The second runs
-1,384 exact coefficient checks of (25), its canonical primitives, and the
-lifted square bound (26).
+1,732 exact coefficient checks of (25), its canonical primitives, the
+lifted square bound (26), and the unit-shift transgression (33).
 
 ## 7. Literature boundary and next obligation
 

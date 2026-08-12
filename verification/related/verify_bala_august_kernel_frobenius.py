@@ -176,6 +176,35 @@ def check_configuration(prime: int, a: int, b: int, c: int, window: int) -> int:
                 kernel[m, n], prime
             )
             checks += 1
+
+            # Equivalent unit-shift form of the remaining reciprocal-cube
+            # transgression, equation (33) in the note.
+            cube_difference = engine.h_l_power(
+                3, prime * prime * m, prime * prime * n
+            ) - engine.h_l_power(3, prime * m, prime * n)
+            first_unit_shifts = sum(
+                (
+                    first.get((prime * m - q, prime * n), Fraction(0))
+                    for q in range(1, prime * m + 1)
+                    if q % prime != 0
+                ),
+                Fraction(0),
+            )
+            second_unit_shifts = sum(
+                (
+                    second.get((prime * m, prime * n - q), Fraction(0))
+                    for q in range(1, prime * n + 1)
+                    if q % prime != 0
+                ),
+                Fraction(0),
+            )
+            transgression = (
+                3 * a * first_unit_shifts + 3 * b * second_unit_shifts
+            )
+            assert mod_prime(cube_difference, prime) == mod_prime(
+                transgression, prime
+            )
+            checks += 1
     return checks
 
 

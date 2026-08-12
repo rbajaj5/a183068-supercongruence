@@ -270,7 +270,7 @@ proof.
   reciprocal-cube transgression. The lifted-square congruence is now proved
   by a second Frobenius block decomposition, so only the cubic transgression
   remains open.
-- **Status:** Complete first-layer proof candidate; 2,858 exact arithmetic
+- **Status:** Complete first-layer proof candidate; 3,206 exact arithmetic
   checks support the remaining Frobenius identity; no priority claim.
 - **Proof:** [Bala August first-defect kernel](related-results/BalaAugustFirstDefectKernel.md)
 - **Exact checkers:** [`verify_bala_august_first_defect.py`](verification/related/verify_bala_august_first_defect.py),
