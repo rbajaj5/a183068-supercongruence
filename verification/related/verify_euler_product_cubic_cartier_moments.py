@@ -1,7 +1,7 @@
 """Exact checks for EulerProductCubicCartierMoments.md.
 
 The computation is evidence and transcription control.  The note states
-explicitly which two moment estimates remain proof obligations.
+explicitly which single formal-derivative estimate remains a proof obligation.
 """
 
 from __future__ import annotations
@@ -100,6 +100,22 @@ def reduced_logarithm(maximum: int, prime: int, spec: Spec) -> list[Fraction]:
     return out
 
 
+def depleted_reduced_logarithm(
+    maximum: int, prime: int, spec: Spec
+) -> list[Fraction]:
+    """Direct p-depleted expansion (7a), independent of ghost subtraction."""
+    out = [Fraction(0)] * (maximum + 1)
+    for epsilon, h, power in spec:
+        for part in range(1, maximum + 1):
+            for quotient in range(1, maximum // part + 1):
+                if quotient % prime:
+                    out[part * quotient] -= Fraction(
+                        h * part**power * epsilon**quotient,
+                        quotient,
+                    )
+    return out
+
+
 def convolve_fraction(
     left: list[Fraction], right: list[Fraction], degree: int
 ) -> list[Fraction]:
@@ -141,6 +157,19 @@ def check_exact_cartier_scaling() -> int:
             reduced = reduced_logarithm(30 * prime, prime, spec)
             for n in range(1, 31):
                 assert reduced[prime * n] == prime**degree_power * reduced[n]
+                checks += 1
+    return checks
+
+
+def check_depleted_expansion() -> int:
+    checks = 0
+    maximum = 96
+    for _, spec, primes in FAMILIES:
+        for prime in primes:
+            via_ghosts = reduced_logarithm(maximum, prime, spec)
+            via_depletion = depleted_reduced_logarithm(maximum, prime, spec)
+            for n in range(maximum + 1):
+                assert via_ghosts[n] == via_depletion[n]
                 checks += 1
     return checks
 
@@ -354,6 +383,7 @@ def check_prime_boundaries() -> int:
 
 
 def main() -> None:
+    depletion = check_depleted_expansion()
     scaling = check_exact_cartier_scaling()
     contraction, boundaries = check_quadratic_contraction()
     moments = check_moment_bounds()
@@ -363,7 +393,8 @@ def main() -> None:
     reduction = check_two_term_reduction()
     prime_boundaries = check_prime_boundaries()
     total = (
-        scaling
+        depletion
+        + scaling
         + contraction
         + boundaries
         + moments
@@ -374,6 +405,7 @@ def main() -> None:
         + prime_boundaries
     )
     print("Euler-product cubic Cartier-moment checks passed")
+    print(f"depleted-logarithm checks: {depletion}")
     print(f"exact Cartier-scaling checks: {scaling}")
     print(f"quadratic-contraction checks: {contraction}")
     print(f"contraction boundary checks: {boundaries}")

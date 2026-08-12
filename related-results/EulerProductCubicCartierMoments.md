@@ -97,21 +97,29 @@ Expand one logarithm as
 -h\sum_{m,j\ge1}\frac{m^d\epsilon^j}{j}x^{mj}.
 ```
 
-The coefficient of `x^n` in (5) is `p`-integral: if `p` divides `n`,
-the two ghost coefficients differ by a complete new `p`-divisor stratum;
-if `p` does not divide `n`, its denominator is a unit.
-
-For (7), apply `C_p` and split `p | mj` into `p | m` and
-`p | j` with `p` not dividing `m`.  The first part is `p^d log G(x)`.
-The second part, after subtracting `(1/p) log G(x)`, removes exactly the
-`p | m` portion, namely `p^(d-1) log G(x^p)`.  The result is
+There is a more useful exact cancellation.  In the first logarithm, the
+terms with `p|j` are precisely the terms removed by the second logarithm:
+because `p` is odd, `epsilon^(pj)=epsilon^j`.  Hence
 
 ```math
-p^d\log G(x)-p^{d-1}\log G(x^p)=p^d\Lambda_p(x).
+\boxed{
+\Lambda_p(x)
+=-\sum_\nu h_\nu\sum_{m\ge1}
+ \sum_{\substack{j\ge1\\p\nmid j}}
+ \frac{m^d\epsilon_\nu^j}{j}x^{mj}.}
+\tag{7a}
 ```
 
-The same calculation is valid for `epsilon=-1` because `p` is odd, and it
-is additive over the list (1).  QED
+Every denominator in (7a) is a `p`-adic unit, which proves integrality
+directly.  Moreover, applying `C_p` to (7a) forces `p|m`; replacing `m` by
+`pm` supplies exactly a factor `p^d`.  Thus
+
+```math
+\boxed{C_p(\Lambda_p)=p^d\Lambda_p.}
+\tag{7}
+```
+
+This is additive over the list (1).  QED
 
 For the reciprocal one-color products this can also be read coefficient by
 coefficient.  If `n=p^a u` and `p` does not divide `u`, then, up to the
@@ -257,6 +265,51 @@ v_p([x^j]Q_p)\ge v_p(j)+1
 This is stronger than mere divisibility of `Q_p` by `p`, but it is
 unweighted: neither `N` nor the framing parameter `c` occurs in it.
 
+### Formal-derivative interpretation
+
+Let
+
+```math
+\theta=x\frac{d}{dx}.
+```
+
+For an integral `p`-adic series `F(x)=sum_(n>=1) f_n x^n`, the elementary
+coefficient criterion
+
+```math
+F\in\theta\mathbb Z_p[[x]]
+\quad\Longleftrightarrow\quad
+v_p(f_n)\ge v_p(n)\quad(n\ge1)
+\tag{19a}
+```
+
+says exactly when `F` has an integral Euler antiderivative.  This is the
+one-variable case of the formal-derivative criterion used by Beukers and
+Vlasenko in
+[Dwork Crystals I](https://doi.org/10.1093/imrn/rnaa119), Lemmas 2.2 and
+3.1.  Since the coefficient of `x^j` in `C_p(Lambda_p^2)` is the
+coefficient of `x^(pj)` in `Lambda_p^2`, integrality handles indices prime
+to `p` and (19) is equivalent to
+
+```math
+\boxed{\Lambda_p(x)^2\in\theta\mathbb Z_p[[x]].}
+\tag{19b}
+```
+
+Equivalently, the iterated Cartier criterion in the same reference reads
+
+```math
+C_p^s(\Lambda_p^2)\in p^s\mathbb Z_p[[x]]
+\qquad(s\ge1).
+\tag{19c}
+```
+
+Thus the last obstruction is not merely a first-layer congruence.  It is
+the vanishing of `Lambda_p^2` in the one-variable formal de Rham quotient.
+This reformulation does not prove that vanishing, but it identifies the
+precise cohomological statement that a modular-form or Lambert-series
+argument must establish.
+
 ### Lemma 4 (coefficients of a large integral power)
 
 Let `H(x)` belong to `1+x Z_(p)[[x]]`, let `A` be a nonzero integer, and
@@ -396,12 +449,18 @@ n[x^n]\log G=\pm\sigma_3(n),\quad
 
 Theorem 5 shows that no further weighted estimate is then necessary.
 
+The two degree-four records have opposite logarithms, so their squares and
+hence their remaining obstruction are literally identical.  Consequently
+only three profile calculations remain: the reciprocal degree-two profile,
+its plus/minus level-two modification, and the common degree-four profile.
+
 ## 8. Verification and source boundary
 
 The exact checker
 [`verify_euler_product_cubic_cartier_moments.py`](../verification/related/verify_euler_product_cubic_cartier_moments.py)
 
-1. verifies the exact scaling (7) for all four products;
+1. verifies the depleted expansion (7a) and exact scaling (7) for all four
+   products;
 2. verifies (14) directly against the defining Euler products;
 3. checks the two moment bounds on several `p`-adic strata;
 4. checks the large-power coefficient lemma and the recursion (22);

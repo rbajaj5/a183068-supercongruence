@@ -270,7 +270,7 @@ The exact checker:
 5. checks the four partial quadratic baselines; and
 6. evaluates every named sequence directly from its displayed product.
 
-The separate cubic-moment checker adds 4,546 exact checks of the all-level
+The separate cubic-moment checker adds 5,419 exact checks of the all-level
 reduction, its one-obstruction collapse, and its prime boundaries.
 
 Run:
