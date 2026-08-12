@@ -25,11 +25,11 @@ every record:
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | T: finite-sum transfer | 40 | 9 | 8 | 9 | 4 | 10 | 0 |
-| C: coefficient/constant term | 37 | 11 | 6 | 4 | 2 | 14 | 0 |
+| C: coefficient/constant term | 37 | 11 | 6 | 5 | 2 | 13 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **37** | **17** | **25** | **7** | **24** | **0** |
+| **Total** | **110** | **37** | **17** | **26** | **7** | **23** | **0** |
 
 The thirty-seven `proved-here` records are A002003, A005725, A008485, A008705,
 A008793, A049505, A091527, A108625, A132303, A141057, A143007, A156554, A177316, A246437,
@@ -40,16 +40,16 @@ A364303, A364506, A370101, and A370102. The seventeen
 `published-source` records are A002426, A002895, A005258, A082758, A103882,
 A112029, A168597, A176335, A183204, A184423, A186420, A208675, A234839,
 A363864, A363867, A363871, and A364509.
-The twenty-five partial records are A003161, A003162, A008978, A023871,
+The twenty-six partial records are A003161, A003162, A008978, A023871,
 A023873, A108628, A112028, A113424, A183069, A206622, A212334, A219562, A228960, A229452,
-A283271, A350383,
+A283271, A350383, A351858,
 A352655, A357506, A357512,
 A357567, A357956, A357959, A361889, A361892, and A380290. A001850, A002897,
 A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
 classified `no-explicit-open`: the live pages contain no Bala
 supercongruence conjecture that remains to be proved.
-The remaining twenty-four records are `open-target`; their exact claims,
+The remaining twenty-three records are `open-target`; their exact claims,
 prime ranges, normalizations, and family consolidations are recorded in the
 [remaining-open-target map](Bala110RemainingOpenTargets.md).
 
@@ -164,6 +164,13 @@ reciprocal-square Cartier lemma.  Formal integration by parts supplies the
 third power of `p`.  This proves the family for arbitrary integral framing
 parameters and leaves 24 `open-target` records.
 
+The following boundary unit resolves the overbroad part of A351858.  For
+every prime `p >= 5`, the proposed all-`k` family fails at both `k=p-1` and
+`k=p`: direct coefficient extraction gives differences congruent to
+`p^2(p-2)` and `p^2` modulo `p^3`, respectively.  The named `k=2` tower is
+not touched by this ramified-step obstruction and remains open, so A351858
+moves to `partial`.  This leaves 23 `open-target` records.
+
 ## Proof order
 
 The campaign does not use A-number order. It uses expected proof yield.
@@ -198,6 +205,9 @@ The campaign does not use A-number order. It uses expected proof yield.
    general two-parameter conjecture on A352373. A
    [two-variable Legendre extension](A156554LegendreCoefficientTower.md)
    uses three pairwise-unimodular rays to prove the full A156554 family. A
+   [cyclotomic-family boundary](A351858CyclotomicFamilyBoundary.md) shows
+   that A351858's universal parameter claim fails whenever `k=p-1` or
+   `k=p`, while preserving its named `k=2` problem as a separate target. A
    [small exact counterexample](RationalFramingCounterexample.md) shows why
    Müller's broader framing theorem cannot be used as the source closure
    without repair. The

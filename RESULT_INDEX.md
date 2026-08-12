@@ -506,6 +506,39 @@ proof.
 - **Proof:** [A156554 Legendre coefficient tower](related-results/A156554LegendreCoefficientTower.md)
 - **Exact checker:** [`verify_a156554_legendre_tower.py`](verification/related/verify_a156554_legendre_tower.py)
 
+### A351858-CYCL — exact boundary of the proposed cyclotomic family
+
+- **Claim tested:** For
+
+  ```math
+  G_k(x)=\frac{(1-x^{k+1})^{k+1}}
+  {(1-x)(1-x^k)^k},
+  \qquad u_k(N)=[x^N]G_k(x)^N,
+  ```
+
+  A351858 proposes a cubic tower uniformly for every $k\ge2$.
+- **Counterexample theorem:** For every prime $p\ge5$,
+
+  ```math
+  u_{p-1}(p)-u_{p-1}(1)\equiv p^2(p-2)\pmod {p^3},
+  ```
+
+  and
+
+  ```math
+  u_p(p)-u_p(1)\equiv p^2\pmod {p^3}.
+  ```
+
+  Both differences have valuation exactly two, so the all-$k$ conjecture
+  and the broader coefficient-slope family are false.
+- **Surviving target:** The named A351858 sequence has $k=2$. Its stated
+  primes satisfy $p\ge5$, so these step-ramification counterexamples do not
+  apply; that named cubic tower remains open.
+- **Status:** Complete exact counterexample to the family claim; named case
+  partial/open; priority preliminary.
+- **Proof:** [A351858 cyclotomic-family boundary](related-results/A351858CyclotomicFamilyBoundary.md)
+- **Exact checker:** [`verify_a351858_cyclotomic_boundary.py`](verification/related/verify_a351858_cyclotomic_boundary.py)
+
 ### ODD-UNIT-BLOCK — A091527 and A262732 towers
 
 - **Claim:** For every integer $m\ge2$, prime $p\ge5$, and positive

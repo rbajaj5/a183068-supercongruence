@@ -67,7 +67,7 @@ A333097	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the c
 A348410	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A350383	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
 A351857	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A351858	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the rational-power coefficient family uniformly in k, r, and s
+A351858	C	partial	related-results/A351858CyclotomicFamilyBoundary.md	all-k and all-parameter families refuted; prove or refute the surviving named k=2 cubic tower
 A352373	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A362722	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the quadratic tower and the extra pure-prime power
 A362733	C	open-target	related-results/Bala110RemainingOpenTargets.md	prove the cubic exponential-coefficient tower, including p=3

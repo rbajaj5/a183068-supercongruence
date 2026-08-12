@@ -35,6 +35,7 @@ SCRIPTS = (
     "verification/related/verify_multinomial_power_towers.py",
     "verification/related/verify_a132303_trinomial_cube.py",
     "verification/related/verify_a156554_legendre_tower.py",
+    "verification/related/verify_a351858_cyclotomic_boundary.py",
     "verification/related/verify_odd_unit_block_towers.py",
     "verification/related/verify_dixon_legendre_towers.py",
     "verification/related/verify_a364173_integral_tower.py",

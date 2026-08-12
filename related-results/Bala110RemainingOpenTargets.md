@@ -1,4 +1,4 @@
-# The 24 remaining open targets in the Bala 110-record census
+# The 23 remaining open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -19,7 +19,10 @@ the proposed proof units below are family-sized.
 
 The [A132303 trinomial-cube theorem](A132303TrinomialCubeTower.md) and the
 [A156554 Legendre coefficient theorem](A156554LegendreCoefficientTower.md)
-have since closed two of them; this file now lists the 24 that remain.
+have closed two targets, while the
+[A351858 cyclotomic boundary](A351858CyclotomicFamilyBoundary.md) refutes
+that record's all-parameter claim and moves its surviving named case to the
+partial ledger. This file now lists the 23 records that remain fully open.
 
 ## 1. Finite-sum transfer targets
 
@@ -170,19 +173,6 @@ degree `n`. The conjecture is a cubic tower for every integral `m` and
 Catalan generating series. These seven records therefore represent two
 parameterized proof targets.
 
-### Rational-power coefficient family
-
-[A351858](https://oeis.org/A351858) asks that every member `u_k` of its
-record-defined rational coefficient family satisfy the central-binomial
-cubic tower, and proposes the further family
-
-```math
-[x^{rn}]G_k(x)^{sn}
-```
-
-for positive `r` and integral `s`. The power-series root and its
-integrality are part of the input that must be verified.
-
 ### Exponential coefficient pair
 
 - [A362722](https://oeis.org/A362722) asks for modulus `p^(2r)` at general
@@ -200,11 +190,11 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 24 records are explicit `open-target` entries;
+- 23 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
 
-This does **not** assert that all 24 targets are true. Their next legitimate
+This does **not** assert that all 23 targets are true. Their next legitimate
 status change requires a proof, an exact published-source reduction, or a
 counterexample.
