@@ -1,6 +1,6 @@
 """Coefficient checks for the Frobenius-fixed first-defect kernel.
 
-The conjectural coefficient identity and its proved reductions are recorded in
+The proved coefficient identity and its reductions are recorded in
 ``related-results/BalaAugustFirstDefectKernel.md``, Section 5.2.  This checker
 uses exact rational arithmetic and reduces only at the final p-adic step.
 
@@ -35,6 +35,15 @@ def rational_valuation(value: Fraction, prime: int) -> int:
 def mod_prime(value: Fraction, prime: int) -> int:
     assert value.denominator % prime != 0
     return value.numerator * pow(value.denominator, -1, prime) % prime
+
+
+def bernoulli_number(index: int) -> Fraction:
+    values = [Fraction(0) for _ in range(index + 1)]
+    for m in range(index + 1):
+        values[m] = Fraction(1, m + 1)
+        for j in range(m, 0, -1):
+            values[j - 1] = j * (values[j - 1] - values[j])
+    return values[0]
 
 
 class KernelCoefficients:
@@ -148,6 +157,8 @@ def check_configuration(prime: int, a: int, b: int, c: int, window: int) -> int:
     maximum = prime * window
     first, second = engine.primitives(maximum)
     kernel = engine.defect_kernel(c, maximum, first, second)
+    bernoulli = mod_prime(bernoulli_number(prime - 3), prime)
+    lam = 2 * bernoulli * pow(3, -1, prime) % prime
     checks = 0
 
     for m in range(window + 1):
@@ -170,6 +181,17 @@ def check_configuration(prime: int, a: int, b: int, c: int, window: int) -> int:
             )
             checks += 2
 
+            # The quadratic Cartier quotient is the piecewise-linear Green
+            # kernel in equation (44).
+            green = engine.h_l_power(2, prime * m, prime * n) / prime
+            expected_green = lam * (
+                -(a**2) * max(m - n, 0)
+                -(b**2) * max(n - m, 0)
+                + 2 * a * b * min(m, n)
+            )
+            assert mod_prime(green, prime) == expected_green % prime
+            checks += 1
+
             # Stronger-than-needed observation: the canonical defect kernel
             # itself, not merely its period class, is Cartier-fixed modulo p.
             assert mod_prime(kernel[prime * m, prime * n], prime) == mod_prime(
@@ -182,6 +204,16 @@ def check_configuration(prime: int, a: int, b: int, c: int, window: int) -> int:
             cube_difference = engine.h_l_power(
                 3, prime * prime * m, prime * prime * n
             ) - engine.h_l_power(3, prime * m, prime * n)
+            if m >= n:
+                expected_cube = 2 * bernoulli * (
+                    a**3 * (m - n) - 3 * a * b * (a + b) * n
+                )
+            else:
+                expected_cube = 2 * bernoulli * (
+                    b**3 * (n - m) - 3 * a * b * (a + b) * m
+                )
+            assert mod_prime(cube_difference, prime) == expected_cube % prime
+            checks += 1
             first_unit_shifts = sum(
                 (
                     first.get((prime * m - q, prime * n), Fraction(0))

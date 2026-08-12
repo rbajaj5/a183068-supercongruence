@@ -173,17 +173,24 @@ exclusions, and closes A119259, A333562, A333564, A333565, and A103885. The
 named A333473 quadratic tower for every odd prime, classifies all fixed
 generalized-binomial products and their alternating twists by factor count,
 and closes A333592's cubic specialization by an exact reduction to Coster's
-shifted theorem. The larger algebraic-kernel family surrounding A333473
-remains open. The same packet gives an exact Bernoulli correction showing
+shifted theorem. The separate
+[algebraic-family theorem](A333473AlgebraicFamilyTower.md) closes the full
+positive $(R,S)$ family surrounding A333473 coefficientwise modulo
+$p^{2r}$ for every odd prime.  The
+[index-dependent companion theorem](IndexDependentCompanionPrimeBoundary.md)
+closes the full $p^{3r}$ towers for both surviving substitution families at
+every $p\ge5$ by a parity-doubling Cartier block. The same packet gives an exact Bernoulli correction showing
 that a proposed negative-binomial $p^5$ strengthening is false. The separate
 [prefix-Cartier theorem](MixedNegativeBinomialCubicTower.md) proves the
 corrected ordinary cubic tower for every $p\geq5$ and, more generally, the
-full positive-parameter A333592 family. Its normalized-defect refinement and
-the all-level exceptional prime $p=3$ remain open. The
+full positive-parameter A333592 family. The
+[first-defect theorem](BalaAugustFirstDefectKernel.md) proves stability of
+its normalized leading residue. The
 [prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
-computes the exact first ternary defect, proves the first cubic level for
-Bala's sum, and shows by a valuation-two example that no universal $p=3$
-extension is possible.
+computes the exact first ternary defect, proves the universal all-level
+renormalization and Bala's complete cubic tower, and shows by a valuation-two
+example why no universal ternary cubic theorem is possible. Only the stronger
+growing-modulus defect refinement remains open in this lane.
 
 ## 6. Core bibliography
 

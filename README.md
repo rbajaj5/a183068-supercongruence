@@ -21,7 +21,7 @@ review.
 | Find one precise mathematical claim | [Claim-level result index](RESULT_INDEX.md) | Controlling status ledger |
 | Track all 110 Bala/OEIS records | [110-record proof campaign](related-results/Bala110ProofCampaign.md) and [July 31 update](related-results/BalaJuly31ResearchUpdate.md) | Record-level route, status, evidence, and next action |
 | Review Bala's Bober follow-up | [Bober sporadic packet](related-results/BoberSporadicFactorialRatioPacket.md), [A364176 affine-Landau theorem](related-results/A364176AffineLandauTower.md) | All 52 ordinary towers proved for $p\ge5$; A295456 at $N/2$ is closed completely; 14 visible fractional variants remain at integrality |
-| Review Bala's August coefficient follow-up | [A119258 rays and Chebyshev packet](related-results/BalaAugustCoefficientPacket.md), [mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md), [negative-binomial prefix theorem](related-results/MixedNegativeBinomialCubicTower.md), [first-defect kernel](related-results/BalaAugustFirstDefectKernel.md), and [prime-three boundary](related-results/PrimeThreeNegativeBinomialBoundary.md) | Two infinite coefficient families have no denominator-prime exclusions; A333473 and the fixed product/twist class are closed; the false negative-binomial bonus is corrected, its cubic tower is proved for $p\ge5$, its normalized defect is reduced to one Cartier moment, and its first ternary level is classified exactly |
+| Review Bala's August coefficient follow-up | [A119258 rays and Chebyshev packet](related-results/BalaAugustCoefficientPacket.md), [mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md), [full A333473 algebraic family](related-results/A333473AlgebraicFamilyTower.md), [full index-dependent companion towers](related-results/IndexDependentCompanionPrimeBoundary.md), [negative-binomial prefix theorem](related-results/MixedNegativeBinomialCubicTower.md), [first-defect kernel](related-results/BalaAugustFirstDefectKernel.md), [higher-defect reduction](related-results/BalaAugustHigherDefectLift.md), and [prime-three boundary](related-results/PrimeThreeNegativeBinomialBoundary.md) | Two infinite coefficient families have no denominator-prime exclusions; the full positive A333473 algebraic family, fixed product/twist class, and both surviving index-dependent substitution families are closed; the corrected negative-binomial tower is proved for every odd prime, with first-residue stability for $p\ge5$ and universal all-level ternary renormalization; the stronger growing defect is reduced to one explicit cubic-kernel contraction, with its quartic boundary proved |
 | Compare the portfolio economically | [Economist-style rankings](RANKINGS.md) | Editorial scores, not correctness claims |
 | Browse the wider program | [Related-results reading map](related-results/README.md) | Theorem, reduction, computation, and synthesis lanes |
 | Reproduce the computations | [`verification/run_all.py`](verification/run_all.py) | Exact checkers with no floating-point tolerance unless stated |
@@ -195,7 +195,10 @@ A119259, A333562, A333564, A333565, and A103885. The
 [mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md)
 then proves A333473's quadratic tower for every odd prime and classifies
 fixed products and alternating twists by their number of generalized
-binomial factors. It also rejects an AI-generated negative-binomial exponent
+binomial factors. The
+[full algebraic-family theorem](related-results/A333473AlgebraicFamilyTower.md)
+extends the named A333473 case to every positive $(R,S)$ coefficient family,
+coefficientwise modulo $p^{2r}$. It also rejects an AI-generated negative-binomial exponent
 bonus: the exact leading defect is $2p^3B_{p-3}$ modulo $p^4$, so the
 proposed $p^5$ congruence already fails at $p=7$.  The
 [prefix-Cartier theorem](related-results/MixedNegativeBinomialCubicTower.md)

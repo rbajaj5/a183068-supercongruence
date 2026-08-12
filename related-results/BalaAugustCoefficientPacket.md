@@ -349,25 +349,29 @@ u(np^k)\equiv u(np^{k-1})\pmod {p^{3k}}.
 ```
 
 Theorem 3 proves the prime-level case. The separate
-[prefix-Cartier theorem](MixedNegativeBinomialCubicTower.md) now proves
+[prefix-Cartier theorem](MixedNegativeBinomialCubicTower.md) proves
 (24) at every level for every prime $p\geq5$. The
 [prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
-proves the first $p=3$ level for Bala's sum and gives an exact criterion for
-the general family; propagation through all $3$-power levels remains open.
+proves the all-level ternary renormalization and therefore the complete
+$p=3$ tower for Bala's sum. The
+[first-defect theorem](BalaAugustFirstDefectKernel.md) also proves that the
+leading normalized defect is independent of the level for every $p\geq5$.
 
 ## 7. What remains open
 
 - The named A333473 quadratic tower is proved in the
   [August mixed-binomial follow-on](BalaAugustMixedBinomialFollowOn.md).
-  Its larger two-parameter algebraic-kernel family remains open.
-- The ordinary cubic tower (24) is proved for $p\geq5$ and at the first
-  $p=3$ level; all-level ternary propagation and the stronger normalized
-  defect stabilization remain open.
+  Its larger positive two-parameter algebraic-kernel family is proved in
+  the [A333473 algebraic-family follow-on](A333473AlgebraicFamilyTower.md).
+- The ordinary cubic tower (24) is proved for every odd prime. The first
+  normalized-defect residue is stable for $p\geq5$; only the stronger
+  growing-modulus refinement remains open.
 - Bala's product and twist proposal is classified by the follow-on: two
   generalized-binomial factors give a quadratic tower, while three or more
-  give a cubic tower. The companions containing upper arguments depending
-  on the summation index still require individual normalization, and some
-  already have exact counterexamples.
+  give a cubic tower. Of the companions containing upper arguments depending
+  on the summation index, two fail by exact counterexample.  For the two
+  survivors, the full $p^{3r}$ towers are proved for every $p\ge5$ by the
+  parity-doubling block lemma and shifted-kernel descent.
 
 ## 8. Literature boundary
 

@@ -195,22 +195,69 @@ proof.
 - **Consequences:** Two factors give a quadratic tower; three or more give
   a cubic tower for $p\ge5$. Evaluation at $X=1$ and $X=-1$ classifies
   Bala's fixed product and twist proposals. The named A333473 quadratic
-  tower follows for every odd prime.
+  tower follows for every odd prime. The separate A333473 algebraic-family
+  theorem closes every positive $(R,S)$ member surrounding the named case.
 - **Additional closure:** A333592's untwisted cubic tower is an exact
   corollary of Coster's shifted $B=2$ theorem plus adjacent scaling of its
   endpoint. A separate prefix-Cartier theorem proves the whole positive
   A333592 parameter family cubically.
-- **Boundary:** The larger algebraic-kernel family surrounding A333473 and
-  the normalized-defect refinement remain open. The ordinary cubic tower
+- **Boundary:** The growing-modulus normalized-defect refinement remains
+  open. The ordinary cubic tower
   for the two-factor negative-binomial sum is proved for $p\geq5$. Its
   normalized cubic defects conjecturally stabilize modulo
   $p^{2r-2-\delta_p}$, with $\delta_5=1$ and $\delta_p=0$ otherwise. Two
   index-dependent negative substitutions already fail cubically at $p=5$;
-  two sign-opposite companions survive the recorded finite grid.
+  the two sign-opposite companions have proved full $p^{3r}$ towers for
+  every $p\ge5$.
 - **Status:** Complete unchecked elementary proof and classical reduction;
   3,390 exact checks pass; no priority claim.
 - **Proof:** [August mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md)
 - **Exact checker:** [`verify_bala_august_mixed_binomial_follow_on.py`](verification/related/verify_bala_august_mixed_binomial_follow_on.py)
+
+### A333473-ALGEBRAIC - full positive algebraic family
+
+- **Claim:** If $F=1+x+xF^2$ with $F(0)=1$, then for all positive
+  $R,S,n,r$ and every odd prime $p$,
+  \[
+  [x^{Rnp^r}]F(x)^{Snp^r}
+  \equiv [x^{Rnp^{r-1}}]F(x)^{Snp^{r-1}}
+  \pmod {p^{2r}}.
+  \]
+- **Mechanism:** Lagrange inversion produces the locally integral summand
+  \[
+  \frac{SN}{SN+2j}\binom{RN}{j}\binom{SN+2j}{RN}.
+  \]
+  Unit-index terms contain two independent $p^r$ factors. Divisible-index
+  terms transfer through a product of two adjacent Jacobsthal quotients.
+- **Boundary:** No exclusions are needed when $p$ divides $R$ or $S$.
+  No binary assertion is made.
+- **Status:** Complete unchecked elementary proof candidate; 91,260 exact
+  coefficient checks pass; no priority claim.
+- **Proof:** [Full A333473 algebraic-family tower](related-results/A333473AlgebraicFamilyTower.md)
+- **Exact checker:** [`verify_a333473_algebraic_family_tower.py`](verification/related/verify_a333473_algebraic_family_tower.py)
+
+### INDEX-COMPANION - full towers for the substitution companions
+
+- **Claim:** For every $p\ge5$ and positive $n,c,r$, both
+  \[
+  \sum_{k=0}^{N}\binom{-N}{k}\binom Nk\binom{2k}{N}\binom{N+k}{k}
+  \]
+  and
+  \[
+  \sum_{k=0}^{cN}\binom{-N}{k}^2\binom{2k}{N}\binom{N+k}{k}
+  \]
+  take congruent values at $N=np^r$ and $N=np^{r-1}$ modulo $p^{3r}$.
+- **Mechanism:** Scaled indices transfer by adjacent binomial scaling.
+  Doubling the coefficient index converts the two Lucas carry states into
+  two parity-filtered Cartier blocks; a reciprocal-square block lemma and
+  shifted three-binomial kernels make every unit shell vanish cubically.
+- **Boundary:** Generic unit-index summands have valuation only $2r$, so
+  this is an aggregate theorem. At $p=3$ valuation two is attained already
+  at the first level.
+- **Status:** Complete unchecked proof candidate; 19,758 exact checks; no
+  priority claim.
+- **Proof:** [Full index-dependent companion towers](related-results/IndexDependentCompanionPrimeBoundary.md)
+- **Exact checker:** [`verify_index_dependent_companion_boundary.py`](verification/related/verify_index_dependent_companion_boundary.py)
 
 ### NEG-PREFIX-CUBIC - cubic towers for negative-binomial prefixes
 
@@ -259,24 +306,38 @@ proof.
   (\mathcal C_p\mathscr B_{p;a,b,c}-\mathscr B_{p;a,b,c})G^{np^{r-2}}
   \pmod p.
   \]
-  Thus Bala's first-residue stabilization is reduced to one
-  Frobenius-fixed moment identity. More concretely, it is enough to express
-  the kernel discrepancy as one Hamiltonian tangent divergence along the
-  level sets of $G$.  The unimodular coordinate $y=t/x$ converts that
-  certificate to an explicit triangular transport recurrence. A canonical
-  divergence primitive gives the stronger experimental target
-  $\mathcal C_p\mathscr B=\mathscr B$ coefficientwise modulo $p$, reducing
-  the remaining proof to a lifted reciprocal-square congruence and its
-  reciprocal-cube transgression. The lifted-square congruence is now proved
-  by a second Frobenius block decomposition, so only the cubic transgression
-  remains open.
-- **Status:** Complete first-layer proof candidate; 3,206 exact arithmetic
-  checks support the remaining Frobenius identity; no priority claim.
+  A finite-logarithm calculation and a piecewise-linear Green kernel prove
+  the stronger coefficientwise identity
+  $\mathcal C_p\mathscr B=\mathscr B\pmod p$. Hence the first normalized
+  defect residue is independent of the level for every positive slope and
+  cutoff. The stronger growing-modulus refinement requires higher defect
+  kernels and remains separate.
+- **Status:** Complete first-residue stabilization theorem; 3,902 exact
+  arithmetic checks; no priority claim.
 - **Proof:** [Bala August first-defect kernel](related-results/BalaAugustFirstDefectKernel.md)
 - **Exact checkers:** [`verify_bala_august_first_defect.py`](verification/related/verify_bala_august_first_defect.py),
   [`verify_bala_august_kernel_frobenius.py`](verification/related/verify_bala_august_kernel_frobenius.py)
 
-### NEG-PREFIX-3 - exact prime-three prefix obstruction
+### NEG-HIGHER-DEFECT - exact three-level reduction
+
+- **Claim:** Bala's growing-modulus conjecture is equivalent, without any
+  division, to
+  \[
+  u(np^r)-(1+p^3)u(np^{r-1})+p^3u(np^{r-2})
+  \equiv0\pmod {p^{5r-2-\delta_p}}.
+  \]
+- **Mechanism:** The left side has an exact decomposition into the unit,
+  once-scaled, and twice-scaled valuation shells. None generally reaches
+  the target separately. The quartic coefficient lift turns the degree-four
+  tail into an integral Euler divergence; logarithmic degrees at least five
+  have enough explicit powers.
+- **Status:** Exact reduction and sharp computational boundary; the quartic
+  term is proved and the final cubic higher-Frobenius estimate remains open;
+  1,277 exact checks.
+- **Proof:** [Higher August defect reduction](related-results/BalaAugustHigherDefectLift.md)
+- **Exact checker:** [`verify_bala_august_higher_defect.py`](verification/related/verify_bala_august_higher_defect.py)
+
+### NEG-PREFIX-3 - all-level prime-three prefix theorem
 
 - **Claim:** For $U_{a,b;c}$ as above, the normalized first defect
   $(U_{a,b;c}(3n)-U_{a,b;c}(n))/9$ has an explicit constant-term residue
@@ -288,11 +349,12 @@ proof.
   This includes Bala's $u=U_{1,2;1}$ and is maximal among residue-class
   conditions on $(a,b,n)\bmod3$ uniform in $c$: all four omitted triples
   have explicit counterexamples of exact valuation $2$.
-- **Next target:** Exact data support
-  $D_r\equiv27D_{r-1}\pmod {3^{3r+1}}$ for all parameters; this is sharp
-  at $(a,b,c,n,r)=(1,1,1,1,2)$ but remains conjectural.
-- **Status:** Complete elementary first-level theorem and counterexample;
-  34,942 exact checks pass; all-level renormalization remains open.
+- **All-level theorem:** The ternary kernel is Cartier-fixed modulo $9$ and
+  $D_r\equiv27D_{r-1}\pmod {3^{3r+1}}$ for all parameters. This is sharp at
+  $(a,b,c,n,r)=(1,1,1,1,2)$ and propagates the cubic subclass through every
+  level.
+- **Status:** Complete elementary all-level theorem and counterexample;
+  36,929 exact checks pass.
 - **Proof:** [Prime-three negative-binomial boundary](related-results/PrimeThreeNegativeBinomialBoundary.md)
 - **Exact checker:** [`verify_prime_three_negative_binomial_boundary.py`](verification/related/verify_prime_three_negative_binomial_boundary.py)
 
@@ -305,15 +367,14 @@ proof.
 - **Exact correction:** The suggested congruence modulo $p^5$ is false:
   $v_7(u(7)-u(1))=3$. The suggested higher-level modulus also fails, since
   $v_7(u(49)-u(7))=6<9$.
-- **Remaining target:** NEG-PREFIX-CUBIC proves the ordinary $p^{3r}$
-  adjacent tower for every $p\geq5$, while NEG-PREFIX-3 proves Bala's first
-  ternary level. The stronger normalized-defect stabilization and all-level
-  $p=3$ propagation remain open.
+- **Remaining target:** The ordinary adjacent tower is proved for every odd
+  prime, and the first normalized residue is stable for $p\geq5$. Only the
+  stronger growing-modulus defect refinement remains open.
 - **Source status:** Correction of an AI-generated strengthening relayed in
   Bala's correspondence; no claim that the corrected prime formula was an
   OEIS conjecture.
-- **Status:** Complete prime-level proof and exact counterexamples; all-level
-  corrected tower open.
+- **Status:** Complete prime-level correction, exact counterexamples, and
+  all-level ordinary tower.
 - **Proof:** [Bala's August coefficient packet, Section 6](related-results/BalaAugustCoefficientPacket.md#6-the-negative-binomial-strengthening-is-false)
 - **Exact checker:** [`verify_bala_august_coefficient_packet.py`](verification/related/verify_bala_august_coefficient_packet.py)
 

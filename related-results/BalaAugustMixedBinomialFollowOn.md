@@ -15,10 +15,10 @@ No literature-priority claim is made for the present assembly.
 | --- | --- |
 | A119258 denominator primes | Closed: the arbitrary integral coefficient slope removes the exclusion |
 | Chebyshev primes dividing the coefficient slope | Closed by the same theorem |
-| A333473 | Its named quadratic tower holds for every odd prime; the larger algebraic-kernel family remains open |
-| Mixed negative-binomial sum | Cubic tower proved for every $p\geq5$ by the prefix-Cartier theorem; the normalized-defect stabilization remains conjectural |
+| A333473 | Its named quadratic tower and the full positive algebraic-kernel family hold for every odd prime |
+| Mixed negative-binomial sum | Cubic tower proved for every odd prime; first normalized-defect residue proved stable for $p\geq5$, with only the stronger growing-modulus refinement open |
 | Products and twists | Cubic for three or more generalized-binomial factors; quadratic for two |
-| Index-dependent negative substitutions | Two families fail cubically at $p=5$; two companion families remain computational candidates |
+| Index-dependent negative substitutions | Two families fail cubically at $p=5$; the two sign-opposite companions satisfy full cubic towers for every $p\ge5$, proved by parity-doubling reciprocal blocks and shifted kernels |
 | A333592 | Named cubic tower closed by Coster; the full positive-parameter family is also covered by the prefix-Cartier theorem |
 
 The main structural point is that the number of independent binomial
@@ -206,7 +206,7 @@ for $R>0$,
 \qquad\text{(8)}
 ```
 
-Formula (8) is an exact normalization of the remaining problem, but for
+Formula (8) is an exact normalization of the larger problem, but for
 general $(R,S)$ it is not the two-factor sum (6). Since
 $t^2+2t+2=1+(1+t)^2$, expanding (8) gives the completely explicit form
 
@@ -217,11 +217,13 @@ $t^2+2t+2=1+(1+t)^2$, expanding (8) gives the completely explicit form
 \qquad\text{(8a)}
 ```
 
-The second upper argument in (8a) depends on $j$. This locates the remaining
-obstruction precisely: (8a) lies in the index-dependent lane of Section 7,
-not in Theorem 1's fixed-slope lane. The full family therefore remains open.
-The checker verifies (8a) directly and finds no quadratic-tower failure for
-$1\leq R,S\leq3$, $p\in\{5,7\}$, $n\in\{1,2\}$, and levels one and two.
+The second upper argument in (8a) depends on $j$, so Theorem 1 does not
+apply.  The separate
+[algebraic-family theorem](A333473AlgebraicFamilyTower.md) resolves this
+index-dependent lane: its Lagrange summand has a second normalization in
+which the discarded stratum contributes two powers and the scaled stratum
+is a product of two Jacobsthal quotients.  It proves the full $p^{2r}$ tower
+for every odd prime, including primes dividing $R$ or $S$.
 
 ## 4. The mixed negative-binomial tower
 
@@ -253,7 +255,8 @@ for every $p\geq5$ and $n,r\geq1$. It proves the extra power only after
 prefix summation: the coefficientwise two-factor theorem itself remains
 quadratic. The [prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
 proves the first cubic level for Bala's sum and computes the exact obstruction
-for the full family. Its all-level $p=3$ propagation remains conjectural.
+for the full family. The prime-three boundary theorem proves the all-level
+$p=3$ propagation for the maximal residue subclass, including Bala's sum.
 
 ### 4.1 A stabilized first-defect conjecture
 
@@ -286,15 +289,20 @@ Q_{p,r}(n)\equiv Q_{p,r-1}(n)
 \qquad\text{(10b)}
 ```
 
-In particular, the leading residue $Q_{p,r}(n)\bmod p$ appears independent
-of $r$. The cubic integrality boundary is now proved for $p\geq5$; only this
-stronger stabilization and the all-level prime $p=3$ propagation remain open.
+In particular, the leading residue $Q_{p,r}(n)\bmod p$ is independent of
+$r$ by the first-defect theorem. The cubic integrality boundary is proved
+for every odd prime in Bala's specialization. Only the additional powers
+asserted in (10b) remain open.  The
+[higher-defect note](BalaAugustHigherDefectLift.md) gives the equivalent
+three-level modulus $p^{5r-2-\delta_p}$, an exact valuation-shell
+decomposition, and the logarithmic degree-four boundary.
 
 The modular checker computes each summand by tracking its $p$-adic exponent
 and unit separately. It verifies the cubic divisibility and (10b) for
 $p\in\{3,5,7,11,13\}$, $1\leq n\leq6$, and every level $r\leq4$ with
-$np^r\leq100{,}000$. The stabilization remains evidence, not a proof. The
-exceptional $p=5$ loss is attained in the grid.
+$np^r\leq100{,}000$. These calculations remain evidence for the additional
+powers in (10b); the residue modulo $p$ is now proved. The exceptional
+$p=5$ loss is attained in the grid.
 
 ## 5. Bala's product and twist proposal
 
@@ -418,9 +426,15 @@ v_5\bigl(W_2(5)-W_2(1)\bigr)=2.
 ```
 
 The analogous companions with the last factor
-$\binom{N+k}{k}$ survive the exact grid in the checker through the second
-level for $p\in\{5,7,11\}$. They remain conjectures; the contrasting
-behavior in (15)--(16) shows that they require a sign-sensitive proof.
+$\binom{N+k}{k}$ satisfy the full towers.  The
+[companion theorem](IndexDependentCompanionPrimeBoundary.md) proves, for
+every $p\ge5$ and $r\ge1$, that both sums at $np^r$ agree with their values
+at $np^{r-1}$ modulo $p^{3r}$.  Its aggregate gain is genuinely sum-level:
+generic unit summands have valuation only $2r$.  The proof doubles the
+coefficient index, turns the two Lucas carry states into two ordinary
+Cartier blocks, and applies shifted three-binomial kernels to close the
+unit shell.  Every $p$-divisible index transfers termwise at full cubic
+precision.
 
 ## 8. Literature boundary
 
@@ -444,8 +458,11 @@ python verification/related/verify_bala_august_mixed_binomial_follow_on.py
 The checker performs 3,390 exact checks. It tests the coefficientwise mixed
 theorem, the A333473 identification and tower, the formerly excluded
 A119258 and Chebyshev primes, an extended cubic grid for $u$, the
-A333473 algebraic-family normalization and evidence, the stabilized
+A333473 algebraic-family normalization, the stabilized
 negative-binomial defect grid, the A333592 decomposition, both
-counterexamples, and the surviving companion grid.
+counterexamples, and the surviving companion grid.  The full companion
+tower theorem has its own 19,758-check certificate.
+
+The algebraic-family theorem has a separate 91,260-check certificate.
 
 The separate prefix-Cartier theorem has its own 1,640-check certificate.
