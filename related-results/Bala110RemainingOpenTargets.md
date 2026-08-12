@@ -1,4 +1,4 @@
-# The 26 extracted open targets in the Bala 110-record census
+# The 25 remaining open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -16,6 +16,10 @@ it. The new status `open-target` means:
 The 26 records consolidate to substantially fewer proof families. Repeated
 entries are retained because the campaign denominator is a record count, but
 the proposed proof units below are family-sized.
+
+The original extraction produced 26 open targets.  The
+[A132303 trinomial-cube theorem](A132303TrinomialCubeTower.md) has since
+closed one of them; this file now lists the 25 that remain.
 
 ## 1. Finite-sum transfer targets
 
@@ -35,14 +39,12 @@ for the cubic tower for both
 at every `p >= 5`. The two statements require a coefficient representation
 that survives reversion; a formal similarity of the series is not enough.
 
-### Two quadratic towers
+### Quadratic tower
 
 - [A124435](https://oeis.org/A124435) asks for
   `a(np^r) = a(np^(r-1)) mod p^(2r)` for `p >= 5`. The live rational
   diagonal is `1/(1-x-y-z+xyz)`, but a rational diagonal alone does not
   supply the second power.
-- [A132303](https://oeis.org/A132303), the sum of cubes of trinomial
-  coefficients, asks for the same quadratic exponent and prime range.
 
 ### Adjacent-binomial row families
 
@@ -212,7 +214,7 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 26 records are explicit `open-target` entries;
+- 25 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.

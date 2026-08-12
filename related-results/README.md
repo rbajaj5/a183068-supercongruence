@@ -71,8 +71,9 @@ supercongruence exponent.
 | 1B-AP | [Apéry enhanced-congruence packet](AperyRankOneDefectPacket.md) | Collapses A352655, A357506, A357567, A357956, A357959 and two nonlinear companions to three linear Apéry defect relations | Complete exact reduction; 260 checks; core defect packet open |
 | 1B-B52 | [Bober sporadic factorial-ratio packet](BoberSporadicFactorialRatioPacket.md) | Applies the balanced and rational-gamma engines to all 52 Bober ratios and Bala's 15 visible fractional-index variants | Ordinary 52-record tower proved for $p\ge5$; A364176 completely closed; 14 fractional integrality targets remain |
 | 1B-BR | [Draft reply to Bala and Hanna](BalaBoberAugustReply.md) | Gives a short elementary account of the 52 ordinary towers and the newly completed A364176 case | Correspondence draft; no additional theorem claim |
-| 1B-S | [110-record proof-campaign ledger](Bala110ProofCampaign.md) | Gives every census record a route, conservative status, evidence pointer, and next proof operation | Complete machine-readable ledger; 35 proved here, 17 source-closed, 25 partial, 7 with no explicit open target, 26 open targets, and none queued |
+| 1B-S | [110-record proof-campaign ledger](Bala110ProofCampaign.md) | Gives every census record a route, conservative status, evidence pointer, and next proof operation | Complete machine-readable ledger; 36 proved here, 17 source-closed, 25 partial, 7 with no explicit open target, 25 open targets, and none queued |
 | 1B-PB | [A260667 prime-boundary congruence](A260667PrimeBoundary.md) | Proves the isolated \(p^3\) boundary by a local binomial expansion and two exact weighted harmonic evaluations | Complete elementary proof candidate; 349 exact checks; priority search pending |
+| 1B-TC | [A132303 trinomial-cube tower](A132303TrinomialCubeTower.md) | Uses a cyclotomic two-variable constant term whose linear Frobenius defect vanishes off the \(p\)-sublattice | Complete elementary proof candidate; exact checks; sharp quadratic exponent observed |
 | 1B-L | [Supercongruence literature and Bala--OEIS census](SupercongruenceLiteratureCensus.md) | Maps a reproducible 110-record OEIS search to the published theorem families and consolidates the genuinely live targets before more proof work is spent | Literature map with explicit source and priority boundaries |
 | 1B-G | [Gaussian generalization map for the Bala queue](BalaGaussianGeneralizationMap.md) | Routes all 110 census records through five Gaussian proof architectures and separates formal coefficient changes from Frobenius twists and prime-ideal theorems | Exhaustive research map; no novelty claim |
 | 1B-F | [Arithmetic Frobenius packet framework](ArithmeticFrobeniusPacketFramework.md) | Unifies the five census routes through number fields, prime ideals, local Frobenius transitions, finite-field orbits, valuation budgets, and local-to-global assembly | Complete elementary framework and 158,755 exact checks; routing is not a proof of all 110 conjectures |
@@ -177,6 +178,7 @@ The individual correspondence is:
 | A005725 quadrinomial and ratio coefficients | `verification/related/verify_quadrinomial_coefficient_tower.py` |
 | Mixed-step coefficient tower | `verification/related/verify_mixed_step_coefficient_tower.py` |
 | A260667 prime boundary | `verification/related/verify_a260667_prime_boundary.py` |
+| A132303 trinomial-cube tower | `verification/related/verify_a132303_trinomial_cube.py` |
 | Binomial-quotient cancellation | `verification/related/verify_binomial_quotient_cancellation.py` |
 | Apéry odd-moment prime classification | `verification/related/verify_apery_odd_moment_prime_classification.py` |
 | q-calculus and cyclotomic lifts | `verification/related/verify_q_calculus_supercongruence.py` |

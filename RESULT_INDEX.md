@@ -452,6 +452,28 @@ proof.
 - **Proof:** [Multinomial-power Frobenius towers](related-results/MultinomialPowerFrobeniusTowers.md)
 - **Exact checker:** [`verify_multinomial_power_towers.py`](verification/related/verify_multinomial_power_towers.py)
 
+### A132303-TRICUBE — trinomial-coefficient cube tower
+
+- **Claim:** If $t(N,k)=[z^k](1+z+z^2)^N$, then for every prime
+  $p\ge5$ and positive integers $n,r$,
+
+  ```math
+  \sum_k t(np^r,k)^3
+  \equiv
+  \sum_k t(np^{r-1},k)^3
+  \pmod {p^{2r}}.
+  ```
+
+- **Source status:** Named OEIS conjecture.
+- **Mechanism:** A two-variable cyclotomic constant term has a reduced
+  Frobenius logarithm supported away from the $p$-sublattice, annihilating
+  the entire linear defect.
+- **Boundary:** Exact checks find the valuation $2r$ attained throughout
+  the tested grid; no cubic strengthening is claimed.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [A132303 trinomial-cube tower](related-results/A132303TrinomialCubeTower.md)
+- **Exact checker:** [`verify_a132303_trinomial_cube.py`](verification/related/verify_a132303_trinomial_cube.py)
+
 ### ODD-UNIT-BLOCK — A091527 and A262732 towers
 
 - **Claim:** For every integer $m\ge2$, prime $p\ge5$, and positive

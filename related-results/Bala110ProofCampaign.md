@@ -24,15 +24,15 @@ every record:
 
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 8 | 8 | 9 | 4 | 11 | 0 |
+| T: finite-sum transfer | 40 | 9 | 8 | 9 | 4 | 10 | 0 |
 | C: coefficient/constant term | 37 | 10 | 6 | 4 | 2 | 15 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **35** | **17** | **25** | **7** | **26** | **0** |
+| **Total** | **110** | **36** | **17** | **25** | **7** | **25** | **0** |
 
-The thirty-five `proved-here` records are A002003, A005725, A008485, A008705,
-A008793, A049505, A091527, A108625, A141057, A143007, A177316, A246437,
+The thirty-six `proved-here` records are A002003, A005725, A008485, A008705,
+A008793, A049505, A091527, A108625, A132303, A141057, A143007, A177316, A246437,
 A255672, A260667, A262732, A270913, A270919, A270922, A270924, A275652,
 A275654, A281267, A288470, A333592,
 A348410, A351857, A352373, A357509, A357510, A357568, A364173,
@@ -49,7 +49,7 @@ A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
 classified `no-explicit-open`: the live pages contain no Bala
 supercongruence conjecture that remains to be proved.
-The remaining twenty-six records are `open-target`; their exact claims,
+The remaining twenty-five records are `open-target`; their exact claims,
 prime ranges, normalizations, and family consolidations are recorded in the
 [remaining-open-target map](Bala110RemainingOpenTargets.md).
 
@@ -145,6 +145,14 @@ its inner binomial kernel at `x=p-1` reduces the claimed cubic congruence to
 one weighted linear harmonic sum modulo `p^2` and one weighted quadratic
 harmonic sum modulo `p`. Both sums have elementary closed evaluations, and
 their residues cancel exactly. This leaves 26 `open-target` records.
+
+The following proof unit closes A132303.  The sum of cubes of trinomial
+coefficients is the constant term of
+`(x*y)^(-2)*(1+x+x^2)*(1+y+y^2)*(1+xy+x^2*y^2)`, raised to the index.
+Its reduced cyclotomic Frobenius logarithm has no support on the
+`p`-sublattice for `p >= 5`, so the linear defect vanishes exactly and every
+higher exponential term carries `p^(2r)`.  This proves the conjectured sharp
+quadratic tower and leaves 25 `open-target` records.
 
 ## Proof order
 
