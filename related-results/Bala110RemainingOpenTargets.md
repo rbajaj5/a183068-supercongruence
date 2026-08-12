@@ -1,4 +1,4 @@
-# The 27 extracted open targets in the Bala 110-record census
+# The 26 extracted open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -13,7 +13,7 @@ it. The new status `open-target` means:
   and
 - the next operation is mathematical proof, not database extraction.
 
-The 27 records consolidate to substantially fewer proof families. Repeated
+The 26 records consolidate to substantially fewer proof families. Repeated
 entries are retained because the campaign denominator is a record count, but
 the proposed proof units below are family-sized.
 
@@ -61,8 +61,6 @@ that survives reversion; a formal similarity of the series is not enough.
 - [A244973](https://oeis.org/A244973) asks that
   `(a(pn)-a(n))/(pn)^3` be `p`-adically integral for `p > 5`. On writing
   `n=mp^(r-1)`, this is a cubic adjacent-level valuation statement.
-- [A260667](https://oeis.org/A260667) asks only for the prime boundary
-  `a(p-1)=1 mod p^3` for `p >= 5`.
 - [A362676](https://oeis.org/A362676) asks for a cubic tower for the finite
   sum
 
@@ -214,11 +212,11 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 27 records are explicit `open-target` entries;
+- 26 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
 
-This does **not** assert that all 27 targets are true. Their next legitimate
+This does **not** assert that all 26 targets are true. Their next legitimate
 status change requires a proof, an exact published-source reduction, or a
 counterexample.
