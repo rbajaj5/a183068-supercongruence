@@ -1,4 +1,4 @@
-# The 7 remaining open targets in the Bala 110-record census
+# The 6 remaining open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -42,7 +42,10 @@ proves A124435. The
 [A244973 Frobenius reduction](A244973QuadraticFrobeniusReduction.md)
 then isolates Sun's remaining conjecture as one exact linear--quadratic
 Cartier cancellation and moves that record to `partial`. This file now lists
-the 7 records that remain fully open.
+the 6 records that remain fully open. The
+[A331562 rational-diagonal reduction](A331562UniformRationalDiagonal.md)
+also replaces the row-by-row search by one determinant-ratio family and one
+uniform continuant Frobenius estimate.
 
 ## 1. Finite-sum transfer targets
 
@@ -96,13 +99,6 @@ F\longmapsto
 iteratively and asks that the resulting coefficient sequences retain the
 same tower. Closure under this nonlinear operation is a separate theorem.
 
-### Uniform row theorem
-
-[A331562](https://oeis.org/A331562) asks that every fixed row satisfy the
-cubic tower for `p >= 5`. Rows 2, 3, and 4 are cited as known examples.
-The remaining target is one uniform row theorem, not a sequence of isolated
-row computations.
-
 ### Exponential coefficient pair
 
 - [A362722](https://oeis.org/A362722) asks for modulus `p^(2r)` at general
@@ -120,7 +116,7 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 7 records are explicit `open-target` entries;
+- 6 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.

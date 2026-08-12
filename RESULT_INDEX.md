@@ -2119,6 +2119,28 @@ proof.
 - **Report:** [A244973 and the linear--quadratic obstruction](related-results/A244973QuadraticFrobeniusReduction.md)
 - **Exact checker:** [`verify_a244973_frobenius_reduction.py`](verification/related/verify_a244973_frobenius_reduction.py)
 
+### A331562-DIAG — uniform constrained-word rational diagonal
+
+- **Claim:** If `a_d(k)` counts words with `k` copies of every letter in
+  `{1,...,d}` and adjacent differences at most one, then
+
+  ```math
+  a_d(k)=[x_1^k\cdots x_d^k]
+  \frac{\det(I-(A_d-J_d)X)}{\det(I-A_dX)},
+  ```
+
+  where `A_d` is the path-with-loops adjacency matrix and
+  `X=diag(x_1,...,x_d)`. The denominator satisfies an explicit second-order
+  continuant recurrence.
+- **Reduction:** The all-row A331562 cubic tower is equivalent to one
+  displayed diagonal coefficient estimate for the finite Frobenius
+  numerator `N_d(x)D_d(x^p)-N_d(x^p)D_d(x)`.
+- **Status:** Exact reduction, not a proof of the cubic tower. The
+  transfer-matrix identity is elementary and the remaining estimate is
+  explicit; sampled first untreated rows include sharp cases.
+- **Report:** [A331562 uniform rational diagonal](related-results/A331562UniformRationalDiagonal.md)
+- **Exact checker:** [`verify_a331562_uniform_rational_diagonal.py`](verification/related/verify_a331562_uniform_rational_diagonal.py)
+
 ### FRANEL-CT — integer-parameter Franel-companion kernels
 
 - **Claim:** For `a` in `{1,2}` and every integer `m`, the two Bala
