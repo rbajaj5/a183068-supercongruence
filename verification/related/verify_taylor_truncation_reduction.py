@@ -192,6 +192,26 @@ def cartier_qv(prime: int, index: int) -> Fraction:
 
 
 @lru_cache(maxsize=None)
+def full_q_log(index: int) -> Fraction:
+    """Coefficient [y^index] Q_C(y) log(1+y)."""
+    return sum(
+        (
+            Fraction(
+                catalan_prefactor(index - j) * (-1) ** (j + 1),
+                j,
+            )
+            for j in range(1, index + 1)
+        ),
+        Fraction(),
+    )
+
+
+def framed_bps(index: int) -> Fraction:
+    """The rational coefficient b_index from equation (19)."""
+    return index * full_q_log(index)
+
+
+@lru_cache(maxsize=None)
 def reduced_v_square(prime: int, index: int) -> Fraction:
     return sum(
         (
@@ -246,16 +266,37 @@ def check_cartier_obligations() -> int:
     return checks
 
 
+def check_linear_gauss_reformulation() -> int:
+    checks = 0
+    for prime in (5, 7, 11, 13, 17, 19):
+        for index in range(1, 81):
+            coefficient = cartier_qv(prime, index)
+            assert coefficient == (
+                full_q_log(prime * index) - full_q_log(index) / prime
+            )
+            assert coefficient == (
+                framed_bps(prime * index) - framed_bps(index)
+            ) / (prime * index)
+            exponent = vp_integer(index, prime) + 1
+            assert vp_fraction(
+                framed_bps(prime * index) - framed_bps(index), prime
+            ) >= 3 * exponent
+            checks += 3
+    return checks
+
+
 def main() -> None:
     source = check_source_and_reduction()
     prefactors = check_prefactors()
     towers, sharp = check_towers()
     cartier = check_cartier_obligations()
-    total = source + prefactors + towers + cartier
+    gauss = check_linear_gauss_reformulation()
+    total = source + prefactors + towers + cartier + gauss
     print(f"source/reduction checks: {source}")
     print(f"prefactor/Cartier-fixed checks: {prefactors}")
     print(f"cubic-tower evidence checks: {towers} ({sharp} sharp)")
     print(f"remaining-Cartier-obligation checks: {cartier}")
+    print(f"linear cubic-Gauss reformulation checks: {gauss}")
     print(f"all {total} Taylor-truncation checks passed")
 
 

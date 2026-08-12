@@ -218,9 +218,10 @@ Taylor-truncation records. Residue substitution turns every integral power
 parameter into one of two explicit rational-prefactor coefficient families.
 For Catalan, the prefactor has the exact Cartier fixed-point
 `C_p(Q)=Q` for `p>=5`; for Schröder, the prefactor denominator splits over
-the Gaussian integers. The new note states the two remaining Catalan
-constant-term estimates exactly and verifies them on a finite grid. Because
-those estimates are not yet proved, all seven records move to `partial`,
+the Gaussian integers. The new note identifies the first Catalan estimate
+exactly with a cubic adjacent Gauss law for one explicit rational coefficient
+sequence and reduces the second to a period-three weighted harmonic sum.
+Because those estimates are not yet proved, all seven records move to `partial`,
 leaving 14 `open-target` records.
 
 The adjacent-binomial unit closes three more records at once.  Writing the

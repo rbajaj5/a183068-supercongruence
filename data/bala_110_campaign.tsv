@@ -60,10 +60,10 @@ A331562	C	partial	related-results/A331562UniformRationalDiagonal.md	prove the un
 A333090	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Schroder coefficient reduction proved; close its Gaussian-prefactor Cartier estimates
 A333091	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Schroder coefficient reduction proved; close its Gaussian-prefactor Cartier estimates
 A333092	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Schroder coefficient reduction proved; close its Gaussian-prefactor Cartier estimates
-A333093	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Catalan coefficient reduction proved; prove the two displayed Cartier constant-term estimates
-A333095	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Catalan coefficient reduction proved; prove the two displayed Cartier constant-term estimates
-A333096	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Catalan coefficient reduction proved; prove the two displayed Cartier constant-term estimates
-A333097	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Catalan coefficient reduction proved; prove the two displayed Cartier constant-term estimates
+A333093	C	partial	related-results/TaylorTruncationCoefficientReduction.md	prove the explicit cubic adjacent Gauss law (21) and the remaining quadratic weighted-harmonic estimate
+A333095	C	partial	related-results/TaylorTruncationCoefficientReduction.md	prove the explicit cubic adjacent Gauss law (21) and the remaining quadratic weighted-harmonic estimate
+A333096	C	partial	related-results/TaylorTruncationCoefficientReduction.md	prove the explicit cubic adjacent Gauss law (21) and the remaining quadratic weighted-harmonic estimate
+A333097	C	partial	related-results/TaylorTruncationCoefficientReduction.md	prove the explicit cubic adjacent Gauss law (21) and the remaining quadratic weighted-harmonic estimate
 A348410	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A350383	C	proved-here	related-results/CyclotomicRationalFramingTower.md	independent proof review and literature-priority audit of the general cyclotomic rational-framing theorem
 A351857	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference

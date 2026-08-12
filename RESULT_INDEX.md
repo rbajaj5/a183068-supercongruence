@@ -2252,9 +2252,10 @@ proof.
   coefficient families. The Catalan prefactor has an exact Cartier
   fixed-point at every prime at least five; the Schröder prefactor has a
   quadratic Gaussian denominator.
-- **Status:** Exact reduction with 2,210 exact checks. Two displayed
-  constant-term estimates would close the Catalan cubic tower; neither
-  those estimates nor the Schröder analogue is claimed proved.
+- **Status:** Exact reduction with 3,650 exact checks. The first Catalan
+  estimate is exactly one cubic adjacent Gauss law, and the second is a
+  period-three weighted reduced-harmonic estimate; neither those estimates
+  nor the Schröder analogue is claimed proved.
 - **Report:** [Taylor-truncation coefficient reduction](related-results/TaylorTruncationCoefficientReduction.md)
 - **Exact checker:** [`verify_taylor_truncation_reduction.py`](verification/related/verify_taylor_truncation_reduction.py)
 

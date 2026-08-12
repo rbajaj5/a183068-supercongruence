@@ -1,7 +1,8 @@
 # Catalan and Schröder Taylor truncations as two coefficient families
 
-**Status:** exact all-parameter reduction and exact computational audit;
-the two Cartier estimates in Section 4 remain unproved
+**Status:** exact all-parameter reduction, an exact cubic-Gauss reformulation
+of the first Catalan obstruction, and exact computational audit; the
+Gauss law and the quadratic Cartier estimate in Section 4 remain unproved
 
 **OEIS records:**
 [A333090](https://oeis.org/A333090),
@@ -214,6 +215,83 @@ but those finite checks are evidence, not a proof. This is the precise
 remaining obligation; a vague appeal to Dwork theory or to rational
 framing is not being counted as closure.
 
+### 4.1 The linear obstruction is exactly one cubic Gauss law
+
+The first estimate has a more arithmetic formulation. Put
+
+```math
+L(y)=\log(1+y),\qquad
+a_N=[y^N]Q_C(y)L(y),\qquad
+b_N=N a_N.
+\tag{19}
+```
+
+The numbers `b_N` are rational; no termwise `p`-integrality or integrality
+over `Z` is asserted. Since
+
+```math
+V_p(y)=L(y)-\frac1pL(y^p)
+```
+
+and `q_{pj}=q_j` for the coefficients `q_j=[y^j]Q_C(y)`, coefficient
+extraction gives the exact identity
+
+```math
+\boxed{
+[y^n]C_p(Q_CV_p)
+=a_{pn}-\frac{a_n}{p}
+=\frac{b_{pn}-b_n}{pn}.}
+\tag{20}
+```
+
+If `e=v_p(n)`, the coefficientwise strengthening suggested by every exact
+test is therefore equivalent to
+
+```math
+\boxed{b_{pn}\equiv b_n\pmod {p^{3(e+1)}}.}
+\tag{21}
+```
+
+Indeed, (21) says precisely that the last quotient in (20) has valuation
+at least `2(e+1)`. Thus the first missing Cartier estimate is not an
+unstructured cancellation: it is a cubic adjacent Gauss law for one
+explicit rational coefficient sequence. The congruence means the displayed
+difference has the stated `p`-adic valuation even when the two terms are not
+separately `p`-integral. If (21) holds, formal integration by
+parts twice gives (16), uniformly in the slope `a` and in `M`.
+
+For reference, (19) also has the completely elementary finite formula
+
+```math
+b_N
+=N\sum_{j=1}^{N}
+q_{N-j}\frac{(-1)^{j+1}}{j},
+\qquad
+q_0=1,\quad
+q_j=\begin{cases}2,&3\mid j,\\-1,&3\nmid j,
+\end{cases}
+\tag{22}
+```
+
+so (21) is suitable for a residue-block proof. The period alone is not a
+proof: the repository's period-four rational-framing counterexample shows
+that a general periodic cubic Gauss assertion is false. Any proof of
+(21) must use the special period-six weight in (22).
+
+The second obstruction remains genuinely quadratic. Direct convolution
+gives, for `T>=2`,
+
+```math
+[y^T]V_p(y)^2
+=\frac{2(-1)^T}{T}
+ \sum_{\substack{1\le j<T\\p\nmid j,\ p\nmid(T-j)}}\frac1j.
+\tag{23}
+```
+
+Together with (7), equation (23) turns (17) into a single explicit
+period-three weighted reduced-harmonic estimate. This is now the only
+quadratic input not supplied by (21).
+
 ## 5. Verification
 
 Run
@@ -226,7 +304,8 @@ The checker independently verifies the two residue identities against the
 original Taylor truncations, all seven named initial segments, the
 periodic and Gaussian prefactor laws, the proposed cubic towers over a
 grid of positive and negative parameters, both split and inert primes in
-the Schröder family, and exact finite instances of (16)--(17).
+the Schröder family, the two exact identities in (20), the finite cubic
+Gauss tests in (21), and exact finite instances of (16)--(17).
 
 This changes the campaign bookkeeping from seven unrelated `open-target`
 records to seven `partial` records controlled by one explicit proof packet.
