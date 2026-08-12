@@ -24,15 +24,15 @@ every record:
 
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 15 | 8 | 13 | 4 | 0 | 0 |
+| T: finite-sum transfer | 40 | 16 | 8 | 12 | 4 | 0 | 0 |
 | C: coefficient/constant term | 37 | 13 | 9 | 13 | 2 | 0 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **45** | **20** | **38** | **7** | **0** | **0** |
+| **Total** | **110** | **46** | **20** | **37** | **7** | **0** | **0** |
 
-The forty-five `proved-here` records are A002003, A005725, A008485, A008705,
-A008793, A049505, A091527, A124435, A132303, A141057, A156554, A198060, A198256, A198258, A219562, A228960, A245926, A246437,
+The forty-six `proved-here` records are A002003, A005725, A008485, A008705,
+A008793, A049505, A091527, A124435, A132303, A141057, A156554, A198060, A198256, A198258, A112028, A219562, A228960, A245926, A246437,
 A255672, A260667, A262732, A263843, A270913, A270919, A270922, A270924, A275652,
 A275654, A281267, A288470, A333592,
 A348410, A350383, A351857, A351858, A352373, A357509, A357510, A357512, A357568, A364173,
@@ -40,8 +40,8 @@ A364303, A364506, A370101, and A370102. The twenty
 `published-source` records are A002426, A002895, A005258, A082758, A103882,
 A108625, A112029, A143007, A168597, A176335, A177316, A183204, A184423, A186420, A208675, A234839,
 A363864, A363867, A363871, and A364509.
-The thirty-eight partial records are A003161, A003162, A008978, A023871,
-A023873, A060941, A079489, A108628, A112028, A113424, A183069, A206622, A212334,
+The thirty-seven partial records are A003161, A003162, A008978, A023871,
+A023873, A060941, A079489, A108628, A113424, A183069, A206622, A212334,
 A229452, A244973, A283271, A331562, A333090, A333091, A333092, A333093,
 A333095, A333096, A333097, A352655, A357506,
 A357567, A357956, A357959, A361889, A361892, A362676, A362722, A362733, A363985, A376458, A376466, and A380290.
@@ -53,7 +53,7 @@ supercongruence conjecture that remains to be proved.
 No record remains `open-target`: every live claim now has at least a proof,
 a published-source match, a substantive exact reduction, or an exact
 counterexample. This does not mean that every conjecture is proved; the
-thirty-eight `partial` records retain explicit proof obligations.
+thirty-seven `partial` records retain explicit proof obligations.
 
 These labels refer only to the exact statements already matched. They do not
 declare every comment on the corresponding OEIS page solved.
@@ -96,8 +96,9 @@ nine further false starts. It source-closes A002895, A005258, and A183204;
 records the enhanced parts of A112028 and A219562; their prime-level fifth
 powers are proved in the
 [Bala queue theorem](BalaOeisSupercongruenceQueue.md#the-even-power-boundary-and-a112028--a219562),
-and A219562's higher tower is now proved by the
-[critical-shell theorem](A219562EnhancedTower.md). It also marks
+and both higher towers are now proved by the
+[A112028 cubic](A112028EnhancedTower.md) and
+[A219562 quartic](A219562EnhancedTower.md) critical-shell theorems. It also marks
 A001850, A006318, A036917, and A143583 as search anchors with no live Bala
 supercongruence target.
 

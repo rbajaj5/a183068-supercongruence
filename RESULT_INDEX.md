@@ -86,10 +86,24 @@ proof.
   and A219562 (\(q=4\)) for every prime \(p\ge7\).
 - **Source status:** Named open prime-level refinements; Coster supplies only
   the ordinary cubic tower used as the higher-level baseline.
-- **Status:** Complete unchecked elementary prime-level proof. A219562's
-  enhanced higher tower is proved separately; only A112028's remains open.
+- **Status:** Complete unchecked elementary prime-level proof. Both
+  enhanced higher towers are proved separately in
+  [the cubic A112028 theorem](related-results/A112028EnhancedTower.md) and
+  [the quartic A219562 theorem](related-results/A219562EnhancedTower.md).
 - **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#the-even-power-boundary-and-a112028--a219562)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
+
+### A112028-HIGH — complete enhanced cubic shifted-binomial tower
+
+- **Claim:** For every prime $p\ge7$ and $r\ge2$,
+  $\operatorname{A112028}(p^r-1)\equiv
+  \operatorname{A112028}(p^{r-1}-1)\pmod {p^{3r+3}}$.
+- **Mechanism:** Two-digit unit-shell expansion, a penultimate-shell residue
+  multiplicity, and a critical-shell reduction to Wolstenholme harmonic
+  congruences and one double harmonic identity.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Enhanced A112028 tower](related-results/A112028EnhancedTower.md)
+- **Exact checker:** [`verify_a112028_enhanced_tower.py`](verification/related/verify_a112028_enhanced_tower.py)
 
 ### A219562-HIGH — complete enhanced quartic shifted-binomial tower
 
