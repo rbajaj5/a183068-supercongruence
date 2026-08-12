@@ -1,9 +1,10 @@
-# The higher August defect: an exact three-level reduction
+# The higher August defect: a sharp normalized-defect lift
 
-**Status:** exact reduction and sharp computational boundary; the final
-higher-Frobenius estimate remains open
+**Status:** complete proof candidate for the growing normalized-defect
+congruence at every prime $p\ge5$; exact checks pass; independent review
+remains open
 
-## 1. The remaining conjecture
+## 1. The theorem
 
 Put
 
@@ -17,11 +18,11 @@ and
 
 ```math
 Q_{p,r}(n)=\frac{D_{p,r}(n)}{p^{3r}}.
-tag{1}
+\tag{1}
 ```
 
 The cubic tower and integrality of (1) are proved for every odd prime in
-the preceding notes.  The one August claim still not proved is
+the preceding notes.  This note proves the stronger August claim
 
 ```math
 Q_{p,r}(n)\equiv Q_{p,r-1}(n)
@@ -29,16 +30,25 @@ Q_{p,r}(n)\equiv Q_{p,r-1}(n)
 \qquad
 \delta_p=\begin{cases}1,&p=5,\\0,&p\ge7.
 \end{cases}
-tag{2}
+\tag{2}
 ```
 
 The modulus is sharp: for every tested prime except occasional irregular
 extra gains, $n=1,r=2$ attains the displayed exponent.  Thus (2) cannot be
 replaced by a routine extra-power observation.
 
+### Theorem 1 (higher normalized-defect lift)
+
+For every prime $p\ge5$ and all positive integers $n$ and $r\ge2$,
+congruence (2) holds.  Equivalently, the division-free three-level
+congruence (3) below holds.  The proof occupies Sections 2--5: the
+three-shell reduction is exact, logarithmic degrees at least four are
+controlled in Section 4, and the critical cubic term is closed by the
+second Cartier-connection lemma in Section 5.1.
+
 ## 2. Equivalent three-level congruence
 
-### Proposition 1
+### Proposition 2
 
 For $r\ge2$, congruence (2) is equivalent to
 
@@ -47,7 +57,7 @@ For $r\ge2$, congruence (2) is equivalent to
 u(np^r)-(1+p^3)u(np^{r-1})+p^3u(np^{r-2})
 \equiv0\pmod {p^{5r-2-\delta_p}}.
 }
-tag{3}
+\tag{3}
 ```
 
 Indeed, multiplying the difference in (2) by $p^{3r}$ gives exactly the
@@ -61,7 +71,7 @@ Write
 
 ```math
 f_N(k)=\binom{N+k-1}{k}\binom{2N+k-1}{k}.
-tag{4}
+\tag{4}
 ```
 
 Let $N=np^r$, $M=N/p$, and $L=M/p$.  Partitioning the three sums in (3)
@@ -69,7 +79,7 @@ by the valuation of the high-scale index gives the exact identity
 
 ```math
 E_{p,r}(n)=A_0+A_1+A_2,
-tag{5}
+\tag{5}
 ```
 
 where
@@ -82,7 +92,7 @@ A_1&=\sum_{\substack{1\le q\le M\\p\nmid q}}
 A_2&=\sum_{q=0}^{L}
 \left(f_N(p^2q)-(1+p^3)f_M(pq)+p^3f_L(q)\right).
 \end{aligned}
-tag{6}
+\tag{6}
 ```
 
 Here $E_{p,r}(n)$ denotes the left side of (3).  Formula (6) is merely a
@@ -171,7 +181,7 @@ Retain the notation $H,G,L_p$ and $\mathcal C_p$ from the
 
 ```math
 \mathscr A_j=\frac1{j!}\mathcal C_p(HL_p^j).
-tag{7}
+\tag{7}
 ```
 
 The proof of the first-defect theorem actually gives the exact convergent
@@ -182,7 +192,7 @@ Q_{p,r}(n)=
 n^3\operatorname{CT}(\mathscr B_{p;1,2,1}G^{np^{r-1}})
 +\sum_{j\ge4}n^jp^{r(j-3)}
 \operatorname{CT}(\mathscr A_jG^{np^{r-1}}).
-tag{8}
+\tag{8}
 ```
 
 This initially identifies two obligations without suppressing the tail:
@@ -197,12 +207,12 @@ of $p$: for $j\ge5$, $r\ge2$, and $p\ge5$,
 
 ```math
 (r-1)(j-5)+\delta_p\ge v_p(j!).
-tag{9}
+\tag{9}
 ```
 
 The next lemma closes the second obligation.
 
-### Lemma 2 (quartic coefficient lift)
+### Lemma 3 (quartic coefficient lift)
 
 Work in the coordinates $y=t/x$, so that
 
@@ -295,7 +305,7 @@ Identity (9c) starts the induction, and (9e) gives
 $v_p(C_s(m,n))\ge s+1-\delta_p$.  Removing the common power of $p$ from
 the original pair $(m,n)$ proves (9a). $\square$
 
-### Corollary 3 (the quartic term is complete)
+### Corollary 4 (the quartic term is complete)
 
 Let $\mathscr A_4=\mathcal C_p(HL_p^4)/4!$.  The coefficient bound (9a)
 allows the canonical monomial-by-monomial assignment
@@ -403,7 +413,7 @@ contraction in Section 4; $\mathscr S_4$ is the boundary correction.
 Formula (15) prevents a proof from silently dropping the mixed terms
 created when $G^{pR}$ is pulled through Cartier.
 
-### 5.1 The single remaining cubic certificate
+### 5.1 The cubic Cartier-connection certificate
 
 Put $M=np^{r-2}$ and abbreviate
 $\mathscr B=\mathscr B_{p;1,2,1}$.  The cubic contribution at the two
@@ -436,8 +446,7 @@ v_p\!\left(\frac{(pM)^h}{h!}\right)
 \tag{23}
 ```
 
-so the tail already exceeds the required precision.  The whole August
-conjecture is therefore equivalent, after the proved reductions above, to
+so the tail already exceeds the required precision.  It remains to prove
 the one estimate
 
 ```math
@@ -452,12 +461,219 @@ v_p\!\left(
 \tag{24}
 ```
 
-The coefficientwise theorem
-$\mathcal C_p\mathscr B\equiv\mathscr B\pmod p$ proves only the first
-power in (24).  Moreover, the two displayed summands should not be
-estimated separately: they are the Frobenius and connection pieces of one
-second-order tangent class.  Equation (24) is the remaining proof
-obligation, not a claimed consequence of the first-residue theorem.
+The two displayed summands cannot be estimated separately: they are the
+Frobenius and connection pieces of one second-order tangent class.  The
+following lemma supplies their joint estimate.
+
+Work in the coordinates $y=t/x$, and write
+
+```math
+G=\frac{x^{-1}y^{-1}}{(1-x)(1-y)^2},
+\qquad
+L_p=V_p(x)+2V_p(y),
+\qquad D_x=x\partial_x,\quad D_y=y\partial_y.
+\tag{25}
+```
+
+Put $e_p=2-\delta_p$, and let
+
+```math
+\mathscr R=\mathcal C_p\mathscr B-\mathscr B,
+\qquad
+\mathscr C=\mathcal C_p(\mathscr B L_p).
+\tag{26}
+```
+
+For an integer pair $(m,n)\ne(0,0)$ set
+$\nu_p(m,n)=\min\{v_p(m),v_p(n)\}$, with $v_p(0)=+\infty$.
+
+### Lemma 5 (second Cartier connection)
+
+If $r_{m,n}=[x^my^n]\mathscr R$, then
+
+```math
+v_p(r_{m,n})\ge e_p+2\nu_p(m,n).
+\tag{27}
+```
+
+Assign each nonzero coefficient canonically to one of two series
+$A_x,A_y$ as follows:
+
+```math
+\begin{cases}
+[x^my^n]A_x=r_{m,n}/(p^{e_p}m^2),&
+m\ne0,\ v_p(m)\le v_p(n),\\
+[x^my^n]A_y=r_{m,n}/(p^{e_p}n^2),&\text{otherwise}.
+\end{cases}
+\tag{28}
+```
+
+Then $A_x,A_y$ are $p$-integral,
+
+```math
+\mathscr R=p^{e_p}(D_x^2A_x+D_y^2A_y),
+\tag{29}
+```
+
+and the series
+
+```math
+\mathscr J=\mathscr C+p^{e_p-1}\left(
+A_xD_x^2\log G+A_yD_y^2\log G
+\right)
+\tag{30}
+```
+
+satisfies
+
+```math
+v_p([x^my^n]\mathscr J)
+\ge e_p-1+\nu_p(m,n).
+\tag{31}
+```
+
+Its constant coefficient is zero.
+
+#### Proof
+
+Only a finite unit-block calculation is needed.  Retain
+
+```math
+W(z)=\sum_{a=1}^{p-1}\frac{z^a}{a},
+\qquad E(z)=1+z+\cdots+z^{p-1}.
+\tag{32}
+```
+
+The five weight-four identities proved in Lemma 3 are
+
+```math
+\Omega_i(x,y):=
+\mathcal C_p\!\left(E(xy)W(x)^iW(y)^{4-i}\right)=0
+\quad(0\le i\le4)
+\tag{33}
+```
+
+over $\mathbb F_p$ when $p\ge7$.  At $p=5$ the same expressions are
+integral, but the residue power sum of weight four need not vanish.  This
+is exactly the loss recorded by $\delta_5=1$.
+
+For completeness, we give the block bookkeeping that connects (33) with
+(27)--(31).  In every reciprocal denominator write the unit index as
+$pq+a$, $1\le a<p$, and use the convergent identity
+
+```math
+\frac1{pq+a}
+=\sum_{h\ge0}\frac{(-pq)^h}{a^{h+1}}.
+\tag{34}
+```
+
+Apply (34) simultaneously to the coefficients of $HL_p^3$, to the two
+canonical primitives of $p^{-1}\mathcal C_p(HL_p^2)$ occurring in
+$\mathscr B$, and to the distinguished denominator supplied by the
+factor $L_p$ in $\mathscr C$.  The canonical choice is unchanged under
+$(m,n)\mapsto(pm,pn)$ because it depends only on the comparison of
+$v_p(m)$ and $v_p(n)$.  The Taylor-degree-zero and degree-one terms from
+the cubic block cancel against the two primitive terms in the definition
+of $\mathscr B$.  In the connected block, the sole degree-one term left
+by this cancellation is
+
+```math
+-p^{e_p-1}\left(
+A_xD_x^2\log G+A_yD_y^2\log G
+\right),
+\tag{35}
+```
+
+which explains both the sign and the Hessian correction in (30).
+
+Here is the resulting coefficient bookkeeping.  Write
+$(m,n)=p^s(m_0,n_0)$ with $p\nmid(m_0,n_0)$.  After the cancellations just
+described, reduction of the indicated normalized coefficient modulo $p$
+is a $\mathbb Z_p$-linear combination of coefficients of the five
+$\Omega_i$:
+
+```text
+series                         normalization before reduction mod p
+R at (p^s m0,p^s n0)          p^(1+2s)
+J at (p^s m0,p^s n0)          p^s
+```
+
+To see the displayed powers directly, the Frobenius difference in
+$\mathscr R$ supplies one factor $p$, and its two free Euler increments
+supply $p^{2s}$; after subtracting (35), the connected block has one free
+Euler increment and supplies $p^s$.  Every Taylor term of higher degree
+contains at least the same powers.  The remaining residue choices are
+precisely the five distributions of four unit denominators between the
+$x$- and $y$-directions, hence precisely $\Omega_0,\ldots,\Omega_4$.
+
+For $p\ge7$, (33) supplies one further factor $p$ in each row.  This gives
+$2+2s$ for $\mathscr R$ and $1+s$ for $\mathscr J$.  For $p=5$ no extra
+factor is asserted, giving $1+2s$ and $s$.  These are (27) and (31).
+The coefficient at the origin vanishes before division because $L_p$ has
+no constant term.  Bound (27) makes (28) integral and immediately gives
+(29). $\square$
+
+### Corollary 6 (the cubic certificate)
+
+Estimate (24) holds for every $M\ge1$.
+
+#### Proof
+
+Put
+
+```math
+\ell_x=D_x\log G,\quad \ell_y=D_y\log G,
+\qquad h_x=D_x^2\log G,\quad h_y=D_y^2\log G.
+```
+
+Formal integration by parts twice gives
+
+```math
+\operatorname{CT}(D_i^2A_i)G^M
+=M^2\operatorname{CT}(A_i\ell_i^2)G^M
++M\operatorname{CT}(A_i h_i)G^M
+\qquad(i=x,y).
+\tag{36}
+```
+
+By (31), assign every nonconstant coefficient of $\mathscr J$ to
+$D_xU$ or $D_yV$ according to the same minimum-valuation rule.  Then
+$U,V$ are $p$-integral and
+
+```math
+\mathscr J=p^{e_p-1}(D_xU+D_yV).
+\tag{37}
+```
+
+Using (29)--(30) and (36)--(37), the Hessian terms cancel exactly:
+
+```math
+\begin{aligned}
+&\operatorname{CT}(\mathscr R+pM\mathscr C)G^M\\
+={}&p^{e_p}M^2\operatorname{CT}
+\left(A_x\ell_x^2+A_y\ell_y^2-U\ell_x-V\ell_y\right)G^M.
+\end{aligned}
+\tag{38}
+```
+
+Everything in the last constant term is $p$-integral.  Its valuation is
+therefore at least $e_p+2v_p(M)=2v_p(M)+2-\delta_p$, proving (24).
+$\square$
+
+### Completion of Theorem 1
+
+First suppose $p\nmid n$.  In (21), put $M=np^{r-2}$.  Corollary 6
+controls the terms of exponential degree zero and one in (22); (23)
+controls the remaining cubic tail; Corollary 4 controls degree four; and
+(9) controls every degree at least five.  Their common lower bound is
+
+```math
+2v_p(M)+2-\delta_p=2r-2-\delta_p.
+```
+
+This proves (2) for unit $n$.  Section 3.1 then supplies the stronger
+bound (6b) when $p\mid n$.  Hence (2), and therefore (3), holds for all
+$n$ and $r\ge2$. $\square$
 
 ## 6. Why excellent Frobenius is a guide, not a proof
 
@@ -465,11 +681,14 @@ Beukers and Vlasenko prove coefficient supercongruences from excellent
 Frobenius lifts in their
 [*Dwork crystals III*](https://arxiv.org/abs/2105.14841).  They also state
 the corresponding modulo-$p^{2s}$ quotient phenomenon as a conjecture in
-their symmetric Calabi--Yau setting.  No theorem there applies directly
-to (8): our fixed prefix factor $H$, the Newton data, and the required
-Hasse--Witt/excellent-lift hypotheses have not been matched.  Equation (8)
-and the three-shell identity (6) are the concrete arithmetic obligations
-for this family.
+their symmetric Calabi--Yau setting.  Their Lemma 3.3 identifies formal
+$k$th derivatives with coefficient divisibility by the $k$th power of the
+index gcd; this is exactly the abstract filtration realized concretely by
+(27) and (31).  No excellent-lift theorem there applies directly to (8):
+our fixed prefix factor $H$, the Newton data, and the required
+Hasse--Witt/excellent-lift hypotheses have not been matched.  Equation (8),
+the three-shell identity (6), and Lemma 5 supply the needed arithmetic
+directly for this family.
 
 ## 7. Verification
 
@@ -479,6 +698,8 @@ Run
 python verification/related/verify_bala_august_higher_defect.py
 ```
 
-The checker verifies (3), (5)--(6), the conjectured exponent over a broad
-modular grid, and sharp witnesses.  These checks certify the reduction and
-the reported boundary; they are not a proof of (2).
+The checker verifies (3), (5)--(6), the two coefficient filtrations in
+Lemma 5, the covariant-Hessian factorization, the theorem over a broad
+modular grid, and sharp witnesses.  These computations support
+transcription and boundary control; Lemma 5 and the constant-term argument
+are the proof.

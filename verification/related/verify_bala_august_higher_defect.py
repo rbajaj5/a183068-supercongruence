@@ -1,7 +1,10 @@
-"""Exact checks for the higher August defect reduction.
+"""Exact checks for the higher August normalized-defect theorem.
 
-This verifies the exact three-level and shell identities and tests the
-remaining conjectural valuation.  It is not a proof of that valuation.
+This verifies the exact three-level and shell identities, the two
+coefficient filtrations in the second Cartier-connection lemma, its exact
+covariant-Hessian factorization, and the resulting valuation on a modular
+grid.  The checks support transcription/debugging; the note contains the
+proof.
 """
 
 from __future__ import annotations
@@ -233,6 +236,195 @@ def check_cubic_kernel_contraction() -> int:
     return checks
 
 
+def minimum_index_valuation(m: int, n: int, prime: int) -> int:
+    """The finite value min(v_p(m),v_p(n)) away from the origin."""
+
+    assert m != 0 or n != 0
+    return min(valuation(m, prime), valuation(n, prime))
+
+
+def check_second_cartier_connection() -> int:
+    """Check Lemma 5, equations (27)--(31), with exact rationals."""
+
+    checks = 0
+    configurations = ((5, 7), (7, 7), (11, 3), (13, 2))
+    for prime, window in configurations:
+        exponent = 1 if prime == 5 else 2
+        engine = KernelCoefficients(prime, 1, 2)
+        maximum = prime * window
+        first, second = engine.primitives(maximum)
+        kernel = engine.defect_kernel(1, maximum, first, second)
+
+        a_x: dict[tuple[int, int], Fraction] = {}
+        a_y: dict[tuple[int, int], Fraction] = {}
+        residual: dict[tuple[int, int], Fraction] = {}
+
+        for m in range(window + 1):
+            for n in range(window + 1):
+                coefficient = kernel[prime * m, prime * n] - kernel[m, n]
+                residual[m, n] = coefficient
+                if m == 0 and n == 0:
+                    assert coefficient == 0
+                    checks += 1
+                    continue
+                index_valuation = minimum_index_valuation(m, n, prime)
+                assert rational_valuation(coefficient, prime) >= (
+                    exponent + 2 * index_valuation
+                )
+                if m != 0 and valuation(m, prime) <= valuation(n, prime):
+                    a_x[m, n] = coefficient / (prime**exponent * m * m)
+                    reconstructed = prime**exponent * m * m * a_x[m, n]
+                else:
+                    a_y[m, n] = coefficient / (prime**exponent * n * n)
+                    reconstructed = prime**exponent * n * n * a_y[m, n]
+                assert reconstructed == coefficient
+                checks += 2
+
+        connection: dict[tuple[int, int], Fraction] = {}
+        hessian: dict[tuple[int, int], Fraction] = {}
+        tangent: dict[tuple[int, int], Fraction] = {}
+        vector_x: dict[tuple[int, int], Fraction] = {}
+        vector_y: dict[tuple[int, int], Fraction] = {}
+
+        for m in range(window + 1):
+            for n in range(window + 1):
+                # [x^m y^n] C_p(B L_p), with L_p=V_p(x)+2V_p(y).
+                c_mn = sum(
+                    (
+                        kernel[prime * m - q, prime * n] / q
+                        for q in range(1, prime * m + 1)
+                        if q % prime
+                    ),
+                    Fraction(0),
+                )
+                c_mn += 2 * sum(
+                    (
+                        kernel[prime * m, prime * n - q] / q
+                        for q in range(1, prime * n + 1)
+                        if q % prime
+                    ),
+                    Fraction(0),
+                )
+                connection[m, n] = c_mn
+
+                # D_x^2 log G=sum(q x^q), D_y^2 log G=2 sum(q y^q).
+                h_mn = sum(
+                    (q * a_x.get((m - q, n), Fraction(0)) for q in range(1, m + 1)),
+                    Fraction(0),
+                )
+                h_mn += 2 * sum(
+                    (q * a_y.get((m, n - q), Fraction(0)) for q in range(1, n + 1)),
+                    Fraction(0),
+                )
+                hessian[m, n] = h_mn
+                j_mn = c_mn + prime ** (exponent - 1) * h_mn
+                tangent[m, n] = j_mn
+
+                if m == 0 and n == 0:
+                    assert j_mn == 0
+                    checks += 1
+                    continue
+                index_valuation = minimum_index_valuation(m, n, prime)
+                assert rational_valuation(j_mn, prime) >= (
+                    exponent - 1 + index_valuation
+                )
+                normalized = j_mn / prime ** (exponent - 1)
+                if m != 0 and valuation(m, prime) <= valuation(n, prime):
+                    vector_x[m, n] = normalized / m
+                    reconstructed = prime ** (exponent - 1) * m * vector_x[m, n]
+                else:
+                    vector_y[m, n] = normalized / n
+                    reconstructed = prime ** (exponent - 1) * n * vector_y[m, n]
+                assert reconstructed == j_mn
+                checks += 2
+
+        # The two displayed decompositions are exact coefficient identities,
+        # not merely valuation tests.
+        for key in residual:
+            m, n = key
+            reconstructed_r = prime**exponent * (
+                m * m * a_x.get(key, Fraction(0))
+                + n * n * a_y.get(key, Fraction(0))
+            )
+            reconstructed_j = prime ** (exponent - 1) * (
+                m * vector_x.get(key, Fraction(0))
+                + n * vector_y.get(key, Fraction(0))
+            )
+            assert reconstructed_r == residual[key]
+            assert reconstructed_j == tangent[key]
+            checks += 2
+
+        def dense(
+            series: dict[tuple[int, int], Fraction], bound: int
+        ) -> dict[tuple[int, int], Fraction]:
+            return {
+                (m, n): series.get((m, n), Fraction(0))
+                for m in range(bound + 1)
+                for n in range(bound + 1)
+            }
+
+        def multiply_axis(
+            series: dict[tuple[int, int], Fraction],
+            coefficients: dict[int, Fraction],
+            bound: int,
+            x_axis: bool,
+        ) -> dict[tuple[int, int], Fraction]:
+            product: dict[tuple[int, int], Fraction] = {}
+            for m in range(bound + 1):
+                for n in range(bound + 1):
+                    product[m, n] = sum(
+                        (
+                            series.get(
+                                (m - q, n) if x_axis else (m, n - q),
+                                Fraction(0),
+                            )
+                            * coefficient
+                            for q, coefficient in coefficients.items()
+                            if q <= (m if x_axis else n)
+                        ),
+                        Fraction(0),
+                    )
+            return product
+
+        # Check the exact moment identity (38), including both Hessian signs.
+        # In this specialization l_x=-1+x/(1-x), l_y=-1+2y/(1-y).
+        for moment_exponent in range(1, min(window, 4) + 1):
+            bound = moment_exponent
+            lx_squared = {0: Fraction(1)}
+            lx_squared.update({q: Fraction(q - 3) for q in range(1, bound + 1)})
+            ly_squared = {0: Fraction(1)}
+            ly_squared.update({q: Fraction(4 * q - 8) for q in range(1, bound + 1)})
+            lx = {0: Fraction(-1)}
+            lx.update({q: Fraction(1) for q in range(1, bound + 1)})
+            ly = {0: Fraction(-1)}
+            ly.update({q: Fraction(2) for q in range(1, bound + 1)})
+
+            quadratic = multiply_axis(a_x, lx_squared, bound, True)
+            y_quadratic = multiply_axis(a_y, ly_squared, bound, False)
+            x_vector = multiply_axis(vector_x, lx, bound, True)
+            y_vector = multiply_axis(vector_y, ly, bound, False)
+            final_series = {
+                (m, n): quadratic[m, n]
+                + y_quadratic[m, n]
+                - x_vector[m, n]
+                - y_vector[m, n]
+                for m in range(bound + 1)
+                for n in range(bound + 1)
+            }
+
+            left = kernel_moment(dense(residual, bound), bound, 1, 2, 1)
+            left += prime * bound * kernel_moment(
+                dense(connection, bound), bound, 1, 2, 1
+            )
+            right = prime**exponent * bound**2 * kernel_moment(
+                final_series, bound, 1, 2, 1
+            )
+            assert left == right
+            checks += 1
+
+    return checks
+
+
 def check_modular_grid() -> int:
     checks = 0
     for prime in (5, 7, 11, 13, 17, 19, 23):
@@ -274,8 +466,9 @@ def main() -> None:
         "unit-index reduction": check_unit_reduction(),
         "finite-log quartic identity": check_finite_log_quartic_identity(),
         "quartic coefficient lift": check_quartic_coefficient_lift(),
-        "cubic-kernel contraction evidence": check_cubic_kernel_contraction(),
-        "higher-defect evidence": check_modular_grid(),
+        "second Cartier connection": check_second_cartier_connection(),
+        "cubic-kernel contraction": check_cubic_kernel_contraction(),
+        "higher-defect theorem": check_modular_grid(),
     }
     for name, count in results.items():
         print(f"{name}: {count} exact checks")

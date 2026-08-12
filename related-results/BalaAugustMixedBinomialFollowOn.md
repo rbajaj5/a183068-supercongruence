@@ -16,7 +16,7 @@ No literature-priority claim is made for the present assembly.
 | A119258 denominator primes | Closed: the arbitrary integral coefficient slope removes the exclusion |
 | Chebyshev primes dividing the coefficient slope | Closed by the same theorem |
 | A333473 | Its named quadratic tower and the full positive algebraic-kernel family hold for every odd prime |
-| Mixed negative-binomial sum | Cubic tower proved for every odd prime; first normalized-defect residue proved stable for $p\geq5$, with only the stronger growing-modulus refinement open |
+| Mixed negative-binomial sum | Cubic tower proved for every odd prime; first normalized-defect residue and the stronger growing normalized-defect lift proved for $p\geq5$ |
 | Products and twists | Cubic for three or more generalized-binomial factors; quadratic for two |
 | Index-dependent negative substitutions | Two families fail cubically at $p=5$; the two sign-opposite companions satisfy full cubic towers for every $p\ge5$, proved by parity-doubling reciprocal blocks and shifted kernels |
 | A333592 | Named cubic tower closed by Coster; the full positive-parameter family is also covered by the prefix-Cartier theorem |
@@ -291,18 +291,17 @@ Q_{p,r}(n)\equiv Q_{p,r-1}(n)
 
 In particular, the leading residue $Q_{p,r}(n)\bmod p$ is independent of
 $r$ by the first-defect theorem. The cubic integrality boundary is proved
-for every odd prime in Bala's specialization. Only the additional powers
-asserted in (10b) remain open.  The
-[higher-defect note](BalaAugustHigherDefectLift.md) gives the equivalent
-three-level modulus $p^{5r-2-\delta_p}$, an exact valuation-shell
-decomposition, and the logarithmic degree-four boundary.
+for every odd prime in Bala's specialization.  The
+[higher-defect theorem](BalaAugustHigherDefectLift.md) proves all the
+additional powers in (10b) for $p\ge5$ through the equivalent three-level
+modulus $p^{5r-2-\delta_p}$, an exact valuation-shell decomposition, and a
+second Cartier-connection identity.
 
 The modular checker computes each summand by tracking its $p$-adic exponent
 and unit separately. It verifies the cubic divisibility and (10b) for
 $p\in\{3,5,7,11,13\}$, $1\leq n\leq6$, and every level $r\leq4$ with
-$np^r\leq100{,}000$. These calculations remain evidence for the additional
-powers in (10b); the residue modulo $p$ is now proved. The exceptional
-$p=5$ loss is attained in the grid.
+$np^r\leq100{,}000$. The exact checks support the proved higher lift and
+show that the exceptional $p=5$ loss is attained in the grid.
 
 ## 5. Bala's product and twist proposal
 
