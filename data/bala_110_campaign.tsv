@@ -11,12 +11,12 @@ A079489	T	queued	none	extract exact conjecture; test termwise discard and transf
 A082758	T	published-source	Pan--Sun theorem cited by live OEIS entry	verify exact parameter match in bibliography
 A103882	T	published-source	Straub Example 3.4 gives the recorded Apéry-number congruence	verify exact edition and theorem numbering in bibliography
 A112028	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A112029	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A112029	T	published-source	Coster Theorem 4 is cited on the live OEIS record for the full p^(3r) tower	verify exact theorem numbering and shifted-index normalization in bibliography
 A124435	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A132303	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A141057	T	proved-here	MultinomialPowerFrobeniusTowers.md	independent review and priority audit
 A143583	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A183069	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A183069	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	integrality and sharp exact checks recorded; prove the unified odd ballot-power tower
 A183204	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A198060	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A198256	T	queued	none	extract exact conjecture; test termwise discard and transfer
@@ -28,11 +28,11 @@ A234839	T	published-source	Osburn--Sahu--Straub Example 3.3 cited by OEIS	verify
 A244973	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A260667	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A288470	T	proved-here	A288470OddPrimeTower.md	independent review and priority audit
-A333592	T	partial	QuadraticGaussianQueueTheorem.md	prove or refute the stronger untwisted cubic tower
+A333592	T	proved-here	related-results/MixedNegativeBinomialCubicTower.md	independent review and source-facing cross-reference for the full positive-parameter cubic family
 A357510	T	proved-here	related-results/AperyOddMomentPrimeClassification.md	independent review and priority audit of the prime-boundary expansion
 A357512	T	partial	related-results/AperyOddMomentPrimeClassification.md	prime slice and exact exceptional-prime classification proved; prove the remaining composite n congruence
-A361889	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A361892	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A361889	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	integrality and sharp exact checks recorded; prove the unified odd ballot-power tower
+A361892	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	integrality and sharp exact checks recorded; prove the unified odd ballot-power tower
 A362676	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A363985	T	queued	none	extract exact conjecture; test termwise discard and transfer
 A370101	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
@@ -74,7 +74,7 @@ A362733	C	queued	none	extract exact conjecture; identify coefficient or Cartier 
 A363864	C	published-source	Straub Theorem 1.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
 A363867	C	published-source	Straub Theorem 3.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
 A363871	C	published-source	Straub Theorem 3.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
-A364303	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A364303	C	proved-here	related-results/DixonLegendreHalfBinomialTowers.md	independent review of the all-row Dixon--Legendre parameter match and small-prime boundary
 A380290	C	partial	EulerProductGaussianTower.md	prove or refute the special untwisted cubic gain
 A002897	F	no-explicit-open	related-results/CoefficientPowerGaussBaseline.md	live diagonal claim is source-closed; retain the proved coefficient-root integrality and universal p^r baseline
 A008978	F	partial	related-results/CoefficientPowerGaussBaseline.md	F/E integrality and the universal p^r variable-power tower are proved; prove the conjectural p^(3r) gain

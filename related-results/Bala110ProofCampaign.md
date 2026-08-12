@@ -1,6 +1,6 @@
 # The 110-record Bala proof campaign
 
-**Snapshot date:** July 29, 2026
+**Snapshot date:** August 12, 2026
 
 **Status:** complete record-level ledger; proof work remains in progress
 
@@ -24,23 +24,23 @@ every record:
 
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 6 | 3 | 2 | 2 | 27 |
-| C: coefficient/constant term | 37 | 6 | 6 | 3 | 0 | 22 |
+| T: finite-sum transfer | 40 | 7 | 4 | 4 | 2 | 23 |
+| C: coefficient/constant term | 37 | 7 | 6 | 3 | 0 | 21 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 |
-| **Total** | **110** | **29** | **12** | **17** | **3** | **49** |
+| **Total** | **110** | **31** | **13** | **19** | **3** | **44** |
 
-The twenty-nine `proved-here` records are A002003, A008485, A008705, A008793,
+The thirty-one `proved-here` records are A002003, A008485, A008705, A008793,
 A049505, A091527, A108625, A141057, A143007, A177316, A255672, A262732,
-A270913, A270919, A270922, A270924, A275652, A275654, A288470, A348410,
-A351857, A352373, A357509, A357510, A357568, A364173, A364506, A370101, and
-A370102. The twelve
-`published-source` records are A002426, A082758, A103882, A168597, A176335,
-A184423, A186420, A234839, A363864, A363867, A363871, and A364509. The
-seventeen partial records are A008978, A023871, A023873,
-A113424, A206622, A228960, A229452, A283271, A333592, A350383, A352655,
-A357506, A357512, A357567, A357956, A357959, and A380290. A002897, A005259, and
+A270913, A270919, A270922, A270924, A275652, A275654, A288470, A333592,
+A348410, A351857, A352373, A357509, A357510, A357568, A364173,
+A364303, A364506, A370101, and A370102. The thirteen
+`published-source` records are A002426, A082758, A103882, A112029, A168597,
+A176335, A184423, A186420, A234839, A363864, A363867, A363871, and A364509.
+The nineteen partial records are A008978, A023871, A023873, A113424, A183069,
+A206622, A228960, A229452, A283271, A350383, A352655, A357506, A357512,
+A357567, A357956, A357959, A361889, A361892, and A380290. A002897, A005259, and
 A005260 are retained as
 search-corpus records but
 classified `no-explicit-open`: their live matches concern unrelated Bala
@@ -62,6 +62,29 @@ declare every comment on the corresponding OEIS page solved.
   live open supercongruence attributable to Bala was not located.
 - `queued`: the record is routed, but its exact conjecture still needs to be
   extracted and matched against the route theorem before proof work begins.
+
+## August 12 reconciliation
+
+This refresh makes six evidence-backed promotions without treating a search
+hit as a proof:
+
+- A333592 moves from `partial` to `proved-here` because the later
+  [prefix-Cartier theorem](MixedNegativeBinomialCubicTower.md) proves the
+  named cubic tower and its full positive-parameter family;
+- A364303 moves from `queued` to `proved-here` because the
+  [Dixon--Legendre theorem](DixonLegendreHalfBinomialTowers.md) proves every
+  stable row;
+- A112029 moves from `queued` to `published-source` because its live OEIS
+  comment cites Coster's Theorem 4 for the full shifted-index tower; and
+- A183069, A361889, and A361892 move from `queued` to `partial` because the
+  [ballot-power audit](CatalanBallotPowerSupercongruenceAudit.md) now copies
+  their exact common conjecture, checks its sharp boundary, and isolates the
+  unified proof target.
+
+The remaining 44 queued rows are not asserted to be 44 open problems. A live
+OEIS pass finds a mixture of explicit conjectures, source-closed statements,
+cross-reference-only records, and pages whose earlier wording has changed.
+They stay queued until the exact claim and source boundary are recorded.
 
 ## Proof order
 
