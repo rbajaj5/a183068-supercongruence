@@ -7,7 +7,7 @@ A003162	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	odd-
 A005258	T	published-source	Coster's classical Apery cubic tower	verify exact thesis theorem numbering in bibliography
 A005259	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied
 A005260	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied
-A079489	T	open-target	related-results/Bala110RemainingOpenTargets.md	prove the coefficient and reversion families by a verified Cartier representation
+A079489	T	partial	related-results/A079489LagrangeKernelReduction.md	prove the normalized cubic kernel estimate (16) for both linear parameter maps
 A082758	T	published-source	Pan--Sun theorem cited by live OEIS entry	verify exact parameter match in bibliography
 A103882	T	published-source	Straub Example 3.4 gives the recorded Apéry-number congruence	verify exact edition and theorem numbering in bibliography
 A112028	T	partial	Coster Theorem 4 gives the p^(3r) baseline; OEIS asks for p^5 and p^(3r+3)	prove the extra shifted-index gain

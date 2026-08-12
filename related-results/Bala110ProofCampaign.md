@@ -24,12 +24,12 @@ every record:
 
 | Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 13 | 8 | 12 | 4 | 3 | 0 |
+| T: finite-sum transfer | 40 | 13 | 8 | 13 | 4 | 2 | 0 |
 | C: coefficient/constant term | 37 | 12 | 6 | 14 | 2 | 3 | 0 |
 | F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
 | M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
 | D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
-| **Total** | **110** | **42** | **17** | **38** | **7** | **6** | **0** |
+| **Total** | **110** | **42** | **17** | **39** | **7** | **5** | **0** |
 
 The forty-two `proved-here` records are A002003, A005725, A008485, A008705,
 A008793, A049505, A091527, A108625, A124435, A132303, A141057, A143007, A156554, A177316, A198060, A198256, A198258, A245926, A246437,
@@ -40,9 +40,9 @@ A364303, A364506, A370101, and A370102. The seventeen
 `published-source` records are A002426, A002895, A005258, A082758, A103882,
 A112029, A168597, A176335, A183204, A184423, A186420, A208675, A234839,
 A363864, A363867, A363871, and A364509.
-The thirty-eight partial records are A003161, A003162, A008978, A023871,
+The thirty-nine partial records are A003161, A003162, A008978, A023871,
 A023873, A108628, A112028, A113424, A183069, A206622, A212334, A219562,
-A228960, A229452, A244973, A263843, A283271, A331562, A333090, A333091, A333092, A333093,
+A228960, A229452, A244973, A263843, A283271, A079489, A331562, A333090, A333091, A333092, A333093,
 A333095, A333096, A333097, A350383, A351858, A352655, A357506, A357512,
 A357567, A357956, A357959, A361889, A361892, A362676, A363985, and A380290.
 A001850, A002897,
@@ -50,7 +50,7 @@ A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
 classified `no-explicit-open`: the live pages contain no Bala
 supercongruence conjecture that remains to be proved.
-The remaining six records are `open-target`; their exact claims,
+The remaining five records are `open-target`; their exact claims,
 prime ranges, normalizations, and family consolidations are recorded in the
 [remaining-open-target map](Bala110RemainingOpenTargets.md).
 
@@ -250,6 +250,14 @@ continuant, and the conjectured cubic tower becomes one explicit diagonal
 estimate for its finite Frobenius numerator. The determinant identity and
 the first untreated rows pass independent exact checks. A331562 moves to
 `partial`, leaving six records `open-target`.
+
+The A079489 unit then applies Lagrange inversion twice. The direct powers of
+the algebraic series and the powers of its reverted companion both become
+rational multiples of the same signed kernel
+`[x^(sn)]((1+x)^2/(1-x))^(qn)`, with two singular slopes evaluated in
+closed form. The exact remaining obligation retains the valuation of the
+rational prefactor, including primes dividing its denominator. This moves
+A079489 to `partial` and leaves five records `open-target`.
 
 ## Proof order
 

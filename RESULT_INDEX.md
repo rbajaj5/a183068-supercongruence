@@ -2141,6 +2141,27 @@ proof.
 - **Report:** [A331562 uniform rational diagonal](related-results/A331562UniformRationalDiagonal.md)
 - **Exact checker:** [`verify_a331562_uniform_rational_diagonal.py`](verification/related/verify_a331562_uniform_rational_diagonal.py)
 
+### A079489-LAGRANGE — direct/reverted signed-binomial kernel
+
+- **Claim:** Both all-parameter coefficient families on A079489 are exact
+  rational multiples of
+
+  ```math
+  K_{q,s}(n)=[x^{sn}]\left(\frac{(1+x)^2}{1-x}\right)^{qn}.
+  ```
+
+  The direct family uses `(q,c)=(r+2s,r)` and the reverted family uses
+  `(q,c)=(s-r,-r)`. Both singular slopes have explicit alternating closed
+  forms and satisfy odd-prime towers identically.
+- **Reduction:** The two named cubic towers are equivalent to the normalized
+  valuation of `(c/q)(K(np^k)-K(np^(k-1)))`; denominator-prime loss is
+  retained exactly.
+- **Status:** Exact reduction, not a proof of the cubic kernel estimate.
+  Negative exponents, reversion, singular slopes, and two tower levels are
+  covered by 895 exact checks.
+- **Report:** [A079489 Lagrange-kernel reduction](related-results/A079489LagrangeKernelReduction.md)
+- **Exact checker:** [`verify_a079489_lagrange_kernel.py`](verification/related/verify_a079489_lagrange_kernel.py)
+
 ### FRANEL-CT — integer-parameter Franel-companion kernels
 
 - **Claim:** For `a` in `{1,2}` and every integer `m`, the two Bala

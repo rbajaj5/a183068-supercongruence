@@ -1,4 +1,4 @@
-# The 6 remaining open targets in the Bala 110-record census
+# The 5 remaining open targets in the Bala 110-record census
 
 **Extraction date:** August 12, 2026  
 **Status:** complete live-target map; the claims below are not declared proved
@@ -42,14 +42,17 @@ proves A124435. The
 [A244973 Frobenius reduction](A244973QuadraticFrobeniusReduction.md)
 then isolates Sun's remaining conjecture as one exact linear--quadratic
 Cartier cancellation and moves that record to `partial`. This file now lists
-the 6 records that remain fully open. The
+the 5 records that remain fully open. The
 [A331562 rational-diagonal reduction](A331562UniformRationalDiagonal.md)
 also replaces the row-by-row search by one determinant-ratio family and one
-uniform continuant Frobenius estimate.
+uniform continuant Frobenius estimate. The
+[A079489 Lagrange-kernel reduction](A079489LagrangeKernelReduction.md)
+places both its direct and reverted coefficient families in one normalized
+signed-binomial kernel.
 
 ## 1. Finite-sum transfer targets
 
-### Coefficient and reversion family
+### Coefficient and reversion family (reduced)
 
 Let `A(x)` be the algebraic series on
 [A079489](https://oeis.org/A079489), and let
@@ -62,8 +65,10 @@ for the cubic tower for both
 [x^{sn}]B(x)^{rn}
 ```
 
-at every `p >= 5`. The two statements require a coefficient representation
-that survives reversion; a formal similarity of the series is not enough.
+at every `p >= 5`. The exact coefficient representation, singular slopes,
+and common normalized kernel are now recorded in the
+[A079489 Lagrange-kernel reduction](A079489LagrangeKernelReduction.md), so
+this record is no longer counted among the fully open targets.
 
 ### Paired Apéry companions
 
@@ -116,7 +121,7 @@ The database stage is now closed:
 
 - 110 records have routes and statuses;
 - none remains `queued` for lack of an extracted statement;
-- 6 records are explicit `open-target` entries;
+- 5 records are explicit `open-target` entries;
 - repeated records have been consolidated into family-sized proof units;
   and
 - ambiguous or conditional inputs are identified before theorem work.
