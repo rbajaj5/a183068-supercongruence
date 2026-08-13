@@ -351,9 +351,8 @@ Peter Bala's August 2026 follow-up identifies fractional-index variants of
 12 Bober records.  The 15 formulas currently visible in approved OEIS
 comments all satisfy slope balance and residue-class balance. Theorem 2
 therefore proves their adjacent $p^{3r}$ quotient congruence for every
-$p\geq5$. A uniform translated-Landau theorem now proves all eleven $N/2$
-variants integral; the four denominator-three/four global integrality
-statements remain separate open problems.
+$p\geq5$. A uniform translated-Landau theorem proves all eleven $N/2$
+variants integral, and the denominator-boundary theorem closes the other four.
 
 The exact records, admissible denominators, source boundary, and 1,149-check
 certificate are in the

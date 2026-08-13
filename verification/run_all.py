@@ -57,6 +57,7 @@ SCRIPTS = (
     "verification/related/verify_a364176_affine_landau.py",
     "verification/related/verify_a364183_affine_landau.py",
     "verification/related/verify_bober_half_index_integrality.py",
+    "verification/related/verify_bober_denominator_boundary.py",
     "verification/related/verify_coefficient_power_gauss_baseline.py",
     "verification/related/verify_modular_product_prime_packet.py",
     "verification/related/verify_euler_product_cubic_cartier_moments.py",

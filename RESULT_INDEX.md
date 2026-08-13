@@ -806,6 +806,18 @@ proof.
 - **Proof:** [Uniform Bober half-index theorem](related-results/BoberHalfIndexIntegralityTheorem.md)
 - **Exact checker:** [`verify_bober_half_index_integrality.py`](verification/related/verify_bober_half_index_integrality.py)
 
+### BOBER-BOUNDARY - denominator-three/four integrality and cubic towers
+
+- **Claim:** A295456 and A295458 at index $N/3$, and A295460 and A295477
+  at index $N/4$, are integral for every $N$ and satisfy the full adjacent
+  $p^{3r}$ tower for $p\ge5$.
+- **Mechanism:** Away from the fixed denominator, each valuation is an exact
+  sum of translated values of the original Landau function. At the denominator
+  primes, explicit base-three and binary digit-sum identities are nonnegative.
+- **Status:** Complete elementary proof candidate; priority preliminary.
+- **Proof:** [Bober denominator-boundary theorem](related-results/BoberDenominatorBoundaryTheorem.md)
+- **Exact checker:** [`verify_bober_denominator_boundary.py`](verification/related/verify_bober_denominator_boundary.py)
+
 ### RATGAMMA-3 — rational gamma-ratio cubic towers
 
 - **Claim:** Let
@@ -1365,17 +1377,16 @@ proof.
   $p^{3r}$ quotient tower for $p\ge5$.
 - **Boundary:** The sequence congruence follows whenever the values are
   $p$-integral. The uniform half-index theorem closes all eleven denominator-two
-  cases. The four denominator-three/four global integrality claims remain open;
-  exact integrality through $N=30$ is
-  evidence only. The A295464 source formula was not yet visible and is not
-  inferred.
-- **Status:** Complete conditional congruence deduction for the packet;
-  eleven fractional cases closed completely and four integrality targets open.
+  cases, while the denominator-boundary theorem closes the remaining four.
+  The A295464 source formula was not yet visible and is not inferred.
+- **Status:** All 15 source-visible fractional variants closed completely;
+  A295464 remains pending exact source text.
 - **Proof and queue:** [Bober sporadic factorial-ratio packet](related-results/BoberSporadicFactorialRatioPacket.md)
 - **Exact checkers:** [`verify_bober_sporadic_packet.py`](verification/related/verify_bober_sporadic_packet.py),
   [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py),
   [`verify_a364183_affine_landau.py`](verification/related/verify_a364183_affine_landau.py),
-  [`verify_bober_half_index_integrality.py`](verification/related/verify_bober_half_index_integrality.py)
+  [`verify_bober_half_index_integrality.py`](verification/related/verify_bober_half_index_integrality.py),
+  [`verify_bober_denominator_boundary.py`](verification/related/verify_bober_denominator_boundary.py)
 
 ### A008793-CUBE — nonlinear cube-plane-partition tower
 

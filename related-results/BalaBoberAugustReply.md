@@ -85,9 +85,10 @@ identified in your July 31 message:
 Of the 15 fractional-index formulas currently visible in the Bober packet,
 all eleven half-index variants are now closed completely by a uniform
 translated-Landau theorem. The rational $p$-adic transfer is available for
-all 15, and the four denominator-three/four integrality statements remain
-the active queue. We have not made a literature-priority claim for the new
-argument.
+all 15, and a second translated-Landau theorem with explicit denominator-prime
+digit formulas closes the four denominator-three/four cases. Thus all 15
+source-visible variants are closed. We have not made a literature-priority
+claim for the new arguments.
 
 Best,
 

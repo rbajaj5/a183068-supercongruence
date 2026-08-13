@@ -20,7 +20,7 @@ review.
 | Check what was audited and corrected | [Audit log](AUDIT.md) | Exact-text audit record |
 | Find one precise mathematical claim | [Claim-level result index](RESULT_INDEX.md) | Controlling status ledger |
 | Track all 110 Bala/OEIS records | [110-record proof campaign](related-results/Bala110ProofCampaign.md) and [July 31 update](related-results/BalaJuly31ResearchUpdate.md) | Record-level route, status, evidence, and next action |
-| Review Bala's Bober follow-up | [Bober sporadic packet](related-results/BoberSporadicFactorialRatioPacket.md), [uniform half-index theorem](related-results/BoberHalfIndexIntegralityTheorem.md), [A364176 affine-Landau theorem](related-results/A364176AffineLandauTower.md), [A364183 affine-Landau theorem](related-results/A364183AffineLandauTower.md) | All 52 ordinary towers and all eleven half-index variants are proved for $p\ge5$; only four denominator-three/four integrality variants remain |
+| Review Bala's Bober follow-up | [Bober sporadic packet](related-results/BoberSporadicFactorialRatioPacket.md), [uniform half-index theorem](related-results/BoberHalfIndexIntegralityTheorem.md), [denominator-boundary theorem](related-results/BoberDenominatorBoundaryTheorem.md) | All 52 ordinary towers and all 15 source-visible fractional variants are proved for $p\ge5$; A295464 awaits exact approved source text |
 | Review Bala's August coefficient follow-up | [A119258 rays and Chebyshev packet](related-results/BalaAugustCoefficientPacket.md), [mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md), [full A333473 algebraic family](related-results/A333473AlgebraicFamilyTower.md), [full index-dependent companion towers](related-results/IndexDependentCompanionPrimeBoundary.md), [negative-binomial prefix theorem](related-results/MixedNegativeBinomialCubicTower.md), [first-defect kernel](related-results/BalaAugustFirstDefectKernel.md), [higher-defect reduction](related-results/BalaAugustHigherDefectLift.md), and [prime-three boundary](related-results/PrimeThreeNegativeBinomialBoundary.md) | Two infinite coefficient families have no denominator-prime exclusions; the full positive A333473 algebraic family, fixed product/twist class, and both surviving index-dependent substitution families are closed; the corrected negative-binomial tower is proved for every odd prime, with first-residue stability for $p\ge5$ and universal all-level ternary renormalization; the stronger growing defect is reduced to one explicit cubic-kernel contraction, with its quartic boundary proved |
 | Compare the portfolio economically | [Economist-style rankings](RANKINGS.md) | Editorial scores, not correctness claims |
 | Browse the wider program | [Related-results reading map](related-results/README.md) | Theorem, reduction, computation, and synthesis lanes |
@@ -134,8 +134,8 @@ The August 3
 applies these two engines to a new source-supplied queue: all 52 ordinary
 ratios A295431--A295482 inherit the full cubic tower for $p\ge5$, while the
 15 currently visible fractional-index variants inherit the quotient tower;
-all eleven half-index cases are now unconditional, while four denominator-three
-or denominator-four cases remain open only at the integrality step.
+all eleven half-index cases and all four denominator-three/four cases are now
+unconditional.
 The [binomial-quotient cancellation theorem](related-results/BinomialQuotientCancellation.md)
 also closes the complete two-parameter conjecture on
 [A357509](https://oeis.org/A357509), rather than only its displayed
