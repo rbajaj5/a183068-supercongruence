@@ -461,9 +461,9 @@ python verification/related/verify_a365029_first_two_levels.py
 The economical order is:
 
 1. **A365029 tower above \(r=2\).** The boundary and first two adjacent
-   congruences are proved. The remaining task is to induct the explicit
-   two-digit reciprocal-square calculation through
-   \(\mathbb Z/p^r\mathbb Z\).
+   congruences are proved. The [all-level digit reduction](A365029AllLevelDigitReduction.md)
+   now gives an exact recursive summand formula and reduces the remaining
+   task to one complete-digit cancellation modulo \(p^r\).
 2. **A364183 integrality.** Resolve the even/odd factorial-ratio branches
    before discussing supercongruences.
 3. **A364118.** Use its Apéry/modular structure rather than forcing a

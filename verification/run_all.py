@@ -43,6 +43,7 @@ SCRIPTS = (
     "verification/related/verify_straub_prime5_packet.py",
     "verification/related/verify_a108628_half_index.py",
     "verification/related/verify_a365029_first_two_levels.py",
+    "verification/related/verify_a365029_all_level_digit_reduction.py",
     "verification/related/verify_binomial_quotient_cancellation.py",
     "verification/related/verify_a288470_odd_prime_tower.py",
     "verification/related/verify_multinomial_power_towers.py",

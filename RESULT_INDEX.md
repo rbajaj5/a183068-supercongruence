@@ -876,12 +876,13 @@ proof.
   first-queue target.
 - **Source status:** Named open problems.
 - **Status:** Reduction plus computation. A365029 is proved through \(r=2\)
-  and reduced above it to iterating an explicit two-digit complete-block
-  calculation, with 177 higher-level block checks. The complete enhanced
+  and reduced above it by an [exact all-level digit factorization](related-results/A365029AllLevelDigitReduction.md)
+  to one complete-digit cancellation, verified through four levels. The complete enhanced
   A375178 exponent family and its signed companions are now proved
   separately through their respective shell geometries.
 - **Queue:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
+  and [`verify_a365029_all_level_digit_reduction.py`](verification/related/verify_a365029_all_level_digit_reduction.py)
 
 ## Direct generalizations
 
