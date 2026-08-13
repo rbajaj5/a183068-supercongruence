@@ -302,8 +302,9 @@ proves both its ordinary cubic tower for every `p>=5` and its conjectured
 A376466 in the same exact coefficient-pairing framework and refutes that
 record's proposed shifted tower already at `p=5,n=2,r=1`; the pure-prime
 shift also fails at `p=5,r=2`. Both records move to `partial`, so no claim in
-the 110-record census is now wholly untreated. A376458 remains partial only
-because its higher pure-prime `p^(3r+3)` bonus is still open.
+the 110-record census is now wholly untreated. A376458 is now closed by the
+[enhanced pure-prime theorem](A376458EnhancedTower.md); among this final
+pair, only A376466's ordinary aggregate unit shell remains open.
 A376466's divisible shifted row is now a homogeneous negative-coordinate
 Straub coefficient; its surviving obstruction is the aggregate unit shell.
 

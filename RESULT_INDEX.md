@@ -2316,14 +2316,17 @@ proof.
 - **Claim 2:** For every prime `p>=7`,
   `A(p)=A(1) (mod p^5)`. The excluded prime is sharp:
   `A(5)-A(1)=-6*5^4`.
+- **Claim 2a:** For every prime `p>=5` and every `r>=2`,
+  `A(p^r)=A(p^(r-1)) (mod p^(3r+3))`.
 - **Claim 3:** A376458 and A376466 are exact coefficient pairings with the
   same shifted A108625 row. The latter record's proposed shifted cubic
   tower is false: `A376466(9)-A376466(1)=3 (mod 5)`, and its pure-prime
   shift also fails at `p=5,r=2`.
-- **Status:** Complete proof of the collapse, prime-level fifth power, and
-  counterexample; exact reduction for the surviving ordinary cubic towers
-  and higher A376458 bonus. Those surviving targets remain open.
+- **Status:** Complete proof of the collapse, prime-level fifth power,
+  ordinary cubic tower, enhanced A376458 pure-prime tower, and shifted
+  A376466 counterexample. Only the ordinary A376466 unit shell remains open.
 - **Report:** [A376 Apéry-companion reduction](related-results/A376AperyCompanionReduction.md)
+- **Enhanced theorem:** [A376458 pure-prime tower](related-results/A376458EnhancedTower.md)
 - **Exact checker:** [`verify_a376_apery_companions.py`](verification/related/verify_a376_apery_companions.py)
 
 ### FRANEL-CT — integer-parameter Franel-companion kernels

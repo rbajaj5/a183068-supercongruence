@@ -1,11 +1,12 @@
 # The two remaining A376 Apéry companions
 
 **Status:** the A376458 nested sum is collapsed to one signed
-four-binomial sum, its full ordinary cubic tower is proved, and its
-conjectured prime-level `p^5` congruence is proved for every `p>=7`;
+four-binomial sum, its full ordinary cubic tower and higher pure-prime
+`p^(3r+3)` tower are proved, and its conjectured prime-level `p^5`
+congruence is proved for every `p>=7`;
 A376466 has a homogeneous negative-coordinate row identity, while its
 proposed shifted tower is refuted by an exact counterexample; the ordinary
-A376466 tower and the higher A376458 bonus remain open
+A376466 tower remains open
 
 The last two records treated in this packet are
 [A376458](https://oeis.org/A376458) and
@@ -373,8 +374,9 @@ The first line is the scaled shell; the second is the unit shell. For
 A376458, Section 6 handles these shells using the product formula (26).
 For A376466, Section 7 exposes the shifted row as a homogeneous
 negative-coordinate coefficient but also records why that observation does
-not by itself close the unit shell. The remaining pure-prime A376458
-conjecture asks for `3r+3` when `r>=2`.
+not by itself close the unit shell. The pure-prime A376458 conjecture asking
+for `3r+3` when `r>=2` is proved in the
+[enhanced tower note](A376458EnhancedTower.md).
 A376466's proposed all-`n` shifted companion has already been disposed of by
 Theorem 4.
 
@@ -615,6 +617,9 @@ Thus two additional powers arise only after summing the unit shell. The
 ordinary A376466 conjecture has now been reduced more sharply: its divisible
 shell is governed by the proved homogeneous estimate (38), and its only
 remaining obstruction is an aggregate unit-shell cancellation.
+
+The separate higher A376458 obligation formerly recorded in this note is
+closed by the [enhanced A376458 theorem](A376458EnhancedTower.md).
 
 ## 8. Verification and source boundary
 
