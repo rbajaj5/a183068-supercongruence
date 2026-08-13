@@ -5,8 +5,8 @@ four-binomial sum, its full ordinary cubic tower and higher pure-prime
 `p^(3r+3)` tower are proved, and its conjectured prime-level `p^5`
 congruence is proved for every `p>=7`;
 A376466 has a homogeneous negative-coordinate row identity, while its
-proposed shifted tower is refuted by an exact counterexample; the ordinary
-A376466 tower remains open
+proposed shifted tower is refuted by an exact counterexample; its ordinary
+tower is reduced to one quadratic Cartier-kernel descent
 
 The last two records treated in this packet are
 [A376458](https://oeis.org/A376458) and
@@ -615,8 +615,11 @@ v_5\bigl(B(5)-B(1)\bigr)=3.
 
 Thus two additional powers arise only after summing the unit shell. The
 ordinary A376466 conjecture has now been reduced more sharply: its divisible
-shell is governed by the proved homogeneous estimate (38), and its only
-remaining obstruction is an aggregate unit-shell cancellation.
+shell is governed by the proved homogeneous estimate (38), and its aggregate
+unit shell is reduced in the
+[two-moment note](A376466OrdinaryTower.md) to one explicit quadratic
+Cartier-kernel congruence. That note verifies the congruence through three
+levels but does not promote it to a proof.
 
 The separate higher A376458 obligation formerly recorded in this note is
 closed by the [enhanced A376458 theorem](A376458EnhancedTower.md).

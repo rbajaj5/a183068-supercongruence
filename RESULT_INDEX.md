@@ -2324,10 +2324,13 @@ proof.
   shift also fails at `p=5,r=2`.
 - **Status:** Complete proof of the collapse, prime-level fifth power,
   ordinary cubic tower, enhanced A376458 pure-prime tower, and shifted
-  A376466 counterexample. Only the ordinary A376466 unit shell remains open.
+  A376466 counterexample. The surviving ordinary A376466 tower is reduced to
+  one quadratic Cartier-kernel descent, verified but not yet proved.
 - **Report:** [A376 Apéry-companion reduction](related-results/A376AperyCompanionReduction.md)
 - **Enhanced theorem:** [A376458 pure-prime tower](related-results/A376458EnhancedTower.md)
+- **Two-moment reduction:** [A376466 ordinary tower](related-results/A376466OrdinaryTower.md)
 - **Exact checker:** [`verify_a376_apery_companions.py`](verification/related/verify_a376_apery_companions.py)
+- **Conditional-proof checker:** [`verify_a376466_ordinary_tower.py`](verification/related/verify_a376466_ordinary_tower.py)
 
 ### FRANEL-CT — integer-parameter Franel-companion kernels
 
