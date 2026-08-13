@@ -83,10 +83,11 @@ identified in your July 31 message:
    have recorded their formulas but do not yet have a common proof.
 
 Of the 15 fractional-index formulas currently visible in the Bober packet,
-A364176 and A364183 are therefore closed completely. The rational $p$-adic
-transfer is available for all 15, and the other 13 global integrality statements remain
+all eleven half-index variants are now closed completely by a uniform
+translated-Landau theorem. The rational $p$-adic transfer is available for
+all 15, and the four denominator-three/four integrality statements remain
 the active queue. We have not made a literature-priority claim for the new
-affine floor argument.
+argument.
 
 Best,
 
