@@ -776,6 +776,23 @@ proof.
 - **Proof:** [A364176 affine-Landau integrality and tower](related-results/A364176AffineLandauTower.md)
 - **Exact checker:** [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py)
 
+### A364183-INTEGRAL - affine-Landau integrality and cubic tower
+
+- **Claim:** OEIS A364183 is integral for every nonnegative index. For every
+  prime $p\ge5$ and positive integers $n,r$,
+  $A(np^r)\equiv A(np^{r-1})\pmod {p^{3r}}$.
+- **Source status:** Named open problem; this is A295479 at the half-index.
+- **Mechanism:** Even indices are Bober's integral A295479. At odd indices,
+  the half-gamma identity produces a nine-floor affine Landau defect. Writing
+  $2m+1=qd+s$ leaves only $q=0,1$ and a twelve-row carry table. An exact
+  factorization into six numerator and five denominator half-binomial terms
+  then proves the full adjacent tower.
+- **Boundary:** No claim is made for $p=2,3$; specialist review and literature
+  priority remain pending.
+- **Status:** Complete elementary proof candidate.
+- **Proof:** [A364183 affine-Landau integrality and tower](related-results/A364183AffineLandauTower.md)
+- **Exact checker:** [`verify_a364183_affine_landau.py`](verification/related/verify_a364183_affine_landau.py)
+
 ### RATGAMMA-3 — rational gamma-ratio cubic towers
 
 - **Claim:** Let
@@ -797,14 +814,14 @@ proof.
   adjacent congruence for the values themselves.
 - **Named application:** Radcliffe proved A364175 integral in July 2026;
   the theorem therefore proves its full conjectured $p^{3r}$ tower. The
-  affine-Landau lemma proves A364176 integral, so this theorem also closes
-  its tower. The same transfer applies to every residue-balanced gamma
+  affine-Landau lemmas prove A364176 and A364183 integral, so this theorem
+  also closes their towers. The same transfer applies to every residue-balanced gamma
   quotient in A364172--A364184, reducing the other records to global integrality.
   It also proves every row conjecture on A365025 (including A365026 and
   A365027) and every row $s\ge3$ of A364513 (including A364515--A364517).
   The same theorem supplies the quotient congruence component for all 15
   currently visible fractional-index variants in Bala's Bober packet; the
-  A364176 member is now unconditional.
+  A364176 and A364183 members are now unconditional.
 - **Mechanism:** An exact denominator-$q$ rational-binomial product, complete
   reduced-residue harmonic blocks, and the classical balanced integer
   factorial-ratio closure.
@@ -1333,16 +1350,17 @@ proof.
   records identified by Bala satisfy the residue-balanced rational
   $p^{3r}$ quotient tower for $p\ge5$.
 - **Boundary:** The sequence congruence follows whenever the values are
-  $p$-integral. The A295456 half-index case A364176 now has a complete
-  affine-Landau integrality proof and an unconditional tower. The other 14
+  $p$-integral. The A295456 and A295479 half-index cases A364176 and A364183
+  now have complete affine-Landau integrality proofs and unconditional towers. The other 13
   global integrality claims remain open; exact integrality through $N=30$ is
   evidence only. The A295464 source formula was not yet visible and is not
   inferred.
-- **Status:** Complete conditional congruence deduction for the packet; one
-  fractional case closed completely and 14 named integrality targets open.
+- **Status:** Complete conditional congruence deduction for the packet; two
+  fractional cases closed completely and 13 named integrality targets open.
 - **Proof and queue:** [Bober sporadic factorial-ratio packet](related-results/BoberSporadicFactorialRatioPacket.md)
 - **Exact checkers:** [`verify_bober_sporadic_packet.py`](verification/related/verify_bober_sporadic_packet.py),
-  [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py)
+  [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py),
+  [`verify_a364183_affine_landau.py`](verification/related/verify_a364183_affine_landau.py)
 
 ### A008793-CUBE — nonlinear cube-plane-partition tower
 

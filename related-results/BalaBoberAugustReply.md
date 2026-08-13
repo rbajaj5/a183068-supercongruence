@@ -83,8 +83,8 @@ identified in your July 31 message:
    have recorded their formulas but do not yet have a common proof.
 
 Of the 15 fractional-index formulas currently visible in the Bober packet,
-A364176 is therefore closed completely. The rational $p$-adic transfer is
-available for all 15, and the other 14 global integrality statements remain
+A364176 and A364183 are therefore closed completely. The rational $p$-adic
+transfer is available for all 15, and the other 13 global integrality statements remain
 the active queue. We have not made a literature-priority claim for the new
 affine floor argument.
 

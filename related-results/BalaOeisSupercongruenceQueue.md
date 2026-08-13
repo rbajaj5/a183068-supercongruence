@@ -30,7 +30,7 @@ representative targets by mechanism.
 | [A375179], [A375180] | Two parallel signed odd-power families have the same proposed exponents | The prime boundary is proved below; the [signed generalized-binomial theorem](A375179A375180SignedOddPowerTowers.md) proves both complete higher towers |
 | [A333593] | \(a(np^r)\equiv a(np^{r-1})\pmod{p^{3r}}\) | Proved below by an exact decomposition into a Coster generalized Apéry tower and a Jacobsthal--Kazandzidis binomial tower |
 | [A364118] | An Apéry linear combination gains two or three powers beyond the underlying tower | Modular/Apéry target; not yet reduced to the termwise framework |
-| [A364183] | A parity-sensitive height-one factorial ratio is integral and satisfies a \(p^{3r}\) tower | Integrality itself is still conjectural on the OEIS entry; treat before the tower |
+| [A364183] | A parity-sensitive height-one factorial ratio is integral and satisfies a \(p^{3r}\) tower | Both claims are proved in the [affine-Landau theorem](A364183AffineLandauTower.md): a two-case residue table proves integrality and eleven half-binomial factors prove the tower for $p\ge5$ |
 
 The live OEIS records are the source of the statements and attribution.
 
@@ -464,9 +464,7 @@ The economical order is:
    congruences are proved. The [all-level digit reduction](A365029AllLevelDigitReduction.md)
    now gives an exact recursive summand formula and reduces the remaining
    task to one complete-digit cancellation modulo \(p^r\).
-2. **A364183 integrality.** Resolve the even/odd factorial-ratio branches
-   before discussing supercongruences.
-3. **A364118.** Use its Apéry/modular structure rather than forcing a
+2. **A364118.** Use its Apéry/modular structure rather than forcing a
    termwise proof.
 
 This ordering is a research-budget decision, not a ranking of Peter's

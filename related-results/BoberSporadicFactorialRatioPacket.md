@@ -4,9 +4,10 @@
 
 **Status:** the ordinary 52-sequence cubic tower is a complete deduction
 from the repository's balanced-factorial theorem. The fractional-index
-packet has a complete conditional congruence theorem; A295456 at index $N/2$
-(OEIS A364176) now has a complete affine-Landau integrality proof and hence an
-unconditional tower. The other 14 visible integrality assertions remain open.
+packet has a complete conditional congruence theorem; A295456 and A295479 at
+index $N/2$ (OEIS A364176 and A364183) now have complete affine-Landau
+integrality proofs and hence unconditional towers. The other 13 visible
+integrality assertions remain open.
 
 This note records Peter Bala's August 2026 follow-up about the 52 sporadic
 integral factorial ratios cross-referenced from
@@ -149,13 +150,14 @@ integrality.
 | [A295471](https://oeis.org/A295471) | $N/2$ | Passes for $q=2$ | Integrality conjectural; (8) proved |
 | [A295475](https://oeis.org/A295475) | $N/2$ | Passes for $q=2$ | Integrality conjectural; (8) proved |
 | [A295477](https://oeis.org/A295477) | $N/2$, $N/4$ | Passes for $q=2,4$ | Integrality conjectural; (8) proved |
-| [A295479](https://oeis.org/A295479) | $N/2$ | Passes for $q=2$ | Integrality conjectural; (8) proved |
+| [A295479](https://oeis.org/A295479) | $N/2$ | Passes for $q=2$ | A364183 integral and its full tower proved by the [affine-Landau theorem](A364183AffineLandauTower.md) |
 | [A295481](https://oeis.org/A295481) | $N/2$ | Passes for $q=2$ | Integrality conjectural; (8) proved |
 
 There are 15 approved fractional-index sequences in this table. The
-[A364176 affine-Landau theorem](A364176AffineLandauTower.md) proves one of
+[A364176](A364176AffineLandauTower.md) and
+[A364183](A364183AffineLandauTower.md) affine-Landau theorems prove two of
 their integrality claims for every index. Exact arithmetic finds integral
-values for the other 14 through $N=30$, but this finite evidence is not an
+values for the other 13 through $N=30$, but this finite evidence is not an
 integrality proof.
 
 ## 3. A compact CSP admission filter
@@ -181,9 +183,9 @@ or integrality.
 For this packet the filter gives a sharp division of labor:
 
 - **ordinary 52 ratios:** balance plus known integrality, hence (3);
-- **A295456 at $N/2$:** balance, residue balance, and the affine-Landau
-  floor lemma, hence global integrality and (9);
-- **the other 14 visible fractional variants:** balance and residue balance,
+- **A295456 and A295479 at $N/2$:** balance, residue balance, and dedicated
+  affine-Landau floor lemmas, hence global integrality and (9);
+- **the other 13 visible fractional variants:** balance and residue balance,
   hence (8), while integrality remains open;
 - **A295464 pending edit:** wait for the exact approved formula before
   assigning it a theorem status.
