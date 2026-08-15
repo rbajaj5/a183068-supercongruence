@@ -2325,7 +2325,8 @@ proof.
 - **Status:** Complete proof of the collapse, prime-level fifth power,
   ordinary cubic tower, enhanced A376458 pure-prime tower, and shifted
   A376466 counterexample. The surviving ordinary A376466 tower is reduced to
-  one quadratic Cartier-kernel descent, verified but not yet proved.
+  one scaled Cartier-boundary cancellation; descent on every unit digit is
+  proved, while the boundary is verified but not yet proved.
 - **Report:** [A376 Apéry-companion reduction](related-results/A376AperyCompanionReduction.md)
 - **Enhanced theorem:** [A376458 pure-prime tower](related-results/A376458EnhancedTower.md)
 - **Two-moment reduction:** [A376466 ordinary tower](related-results/A376466OrdinaryTower.md)

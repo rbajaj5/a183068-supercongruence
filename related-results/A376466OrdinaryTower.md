@@ -1,8 +1,8 @@
 # The ordinary A376466 cubic tower
 
-**Status:** exact two-moment reduction and extensive verification; one
-quadratic Cartier-kernel lemma remains unproved, while the proposed shifted
-companion is false
+**Status:** exact two-moment reduction and extensive verification; the
+quadratic Cartier-kernel lemma is now proved away from the scaled boundary
+`j=0 mod p`, while the proposed shifted companion is false
 
 Let
 
@@ -133,7 +133,7 @@ lower binomial vanishes: perform the cancellation before reducing modulo
 `p^(2r)`, or use the integer-binomial continuation in the displayed
 negative-coordinate row.
 
-### Lemma 2 (quadratic Cartier descent; open proof obligation)
+### Lemma 2 (quadratic Cartier descent)
 
 For `N=np^r`, `M=N/p`, and every nonnegative `j`,
 
@@ -142,25 +142,63 @@ For `N=np^r`, `M=N/p`, and every nonnegative `j`,
 tag{8}
 ```
 
-### Evidence and exact reduction
+### Unit digits are already proved
 
-The three outer binomials in (4) satisfy signed shifted-binomial descent
-modulo `p^r`.  The negative-coordinate identity
+There is an exact relation between the two kernels:
 
 ```math
-T(N-1,j)=\mathcal B(-N,j,-N)
+K_N(j)=\frac{j}{j-N}D_N(j),
+\qquad
+D_N(j)=\left(1-\frac Nj\right)K_N(j).
+tag{8a}
 ```
 
-supplies a second descended block. Exact arithmetic shows that their
-first-order defects cancel and that (8) holds through three adjacent
-levels in the audit range.  This is stronger than the ordinary mod-`p^r`
-Cartier descent supplied directly by Straub's shifted-binomial lemmas.
+If `p` does not divide `j`, multiply (5) by `1-N/j`.  Since this factor is
+a `p`-adic integer and
 
-That observation is not yet a proof of (8): the cancellation must be
-established uniformly for every residue digit, including indices divisible
-by `p`.  Accordingly, (8) is retained as the one explicit proof obligation
-of this note.  Once (8) is proved, the remainder below is a formal weighted
-block argument.
+```math
+\left(1+\frac Nj\right)\left(1-\frac Nj\right)
+=1-\frac{N^2}{j^2}\equiv1\pmod {p^{2r}},
+```
+
+we obtain (8) immediately.  Thus no residue-by-residue induction is needed:
+the two-moment expansion already proves every unit digit.
+
+### Remaining scaled-boundary lemma
+
+It remains to prove only
+
+```math
+\boxed{D_N(pq)\equiv D_M(q)\pmod {p^{2r}}}.
+tag{8b}
+```
+
+Conversely, (8b) together with the proved unit case gives (8) for every
+`j`; hence (8) and (8b) are equivalent modulo Lemma 1.
+
+The three outer binomials in (4) satisfy signed shifted-binomial descent,
+and the negative-coordinate identity
+
+```math
+T(N-1,pq)=\mathcal B(-N,pq,-N)
+```
+
+supplies the homogeneous scaled row.  Straub's theorem proves each scaled
+row difference modulo `p^(3(min(v_p(M),v_p(q))+1))`.  The remaining issue is
+to show that its first defect cancels the first defect of the three outer
+binomials uniformly when that exponent is below `2r`.
+
+### Evidence and source boundary
+
+Exact arithmetic shows that the two first defects cancel and that (8b)
+holds through three adjacent levels in the audit range.  This is stronger
+than the ordinary Cartier descent supplied directly by Straub's
+shifted-binomial lemmas.
+
+That observation is not yet a proof of (8b).  Accordingly, the scaled
+boundary cancellation--not the full digitwise statement--is retained as the
+one explicit proof obligation of this note.  Once (8b) is proved, the
+remainder below is a formal weighted block argument.
 
 ## 2. Reciprocal block sums
 
@@ -267,10 +305,11 @@ Run
 python verification/related/verify_a376466_ordinary_tower.py
 ```
 
-The checker performs 8,251 exact tests of (5)--(12), both shell
-congruences, and the full tower.  It includes primes through 19 at the
-first level, the second level for `p=5,7`, and the third level at `p=5`;
-37 sampled tower instances attain the claimed exponent exactly.
+The checker tests (5)--(12), the exact unit-digit deduction (8a), the
+remaining scaled boundary (8b), both shell congruences, and the full tower.
+It includes primes through 19 at the first level, the second level for
+`p=5,7`, and third-level scaled-boundary cases at `p=5`; 37 sampled tower
+instances attain the claimed exponent exactly.
 
 The sequence and conjecture are Peter Bala's OEIS contribution.  The
 negative-coordinate row and scaled-shell reduction are proved in the
@@ -278,6 +317,6 @@ companion note.  The ingredients used here are finite binomial products,
 the classical Jacobsthal--Kazandzidis congruence, and the weighted block
 induction in Armin Straub's
 [*Multivariate Apéry numbers and supercongruences of rational functions*](https://arxiv.org/abs/1401.0854).
-The two-moment decomposition (5) is the new exact reduction.  The checker
-is evidence for, not a proof of, the open quadratic descent (8).  No
-literature-priority claim is made.
+The two-moment decomposition (5) and the reduction of (8) to the scaled
+boundary (8b) are the exact reductions recorded here.  The checker is
+evidence for, not a proof of, (8b).  No literature-priority claim is made.

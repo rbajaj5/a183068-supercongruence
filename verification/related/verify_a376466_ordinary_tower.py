@@ -2,7 +2,7 @@
 
 The proof note is related-results/A376466OrdinaryTower.md.  These checks are
 transcription and boundary tests.  In particular, they do not prove the open
-quadratic Cartier-kernel descent recorded as Lemma 2 in the note.
+scaled-boundary congruence (8b) in the note.
 """
 
 from __future__ import annotations
@@ -135,6 +135,59 @@ def check_cartier_descent() -> int:
     return checks
 
 
+def check_unit_reduction_identity() -> int:
+    """Check that Lemma 1 implies Cartier descent on every unit digit."""
+
+    checks = 0
+    for prime in PRIMES:
+        for level in (1, 2):
+            for n in range(1, 5):
+                high_n = n * prime**level
+                low_n = high_n // prime
+                modulus = prime ** (2 * level)
+                for j in range(1, high_n):
+                    if j % prime == 0:
+                        continue
+                    q = j // prime
+                    assert Fraction(cartier_kernel(high_n, j)) == Fraction(
+                        reduced_outer(high_n, j) * shifted_row(high_n - 1, j)
+                    ) * (1 - Fraction(high_n, j))
+                    model = cartier_kernel(low_n, q) * (
+                        1 + Fraction(high_n, j)
+                    ) * (1 - Fraction(high_n, j))
+                    assert rational_valuation(
+                        model - cartier_kernel(low_n, q), prime
+                    ) >= 2 * level
+                    assert (
+                        cartier_kernel(high_n, j) - cartier_kernel(low_n, q)
+                    ) % modulus == 0
+                    checks += 1
+    return checks
+
+
+def check_scaled_boundary() -> int:
+    """Test the sole remaining congruence (8b), including level three."""
+
+    checks = 0
+    cases = [
+        (prime, level, n)
+        for prime in PRIMES
+        for level in (1, 2)
+        for n in range(1, 5)
+    ]
+    cases += [(5, 3, 1)]
+    for prime, level, n in cases:
+        high_n = n * prime**level
+        low_n = high_n // prime
+        modulus = prime ** (2 * level)
+        for q in range(low_n):
+            assert (
+                cartier_kernel(high_n, prime * q) - cartier_kernel(low_n, q)
+            ) % modulus == 0
+            checks += 1
+    return checks
+
+
 def check_shells_and_towers() -> tuple[int, int]:
     checks = 0
     sharp = 0
@@ -189,11 +242,22 @@ def main() -> None:
     reciprocal = check_reciprocal_blocks()
     first_order = check_first_order_factorization()
     descent = check_cartier_descent()
+    unit_reduction = check_unit_reduction_identity()
+    scaled_boundary = check_scaled_boundary()
     towers, sharp = check_shells_and_towers()
-    total = reciprocal + first_order + descent + towers
+    total = (
+        reciprocal
+        + first_order
+        + descent
+        + unit_reduction
+        + scaled_boundary
+        + towers
+    )
     print(f"reciprocal block checks: {reciprocal}")
     print(f"first-order factorization checks: {first_order}")
     print(f"Cartier-kernel descent checks: {descent}")
+    print(f"unit-digit reduction checks: {unit_reduction}")
+    print(f"scaled-boundary checks: {scaled_boundary}")
     print(f"shell and tower checks: {towers} ({sharp} sharp)")
     print(f"all {total} conditional A376466 ordinary-tower checks passed")
 

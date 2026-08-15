@@ -306,10 +306,11 @@ the 110-record census is now wholly untreated. A376458 is now closed by the
 [enhanced pure-prime theorem](A376458EnhancedTower.md); among this final
 pair, only A376466's ordinary aggregate unit shell remains open.
 A376466's divisible shifted row is now a homogeneous negative-coordinate
-Straub coefficient. Its unit shell has subsequently been reduced to the
-single quadratic Cartier-kernel descent in
-[the two-moment note](A376466OrdinaryTower.md); that lemma is verified but
-not yet proved, so the record remains `partial`.
+Straub coefficient. Its unit shell has subsequently been reduced in
+[the two-moment note](A376466OrdinaryTower.md). The kernel descent is now
+proved on every unit digit directly from that expansion; only the scaled
+boundary `j=0 mod p` remains. That cancellation is verified but not yet
+proved, so the record remains `partial`.
 
 The later odd-moment completion closes the composite part of A357512.  An
 elementary factorization removes two powers of the shifted modulus
