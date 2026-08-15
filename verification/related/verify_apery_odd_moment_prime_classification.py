@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from fractions import Fraction
-from math import comb
+from math import comb, gcd
 
 
 PRIMES = (3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43)
@@ -34,6 +34,53 @@ def moment_mod(q: int, n: int, modulus: int) -> int:
         * pow(comb(n + k, k), 2, modulus)
         for k in range(n + 1)
     ) % modulus
+
+
+def rational_valuation(value: Fraction, prime: int) -> int:
+    if value == 0:
+        return 10**9
+    return valuation(value.numerator, prime) - valuation(value.denominator, prime)
+
+
+def reduced_kernel(n: int, k: int) -> int:
+    return comb(n - 2, k - 1) * comb(n + k - 1, k - 1)
+
+
+def reduced_sum(n: int) -> int:
+    return sum(k * reduced_kernel(n, k) ** 2 for k in range(1, n))
+
+
+def certificate_polynomial(n: int, k: int) -> int:
+    return (
+        6 * k**4
+        - 4 * k**3 * n
+        + 16 * k**3
+        - 3 * k**2 * n**2
+        - 6 * k**2 * n
+        + 15 * k**2
+        + 2 * k * n**3
+        - 7 * k * n**2
+        + 5 * k
+        + 4 * n**3
+        - 8 * n**2
+        + 4 * n
+    )
+
+
+def certificate_multiplier(n: int, k: int) -> Fraction:
+    return (
+        Fraction(3 * (k - 1) ** 2, k)
+        - 2 * n
+        + Fraction(2 * n, k**2)
+    )
+
+
+def certificate_summand(n: int, k: int) -> Fraction:
+    kernel = reduced_kernel(n, k)
+    return Fraction(
+        kernel**2 * certificate_polynomial(n, k),
+        k**3 * (k + 1),
+    )
 
 
 def check_exact_product() -> int:
@@ -155,6 +202,92 @@ def check_named_boundary() -> int:
     return checks
 
 
+def check_composite_factorization() -> int:
+    checks = 0
+    for n in range(2, 61):
+        left = moment(5, n - 1)
+        right = n**2 * (n - 1) ** 2 * reduced_sum(n)
+        assert left == right
+        checks += 1
+        for k in range(1, n):
+            kernel = reduced_kernel(n, k)
+            assert kernel % k == 0
+            assert (
+                n * (n - 1) * kernel
+                == k**2 * comb(n - 1, k) * comb(n + k - 1, k)
+            )
+            assert (
+                n
+                * (n - 1)
+                * comb(n + k - 1, k - 1)
+                == k * (k + 1) * comb(n + k - 1, k + 1)
+            )
+            checks += 3
+            for divisor in range(2, n + k + 1):
+                defect = (
+                    (n - 2) // divisor
+                    + (n + k - 1) // divisor
+                    - k // divisor
+                    - (k - 1) // divisor
+                    - (n - k - 1) // divisor
+                    - n // divisor
+                )
+                assert defect >= 0
+                checks += 1
+    return checks
+
+
+def check_telescoping_certificate() -> int:
+    checks = 0
+    for n in range(2, 71):
+        terms = [Fraction(0)] + [
+            Fraction(k * reduced_kernel(n, k) ** 2)
+            for k in range(1, n)
+        ] + [Fraction(0)]
+        total = Fraction(0)
+        for k in range(1, n):
+            left = 12 * terms[k] - (
+                certificate_multiplier(n, k + 1) * terms[k + 1]
+                - certificate_multiplier(n, k) * terms[k]
+            )
+            right = n**2 * certificate_summand(n, k)
+            assert left == right
+            total += certificate_summand(n, k)
+            checks += 1
+        assert 12 * reduced_sum(n) == n**2 * total
+        checks += 1
+    return checks
+
+
+def check_local_integrality() -> int:
+    checks = 0
+    for prime in (5, 7, 11, 13):
+        for n in range(prime, 141, prime):
+            a = valuation(n, prime)
+            for k in range(1, n):
+                kernel_depth = valuation(reduced_kernel(n, k), prime)
+                q = valuation(k, prime)
+                s = valuation(k + 1, prime)
+                assert kernel_depth >= q
+                assert kernel_depth >= 2 * q - a
+                assert kernel_depth >= s - a
+                assert rational_valuation(certificate_summand(n, k), prime) >= 0
+                checks += 4
+            assert valuation(reduced_sum(n), prime) >= 2 * a
+            checks += 1
+    return checks
+
+
+def check_full_composite_theorem() -> int:
+    checks = 0
+    for n in range(1, 301):
+        if gcd(n, 6) != 1:
+            continue
+        assert moment_mod(5, n - 1, n**4) == 0
+        checks += 1
+    return checks
+
+
 def main() -> None:
     counts = {
         "exact product": check_exact_product(),
@@ -164,6 +297,10 @@ def main() -> None:
         "odd-moment residue": check_odd_moment_residue(),
         "exception table": check_exception_table(),
         "named boundary": check_named_boundary(),
+        "composite factorization": check_composite_factorization(),
+        "telescoping certificate": check_telescoping_certificate(),
+        "local certificate integrality": check_local_integrality(),
+        "full composite theorem": check_full_composite_theorem(),
     }
     for label, count in counts.items():
         print(f"{label}: {count} checks")

@@ -1,9 +1,10 @@
 # The Apéry enhanced-congruence packet
 
-**Status:** complete algebraic reduction of five OEIS records to three
-linear defect congruences; the three congruences remain open.
+**Status:** complete algebraic reduction of six OEIS records to three
+linear defect congruences away from one explicit `p=5` boundary; the three
+congruences and that boundary remain open
 
-Five records in the Bala census are built from the two Apéry sequences
+Six records in the Bala census are built from the two Apéry sequences
 
 ```math
 \begin{aligned}
@@ -16,7 +17,7 @@ W(n)&=\sum_{k=0}^{n}\binom nk^2\binom{n+k}{k}^2
 ```
 
 They look like separate linear and nonlinear conjectures.  They are not.
-After the classical cubic Apéry towers are removed, all five records ask
+After the classical cubic Apéry towers are removed, all six records ask
 for the same three-component cancellation.  For primes $p\ge7$, the
 surviving first defect is one-dimensional.
 
@@ -95,13 +96,14 @@ form (7), are the correct statement.
 Assume the cubic baselines (4).  For $p\ge5$, the enhanced
 supercongruence claims on A352655, A357506, A357567, A357956, and A357959,
 including the nonlinear companion claims printed on A357567 and A357959,
-all follow from (6).
+all follow from (6).  For $p\ge7$, the same is true of the higher-level
+A212334 claim.
 
 Conversely, the three linear source claims on A352655, A357567, and
 A357956 are exactly $R_{1,r}$, $R_{2,r}$, and $R_{3,r}$.
-Consequently the complete five-record packet is equivalent to the three
+Consequently the original five-record core is equivalent to the three
 relations (6), apart from the isolated $p=3$ first-level assertion on
-A357506.
+A357506; A212334 is the sixth, dependent record for `p>=7`.
 
 #### Proof
 
@@ -220,6 +222,28 @@ Equations (12) and (18), with the same quadratic-error bound, prove its
 congruence.  This establishes every implication.  The converse follows
 from (9) and (10). $\square$
 
+For A212334, the exact identity
+
+```math
+a(n)=\frac{W(n)+7W(n-1)}{12}
+```
+
+makes its adjacent defect `(gamma_r+7 delta_r)/12`.  The relation
+
+```math
+5(\gamma_r+7\delta_r)
+=(5\gamma_r-14\alpha_r)
++7(5\delta_r-2\beta_r)
++14(\alpha_r+\beta_r)
+\tag{18a}
+```
+
+places it in the same packet whenever `p>=7`.  At `p=5`, division by the
+leading `5` loses one power, so (18a) deliberately does not claim the
+higher A212334 boundary.  Its prime-level `p^5` assertion is proved
+independently in
+[the enhanced-prime note](A212334EnhancedPrimeCongruence.md).
+
 The exceptional first-level statement on A357506 at $p=3$ is a finite
 boundary check:
 
@@ -283,7 +307,7 @@ nonlinear OEIS companions.
 
 ## 4. What remains to prove
 
-The five records no longer constitute five independent proof searches.
+The six records no longer constitute six independent proof searches.
 The exact remaining target is (6).
 
 There are two natural proof routes:
@@ -307,6 +331,9 @@ has rank one for $p\ne5$.
   $R_1$, plus the finite $p=3$ boundary.
 - [A357959](https://oeis.org/A357959) follows from $R_1$ and $R_3$,
   as does its nonlinear companion.
+- [A212334](https://oeis.org/A212334) follows from all three relations for
+  `p>=7`; its higher `p=5` boundary remains separate, while its prime-level
+  claim is proved in the linked note.
 
 No literature-priority claim is made for Theorem 2.  It is an elementary
 closure lemma used to identify the exact unresolved arithmetic.

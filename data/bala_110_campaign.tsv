@@ -1,81 +1,81 @@
 oeis	route	status	evidence	next_action
-A001850	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A001850	T	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as a search-corpus anchor
 A002003	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A002895	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A003161	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A003162	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A005258	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A002895	T	published-source	Osburn--Sahu Theorem 1.1, arXiv:1201.6195	verify the exact A=2, B=C=1 specialization in bibliography
+A003161	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	exactly reduces to the unresolved B_3 tower times a classical central-binomial tower
+A003162	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	odd-index subsequence is exactly the unresolved B_3 ballot-power tower
+A005258	T	published-source	Coster's classical Apery cubic tower	verify exact thesis theorem numbering in bibliography
 A005259	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied
 A005260	T	no-explicit-open	live OEIS match is to unrelated Bala material; no Bala supercongruence conjecture located	remove from proof queue unless an exact external claim is supplied
-A079489	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A079489	T	partial	related-results/A079489LagrangeKernelReduction.md	prove the normalized cubic kernel estimate (16) for both linear parameter maps
 A082758	T	published-source	Pan--Sun theorem cited by live OEIS entry	verify exact parameter match in bibliography
 A103882	T	published-source	Straub Example 3.4 gives the recorded Apéry-number congruence	verify exact edition and theorem numbering in bibliography
-A112028	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A112029	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A124435	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A132303	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A112028	T	proved-here	related-results/A112028EnhancedTower.md proves the p^5 boundary and full p^(3r+3) higher tower	independent audit and literature-priority search
+A112029	T	published-source	Coster Theorem 4 is cited on the live OEIS record for the full p^(3r) tower	verify exact theorem numbering and shifted-index normalization in bibliography
+A124435	T	proved-here	related-results/BalancedMatrixCoefficientQuadraticTower.md	independent review and literature-priority audit of the balanced-matrix theorem
+A132303	T	proved-here	related-results/A132303TrinomialCubeTower.md	independent review and literature-priority audit
 A141057	T	proved-here	MultinomialPowerFrobeniusTowers.md	independent review and priority audit
-A143583	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A183069	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A183204	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A198060	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A198256	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A198258	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A208675	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A212334	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A219562	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A143583	T	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record states only a Gauss p^r congruence and no Bala supercongruence conjecture
+A183069	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	integrality and sharp exact checks recorded; prove the unified odd ballot-power tower
+A183204	T	published-source	Osburn--Sahu--Straub, arXiv:1312.2195, s_7 cubic tower	verify exact equation normalization in bibliography
+A198060	T	proved-here	related-results/MeanderAdjacentBinomialTowers.md	independent review; ask OEIS editor to correct n*p*(r-1)-1 to n*p^(r-1)-1
+A198256	T	proved-here	related-results/MeanderAdjacentBinomialTowers.md	independent review of the quartic identity and cubic tower
+A198258	T	proved-here	related-results/MeanderAdjacentBinomialTowers.md	independent review of the ternary multiplicity bonus
+A208675	T	published-source	Straub equation (24) and multivariate cubic theorem, arXiv:1401.0854	verify the exact shifted parameter match in the bibliography
+A212334	T	partial	related-results/A212334EnhancedPrimeCongruence.md	prime-level p^5 theorem proved; for p>=7 the higher tower follows from R1-R3, while p=5 needs one extra boundary power
+A219562	T	proved-here	related-results/A219562EnhancedTower.md	independent review and literature-priority audit of the critical-shell theorem
 A234839	T	published-source	Osburn--Sahu--Straub Example 3.3 cited by OEIS	verify exact parameter match in bibliography
-A244973	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A260667	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A244973	T	partial	related-results/A244973QuadraticFrobeniusReduction.md	prove the explicit combined linear-quadratic Cartier estimate (11)
+A260667	T	proved-here	related-results/A260667PrimeBoundary.md	audit literature priority beyond the source record
 A288470	T	proved-here	A288470OddPrimeTower.md	independent review and priority audit
-A333592	T	partial	QuadraticGaussianQueueTheorem.md	prove or refute the stronger untwisted cubic tower
+A333592	T	proved-here	related-results/MixedNegativeBinomialCubicTower.md	independent review and source-facing cross-reference for the full positive-parameter cubic family
 A357510	T	proved-here	related-results/AperyOddMomentPrimeClassification.md	independent review and priority audit of the prime-boundary expansion
-A357512	T	partial	related-results/AperyOddMomentPrimeClassification.md	prime slice and exact exceptional-prime classification proved; prove the remaining composite n congruence
-A361889	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A361892	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A362676	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A363985	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A357512	T	proved-here	related-results/AperyOddMomentPrimeClassification.md	full composite n congruence proved by an exact telescoping certificate; prime slice and exceptional-prime classification also proved; independent review
+A361889	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	integrality and sharp exact checks recorded; prove the unified odd ballot-power tower
+A361892	T	partial	related-results/CatalanBallotPowerSupercongruenceAudit.md	integrality and sharp exact checks recorded; prove the unified odd ballot-power tower
+A362676	T	partial	related-results/FranelCompanionConstantTermReduction.md	exactly reduces to the m=-1 member of one two-kernel family; prove its cubic Cartier contraction
+A363985	T	partial	related-results/FranelCompanionConstantTermReduction.md	exact constant-term master family and 1088 tower checks recorded; prove the contraction for every integer m
 A370101	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A370102	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A376458	T	queued	none	extract exact conjecture; test termwise discard and transfer
-A376466	T	queued	none	extract exact conjecture; test termwise discard and transfer
+A376458	T	proved-here	related-results/A376458EnhancedTower.md	independent review and literature-priority search for the complete p^(3r+3) pure-prime tower
+A376466	T	partial	related-results/A376466OrdinaryTower.md	prove the scaled-boundary cancellation (8b); Lemma 1 already proves every unit digit and the remaining tower proof is then formal
 A002426	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed p^(2r) claim	verify exact parameter match in bibliography
-A005725	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A006318	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A036917	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A060941	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A108625	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the p=5 boundary and Straub parameter match
-A108628	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A143007	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the p=5 boundary and Straub parameter match
-A156554	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A005725	C	proved-here	related-results/QuadrinomialCoefficientOddPrimeTower.md	independent review and priority audit of both source-page conjectures
+A006318	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as a generating-function anchor
+A036917	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as an Apery-like source anchor
+A060941	C	partial	related-results/ExponentialCoefficientCartierReduction.md	prove the cubic bound (10) and its propagation under iteration; p=5 fails exactly
+A108625	C	published-source	related-results/StraubPrimeFiveCoefficientPacket.md	Straub Theorem 3.2(b) already includes p=5; retain the exact parameter and endpoint audit
+A108628	C	partial	related-results/A108628HalfIndexBoundary.md	ordinary tower source-closed for p>=5; first half-index and exact Dixon-term valuation proved; prove the one aggregate master comparison that implies all three higher claims
+A143007	C	published-source	related-results/StraubPrimeFiveCoefficientPacket.md	Straub Theorem 3.2(b) already includes p=5; retain the exact parameter and endpoint audit
+A156554	C	proved-here	related-results/A156554LegendreCoefficientTower.md	independent review and literature-priority audit of the full integral-parameter family
 A168597	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed congruence	verify exact parameter match in bibliography
 A176335	C	published-source	Coster Theorem 4 cited by live OEIS entry	verify exact parameter match in bibliography
-A177316	C	proved-here	related-results/StraubPrimeFiveCoefficientPacket.md	independent review of the bilateral coefficient and telescoping identity
-A228960	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
-A245926	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A246437	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A263843	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A281267	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A331562	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333090	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333091	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333092	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333093	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333095	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333096	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A333097	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A177316	C	published-source	related-results/StraubPrimeFiveCoefficientPacket.md	Straub Theorem 3.2(b) plus the proved bilateral coefficient and telescoping identity
+A228960	C	proved-here	related-results/CyclotomicRationalFramingTower.md	independent proof review and literature-priority audit of the general cyclotomic rational-framing theorem
+A245926	C	proved-here	related-results/A245926AlgebraicCoefficientTower.md	independent proof review and literature-priority audit
+A246437	C	proved-here	related-results/MixedStepCoefficientQuadraticTower.md	independent review and priority audit of the mixed-step family theorem
+A263843	C	proved-here	related-results/A263843ReversionCoefficientReduction.md	independent review of the ternary quadratic-cubic cancellation and Frobenius-descent lemma
+A281267	C	proved-here	related-results/EulerProductGaussianTower.md	independent review and source-facing cross-reference for the one-color d=1 specialization
+A331562	C	partial	related-results/A331562UniformRationalDiagonal.md	prove the uniform cubic coefficient estimate (12) for the continuant Frobenius numerator
+A333090	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Schroder coefficient reduction proved; close its Gaussian-prefactor Cartier estimates
+A333091	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Schroder coefficient reduction proved; close its Gaussian-prefactor Cartier estimates
+A333092	C	partial	related-results/TaylorTruncationCoefficientReduction.md	exact Schroder coefficient reduction proved; close its Gaussian-prefactor Cartier estimates
+A333093	C	partial	related-results/TaylorTruncationCoefficientReduction.md	prove the explicit cubic adjacent Gauss law (21) and the remaining quadratic weighted-harmonic estimate
+A333095	C	partial	related-results/TaylorTruncationCoefficientReduction.md	prove the explicit cubic adjacent Gauss law (21) and the remaining quadratic weighted-harmonic estimate
+A333096	C	partial	related-results/TaylorTruncationCoefficientReduction.md	prove the explicit cubic adjacent Gauss law (21) and the remaining quadratic weighted-harmonic estimate
+A333097	C	partial	related-results/TaylorTruncationCoefficientReduction.md	prove the explicit cubic adjacent Gauss law (21) and the remaining quadratic weighted-harmonic estimate
 A348410	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A350383	C	partial	CyclotomicCoefficientPairTheorem.md	displayed instance proved here; broader cyclotomic principle on the record remains open
+A350383	C	proved-here	related-results/CyclotomicRationalFramingTower.md	independent proof review and literature-priority audit of the general cyclotomic rational-framing theorem
 A351857	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A351858	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A351858	C	proved-here	related-results/A351858CyclotomicFamilyBoundary.md	named k=2 cubic tower proved; broader all-k and all-parameter claims refuted; independent review
 A352373	C	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
-A362722	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A362733	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
+A362722	C	partial	related-results/ExponentialCoefficientCartierReduction.md	prove the quadratic Cartier-defect estimates (10), including the pure-prime bonus
+A362733	C	partial	related-results/ExponentialCoefficientCartierReduction.md	prove the cubic Cartier-defect estimate (10), including p=3
 A363864	C	published-source	Straub Theorem 1.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
 A363867	C	published-source	Straub Theorem 3.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
 A363871	C	published-source	Straub Theorem 3.2 is cited on the live OEIS record	verify exact coefficient normalization in bibliography
-A364303	C	queued	none	extract exact conjecture; identify coefficient or Cartier representation
-A380290	C	partial	EulerProductGaussianTower.md	prove or refute the special untwisted cubic gain
+A364303	C	proved-here	related-results/DixonLegendreHalfBinomialTowers.md	independent review of the all-row Dixon--Legendre parameter match and small-prime boundary
+A380290	C	partial	related-results/EulerProductCubicCartierMoments.md	prove the single coefficientwise Cartier-square stratum bound for its untwisted specialization
 A002897	F	no-explicit-open	related-results/CoefficientPowerGaussBaseline.md	live diagonal claim is source-closed; retain the proved coefficient-root integrality and universal p^r baseline
 A008978	F	partial	related-results/CoefficientPowerGaussBaseline.md	F/E integrality and the universal p^r variable-power tower are proved; prove the conjectural p^(3r) gain
 A091527	F	proved-here	OddUnitBlockFrobeniusTowers.md	independent review and priority search for the full coefficient family
@@ -93,17 +93,17 @@ A364509	F	published-source	Mestrovic and Jacobsthal reduction cited by OEIS	veri
 A008485	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the universal prime-coefficient lemma
 A008705	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review of the prime and twice-prime coefficient calculations
 A008793	M	proved-here	related-results/A008793CubePlanePartitionTower.md	independent review and priority audit of the all-prime paired-product proof
-A023871	M	partial	related-results/ModularProductPrimeCoefficientPacket.md	prove the extra power from p^(2r) to the conjectural p^(3r)
-A023873	M	partial	related-results/ModularProductPrimeCoefficientPacket.md	prove the extra power from p^(2r) to the conjectural p^(3r)
+A023871	M	partial	related-results/EulerProductCubicCartierMoments.md	prove v_p([x^j]C_p(Lambda_p^2))>=v_p(j)+1 for p>=7; p=5 is sharply false
+A023873	M	partial	related-results/EulerProductCubicCartierMoments.md	prove the single Cartier-square stratum bound; tested evidence suggests p>=5 may suffice
 A049505	M	proved-here	related-results/A049505SymmetricPlanePartitionCongruences.md	independent review and priority audit of the paired-product proof
-A206622	M	partial	related-results/ModularProductPrimeCoefficientPacket.md	prove the extra power from p^(2r) to the conjectural p^(3r)
+A206622	M	partial	related-results/EulerProductCubicCartierMoments.md	prove the single Cartier-square stratum bound, including the plus/minus contraction at p=5
 A229452	M	partial	related-results/A229452CoefficientRootBaseline.md	all-m integrality and the all-prime p^r towers for both source families are proved; prove the conjectural p^(3r) gain
 A255672	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the Euler-product specialization
 A270913	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the universal prime-coefficient lemma
 A270919	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the universal prime-coefficient lemma
 A270922	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the Euler-product specialization
 A270924	M	proved-here	related-results/ModularProductPrimeCoefficientPacket.md	independent review and priority audit of the Euler-product specialization
-A283271	M	partial	related-results/ModularProductPrimeCoefficientPacket.md	prove the extra power from p^(2r) to the conjectural p^(3r)
+A283271	M	partial	related-results/EulerProductCubicCartierMoments.md	prove the single Cartier-square stratum bound; tested evidence suggests p>=5 may suffice
 A352655	D	partial	related-results/AperyRankOneDefectPacket.md	exact reduction to R1; prove the first Apéry defect relation
 A357506	D	partial	related-results/AperyRankOneDefectPacket.md	product tower follows from R1 and the p=3 boundary is checked; prove R1
 A357567	D	partial	related-results/AperyRankOneDefectPacket.md	linear and nonlinear claims reduce to R2; prove the second Apéry defect relation

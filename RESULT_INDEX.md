@@ -67,14 +67,68 @@ proof.
 - **Proof:** [First two A365029 levels](related-results/A365029FirstTwoLevels.md)
 - **Exact checker:** [`verify_a365029_first_two_levels.py`](verification/related/verify_a365029_first_two_levels.py)
 
-### BALA-ODD — A375178 prime-level odd-power family
+### BALA-ODD — A375178--A375180 complete odd-power families
 
-- **Claim:** For \(m\ge1\) and primes \(p\ge2m+5\),
-  \(b_m(p)\equiv1\pmod {p^{2m+3}}\).
+- **Claim:** For \(m\ge1\), primes \(p\ge2m+5\), and every integer
+  dilation \(A\), the shifted family A375178 and the signed family
+  \(S_{A,m}\) satisfy their prime-level congruences modulo
+  \(p^{2m+3}\). The shifted and signed generalized-binomial theorems also
+  prove their higher towers modulo \(p^{3r+2m+1}\). The cases \(A=2,3\)
+  are A375179 and A375180.
 - **Source status:** Named open problem.
 - **Status:** Complete unchecked elementary proof; priority preliminary.
 - **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#3-the-full-prime-level-odd-power-theorem-for-a375178)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
+
+### A375178-HIGH — complete enhanced odd-power tower
+
+- **Claim:** For every odd $q=2m+1\ge3$, prime $p\ge q+4$, and $r\ge2$,
+  $B_q(p^r)\equiv B_q(p^{r-1})\pmod {p^{3r+2m+1}}$.
+- **Mechanism:** All nonfinal scaled shells are termwise deep for $q\ge5$;
+  the universal final shell vanishes by odd inverse-power sums and a double
+  harmonic involution. The cubic boundary uses the A112028 two-digit lemma.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Enhanced A375178 odd-power tower](related-results/A375178EnhancedOddPowerTower.md)
+- **Exact checker:** [`verify_a375178_enhanced_odd_tower.py`](verification/related/verify_a375178_enhanced_odd_tower.py)
+
+### BALA-EVEN — A112028 and A219562 prime-level fifth powers
+
+- **Claim:** For even \(q\ge2\) and primes \(p\ge q+3\),
+  \(B_q(p)\equiv1\pmod {p^{q+1}}\). Together with the odd-power theorem,
+  this proves the conjectured \(p^5\) boundaries for A112028 (\(q=3\))
+  and A219562 (\(q=4\)) for every prime \(p\ge7\).
+- **Source status:** Named open prime-level refinements; Coster supplies only
+  the ordinary cubic tower used as the higher-level baseline.
+- **Status:** Complete unchecked elementary prime-level proof. Both
+  enhanced higher towers are proved separately in
+  [the cubic A112028 theorem](related-results/A112028EnhancedTower.md) and
+  [the quartic A219562 theorem](related-results/A219562EnhancedTower.md).
+- **Proof:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md#the-even-power-boundary-and-a112028--a219562)
+- **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
+
+### A112028-HIGH — complete enhanced cubic shifted-binomial tower
+
+- **Claim:** For every prime $p\ge7$ and $r\ge2$,
+  $\operatorname{A112028}(p^r-1)\equiv
+  \operatorname{A112028}(p^{r-1}-1)\pmod {p^{3r+3}}$.
+- **Mechanism:** Two-digit unit-shell expansion, a penultimate-shell residue
+  multiplicity, and a critical-shell reduction to Wolstenholme harmonic
+  congruences and one double harmonic identity.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Enhanced A112028 tower](related-results/A112028EnhancedTower.md)
+- **Exact checker:** [`verify_a112028_enhanced_tower.py`](verification/related/verify_a112028_enhanced_tower.py)
+
+### A219562-HIGH — complete enhanced quartic shifted-binomial tower
+
+- **Claim:** For every prime \(p\ge5\) and \(r\ge2\),
+  \(\operatorname{A219562}(p^r-1)\equiv
+  \operatorname{A219562}(p^{r-1}-1)\pmod {p^{3r+3}}\).
+- **Mechanism:** Unit/scaled shell decomposition; every noncritical stratum
+  is termwise deep enough, while the last stratum collapses to the inverse-
+  square power sum on \(\mathbb F_p^\times\).
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [Enhanced A219562 tower](related-results/A219562EnhancedTower.md)
+- **Exact checker:** [`verify_a219562_enhanced_tower.py`](verification/related/verify_a219562_enhanced_tower.py)
 
 ### A333-COSTER — complete A333593 tower
 
@@ -452,6 +506,150 @@ proof.
 - **Proof:** [Multinomial-power Frobenius towers](related-results/MultinomialPowerFrobeniusTowers.md)
 - **Exact checker:** [`verify_multinomial_power_towers.py`](verification/related/verify_multinomial_power_towers.py)
 
+### A132303-TRICUBE — trinomial-coefficient cube tower
+
+- **Claim:** If $t(N,k)=[z^k](1+z+z^2)^N$, then for every prime
+  $p\ge5$ and positive integers $n,r$,
+
+  ```math
+  \sum_k t(np^r,k)^3
+  \equiv
+  \sum_k t(np^{r-1},k)^3
+  \pmod {p^{2r}}.
+  ```
+
+- **Source status:** Named OEIS conjecture.
+- **Mechanism:** A two-variable cyclotomic constant term has a reduced
+  Frobenius logarithm supported away from the $p$-sublattice, annihilating
+  the entire linear defect.
+- **Boundary:** Exact checks find the valuation $2r$ attained throughout
+  the tested grid; no cubic strengthening is claimed.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [A132303 trinomial-cube tower](related-results/A132303TrinomialCubeTower.md)
+- **Exact checker:** [`verify_a132303_trinomial_cube.py`](verification/related/verify_a132303_trinomial_cube.py)
+
+### A156554-LEGENDRE — integral-parameter Legendre coefficient tower
+
+- **Claim:** For integers $A,B$, positive integers $c,s,n,r$, and every
+  prime $p\ge5$, put
+
+  ```math
+  C_{A,B;c,s}(N)=
+  [x^{cN}](1+x)^{AN}(1-x)^{BN}
+  P_{sN}\left(\frac{1+x}{1-x}\right).
+  ```
+
+  Then
+
+  ```math
+  C_{A,B;c,s}(np^r)
+  \equiv C_{A,B;c,s}(np^{r-1})
+  \pmod {p^{3r}}.
+  ```
+
+- **Source status:** Full integral-parameter conjecture on A156554; the
+  named sequence is $(A,B;c,s)=(0,0;1,2)$.
+- **Mechanism:** The Legendre binomial identity gives a two-variable
+  constant term. Its reduced Frobenius logarithm lies on three primitive,
+  pairwise-unimodular rays. Mixed quadratic terms have zero Cartier image;
+  the same-ray terms reduce to the reciprocal-square lemma and formal
+  integration by parts supplies the third valuation block.
+- **Boundary:** The proof is for $p\ge5$ exactly as conjectured. No claim is
+  made at $p=2,3$.
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [A156554 Legendre coefficient tower](related-results/A156554LegendreCoefficientTower.md)
+- **Exact checker:** [`verify_a156554_legendre_tower.py`](verification/related/verify_a156554_legendre_tower.py)
+
+### A245926-ALG — algebraic coefficient identity and quadratic tower
+
+- **Claim:** If \(a(N)\) is A245926, then
+
+  ```math
+  a(N)=[x^N]
+  \left(\frac{(1+x+x^2)(1+x)^2}{(1-x)^2}\right)^N,
+  ```
+
+  and, for every prime \(p\ge5\),
+
+  ```math
+  a(np^r)\equiv a(np^{r-1})\pmod {p^{2r}}.
+  ```
+
+- **Representation proof:** For \(y=z\Phi(y)\), Lagrange inversion gives
+  the coefficient generating function as \(zy'/y\). The substitution
+  \(u=(1+y)/(1-y)\), \(v=u^2\) reduces the kernel equation to
+  \(3zv^2+(z-1)v+1=0\), whose discriminant is \(1-14z+z^2\); eliminating
+  \(v\) recovers exactly the algebraic generating function on A245926.
+- **Congruence proof:** The kernel factors as
+  \((1-x^3)(1-x^2)^2/(1-x)^5\). At \(p\ge5\), the reduced Frobenius
+  logarithm has no exponent divisible by \(p\), so the linear defect has
+  zero constant term and every higher exponential term contains
+  \(p^{2r}\).
+- **Status:** Complete unchecked elementary proof; priority preliminary.
+- **Proof:** [A245926 algebraic coefficient tower](related-results/A245926AlgebraicCoefficientTower.md)
+- **Exact checker:** [`verify_a245926_algebraic_coefficient.py`](verification/related/verify_a245926_algebraic_coefficient.py)
+
+### A351858-CYCL — exact boundary of the proposed cyclotomic family
+
+- **Claim tested:** For
+
+  ```math
+  G_k(x)=\frac{(1-x^{k+1})^{k+1}}
+  {(1-x)(1-x^k)^k},
+  \qquad u_k(N)=[x^N]G_k(x)^N,
+  ```
+
+  A351858 proposes a cubic tower uniformly for every $k\ge2$.
+- **Counterexample theorem:** For every prime $p\ge5$,
+
+  ```math
+  u_{p-1}(p)-u_{p-1}(1)\equiv p^2(p-2)\pmod {p^3},
+  ```
+
+  and
+
+  ```math
+  u_p(p)-u_p(1)\equiv p^2\pmod {p^3}.
+  ```
+
+  Both differences have valuation exactly two, so the all-$k$ conjecture
+  and the broader coefficient-slope family are false.
+- **Surviving target:** The named A351858 sequence has $k=2$. Its stated
+  primes satisfy $p\ge5$, so these step-ramification counterexamples do not
+  apply; that named cubic tower remains open.
+- **Status:** Complete exact counterexample to the family claim; named case
+  partial/open; priority preliminary.
+- **Proof:** [A351858 cyclotomic-family boundary](related-results/A351858CyclotomicFamilyBoundary.md)
+- **Exact checker:** [`verify_a351858_cyclotomic_boundary.py`](verification/related/verify_a351858_cyclotomic_boundary.py)
+
+### A263843-REV — reversion coefficient reduction
+
+- **Claim:** If $Y=x(1+Y)^3/(1-Y)$ and $H=Y/x$, define
+
+  ```math
+  B_{c,s}(N)=[x^{cN}]H(x)^{sN}
+  ```
+
+  for positive $c$ and integral $s$. The full conjecture asks for a cubic
+  tower at every $p\ge3$.
+- **Result:** Lagrange inversion gives, for $d=c+s\ne0$,
+
+  ```math
+  B_{c,s}(N)=\frac{s}{d}
+  [t^{cN}](1+t)^{3dN}(1-t)^{-dN}.
+  ```
+
+  Tracking $v_p(d)$ inside the reduced logarithm proves the full family for
+  every $p\ge5$, including $p\mid d$. It also proves the $p=3$ tower when
+  $3\mid d$. The line $d=0$ is the explicit parity sequence
+  $-1-3(-1)^{cN-1}$.
+- **Open boundary:** Only $p=3$ with $3\nmid(c+s)$ remains. This includes
+  the named $(c,s)=(1,1)$ ternary case; exact tests support but do not prove
+  the extra power.
+- **Status:** Complete reduction and partial family proof.
+- **Proof:** [A263843 reversion reduction](related-results/A263843ReversionCoefficientReduction.md)
+- **Exact checker:** [`verify_a263843_reversion_reduction.py`](verification/related/verify_a263843_reversion_reduction.py)
+
 ### ODD-UNIT-BLOCK — A091527 and A262732 towers
 
 - **Claim:** For every integer $m\ge2$, prime $p\ge5$, and positive
@@ -578,6 +776,48 @@ proof.
 - **Proof:** [A364176 affine-Landau integrality and tower](related-results/A364176AffineLandauTower.md)
 - **Exact checker:** [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py)
 
+### A364183-INTEGRAL - affine-Landau integrality and cubic tower
+
+- **Claim:** OEIS A364183 is integral for every nonnegative index. For every
+  prime $p\ge5$ and positive integers $n,r$,
+  $A(np^r)\equiv A(np^{r-1})\pmod {p^{3r}}$.
+- **Source status:** Named open problem; this is A295479 at the half-index.
+- **Mechanism:** Even indices are Bober's integral A295479. At odd indices,
+  the half-gamma identity produces a nine-floor affine Landau defect. Writing
+  $2m+1=qd+s$ leaves only $q=0,1$ and a twelve-row carry table. An exact
+  factorization into six numerator and five denominator half-binomial terms
+  then proves the full adjacent tower.
+- **Boundary:** No claim is made for $p=2,3$; specialist review and literature
+  priority remain pending.
+- **Status:** Complete elementary proof candidate.
+- **Proof:** [A364183 affine-Landau integrality and tower](related-results/A364183AffineLandauTower.md)
+- **Exact checker:** [`verify_a364183_affine_landau.py`](verification/related/verify_a364183_affine_landau.py)
+
+### BOBER-HALF - uniform half-index integrality and cubic towers
+
+- **Claim:** Every one of the eleven Bober records in Bala's packet having an
+  $N/2$ variant is integral at every index and satisfies the full adjacent
+  $p^{3r}$ tower for $p\ge5$.
+- **Mechanism:** For odd primes, the half-index valuation is a sum of the
+  original nonnegative Landau function translated by $1/2$. At the prime
+  two, a binary digit-sum identity gives a uniform linear lower bound after
+  the four odd base indices $N=1,3,5,7$.
+- **Status:** Complete elementary proof candidate; priority preliminary.
+- **Proof:** [Uniform Bober half-index theorem](related-results/BoberHalfIndexIntegralityTheorem.md)
+- **Exact checker:** [`verify_bober_half_index_integrality.py`](verification/related/verify_bober_half_index_integrality.py)
+
+### BOBER-BOUNDARY - denominator-three/four integrality and cubic towers
+
+- **Claim:** A295456 and A295458 at index $N/3$, and A295460 and A295477
+  at index $N/4$, are integral for every $N$ and satisfy the full adjacent
+  $p^{3r}$ tower for $p\ge5$.
+- **Mechanism:** Away from the fixed denominator, each valuation is an exact
+  sum of translated values of the original Landau function. At the denominator
+  primes, explicit base-three and binary digit-sum identities are nonnegative.
+- **Status:** Complete elementary proof candidate; priority preliminary.
+- **Proof:** [Bober denominator-boundary theorem](related-results/BoberDenominatorBoundaryTheorem.md)
+- **Exact checker:** [`verify_bober_denominator_boundary.py`](verification/related/verify_bober_denominator_boundary.py)
+
 ### RATGAMMA-3 — rational gamma-ratio cubic towers
 
 - **Claim:** Let
@@ -599,14 +839,15 @@ proof.
   adjacent congruence for the values themselves.
 - **Named application:** Radcliffe proved A364175 integral in July 2026;
   the theorem therefore proves its full conjectured $p^{3r}$ tower. The
-  affine-Landau lemma proves A364176 integral, so this theorem also closes
-  its tower. The same transfer applies to every residue-balanced gamma
-  quotient in A364172--A364184, reducing the other records to global integrality.
+  uniform half-index theorem proves all eleven Bober $N/2$ variants integral,
+  so this theorem closes all eleven towers. The same transfer applies to every
+  residue-balanced gamma quotient in A364172--A364184, reducing the other
+  records to global integrality.
   It also proves every row conjecture on A365025 (including A365026 and
   A365027) and every row $s\ge3$ of A364513 (including A364515--A364517).
   The same theorem supplies the quotient congruence component for all 15
   currently visible fractional-index variants in Bala's Bober packet; the
-  A364176 member is now unconditional.
+  eleven denominator-two members are now unconditional.
 - **Mechanism:** An exact denominator-$q$ rational-binomial product, complete
   reduced-residue harmonic blocks, and the classical balanced integer
   factorial-ratio closure.
@@ -674,15 +915,17 @@ proof.
 
 ### BALA-TOWERS — remaining higher-level Bala tower queue
 
-- **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) and the
-  A375178-family \(p^{3r+2m+1}\) tower are the first two retained targets.
+- **Claim:** The A365029 \(p^{3r}\) tower for \(r\ge3\) is the retained
+  first-queue target.
 - **Source status:** Named open problems.
 - **Status:** Reduction plus computation. A365029 is proved through \(r=2\)
-  and reduced above it to iterating an explicit two-digit complete-block
-  calculation, with 177 higher-level block checks. Coster's theorem already
-  gives the \(p^{3r}\) baseline for the complete A375178 exponent family.
+  and reduced above it by an [exact all-level digit factorization](related-results/A365029AllLevelDigitReduction.md)
+  to one complete-digit cancellation, verified through four levels. The complete enhanced
+  A375178 exponent family and its signed companions are now proved
+  separately through their respective shell geometries.
 - **Queue:** [Peter Bala's OEIS queue](related-results/BalaOeisSupercongruenceQueue.md)
 - **Exact checker:** [`verify_bala_oeis_supercongruences.py`](verification/related/verify_bala_oeis_supercongruences.py)
+  and [`verify_a365029_all_level_digit_reduction.py`](verification/related/verify_a365029_all_level_digit_reduction.py)
 
 ## Direct generalizations
 
@@ -969,10 +1212,31 @@ proof.
   At \(X=1\) this proves the named A228960 and A350383 conjectures; at
   \(X=i\) it gives their split/inert Gaussian specializations.
 - **Status:** Complete elementary proof candidate with explicit small-prime
-  counterexamples; priority search preliminary.  The broader cyclotomic
-  rational-function conjecture remains open.
+  counterexamples; priority search preliminary. The broader scalar
+  rational-function conjecture is closed separately by CYCLOTOMIC-RATIONAL.
 - **Proof:** [Cyclotomic coefficient-pair theorem](related-results/CyclotomicCoefficientPairTheorem.md)
 - **Exact checker:** [`verify_cyclotomic_coefficient_pair.py`](verification/related/verify_cyclotomic_coefficient_pair.py)
+
+### CYCLOTOMIC-RATIONAL — general cyclotomic rational-framing tower
+
+- **Claim:** Let \(f\) be a finite quotient of cyclotomic products, \(k>0\),
+  and \(m\in\mathbb Z\). Write
+  \(f(x)/f(0)=\prod_d(1-x^d)^{c_d}\). For every odd prime \(p\) dividing
+  none of the finitely many steps with \(c_d\ne0\),
+  \[
+  [x^{knp^r}]f(x)^{mnp^r}
+  \equiv
+  [x^{knp^{r-1}}]f(x)^{mnp^{r-1}}
+  \pmod {p^{2r}}.
+  \]
+  This proves the general all-but-finitely-many-primes principle printed on
+  A228960 and A350383, including negative power parameters.
+- **Status:** Complete elementary proof candidate. The reduced Frobenius
+  logarithm has no support on the \(p\)-sublattice, so its linear
+  constant-term defect vanishes exactly; every higher exponential degree
+  supplies the quadratic valuation. Literature priority is unestablished.
+- **Proof:** [Cyclotomic rational-framing tower](related-results/CyclotomicRationalFramingTower.md)
+- **Exact checker:** [`verify_cyclotomic_rational_framing.py`](verification/related/verify_cyclotomic_rational_framing.py)
 
 ### EULER-PRODUCT — colored product Frobenius tower
 
@@ -988,11 +1252,13 @@ proof.
   \mathcal E_{np^r}(\mathbf Z)\equiv
   \mathcal E_{np^{r-1}}(\mathbf Z^p)\pmod {p^{2r}}.
   \]
-  This proves the quadratic product families in Bala's A380290/A380291
-  notes, including all integral mixed powers, and gives the split/inert
-  Gaussian specialization at \(Z=i\).
-- **Status:** Complete elementary proof candidate.  For A380290 this is a
-  quadratic baseline, not the stronger conjectured untwisted cubic tower.
+  This proves A281267 by the specialization \(d=1\), \(h_m=1\), \(Z=1\),
+  proves the quadratic product families in Bala's A380290/A380291 notes,
+  including all integral mixed powers, and gives the split/inert Gaussian
+  specialization at \(Z=i\).
+- **Status:** Complete elementary proof candidate closing A281267. For
+  A380290 this is a quadratic baseline, not the stronger conjectured
+  untwisted cubic tower.
   The coefficientwise and Gaussian exponents are sharp; \(d=0\) and \(p=2\)
   have explicit counterexamples.
 - **Proof:** [Colored Euler-product theorem](related-results/EulerProductGaussianTower.md)
@@ -1110,16 +1376,17 @@ proof.
   records identified by Bala satisfy the residue-balanced rational
   $p^{3r}$ quotient tower for $p\ge5$.
 - **Boundary:** The sequence congruence follows whenever the values are
-  $p$-integral. The A295456 half-index case A364176 now has a complete
-  affine-Landau integrality proof and an unconditional tower. The other 14
-  global integrality claims remain open; exact integrality through $N=30$ is
-  evidence only. The A295464 source formula was not yet visible and is not
-  inferred.
-- **Status:** Complete conditional congruence deduction for the packet; one
-  fractional case closed completely and 14 named integrality targets open.
+  $p$-integral. The uniform half-index theorem closes all eleven denominator-two
+  cases, while the denominator-boundary theorem closes the remaining four.
+  The A295464 source formula was not yet visible and is not inferred.
+- **Status:** All 15 source-visible fractional variants closed completely;
+  A295464 remains pending exact source text.
 - **Proof and queue:** [Bober sporadic factorial-ratio packet](related-results/BoberSporadicFactorialRatioPacket.md)
 - **Exact checkers:** [`verify_bober_sporadic_packet.py`](verification/related/verify_bober_sporadic_packet.py),
-  [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py)
+  [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py),
+  [`verify_a364183_affine_landau.py`](verification/related/verify_a364183_affine_landau.py),
+  [`verify_bober_half_index_integrality.py`](verification/related/verify_bober_half_index_integrality.py),
+  [`verify_bober_denominator_boundary.py`](verification/related/verify_bober_denominator_boundary.py)
 
 ### A008793-CUBE — nonlinear cube-plane-partition tower
 
@@ -1325,6 +1592,40 @@ proof.
   claim and priority unchecked.
 - **Proof:** [Bhatt--Singh/Dwork period synthesis](related-results/BhattSinghDworkPeriodSupercongruence.md)
 - **Exact checker:** [`verify_dwork_period_supercongruence.py`](verification/related/verify_dwork_period_supercongruence.py)
+
+### QUADRINOMIAL-2 — the two A005725 congruences
+
+- **Claim:** If
+  \[
+  A(N)=[x^N](1+x+x^2+x^3)^N,
+  \]
+  then for every odd prime \(p\),
+  \[
+  A(np^r)\equiv A(np^{r-1})\pmod {p^{2r}}.
+  \]
+  If \(F(x)=1+x+x^2+x^3\) and
+  \(B(N)=[x^N](F(x)/F(-x))^N\), then
+  \(B(p)\equiv2\pmod {p^3}\) for every prime \(p\ge5\).
+- **Status:** Complete elementary proof candidate closing both conjectures
+  printed on A005725; priority not searched beyond the source record.
+- **Proof:** [Quadrinomial and ratio-coefficient congruences](related-results/QuadrinomialCoefficientOddPrimeTower.md)
+- **Exact checker:** [`verify_quadrinomial_coefficient_tower.py`](verification/related/verify_quadrinomial_coefficient_tower.py)
+
+### MIXED-STEP-2 — mixed positive/negative-binomial coefficient tower
+
+- **Claim:** For positive \(u,v,c\), put
+  \[
+  A_{u,v,c}(N)=[x^{cN}]\left(\frac{1+x^u}{1-x^v}\right)^N.
+  \]
+  If \(p\) is odd and \(p\nmid uv\), then
+  \[
+  A_{u,v,c}(np^r)\equiv A_{u,v,c}(np^{r-1})\pmod {p^{2r}}.
+  \]
+  The specialization \((u,v,c)=(3,2,1)\) proves A246437.
+- **Status:** Complete elementary family theorem and named OEIS closure;
+  priority not searched beyond the source record.
+- **Proof:** [Mixed-step coefficient tower](related-results/MixedStepCoefficientQuadraticTower.md)
+- **Exact checker:** [`verify_mixed_step_coefficient_tower.py`](verification/related/verify_mixed_step_coefficient_tower.py)
 
 ### FF-DET - finite-field determinant bias
 
@@ -1865,7 +2166,205 @@ proof.
 - **Proof:** [Exact \(2\times2\) counterexample](related-results/ZhangFourMatrixCounterexample.md)
 - **Exact checker:** [`verify_zhang_four_matrix_counterexample.py`](verification/related/verify_zhang_four_matrix_counterexample.py)
 
+### MEANDER-ADJ — adjacent-binomial meander-row towers
+
+- **Claim:** If `M_d(N)` is the offset meander-row sum, then every row has
+  an odd-prime `p^r` Gauss tower. Odd `d` satisfies
+
+  ```math
+  M_d(p^r)\equiv2^{p^r-1}\pmod {p^2},
+  ```
+
+  while even `d` satisfies the full `p^(3r)` tower for `p>=5`, and also at
+  `p=3` whenever `3|d`.
+- **Applications:** Proves the three intended conjectures on A198060 after
+  correcting its evident adjacent-level exponent typo, proves the formerly
+  conjectural quartic identity and tower on A198256, and proves A198258
+  including `p=3`.
+- **Mechanism:** Reflection symmetrizes adjacent binomial coefficients.  The
+  even-degree polynomial has a double Pascal factor and residual value
+  `d/4`; Jacobsthal scaling handles divisible shells and reciprocal-square
+  Cartier blocks handle units.
+- **Boundary:** `M_4(3)-M_4(1)=45` has 3-adic valuation two, so the absence
+  of `p=3` from A198256 is sharp.
+- **Status:** Complete elementary proof candidate with 1,304 exact checks;
+  independent review and the source-page typo correction remain.
+- **Proof:** [Adjacent-binomial meander-row towers](related-results/MeanderAdjacentBinomialTowers.md)
+- **Exact checker:** [`verify_meander_adjacent_binomial_towers.py`](verification/related/verify_meander_adjacent_binomial_towers.py)
+
+### MATRIX-2 — balanced matrix coefficient tower
+
+- **Claim:** If
+
+  ```math
+  \mathcal F_N(A)=[x_1^N\cdots x_d^N]
+  \prod_i\left(\sum_j a_{ij}x_j\right)^N,
+  ```
+
+  then for every prime `p>=5`,
+
+  ```math
+  \mathcal F_{np^r}(A)
+  \equiv\mathcal F_{np^{r-1}}(A^{[p]})\pmod {p^{2r}}.
+  ```
+
+  The theorem is coefficientwise in the matrix entries.  A nondivisible
+  balanced exponent matrix forces carries in at least two rows.
+- **Application:** An explicit matrix over the sixth roots of unity has
+  determinant denominator `1-x-y-z+xyz`.  Its Frobenius twist is either
+  itself or its transpose, and transpose leaves the balanced coefficient
+  invariant.  This proves the A124435 quadratic tower.
+- **Status:** Complete elementary proof candidate with 94 exact checks;
+  priority is unestablished.  The exponent is sharp, and `p=3` fails in the
+  untwisted specialization.
+- **Proof:** [Balanced matrix coefficients and A124435](related-results/BalancedMatrixCoefficientQuadraticTower.md)
+- **Exact checker:** [`verify_balanced_matrix_coefficient_tower.py`](verification/related/verify_balanced_matrix_coefficient_tower.py)
+
 ## Reductions and computational reports
+
+### A244973-FROB — signed multinomial quadratic Frobenius reduction
+
+- **Claim reduced:** For `p>5`, Sun's conjecture
+  `v_p(a(pM)-a(M)) >= 3+3v_p(M)` for A244973.
+- **Exact forms:** The sequence is both a signed square of trinomial
+  coefficients and the Laurent period
+  `CT((x+y+z)(-x^-1-y^-1+z^-1))^N`. Vertex normalization gives
+  `(-1)^N[u^Nv^N]((1+u+uv)(1-v+uv))^N`.
+- **Reduction:** All reduced-logarithm terms of degree at least three have
+  the desired valuation. The conjecture is equivalent to one explicit
+  cancellation between the linear and quadratic Frobenius terms. At
+  `p=7,M=7` both terms separately have valuation five, while their sum has
+  valuation six.
+- **Status:** Exact reduction, not a proof of the conjecture. Sun's
+  published theorem supplies `3+2v_p(M)`; `p=5` fails at the first level.
+- **Report:** [A244973 and the linear--quadratic obstruction](related-results/A244973QuadraticFrobeniusReduction.md)
+- **Exact checker:** [`verify_a244973_frobenius_reduction.py`](verification/related/verify_a244973_frobenius_reduction.py)
+
+### A331562-DIAG — uniform constrained-word rational diagonal
+
+- **Claim:** If `a_d(k)` counts words with `k` copies of every letter in
+  `{1,...,d}` and adjacent differences at most one, then
+
+  ```math
+  a_d(k)=[x_1^k\cdots x_d^k]
+  \frac{\det(I-(A_d-J_d)X)}{\det(I-A_dX)},
+  ```
+
+  where `A_d` is the path-with-loops adjacency matrix and
+  `X=diag(x_1,...,x_d)`. The denominator satisfies an explicit second-order
+  continuant recurrence.
+- **Reduction:** The all-row A331562 cubic tower is equivalent to one
+  displayed diagonal coefficient estimate for the finite Frobenius
+  numerator `N_d(x)D_d(x^p)-N_d(x^p)D_d(x)`.
+- **Status:** Exact reduction, not a proof of the cubic tower. The
+  transfer-matrix identity is elementary and the remaining estimate is
+  explicit; sampled first untreated rows include sharp cases.
+- **Report:** [A331562 uniform rational diagonal](related-results/A331562UniformRationalDiagonal.md)
+- **Exact checker:** [`verify_a331562_uniform_rational_diagonal.py`](verification/related/verify_a331562_uniform_rational_diagonal.py)
+
+### A079489-LAGRANGE — direct/reverted signed-binomial kernel
+
+- **Claim:** Both all-parameter coefficient families on A079489 are exact
+  rational multiples of
+
+  ```math
+  K_{q,s}(n)=[x^{sn}]\left(\frac{(1+x)^2}{1-x}\right)^{qn}.
+  ```
+
+  The direct family uses `(q,c)=(r+2s,r)` and the reverted family uses
+  `(q,c)=(s-r,-r)`. Both singular slopes have explicit alternating closed
+  forms and satisfy odd-prime towers identically.
+- **Reduction:** The two named cubic towers are equivalent to the normalized
+  valuation of `(c/q)(K(np^k)-K(np^(k-1)))`; denominator-prime loss is
+  retained exactly.
+- **Status:** Exact reduction, not a proof of the cubic kernel estimate.
+  Negative exponents, reversion, singular slopes, and two tower levels are
+  covered by 895 exact checks.
+- **Report:** [A079489 Lagrange-kernel reduction](related-results/A079489LagrangeKernelReduction.md)
+- **Exact checker:** [`verify_a079489_lagrange_kernel.py`](verification/related/verify_a079489_lagrange_kernel.py)
+
+### EXP-CARTIER — exponential-coefficient Cartier defect
+
+- **Claim:** For an arbitrary rational source sequence `b`, the adjacent
+  difference of
+
+  ```math
+  T_{b;c,s}(N)=[x^{sN}]\exp\!\left(cN\sum_{m\geq1}\frac{b_m}{m}x^m\right)
+  ```
+
+  is exactly one coefficient of the Cartier defect
+  `C_p(exp(cN(pL_b(x)-L_b(x^p))))-1`.
+- **Applications:** This single identity specializes exactly to A060941,
+  A362722, and A362733, including the iterated A060941 construction. It
+  also exposes the genuine A060941 boundary failure at `p=5`.
+- **Status:** Exact reduction, not a proof of the three conjectured towers.
+  The remaining obligations are explicit quadratic or cubic estimates on
+  the Cartier-defect coefficient. Rational intermediate Euler iterates are
+  retained rather than silently assumed integral.
+- **Report:** [Exponential-coefficient Cartier reduction](related-results/ExponentialCoefficientCartierReduction.md)
+- **Exact checker:** [`verify_exponential_coefficient_cartier.py`](verification/related/verify_exponential_coefficient_cartier.py)
+
+### A376-PAIR — the final two A108625 companion records
+
+- **Claim 1:** A376458 has the exact single-sum representation
+
+  ```math
+  A(N)=\sum_{j=0}^{N-1}(-1)^j
+  \binom Nj^2\binom{N-1}{j}\binom{N+j-1}{j}.
+  ```
+
+- **Claim 2:** For every prime `p>=7`,
+  `A(p)=A(1) (mod p^5)`. The excluded prime is sharp:
+  `A(5)-A(1)=-6*5^4`.
+- **Claim 2a:** For every prime `p>=5` and every `r>=2`,
+  `A(p^r)=A(p^(r-1)) (mod p^(3r+3))`.
+- **Claim 3:** A376458 and A376466 are exact coefficient pairings with the
+  same shifted A108625 row. The latter record's proposed shifted cubic
+  tower is false: `A376466(9)-A376466(1)=3 (mod 5)`, and its pure-prime
+  shift also fails at `p=5,r=2`.
+- **Status:** Complete proof of the collapse, prime-level fifth power,
+  ordinary cubic tower, enhanced A376458 pure-prime tower, and shifted
+  A376466 counterexample. The surviving ordinary A376466 tower is reduced to
+  one scaled Cartier-boundary cancellation; descent on every unit digit is
+  proved, while the boundary is verified but not yet proved.
+- **Report:** [A376 Apéry-companion reduction](related-results/A376AperyCompanionReduction.md)
+- **Enhanced theorem:** [A376458 pure-prime tower](related-results/A376458EnhancedTower.md)
+- **Two-moment reduction:** [A376466 ordinary tower](related-results/A376466OrdinaryTower.md)
+- **Exact checker:** [`verify_a376_apery_companions.py`](verification/related/verify_a376_apery_companions.py)
+- **Conditional-proof checker:** [`verify_a376466_ordinary_tower.py`](verification/related/verify_a376466_ordinary_tower.py)
+
+### FRANEL-CT — integer-parameter Franel-companion kernels
+
+- **Claim:** For `a` in `{1,2}` and every integer `m`, the two Bala
+  companion families are exactly
+
+  ```math
+  W_{a,m}(N)=\operatorname{CT}_{y,z}
+  \left[(1+y)^m\left(
+  \frac{(1+y)^a(1+z)^2}{y^az}-4\right)\right]^N.
+  ```
+
+  The `a=1,m=-1` specialization is A362676 up to `(-1)^N`; `a=2,m=1`
+  is the Franel sequence.
+- **Status:** Exact reduction with 1,282 checks, including 1,088 conjectural
+  tower tests and 914 sharp instances. The family-wide cubic Cartier
+  contraction is stated precisely but is not claimed proved.
+- **Report:** [Franel-companion constant-term reduction](related-results/FranelCompanionConstantTermReduction.md)
+- **Exact checker:** [`verify_franel_companion_ct_reduction.py`](verification/related/verify_franel_companion_ct_reduction.py)
+
+### TAYLOR-7 — Catalan and Schröder Taylor-truncation packet
+
+- **Claim:** The seven records A333090--A333097 that carry live
+  Taylor-truncation conjectures are exactly two integral-parameter
+  coefficient families. The Catalan prefactor has an exact Cartier
+  fixed-point at every prime at least five; the Schröder prefactor has a
+  quadratic Gaussian denominator.
+- **Status:** Exact reduction with 3,650 exact checks. The first Catalan
+  estimate is exactly one cubic adjacent Gauss law, and the second is a
+  period-three weighted reduced-harmonic estimate; neither those estimates
+  nor the Schröder analogue is claimed proved.
+- **Report:** [Taylor-truncation coefficient reduction](related-results/TaylorTruncationCoefficientReduction.md)
+- **Exact checker:** [`verify_taylor_truncation_reduction.py`](verification/related/verify_taylor_truncation_reduction.py)
 
 ### CAT-ODD — Catalan ballot-power supercongruences
 

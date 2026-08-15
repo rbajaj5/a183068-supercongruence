@@ -15,7 +15,7 @@ checks pass.
 | Enhanced combinations of Apéry numbers | A352655, A357506, A357567, A357956, A357959 and two nonlinear companions | **Exact reduction:** all claims collapse to three linear adjacent-defect congruences; those three congruences remain open |
 | Paired ordinary/shifted towers | A363984, A376459--A376466 | **Open:** the source statements are captured; no published theorem has yet been matched to all hypotheses |
 | Recent factorial-ratio direction | A061164 and the public A364172--A364184 packet, with Peter's exact new list still pending | **Two uniform transfers proved:** A061164 follows from balanced integer factorials; residue-balanced rational gamma ratios inherit the same cubic tower. This fully closes A364175 using Radcliffe's July 2026 integrality proof and reduces the remaining fractional records to integrality |
-| Bober sporadic follow-up | A295431--A295482 and 12 newly commented records | **Ordinary packet closed for $p\ge5$:** all 52 inherit the full $p^{3r}$ tower. All 15 visible fractional variants pass the rational-gamma test; A295456 at $N/2$ (A364176) now has proved integrality and an unconditional tower, leaving 14 visible integrality targets |
+| Bober sporadic follow-up | A295431--A295482 and 12 newly commented records | **All source-visible variants closed for $p\ge5$:** all 52 ordinary ratios and all 15 fractional variants inherit full $p^{3r}$ towers. A295464 awaits exact approved source text |
 
 ## 1. Superfactorial family: closed uniformly
 
@@ -116,10 +116,10 @@ disposition:
   for $p\ge5$ by the balanced-factorial theorem;
 - all 15 fractional formulas currently visible on OEIS pass the
   residue-balance test and therefore satisfy the rational $p$-adic tower;
-- A295456 at $N/2$ is A364176, and its global integrality is proved by a
-  five-case affine floor lemma; and
-- the other 14 global integrality claims remain open, despite exact
-  integrality through the first 31 values.
+- all eleven $N/2$ variants are integral by a uniform translated-Landau
+  midpoint theorem and binary digit-sum bound; and
+- the four denominator-three/four variants are integral by translated Landau
+  valuations and explicit denominator-prime digit formulas.
 
 The A295464 email report is retained as pending because its new comment was
 not yet visible on the approved OEIS page when this addendum was prepared.

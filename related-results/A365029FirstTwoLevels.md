@@ -488,8 +488,10 @@ the adjacent shifted-scaling congruence, would prove the whole tower (3).
 
 The checker verifies (30) for \(p\in\{5,7,11\}\), \(r\le3\), and
 \(n\le7\). The cases \(r=1,2\) are now proved above; the \(r=3\) checks
-remain evidence only. The next task is to turn the two-digit calculation
-into an induction on the number of base-\(p\) digits.
+remain evidence only. The separate
+[all-level digit reduction](A365029AllLevelDigitReduction.md) gives the
+exact induction-ready factorization and isolates the remaining
+complete-digit cancellation.
 
 ## Reproduction
 
