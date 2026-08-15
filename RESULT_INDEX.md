@@ -364,15 +364,15 @@ proof.
   the stronger coefficientwise identity
   $\mathcal C_p\mathscr B=\mathscr B\pmod p$. Hence the first normalized
   defect residue is independent of the level for every positive slope and
-  cutoff. The stronger growing-modulus refinement requires higher defect
-  kernels and remains separate.
+  cutoff. The stronger growing-modulus refinement for Bala's specialization
+  is proved separately in NEG-HIGHER-DEFECT.
 - **Status:** Complete first-residue stabilization theorem; 3,902 exact
   arithmetic checks; no priority claim.
 - **Proof:** [Bala August first-defect kernel](related-results/BalaAugustFirstDefectKernel.md)
 - **Exact checkers:** [`verify_bala_august_first_defect.py`](verification/related/verify_bala_august_first_defect.py),
   [`verify_bala_august_kernel_frobenius.py`](verification/related/verify_bala_august_kernel_frobenius.py)
 
-### NEG-HIGHER-DEFECT - exact three-level reduction
+### NEG-HIGHER-DEFECT - higher normalized-defect theorem
 
 - **Claim:** Bala's growing-modulus conjecture is equivalent, without any
   division, to
@@ -382,13 +382,13 @@ proof.
   \]
 - **Mechanism:** The left side has an exact decomposition into the unit,
   once-scaled, and twice-scaled valuation shells. None generally reaches
-  the target separately. The quartic coefficient lift turns the degree-four
-  tail into an integral Euler divergence; logarithmic degrees at least five
-  have enough explicit powers.
-- **Status:** Exact reduction and sharp computational boundary; the quartic
-  term is proved and the final cubic higher-Frobenius estimate remains open;
-  1,277 exact checks.
-- **Proof:** [Higher August defect reduction](related-results/BalaAugustHigherDefectLift.md)
+  the target separately. The quartic coefficient lift controls degree four;
+  a second Cartier-connection lemma writes the cubic Frobenius difference
+  as a second Euler divergence and cancels its Hessian term against the
+  first logarithmic correction; higher degrees have enough explicit powers.
+- **Status:** Complete proof candidate for every $p\ge5$; 2,200 exact checks;
+  independent review and priority work pending.
+- **Proof:** [Higher August normalized-defect lift](related-results/BalaAugustHigherDefectLift.md)
 - **Exact checker:** [`verify_bala_august_higher_defect.py`](verification/related/verify_bala_august_higher_defect.py)
 
 ### NEG-PREFIX-3 - all-level prime-three prefix theorem
@@ -421,14 +421,14 @@ proof.
 - **Exact correction:** The suggested congruence modulo $p^5$ is false:
   $v_7(u(7)-u(1))=3$. The suggested higher-level modulus also fails, since
   $v_7(u(49)-u(7))=6<9$.
-- **Remaining target:** The ordinary adjacent tower is proved for every odd
-  prime, and the first normalized residue is stable for $p\geq5$. Only the
-  stronger growing-modulus defect refinement remains open.
+- **Higher lift:** The ordinary adjacent tower is proved for every odd
+  prime, the first normalized residue is stable for $p\geq5$, and
+  NEG-HIGHER-DEFECT proves the stronger growing modulus for $p\geq5$.
 - **Source status:** Correction of an AI-generated strengthening relayed in
   Bala's correspondence; no claim that the corrected prime formula was an
   OEIS conjecture.
-- **Status:** Complete prime-level correction, exact counterexamples, and
-  all-level ordinary tower.
+- **Status:** Complete prime-level correction, exact counterexamples,
+  all-level ordinary tower, and higher normalized-defect lift.
 - **Proof:** [Bala's August coefficient packet, Section 6](related-results/BalaAugustCoefficientPacket.md#6-the-negative-binomial-strengthening-is-false)
 - **Exact checker:** [`verify_bala_august_coefficient_packet.py`](verification/related/verify_bala_august_coefficient_packet.py)
 

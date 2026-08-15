@@ -190,12 +190,13 @@ that a proposed negative-binomial $p^5$ strengthening is false. The separate
 corrected ordinary cubic tower for every $p\geq5$ and, more generally, the
 full positive-parameter A333592 family. The
 [first-defect theorem](BalaAugustFirstDefectKernel.md) proves stability of
-its normalized leading residue. The
+its normalized leading residue, and the
+[higher-defect theorem](BalaAugustHigherDefectLift.md) proves the sharp
+growing normalized-defect modulus for every $p\ge5$. The
 [prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
 computes the exact first ternary defect, proves the universal all-level
 renormalization and Bala's complete cubic tower, and shows by a valuation-two
-example why no universal ternary cubic theorem is possible. Only the stronger
-growing-modulus defect refinement remains open in this lane.
+example why no universal ternary cubic theorem is possible.
 
 ## 6. Core bibliography
 
