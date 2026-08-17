@@ -259,6 +259,13 @@ normalization.  This advances A362676 inside `partial` without changing the
 campaign count: the uniform `n,r` tower and the A363985 parameter family
 still require the cubic Cartier contraction.
 
+The later [A362676 one-step theorem](A362676OneStepCongruence.md) strengthens
+that boundary to `F(np)==F(n) (mod p^3)` for every positive integer `n`.
+Its positive convolution splits into termwise Jacobsthal contraction on
+`p|k` and complete residue blocks on `p` not dividing `k`; each such block
+vanishes cubically by a reciprocal-square half-block identity.  A362676
+remains `partial` only because the nested levels `r>=2` are not yet proved.
+
 The balanced-matrix unit then closes A124435.  A general coefficientwise
 theorem proves a `p^(2r)` Frobenius tower for products of linear forms with
 equal row and column margins: every missed residue matrix forces carries in

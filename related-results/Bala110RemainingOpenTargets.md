@@ -39,9 +39,9 @@ including the exceptional ternary sextic case. The subsequent
 [Franel-companion reduction](FranelCompanionConstantTermReduction.md)
 places A362676 and A363985 in one explicit constant-term family and moves
 both to `partial`.  The
-[A362676 prime-boundary theorem](A362676PrimeBoundary.md) now proves its
-`n=r=1` point for every prime at least five, but the all-level contraction
-remains open. The later
+[A362676 one-step theorem](A362676OneStepCongruence.md) now proves the full
+`r=1` layer for every positive integer `n` and every prime at least five,
+but the nested `r>=2` contraction remains open. The later
 [balanced-matrix theorem](BalancedMatrixCoefficientQuadraticTower.md)
 proves A124435. The
 [A244973 Frobenius reduction](A244973QuadraticFrobeniusReduction.md)

@@ -2377,6 +2377,32 @@ proof.
 - **Report:** [A362676 prime boundary](related-results/A362676PrimeBoundary.md)
 - **Exact checker:** [`verify_a362676_prime_boundary.py`](verification/related/verify_a362676_prime_boundary.py)
 
+### A362676-R1 — full one-step cubic congruence
+
+- **Claim:** For the A362676 sequence `F` above, every prime `p>=5` and
+  every positive integer `n` satisfy
+
+  ```math
+  F(np)\equiv F(n)\pmod {p^3}.
+  ```
+
+  The proof first establishes the exact positive convolution
+
+  ```math
+  F(N)=\sum_{k=0}^{N}\binom{N+k-1}{k}
+       \binom{2(N-k)}{N-k}\binom{2k}{k}.
+  ```
+
+  Terms with `p|k` contract term by term through shifted Jacobsthal
+  congruences.  In each complete block `k=jp+b`, the lower and upper
+  half carry formulas reduce the block modulo `p^3` to a constant times
+  `sum_(b=1)^((p-1)/2) 1/b^2`, which vanishes modulo `p`.
+- **Status:** Complete proof of the entire `r=1` layer with 34,501 exact
+  checks, including 1,260 block checks and 168 direct theorem checks.
+  The `r>=2` levels remain open.
+- **Report:** [A362676 one-step cubic theorem](related-results/A362676OneStepCongruence.md)
+- **Exact checker:** [`verify_a362676_one_step.py`](verification/related/verify_a362676_one_step.py)
+
 ### TAYLOR-7 — Catalan and Schröder Taylor-truncation packet
 
 - **Claim:** The seven records A333090--A333097 that carry live

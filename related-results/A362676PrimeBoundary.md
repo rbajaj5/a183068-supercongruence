@@ -245,6 +245,11 @@ uniform `F(np^r)==F(np^(r-1)) (mod p^(3r))` tower.  The remaining problem is
 still the all-block Cartier contraction isolated in the
 [Franel-companion reduction](FranelCompanionConstantTermReduction.md).
 
+The later [one-step theorem](A362676OneStepCongruence.md) now proves
+`F(np)==F(n) (mod p^3)` for every positive integer `n`.  The present proof
+is retained because its direct central-binomial cancellation gives a
+different local explanation of the prime point.
+
 The companion checker
 [`verify_a362676_prime_boundary.py`](../verification/related/verify_a362676_prime_boundary.py)
 verifies (7), (9), and (10) as exact rational identities; checks (3), (8),
