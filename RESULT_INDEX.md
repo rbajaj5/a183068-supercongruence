@@ -2322,16 +2322,18 @@ proof.
   same shifted A108625 row. The latter record's proposed shifted cubic
   tower is false: `A376466(9)-A376466(1)=3 (mod 5)`, and its pure-prime
   shift also fails at `p=5,r=2`.
-- **Status:** Complete proof of the collapse, prime-level fifth power,
-  ordinary cubic tower, enhanced A376458 pure-prime tower, and shifted
-  A376466 counterexample. The surviving ordinary A376466 tower is reduced to
-  one scaled Cartier-boundary cancellation; descent on every unit digit is
-  proved, while the boundary is verified but not yet proved.
+- **Claim 4:** The surviving ordinary A376466 sequence satisfies
+  `B(np^r)=B(np^(r-1)) (mod p^(3r))` for every prime `p>=5`. Its scaled
+  Cartier boundary follows from an exact three-term Legendre-row recurrence
+  and a simultaneous horizontal valuation induction.
+- **Status:** Complete proofs of the A376458 collapse, prime-level fifth
+  power, ordinary cubic tower, enhanced pure-prime tower, and the ordinary
+  A376466 cubic tower; exact counterexample to the shifted A376466 claim.
 - **Report:** [A376 Apéry-companion reduction](related-results/A376AperyCompanionReduction.md)
 - **Enhanced theorem:** [A376458 pure-prime tower](related-results/A376458EnhancedTower.md)
-- **Two-moment reduction:** [A376466 ordinary tower](related-results/A376466OrdinaryTower.md)
+- **Ordinary-tower theorem:** [A376466 ordinary tower](related-results/A376466OrdinaryTower.md)
 - **Exact checker:** [`verify_a376_apery_companions.py`](verification/related/verify_a376_apery_companions.py)
-- **Conditional-proof checker:** [`verify_a376466_ordinary_tower.py`](verification/related/verify_a376466_ordinary_tower.py)
+- **Proof-certificate checker:** [`verify_a376466_ordinary_tower.py`](verification/related/verify_a376466_ordinary_tower.py)
 
 ### FRANEL-CT — integer-parameter Franel-companion kernels
 
