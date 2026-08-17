@@ -39,10 +39,10 @@ allocation, the portfolio currently has four tiers:
 
 | Tier | Results | Recommended use of effort |
 | --- | --- | --- |
-| **A: specialist review now** | SYMBOX-4, ZHANG-4, FRAMING-COUNTEREX, GWL-TWO, GWL-SCALE, GL-AFFINE, JC-WL, JC5-FF, A183068, NEG-HIGHER-DEFECT | Check proofs and priority before extending the statements |
+| **A: specialist review now** | SYMBOX-4, ZHANG-4, FRAMING-COUNTEREX, GWL-TWO, GWL-SCALE, GL-AFFINE, JC-WL, JC5-FF, A183068, NEG-HIGHER-DEFECT, A376-PAIR | Check proofs and priority before extending the statements |
 | **B: broad theorem engines** | FROB-PACKET, JC-ORBIT, LD-2/LD-3, QC-SQ/QC-CUBIC, CYCLOTOMIC-RATIONAL, EULER-PRODUCT, BINOMIAL-POWER, FACTRATIO-3, RATGAMMA-3, NEG-PREFIX-CUBIC, MEANDER-ADJ | Reuse on named conjectures and consolidate families |
 | **C: exact infrastructure** | DYADIC-Q, DYADIC-WALSH, DYADIC-JOINT, BLACK-WALSH, HASH-MATROID, FQ-CT, WALK-FROB, GROUPRING-GAUSS, ADAMS-HAAR, EHRHART-CUTOFF, NEG-PREFIX-3, GQ2-ABCOUNT, GQ2-DIHEDRAL, GQ2-QUATERNION, GQ2-MAXCYCLIC, GQ2-EXTRASPECIAL | Improve experiments, certification, source consolidation, and proof organization |
-| **D: retained open targets** | C11, CAT-ODD, TAYLOR-7, BALA-TOWERS, A244973-FROB, A331562-DIAG, A079489-LAGRANGE, EXP-CARTIER, A376-PAIR, BOBER-FRAC, APERY-DEFECT, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction; A376-PAIR now means A376466 only |
+| **D: retained open targets** | C11, CAT-ODD, TAYLOR-7, BALA-TOWERS, A244973-FROB, A331562-DIAG, A079489-LAGRANGE, EXP-CARTIER, BOBER-FRAC, APERY-DEFECT, s18-2 | Spend proof effort only against the explicit unresolved lemma or obstruction |
 
 Tier A has the highest estimated mathematical payoff. Tier C is deliberately
 kept separate: these results can make the portfolio faster and more coherent
@@ -185,7 +185,7 @@ stated target. Maturity records the work presently in the repository.
 | 3 | [A331562-DIAG: uniform constrained-word diagonal](related-results/A331562UniformRationalDiagonal.md) | **6** | 1 | 4 | 9 | 5 | 5 | Every row is one explicit path-matrix determinant ratio; the named cubic tower is isolated as a finite continuant Frobenius estimate, with exact identity and boundary checks. |
 | 3 | [A079489-LAGRANGE: direct/reverted coefficient kernel](related-results/A079489LagrangeKernelReduction.md) | **6** | 1 | 4 | 9 | 5 | 5 | Two infinite integral-parameter families reduce to one signed-binomial kernel; 895 checks cover negative powers, singular slopes, denominator primes, and two levels. |
 | 3 | [EXP-CARTIER: exponential-coefficient Cartier defect](related-results/ExponentialCoefficientCartierReduction.md) | **6** | 1 | 4 | 10 | 5 | 5 | A060941, A362722, A362733, and arbitrary Euler-transform iterations share one exact adjacent-level identity; 448 structural checks and 12 tower checks pass, while the quadratic/cubic Cartier estimates remain open. |
-| 3 | [A376-PAIR: final A108625 companions](related-results/A376AperyCompanionReduction.md) | **6** | 1 | 5 | 8 | 7 | 4 | A376458 is closed at every stated modulus and A376466's shifted tower is refuted; the ordinary A376466 tower is now conditional only on the scaled Cartier boundary (8b), since every unit digit is proved. |
+| 3 | [A376-PAIR: final A108625 companions](related-results/A376AperyCompanionReduction.md) | **6** | 1 | 5 | 8 | 8 | 3 | Both surviving ordinary towers are proved; A376466's scaled boundary is closed by a three-term Legendre-row recurrence, while its separately proposed shifted tower is exactly refuted. Specialist review and priority search remain. |
 | 5 | [GBQ-MAP: Gaussian routing of the Bala census](related-results/BalaGaussianGeneralizationMap.md) | **4** | 1 | 1 | 10 | 9 | 3 | Exhaustive routing of 110 records into five proof architectures; high portfolio breadth, but not a theorem or novelty certificate. |
 | 6 | [GL-MAP: Gaussian literature and structural map](related-results/GaussianLucasLiteraturePuzzle.md) | **3** | 1 | 1 | 7 | 8 | Literature synthesis, not a theorem or novelty certificate. |
 | 7 | [G-BOUNDARY: classical Gaussian obstructions](related-results/GaussianCitationNetworkBoundaryReport.md) | **3** | 1 | 4 | 4 | 6 | 5 | Rigorous reductions and bounded searches, not solutions of the classical problems. |

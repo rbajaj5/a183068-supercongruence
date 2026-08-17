@@ -614,12 +614,11 @@ v_5\bigl(B(5)-B(1)\bigr)=3.
 ```
 
 Thus two additional powers arise only after summing the unit shell. The
-ordinary A376466 conjecture has now been reduced more sharply: its divisible
-shell is governed by the proved homogeneous estimate (38), and its aggregate
-unit shell is reduced in the
-[two-moment note](A376466OrdinaryTower.md) to one explicit quadratic
-Cartier-kernel congruence. That note verifies the congruence through three
-levels but does not promote it to a proof.
+ordinary A376466 conjecture is now proved in the
+[ordinary-tower note](A376466OrdinaryTower.md). Its divisible shell is
+governed by the homogeneous estimate (38); the unit shell becomes two
+reciprocal moments, and an exact three-term Legendre-row recurrence proves
+the quadratic Cartier descent on the formerly unresolved scaled digits.
 
 The separate higher A376458 obligation formerly recorded in this note is
 closed by the [enhanced A376458 theorem](A376458EnhancedTower.md).
