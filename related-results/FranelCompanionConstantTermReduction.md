@@ -1,9 +1,8 @@
 # A constant-term reduction for the Franel companions
 
-**Status:** exact reduction and finite verification; the full `r=1` layer of
-A362676 and its `r=2` scaled-index transfer are now proved separately,
-while the second-level unit shell, higher levels, and parameter-family cubic
-contractions below remain open
+**Status:** exact reduction and finite verification; the full `r=1` and
+`r=2` layers of A362676 are now proved separately, while higher levels and
+the parameter-family cubic contractions below remain open
 
 This note consolidates the finite sums on
 [A362676](https://oeis.org/A362676) and
@@ -194,8 +193,7 @@ This note moves A362676 and A363985 from `open-target` to `partial` in the
 unstructured: both now reduce to one explicit kernel family and one precise
 local lemma.  The separate [A362676 one-step theorem](A362676OneStepCongruence.md)
 proves the entire `r=1` layer for every `n>=1` and prime `p>=5`.  The
-[second-level transfer](A362676SecondLevelReduction.md) then proves the
-scaled-index part modulo `p^6` and reduces `r=2` to one two-digit unit
-superblock.  That last block law, the higher levels, and the full A363985
-parameter family remain open.  The records do not move to `proved-here`
-until the remaining contraction is proved at every level.
+[second-level theorem](A362676SecondLevelReduction.md) then proves `r=2`
+modulo `p^6` by cancelling the two-digit unit superblocks.  Higher levels
+and the full A363985 parameter family remain open.  The records do not move
+to `proved-here` until the remaining contraction is proved at every level.

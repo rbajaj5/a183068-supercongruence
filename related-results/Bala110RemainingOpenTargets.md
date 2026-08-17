@@ -42,10 +42,10 @@ both to `partial`.  The
 [A362676 one-step theorem](A362676OneStepCongruence.md) now proves the full
 `r=1` layer for every positive integer `n` and every prime at least five,
 and the
-[second-level transfer](A362676SecondLevelReduction.md) proves the complete
-scaled-index contraction modulo `p^6`.  The `r=2` theorem is now reduced
-exactly to one two-digit unit-superblock residue law; nested higher levels
-and that final block lemma remain open. The later
+[second-level theorem](A362676SecondLevelReduction.md) proves
+`F(np^2)==F(np) (mod p^6)` by combining the scaled-index contraction with
+a two-digit reciprocal-square/cube block cancellation.  Only the nested
+levels `r>=3` remain open for A362676. The later
 [balanced-matrix theorem](BalancedMatrixCoefficientQuadraticTower.md)
 proves A124435. The
 [A244973 Frobenius reduction](A244973QuadraticFrobeniusReduction.md)

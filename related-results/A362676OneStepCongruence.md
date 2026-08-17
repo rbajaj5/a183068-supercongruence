@@ -275,11 +275,10 @@ This proves the theorem. QED
 
 The theorem closes the entire `r=1` layer, but it does not prove (1) for
 `r>=2`.  The later
-[second-level reduction](A362676SecondLevelReduction.md) proves the full
-scaled-index transfer modulo `p^6` and isolates the remaining `r=2`
-obstruction as one two-digit unit-superblock law.  Beyond that level,
-indices with intermediate valuation `0<v_p(k)<r` create nested residue
-blocks.
+[second-level theorem](A362676SecondLevelReduction.md) proves the full
+`r=2` congruence modulo `p^6` by adding a two-digit unit-superblock
+cancellation.  Beyond that level, indices with intermediate valuation
+`0<v_p(k)<r` create nested residue blocks.
 
 The companion checker
 [`verify_a362676_one_step.py`](../verification/related/verify_a362676_one_step.py)
