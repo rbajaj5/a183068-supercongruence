@@ -91,6 +91,7 @@ supercongruence exponent.
 | 1B-A376 | [A376 Apéry-companion reduction](A376AperyCompanionReduction.md) | Closes all stated A376458 moduli, refutes the A376466 shifted tower, and reduces its surviving ordinary tower | Partial resolution; only A376466's scaled Cartier boundary remains |
 | 1B-A376B | [A376466 two-moment reduction](A376466OrdinaryTower.md) | Cancels the unit harmonic defect, turns the ordinary cubic tower into reciprocal moments, and proves every unit digit | Conditional proof after the scaled boundary (8b); 10,456 exact checks |
 | 1B-FC | [Franel-companion constant-term reduction](FranelCompanionConstantTermReduction.md) | Unifies A362676 and the two integer-parameter A363985 families as constant terms of one two-kernel deformation | Exact reduction; 1,282 checks including 914 sharp tower cases; one cubic Cartier contraction remains |
+| 1B-FCP | [A362676 prime boundary](A362676PrimeBoundary.md) | Proves the first cubic point by cancelling the deformed lower half against the \(p\)-divisible upper half of a central-binomial sum | Complete elementary theorem; 424 checks; full \(n,r\) tower remains open |
 | 1B-PB | [A260667 prime-boundary congruence](A260667PrimeBoundary.md) | Proves the isolated \(p^3\) boundary by a local binomial expansion and two exact weighted harmonic evaluations | Complete elementary proof candidate; 349 exact checks; priority search pending |
 | 1B-TC | [A132303 trinomial-cube tower](A132303TrinomialCubeTower.md) | Uses a cyclotomic two-variable constant term whose linear Frobenius defect vanishes off the \(p\)-sublattice | Complete elementary proof candidate; exact checks; sharp quadratic exponent observed |
 | 1B-LG | [A156554 Legendre coefficient tower](A156554LegendreCoefficientTower.md) | Adds a Legendre factor through three primitive, pairwise-unimodular Cartier rays and proves the full integral-parameter family | Complete elementary proof candidate; 10,868 exact checks; independent review pending |
@@ -190,6 +191,7 @@ The individual correspondence is:
 | Landau depth | `verification/related/verify_landau_supercongruence.py` |
 | Peter Bala's OEIS queue | `verification/related/verify_bala_oeis_supercongruences.py` |
 | Franel-companion constant-term reduction | `verification/related/verify_franel_companion_ct_reduction.py` |
+| A362676 prime boundary | `verification/related/verify_a362676_prime_boundary.py` |
 | Balanced-matrix coefficient tower | `verification/related/verify_balanced_matrix_coefficient_tower.py` |
 | A244973 linear--quadratic Frobenius reduction | `verification/related/verify_a244973_frobenius_reduction.py` |
 | A331562 uniform rational diagonal | `verification/related/verify_a331562_uniform_rational_diagonal.py` |

@@ -251,6 +251,14 @@ prove this full integer-parameter deformation; the missing statement is now
 one explicit cubic Cartier contraction.  Both records therefore move to
 `partial`, leaving nine records `open-target`.
 
+The subsequent [A362676 prime-boundary theorem](A362676PrimeBoundary.md)
+proves `F(p)==4 (mod p^3)` for every `p>=5`.  The proof couples the lower
+central-binomial deformation to the divided upper half through an exact
+beta-integral identity, then applies the Morley--Lehmer harmonic
+normalization.  This advances A362676 inside `partial` without changing the
+campaign count: the uniform `n,r` tower and the A363985 parameter family
+still require the cubic Cartier contraction.
+
 The balanced-matrix unit then closes A124435.  A general coefficientwise
 theorem proves a `p^(2r)` Frobenius tower for products of linear forms with
 equal row and column margins: every missed residue matrix forces carries in
