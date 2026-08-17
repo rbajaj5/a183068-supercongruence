@@ -2403,6 +2403,41 @@ proof.
 - **Report:** [A362676 one-step cubic theorem](related-results/A362676OneStepCongruence.md)
 - **Exact checker:** [`verify_a362676_one_step.py`](verification/related/verify_a362676_one_step.py)
 
+### A362676-R2 — second-level scaled transfer and unit-shell reduction
+
+- **Claim:** With
+
+  ~~~math
+  A_N(k)=\binom{N+k-1}{k}
+         \binom{2(N-k)}{N-k}\binom{2k}{k},
+  ~~~
+
+  every prime `p>=5`, positive integer `n`, and `0<=k<=np` satisfy
+
+  ~~~math
+  A_{np^2}(pk)\equiv A_{np}(k)\pmod {p^6}.
+  ~~~
+
+  Consequently
+
+  ~~~math
+  F(np^2)-F(np)\equiv
+  \sum_{\substack{0\le k\le np^2\\p\nmid k}}A_{np^2}(k)
+  \pmod {p^6}.
+  ~~~
+
+  The proof combines the refined Jacobsthal congruence with a universal
+  cubic expansion of the central-binomial scaling quotient.  At unit
+  indices the two central cubic defects cancel modulo `p^4`, while two
+  independent carries raise the summand transfer to `p^6`.
+- **Status:** Complete proof of the scaled-index transfer and exact
+  unit-shell reduction.  The final two-digit unit-superblock cancellation
+  is isolated explicitly and passes 4,560 exact checks, including 150
+  central cubic-quotient checks, 90 superblocks, and 30 direct `r=2`
+  cases, but is not yet claimed proved.
+- **Report:** [A362676 second-level transfer and reduction](related-results/A362676SecondLevelReduction.md)
+- **Exact checker:** [`verify_a362676_second_level.py`](verification/related/verify_a362676_second_level.py)
+
 ### TAYLOR-7 — Catalan and Schröder Taylor-truncation packet
 
 - **Claim:** The seven records A333090--A333097 that carry live
