@@ -1,6 +1,6 @@
 # The second-level cubic congruence for A362676
 
-**Status:** complete proof of the full \(r=2\) layer; higher adjacent
+**Status:** complete proof of the full $r=2$ layer; higher adjacent
 levels remain open; priority provisional
 
 Let
@@ -15,9 +15,9 @@ The [one-step theorem](A362676OneStepCongruence.md) proves
 F(np)\equiv F(n)\pmod {p^3}
 ~~~
 
-for every prime \(p\geq5\).  This note advances the next adjacent level.
+for every prime $p\geq5$.  This note advances the next adjacent level.
 It first proves that every term whose upper-level index is divisible by
-\(p\) transfers with the full required precision \(p^6\).  A second
+$p$ transfers with the full required precision $p^6$.  A second
 reciprocal-sum calculation then cancels the remaining unit indices in
 two-digit superblocks.
 
@@ -41,7 +41,7 @@ F(N)=\sum_{k=0}^{N}A_N(k).
 
 ## 2. Two Jacobsthal forms
 
-For a prime \(p\geq5\), write
+For a prime $p\geq5$, write
 
 ~~~math
 Q_p(a,b)=\frac{\binom{pa}{pb}}{\binom ab}.
@@ -56,8 +56,8 @@ v_p\!\left(Q_p(a,b)-1\right)
 ~~~
 
 We also need the leading term only for central binomial coefficients.
-There is a constant \(\kappa_p\in\mathbb Z/p\mathbb Z\), depending on
-\(p\) but not on \(x\), such that
+There is a constant $\kappa_p\in\mathbb Z/p\mathbb Z$, depending on
+$p$ but not on $x$, such that
 
 ~~~math
 Q_p(2x,x)\equiv1+\kappa_p p^3x^3\pmod {p^4}.
@@ -78,8 +78,8 @@ To see the coefficient explicitly, put
 H_{p-1}^{(m)}=\sum_{b=1}^{p-1}b^{-m}
 ~~~
 
-in \(\mathbb Z_p\), and split \(j=ap+b\), with \(0\leq a<x\) and
-\(1\leq b<p\).  Wolstenholme's congruence and the finite-field power
+in $\mathbb Z_p$, and split $j=ap+b$, with $0\leq a<x$ and
+$1\leq b<p$.  Wolstenholme's congruence and the finite-field power
 sums give
 
 ~~~math
@@ -88,7 +88,7 @@ H_{p-1}^{(2)}\equiv0\pmod p,\qquad
 H_{p-1}^{(3)}\equiv0\pmod p.
 ~~~
 
-Pairing \(b\) with \(p-b\) also gives
+Pairing $b$ with $p-b$ also gives
 
 ~~~math
 H_{p-1}^{(1)}
@@ -102,7 +102,7 @@ S_m(x)=
 \sum_{\substack{1\leq j\leq px\\p\nmid j}}j^{-m},
 ~~~
 
-then expansion of \((ap+b)^{-m}\) gives
+then expansion of $(ap+b)^{-m}$ gives
 
 ~~~math
 \begin{aligned}
@@ -131,15 +131,15 @@ px^2H_{p-1}^{(1)}
 ~~~
 
 Thus (4) holds with
-\(\kappa_p\equiv-H_{p-1}^{(2)}/p\pmod p\).  The logarithm has valuation
-at least three, so exponentiating introduces no new term modulo \(p^4\).
+$\kappa_p\equiv-H_{p-1}^{(2)}/p\pmod p$.  The logarithm has valuation
+at least three, so exponentiating introduces no new term modulo $p^4$.
 
 ## 3. Complete scaled-index transfer
 
 ### Theorem 1
 
-For every prime \(p\geq5\), every positive integer \(n\), and every
-\(0\leq k\leq np\),
+For every prime $p\geq5$, every positive integer $n$, and every
+$0\leq k\leq np$,
 
 ~~~math
 \boxed{A_{np^2}(pk)\equiv A_{np}(k)\pmod {p^6}.}
@@ -148,7 +148,7 @@ For every prime \(p\geq5\), every positive integer \(n\), and every
 
 ### Proof
 
-Put \(M=np\).  The exact identities
+Put $M=np$.  The exact identities
 
 ~~~math
 \binom{p(M+k)-1}{pk}
@@ -173,15 +173,15 @@ show that the quotient of the two sides of (5) is
 ~~~
 
 The degenerate factors with lower index zero or equal to the upper index
-are interpreted as \(1\).
+are interpreted as $1$.
 
-First suppose that \(p\mid k\).  Then \(p\) divides \(M+k\), \(k\), and
-\(M\).  Formula (3) puts the first factor of (6) at \(1\) modulo \(p^6\).
-It does the same for each nontrivial central factor, since both \(k\) and
-\(M-k\) are divisible by \(p\).  Hence (6) is \(1\) modulo \(p^6\), and
+First suppose that $p\mid k$.  Then $p$ divides $M+k$, $k$, and
+$M$.  Formula (3) puts the first factor of (6) at $1$ modulo $p^6$.
+It does the same for each nontrivial central factor, since both $k$ and
+$M-k$ are divisible by $p$.  Hence (6) is $1$ modulo $p^6$, and
 (5) follows.
 
-Now suppose that \(p\nmid k\).  Because \(p\mid M\), (3) gives
+Now suppose that $p\nmid k$.  Because $p\mid M$, (3) gives
 
 ~~~math
 Q_p(M+k,k)\equiv1\pmod {p^4}.
@@ -206,16 +206,16 @@ because
 (M-k)^3+k^3=M(M^2-3Mk+3k^2).
 ~~~
 
-Thus the quotient (6) is \(1\) modulo \(p^4\).  Two independent carries
-supply the other two powers.  The lower base-\(p\) digit of \(M+k-1\) is
-one less than that of \(k\), so
+Thus the quotient (6) is $1$ modulo $p^4$.  Two independent carries
+supply the other two powers.  The lower base-$p$ digit of $M+k-1$ is
+one less than that of $k$, so
 
 ~~~math
 p\mid\binom{M+k-1}{k}.
 ~~~
 
-If \(k\equiv c\pmod p\), with \(1\leq c<p\), exactly one of \(c\) and
-\(p-c\) exceeds \(p/2\).  Kummer's theorem therefore shows that exactly
+If $k\equiv c\pmod p$, with $1\leq c<p$, exactly one of $c$ and
+$p-c$ exceeds $p/2$.  Kummer's theorem therefore shows that exactly
 one of
 
 ~~~math
@@ -223,12 +223,12 @@ one of
 \binom{2(M-k)}{M-k}
 ~~~
 
-has a units-digit carry.  Consequently \(p^2\mid A_M(k)\).  Multiplying
-the \(p^4\) quotient error by \(A_M(k)\) proves (5). QED
+has a units-digit carry.  Consequently $p^2\mid A_M(k)$.  Multiplying
+the $p^4$ quotient error by $A_M(k)$ proves (5). QED
 
 ## 4. Reduction to the unit shell
 
-Split (2) at level \(np^2\) according to whether \(p\mid k\).  Theorem 1
+Split (2) at level $np^2$ according to whether $p\mid k$.  Theorem 1
 gives
 
 ~~~math
@@ -240,7 +240,7 @@ F(np^2)-F(np)
 \tag{9}
 ~~~
 
-For \(0\leq a<n\), define the two-digit unit superblock
+For $0\leq a<n$, define the two-digit unit superblock
 
 ~~~math
 U_a=
@@ -259,9 +259,9 @@ U_a\equiv0\pmod {p^6}
 
 No divisible-index transfer remains to be proved.  We now prove (11).
 
-## 5. One-digit blocks to precision \(p^6\)
+## 5. One-digit blocks to precision $p^6$
 
-Write \(M=np\).  For \(0\leq j<M\), set
+Write $M=np$.  For $0\leq j<M$, set
 
 ~~~math
 B_j=\sum_{b=1}^{p-1}A_{pM}(jp+b)
@@ -281,8 +281,8 @@ D_j^+&=M(j+1)\binom{M+j}{j}
 \tag{13}
 ~~~
 
-Kummer's theorem shows that both \(D_j^-\) and \(D_j^+\) are divisible
-by \(p^2\).  Put \(h=(p-1)/2\) and, in \(\mathbb Z_p\), define
+Kummer's theorem shows that both $D_j^-$ and $D_j^+$ are divisible
+by $p^2$.  Put $h=(p-1)/2$ and, in $\mathbb Z_p$, define
 
 ~~~math
 \alpha_p\equiv
@@ -294,12 +294,12 @@ by \(p^2\).  Put \(h=(p-1)/2\) and, in \(\mathbb Z_p\), define
 ~~~
 
 The first quotient is defined because
-\(\sum_{b=1}^{p-1}b^{-2}=0\) in \(\mathbb F_p\), while pairing \(b\)
-with \(p-b\) makes the full sum twice the displayed half-sum.
+$\sum_{b=1}^{p-1}b^{-2}=0$ in $\mathbb F_p$, while pairing $b$
+with $p-b$ makes the full sum twice the displayed half-sum.
 
 ### Lemma 2
 
-For \(0\leq j<M\),
+For $0\leq j<M$,
 
 ~~~math
 \boxed{
@@ -310,14 +310,14 @@ B_j\equiv
 
 ### Proof
 
-Split the block into its lower and upper halves.  For \(1\leq b\leq h\),
-separate the factors divisible by \(p\) in the three binomial coefficients
-of \(A_{pM}(pj+b)\).  The three scaled binomial quotients can be replaced
-by \(1\) modulo \(p^3\) by (3).  Since \(p^2\mid D_j^-\), their discarded
-contribution is zero modulo \(p^6\).
+Split the block into its lower and upper halves.  For $1\leq b\leq h$,
+separate the factors divisible by $p$ in the three binomial coefficients
+of $A_{pM}(pj+b)$.  The three scaled binomial quotients can be replaced
+by $1$ modulo $p^3$ by (3).  Since $p^2\mid D_j^-$, their discarded
+contribution is zero modulo $p^6$.
 
-In the remaining unit products put \(x=pj\).  Because \(pM\equiv0\pmod
-{p^2}\), direct cancellation gives
+In the remaining unit products put $x=pj$.  Because $pM\equiv0\pmod
+{p^2}$, direct cancellation gives
 
 ~~~math
 \begin{aligned}
@@ -333,7 +333,7 @@ In the remaining unit products put \(x=pj\).  Because \(pM\equiv0\pmod
 ~~~
 
 This is exactly the normalized product left after removing the factor
-\(p^2D_j^-\).  Hence
+$p^2D_j^-$.  Hence
 
 ~~~math
 A_{pM}(pj+b)
@@ -341,8 +341,8 @@ A_{pM}(pj+b)
 \tag{16}
 ~~~
 
-For the upper half write the index as \(p(j+1)-b\).  The same falling-
-factorial calculation, now with \(x=p(j+1)\), gives
+For the upper half write the index as $p(j+1)-b$.  The same falling-
+factorial calculation, now with $x=p(j+1)$, gives
 
 ~~~math
 A_{pM}(p(j+1)-b)
@@ -373,11 +373,11 @@ D_j^-(-\alpha_p+2j\beta_p)
 ~~~
 
 The next lemma shows that the right side is
-\(\mu_p(D_j^--D_j^+)\) modulo \(p^3\). QED
+$\mu_p(D_j^--D_j^+)$ modulo $p^3$. QED
 
 ## 6. The second digit
 
-For \(0\leq a<n\), define
+For $0\leq a<n$, define
 
 ~~~math
 \begin{aligned}
@@ -392,7 +392,7 @@ C_a^+&=n(a+1)\binom{n+a}{a}
 
 ### Lemma 3
 
-If \(j=ap+c\), \(0\leq c<p\), then
+If $j=ap+c$, $0\leq c<p$, then
 
 ~~~math
 \begin{array}{c|cc}
@@ -417,11 +417,11 @@ the carried formula
 \tag{22}
 ~~~
 
-to the carried one.  For \(c<h\), the carry occurs in the
-\(M-j\) central coefficient; for \(c>h\), it occurs in the \(j\)
-central coefficient.  At \(c=h\), the first occurs in \(D_j^-\) and the
-second occurs after the shift in \(D_j^+\).  For example, when
-\(1\leq c\leq h\), Lucas and (22) give
+to the carried one.  For $c<h$, the carry occurs in the
+$M-j$ central coefficient; for $c>h$, it occurs in the $j$
+central coefficient.  At $c=h$, the first occurs in $D_j^-$ and the
+second occurs after the shift in $D_j^+$.  For example, when
+$1\leq c\leq h$, Lucas and (22) give
 
 ~~~math
 \begin{aligned}
@@ -436,37 +436,37 @@ second occurs after the shift in \(D_j^+\).  For example, when
 \end{aligned}
 ~~~
 
-The corresponding \(D_j^+\) calculation uses \(c+1\): it is
-\(-C_a^-\) below the midpoint and \(C_a^+\) at the midpoint.  Above the
+The corresponding $D_j^+$ calculation uses $c+1$: it is
+$-C_a^-$ below the midpoint and $C_a^+$ at the midpoint.  Above the
 midpoint the carried and uncarried central coefficients exchange roles,
-giving \(-C_a^+\) and \(C_a^+\).  At \(c=0\) and \(c=p-1\), the same rows
+giving $-C_a^+$ and $C_a^+$.  At $c=0$ and $c=p-1$, the same rows
 follow directly from the ordinary scaled binomial congruence.  This proves
 (21). QED
 
-By (21), the right side of (19), divided by \(p^2\), has three forms.
-If \(c<h\), it equals
+By (21), the right side of (19), divided by $p^2$, has three forms.
+If $c<h$, it equals
 
 ~~~math
 C_a^-\bigl(-2\alpha_p-2\beta_p\bigr)
 =2\mu_pC_a^-.
 ~~~
 
-At \(c=h\), use \(h\equiv-1/2\pmod p\) to obtain
+At $c=h$, use $h\equiv-1/2\pmod p$ to obtain
 
 ~~~math
 \mu_p(C_a^--C_a^+).
 ~~~
 
-If \(c>h\), the result is
+If $c>h$, the result is
 
 ~~~math
 -2\mu_pC_a^+.
 ~~~
 
 In every case this equals
-\(\mu_p(D_j^--D_j^+)/p^2\), which completes the proof of Lemma 2.
+$\mu_p(D_j^--D_j^+)/p^2$, which completes the proof of Lemma 2.
 
-Now sum (15) over \(j=ap+c\), \(0\leq c<p\).  Lemma 3 gives
+Now sum (15) over $j=ap+c$, $0\leq c<p$.  Lemma 3 gives
 
 ~~~math
 \begin{aligned}
@@ -478,13 +478,13 @@ Now sum (15) over \(j=ap+c\), \(0\leq c<p\).  Lemma 3 gives
 \end{aligned}
 ~~~
 
-Equation (15) therefore proves \(U_a\equiv0\pmod {p^6}\), which is (11).
+Equation (15) therefore proves $U_a\equiv0\pmod {p^6}$, which is (11).
 
 ## 7. Second-level theorem
 
 ### Theorem 2
 
-For every prime \(p\geq5\) and every positive integer \(n\),
+For every prime $p\geq5$ and every positive integer $n$,
 
 ~~~math
 \boxed{F(np^2)\equiv F(np)\pmod {p^6}.}
@@ -494,7 +494,7 @@ For every prime \(p\geq5\) and every positive integer \(n\),
 ### Proof
 
 The scaled-index terms vanish by Theorem 1.  The unit-index terms are the
-sum of the superblocks \(U_a\), each of which vanishes by Lemmas 2--3.
+sum of the superblocks $U_a$, each of which vanishes by Lemmas 2--3.
 Apply (9). QED
 
 ## 8. Verification
@@ -507,10 +507,10 @@ verifies:
 - the exact reduction (9);
 - the explicit block expansion (15);
 - the three-row scaling law (21);
-- divisibility of every one-digit block by \(p^5\);
-- divisibility of every two-digit superblock by \(p^6\); and
-- the resulting \(r=2\) congruence
-  \(F(np^2)\equiv F(np)\pmod {p^6}\)
+- divisibility of every one-digit block by $p^5$;
+- divisibility of every two-digit superblock by $p^6$; and
+- the resulting $r=2$ congruence
+  $F(np^2)\equiv F(np)\pmod {p^6}$
 
 over a finite grid in exact integer arithmetic.  These checks audit the
 proof but are not inputs to it.  The default grid contains 20,850 cases,
