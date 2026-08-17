@@ -2352,6 +2352,31 @@ proof.
 - **Report:** [Franel-companion constant-term reduction](related-results/FranelCompanionConstantTermReduction.md)
 - **Exact checker:** [`verify_franel_companion_ct_reduction.py`](verification/related/verify_franel_companion_ct_reduction.py)
 
+### A362676-P1 — cubic prime boundary
+
+- **Claim:** If
+
+  ```math
+  F(N)=\sum_{k=0}^{N}4^{N-k}\binom Nk\binom{N-1}{k}\binom{2k}{k},
+  ```
+
+  then, for every prime `p>=5`,
+
+  ```math
+  F(p)\equiv F(1)=4\pmod {p^3}.
+  ```
+
+- **Mechanism:** Splitting the central-binomial sums at `(p-1)/2`
+  produces an order-`p` deformation on the lower half and a divided
+  order-`p` upper half.  An exact beta-integral identity cancels them.
+  Morley--Lehmer then converts the surviving harmonic sum to the base-two
+  Fermat quotient, and the two quotient terms cancel in the expansion of
+  `4^(p-1)`.
+- **Status:** Complete proof of the `n=r=1` point, with 424 exact checks and
+  44 sharp primes below 200.  This does not prove the full adjacent tower.
+- **Report:** [A362676 prime boundary](related-results/A362676PrimeBoundary.md)
+- **Exact checker:** [`verify_a362676_prime_boundary.py`](verification/related/verify_a362676_prime_boundary.py)
+
 ### TAYLOR-7 — Catalan and Schröder Taylor-truncation packet
 
 - **Claim:** The seven records A333090--A333097 that carry live
