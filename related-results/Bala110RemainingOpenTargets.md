@@ -41,7 +41,11 @@ places A362676 and A363985 in one explicit constant-term family and moves
 both to `partial`.  The
 [A362676 one-step theorem](A362676OneStepCongruence.md) now proves the full
 `r=1` layer for every positive integer `n` and every prime at least five,
-but the nested `r>=2` contraction remains open. The later
+and the
+[second-level transfer](A362676SecondLevelReduction.md) proves the complete
+scaled-index contraction modulo `p^6`.  The `r=2` theorem is now reduced
+exactly to one two-digit unit-superblock residue law; nested higher levels
+and that final block lemma remain open. The later
 [balanced-matrix theorem](BalancedMatrixCoefficientQuadraticTower.md)
 proves A124435. The
 [A244973 Frobenius reduction](A244973QuadraticFrobeniusReduction.md)

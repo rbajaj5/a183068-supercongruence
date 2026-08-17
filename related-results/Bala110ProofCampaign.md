@@ -265,6 +265,12 @@ Its positive convolution splits into termwise Jacobsthal contraction on
 `p|k` and complete residue blocks on `p` not dividing `k`; each such block
 vanishes cubically by a reciprocal-square half-block identity.  A362676
 remains `partial` only because the nested levels `r>=2` are not yet proved.
+The subsequent
+[second-level transfer](A362676SecondLevelReduction.md) proves
+`A_(np^2)(pk)==A_(np)(k) (mod p^6)` term by term and reduces the entire
+`r=2` difference to one unit shell.  Its two-digit superblocks pass the
+recorded exact residue law, but that final law remains an explicit proof
+obligation.
 
 The balanced-matrix unit then closes A124435.  A general coefficientwise
 theorem proves a `p^(2r)` Frobenius tower for products of linear forms with

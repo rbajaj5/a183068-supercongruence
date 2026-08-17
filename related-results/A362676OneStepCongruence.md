@@ -274,10 +274,12 @@ This proves the theorem. QED
 ## 5. Remaining boundary
 
 The theorem closes the entire `r=1` layer, but it does not prove (1) for
-`r>=2`.  At higher levels, indices with intermediate valuation
-`0<v_p(k)<r` create nested residue blocks.  The next target is a
-valuation-stratified version of Lemma 2 that gains `3r`, rather than only
-the first three powers.
+`r>=2`.  The later
+[second-level reduction](A362676SecondLevelReduction.md) proves the full
+scaled-index transfer modulo `p^6` and isolates the remaining `r=2`
+obstruction as one two-digit unit-superblock law.  Beyond that level,
+indices with intermediate valuation `0<v_p(k)<r` create nested residue
+blocks.
 
 The companion checker
 [`verify_a362676_one_step.py`](../verification/related/verify_a362676_one_step.py)
