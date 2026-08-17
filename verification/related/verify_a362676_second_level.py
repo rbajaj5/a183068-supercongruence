@@ -1,8 +1,8 @@
 """Exact checks for the A362676 second-level reduction.
 
-The proof companion checks the scaled-index transfer modulo p^6 and maps
-the remaining unit shell into one-digit blocks and two-digit superblocks.
-The finite checks of the final superblock law are evidence, not a proof.
+The proof companion checks the scaled-index transfer modulo p^6, the
+explicit one-digit block expansion, the second-digit scaling table, and the
+resulting two-digit superblock cancellation.
 """
 
 from __future__ import annotations
@@ -66,6 +66,26 @@ def c_plus(n: int, a: int) -> int:
         * comb(n + a, a)
         * comb(2 * a + 2, a + 1)
         * comb(2 * (n - a - 1), n - a - 1)
+    )
+
+
+def d_minus(m: int, j: int) -> int:
+    return (
+        m
+        * (m - j)
+        * comb(m + j, j)
+        * comb(2 * j, j)
+        * comb(2 * (m - j), m - j)
+    )
+
+
+def d_plus(m: int, j: int) -> int:
+    return (
+        m
+        * (j + 1)
+        * comb(m + j, j)
+        * comb(2 * j + 2, j + 1)
+        * comb(2 * (m - j - 1), m - j - 1)
     )
 
 
@@ -133,25 +153,36 @@ def check_carry_budget() -> int:
     return checks
 
 
-def check_blocks_and_residue_law() -> tuple[int, int, int, int]:
+def check_blocks_and_residue_law() -> tuple[int, int, int, int, int, int]:
     block_checks = 0
+    block_expansion_checks = 0
+    scaling_table_checks = 0
     superblock_checks = 0
     residue_checks = 0
     theorem_checks = 0
 
     for p in PRIMES:
         h = (p - 1) // 2
-
-        # The n=1, a=0, c=0 low block normalizes lambda_p.
-        base_blocks = blocks(1, p)
-        assert base_blocks[0] % (p**5) == 0
-        lambda_p = (base_blocks[0] // (p**5)) * pow(2, -1, p) % p
+        half_h2 = sum(pow(b * b, -1, p * p) for b in range(1, h + 1))
+        half_h2 %= p * p
+        assert half_h2 % p == 0
+        alpha_p = half_h2 // p % p
+        beta_p = sum(pow(b**3, -1, p) for b in range(1, h + 1)) % p
+        mu_p = (-alpha_p - beta_p) % p
 
         for n in range(1, N_LIMIT + 1):
             current = blocks(n, p)
-            for block in current:
+            middle_n = n * p
+            for j, block in enumerate(current):
                 assert block % (p**5) == 0
                 block_checks += 1
+                dm = d_minus(middle_n, j)
+                dp = d_plus(middle_n, j)
+                assert dm % (p**2) == 0
+                assert dp % (p**2) == 0
+                predicted = mu_p * p**3 * (dm - dp)
+                assert (block - predicted) % (p**6) == 0
+                block_expansion_checks += 1
 
             for a in range(n):
                 superblock = sum(current[a * p : (a + 1) * p])
@@ -161,13 +192,27 @@ def check_blocks_and_residue_law() -> tuple[int, int, int, int]:
                 low = c_minus(n, a) % p
                 high = c_plus(n, a) % p
                 for c in range(p):
+                    j = a * p + c
+                    dm = d_minus(middle_n, j) // (p**2) % p
+                    dp = d_plus(middle_n, j) // (p**2) % p
+                    if c < h:
+                        assert dm == low
+                        assert dp == (-low) % p
+                    elif c == h:
+                        assert dm == low
+                        assert dp == high
+                    else:
+                        assert dm == (-high) % p
+                        assert dp == high
+                    scaling_table_checks += 1
+
                     actual = current[a * p + c] // (p**5) % p
                     if c < h:
-                        expected = lambda_p * low
+                        expected = 2 * mu_p * low
                     elif c == h:
-                        expected = lambda_p * (low - high) * pow(2, -1, p)
+                        expected = mu_p * (low - high)
                     else:
-                        expected = -lambda_p * high
+                        expected = -2 * mu_p * high
                     assert actual == expected % p
                     residue_checks += 1
 
@@ -175,7 +220,51 @@ def check_blocks_and_residue_law() -> tuple[int, int, int, int]:
             assert delta % (p**6) == 0
             theorem_checks += 1
 
-    return block_checks, superblock_checks, residue_checks, theorem_checks
+    return (
+        block_checks,
+        block_expansion_checks,
+        scaling_table_checks,
+        superblock_checks,
+        residue_checks,
+        theorem_checks,
+    )
+
+
+def check_local_unit_term_expansions() -> int:
+    """Audit equations (16) and (17) before the reciprocal sums are taken."""
+    checks = 0
+    for p in PRIMES:
+        modulus = p**6
+        h = (p - 1) // 2
+        for n in range(1, N_LIMIT + 1):
+            middle_n = n * p
+            upper_n = middle_n * p
+            for j in range(middle_n):
+                dm = d_minus(middle_n, j)
+                dp = d_plus(middle_n, j)
+                for b in range(1, h + 1):
+                    lower_denominator = (b + p * j) ** 2
+                    lower_expected = (
+                        -p**2
+                        * dm
+                        * pow(lower_denominator, -1, modulus)
+                    )
+                    assert (
+                        term(upper_n, p * j + b) - lower_expected
+                    ) % modulus == 0
+                    checks += 1
+
+                    upper_denominator = (b - p * (j + 1)) ** 2
+                    upper_expected = (
+                        p**2
+                        * dp
+                        * pow(upper_denominator, -1, modulus)
+                    )
+                    assert (
+                        term(upper_n, p * (j + 1) - b) - upper_expected
+                    ) % modulus == 0
+                    checks += 1
+    return checks
 
 
 def check_exact_reduction() -> int:
@@ -207,9 +296,15 @@ def main() -> None:
     transfer_checks, sharp_transfers = check_scaled_transfer()
     central_quotient_checks = check_central_cubic_quotient()
     carry_checks = check_carry_budget()
-    block_checks, superblock_checks, residue_checks, theorem_checks = (
-        check_blocks_and_residue_law()
-    )
+    local_term_checks = check_local_unit_term_expansions()
+    (
+        block_checks,
+        block_expansion_checks,
+        scaling_table_checks,
+        superblock_checks,
+        residue_checks,
+        theorem_checks,
+    ) = check_blocks_and_residue_law()
     reduction_checks = check_exact_reduction()
 
     print("A362676 second-level verification passed")
@@ -217,7 +312,10 @@ def main() -> None:
     print(f"sharp scaled-index transfers: {sharp_transfers}")
     print(f"central cubic-quotient checks: {central_quotient_checks}")
     print(f"two-carry budget checks: {carry_checks}")
+    print(f"local unit-term expansion checks: {local_term_checks}")
     print(f"one-digit p^5 block checks: {block_checks}")
+    print(f"explicit block-expansion checks: {block_expansion_checks}")
+    print(f"second-digit scaling-table checks: {scaling_table_checks}")
     print(f"two-digit p^6 superblock checks: {superblock_checks}")
     print(f"piecewise residue-law checks: {residue_checks}")
     print(f"exact reduction checks: {reduction_checks}")

@@ -264,13 +264,15 @@ that boundary to `F(np)==F(n) (mod p^3)` for every positive integer `n`.
 Its positive convolution splits into termwise Jacobsthal contraction on
 `p|k` and complete residue blocks on `p` not dividing `k`; each such block
 vanishes cubically by a reciprocal-square half-block identity.  A362676
-remains `partial` only because the nested levels `r>=2` are not yet proved.
+remained `partial` after this step because the nested levels were not yet
+proved.
 The subsequent
-[second-level transfer](A362676SecondLevelReduction.md) proves
-`A_(np^2)(pk)==A_(np)(k) (mod p^6)` term by term and reduces the entire
-`r=2` difference to one unit shell.  Its two-digit superblocks pass the
-recorded exact residue law, but that final law remains an explicit proof
-obligation.
+[second-level theorem](A362676SecondLevelReduction.md) first proves
+`A_(np^2)(pk)==A_(np)(k) (mod p^6)` term by term.  A local unit-product
+expansion then evaluates the remaining one-digit blocks through half-block
+reciprocal squares and cubes; a three-row Lucas/Kummer table cancels every
+two-digit superblock.  This proves the full `r=2` layer, leaving only
+`r>=3` open for A362676.
 
 The balanced-matrix unit then closes A124435.  A general coefficientwise
 theorem proves a `p^(2r)` Frobenius tower for products of linear forms with

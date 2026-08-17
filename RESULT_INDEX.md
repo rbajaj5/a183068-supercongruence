@@ -2399,11 +2399,11 @@ proof.
   `sum_(b=1)^((p-1)/2) 1/b^2`, which vanishes modulo `p`.
 - **Status:** Complete proof of the entire `r=1` layer with 34,501 exact
   checks, including 1,260 block checks and 168 direct theorem checks.
-  The `r>=2` levels remain open.
+  The `r=2` layer is proved separately; levels `r>=3` remain open.
 - **Report:** [A362676 one-step cubic theorem](related-results/A362676OneStepCongruence.md)
 - **Exact checker:** [`verify_a362676_one_step.py`](verification/related/verify_a362676_one_step.py)
 
-### A362676-R2 — second-level scaled transfer and unit-shell reduction
+### A362676-R2 — full second-level cubic congruence
 
 - **Claim:** With
 
@@ -2429,13 +2429,15 @@ proof.
   The proof combines the refined Jacobsthal congruence with a universal
   cubic expansion of the central-binomial scaling quotient.  At unit
   indices the two central cubic defects cancel modulo `p^4`, while two
-  independent carries raise the summand transfer to `p^6`.
-- **Status:** Complete proof of the scaled-index transfer and exact
-  unit-shell reduction.  The final two-digit unit-superblock cancellation
-  is isolated explicitly and passes 4,560 exact checks, including 150
-  central cubic-quotient checks, 90 superblocks, and 30 direct `r=2`
-  cases, but is not yet claimed proved.
-- **Report:** [A362676 second-level transfer and reduction](related-results/A362676SecondLevelReduction.md)
+  independent carries raise the summand transfer to `p^6`.  The unit shell
+  then cancels in two-digit superblocks, proving
+
+  ~~~math
+  F(np^2)\equiv F(np)\pmod {p^6}.
+  ~~~
+- **Status:** Complete elementary proof of the full `r=2` layer with 20,850
+  exact checks.  The levels `r>=3` remain open.
+- **Report:** [A362676 second-level cubic theorem](related-results/A362676SecondLevelReduction.md)
 - **Exact checker:** [`verify_a362676_second_level.py`](verification/related/verify_a362676_second_level.py)
 
 ### TAYLOR-7 — Catalan and Schröder Taylor-truncation packet
