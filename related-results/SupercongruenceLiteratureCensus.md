@@ -102,23 +102,28 @@ The following examples show why the routing pass is necessary.
 | [A364509](https://oeis.org/A364509) | The live record marks the row-family congruence as following from the binomial congruence recorded by Meštrović.  The parameter matching should still be written explicitly before citing it as a proof. |
 | [A082758](https://oeis.org/A082758) | The live record now derives the conjectured bound from Pan--Sun's central-trinomial theorem. |
 | [A333593](https://oeis.org/A333593) | The repository gives an exact decomposition into a Coster generalized-Apéry tower and a Jacobsthal--Kazandzidis binomial tower.  This is a published-theorem reduction, not a new mechanism. |
-| [A375178](https://oeis.org/A375178), cubic baseline | Coster supplies the \(p^{3r}\) tower for every exponent \(q\ge2\).  Bala's stronger \(p^{3r+q}\) odd-power tower remains open. |
+| [A375178](https://oeis.org/A375178) | Coster supplies the $p^{3r}$ baseline for every exponent $q\ge2$. The repository now proves Bala's stronger $p^{3r+q}$ tower for every odd $q\ge3$ by a universal final-shell harmonic involution. |
 | [A365029](https://oeis.org/A365029), boundary and first two levels | The repository proves the stronger prime-boundary result \(C_{A,B}(p-1)\equiv1\pmod {p^{A+B}}\) and the \(r=1,2\) adjacent congruences for \(C_{2,1}\). The tower from \(r=3\) onward remains open. |
 | [A357509](https://oeis.org/A357509) | The repository proves the record's complete two-parameter family \(k^2(k-1)\binom{jn}{n}-j^2(j-1)\binom{kn}{n}\) modulo \(p^{3r+3}\) at \(n=p^r\), for all integers \(j,k\), primes \(p\ge5\), and \(r\ge2\). |
 | [A357568](https://oeis.org/A357568) | The repository proves the complete conjectured family \(9\binom{2n}{n}^k-k2^k\binom{3n}{n}\) modulo \(p^{3r+3}\) at \(n=p^r\), for every odd prime, \(r\ge2\), and \(k\ge1\). |
+| [A219562](https://oeis.org/A219562) | The repository proves both the prime-level fifth power and the full enhanced \(p^{3r+3}\) tower for \(r\ge2\). The higher proof is a critical-shell refinement beyond Coster's published cubic baseline. |
+| [A112028](https://oeis.org/A112028) | The repository proves both the prime-level fifth power and the full enhanced $p^{3r+3}$ tower for $r\ge2$. Its cubic lift needs a two-digit outer-shell lemma and two aggregate finite-field cancellations beyond Coster's baseline. |
 | [A364506](https://oeis.org/A364506) | Every row is factored as an integral Laurent product of four binomial coefficients. The classical adjacent binomial scaling theorem then proves the complete \(p^{3r}\) row tower for \(p\ge5\). |
 | [A288470](https://oeis.org/A288470) | The repository proves the conjectured \(p^{2r}\) tower and strengthens the prime range from \(p\ge5\) to every odd prime. The analogous binary tower fails at \(r=2\). |
 | [A141057](https://oeis.org/A141057) | The repository proves the conjectured $p^{3r}$ tower, strengthens it to $p=3$, and embeds it in a coefficientwise Frobenius theorem for arbitrary powers of multinomial coefficients. |
 | [A091527](https://oeis.org/A091527) and [A262732](https://oeis.org/A262732) | The repository proves both $p^{3r}$ towers at once by an odd-unit block theorem for the entire family $4^N\binom{(mN-1)/2}{N}$. The claimed prime range $p\ge5$ is sharp for both named cases at $p=3$. |
 | [A275652](https://oeis.org/A275652) and [A275654](https://oeis.org/A275654) | Dixon's terminating ${}_3F_2(1)$ evaluation places both sequences in one Legendre-coefficient family. A half-binomial unit-block lemma then proves both $p^{3r}$ towers for $p\ge5$ and every integer family parameter $a\ge3$. |
 | [A364173](https://oeis.org/A364173) | The repository proves both open assertions on the record: a carry-interval floor lemma establishes global integrality, and a factorization into three ordinary and three half-binomial terms proves the full $p^{3r}$ tower for $p\ge5$. |
+| [A364183](https://oeis.org/A364183) | A two-case affine-Landau floor table proves global integrality, and an exact factorization into eleven half-binomial terms proves the full $p^{3r}$ tower for $p\ge5$. |
+| Bober half-index packet | A uniform translated-Landau theorem proves all eleven $N/2$ integrality conjectures in Bala's fractional packet; combined with rational gamma transfer, all eleven have complete cubic towers for $p\ge5$. |
+| Bober denominator-three/four packet | A translated-Landau valuation identity plus explicit base-three and binary digit formulas prove the remaining four source-visible fractional variants integral; rational gamma transfer gives their complete cubic towers for $p\ge5$. |
 | [A364175](https://oeis.org/A364175) and the surrounding fractional-factorial packet | Radcliffe's July 2026 note proves A364175 integral.  The repository's denominator-$q$ rational-binomial transfer proves its full $p^{3r}$ tower and shows that every other residue-balanced record in A364172--A364184 already has the conjectured cubic transfer in $\mathbb Q_p$; their remaining obstruction is global integrality. |
 | [A365025](https://oeis.org/A365025), [A365026](https://oeis.org/A365026), and [A365027](https://oeis.org/A365027) | The finite binomial sum proves every row integral, and the rational gamma-ratio theorem proves the conjectured $p^{3r}$ tower uniformly in the row parameter. |
 | [A364304](https://oeis.org/A364304) and [A364515](https://oeis.org/A364515)--[A364517](https://oeis.org/A364517) | A364304 is the $a=7$ Dixon--Legendre row already covered by the family theorem.  The other three are homogeneous rows $4,6,7$ of A364513 and follow from the residue-balanced rational gamma theorem. |
 | [A002897](https://oeis.org/A002897), [A008978](https://oeis.org/A008978), and [A113424](https://oeis.org/A113424) | A normalized Gauss criterion and Lagrange inversion prove all three displayed coefficient-root series integral. A cyclic-orbit theorem supplies the universal all-prime \(p^r\) variable-power tower. A002897 has no remaining explicit live Bala conjecture; the stronger A008978/A113424 \(p^{3r}\) refinements remain open. |
-| [A352655](https://oeis.org/A352655), [A357506](https://oeis.org/A357506), [A357567](https://oeis.org/A357567), [A357956](https://oeis.org/A357956), and [A357959](https://oeis.org/A357959) | The repository proves an exact reduction of all five records and both nonlinear companions to three linear adjacent-defect relations for the two Apéry sequences.  For \(p\ge7\) the enhanced defect vector has one residual direction.  The three relations remain open. |
+| [A212334](https://oeis.org/A212334), [A352655](https://oeis.org/A352655), [A357506](https://oeis.org/A357506), [A357567](https://oeis.org/A357567), [A357956](https://oeis.org/A357956), and [A357959](https://oeis.org/A357959) | The repository proves A212334's prime-level `p^5` claim and reduces the six higher-level records and both nonlinear companions to three linear adjacent-defect relations for the two Apéry sequences, away from one higher `p=5` boundary.  For \(p\ge7\) the enhanced defect vector has one residual direction.  The three relations remain open. |
 | [A183068](https://oeis.org/A183068) | This repository contains a proposed all-prime proof and exact checks.  It remains a proof candidate pending conventional specialist review. |
-| [A228960](https://oeis.org/A228960) and [A350383](https://oeis.org/A350383) | The repository's cyclotomic coefficient-pair theorem proves both displayed \(p^{2r}\) towers for \(p\ge5\), coefficientwise.  The broader cyclotomic-rational-function principle on A228960 remains open. |
+| [A228960](https://oeis.org/A228960) and [A350383](https://oeis.org/A350383) | The coefficient-pair theorem proves both displayed \(p^{2r}\) towers for \(p\ge5\), coefficientwise.  The separate rational-framing theorem proves the broader cyclotomic-quotient principle on both pages for every odd prime outside an explicit finite exceptional set. |
 | [A380290](https://oeis.org/A380290) and Bala's associated Euler-product packet | The colored Euler-product theorem proves the complete coefficientwise \(p^{2r}\) baseline for every odd prime, arbitrary integral mixed powers, and every degree weight \(m^d\), \(d\ge1\). The dyadic theorem restores \(2^{2r}\) for every \(r\ge2\), with a sharp first-level quadratic defect, and the Gaussian local table records the split, inert, and ramified specializations. The special untwisted A380290 \(p^{3r}\) conjecture remains open. |
 
 ## 4. Consolidated live targets
@@ -128,7 +133,7 @@ than separate papers.
 
 | Priority | Consolidated target | Why it survives the literature pass | Best first tool |
 | ---: | --- | --- | --- |
-| 1 | [A375178](https://oeis.org/A375178)--[A375180](https://oeis.org/A375180), odd-power enhanced towers | The cubic baseline is classical, while the claimed \(p^{3r+2m+1}\) gain and the three truncated-binomial geometries are not supplied by Coster | Blockwise harmonic expansion plus Jacobsthal--Kazandzidis scaling |
+| 1 | [A365029](https://oeis.org/A365029), higher tower above $r=2$ | The boundary and first two adjacent levels are proved; an exact all-level factorization reduces the rest to one complete-digit cancellation | Prove the complete-digit cancellation lemma |
 | 2 | [A365029](https://oeis.org/A365029), full \(A,B,n,r\) family | The boundary and \(C_{2,1}\) levels \(r=1,2\) are proved, but no published theorem located in the search yields the whole mixed-binomial tower | Induct the explicit two-digit reciprocal-square block cancellation through arbitrary \(p\)-adic depth |
 | 3 | [A364118](https://oeis.org/A364118) and its companion Apéry combinations | These ask for \(p^5\) at the first level and \(p^{3r+3}\) later, beyond the ordinary Apéry tower | Linearized recurrence, modular parametrization, or a refined Coster expansion |
 | 4 | [A008793](https://oeis.org/A008793), plane partitions in a cube | Its nonlinear congruence \(a(np^r)\equiv a(np^{r-1})^p\pmod {p^{4r}}\) has independent enumerative content and does not resemble a routine Coster corollary | \(p\)-adic logarithm of MacMahon's product |
@@ -185,12 +190,13 @@ that a proposed negative-binomial $p^5$ strengthening is false. The separate
 corrected ordinary cubic tower for every $p\geq5$ and, more generally, the
 full positive-parameter A333592 family. The
 [first-defect theorem](BalaAugustFirstDefectKernel.md) proves stability of
-its normalized leading residue. The
+its normalized leading residue, and the
+[higher-defect theorem](BalaAugustHigherDefectLift.md) proves the sharp
+growing normalized-defect modulus for every $p\ge5$. The
 [prime-three boundary theorem](PrimeThreeNegativeBinomialBoundary.md)
 computes the exact first ternary defect, proves the universal all-level
 renormalization and Bala's complete cubic tower, and shows by a valuation-two
-example why no universal ternary cubic theorem is possible. Only the stronger
-growing-modulus defect refinement remains open in this lane.
+example why no universal ternary cubic theorem is possible.
 
 ## 6. Core bibliography
 

@@ -364,8 +364,9 @@ leading normalized defect is independent of the level for every $p\geq5$.
   Its larger positive two-parameter algebraic-kernel family is proved in
   the [A333473 algebraic-family follow-on](A333473AlgebraicFamilyTower.md).
 - The ordinary cubic tower (24) is proved for every odd prime. The first
-  normalized-defect residue is stable for $p\geq5$; only the stronger
-  growing-modulus refinement remains open.
+  normalized-defect residue is stable for $p\geq5$, and the
+  [higher-defect theorem](BalaAugustHigherDefectLift.md) proves the stronger
+  growing-modulus refinement for $p\geq5$.
 - Bala's product and twist proposal is classified by the follow-on: two
   generalized-binomial factors give a quadratic tower, while three or more
   give a cubic tower. Of the companions containing upper arguments depending

@@ -58,6 +58,16 @@ def bala_odd_power(n: int, m: int) -> int:
     return bala_power(n, 2 * m + 1)
 
 
+def signed_dilation_value(n: int, dilation: int, m: int) -> int:
+    """Return S_(A,m)(n) for the signed A375179/A375180 family."""
+    exponent = 2 * m + 1
+    return sum(
+        (-1) ** (n + k + 1)
+        * generalized_binomial(dilation * n, k) ** exponent
+        for k in range(n)
+    )
+
+
 @lru_cache(maxsize=None)
 def a333593(n: int) -> int:
     """The signed negative-binomial square sum A333593."""
@@ -127,6 +137,67 @@ def check_a375178_prime_level_theorem() -> tuple[int, int]:
     assert checks == 56
     assert minimum_slack == 0
     return checks, minimum_slack
+
+
+def check_even_power_prime_level_theorem() -> tuple[int, int]:
+    """Check B_q(p)=1 mod p^(q+1) for even q and p>=q+3."""
+    checks = 0
+    minimum_slack = 10**9
+    for exponent in range(2, 13, 2):
+        target = exponent + 1
+        for prime in PRIMES:
+            if prime < exponent + 3:
+                continue
+            difference = bala_power(prime, exponent) - 1
+            slack = valuation(difference, prime) - target
+            assert slack >= 0, (exponent, prime, slack)
+            minimum_slack = min(minimum_slack, slack)
+            checks += 1
+    assert checks == 60
+    assert minimum_slack == 0
+
+    # The excluded p=5 boundary for both named fifth-power claims is sharp.
+    assert valuation(bala_power(5, 3) - 1, 5) == 4
+    assert valuation(bala_power(5, 4) - 1, 5) == 4
+    return checks + 2, minimum_slack
+
+
+def check_signed_dilation_prime_level_theorem() -> tuple[int, int]:
+    """Check the arbitrary-dilation odd-power boundary theorem."""
+    checks = 0
+    minimum_slack = 10**9
+    for dilation in range(-2, 6):
+        for m in range(1, 7):
+            target = 2 * m + 3
+            for prime in PRIMES:
+                if prime < 2 * m + 5:
+                    continue
+                difference = signed_dilation_value(prime, dilation, m) - 1
+                slack = valuation(difference, prime) - target
+                assert slack >= 0, (dilation, m, prime, slack)
+                minimum_slack = min(minimum_slack, slack)
+                checks += 1
+    assert checks == 448
+    assert minimum_slack == 0
+    return checks, minimum_slack
+
+
+def check_signed_dilation_named_sequences() -> int:
+    """Match the initial A375179 and A375180 values printed by OEIS."""
+    expected = {
+        2: (0, 1, 63, 3160, 154175, 7623126, 385867944, 20012582304),
+        3: (0, 1, 215, 45928, 10362231, 2450260001, 600869373182),
+    }
+    checks = 0
+    for dilation, values in expected.items():
+        for n, value in enumerate(values):
+            assert signed_dilation_value(n, dilation, 1) == value, (
+                dilation,
+                n,
+            )
+            checks += 1
+    assert checks == 15
+    return checks
 
 
 def check_coster_a375178_baseline() -> tuple[int, int]:
@@ -264,6 +335,9 @@ def check_a375178_tower_evidence() -> tuple[int, int]:
 def main() -> None:
     boundary_checks, boundary_slack = check_a365029_boundary_theorem()
     prime_checks, prime_slack = check_a375178_prime_level_theorem()
+    even_checks, even_slack = check_even_power_prime_level_theorem()
+    signed_checks, signed_slack = check_signed_dilation_prime_level_theorem()
+    signed_identity_checks = check_signed_dilation_named_sequences()
     baseline_checks, baseline_slack = check_coster_a375178_baseline()
     a333_checks, a333_slack = check_a333593_coster_reduction()
     a365_checks, a365_slack = check_a365029_tower_evidence()
@@ -276,6 +350,15 @@ def main() -> None:
     print(
         "proved A375178-family prime cases: "
         f"{prime_checks} (minimum slack {prime_slack})"
+    )
+    print(
+        "proved even-power prime cases and named boundaries: "
+        f"{even_checks} (minimum slack {even_slack})"
+    )
+    print(
+        "proved signed arbitrary-dilation prime cases: "
+        f"{signed_checks} (minimum slack {signed_slack}); "
+        f"named identities {signed_identity_checks}"
     )
     print(
         "published Coster baseline cases: "
@@ -295,7 +378,7 @@ def main() -> None:
     )
     print(
         "all "
-        f"{boundary_checks + prime_checks + baseline_checks + a333_checks + a365_checks + odd_checks} "
+        f"{boundary_checks + prime_checks + even_checks + signed_checks + signed_identity_checks + baseline_checks + a333_checks + a365_checks + odd_checks} "
         "Bala-queue checks passed"
     )
 

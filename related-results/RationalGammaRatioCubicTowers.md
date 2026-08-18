@@ -351,13 +351,12 @@ Peter Bala's August 2026 follow-up identifies fractional-index variants of
 12 Bober records.  The 15 formulas currently visible in approved OEIS
 comments all satisfy slope balance and residue-class balance. Theorem 2
 therefore proves their adjacent $p^{3r}$ quotient congruence for every
-$p\geq5$. The later
-[uniform half-index theorem](BoberHalfIndexIntegralityTowers.md) proves all
-eleven $N/2$ variants integral, so their towers are unconditional. The four
-other variants, A295456 and A295458 at $N/3$ and A295460 and A295477 at
-$N/4$, are closed by the later
-[denominator-transfer theorem](BoberRemainingFractionalIntegralityTowers.md).
-Thus all 15 approved formulas now have unconditional towers.
+$p\geq5$. The [uniform translated-Landau theorem](BoberHalfIndexIntegralityTheorem.md)
+proves all eleven $N/2$ variants integral, and the
+[denominator-boundary theorem](BoberDenominatorBoundaryTheorem.md) closes the
+other four. Independent [parity-transfer](BoberHalfIndexIntegralityTowers.md)
+and [denominator-transfer](BoberRemainingFractionalIntegralityTowers.md)
+certificates provide a second check of the same closures.
 
 The exact records, admissible denominators, source boundary, and exact
 certificates are in the

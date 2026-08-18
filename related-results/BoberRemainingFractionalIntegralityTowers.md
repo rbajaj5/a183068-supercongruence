@@ -2,12 +2,14 @@
 
 **Status date:** August 12, 2026
 
-**Status:** complete elementary proof candidate.  This note proves the two
-third-index and two quarter-index integrality conjectures left after the
-uniform half-index theorem.  Consequently all 15 approved fractional-index
-variants in the current Bober packet are integral and satisfy their full
-adjacent cubic towers for every prime `p >= 5`.  Exact checks are supplied;
-specialist review and literature priority remain pending.
+**Status:** independent companion proof candidate. The canonical portfolio
+entry is the later [denominator-boundary theorem](BoberDenominatorBoundaryTheorem.md).
+This note supplies a separate generalized-factorial transfer proof of the two
+third-index and two quarter-index integrality conjectures. Consequently all
+15 source-visible fractional-index variants in the current Bober packet are
+integral and satisfy their full adjacent cubic towers for every prime
+`p >= 5`. Exact checks are supplied; specialist review and literature
+priority remain pending.
 
 ## 1. Statement
 

@@ -2,12 +2,13 @@
 
 **Status date:** August 12, 2026
 
-**Status:** complete elementary proof candidate.  The argument proves the
-eleven global integrality conjectures at index `N/2` currently recorded in
-the Bober sporadic packet.  Combined with the repository's rational
-gamma-ratio theorem, it also proves their full adjacent cubic towers for
-every prime `p >= 5`.  Exact checks are supplied as a regression certificate;
-specialist review and literature priority remain pending.
+**Status:** independent companion proof candidate. The canonical portfolio
+entry is the later [uniform translated-Landau theorem](BoberHalfIndexIntegralityTheorem.md).
+This note supplies a separate parity-transfer derivation of the same eleven
+global integrality conjectures at index `N/2`. Combined with the repository's
+rational gamma-ratio theorem, it also proves their full adjacent cubic towers
+for every prime `p >= 5`. Exact checks are supplied as a regression
+certificate; specialist review and literature priority remain pending.
 
 ## 1. Statement
 

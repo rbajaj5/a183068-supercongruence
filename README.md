@@ -20,8 +20,8 @@ review.
 | Check what was audited and corrected | [Audit log](AUDIT.md) | Exact-text audit record |
 | Find one precise mathematical claim | [Claim-level result index](RESULT_INDEX.md) | Controlling status ledger |
 | Track all 110 Bala/OEIS records | [110-record proof campaign](related-results/Bala110ProofCampaign.md) and [July 31 update](related-results/BalaJuly31ResearchUpdate.md) | Record-level route, status, evidence, and next action |
-| Review Bala's Bober follow-up | [Bober sporadic packet](related-results/BoberSporadicFactorialRatioPacket.md), [eleven half-index theorems](related-results/BoberHalfIndexIntegralityTowers.md), [four denominator-three/four theorems](related-results/BoberRemainingFractionalIntegralityTowers.md), [A364176 affine-Landau theorem](related-results/A364176AffineLandauTower.md) | All 52 ordinary towers and all 15 approved fractional-index towers are proved for $p\ge5$; no approved Bober-packet integrality target remains |
-| Review Bala's August coefficient follow-up | [A119258 rays and Chebyshev packet](related-results/BalaAugustCoefficientPacket.md), [mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md), [full A333473 algebraic family](related-results/A333473AlgebraicFamilyTower.md), [full index-dependent companion towers](related-results/IndexDependentCompanionPrimeBoundary.md), [negative-binomial prefix theorem](related-results/MixedNegativeBinomialCubicTower.md), [first-defect kernel](related-results/BalaAugustFirstDefectKernel.md), [higher-defect reduction](related-results/BalaAugustHigherDefectLift.md), and [prime-three boundary](related-results/PrimeThreeNegativeBinomialBoundary.md) | Two infinite coefficient families have no denominator-prime exclusions; the full positive A333473 algebraic family, fixed product/twist class, and both surviving index-dependent substitution families are closed; the corrected negative-binomial tower is proved for every odd prime, with first-residue stability for $p\ge5$ and universal all-level ternary renormalization; the stronger growing defect is reduced to one explicit cubic-kernel contraction, with its quartic boundary proved |
+| Review Bala's Bober follow-up | [Bober sporadic packet](related-results/BoberSporadicFactorialRatioPacket.md), [A364176 affine-Landau theorem](related-results/A364176AffineLandauTower.md), [uniform half-index theorem](related-results/BoberHalfIndexIntegralityTheorem.md), [denominator-boundary theorem](related-results/BoberDenominatorBoundaryTheorem.md) | All 52 ordinary towers and all 15 source-visible fractional variants are proved for $p\ge5$; A295464 awaits exact approved source text |
+| Review Bala's August coefficient follow-up | [A119258 rays and Chebyshev packet](related-results/BalaAugustCoefficientPacket.md), [mixed-binomial follow-on](related-results/BalaAugustMixedBinomialFollowOn.md), [full A333473 algebraic family](related-results/A333473AlgebraicFamilyTower.md), [full index-dependent companion towers](related-results/IndexDependentCompanionPrimeBoundary.md), [negative-binomial prefix theorem](related-results/MixedNegativeBinomialCubicTower.md), [first-defect kernel](related-results/BalaAugustFirstDefectKernel.md), [higher normalized-defect theorem](related-results/BalaAugustHigherDefectLift.md), and [prime-three boundary](related-results/PrimeThreeNegativeBinomialBoundary.md) | Two infinite coefficient families have no denominator-prime exclusions; the full positive A333473 algebraic family, fixed product/twist class, and both surviving index-dependent substitution families are closed; the corrected negative-binomial tower is proved for every odd prime, with first-residue stability for $p\ge5$, the stronger growing normalized-defect lift for $p\ge5$, and universal all-level ternary renormalization |
 | Compare the portfolio economically | [Economist-style rankings](RANKINGS.md) | Editorial scores, not correctness claims |
 | Browse the wider program | [Related-results reading map](related-results/README.md) | Theorem, reduction, computation, and synthesis lanes |
 | Reproduce the computations | [`verification/run_all.py`](verification/run_all.py) | Exact checkers with no floating-point tolerance unless stated |
@@ -64,8 +64,8 @@ that a file was added.
 
 | Lane | Flagship results | What the lane contributes |
 | --- | --- | --- |
-| Core and named OEIS problems | [A183068](PROOF.md), [Bala queue](related-results/BalaOeisSupercongruenceQueue.md), [July 31 Bala update](related-results/BalaJuly31ResearchUpdate.md), [Bober sporadic packet](related-results/BoberSporadicFactorialRatioPacket.md), [eleven Bober half-index theorems](related-results/BoberHalfIndexIntegralityTowers.md), [four denominator-three/four Bober theorems](related-results/BoberRemainingFractionalIntegralityTowers.md), [A364176 affine-Landau theorem](related-results/A364176AffineLandauTower.md), [August coefficient packet](related-results/BalaAugustCoefficientPacket.md), [negative-binomial prefix theorem](related-results/MixedNegativeBinomialCubicTower.md), [prime-three prefix boundary](related-results/PrimeThreeNegativeBinomialBoundary.md), [symmetric-box plane partitions](related-results/SymmetricBoxPlanePartitionTower.md), [balanced factorial ratios](related-results/BalancedFactorialRatioCubicTowers.md), [rational gamma-ratio towers](related-results/RationalGammaRatioCubicTowers.md), [binomial-quotient closures](related-results/BinomialQuotientCancellation.md), [coefficient-framing family](related-results/CoefficientFramingCubicTower.md), [Straub prime-five packet](related-results/StraubPrimeFiveCoefficientPacket.md), [A288470 odd-prime tower](related-results/A288470OddPrimeTower.md), [A141057 multinomial-power tower](related-results/MultinomialPowerFrobeniusTowers.md), [A091527/A262732 odd-unit block towers](related-results/OddUnitBlockFrobeniusTowers.md), [A275652/A275654 Dixon--Legendre towers](related-results/DixonLegendreHalfBinomialTowers.md), [A364173 integrality and tower](related-results/A364173IntegralHalfBinomialTower.md), [literature census](related-results/SupercongruenceLiteratureCensus.md) | Named conjectures, published baselines, new family closures, and a reproducible target queue |
-| General theorem engines | [Arithmetic Frobenius packets](related-results/ArithmeticFrobeniusPacketFramework.md), [Landau depth](related-results/LandauDepthSupercongruenceSynthesis.md), [q-calculus](related-results/QCalculusCyclotomicSupercongruences.md), [binomial-power Frobenius](related-results/BinomialPowerFrobeniusTheorem.md), [Euler products](related-results/EulerProductGaussianTower.md) | Local-to-global assembly plus reusable carry, transfer, Frobenius, and cyclotomic mechanisms |
+| Core and named OEIS problems | [A183068](PROOF.md), [Bala queue](related-results/BalaOeisSupercongruenceQueue.md), [July 31 update](related-results/BalaJuly31ResearchUpdate.md), [Bober sporadic packet](related-results/BoberSporadicFactorialRatioPacket.md), [A364176 affine-Landau theorem](related-results/A364176AffineLandauTower.md), [August coefficient packet](related-results/BalaAugustCoefficientPacket.md), [negative-binomial prefix theorem](related-results/MixedNegativeBinomialCubicTower.md), [prime-three prefix boundary](related-results/PrimeThreeNegativeBinomialBoundary.md), [symmetric-box plane partitions](related-results/SymmetricBoxPlanePartitionTower.md), [balanced factorial ratios](related-results/BalancedFactorialRatioCubicTowers.md), [rational gamma-ratio towers](related-results/RationalGammaRatioCubicTowers.md), [binomial-quotient closures](related-results/BinomialQuotientCancellation.md), [coefficient-framing family](related-results/CoefficientFramingCubicTower.md), [A132303 trinomial-cube tower](related-results/A132303TrinomialCubeTower.md), [A156554 Legendre coefficient tower](related-results/A156554LegendreCoefficientTower.md), [A351858 family boundary](related-results/A351858CyclotomicFamilyBoundary.md), [A263843 reversion reduction](related-results/A263843ReversionCoefficientReduction.md), [Straub prime-five source audit](related-results/StraubPrimeFiveCoefficientPacket.md), [A108628 half-index boundary](related-results/A108628HalfIndexBoundary.md), [A288470 odd-prime tower](related-results/A288470OddPrimeTower.md), [A005725 quadrinomial tower](related-results/QuadrinomialCoefficientOddPrimeTower.md), [A246437 mixed-step tower](related-results/MixedStepCoefficientQuadraticTower.md), [A141057 multinomial-power tower](related-results/MultinomialPowerFrobeniusTowers.md), [A091527/A262732 odd-unit block towers](related-results/OddUnitBlockFrobeniusTowers.md), [A275652/A275654 Dixon--Legendre towers](related-results/DixonLegendreHalfBinomialTowers.md), [A364173 integrality and tower](related-results/A364173IntegralHalfBinomialTower.md), [literature census](related-results/SupercongruenceLiteratureCensus.md) | Named conjectures, published baselines, new family closures, and a reproducible target queue |
+| General theorem engines | [Arithmetic Frobenius packets](related-results/ArithmeticFrobeniusPacketFramework.md), [Landau depth](related-results/LandauDepthSupercongruenceSynthesis.md), [q-calculus](related-results/QCalculusCyclotomicSupercongruences.md), [cyclotomic rational framings](related-results/CyclotomicRationalFramingTower.md), [binomial-power Frobenius](related-results/BinomialPowerFrobeniusTheorem.md), [Euler products](related-results/EulerProductGaussianTower.md) | Local-to-global assembly plus reusable carry, transfer, Frobenius, and cyclotomic mechanisms |
 | Gaussian and Eisenstein local arithmetic | [Inert-prime scaling](related-results/GaussianLucasPrimePowerTheorem.md), [ramified \(1+i\) theorem](related-results/GaussianLucasRamifiedTwoTheorem.md), [lattice-walk transfer congruences](related-results/LatticeWalkFrobeniusCongruences.md), [planar-noise and Y-game Walsh congruences](related-results/BlackNoiseWalshCongruences.md), [canonical products](related-results/GaussianLucasCanonicalProducts.md) | Split/inert/ramified prime separation, exact local valuations, and finite transfer- or Walsh-polynomial congruences for planar models |
 | Dyadic structure | [Dyadic policy](DYADIC_POLICY.md), [Euler-product defect](related-results/DyadicHypercubeDefect.md), [Roe-inspired packet](ROE_2ADIC.md), [finite abelian counts](related-results/GQ2FiniteAbelianCounts.md), [dihedral counts](related-results/GQ2DihedralCounts.md), [quaternion counts](related-results/GQ2QuaternionCounts.md), [maximal-cyclic counts](related-results/GQ2MaximalCyclicCounts.md), [extraspecial obstruction](related-results/GQ2ExtraspecialObstruction.md) | Explicit binary normalization, parity, finite-shadow tests, uniform lift fibers, commutator and central-square corrections, first-level boundaries, and generator-rank obstructions |
 | Finite-field and Frobenius packets | [Crystalline support bridge](related-results/CrystallineLocusSupportFrobeniusBridge.md), [primitive collision-orbit bridge](related-results/JacobianCollisionEulerOrbitBridge.md), [weighted-lift collisions](related-results/WeightedLiftCollisionSynthesis.md), [degree-five elliptic packet](related-results/JacobianDegreeFiveEllipticFrobenius.md), [hyperdeterminant Fourier packet](related-results/HyperdeterminantFourierSupercongruence.md), [hyperdeterminant entropy profile](related-results/HyperdeterminantEntropyProfile.md) | Support-order packets, exact Dold/Gauss orbit criteria, zeta factors, corrected adjacent towers, finite-field Fourier structure, and arithmetic entropy laws |
@@ -133,13 +133,9 @@ The August 3
 [Bober packet](related-results/BoberSporadicFactorialRatioPacket.md) then
 applies these two engines to a new source-supplied queue: all 52 ordinary
 ratios A295431--A295482 inherit the full cubic tower for $p\ge5$, while the
-15 currently visible fractional-index variants inherit the quotient tower.
-The later [uniform half-index theorem](related-results/BoberHalfIndexIntegralityTowers.md)
-proves all eleven $N/2$ variants integral using one parity-transfer lemma and
-two binary digit-sum certificates. The subsequent
-[denominator-transfer theorem](related-results/BoberRemainingFractionalIntegralityTowers.md)
-proves the two $N/3$ and two $N/4$ cases. All 15 approved fractional-index
-variants are therefore integral and have full cubic towers.
+15 currently visible fractional-index variants inherit the quotient tower;
+all eleven half-index cases and all four denominator-three/four cases are now
+unconditional.
 The [binomial-quotient cancellation theorem](related-results/BinomialQuotientCancellation.md)
 also closes the complete two-parameter conjecture on
 [A357509](https://oeis.org/A357509), rather than only its displayed
@@ -156,14 +152,22 @@ root series on A002897, A008978, and A113424 integral and establishes their
 universal \(p^r\) variable-power baseline, while leaving the two genuinely
 stronger \(p^{3r}\) conjectures explicitly open.
 The [Apéry defect packet](related-results/AperyRankOneDefectPacket.md)
-also finishes the derived route's source audit: five records and two
-nonlinear companions collapse to three linear adjacent-defect congruences.
-Those three congruences remain open.
+also finishes the derived route's source audit: six records and two
+nonlinear companions collapse to three linear adjacent-defect congruences,
+apart from one explicit higher `p=5` boundary.  The
+[A212334 prime-boundary theorem](related-results/A212334EnhancedPrimeCongruence.md)
+independently proves that record's conjectured `p^5` congruence for every
+prime `p>=5`.  The three common higher-defect relations remain open.
 The [modular-product packet](related-results/ModularProductPrimeCoefficientPacket.md)
 proves seven further named records: four by a universal prime-coefficient
 formula and three by specialization of the colored Euler-product theorem.
 It also supplies quadratic baselines for four proposed cubic towers. The
-route now has no untouched record. The
+route now has no untouched record. The follow-on
+[Cartier-square reduction](related-results/EulerProductCubicCartierMoments.md)
+shows that those four cubic towers, together with A380290, reduce at every
+adjacent level to one coefficientwise Cartier-square estimate.  The two
+initial weighted moments and every term of Frobenius degree at least three
+are thereby removed from the final proof obligation. The
 [A229452 coefficient-root theorem](related-results/A229452CoefficientRootBaseline.md)
 proves that record's all-\(m\) integrality conjecture and all-prime
 \(p^r\) towers for both source parameter families while leaving the proposed
@@ -190,6 +194,11 @@ An [exact counterexample](related-results/RationalFramingCounterexample.md)
 shows that the broader rational-framing congruences previously cited for
 these records do not hold as printed. The six records are therefore counted
 as proved here, not as published-source closures.
+The [cyclotomic rational-framing theorem](related-results/CyclotomicRationalFramingTower.md)
+also proves the full all-but-finitely-many-primes principle printed on
+A228960 and A350383. Its reduced Frobenius logarithm has no support on the
+relevant prime sublattice, so the linear defect vanishes and every remaining
+term has the conjectured quadratic depth.
 The subsequent
 [August coefficient packet](related-results/BalaAugustCoefficientPacket.md)
 extends the elementary proof to arbitrary integral coefficient slopes. It

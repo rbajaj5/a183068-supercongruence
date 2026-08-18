@@ -86,6 +86,13 @@ def a177316(n: int) -> int:
     )
 
 
+def a108628(n: int) -> int:
+    return sum(
+        comb(n, k) * comb(n + 1, k) * comb(n + k + 1, k)
+        for k in range(n + 1)
+    )
+
+
 def shifted_apery_coefficient(n: int) -> int:
     """Twice A(-n,n,-n,n), evaluated by its finite bilateral support."""
 
@@ -106,6 +113,8 @@ def check_parameter_identifications() -> int:
             checks += 2
     for n in range(1, 21):
         assert a177316(n) == shifted_apery_coefficient(n)
+        checks += 1
+        assert a108628(n - 1) == apery_zeta2_coefficient(n, n - 1, n)
         checks += 1
     return checks
 
@@ -160,6 +169,10 @@ def check_prime_five_towers() -> int:
         for n in range(1, 2 * bound + 1):
             assert (
                 a177316(n * scale) - a177316(n * previous)
+            ) % modulus == 0
+            checks += 1
+            assert (
+                a108628(n * scale - 1) - a108628(n * previous - 1)
             ) % modulus == 0
             checks += 1
     return checks

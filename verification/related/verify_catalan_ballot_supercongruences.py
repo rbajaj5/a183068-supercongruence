@@ -1,7 +1,8 @@
 """Exact checks for three Catalan ballot-power supercongruences.
 
 This script supplies computational evidence only.  It checks the quotient's
-integrality before testing each congruence.
+integrality before testing each congruence.  It also verifies the exact
+odd-index reductions of A003161 and A003162 to the cubic family.
 """
 
 from math import comb
@@ -37,6 +38,53 @@ def ballot_power_quotient(n: int, exponent: int) -> int:
     quotient, remainder = divmod(numerator, denominator)
     assert remainder == 0, (n, exponent, remainder)
     return quotient
+
+
+def ballot_power_sum(index: int, exponent: int) -> int:
+    """Return S_exponent(index) from the A003161/A003162 ballot triangle."""
+    previous = 0
+    total = 0
+    for k in range((index + 1) // 2):
+        current = comb(index, k)
+        total += (current - previous) ** exponent
+        previous = current
+    return total
+
+
+def check_odd_center_reductions() -> int:
+    """Verify the exact A003161/A003162 identities at odd indices."""
+    cases = 0
+    for n in range(1, 201):
+        index = 2 * n - 1
+        s1 = ballot_power_sum(index, 1)
+        s3 = ballot_power_sum(index, 3)
+        denominator = comb(2 * n - 1, n - 1)
+        b3 = ballot_power_quotient(n, 3)
+        assert s1 == denominator, (n, s1, denominator)
+        assert s3 == denominator * b3, (n, s3, denominator * b3)
+        assert s3 // s1 == b3, (n, s3 // s1, b3)
+        cases += 1
+    return cases
+
+
+def check_central_binomial_factor_tower() -> int:
+    """Check the classical cubic scaling used for the A003161 factor."""
+    cases = 0
+    for prime in OFFICIAL_PRIMES:
+        for level in range(1, 4):
+            modulus = prime ** (3 * level)
+            for n in range(1, BASE_N_CAP + 1):
+                if n * prime**level > ARGUMENT_CAP:
+                    continue
+                high = comb(2 * n * prime**level - 1, n * prime**level - 1)
+                low = comb(
+                    2 * n * prime ** (level - 1) - 1,
+                    n * prime ** (level - 1) - 1,
+                )
+                assert (high - low) % modulus == 0, (prime, level, n)
+                cases += 1
+    assert cases == 388
+    return cases
 
 
 def cached_family(exponent: int):
@@ -100,6 +148,12 @@ def check_small_prime_refinement(exponent: int) -> tuple[int, int]:
 
 
 def main() -> None:
+    identity_cases = check_odd_center_reductions()
+    factor_cases = check_central_binomial_factor_tower()
+    print(
+        f"odd-center reductions: {identity_cases} exact identities; "
+        f"central-binomial factor tower: {factor_cases} cases"
+    )
     official_total = 0
     small_prime_total = 0
     for exponent in ODD_EXPONENTS:

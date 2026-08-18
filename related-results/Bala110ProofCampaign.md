@@ -1,6 +1,6 @@
 # The 110-record Bala proof campaign
 
-**Snapshot date:** July 29, 2026
+**Snapshot date:** August 13, 2026
 
 **Status:** complete record-level ledger; proof work remains in progress
 
@@ -22,30 +22,38 @@ every record:
 
 ## Current disposition
 
-| Route | Records | Proved here | Published source | Partial | No explicit open target | Queued |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| T: finite-sum transfer | 40 | 6 | 3 | 2 | 2 | 27 |
-| C: coefficient/constant term | 37 | 6 | 6 | 3 | 0 | 22 |
-| F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 |
-| M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 |
-| D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 |
-| **Total** | **110** | **29** | **12** | **17** | **3** | **49** |
+| Route | Records | Proved here | Published source | Partial | No explicit open target | Open target | Queued |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| T: finite-sum transfer | 40 | 17 | 8 | 11 | 4 | 0 | 0 |
+| C: coefficient/constant term | 37 | 13 | 9 | 13 | 2 | 0 | 0 |
+| F: factorial/block product | 14 | 8 | 3 | 2 | 1 | 0 | 0 |
+| M: modular or infinite product | 14 | 9 | 0 | 5 | 0 | 0 | 0 |
+| D: derived or inherited | 5 | 0 | 0 | 5 | 0 | 0 | 0 |
+| **Total** | **110** | **47** | **20** | **36** | **7** | **0** | **0** |
 
-The twenty-nine `proved-here` records are A002003, A008485, A008705, A008793,
-A049505, A091527, A108625, A141057, A143007, A177316, A255672, A262732,
-A270913, A270919, A270922, A270924, A275652, A275654, A288470, A348410,
-A351857, A352373, A357509, A357510, A357568, A364173, A364506, A370101, and
-A370102. The twelve
-`published-source` records are A002426, A082758, A103882, A168597, A176335,
-A184423, A186420, A234839, A363864, A363867, A363871, and A364509. The
-seventeen partial records are A008978, A023871, A023873,
-A113424, A206622, A228960, A229452, A283271, A333592, A350383, A352655,
-A357506, A357512, A357567, A357956, A357959, and A380290. A002897, A005259, and
-A005260 are retained as
+The forty-seven `proved-here` records are A002003, A005725, A008485, A008705,
+A008793, A049505, A091527, A124435, A132303, A141057, A156554, A198060, A198256, A198258, A112028, A219562, A228960, A245926, A246437,
+A255672, A260667, A262732, A263843, A270913, A270919, A270922, A270924, A275652,
+A275654, A281267, A288470, A333592,
+A348410, A350383, A351857, A351858, A352373, A357509, A357510, A357512, A357568, A364173,
+A364303, A364506, A370101, A370102, and A376458. The twenty
+`published-source` records are A002426, A002895, A005258, A082758, A103882,
+A108625, A112029, A143007, A168597, A176335, A177316, A183204, A184423, A186420, A208675, A234839,
+A363864, A363867, A363871, and A364509.
+The thirty-six partial records are A003161, A003162, A008978, A023871,
+A023873, A060941, A079489, A108628, A113424, A183069, A206622, A212334,
+A229452, A244973, A283271, A331562, A333090, A333091, A333092, A333093,
+A333095, A333096, A333097, A352655, A357506,
+A357567, A357956, A357959, A361889, A361892, A362676, A362722, A362733, A363985, A376466, and A380290.
+A001850, A002897,
+A005259, A005260, A006318, A036917, and A143583 are retained as
 search-corpus records but
-classified `no-explicit-open`: their live matches concern unrelated Bala
-material or a claim now marked proved, not a live Bala supercongruence
-conjecture.
+classified `no-explicit-open`: the live pages contain no Bala
+supercongruence conjecture that remains to be proved.
+No record remains `open-target`: every live claim now has at least a proof,
+a published-source match, a substantive exact reduction, or an exact
+counterexample. This does not mean that every conjecture is proved; the
+thirty-six `partial` records retain explicit proof obligations.
 
 These labels refer only to the exact statements already matched. They do not
 declare every comment on the corresponding OEIS page solved.
@@ -60,8 +68,281 @@ declare every comment on the corresponding OEIS page solved.
   subfamily, but a stronger statement on the record remains.
 - `no-explicit-open`: the reproducible text search found the record, but a
   live open supercongruence attributable to Bala was not located.
+- `open-target`: the live statement has been extracted and routed, but no
+  complete proof, source closure, or counterexample is yet recorded.
 - `queued`: the record is routed, but its exact conjecture still needs to be
   extracted and matched against the route theorem before proof work begins.
+
+## August 12 reconciliation
+
+This refresh makes evidence-backed promotions without treating a search
+hit as a proof:
+
+- A333592 moves from `partial` to `proved-here` because the later
+  [prefix-Cartier theorem](MixedNegativeBinomialCubicTower.md) proves the
+  named cubic tower and its full positive-parameter family;
+- A364303 moves from `queued` to `proved-here` because the
+  [Dixon--Legendre theorem](DixonLegendreHalfBinomialTowers.md) proves every
+  stable row;
+- A112029 moves from `queued` to `published-source` because its live OEIS
+  comment cites Coster's Theorem 4 for the full shifted-index tower; and
+- A183069, A361889, and A361892 move from `queued` to `partial` because the
+  [ballot-power audit](CatalanBallotPowerSupercongruenceAudit.md) now copies
+  their exact common conjecture, checks its sharp boundary, and isolates the
+  unified proof target.
+
+The follow-up [live-source boundary](Bala110LiveSourceBoundary.md) removes
+nine further false starts. It source-closes A002895, A005258, and A183204;
+records the enhanced parts of A112028 and A219562; their prime-level fifth
+powers are proved in the
+[Bala queue theorem](BalaOeisSupercongruenceQueue.md#the-even-power-boundary-and-a112028--a219562),
+and both higher towers are now proved by the
+[A112028 cubic](A112028EnhancedTower.md) and
+[A219562 quartic](A219562EnhancedTower.md) critical-shell theorems. It also marks
+A001850, A006318, A036917, and A143583 as search anchors with no live Bala
+supercongruence target.
+
+The final [open-target extraction](Bala110RemainingOpenTargets.md) reads and
+routes every one of the other 35 live statements. Two of those records,
+A003161 and A003162, subsequently reduce to the single existing
+[ballot-power obstruction](CatalanBallotPowerSupercongruenceAudit.md),
+leaving 33 independent `open-target` records. Consequently no record is
+left `queued`: the remaining work is proof work rather than OEIS-page
+extraction.
+
+The first post-extraction proof unit closes both conjectures on A005725. The
+[quadrinomial proof](QuadrinomialCoefficientOddPrimeTower.md) establishes
+the full odd-prime quadratic tower by discard-and-rescale and proves the
+separate prime-level cubic coefficient congruence by an exact rational
+simplification, Wolstenholme's theorem, and alternating reciprocal-square
+cancellation. This leaves 32 `open-target` records.
+
+The second post-extraction proof unit rewrites A246437 as the
+\((u,v,c)=(3,2,1)\) case of a new
+[mixed-step coefficient theorem](MixedStepCoefficientQuadraticTower.md).
+The linear coefficient constraint synchronizes the two summation indices
+modulo \(p\), so every missed term has two valuation contributions and every
+retained term transfers through two ordinary Jacobsthal quotients. This
+leaves 31 `open-target` records.
+
+The third unit recognizes A281267 as the one-color, \(d=1\), \(h_m=1\)
+specialization of the existing
+[colored Euler-product theorem](EulerProductGaussianTower.md). Its
+Frobenius twist is trivial at \(Z=1\), so the theorem proves the exact
+\(p^{2r}\) tower for every odd prime, including \(p=3\). This leaves 30
+`open-target` records.
+
+The next source reconciliation identifies the offset-one A108628 tower
+directly as `B(N,N-1,N)`. Straub's theorem therefore proves it for every
+`p>=5`, including five. The separate
+[half-index note](A108628HalfIndexBoundary.md) proves the first of the four
+affine half-index congruences by a terminating Dixon identity and proves the
+exact valuation of the comparison term at every prime-power level. The
+other three higher-power claims now follow from one explicit aggregate
+master comparison, which remains open; hence the record remains `partial`
+and 29 records remain `open-target` at this point in the chronology.
+
+Two further live-page checks remove the word-count sums from the wholly open
+queue. A208675 is exactly Straub's coefficient `B(n,n-1,n-1)`, so its stated
+cubic tower is `published-source`. A212334 is a `1/12`-weighted combination
+of the ordinary and shifted A005259 sequences; because `12` is a unit for
+every `p >= 5`, its ordinary cubic tower is source-closed.  The later
+[enhanced-prime theorem](A212334EnhancedPrimeCongruence.md) proves its
+`p^5` assertion for every `p>=5` and shows that, for `p>=7`, its higher
+defect is a consequence of the same three Apéry relations governing the
+derived route.  The higher `p=5` boundary remains open, so the record is
+still `partial`. This leaves 27 `open-target` records.
+
+The next proof unit closes the isolated A260667 prime boundary. Expanding
+its inner binomial kernel at `x=p-1` reduces the claimed cubic congruence to
+one weighted linear harmonic sum modulo `p^2` and one weighted quadratic
+harmonic sum modulo `p`. Both sums have elementary closed evaluations, and
+their residues cancel exactly. This leaves 26 `open-target` records.
+
+The following proof unit closes A132303.  The sum of cubes of trinomial
+coefficients is the constant term of
+`(x*y)^(-2)*(1+x+x^2)*(1+y+y^2)*(1+xy+x^2*y^2)`, raised to the index.
+Its reduced cyclotomic Frobenius logarithm has no support on the
+`p`-sublattice for `p >= 5`, so the linear defect vanishes exactly and every
+higher exponential term carries `p^(2r)`.  This proves the conjectured sharp
+quadratic tower and leaves 25 `open-target` records.
+
+The next proof unit closes the full A156554 Legendre coefficient family.
+The standard binomial formula for
+`P_(sN)((1+x)/(1-x))` introduces one auxiliary constant-term variable.
+Its reduced Frobenius logarithm is supported on three primitive, pairwise
+unimodular rays.  Mixed quadratic products therefore miss the
+`p`-sublattice, while each same-ray square is controlled by the existing
+reciprocal-square Cartier lemma.  Formal integration by parts supplies the
+third power of `p`.  This proves the family for arbitrary integral framing
+parameters and leaves 24 `open-target` records.
+
+The following boundary unit resolves the overbroad part of A351858.  For
+every prime `p >= 5`, the proposed all-`k` family fails at both `k=p-1` and
+`k=p`: direct coefficient extraction gives differences congruent to
+`p^2(p-2)` and `p^2` modulo `p^3`, respectively.  The named `k=2` tower is
+not touched by this ramified-step obstruction and remains open, so A351858
+moves to `partial`.  This leaves 23 `open-target` records.
+
+The later named-case completion proves the surviving $k=2$ tower.  Its
+reduced logarithm has a period-six numerator.  An explicit sixth-interval
+reciprocal-square identity and a six-row autocorrelation table imply the
+quadratic Cartier estimate; integration by parts supplies the third power
+of $p$.  Thus A351858 moves from `partial` to `proved-here`, while the
+two infinite counterexample families continue to delimit the false broader
+claims.
+
+The next reduction treats A263843.  Lagrange--Bürmann inversion turns its
+reversion family exactly into the coefficient-framing family with parameters
+`(alpha,beta)=(3(c+s),-(c+s))`, up to the constant `s/(c+s)`.  Tracking the
+factor `c+s` inside the reduced logarithm removes every denominator-prime
+loss.  This proves the full family for `p>=5` and for `p=3` whenever
+`3|(c+s)`; the singular line `c+s=0` is an explicit parity sequence.  Only
+the ternary unit-slope boundary remains, so A263843 moves to `partial` and
+22 records remain `open-target`.
+
+The later ternary completion returns to that last boundary.  Modulo the
+missing power of (3), the quadratic and cubic exponential terms combine
+to one explicit residue.  A Frobenius descent kills its coefficient when
+(3\mid c); the remaining unit classes are killed either by (d+c) or by
+the prefactor (s/d).  Thus A263843 now moves from `partial` to
+`proved-here` for the full prime range (p\ge3).
+
+The following proof unit closes A245926.  Lagrange--Bürmann inversion and
+the substitution `u=(1+y)/(1-y)`, `v=u^2` reduce the conjectural coefficient
+representation to the quadratic equation
+`3*z*v^2+(z-1)*v+1=0`; eliminating `v` recovers exactly the algebraic
+generating function on the OEIS page.  The resulting kernel factors as
+`(1-x^3)*(1-x^2)^2/(1-x)^5`.  For `p>=5` its reduced Frobenius logarithm
+has no exponent on the `p`-sublattice, so the linear defect vanishes and
+all remaining exponential terms carry `p^(2r)`.  This proves both the
+representation and the quadratic tower, leaving 21 `open-target` records.
+
+The next reduction consolidates the seven Catalan and large-Schröder
+Taylor-truncation records. Residue substitution turns every integral power
+parameter into one of two explicit rational-prefactor coefficient families.
+For Catalan, the prefactor has the exact Cartier fixed-point
+`C_p(Q)=Q` for `p>=5`; for Schröder, the prefactor denominator splits over
+the Gaussian integers. The new note identifies the first Catalan estimate
+exactly with a cubic adjacent Gauss law for one explicit rational coefficient
+sequence and reduces the second to a period-three weighted harmonic sum.
+Because those estimates are not yet proved, all seven records move to `partial`,
+leaving 14 `open-target` records.
+
+The adjacent-binomial unit closes three more records at once.  Writing the
+row index as `d-1`, reflection turns every offset row into a symmetric
+homogeneous polynomial in two adjacent binomial coefficients.  For even
+`d` it has a double factor `L+R`; its residual value on `L=-R` is `d/4`.
+Jacobsthal scaling closes the divisible shells and reciprocal-square blocks
+close the unit shell.  This proves the intended three A198060 conjectures,
+the A198256 quartic identity and cubic tower, and the A198258 cubic tower.
+The factor `d/4` supplies exactly the missing ternary power when `3|d`,
+explaining why A198258 includes `p=3` while A198256 does not.  The printed
+`n*p*(r-1)-1` in A198060 still needs the evident editorial correction to
+`n*p^(r-1)-1`.  Eleven records remain `open-target`.
+
+The next reduction places A362676 and A363985 in one exact two-variable
+[Franel-companion constant-term family](FranelCompanionConstantTermReduction.md).
+It identifies A362676 with the `m=-1` member (up to a parity sign), recovers
+the central-binomial and Franel boundary cases, and passes 1,088 exact cubic
+tower checks across both kernels.  Straub's multiblock theorem proves the
+Franel specialization through a different representation, but does not
+prove this full integer-parameter deformation; the missing statement is now
+one explicit cubic Cartier contraction.  Both records therefore move to
+`partial`, leaving nine records `open-target`.
+
+The balanced-matrix unit then closes A124435.  A general coefficientwise
+theorem proves a `p^(2r)` Frobenius tower for products of linear forms with
+equal row and column margins: every missed residue matrix forces carries in
+at least two rows.  An Eisenstein `3` by `3` matrix realizes the A124435
+rational diagonal; its entrywise Frobenius is either the matrix itself or
+its transpose, and balanced coefficients are transpose-invariant.  This
+proves the exact OEIS tower and leaves eight records `open-target`.
+
+The A244973 unit then identifies Sun's exact residual conjecture. Peter
+Bala's signed-multinomial formula becomes a two-variable Laurent period and,
+after normalizing at one hexagonal vertex, a diagonal coefficient of
+`((1+u+uv)(1-v+uv))^N`. A reduced-logarithm expansion proves that every
+term of Frobenius degree at least three already has the target depth. The
+entire conjecture is therefore equivalent to one displayed cancellation
+between the linear and quadratic Frobenius terms. Exact arithmetic shows
+that these terms are individually one power short at `p=7,M=7`, while their
+sum has the required valuation. A244973 moves to `partial`, leaving seven
+records `open-target`.
+
+The A331562 unit then gives every fixed row one uniform multivariate
+rational model. If `A_d` is the path-with-loops adjacency matrix and `J_d`
+is the all-one matrix, the complete weighted word language is exactly
+`det(I-(A_d-J_d)X)/det(I-A_dX)`. The denominator is a second-order
+continuant, and the conjectured cubic tower becomes one explicit diagonal
+estimate for its finite Frobenius numerator. The determinant identity and
+the first untreated rows pass independent exact checks. A331562 moves to
+`partial`, leaving six records `open-target`.
+
+The A079489 unit then applies Lagrange inversion twice. The direct powers of
+the algebraic series and the powers of its reverted companion both become
+rational multiples of the same signed kernel
+`[x^(sn)]((1+x)^2/(1-x))^(qn)`, with two singular slopes evaluated in
+closed form. The exact remaining obligation retains the valuation of the
+rational prefactor, including primes dividing its denominator. This moves
+A079489 to `partial` and leaves five records `open-target`.
+
+The exponential-coefficient unit then treats A060941, A362722, and
+A362733 simultaneously. For an arbitrary Euler transform `E_b`, it gives an
+exact formula for every adjacent difference through the Cartier series of
+`exp(cN(p log E_b(x)-log E_b(x^p)))`. This includes the iterative A060941
+construction and retains rational denominator valuations. It also records
+the exact `p=5` failure explaining A060941's `p>=7` range. All three records
+move to `partial`, leaving only A376458 and A376466 as `open-target`.
+
+The final companion unit treats those last two records through the common
+shifted A108625 row. It collapses A376458 to a single four-binomial sum and
+proves both its ordinary cubic tower for every `p>=5` and its conjectured
+`p^5` prime boundary for every `p>=7`. It places
+A376466 in the same exact coefficient-pairing framework and refutes that
+record's proposed shifted tower already at `p=5,n=2,r=1`; the pure-prime
+shift also fails at `p=5,r=2`. Both records move to `partial`, so no claim in
+the 110-record census is now wholly untreated. A376458 is now closed by the
+[enhanced pure-prime theorem](A376458EnhancedTower.md); among this final
+pair, only A376466's ordinary aggregate unit shell remains open.
+A376466's divisible shifted row is now a homogeneous negative-coordinate
+Straub coefficient. Its unit shell has subsequently been reduced in
+[the two-moment note](A376466OrdinaryTower.md). The kernel descent is now
+proved on every unit digit directly from that expansion; only the scaled
+boundary `j=0 mod p` remains. That cancellation is verified but not yet
+proved, so the record remains `partial`.
+
+The later odd-moment completion closes the composite part of A357512.  An
+elementary factorization removes two powers of the shifted modulus
+termwise.  A rational telescoping certificate then expresses twelve times
+the residual sum as the modulus squared times a sum that is locally
+integral at every prime at least five.  Hence
+`U_5(n-1) = 0 (mod n^4)` for every `gcd(n,6)=1`, and A357512 moves from
+`partial` to `proved-here`.
+
+The next route-M reduction treats A023871, A023873, A206622, and A283271
+uniformly.  Their adjacent cubic defects have an exact reduced-logarithm
+expansion, but every logarithmic degree at least three is already deep
+enough.  The new
+[Cartier-square note](EulerProductCubicCartierMoments.md) first isolates two
+explicit weighted coefficients `M1` and `M2`, then proves that both follow
+from one unweighted coefficientwise stratum bound on
+`C_p(Lambda_p^2)`.  It also records the genuine A023871 failure at `p=5`
+and the compensating plus/minus contraction for A206622.  The four records
+remain `partial`: that single Cartier-square estimate, rather than either
+weighted moment or the full exponential tail, is now the only open
+arithmetic step.
+
+The cyclotomic rational-framing unit then closes both A228960 and A350383,
+including the general statement printed on both records. After normalizing
+the constant term, every finite quotient of cyclotomic products is
+`prod_d (1-x^d)^(c_d)`. Away from `2` and the finitely many primes dividing
+one of those steps, its reduced Frobenius logarithm has no support on the
+`p`-sublattice. The linear constant-term defect therefore vanishes exactly,
+while every exponential degree at least two has valuation at least `2r`.
+The [general theorem](CyclotomicRationalFramingTower.md) allows arbitrary
+coefficient slope `k` and every integer power parameter `m`, including
+negative powers. Both records move from `partial` to `proved-here`.
 
 ## Proof order
 
@@ -71,9 +352,13 @@ The campaign does not use A-number order. It uses expected proof yield.
    the model: two carries close the integer tower and automatically produce
    a Gaussian Frobenius twist. The
    [Apéry odd-moment theorem](AperyOddMomentPrimeClassification.md)
-   is the prime-boundary model: one local product expansion proves A357510
-   and exactly classifies the exceptional primes for every higher odd
-   moment, including the complete prime slice of A357512.
+   begins with a local product expansion proving A357510 and classifying
+   the exceptional primes for every higher odd moment.  Its separate
+   telescoping certificate proves the full A357512 composite divisibility
+   theorem for every integer coprime to 6.  The A212334 enhanced-prime
+   theorem is another local-product instance: it closes the named `p^5`
+   boundary and routes the higher levels into the common Apéry defect
+   packet.
 2. **F route:** rewrite the term as a multinomial or an integral Laurent
    product. A364506 is one model.  The odd-unit block theorem is the second:
    it closes A091527 and A262732 simultaneously by splitting a half-integral
@@ -95,12 +380,24 @@ The campaign does not use A-number order. It uses expected proof yield.
    [coefficient-framing theorem](CoefficientFramingCubicTower.md) proves six
    records by one elementary Cartier argument. In particular, it proves the
    general two-parameter conjecture on A352373. A
+   [two-variable Legendre extension](A156554LegendreCoefficientTower.md)
+   uses three pairwise-unimodular rays to prove the full A156554 family. A
+   [cyclotomic theorem and family boundary](A351858CyclotomicFamilyBoundary.md)
+   proves A351858's named `k=2` tower and shows that its universal parameter
+   claim fails whenever `k=p-1` or `k=p`. A
+   [reversion theorem](A263843ReversionCoefficientReduction.md) sends the
+   A263843 family back to coefficient framing and closes its last ternary
+   boundary by an explicit quadratic--cubic defect cancellation. A
    [small exact counterexample](RationalFramingCounterexample.md) shows why
    Müller's broader framing theorem cannot be used as the source closure
    without repair. The
-   [Straub prime-five packet](StraubPrimeFiveCoefficientPacket.md) supplies
-   the omitted boundary prime in Straub's multivariate Apéry theorem and
-   closes A108625, A143007, and A177316 after exact coefficient matching.
+   [Straub prime-five audit](StraubPrimeFiveCoefficientPacket.md) records
+   that Straub's printed theorem already includes `p=5` and source-closes
+   A108625, A143007, and A177316 after exact coefficient matching, and
+   source-closes the ordinary A108628 tower through its direct
+   `B(N,N-1,N)` coordinates. The companion half-index note proves the first
+   affine boundary. An earlier repository snapshot incorrectly called the
+   prime-five audit an extension.
 4. **M route:** take a p-adic logarithm and isolate the first moment that
    survives the product balance.  The
    [prime-coefficient packet](ModularProductPrimeCoefficientPacket.md)
@@ -120,12 +417,16 @@ The campaign does not use A-number order. It uses expected proof yield.
    [A008793 cube-product theorem](A008793CubePlanePartitionTower.md)
    proves the full all-prime $p^{4r}$ conjecture by exact product splitting,
    reduced-residue blocks, and a separate binary parity argument. No route-M
-   record remains queued.
+   record remains queued.  For the four remaining cubic product towers, the
+   [Cartier-square reduction](EulerProductCubicCartierMoments.md) proves that
+   all logarithmic degrees at least three are harmless and collapses the two
+   surviving weighted moments to one exact coefficientwise obstruction.
 5. **D route:** identify the parent sequence and prove that the claimed
    congruence is inherited before treating it as an independent problem.
    This route is now fully triaged.  The
-   [Apéry defect packet](AperyRankOneDefectPacket.md) proves that its five
-   records are equivalent to only three linear defect relations, and that
+   [Apéry defect packet](AperyRankOneDefectPacket.md) proves that its six
+   records reduce to only three linear defect relations away from the
+   higher A212334 boundary at `p=5`, and that
    the two nonlinear companion conjectures introduce no new arithmetic
    direction.  The three defect relations themselves remain open.
 

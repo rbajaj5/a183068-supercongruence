@@ -205,8 +205,12 @@ A333097 A348410 A350383 A351857 A351858 A352373 A362722 A362733
 A363864 A363867 A363871 A364303 A380290
 ```
 
-The first two inspections, A228960 and A350383, are now closed by the
-[cyclotomic coefficient-pair theorem](CyclotomicCoefficientPairTheorem.md).
+The first two inspections, A228960 and A350383, are now closed twice over:
+the [coefficient-pair theorem](CyclotomicCoefficientPairTheorem.md) gives a
+stronger coefficientwise and Gaussian-twist statement for the named
+polynomials, while the
+[rational-framing theorem](CyclotomicRationalFramingTower.md) proves the
+general all-but-finitely-many-primes principle printed on both records.
 Their factorizations expose finite binomial sums, and a direct
 discard-and-rescale proof is stronger and simpler than a Dwork conversion.
 
@@ -218,6 +222,12 @@ full product packet in Bala's notes and gives a split/inert part-count twist.
 Exact equality witnesses show that this Gaussian twist is only quadratic.
 The remaining A380290 problem is therefore the special untwisted
 \(p^{3r}\) gain, not the construction of a generic quadratic period model.
+The [cubic Cartier-square reduction](EulerProductCubicCartierMoments.md)
+now isolates that gain, and the four analogous route-M conjectures, in one
+coefficientwise stratum estimate.  Thus the Gaussian coefficientwise
+theorem supplies the uniform baseline, while the extra rational cubic
+power is an explicit cancellation that is lost under a generic color
+twist.
 
 The next economical unresolved inspection is A331562.  Its required output
 is an explicit Laurent polynomial or rational diagonal and a written match
@@ -295,7 +305,13 @@ The [modular-product prime-coefficient packet](ModularProductPrimeCoefficientPac
 now completes the route's first pass. Seven records are proved here:
 A008485, A008705, A255672, A270913, A270919, A270922, and A270924. Four
 more records, A023871, A023873, A206622, and A283271, inherit a proved
-\(p^{2r}\) baseline while retaining their conjectural \(p^{3r}\) gain.
+\(p^{2r}\) baseline while retaining their conjectural \(p^{3r}\) gain.  The
+[one-obstruction theorem](EulerProductCubicCartierMoments.md) now proves
+that every term of logarithmic degree at least three already has cubic
+depth, isolates the two weighted moments, and reduces both to one
+coefficientwise Cartier-square estimate.  It also proves that A023871
+cannot be extended to `p=5`, while exact checks show why A206622's
+plus/minus product has a different prime-five boundary.
 The [A229452 coefficient-root theorem](A229452CoefficientRootBaseline.md)
 proves its all-\(m\) integrality and an all-prime \(p^r\) baseline for both
 source parameter families.
@@ -340,22 +356,24 @@ relations remain open, so the records are classified `partial`, not
 | Rank | Target | Route | Immediate deliverable | Main risk |
 | ---: | --- | --- | --- | --- |
 | 1 | A331562 | C | Produce a uniform rational diagonal for all rows and inspect the cubic Frobenius mechanism | Known rows \(2,3,4\) may rely on representations that do not persist |
-| 2 | A380290 cubic remainder | C | Explain the extra untwisted power beyond the proved coefficientwise quadratic tower | The Gaussian twist has exact quadratic witnesses, so the gain is a special cancellation |
+| 2 | A380290 cubic remainder | C | Prove the single Cartier-square stratum bound isolated by the all-level reduction | The Gaussian twist has exact quadratic witnesses, so the scalar cancellation is not color-stable |
 | 3 | Nearby depth-three finite sums beyond the closed pilot | T | Compute whether the scaling quotient remains deep after weighting | Twisting can remove cancellation used by the untwisted proof |
 | 4 | A183068 and the repository's Landau-depth family | T | Package the already-proved general Frobenius-twist corollary family | Mostly a reusable corollary, not a new local mechanism |
 | 5 | A008793 Gaussian lift | M | Seek a coefficientwise or prime-ideal refinement of the now-proved rational hyperfactorial tower | No canonical Gaussian object may exist |
 | 6 | A364506, A364509, A008978, A002897, A113424 | F | Define and prove integrality of the Gaussian block analogue | The integer coefficient roots are settled, but Gaussian denominator control is a separate theorem |
 | 7 | A352655, A357506, A357567, A357956, A357959 | D | Prove the three linear Apéry defect relations isolated by the packet theorem | Cubic baselines alone do not supply the enhanced three-power gain |
 
-A228960 and A350383 have left this open queue: one coefficientwise theorem
+A228960 and A350383 have left this open queue. One coefficientwise theorem
 proves both \(p^{2r}\) towers for \(p\ge5\) and supplies their split/inert
-Gaussian specializations.  The broader cyclotomic-rational-function
-principle recorded on A228960 remains open.
+Gaussian specializations. A separate support-separation theorem proves the
+broader cyclotomic-rational-function principle for every odd prime outside
+an explicit finite exceptional set.
 
 A380290 has partly left the queue as well: its full quadratic baseline and
 the entire associated mixed Euler-product packet are proved for odd primes.
 Only its distinguished untwisted cubic strengthening remains in the open
-column.
+column, and that strengthening is now reduced exactly to the single
+Cartier-square stratum estimate in the cubic Cartier note.
 
 Two larger repository targets sit outside the literal 110-record query but
 belong in the working queue: A183068 itself and the recently inspected

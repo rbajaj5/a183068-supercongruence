@@ -2,12 +2,16 @@
 
 **Status date:** August 12, 2026
 
-**Status:** complete proof candidates for the ordinary 52-sequence cubic
-tower and all 15 approved fractional-index integrality conjectures and
-towers. The ordinary result follows from the balanced-factorial theorem. A
-parity-transfer and binary-digit argument proves all eleven variants at
-index $N/2$; a denominator-transfer lemma proves the two $N/3$ and two
-$N/4$ claims. Every resulting tower is unconditional for $p\ge5$.
+**Status:** the ordinary 52-sequence cubic tower is a complete deduction
+from the repository's balanced-factorial theorem. The fractional-index
+packet has a complete conditional congruence theorem. The uniform half-index
+theorem proves all eleven denominator-two integrality claims and hence their
+unconditional towers. The denominator-boundary theorem proves the other four.
+
+Two independent companion notes give a parity-transfer proof for the eleven
+half-index cases and a generalized-factorial transfer proof for the four
+denominator-three/four cases. They are retained as cross-checks of the
+canonical translated-Landau treatment.
 
 This note records Peter Bala's August 2026 follow-up about the 52 sporadic
 integral factorial ratios cross-referenced from
@@ -134,31 +138,34 @@ B_q(np^r)\equiv B_q(np^{r-1})\pmod {p^{3r}}.
 \tag{9}
 ```
 
-Thus the supercongruence part of every currently visible proposal below is
-settled conditionally.  The two integrality theorems below now remove that
-condition in every approved case.
+Thus the rational supercongruence part of every currently visible proposal
+below is settled conditionally. The two integrality theorems cited in the
+table discharge that condition in all 15 cases.
 
 | OEIS record | Fractional indices in the approved OEIS comment | Residue-balance test | Current status |
 | --- | --- | --- | --- |
-| [A295456](https://oeis.org/A295456) | $N/2$, $N/3$ | Passes for $q=2,3$ | Both variants integral; (9) proved for both |
-| [A295458](https://oeis.org/A295458) | $N/2$, $N/3$ | Passes for $q=2,3$ | Both variants integral; (9) proved for both |
-| [A295460](https://oeis.org/A295460) | $N/2$, $N/4$ | Passes for $q=2,4$ | Both variants integral; (9) proved for both |
-| [A295464](https://oeis.org/A295464) | No approved fractional-index comment visible on August 12 | Not applicable | No fractional claim entered |
-| [A295465](https://oeis.org/A295465) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
-| [A295468](https://oeis.org/A295468) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
-| [A295470](https://oeis.org/A295470) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
-| [A295471](https://oeis.org/A295471) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
-| [A295475](https://oeis.org/A295475) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
-| [A295477](https://oeis.org/A295477) | $N/2$, $N/4$ | Passes for $q=2,4$ | Both variants integral; (9) proved for both |
-| [A295479](https://oeis.org/A295479) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
-| [A295481](https://oeis.org/A295481) | $N/2$ | Passes for $q=2$ | Integral and tower proved |
+| [A295456](https://oeis.org/A295456) | $N/2$, $N/3$ | Passes for $q=2,3$ | Both integral; both full towers proved by the half-index and denominator-boundary theorems |
+| [A295458](https://oeis.org/A295458) | $N/2$, $N/3$ | Passes for $q=2,3$ | Both integral; both full towers proved by the half-index and denominator-boundary theorems |
+| [A295460](https://oeis.org/A295460) | $N/2$, $N/4$ | Passes for $q=2,4$ | Both integral; both full towers proved by the half-index and denominator-boundary theorems |
+| [A295464](https://oeis.org/A295464) | Bala reports a recent comment; its formula was not yet visible on the approved page | Pending exact source text | No fractional claim entered yet |
+| [A295465](https://oeis.org/A295465) | $N/2$ | Passes for $q=2$ | Integral and its full tower proved by the uniform half-index theorem |
+| [A295468](https://oeis.org/A295468) | $N/2$ | Passes for $q=2$ | Integral and its full tower proved by the uniform half-index theorem |
+| [A295470](https://oeis.org/A295470) | $N/2$ | Passes for $q=2$ | Integral and its full tower proved by the uniform half-index theorem |
+| [A295471](https://oeis.org/A295471) | $N/2$ | Passes for $q=2$ | Integral and its full tower proved by the uniform half-index theorem |
+| [A295475](https://oeis.org/A295475) | $N/2$ | Passes for $q=2$ | Integral and its full tower proved by the uniform half-index theorem |
+| [A295477](https://oeis.org/A295477) | $N/2$, $N/4$ | Passes for $q=2,4$ | Both integral; both full towers proved by the half-index and denominator-boundary theorems |
+| [A295479](https://oeis.org/A295479) | $N/2$ | Passes for $q=2$ | A364183 integral and its full tower proved by the uniform theorem |
+| [A295481](https://oeis.org/A295481) | $N/2$ | Passes for $q=2$ | Integral and its full tower proved by the uniform half-index theorem |
 
 There are 15 approved fractional-index sequences in this table. The
-[Bober half-index theorem](BoberHalfIndexIntegralityTowers.md) proves all
-eleven $N/2$ integrality claims and their cubic towers. The
-[denominator-transfer theorem](BoberRemainingFractionalIntegralityTowers.md)
-proves the remaining two $N/3$ and two $N/4$ claims. Hence all 15 approved
-fractional variants are now closed.
+[uniform half-index theorem](BoberHalfIndexIntegralityTheorem.md) proves all
+eleven denominator-two variants. The
+[denominator-boundary theorem](BoberDenominatorBoundaryTheorem.md) proves the
+other four, so all 15 source-visible fractional variants are now closed.
+
+The [parallel half-index certificate](BoberHalfIndexIntegralityTowers.md) and
+[parallel denominator-transfer certificate](BoberRemainingFractionalIntegralityTowers.md)
+give independent derivations of the same 15 closures.
 
 ## 3. A compact CSP admission filter
 
@@ -183,14 +190,12 @@ or integrality.
 For this packet the filter gives a sharp division of labor:
 
 - **ordinary 52 ratios:** balance plus known integrality, hence (3);
-- **all eleven $N/2$ variants:** parity transfer to the original Landau
-  function plus an exact binary digit-sum certificate, hence global
-  integrality and (9);
-- **the four $N/3$ and $N/4$ variants:** coprime-modulus Landau transfer and
-  an exact denominator-prime valuation table, hence global integrality and
-  (9);
-- **A295464:** no approved public fractional-index formula is presently
-  assigned a theorem status.
+- **all eleven $N/2$ variants:** the translated-Landau midpoint theorem and
+  its binary digit-sum bound, hence global integrality and (9);
+- **the four $N/3$ and $N/4$ variants:** translated Landau valuations and
+  explicit denominator-prime digit formulas prove integrality, hence (9);
+- **A295464 pending edit:** wait for the exact approved formula before
+  assigning it a theorem status.
 
 ## 4. Small-prime and priority boundaries
 
@@ -221,12 +226,14 @@ fractional-index variants.
 The separate command
 
 ```text
-python verification/related/verify_a364176_affine_landau.py
+python verification/related/verify_bober_half_index_integrality.py
+python verification/related/verify_bober_denominator_boundary.py
 ```
 
-checks the completed A364176 floor reduction, integrality, and tower.
+checks the translated-Landau identities, denominator-prime digit formulas,
+global integrality, and towers that complete the fractional packet.
 
-The uniform half-index command
+The parallel half-index command
 
 ```text
 python verification/related/verify_bober_half_index.py

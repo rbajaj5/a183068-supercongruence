@@ -175,6 +175,38 @@ def patterned(part_size: int) -> int:
     return (-2, 0, 1, 3)[part_size % 4]
 
 
+def scalar_euler_product_value(
+    target: int, degree: int, rule: ExponentRule
+) -> int:
+    """Return the uncolored specialization of the universal product."""
+    coefficients = [0] * (target + 1)
+    coefficients[0] = 1
+    for part_size in range(1, target + 1):
+        exponent = target * rule(part_size) * part_size**degree
+        if exponent == 0:
+            continue
+        factor: list[int] = []
+        for occupation in range(target // part_size + 1):
+            if exponent >= 0:
+                if occupation > exponent:
+                    break
+                value = (-1) ** occupation * comb(exponent, occupation)
+            else:
+                value = comb(-exponent + occupation - 1, occupation)
+            factor.append(value)
+        updated = [0] * (target + 1)
+        for old_degree, old_value in enumerate(coefficients):
+            if old_value == 0:
+                continue
+            for occupation, factor_value in enumerate(factor):
+                new_degree = old_degree + part_size * occupation
+                if new_degree > target:
+                    break
+                updated[new_degree] += old_value * factor_value
+        coefficients = updated
+    return coefficients[target]
+
+
 def check_published_values() -> None:
     expected = (1, 1, 11, 73, 539, 3976, 30107, 229811, 1771803, 13749742)
     actual = [1]
@@ -183,6 +215,56 @@ def check_published_values() -> None:
         actual.append(evaluate_one(polynomial))
     assert tuple(actual) == expected
     print(f"A380290 initial values: {len(expected)}")
+
+
+def check_a281267_specialization() -> int:
+    expected = (
+        1,
+        -1,
+        -3,
+        8,
+        13,
+        -51,
+        -120,
+        538,
+        781,
+        -5419,
+        -3053,
+        47673,
+        5080,
+        -427740,
+        136462,
+    )
+    actual = [1]
+    actual.extend(
+        scalar_euler_product_value(target, 1, constant(1))
+        for target in range(1, len(expected))
+    )
+    assert tuple(actual) == expected
+
+    cache: dict[int, int] = {index: value for index, value in enumerate(actual)}
+
+    def value(index: int) -> int:
+        if index not in cache:
+            cache[index] = scalar_euler_product_value(index, 1, constant(1))
+        return cache[index]
+
+    tower_checks = 0
+    for prime in (3, 5, 7, 11):
+        for level in (1, 2):
+            modulus = prime ** (2 * level)
+            for n in range(1, 6):
+                if n * prime**level > 150:
+                    continue
+                difference = value(n * prime**level) - value(
+                    n * prime ** (level - 1)
+                )
+                assert difference % modulus == 0, (prime, level, n)
+                tower_checks += 1
+    assert tower_checks == 34
+    checks = len(expected) + tower_checks
+    print(f"A281267 specialization checks: {checks}")
+    return checks
 
 
 def check_universal_theorem() -> int:
@@ -288,13 +370,14 @@ def check_boundaries() -> None:
 
 def main() -> None:
     check_published_values()
+    a281267_checks = check_a281267_specialization()
     coefficient_checks = check_universal_theorem()
     logarithmic_checks = check_logarithmic_frobenius()
     gaussian_checks = check_gaussian_specialization()
     check_boundaries()
     print(
         "total exact checks: "
-        f"{coefficient_checks + logarithmic_checks + gaussian_checks + 12}"
+        f"{coefficient_checks + logarithmic_checks + gaussian_checks + 12 + a281267_checks}"
     )
 
 
