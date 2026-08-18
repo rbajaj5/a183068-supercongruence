@@ -803,8 +803,10 @@ proof.
   two, a binary digit-sum identity gives a uniform linear lower bound after
   the four odd base indices $N=1,3,5,7$.
 - **Status:** Complete elementary proof candidate; priority preliminary.
-- **Proof:** [Uniform Bober half-index theorem](related-results/BoberHalfIndexIntegralityTheorem.md)
-- **Exact checker:** [`verify_bober_half_index_integrality.py`](verification/related/verify_bober_half_index_integrality.py)
+- **Proofs:** [Uniform Bober half-index theorem](related-results/BoberHalfIndexIntegralityTheorem.md)
+  and an [independent parity-transfer certificate](related-results/BoberHalfIndexIntegralityTowers.md).
+- **Exact checkers:** [`verify_bober_half_index_integrality.py`](verification/related/verify_bober_half_index_integrality.py)
+  and [`verify_bober_half_index.py`](verification/related/verify_bober_half_index.py).
 
 ### BOBER-BOUNDARY - denominator-three/four integrality and cubic towers
 
@@ -815,8 +817,10 @@ proof.
   sum of translated values of the original Landau function. At the denominator
   primes, explicit base-three and binary digit-sum identities are nonnegative.
 - **Status:** Complete elementary proof candidate; priority preliminary.
-- **Proof:** [Bober denominator-boundary theorem](related-results/BoberDenominatorBoundaryTheorem.md)
-- **Exact checker:** [`verify_bober_denominator_boundary.py`](verification/related/verify_bober_denominator_boundary.py)
+- **Proofs:** [Bober denominator-boundary theorem](related-results/BoberDenominatorBoundaryTheorem.md)
+  and an [independent denominator-transfer certificate](related-results/BoberRemainingFractionalIntegralityTowers.md).
+- **Exact checkers:** [`verify_bober_denominator_boundary.py`](verification/related/verify_bober_denominator_boundary.py)
+  and [`verify_bober_remaining_fractional.py`](verification/related/verify_bober_remaining_fractional.py).
 
 ### RATGAMMA-3 — rational gamma-ratio cubic towers
 
@@ -847,7 +851,8 @@ proof.
   A365027) and every row $s\ge3$ of A364513 (including A364515--A364517).
   The same theorem supplies the quotient congruence component for all 15
   currently visible fractional-index variants in Bala's Bober packet; the
-  eleven denominator-two members are now unconditional.
+  eleven denominator-two members and four denominator-three/four members are
+  now unconditional.
 - **Mechanism:** An exact denominator-$q$ rational-binomial product, complete
   reduced-residue harmonic blocks, and the classical balanced integer
   factorial-ratio closure.
@@ -1370,7 +1375,7 @@ proof.
 - **Proof:** [Bober sporadic factorial-ratio packet](related-results/BoberSporadicFactorialRatioPacket.md)
 - **Exact checker:** [`verify_bober_sporadic_packet.py`](verification/related/verify_bober_sporadic_packet.py)
 
-### BOBER-FRAC - fractional Bober integrality queue
+### BOBER-FRAC - fractional Bober packet
 
 - **Claim:** The 15 fractional-index variants currently visible on the 12
   records identified by Bala satisfy the residue-balanced rational
@@ -1386,7 +1391,9 @@ proof.
   [`verify_a364176_affine_landau.py`](verification/related/verify_a364176_affine_landau.py),
   [`verify_a364183_affine_landau.py`](verification/related/verify_a364183_affine_landau.py),
   [`verify_bober_half_index_integrality.py`](verification/related/verify_bober_half_index_integrality.py),
-  [`verify_bober_denominator_boundary.py`](verification/related/verify_bober_denominator_boundary.py)
+  [`verify_bober_denominator_boundary.py`](verification/related/verify_bober_denominator_boundary.py),
+  [`verify_bober_half_index.py`](verification/related/verify_bober_half_index.py), and
+  [`verify_bober_remaining_fractional.py`](verification/related/verify_bober_remaining_fractional.py)
 
 ### A008793-CUBE — nonlinear cube-plane-partition tower
 
