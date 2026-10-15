@@ -18,6 +18,7 @@ A183068 proof without mixing them into the proof itself.
 | Result | Relationship | Status |
 | --- | --- | --- |
 | A183068 modulo $p^{2r}$ for every prime | The core named conjecture | Audited draft |
+| [Cryptography connections](related-results/CryptographyConnections.md) | Applies affine rank laws to an exact privacy-amplification model and derives efficient collisions for direct A183068 residue hashing | Classical application and elementary deduction; exact checks, no new cryptographic primitive |
 | [Repository-wide dyadic audit policy](DYADIC_POLICY.md) | Requires every all-prime result to discharge binary normalization, sign, ramification, first-level boundaries, and cancellation explicitly | Editorial proof standard with four repository case studies |
 | [Exact affine and matroid hashing laws](related-results/MatroidHashingLaw.md) | Converts the affine Walsh supports from the dyadic defect theorem into exact random-measurement and cross-spectrum collision probabilities | Classical full-rank and Critical-Theorem applications with exact checks; supporting infrastructure, not a stronger congruence |
 | [Sofic finite-approximation boundary](related-results/SoficFiniteApproximationBoundary.md) | Separates the classical existence of sofic groups from the new external claim that a nonsofic group exists, and compares finite Hamming models with valuation-controlled towers | Literature and provenance note only; no supercongruence, novelty, or correctness transfer claimed |

@@ -31,6 +31,11 @@ The repository workflow and promotion rules are documented in
 
 ## Core theorem
 
+For a bounded cryptographic application of the supporting hashing work, see
+[affine privacy amplification and residue collisions](related-results/CryptographyConnections.md).
+It gives an exact linear-leakage model and a limitation of direct residue
+hashing, with reproducible checks and no claim of a new cryptosystem.
+
 Define
 
 ```math
