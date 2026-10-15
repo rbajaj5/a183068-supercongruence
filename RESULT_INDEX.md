@@ -43,6 +43,49 @@ proof.
 - **Proof:** [PROOF.md](PROOF.md)
 - **Exact checker:** [`verify_a183068.py`](verification/verify_a183068.py)
 
+## Cryptography connections
+
+### CRYPTO-AFFINE-PA — exact public-seed affine-source distance
+
+- **Claim:** For a uniform r-dimensional affine source and independent
+  uniform linear seed L with t output bits, the conditional total variation
+  is 1-2^(K-t), where K is the restricted rank. The public-seed joint
+  distance is its exact average under the binary-matrix rank distribution.
+- **Source status:** Classical linear-algebra and universal-hashing application;
+  no novelty claimed.
+- **Status:** Deduction, with separate machine-assisted review and exact checks;
+  not peer reviewed.
+- **Binary scope:** All calculations are explicitly over F_2.
+- **Proof:** [Affine privacy amplification](related-results/CryptographyConnections.md#1-the-useful-connection-compressing-an-affine-source).
+- **Exact checker:** [Cryptography connection checks](verification/related/verify_cryptography_connections.py).
+
+### CRYPTO-LINEAR-LEAKAGE — explicit classical side-information model
+
+- **Claim:** If W is uniform on F_2^n, Z=BW for fixed B of rank n-r,
+  and L is a uniformly random linear map F_2^n -> F_2^t independent of
+  (W,Z), the joint distance of (L,Z,LW) from (L,Z,U_t), with U_t independent
+  of (L,Z), equals the same exact affine-source distance.
+- **Source status:** Classical privacy-amplification consequence; no novelty claimed.
+- **Status:** Deduction with exact joint-distribution checks; not peer reviewed.
+- **Boundary:** Fixed linear leakage and the stated uniform source; no arbitrary
+  or quantum side-information claim.
+- **Proof:** [Linear-leakage application](related-results/CryptographyConnections.md#2-a-concrete-privacy-amplification-model-with-linear-leakage).
+- **Exact checker:** [Cryptography connection checks](verification/related/verify_cryptography_connections.py).
+
+### CRYPTO-A183068-RESIDUE — efficiently constructible residue collisions
+
+- **Claim:** For prime p, m>=1, H_(p,m)(n)=a(n) modulo p^m, and r=ceil(m/2),
+  H_(p,m)(p^r)=H_(p,m)(p^(r-1)). The distinct inputs are constructible
+  in polynomial time in m log p. Deterministic residue-only postprocessing
+  preserves the collision.
+- **Source status:** Elementary consequence of the core A183068 draft;
+  no novelty claimed.
+- **Status:** Deduction conditional on the core proof, with exact checks.
+- **Dyadic scope:** The fixed-width m-bit binary domain contains the pair
+  for every m>=2; m=1 is an explicitly injective boundary case.
+- **Proof:** [Residue-hash obstruction](related-results/CryptographyConnections.md#3-why-direct-a183068-residue-hashing-has-easy-collisions).
+- **Exact checker:** [Cryptography connection checks](verification/related/verify_cryptography_connections.py).
+
 ## Named OEIS follow-ons
 
 ### BALA-BOUNDARY — A365029 boundary family
