@@ -8,6 +8,11 @@ packet has a complete conditional congruence theorem. The uniform half-index
 theorem proves all eleven denominator-two integrality claims and hence their
 unconditional towers. The denominator-boundary theorem proves the other four.
 
+Two independent companion notes give a parity-transfer proof for the eleven
+half-index cases and a generalized-factorial transfer proof for the four
+denominator-three/four cases. They are retained as cross-checks of the
+canonical translated-Landau treatment.
+
 This note records Peter Bala's August 2026 follow-up about the 52 sporadic
 integral factorial ratios cross-referenced from
 [OEIS A295431](https://oeis.org/A295431).  It separates three facts that
@@ -158,6 +163,10 @@ eleven denominator-two variants. The
 [denominator-boundary theorem](BoberDenominatorBoundaryTheorem.md) proves the
 other four, so all 15 source-visible fractional variants are now closed.
 
+The [parallel half-index certificate](BoberHalfIndexIntegralityTowers.md) and
+[parallel denominator-transfer certificate](BoberRemainingFractionalIntegralityTowers.md)
+give independent derivations of the same 15 closures.
+
 ## 3. A compact CSP admission filter
 
 The two admission conditions can be treated as a finite affine constraint
@@ -223,6 +232,26 @@ python verification/related/verify_bober_denominator_boundary.py
 
 checks the translated-Landau identities, denominator-prime digit formulas,
 global integrality, and towers that complete the fractional packet.
+
+The parallel half-index command
+
+```text
+python verification/related/verify_bober_half_index.py
+```
+
+reconstructs the eleven odd-index factorial ratios, verifies the Landau
+transfer and binary digit identities, checks exact integrality, and tests the
+resulting towers.
+
+The remaining-fractional command
+
+```text
+python verification/related/verify_bober_remaining_fractional.py
+```
+
+tests the general coprime-modulus transfer and the exact $2$- and $3$-adic
+valuation formulas for the four denominator-three and denominator-four
+variants.
 
 The [QRCert blueprint](https://github.com/rbajaj5/qrcert) suggests a clean
 future certification split: encode each coefficient pair canonically, let a
