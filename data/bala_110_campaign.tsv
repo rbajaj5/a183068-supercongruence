@@ -38,7 +38,7 @@ A363985	T	partial	related-results/FranelCompanionConstantTermReduction.md	exact 
 A370101	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A370102	T	proved-here	related-results/CoefficientFramingCubicTower.md	independent review and source-facing cross-reference
 A376458	T	proved-here	related-results/A376458EnhancedTower.md	independent review and literature-priority search for the complete p^(3r+3) pure-prime tower
-A376466	T	partial	related-results/A376466OrdinaryTower.md	prove the scaled-boundary cancellation (8b); Lemma 1 already proves every unit digit and the remaining tower proof is then formal
+A376466	T	proved-here	related-results/A376466OrdinaryTower.md	independent review and literature-priority search for the complete ordinary cubic tower; shifted companion remains refuted
 A002426	C	published-source	Pan--Sun theorem is cited on the live OEIS record for the displayed p^(2r) claim	verify exact parameter match in bibliography
 A005725	C	proved-here	related-results/QuadrinomialCoefficientOddPrimeTower.md	independent review and priority audit of both source-page conjectures
 A006318	C	no-explicit-open	related-results/Bala110LiveSourceBoundary.md	live OEIS record has no Bala supercongruence claim; retain only as a generating-function anchor

@@ -1,13 +1,14 @@
-"""Exact checks for the conditional ordinary A376466 cubic-tower reduction.
+"""Exact checks for the proved ordinary A376466 cubic tower.
 
 The proof note is related-results/A376466OrdinaryTower.md.  These checks are
-transcription and boundary tests.  In particular, they do not prove the open
-scaled-boundary congruence (8b) in the note.
+transcription and boundary tests for its finite-product expansions, exact
+three-term recurrence, Cartier induction, reciprocal moments, and tower.
 """
 
 from __future__ import annotations
 
 from fractions import Fraction
+from functools import cache
 from math import comb
 
 from verify_a376_apery_companions import (
@@ -54,6 +55,7 @@ def descended_outer(n: int, q: int) -> int:
     )
 
 
+@cache
 def cartier_kernel(n: int, q: int) -> int:
     if not 0 <= q < n:
         return 0
@@ -62,6 +64,21 @@ def cartier_kernel(n: int, q: int) -> int:
 
 def full_term(n: int, k: int) -> int:
     return a376466_outer(n, k) * shifted_row(n - 1, k)
+
+
+def recurrence_coefficients(n: int, j: int) -> tuple[int, int, int]:
+    """Coefficients C_+, C_0, C_- in equation (8e)."""
+
+    middle = (j + 1) ** 2 + j**2 + n * (n - 1)
+    plus = j * (j + 1) ** 5
+    zero = middle * j * (n - 1 - j) * (n + j + 1) ** 2
+    minus = (
+        (n - j)
+        * (n + j) ** 2
+        * (n - 1 - j)
+        * (n + j + 1) ** 2
+    )
+    return plus, zero, minus
 
 
 def check_reciprocal_blocks() -> int:
@@ -165,8 +182,98 @@ def check_unit_reduction_identity() -> int:
     return checks
 
 
+def check_recurrence_certificate() -> int:
+    """Audit (8d)--(8i), including the simultaneous-induction budgets."""
+
+    checks = 0
+    for n in range(3, 41):
+        for j in range(1, n - 1):
+            row_previous = shifted_row(n - 1, j - 1)
+            row_current = shifted_row(n - 1, j)
+            row_next = shifted_row(n - 1, j + 1)
+            middle = (j + 1) ** 2 + j**2 + n * (n - 1)
+            assert (
+                (j + 1) ** 2 * row_next
+                - middle * row_current
+                + j**2 * row_previous
+                == 0
+            )
+            checks += 1
+
+            plus, zero, minus = recurrence_coefficients(n, j)
+            assert (
+                plus * cartier_kernel(n, j + 1)
+                + zero * cartier_kernel(n, j)
+                + minus * cartier_kernel(n, j - 1)
+                == 0
+            )
+            checks += 1
+
+            polynomial = (
+                -n**3
+                - 3 * n**2 * j
+                - n**2
+                + n * j
+                + n
+                + 3 * j**3
+                + 7 * j**2
+                + 5 * j
+                + 1
+            )
+            assert plus + zero + minus == -(n**3) * polynomial
+            checks += 1
+
+    cases = [
+        (prime, level, n)
+        for prime in PRIMES
+        for level in (1, 2)
+        for n in range(1, 5)
+    ]
+    cases += [(5, 3, 1)]
+    for prime, level, n in cases:
+        high_n = n * prime**level
+        low_n = high_n // prime
+
+        # This is the horizontal estimate (8g) after Cartier descent.
+        for j in range(1, high_n):
+            target = 2 * max(level - valuation(j, prime), 0)
+            assert valuation(
+                cartier_kernel(high_n, j) - cartier_kernel(high_n, j - 1),
+                prime,
+            ) >= target
+            checks += 1
+
+        # These are precisely the nontrivial t<R branches of (8i).
+        for q in range(1, low_n):
+            j = prime * q
+            t = valuation(j, prime)
+            if t >= level:
+                continue
+            plus, zero, minus = recurrence_coefficients(high_n, j)
+            beta = Fraction(minus, zero)
+            gamma = Fraction(plus + zero + minus, zero)
+            assert rational_valuation(beta, prime) == 2 * t
+            assert rational_valuation(gamma, prime) == 3 * level - t
+            checks += 2
+
+            previous = cartier_kernel(high_n, j - 1)
+            current = cartier_kernel(high_n, j)
+            following = cartier_kernel(high_n, j + 1)
+            assert Fraction(current - following) == (
+                -beta * (previous - following) - gamma * following
+            )
+            assert valuation(previous - following, prime) >= 2 * (level - t)
+            assert valuation(current - following, prime) >= 2 * level
+            assert valuation(
+                current - cartier_kernel(low_n, q), prime
+            ) >= 2 * level
+            checks += 4
+
+    return checks
+
+
 def check_scaled_boundary() -> int:
-    """Test the sole remaining congruence (8b), including level three."""
+    """Test the now-proved scaled congruence (8b), including level three."""
 
     checks = 0
     cases = [
@@ -243,6 +350,7 @@ def main() -> None:
     first_order = check_first_order_factorization()
     descent = check_cartier_descent()
     unit_reduction = check_unit_reduction_identity()
+    recurrence = check_recurrence_certificate()
     scaled_boundary = check_scaled_boundary()
     towers, sharp = check_shells_and_towers()
     total = (
@@ -250,6 +358,7 @@ def main() -> None:
         + first_order
         + descent
         + unit_reduction
+        + recurrence
         + scaled_boundary
         + towers
     )
@@ -257,9 +366,10 @@ def main() -> None:
     print(f"first-order factorization checks: {first_order}")
     print(f"Cartier-kernel descent checks: {descent}")
     print(f"unit-digit reduction checks: {unit_reduction}")
+    print(f"recurrence-certificate checks: {recurrence}")
     print(f"scaled-boundary checks: {scaled_boundary}")
     print(f"shell and tower checks: {towers} ({sharp} sharp)")
-    print(f"all {total} conditional A376466 ordinary-tower checks passed")
+    print(f"all {total} A376466 ordinary-tower checks passed")
 
 
 if __name__ == "__main__":
