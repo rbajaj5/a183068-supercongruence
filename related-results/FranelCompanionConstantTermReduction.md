@@ -1,7 +1,8 @@
 # A constant-term reduction for the Franel companions
 
-**Status:** exact reduction and finite verification; the cubic contraction
-lemma stated below remains open
+**Status:** exact reduction and finite verification; the `A362676(p)` prime
+boundary is now proved separately, while the full cubic contraction below
+remains open
 
 This note consolidates the finite sums on
 [A362676](https://oeis.org/A362676) and
@@ -190,5 +191,8 @@ for the cubic Cartier contraction.
 This note moves A362676 and A363985 from `open-target` to `partial` in the
 110-record campaign.  The finite sums and their relationship are no longer
 unstructured: both now reduce to one explicit kernel family and one precise
-local lemma.  They do not move to `proved-here` until that lemma is proved
-for all integer `m`.
+local lemma.  The separate
+[A362676 prime-boundary theorem](A362676PrimeBoundary.md) proves the
+`n=r=1` instance for every prime `p>=5`; it does not supply the missing
+all-`n`, all-`r` contraction.  The records do not move to `proved-here`
+until that lemma is proved for all integer `m`.
